@@ -33,7 +33,7 @@ const Footer = ({ className }: { className?: string }) => {
   return (
     <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden pt-16', className)}>
       <div className="main-container px-5">
-        <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-6">
+        <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-7">
           <div className="md:col-span-2">
             <Image src={legacyLogo} alt="Schedulaa" className="h-auto max-w-[190px]" />
             <p className="text-accent/60 text-tagline-1 mt-4">{t('blurb')}</p>

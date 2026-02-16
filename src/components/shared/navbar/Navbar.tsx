@@ -155,6 +155,7 @@ const Navbar = () => {
               className="relative pb-3 -mb-3"
               onMouseEnter={() => {
                 clearCloseTimer();
+                setResourcesOpen(false);
                 setProductOpen(true);
               }}
               onMouseLeave={() => scheduleClose('product')}
@@ -163,9 +164,13 @@ const Navbar = () => {
                 type="button"
                 onMouseEnter={() => {
                   clearCloseTimer();
+                  setResourcesOpen(false);
                   setProductOpen(true);
                 }}
-                onClick={() => setProductOpen((p) => !p)}
+                onClick={() => {
+                  setResourcesOpen(false);
+                  setProductOpen((p) => !p);
+                }}
                 className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
               >
                 {t('product')}
@@ -183,6 +188,7 @@ const Navbar = () => {
               className="relative pb-3 -mb-3"
               onMouseEnter={() => {
                 clearCloseTimer();
+                setProductOpen(false);
                 setResourcesOpen(true);
               }}
               onMouseLeave={() => scheduleClose('resources')}
@@ -191,9 +197,13 @@ const Navbar = () => {
                 type="button"
                 onMouseEnter={() => {
                   clearCloseTimer();
+                  setProductOpen(false);
                   setResourcesOpen(true);
                 }}
-                onClick={() => setResourcesOpen((p) => !p)}
+                onClick={() => {
+                  setProductOpen(false);
+                  setResourcesOpen((p) => !p);
+                }}
                 className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
               >
                 {t('resources')}
