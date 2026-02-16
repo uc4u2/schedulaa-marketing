@@ -8,6 +8,7 @@ const KNOWN_BUT_UNSUPPORTED = new Set(['ru', 'zh']);
 
 export function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
+  const internalLocale = request.headers.get('x-locale');
 
   if (
     pathname.startsWith('/_next') ||
@@ -42,6 +43,12 @@ export function middleware(request: NextRequest) {
     redirectUrl.pathname = rest ? `/${DEFAULT_LOCALE}/${rest}` : `/${DEFAULT_LOCALE}`;
     redirectUrl.search = search;
     return NextResponse.redirect(redirectUrl);
+  }
+
+  // Prevent rewrite->redirect loops: locale-prefixed URLs are rewritten to
+  // non-prefixed internal routes with x-locale set.
+  if (internalLocale && isSupportedLocale(internalLocale)) {
+    return NextResponse.next();
   }
 
   const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
