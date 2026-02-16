@@ -2,31 +2,28 @@ import { FooterData } from '@/interface';
 
 export const footerLinks: FooterData[] = [
   {
-    title: 'Company',
+    title: 'Product',
     links: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Career', href: '/career' },
-      { label: 'Case Studies', href: '/case-study' },
-      { label: 'Contact Us', href: '/contact-us' },
+      { label: 'Features', href: '/features' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Payroll', href: '/payroll' },
+      { label: 'Docs', href: '/docs' },
     ],
   },
   {
-    title: 'Support',
+    title: 'Resources',
     links: [
+      { label: 'Blog', href: '/blog' },
+      { label: 'Compare', href: '/compare' },
+      { label: 'Alternatives', href: '/alternatives' },
       { label: 'FAQ', href: '/faq' },
-      { label: 'Documentation', href: '/documentation' },
-      { label: 'Tutorial', href: '/tutorial' },
-      { label: 'Support', href: '/support' },
     ],
   },
   {
-    title: 'Legal Policies',
+    title: 'Legal',
     links: [
-      { label: 'Terms & Conditions', href: '/terms-conditions' },
-      { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Refund Policy', href: '/refund-policy' },
-      { label: 'GDPR Compliance', href: '/gdpr' },
-      { label: 'Affiliate Policy', href: '/affiliate-policy' },
+      { label: 'Privacy', href: '/privacy' },
+      { label: 'Terms', href: '/terms' },
     ],
   },
 ];

@@ -8,13 +8,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
+const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
+
 const navLinks = [
   { href: '/features', label: 'Features' },
   { href: '/pricing', label: 'Pricing' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/compare', label: 'Compare' },
+  { href: '/alternatives', label: 'Alternatives' },
   { href: '/payroll', label: 'Payroll' },
   { href: '/docs', label: 'Docs' },
-  { href: '/blog', label: 'Blog' },
   { href: '/faq', label: 'FAQ' },
+  { href: '/privacy', label: 'Privacy' },
+  { href: '/terms', label: 'Terms' },
 ];
 
 const Navbar = () => {
@@ -34,21 +40,28 @@ const Navbar = () => {
             </figure>
           </Link>
 
-          <nav className="hidden items-center gap-6 xl:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-4 xl:flex" aria-label="Primary">
             {navLinks.map((item) => (
-              <Link key={item.href} href={item.href} className="text-tagline-1 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent">
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent">
                 {item.label}
               </Link>
             ))}
           </nav>
 
           <div className="hidden items-center gap-2 xl:flex">
-            <Link href="/login" className="rounded-full border border-stroke-2 px-4 py-2 text-sm font-medium dark:border-stroke-7">
+            <a
+              href={`${APP_ORIGIN}/login`}
+              className="rounded-full border border-stroke-2 px-4 py-2 text-sm font-medium dark:border-stroke-7">
               Log in
-            </Link>
-            <Link href="/signup" className="rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-600">
-              Get started
-            </Link>
+            </a>
+            <a
+              href={`${APP_ORIGIN}/register`}
+              className="rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-600">
+              Start free
+            </a>
           </div>
 
           <button
@@ -63,7 +76,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className={cn('overflow-hidden transition-all xl:hidden', open ? 'mt-3 max-h-[420px] pt-2' : 'max-h-0')}>
+        <div className={cn('overflow-hidden transition-all xl:hidden', open ? 'mt-3 max-h-[540px] pt-2' : 'max-h-0')}>
           <nav className="flex flex-col gap-2" aria-label="Mobile primary">
             {navLinks.map((item) => (
               <Link
@@ -75,12 +88,18 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="mt-2 grid grid-cols-2 gap-2">
-              <Link href="/login" onClick={() => setOpen(false)} className="rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7">
+              <a
+                href={`${APP_ORIGIN}/login`}
+                onClick={() => setOpen(false)}
+                className="rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7">
                 Log in
-              </Link>
-              <Link href="/signup" onClick={() => setOpen(false)} className="rounded-lg bg-primary-500 px-3 py-2 text-center text-sm font-semibold text-white">
-                Get started
-              </Link>
+              </a>
+              <a
+                href={`${APP_ORIGIN}/register`}
+                onClick={() => setOpen(false)}
+                className="rounded-lg bg-primary-500 px-3 py-2 text-center text-sm font-semibold text-white">
+                Start free
+              </a>
             </div>
           </nav>
         </div>
