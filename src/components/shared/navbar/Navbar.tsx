@@ -12,15 +12,25 @@ const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.
 
 const navLinks = [
   { href: '/features', label: 'Features' },
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/compare', label: 'Compare' },
-  { href: '/alternatives', label: 'Alternatives' },
+  { href: '/workforce', label: 'Workforce' },
+  { href: '/booking', label: 'Booking' },
+  { href: '/marketing', label: 'Marketing' },
   { href: '/payroll', label: 'Payroll' },
+  { href: '/website-builder', label: 'Website Builder' },
   { href: '/docs', label: 'Docs' },
+  { href: '/pricing', label: 'Pricing' },
+];
+
+const mobileLinks = [
+  ...navLinks,
+  { href: '/industries', label: 'Industries' },
+  { href: '/status', label: 'Status' },
+  { href: '/roadmap', label: 'Roadmap' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/demo', label: 'Demo' },
   { href: '/faq', label: 'FAQ' },
-  { href: '/privacy', label: 'Privacy' },
-  { href: '/terms', label: 'Terms' },
+  { href: '/client/support', label: 'Help Center' },
+  { href: '/payslips', label: 'Payslips' },
 ];
 
 const Navbar = () => {
@@ -45,7 +55,8 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent">
+                className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
+              >
                 {item.label}
               </Link>
             ))}
@@ -54,12 +65,14 @@ const Navbar = () => {
           <div className="hidden items-center gap-2 xl:flex">
             <a
               href={`${APP_ORIGIN}/login`}
-              className="rounded-full border border-stroke-2 px-4 py-2 text-sm font-medium dark:border-stroke-7">
+              className="rounded-full border border-stroke-2 px-4 py-2 text-sm font-medium dark:border-stroke-7"
+            >
               Log in
             </a>
             <a
               href={`${APP_ORIGIN}/register`}
-              className="rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-600">
+              className="rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-600"
+            >
               Start free
             </a>
           </div>
@@ -69,21 +82,23 @@ const Navbar = () => {
             className="inline-flex items-center justify-center rounded-full border border-stroke-2 p-2 xl:hidden dark:border-stroke-7"
             onClick={() => setOpen((prev) => !prev)}
             aria-expanded={open}
-            aria-label="Toggle mobile menu">
+            aria-label="Toggle mobile menu"
+          >
             <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
             </svg>
           </button>
         </div>
 
-        <div className={cn('overflow-hidden transition-all xl:hidden', open ? 'mt-3 max-h-[540px] pt-2' : 'max-h-0')}>
-          <nav className="flex flex-col gap-2" aria-label="Mobile primary">
-            {navLinks.map((item) => (
+        <div className={cn('overflow-hidden transition-all xl:hidden', open ? 'mt-3 max-h-[800px] pt-2' : 'max-h-0')}>
+          <nav className="grid gap-2" aria-label="Mobile primary">
+            {mobileLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2 text-sm text-secondary/80 hover:bg-background-3 dark:text-accent/80 dark:hover:bg-background-8">
+                className="rounded-lg px-3 py-2 text-sm text-secondary/80 hover:bg-background-3 dark:text-accent/80 dark:hover:bg-background-8"
+              >
                 {item.label}
               </Link>
             ))}
@@ -91,13 +106,15 @@ const Navbar = () => {
               <a
                 href={`${APP_ORIGIN}/login`}
                 onClick={() => setOpen(false)}
-                className="rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7">
+                className="rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7"
+              >
                 Log in
               </a>
               <a
                 href={`${APP_ORIGIN}/register`}
                 onClick={() => setOpen(false)}
-                className="rounded-lg bg-primary-500 px-3 py-2 text-center text-sm font-semibold text-white">
+                className="rounded-lg bg-primary-500 px-3 py-2 text-center text-sm font-semibold text-white"
+              >
                 Start free
               </a>
             </div>
