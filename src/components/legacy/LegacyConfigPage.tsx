@@ -3,6 +3,31 @@ import Link from 'next/link';
 type Cfg = Record<string, any>;
 
 const asArray = (v: any) => (Array.isArray(v) ? v : []);
+const isPrimitive = (v: any) => ['string', 'number', 'boolean'].includes(typeof v);
+
+const valueToDisplay = (value: any): string => {
+  if (value == null) return '';
+  if (isPrimitive(value)) return String(value);
+  if (Array.isArray(value)) return value.map((entry) => valueToDisplay(entry)).filter(Boolean).join(', ');
+  if (typeof value === 'object') {
+    if (isPrimitive(value.label)) return String(value.label);
+    const primitivePairs = Object.entries(value).filter(([, v]) => isPrimitive(v));
+    if (primitivePairs.length) {
+      return primitivePairs.map(([k, v]) => `${k}: ${String(v)}`).join(' | ');
+    }
+    try {
+      return JSON.stringify(value);
+    } catch {
+      return '';
+    }
+  }
+  return '';
+};
+
+const arrayToDisplay = (value: any): string[] =>
+  asArray(value)
+    .map((entry) => valueToDisplay(entry))
+    .filter(Boolean);
 
 export default function LegacyConfigPage({ config }: { config: Cfg }) {
   const hero = config?.hero || {};
@@ -19,14 +44,14 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
       <section className="main-container px-5">
         <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
-          {hero.badge ? <p className="badge badge-yellow-v2">{hero.badge}</p> : null}
-          {hero.title ? <h1 className="mt-5">{hero.title}</h1> : null}
+          {hero.badge ? <p className="badge badge-yellow-v2">{valueToDisplay(hero.badge)}</p> : null}
+          {hero.title ? <h1 className="mt-5">{valueToDisplay(hero.title)}</h1> : null}
           {hero.subtitle ? (
-            <p className="mt-4 max-w-[900px] text-secondary/70 dark:text-accent/70">{hero.subtitle}</p>
+            <p className="mt-4 max-w-[900px] text-secondary/70 dark:text-accent/70">{valueToDisplay(hero.subtitle)}</p>
           ) : null}
-          {asArray(hero.bullets).length > 0 ? (
+          {arrayToDisplay(hero.bullets).length > 0 ? (
             <ul className="mt-4 list-disc space-y-2 pl-5 text-secondary/80 dark:text-accent/80">
-              {asArray(hero.bullets).map((b: string) => (
+              {arrayToDisplay(hero.bullets).map((b: string) => (
                 <li key={b}>{b}</li>
               ))}
             </ul>
@@ -48,14 +73,14 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
 
         {sections.map((s: any, idx: number) => (
           <div key={`${s.title || s.label || 'section'}-${idx}`} className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
-            {s.overline ? <p className="text-sm uppercase tracking-wide text-primary-500">{s.overline}</p> : null}
-            {s.title ? <h2 className="mt-2 text-2xl font-semibold">{s.title}</h2> : null}
-            {s.body ? <p className="mt-3 text-secondary/70 dark:text-accent/70">{s.body}</p> : null}
-            {s.description ? <p className="mt-3 text-secondary/70 dark:text-accent/70">{s.description}</p> : null}
-            {s.content ? <p className="mt-3 text-secondary/70 dark:text-accent/70">{s.content}</p> : null}
-            {asArray(s.points).length > 0 ? (
+            {s.overline ? <p className="text-sm uppercase tracking-wide text-primary-500">{valueToDisplay(s.overline)}</p> : null}
+            {s.title ? <h2 className="mt-2 text-2xl font-semibold">{valueToDisplay(s.title)}</h2> : null}
+            {s.body ? <p className="mt-3 text-secondary/70 dark:text-accent/70">{valueToDisplay(s.body)}</p> : null}
+            {s.description ? <p className="mt-3 text-secondary/70 dark:text-accent/70">{valueToDisplay(s.description)}</p> : null}
+            {s.content ? <p className="mt-3 text-secondary/70 dark:text-accent/70">{valueToDisplay(s.content)}</p> : null}
+            {arrayToDisplay(s.points).length > 0 ? (
               <ul className="mt-4 list-disc space-y-2 pl-5 text-secondary/80 dark:text-accent/80">
-                {asArray(s.points).map((p: string) => (
+                {arrayToDisplay(s.points).map((p: string) => (
                   <li key={p}>{p}</li>
                 ))}
               </ul>
@@ -65,11 +90,11 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
                 {asArray(s.items).map((item: any, itemIdx: number) => (
                   <div key={`${item.title || 'item'}-${itemIdx}`} className="rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
                     {item.label ? <p className="text-xs uppercase tracking-wide text-primary-500">{item.label}</p> : null}
-                    {item.title ? <h3 className="mt-2 text-lg font-semibold">{item.title}</h3> : null}
-                    {item.body ? <p className="mt-2 text-sm text-secondary/70 dark:text-accent/70">{item.body}</p> : null}
-                    {asArray(item.points).length > 0 ? (
+                    {item.title ? <h3 className="mt-2 text-lg font-semibold">{valueToDisplay(item.title)}</h3> : null}
+                    {item.body ? <p className="mt-2 text-sm text-secondary/70 dark:text-accent/70">{valueToDisplay(item.body)}</p> : null}
+                    {arrayToDisplay(item.points).length > 0 ? (
                       <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-secondary/80 dark:text-accent/80">
-                        {asArray(item.points).map((p: string) => (
+                        {arrayToDisplay(item.points).map((p: string) => (
                           <li key={p}>{p}</li>
                         ))}
                       </ul>
@@ -114,9 +139,9 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
             {config.stepsIntro ? <p className="mt-3 text-secondary/70 dark:text-accent/70">{config.stepsIntro}</p> : null}
             <ol className="mt-4 list-decimal space-y-3 pl-5 text-secondary/80 dark:text-accent/80">
               {asArray(config.steps).map((step: any) => (
-                <li key={step.title}>
-                  <strong>{step.title}</strong>
-                  {step.description ? ` - ${step.description}` : ''}
+                <li key={valueToDisplay(step.title)}>
+                  <strong>{valueToDisplay(step.title)}</strong>
+                  {step.description ? ` - ${valueToDisplay(step.description)}` : ''}
                 </li>
               ))}
             </ol>
@@ -128,9 +153,9 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
             {config.faqTitle ? <h2 className="text-2xl font-semibold">{config.faqTitle}</h2> : null}
             <div className="mt-4 space-y-4">
               {asArray(config.faq).map((entry: any) => (
-                <div key={entry.question}>
-                  <h3 className="font-semibold">{entry.question}</h3>
-                  <p className="mt-1 text-secondary/70 dark:text-accent/70">{entry.answer}</p>
+                <div key={valueToDisplay(entry.question)}>
+                  <h3 className="font-semibold">{valueToDisplay(entry.question)}</h3>
+                  <p className="mt-1 text-secondary/70 dark:text-accent/70">{valueToDisplay(entry.answer)}</p>
                 </div>
               ))}
             </div>

@@ -1,14 +1,13 @@
-import LegacyConfigPage from '@/components/legacy/LegacyConfigPage';
-import { contactPage } from '@/legacy-content/batch2/config';
+import MarketingContactContent from '@/components/contact/MarketingContactContent';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: contactPage.meta?.title || 'Contact | Schedulaa',
-  description: contactPage.meta?.description,
+  title: 'Contact Schedulaa',
+  description: 'Talk to the Schedulaa team about custom rollouts, partnerships, or migration support.',
 };
 
 export default function ContactPage() {
-  return <LegacyConfigPage config={contactPage} />;
+  return <MarketingContactContent />;
 }

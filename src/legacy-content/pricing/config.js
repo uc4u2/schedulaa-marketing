@@ -16,11 +16,15 @@ const comparisonHeaders = source.comparison?.headers || {};
 const comparisonValues = source.comparison?.values || {};
 const comparisonRows = source.comparison?.rows || {};
 const comparisonItems = Object.keys(comparisonRows).map((key) => ({
-  title: comparisonRows[key],
-  body: `${comparisonHeaders.starter || 'Starter'}: ${comparisonValues?.starter?.[key] || ''}`,
+  title: comparisonRows[key]?.label || comparisonRows[key]?.section || key,
+  body: `${comparisonHeaders.starter || 'Starter'}: ${
+    comparisonRows[key]?.starter || comparisonValues?.starter?.[key] || ''
+  }`,
   points: [
-    `${comparisonHeaders.pro || 'Pro'}: ${comparisonValues?.pro?.[key] || ''}`,
-    `${comparisonHeaders.business || 'Business'}: ${comparisonValues?.business?.[key] || ''}`,
+    `${comparisonHeaders.pro || 'Pro'}: ${comparisonRows[key]?.pro || comparisonValues?.pro?.[key] || ''}`,
+    `${comparisonHeaders.business || 'Business'}: ${
+      comparisonRows[key]?.business || comparisonValues?.business?.[key] || ''
+    }`,
   ],
 }));
 
