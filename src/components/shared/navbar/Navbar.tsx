@@ -27,29 +27,17 @@ const productLeftLinks: NavItem[] = [
   { href: '/website-builder', labelKey: 'websiteBuilder' },
 ];
 
-const productRightLinks: NavItem[] = [
-  { href: '/industries', labelKey: 'industries' },
-  { href: '/status', labelKey: 'status' },
-  { href: '/roadmap', labelKey: 'roadmap' },
-];
-
 const resourceLeftLinks: NavItem[] = [
   { href: '/blog', labelKey: 'blog' },
-  { href: '/demo', labelKey: 'demo' },
-  { href: '/faq', labelKey: 'faq' },
-  { href: '/client/support', labelKey: 'helpCenter' },
   { href: '/docs', labelKey: 'documentation' },
+  { href: '/faq', labelKey: 'faq' },
 ];
 
-const resourceRightLinks: NavItem[] = [
-  { href: '/docs?topic=zapier', labelKey: 'zapier' },
-  { href: '/docs?topic=quickbooks-onboarding', labelKey: 'quickbooks' },
-  { href: '/docs?topic=xero-onboarding', labelKey: 'xero' },
-];
-
-const localeOptions: Array<{ code: AppLocale; label: string }> = [
-  { code: 'en', label: 'EN' },
-  { code: 'fa', label: 'FA' },
+const localeOptions: Array<{ code: string; label: string; supported: boolean }> = [
+  { code: 'en', label: 'EN', supported: true },
+  { code: 'fa', label: 'FA', supported: true },
+  { code: 'ru', label: 'RU', supported: false },
+  { code: 'zh', label: 'ZH', supported: false },
 ];
 
 const MenuPanel = ({
@@ -74,7 +62,7 @@ const MenuPanel = ({
         open ? 'block' : 'hidden',
       )}
     >
-      <div className="grid gap-4 md:grid-cols-[2fr_1fr]">
+      <div className={cn('grid gap-4', right.length ? 'md:grid-cols-[2fr_1fr]' : 'md:grid-cols-1')}>
         <div className="space-y-2">
           {left.map((item) => (
             <Link
@@ -87,18 +75,20 @@ const MenuPanel = ({
             </Link>
           ))}
         </div>
-        <div className="space-y-2 border-l border-stroke-2 pl-4 dark:border-stroke-7">
-          {right.map((item) => (
-            <Link
-              key={item.href}
-              href={withLocalePath(item.href, locale)}
-              onClick={close}
-              className="block rounded-lg px-3 py-2 text-sm hover:bg-background-3 dark:hover:bg-background-7"
-            >
-              {t(item.labelKey)}
-            </Link>
-          ))}
-        </div>
+        {right.length ? (
+          <div className="space-y-2 border-l border-stroke-2 pl-4 dark:border-stroke-7">
+            {right.map((item) => (
+              <Link
+                key={item.href}
+                href={withLocalePath(item.href, locale)}
+                onClick={close}
+                className="block rounded-lg px-3 py-2 text-sm hover:bg-background-3 dark:hover:bg-background-7"
+              >
+                {t(item.labelKey)}
+              </Link>
+            ))}
+          </div>
+        ) : null}
       </div>
     </div>
   );
@@ -122,10 +112,8 @@ const Navbar = () => {
 
   const mobileLinks = [
     ...productLeftLinks,
-    ...productRightLinks,
     ...resourceLeftLinks,
     { href: '/pricing', labelKey: 'pricing' },
-    { href: '/payslips', labelKey: 'payslips' },
   ];
 
   const dashboardLinks = [
@@ -160,7 +148,7 @@ const Navbar = () => {
               <MenuPanel
                 open={productOpen}
                 left={productLeftLinks}
-                right={productRightLinks}
+                right={[]}
                 locale={locale}
                 close={() => setProductOpen(false)}
               />
@@ -178,7 +166,7 @@ const Navbar = () => {
               <MenuPanel
                 open={resourcesOpen}
                 left={resourceLeftLinks}
-                right={resourceRightLinks}
+                right={[]}
                 locale={locale}
                 close={() => setResourcesOpen(false)}
               />
@@ -213,7 +201,7 @@ const Navbar = () => {
               className="rounded-full border border-stroke-2 bg-transparent px-3 py-2 text-sm dark:border-stroke-7"
             >
               {localeOptions.map((option) => (
-                <option key={option.code} value={option.code}>
+                <option key={option.code} value={option.code} disabled={!option.supported}>
                   {option.label}
                 </option>
               ))}
@@ -274,15 +262,17 @@ const Navbar = () => {
               </a>
             </div>
 
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-4 gap-2">
               {localeOptions.map((option) => (
                 <button
                   key={option.code}
                   type="button"
-                  onClick={() => onLocaleChange(option.code)}
+                  disabled={!option.supported}
+                  onClick={() => onLocaleChange(option.code as AppLocale)}
                   className={cn(
                     'rounded-lg border px-3 py-2 text-center text-sm',
                     locale === option.code ? 'border-primary-500 text-primary-500' : 'border-stroke-2 dark:border-stroke-7',
+                    !option.supported && 'cursor-not-allowed opacity-50',
                   )}
                 >
                   {option.label}
