@@ -9,5 +9,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
   return {
     locale: SUPPORTED_LOCALES.includes(locale) ? locale : DEFAULT_LOCALE,
     messages,
+    timeZone: 'UTC',
   };
 });

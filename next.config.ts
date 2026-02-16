@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
       '@public': './public',
     },
   },
+  async rewrites() {
+    return [
+      { source: '/en', destination: '/' },
+      { source: '/fa', destination: '/' },
+      { source: '/en/:path*', destination: '/:path*' },
+      { source: '/fa/:path*', destination: '/:path*' },
+    ];
+  },
   images: {
     qualities: [25, 50, 75, 100],
   },
