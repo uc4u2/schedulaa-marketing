@@ -18,10 +18,31 @@ const Footer = ({ className }: { className?: string }) => {
   return (
     <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden pt-16', className)}>
       <div className="main-container px-5">
-        <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-4">
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-6">
+          <div className="md:col-span-2">
             <Image src={darkLogo} alt="Schedulaa" className="max-w-[170px]" />
             <p className="text-accent/60 text-tagline-1 mt-4">{t('blurb')}</p>
+          </div>
+
+          <div>
+            <p className="text-primary-50 text-tagline-1 font-medium">{t('company')}</p>
+            <ul className="mt-5 space-y-3">
+              <li>
+                <Link href={withLocalePath('/contact', locale)} className="footer-link">
+                  {t('contact')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/status', locale)} className="footer-link">
+                  {t('status')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/roadmap', locale)} className="footer-link">
+                  {t('roadmap')}
+                </Link>
+              </li>
+            </ul>
           </div>
 
           <div>
@@ -81,6 +102,37 @@ const Footer = ({ className }: { className?: string }) => {
               <li>
                 <Link href={withLocalePath('/docs', locale)} className="footer-link">
                   {t('docs')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/client/support', locale)} className="footer-link">
+                  {t('helpCenter')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/zapier', locale)} className="footer-link">
+                  {t('zapier')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-primary-50 text-tagline-1 font-medium">{t('compareGroup')}</p>
+            <ul className="mt-5 space-y-3">
+              <li>
+                <Link href={withLocalePath('/compare', locale)} className="footer-link">
+                  {t('compareHub')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/alternatives', locale)} className="footer-link">
+                  {t('alternativesHub')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/compare/quickbooks-payroll', locale)} className="footer-link">
+                  {t('vsQuickBooksPayroll')}
                 </Link>
               </li>
             </ul>

@@ -1,39 +1,69 @@
-import BlogContent from '@/components/blog-details/BlogContent';
-import CTA from '@/components/shared/cta/CTA';
+import Link from 'next/link';
+import posts from '@/legacy-content/blog/posts';
 import { defaultMetadata } from '@/utils/generateMetaData';
-import getMarkDownContent from '@/utils/getMarkDownContent';
-import getMarkDownData from '@/utils/getMarkDownData';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
-  const blogs = getMarkDownData('src/data/blogs');
-  return blogs.map((post) => ({
-    slug: post.slug,
-  }));
+  return (posts as any[]).map((post) => ({ slug: post.slug }));
 }
 
-export const metadata: Metadata = {
-  ...defaultMetadata,
-  title: 'Blog Details | Schedulaa',
-};
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = (posts as any[]).find((item) => item.slug === slug);
+  return {
+    ...defaultMetadata,
+    title: post ? `${post.title} | Schedulaa` : 'Blog Details | Schedulaa',
+    description: post?.description,
+  };
+}
 
-const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const slug = (await params).slug;
-  const blogContent = getMarkDownContent('src/data/blogs/', slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = (posts as any[]).find((item) => item.slug === slug);
+  if (!post) return notFound();
 
   return (
-    <main className="bg-background-3 dark:bg-background-7">
-      <BlogContent blog={blogContent} />
-      <CTA
-        className="dark:bg-background-7 bg-white"
-        badgeClass="!badge-yellow-v2"
-        badgeText="Get started"
-        ctaHeading="Scale operations with Schedulaa"
-        description="Unify scheduling, payroll, and public booking with one platform."
-        ctaBtnText="Get started"
-      />
+    <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
+      <section className="main-container px-5">
+        <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
+          <p className="badge badge-yellow-v2">{post.heroOverline || 'Blog'}</p>
+          <h1 className="mt-5">{post.title}</h1>
+          <p className="mt-4 max-w-[900px] text-secondary/70 dark:text-accent/70">{post.description}</p>
+          <p className="mt-3 text-sm text-secondary/60 dark:text-accent/60">
+            {new Date(post.datePublished).toLocaleDateString('en-US')} {post.category ? `• ${post.category}` : ''}
+          </p>
+        </div>
+
+        <div className="mt-8 space-y-8">
+          {(post.sections || []).map((section: any, idx: number) => (
+            <div key={`${post.slug}-section-${idx}`} className="rounded-xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+              {section.heading ? <h2 className="text-xl font-semibold">{section.heading}</h2> : null}
+              {section.image?.src ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={section.image.src} alt={section.image.alt || section.heading || 'Blog visual'} className="mt-3 w-full rounded-lg" />
+              ) : null}
+              <div className="mt-3 space-y-3 text-secondary/70 dark:text-accent/70">
+                {(section.paragraphs || []).map((paragraph: string, pidx: number) => (
+                  <p key={`${post.slug}-${idx}-${pidx}`}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link href="/blog" className="text-primary-500 underline">
+            Back to blog
+          </Link>
+          <Link href="/register" className="text-primary-500 underline">
+            Start free
+          </Link>
+          <Link href="/contact" className="text-primary-500 underline">
+            Talk to sales
+          </Link>
+        </div>
+      </section>
     </main>
   );
-};
-
-export default page;
+}

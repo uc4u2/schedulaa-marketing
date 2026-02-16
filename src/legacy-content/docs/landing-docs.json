@@ -1,0 +1,483 @@
+{
+  "meta": {
+    "title": "Schedulaa Documentation | Scheduling, Payroll, and Commerce Guides",
+    "description": "Set up booking flows, payroll, analytics, and Stripe-powered commerce with Schedulaa. Explore guides today and preview the roadmap for upcoming API and SSO integrations.",
+    "canonical": "https://www.schedulaa.com/docs",
+    "og": {
+      "title": "Schedulaa Documentation | Scheduling, Payroll, and Commerce Guides",
+      "description": "Guides, onboarding steps, integrations, and FAQs for scheduling, payroll, and online sales — plus the roadmap for public APIs.",
+      "image": "https://www.schedulaa.com/og/docs.jpg"
+    }
+  },
+  "hero": {
+    "eyebrow": "Documentation",
+    "title": [
+      "Docs for scheduling,",
+      "payroll, analytics, and online sales."
+    ],
+    "subtitle": "Configure scheduling, payroll, analytics, and Stripe checkout with step-by-step docs, automation guides, and upcoming API milestones.",
+    "primaryCta": {
+      "label": "Search docs"
+    },
+    "secondaryCta": {
+      "label": "View roadmap"
+    },
+    "badge": {
+      "overline": "Documentation hub",
+      "title": "Guides and integration roadmap in one place"
+    },
+    "mediaAlt": "Schedulaa documentation overview"
+  },
+  "quickLinks": {
+    "eyebrow": "Quick links",
+    "title": "Start with the section that fits your goal",
+    "subtitle": "Jump straight to setup guides, integration steps, and support content. Public API access is coming soon.",
+    "ctaLabel": "Open",
+    "items": {
+      "gettingStarted": {
+        "label": "Getting Started",
+        "description": "Launch scheduling, payments, and branding in minutes."
+      },
+      "userGuides": {
+        "label": "User Guides",
+        "description": "Walkthroughs for booking, payroll, websites, and analytics."
+      },
+      "apiReference": {
+        "label": "API Reference",
+        "description": "Public API access (coming soon)."
+      },
+      "integrations": {
+        "label": "Integrations",
+        "description": "Stripe, QuickBooks/Xero, Jitsi, and automation workflows."
+      },
+      "faq": {
+        "label": "FAQ",
+        "description": "Troubleshoot scheduling, payroll, and client portals."
+      },
+      "changelog": {
+        "label": "Change Log",
+        "description": "Follow new releases and platform fixes."
+      }
+    }
+  },
+  "search": {
+    "title": "Search the docs",
+    "placeholder": "Search guides or FAQs",
+    "commonTopicsLabel": "Common topics:"
+  },
+  "gettingStarted": {
+    "title": "Getting started",
+    "cards": [
+      {
+        "title": "Account and Workspace Setup",
+        "items": [
+          "Create your manager account and verify email",
+          "Invite staff and assign manager, staff, or admin permissions",
+          "Pick a profession template (salon, recruiter, fitness, real estate, photography, etc.)",
+          "Connect Stripe for payouts, checkout, and card-on-file (required for live transactions)"
+        ]
+      },
+      {
+        "title": "Company Profile and Branding",
+        "items": [
+          "Configure business hours, tax settings, and currency",
+          "Upload logos, theme colors, booking widgets, and notifications",
+          "Link an existing custom domain; in-app domain purchase is coming soon"
+        ]
+      },
+      {
+        "title": "Operational Foundations",
+        "items": [
+          "Build services, add-ons, departments, and branch catalogs",
+          "Publish availability templates, recurring schedules, and shift rotations",
+          "Enable Stripe Tax to automate tax calculations for products and add-ons",
+          "Review notification defaults, reminders, and marketing campaigns"
+        ]
+      }
+    ]
+  },
+  "productGuides": {
+    "title": "Product guides",
+    "cards": [
+      {
+        "title": "Booking and Scheduling",
+        "highlights": [
+          "Service catalog setup with durations, buffers, and add-ons",
+          "Recurring availability and editable slots (Vagaro-style)",
+          "Profession templates with tailored emails and questionnaires",
+          "Branch or department-specific booking flows",
+          "Clients get confirmations, reminders, tips, reviews, and memberships"
+        ]
+      },
+      {
+        "title": "Payroll and HR",
+        "highlights": [
+          "Employee profiles with pay rates, roles, and compliance notes",
+          "Timesheet approvals, batch payroll, and overrides",
+          "Shift swap requests and leave approvals with manager review",
+          "Overtime, holidays, and bonuses calculated automatically",
+          "Exports ready for 45 U.S. states + all Canadian provinces (except QC)"
+        ]
+      },
+      {
+        "title": "Website Builder",
+        "highlights": [
+          "Industry-specific templates with hero, reviews, and contact pages",
+          "Instant theme customization for colors, fonts, navigation",
+          "Version history, visual editor, and auto-publishing",
+          "Custom domain linking (in-app purchase coming soon)"
+        ]
+      },
+      {
+        "title": "Commerce and Products",
+        "highlights": [
+          "Mixed carts for services, products, and add-ons via Stripe Checkout",
+          "Coupons, gift cards, refunds, and Stripe Tax automation",
+          "Save card on file and manage payouts through Stripe",
+          "Track order history, reconciled refunds, and revenue per location"
+        ]
+      },
+      {
+        "title": "Analytics and Reporting",
+        "highlights": [
+          "Monitor revenue, retention, utilization, and churn",
+          "Drill into providers, departments, and campaigns",
+          "Advanced dashboards for tips, refunds, and marketing",
+          "Export reports to CSV or connect to BI tools"
+        ]
+      },
+      {
+        "title": "Automations and Integrations",
+        "highlights": [
+          "Configure outbound webhooks with signature verification",
+          "Trigger emails, SMS, and win-back campaigns automatically",
+          "Stripe for payments, payouts, and tax automation",
+          "QuickBooks/Xero exports; Jitsi for virtual sessions",
+          "Zapier, Slack notifications, and in-app domains coming soon"
+        ]
+      }
+    ]
+  },
+  "apiReference": {
+    "title": "API reference (coming soon)",
+    "tableHeaders": {
+      "category": "Category",
+      "method": "Method",
+      "path": "Path",
+      "summary": "Summary"
+    },
+    "tip": "Tip: Use the API Console in the manager dashboard (Settings > Developers) to try endpoints once access opens.",
+    "comingSoon": "Public API access and SSO integrations are planned. Documentation will be published closer to launch.",
+    "endpoints": []
+  },
+  "integrations": {
+    "title": "Integrations",
+    "description": "Stripe is live today; the rest are marked Beta or Coming Soon so you know what's next on the roadmap.",
+    "statusLabels": {
+      "available": "Available",
+      "beta": "Beta",
+      "comingSoon": "Coming Soon"
+    },
+    "items": [
+      {
+        "name": "Stripe",
+        "status": "available",
+        "details": "Checkout, payouts, card-on-file, and Stripe Tax automation."
+      },
+      {
+        "name": "QuickBooks / Xero",
+        "status": "beta",
+        "details": "Export payroll journals and revenue summaries to your ledgers."
+      },
+      {
+        "name": "Jitsi",
+        "status": "available",
+        "details": "Virtual sessions and video interviews embedded in booking flows."
+      },
+      {
+        "name": "Zapier",
+        "status": "comingSoon",
+        "details": "Automation connector for custom workflows and CRM updates."
+      },
+      {
+        "name": "Slack",
+        "status": "comingSoon",
+        "details": "Notifications for new bookings, cancellations, and shift changes."
+      },
+      {
+        "name": "Domain Purchase",
+        "status": "comingSoon",
+        "details": "Buy and connect custom domains without leaving Schedulaa."
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ and troubleshooting",
+    "items": [
+      {
+        "question": "How long does onboarding take?",
+        "answer": "Most teams launch within 7-14 days using the quick-start checklists and import templates in the docs."
+      },
+      {
+        "question": "Can clients purchase both services and products?",
+        "answer": "Yes. Clients can add multiple services, add-ons, or merchandise items to their cart and complete checkout securely through Stripe."
+      },
+      {
+        "question": "Do you support Zapier or custom webhooks?",
+        "answer": "Webhooks are fully supported. Zapier integration is in development for later 2025."
+      },
+      {
+        "question": "Do you offer data migration?",
+        "answer": "Yes. Contact support for CSV import templates or request managed migration for an additional fee."
+      }
+    ],
+    "schema": [
+      {
+        "question": "How long does onboarding take?",
+        "answer": "Most teams launch within 7-14 days using the quick-start checklists and import templates in the docs."
+      },
+      {
+        "question": "Does Schedulaa offer a full API reference?",
+        "answer": "Yes. The API section covers authentication, webhooks, scheduling, payroll, and site management endpoints."
+      },
+      {
+        "question": "Where can I find integration walkthroughs?",
+        "answer": "Integration guides cover payments, messaging, video, and analytics connectors with step-by-step instructions."
+      }
+    ]
+  },
+  "changelog": {
+    "title": "Change log",
+    "releases": [
+      {
+        "version": "v2.5.0",
+        "date": "2025-10-15",
+        "entries": [
+          "Added profession-based onboarding templates and customizable email invitations.",
+          "Enabled Stripe Tax for product-based transactions.",
+          "Launched refund handling for services and merchandise."
+        ]
+      },
+      {
+        "version": "v2.4.0",
+        "date": "2025-09-30",
+        "entries": [
+          "Introduced locale packs for French and German",
+          "Added multi-branch payroll cost centers",
+          "Upgraded booking embed to support recurring appointments"
+        ]
+      },
+      {
+        "version": "v2.3.1",
+        "date": "2025-08-10",
+        "entries": [
+          "New management dashboards for franchise groups",
+          "Beta launch of QuickBooks integration",
+          "Improved notification templates for marketing"
+        ]
+      }
+    ]
+  },
+  "accountingGuides": {
+    "title": "Accounting guides",
+    "subtitle": "Deep-dive QuickBooks and Xero onboarding playbooks with mapping, defaults, and export guardrails.",
+    "guides": {
+      "quickbooks": {
+        "eyebrow": "QuickBooks Online",
+        "title": "Schedulaa + QuickBooks setup guide",
+        "summary": "Map once, validate the chips, and sync payroll or revenue exports with a single click.",
+        "quickLinkLabel": "QuickBooks onboarding",
+        "quickLinkDescription": "Mapping, defaults, cost centers, and export guardrails.",
+        "sections": [
+          {
+            "heading": "Prerequisites",
+            "items": [
+              "Use QuickBooks Essentials, Plus, or Advanced to expose customer lists (Simple Start sandboxes do not).",
+              "Enable Classes and Locations if you plan to tag Schedulaa departments as cost centers.",
+              "Create or reuse the wage, liability, and revenue accounts you plan to map (income tax, CPP/EI, FICA/Medicare, tips payable, net pay, service/product revenue, and sales tax)."
+            ]
+          },
+          {
+            "heading": "1. Why mapping is required",
+            "items": [
+              "QuickBooks accepts journals only when every category—wages, deductions, FICA/Medicare, net pay, revenue, tax, tips—points to a real account.",
+              "Schedulaa uses those mappings to build balanced debit/credit lines; when the chips turn green, Sync to QuickBooks is ready."
+            ]
+          },
+          {
+            "heading": "2. How mapping works",
+            "items": [
+              "Under Payroll and Revenue mapping, choose the exact account codes from your QuickBooks chart.",
+              "Need a new account? Create it in QuickBooks and click Refresh (or reconnect) so it appears in the dropdown.",
+              "Mappings can be edited at any time—future exports automatically use the new accounts."
+            ]
+          },
+          {
+            "heading": "3. Recommended accounts",
+            "items": [
+              "Expenses: Wages & Salaries, Holiday/Vacation Pay, Tips Paid, Sales Commissions.",
+              "Liabilities: Income tax payable, CPP/QPP payable, EI payable, FICA payable (U.S.), Medicare payable (U.S.), Tips payable.",
+              "Net pay: Payroll Checking or a dedicated payroll clearing account so the journal balances.",
+              "Revenue: Service Income, Product Sales, Sales Tax Payable, Tips Payable."
+            ]
+          },
+          {
+            "heading": "4. Exporting payroll",
+            "items": [
+              "Finalize the pay run in Schedulaa, load it in Payroll Preview, and click Sync to QuickBooks.",
+              "Schedulaa posts a balanced Journal Entry (wages/vacation/tips/commissions debited; income tax, CPP/EI, FICA/Medicare, tips payable, and net pay credited).",
+              "Class/Location tags are attached automatically when departments are mapped.",
+              "No manual edits are required inside QuickBooks.",
+              "If you prefer Zapier-driven payroll workflows instead of native sync, add an Event hook for “When a payroll payment is requested” and handle journals/approvals in Zapier."
+            ]
+          },
+          {
+            "heading": "5. Exporting revenue, invoices, and sales receipts",
+            "items": [
+              "Summarized revenue journal: export service revenue, product revenue, sales tax collected, and tips payable for any date range.",
+              "Invoices or Sales Receipts: set default Item/Customer, pick the document type and date range, and Schedulaa creates QuickBooks documents per transaction.",
+              "Every export stores the resulting QuickBooks ID on the transaction for audit trails."
+            ]
+          },
+          {
+            "heading": "6. Locking periods and backdated exports",
+            "items": [
+              "Use “Lock exports before” to prevent journals from posting into closed months.",
+              "Disable backdated exports if you want strict accounting controls; re-enable when finance approves a historical post."
+            ]
+          },
+          {
+            "heading": "7. Integration Activity",
+            "items": [
+              "Every export is logged with date, provider, type, status, external ID, and the manager who triggered it.",
+              "Check Workspace Settings → Integration Activity to confirm QuickBooks sync history or troubleshoot failures."
+            ]
+          },
+          {
+            "heading": "8. Common questions",
+            "items": [
+              "Do I need every account pre-created? No—map to existing accounts or create new ones in QuickBooks first, then refresh.",
+              "Can I change mappings later? Yes—future exports immediately use the new mapping.",
+              "Why is the Customer dropdown empty? Essentials/Plus/Advanced expose the list; Simple Start sandboxes do not.",
+              "Do payroll exports require customers? No—only invoice/sales receipt exports use CustomerRef."
+            ]
+          },
+          {
+            "heading": "9. Quick setup checklist",
+            "items": [
+              "Map payroll expenses and liabilities (including FICA/Medicare if U.S.).",
+              "Map net pay → bank, plus service/product revenue, tax, and tips payable.",
+              "Configure default Class/Location/Item/Customer (optional) and Departments ↔ Class/Location mappings.",
+              "Finalize payroll → Sync to QuickBooks → confirm success in Integration Activity."
+            ]
+          },
+          {
+            "heading": "10. Success flow",
+            "items": [
+              "Green status chips + lock-date guardrails enabled.",
+              "Integration Activity shows a success entry with ManualJournalID or Invoice ID.",
+              "Accounting can reconcile journals without editing them manually."
+            ]
+          }
+        ],
+        "ctaLabel": "Open QuickBooks settings"
+      },
+      "xero": {
+        "eyebrow": "Xero",
+        "title": "Schedulaa + Xero setup guide",
+        "summary": "Map accounts, configure tracking defaults, and lock accounting periods before syncing Schedulaa payroll or revenue journals to Xero.",
+        "quickLinkLabel": "Xero onboarding",
+        "quickLinkDescription": "Manual journal mapping, tracking, and lock-date controls.",
+        "sections": [
+          {
+            "heading": "Prerequisites",
+            "items": [
+              "Create or reuse the Xero expense/liability accounts you plan to map (wages, vacation, tips, commissions, income tax, CPP/EI, FICA/Medicare, tips payable, net pay, service/product revenue, tax collected).",
+              "Add Tracking Categories (e.g., Departments or Locations) with options for each branch if you plan to map Schedulaa departments."
+            ]
+          },
+          {
+            "heading": "1. Why mapping is required",
+            "items": [
+              "Xero accepts a manual journal only when every line—wages, deductions, FICA/Medicare, net pay, revenue, tax, tips—points to a real account.",
+              "Schedulaa builds those debit/credit lines automatically; green status chips indicate all required kinds are mapped."
+            ]
+          },
+          {
+            "heading": "2. How mapping works",
+            "items": [
+              "Under Payroll and Revenue mapping, choose the account code straight from your Xero chart.",
+              "Need a new account? Create it in Xero, reconnect or refresh, then map it here.",
+              "Mappings can be changed at any time—future exports reuse the most recent selections."
+            ]
+          },
+          {
+            "heading": "3. Recommended accounts",
+            "items": [
+              "Expenses: Wages & Salaries, Holiday/Vacation Pay, Tips Paid, Sales Commissions.",
+              "Liabilities: Income tax payable, CPP/QPP payable, EI payable, FICA payable (U.S.), Medicare payable (U.S.), Tips payable.",
+              "Net pay: Payroll clearing or your payroll bank account.",
+              "Revenue: Service Income, Product Sales, Sales Tax Payable, Tips Payable."
+            ]
+          },
+          {
+            "heading": "4. Exporting payroll",
+            "items": [
+              "Finalize payroll in Schedulaa, load the run, and click Sync to Xero.",
+              "Schedulaa sends a balanced journal (wages + employer portions + deductions + net pay + tips payable).",
+              "Tracking categories are attached per department or fall back to your default tracking selection.",
+              "If you want Zapier to orchestrate payroll instead of native sync, add an Event hook for “When a payroll payment is requested” and let Zapier create journals/approvals."
+            ]
+          },
+          {
+            "heading": "5. Exporting revenue / sales",
+            "items": [
+              "Use the revenue export card to push summarized service/product revenue, sales tax collected, and tips payable for a date range.",
+              "Each export stores the returned ManualJournalID so finance can audit the sync."
+            ]
+          },
+          {
+            "heading": "6. Default tracking & lock date",
+            "items": [
+              "Set a default tracking category + option so unmapped transactions still land in the correct cost center.",
+              "Use “Lock exports before” + “Allow backdated exports” to block journals from posting into closed periods."
+            ]
+          },
+          {
+            "heading": "7. Departments ↔ Tracking",
+            "items": [
+              "Map each Schedulaa department to a Xero tracking category option (e.g., Downtown Studio, York Mills).",
+              "During export, Schedulaa attaches the department’s tracking option; if none exist, it uses your default tracking."
+            ]
+          },
+          {
+            "heading": "8. Common questions",
+            "items": [
+              "Do I need every account pre-created? No—map to existing accounts or add new ones in Xero first, then refresh.",
+              "Can I change mappings later? Yes—future exports immediately use the updated mapping.",
+              "Not seeing tracking categories? Add them in Xero (Accounting → Accounting settings → Tracking categories) and click Refresh."
+            ]
+          },
+          {
+            "heading": "9. Quick setup checklist",
+            "items": [
+              "Map payroll expenses and liabilities (including FICA/Medicare for U.S. entities).",
+              "Map net pay, service/product revenue, tax collected, and tips payable.",
+              "Configure default tracking + lock date, then map departments ↔ tracking options.",
+              "Finalize payroll → Sync to Xero → confirm success in Integration Activity."
+            ]
+          }
+        ],
+        "ctaLabel": "Open Xero settings"
+      }
+    }
+  },
+  "footer": {
+    "helpText": "Need more help? Visit the <supportLink>Help Center</supportLink> or email <supportEmail>support@schedulaa.com</supportEmail>.",
+    "links": {
+      "status": "Status Page",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  }
+}

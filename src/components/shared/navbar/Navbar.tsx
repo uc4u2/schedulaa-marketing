@@ -24,12 +24,15 @@ const productLeftLinks: NavItem[] = [
   { href: '/marketing', labelKey: 'marketing' },
   { href: '/payroll', labelKey: 'payroll' },
   { href: '/website-builder', labelKey: 'websiteBuilder' },
+  { href: '/demo', labelKey: 'demo' },
+  { href: '/contact', labelKey: 'contact' },
 ];
 
 const resourceLeftLinks: NavItem[] = [
   { href: '/blog', labelKey: 'blog' },
   { href: '/docs', labelKey: 'documentation' },
   { href: '/faq', labelKey: 'faq' },
+  { href: '/client/support', labelKey: 'helpCenter' },
 ];
 
 const localeOptions: Array<{ code: string; label: string; supported: boolean }> = [
@@ -112,8 +115,6 @@ const Navbar = () => {
   const mobileLinks = [
     ...productLeftLinks,
     { href: '/pricing', labelKey: 'pricing' },
-    { href: '/demo', labelKey: 'demo' },
-    { href: '/contact', labelKey: 'contact' },
     ...resourceLeftLinks,
   ];
 
@@ -178,18 +179,6 @@ const Navbar = () => {
               className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
             >
               {t('pricing')}
-            </Link>
-            <Link
-              href={withLocalePath('/demo', locale)}
-              className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
-            >
-              {t('demo')}
-            </Link>
-            <Link
-              href={withLocalePath('/contact', locale)}
-              className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
-            >
-              {t('contact')}
             </Link>
           </nav>
 
