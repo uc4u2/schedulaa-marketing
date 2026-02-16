@@ -1,46 +1,143 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { cn } from '@/utils/cn';
+import { AppLocale, DEFAULT_LOCALE, detectLocaleFromPath, isSupportedLocale, withLocalePath } from '@/utils/locale';
 import logoDark from '@public/images/shared/logo-dark.svg';
 import logo from '@public/images/shared/logo.svg';
 import mainLogo from '@public/images/shared/main-logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
 
-const navLinks = [
-  { href: '/features', label: 'Features' },
-  { href: '/workforce', label: 'Workforce' },
-  { href: '/booking', label: 'Booking' },
-  { href: '/marketing', label: 'Marketing' },
-  { href: '/payroll', label: 'Payroll' },
-  { href: '/website-builder', label: 'Website Builder' },
-  { href: '/docs', label: 'Docs' },
-  { href: '/pricing', label: 'Pricing' },
+type NavItem = {
+  href: string;
+  labelKey: string;
+};
+
+const productLeftLinks: NavItem[] = [
+  { href: '/features', labelKey: 'features' },
+  { href: '/workforce', labelKey: 'workforce' },
+  { href: '/booking', labelKey: 'booking' },
+  { href: '/marketing', labelKey: 'marketing' },
+  { href: '/payroll', labelKey: 'payroll' },
+  { href: '/website-builder', labelKey: 'websiteBuilder' },
 ];
 
-const mobileLinks = [
-  ...navLinks,
-  { href: '/industries', label: 'Industries' },
-  { href: '/status', label: 'Status' },
-  { href: '/roadmap', label: 'Roadmap' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/demo', label: 'Demo' },
-  { href: '/faq', label: 'FAQ' },
-  { href: '/client/support', label: 'Help Center' },
-  { href: '/payslips', label: 'Payslips' },
+const productRightLinks: NavItem[] = [
+  { href: '/industries', labelKey: 'industries' },
+  { href: '/status', labelKey: 'status' },
+  { href: '/roadmap', labelKey: 'roadmap' },
 ];
+
+const resourceLeftLinks: NavItem[] = [
+  { href: '/blog', labelKey: 'blog' },
+  { href: '/demo', labelKey: 'demo' },
+  { href: '/faq', labelKey: 'faq' },
+  { href: '/client/support', labelKey: 'helpCenter' },
+  { href: '/docs', labelKey: 'documentation' },
+];
+
+const resourceRightLinks: NavItem[] = [
+  { href: '/docs?topic=zapier', labelKey: 'zapier' },
+  { href: '/docs?topic=quickbooks-onboarding', labelKey: 'quickbooks' },
+  { href: '/docs?topic=xero-onboarding', labelKey: 'xero' },
+];
+
+const localeOptions: Array<{ code: AppLocale; label: string }> = [
+  { code: 'en', label: 'EN' },
+  { code: 'fa', label: 'FA' },
+];
+
+const MenuPanel = ({
+  open,
+  left,
+  right,
+  locale,
+  close,
+}: {
+  open: boolean;
+  left: NavItem[];
+  right: NavItem[];
+  locale: AppLocale;
+  close: () => void;
+}) => {
+  const t = useTranslations('navbar');
+
+  return (
+    <div
+      className={cn(
+        'absolute left-0 top-full mt-3 w-[min(760px,92vw)] rounded-2xl border border-stroke-2 bg-white p-4 shadow-xl dark:border-stroke-7 dark:bg-background-8',
+        open ? 'block' : 'hidden',
+      )}
+    >
+      <div className="grid gap-4 md:grid-cols-[2fr_1fr]">
+        <div className="space-y-2">
+          {left.map((item) => (
+            <Link
+              key={item.href}
+              href={withLocalePath(item.href, locale)}
+              onClick={close}
+              className="block rounded-lg px-3 py-2 hover:bg-background-3 dark:hover:bg-background-7"
+            >
+              <p className="font-medium">{t(item.labelKey)}</p>
+            </Link>
+          ))}
+        </div>
+        <div className="space-y-2 border-l border-stroke-2 pl-4 dark:border-stroke-7">
+          {right.map((item) => (
+            <Link
+              key={item.href}
+              href={withLocalePath(item.href, locale)}
+              onClick={close}
+              className="block rounded-lg px-3 py-2 text-sm hover:bg-background-3 dark:hover:bg-background-7"
+            >
+              {t(item.labelKey)}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Navbar = () => {
+  const t = useTranslations('navbar');
+  const pathname = usePathname() || '/';
   const [open, setOpen] = useState(false);
+  const [productOpen, setProductOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
+
+  const locale = detectLocaleFromPath(pathname);
+
+  const onLocaleChange = (newLocale: AppLocale) => {
+    if (!isSupportedLocale(newLocale)) return;
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; samesite=lax`;
+    const next = withLocalePath(pathname, newLocale);
+    window.location.href = next;
+  };
+
+  const mobileLinks = [
+    ...productLeftLinks,
+    ...productRightLinks,
+    ...resourceLeftLinks,
+    { href: '/pricing', labelKey: 'pricing' },
+    { href: '/payslips', labelKey: 'payslips' },
+  ];
+
+  const dashboardLinks = [
+    { href: `${APP_ORIGIN}/employee`, label: t('employeeDashboard') },
+    { href: `${APP_ORIGIN}/manager`, label: t('managerDashboard') },
+  ];
 
   return (
     <header className="fixed top-4 left-1/2 z-50 w-full max-w-[95vw] -translate-x-1/2">
       <div className="rounded-full border border-stroke-2 bg-white/80 px-4 py-3 shadow-sm backdrop-blur-md dark:border-stroke-7 dark:bg-background-7/80">
         <div className="mx-auto flex max-w-[1220px] items-center justify-between gap-3">
-          <Link href="/" className="shrink-0" aria-label="Schedulaa home">
+          <Link href={withLocalePath('/', locale)} className="shrink-0" aria-label="Schedulaa home">
             <figure className="hidden max-w-[190px] lg:block">
               <Image src={mainLogo} alt="Schedulaa" className="dark:invert" />
             </figure>
@@ -50,30 +147,89 @@ const Navbar = () => {
             </figure>
           </Link>
 
-          <nav className="hidden items-center gap-4 xl:flex" aria-label="Primary">
-            {navLinks.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
+          <nav className="relative hidden items-center gap-4 xl:flex" aria-label="Primary">
+            <div className="relative" onMouseLeave={() => setProductOpen(false)}>
+              <button
+                type="button"
+                onMouseEnter={() => setProductOpen(true)}
+                onClick={() => setProductOpen((p) => !p)}
                 className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
               >
-                {item.label}
-              </Link>
-            ))}
+                {t('product')}
+              </button>
+              <MenuPanel
+                open={productOpen}
+                left={productLeftLinks}
+                right={productRightLinks}
+                locale={locale}
+                close={() => setProductOpen(false)}
+              />
+            </div>
+
+            <div className="relative" onMouseLeave={() => setResourcesOpen(false)}>
+              <button
+                type="button"
+                onMouseEnter={() => setResourcesOpen(true)}
+                onClick={() => setResourcesOpen((p) => !p)}
+                className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
+              >
+                {t('resources')}
+              </button>
+              <MenuPanel
+                open={resourcesOpen}
+                left={resourceLeftLinks}
+                right={resourceRightLinks}
+                locale={locale}
+                close={() => setResourcesOpen(false)}
+              />
+            </div>
+
+            <Link
+              href={withLocalePath('/pricing', locale)}
+              className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
+            >
+              {t('pricing')}
+            </Link>
           </nav>
 
           <div className="hidden items-center gap-2 xl:flex">
+            {dashboardLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-full border border-stroke-2 px-4 py-2 text-sm font-medium dark:border-stroke-7"
+              >
+                {item.label}
+              </a>
+            ))}
+
+            <label className="sr-only" htmlFor="marketing-language">
+              {t('language')}
+            </label>
+            <select
+              id="marketing-language"
+              value={locale}
+              onChange={(e) => onLocaleChange((e.target.value || DEFAULT_LOCALE) as AppLocale)}
+              className="rounded-full border border-stroke-2 bg-transparent px-3 py-2 text-sm dark:border-stroke-7"
+            >
+              {localeOptions.map((option) => (
+                <option key={option.code} value={option.code}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+
             <a
               href={`${APP_ORIGIN}/login`}
               className="rounded-full border border-stroke-2 px-4 py-2 text-sm font-medium dark:border-stroke-7"
             >
-              Log in
+              {t('login')}
             </a>
             <a
               href={`${APP_ORIGIN}/register`}
               className="rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-600"
             >
-              Start free
+              {t('startFree')}
             </a>
           </div>
 
@@ -90,32 +246,62 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className={cn('overflow-hidden transition-all xl:hidden', open ? 'mt-3 max-h-[800px] pt-2' : 'max-h-0')}>
+        <div className={cn('overflow-hidden transition-all xl:hidden', open ? 'mt-3 max-h-[900px] pt-2' : 'max-h-0')}>
           <nav className="grid gap-2" aria-label="Mobile primary">
             {mobileLinks.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={withLocalePath(item.href, locale)}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-2 text-sm text-secondary/80 hover:bg-background-3 dark:text-accent/80 dark:hover:bg-background-8"
               >
-                {item.label}
+                {t(item.labelKey)}
               </Link>
             ))}
-            <div className="mt-2 grid grid-cols-2 gap-2">
+
+            <div className="grid grid-cols-2 gap-2">
               <a
-                href={`${APP_ORIGIN}/login`}
-                onClick={() => setOpen(false)}
+                href={`${APP_ORIGIN}/employee`}
                 className="rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7"
               >
-                Log in
+                {t('employeeDashboard')}
+              </a>
+              <a
+                href={`${APP_ORIGIN}/manager`}
+                className="rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7"
+              >
+                {t('managerDashboard')}
+              </a>
+            </div>
+
+            <div className="grid grid-cols-3 gap-2">
+              {localeOptions.map((option) => (
+                <button
+                  key={option.code}
+                  type="button"
+                  onClick={() => onLocaleChange(option.code)}
+                  className={cn(
+                    'rounded-lg border px-3 py-2 text-center text-sm',
+                    locale === option.code ? 'border-primary-500 text-primary-500' : 'border-stroke-2 dark:border-stroke-7',
+                  )}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-2 gap-2">
+              <a
+                href={`${APP_ORIGIN}/login`}
+                className="rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7"
+              >
+                {t('login')}
               </a>
               <a
                 href={`${APP_ORIGIN}/register`}
-                onClick={() => setOpen(false)}
                 className="rounded-lg bg-primary-500 px-3 py-2 text-center text-sm font-semibold text-white"
               >
-                Start free
+                {t('startFree')}
               </a>
             </div>
           </nav>

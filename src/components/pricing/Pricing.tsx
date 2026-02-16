@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 import { CheckIcon } from '@/icons';
@@ -68,6 +69,7 @@ const pricingPlans: PricingPlan[] = [
 ];
 
 const Pricing = () => {
+  const t = useTranslations('pricing');
   const [isAnnual, setIsAnnual] = useState<boolean>(false);
 
   return (
@@ -75,20 +77,20 @@ const Pricing = () => {
       <div className="main-container flex flex-col gap-[70px]">
         <div className="flex flex-col items-center text-center">
           <RevealAnimation delay={0.2}>
-            <span className="badge badge-yellow-v2 mb-5"> Our Pricing </span>
+            <span className="badge badge-yellow-v2 mb-5"> {t('badge')} </span>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
-            <h2 className="mx-auto mb-8 max-w-[650px]">Select the pricing plan that best suits your needs.</h2>
+            <h2 className="mx-auto mb-8 max-w-[650px]">{t('title')}</h2>
           </RevealAnimation>
           <RevealAnimation delay={0.4}>
             <div className="relative z-0">
               <RevealAnimation delay={1} duration={1.2} direction="up" offset={200}>
                 <span className="bg-secondary dark:bg-accent text-accent dark:text-secondary text-tagline-2 absolute -top-2.5 -right-6 z-11 inline-block w-[90px] rotate-[20deg] rounded-[36px] px-3.5 py-1.5 font-normal capitalize shadow-xs">
-                  save 40%
+                  {t('save')}
                 </span>
               </RevealAnimation>
               <label className="dark:bg-background-9 relative z-[10] inline-flex cursor-pointer items-center rounded-full bg-white px-[57px] py-6">
-                <span className="text-secondary dark:text-accent mr-2.5 text-base font-normal">Monthly</span>
+                <span className="text-secondary dark:text-accent mr-2.5 text-base font-normal">{t('monthly')}</span>
                 <input
                   type="checkbox"
                   id="priceCheck"
@@ -98,7 +100,7 @@ const Pricing = () => {
                   aria-label="Toggle between monthly and yearly pricing"
                 />
                 <span className="bg-secondary dark:bg-accent *: dark:after:bg-background-9 after:bg-accent d relative h-[28px] w-13 rounded-[34px] after:absolute after:start-[2px] after:top-1/2 after:h-6 after:w-6 after:-translate-y-1/2 after:rounded-full after:transition-all after:content-[''] peer-checked:after:start-[2px] peer-checked:after:translate-x-full" />
-                <span className="text-secondary dark:text-accent ms-2.5 text-base font-normal">Yearly</span>
+                <span className="text-secondary dark:text-accent ms-2.5 text-base font-normal">{t('yearly')}</span>
               </label>
             </div>
           </RevealAnimation>
@@ -130,7 +132,7 @@ const Pricing = () => {
                         <h4 className="text-heading-4 font-normal">
                           $<span>{isAnnual ? plan.annualPrice : plan.monthlyPrice}</span>
                         </h4>
-                        <p className="text-secondary dark:text-accent">{isAnnual ? 'Per Year' : 'Per Month'}</p>
+                        <p className="text-secondary dark:text-accent">{isAnnual ? t('perYear') : t('perMonth')}</p>
                       </div>
                       <Link
                         href="/contact-us"
@@ -140,7 +142,7 @@ const Pricing = () => {
                             ? 'btn-secondary dark:btn-accent hover:btn-primary'
                             : 'btn-white dark:btn-white-dark hover:btn-secondary dark:hover:btn-accent',
                         )}>
-                        Get started
+                        {t('getStarted')}
                       </Link>
                       <ul className="relative list-none space-y-2.5">
                         {plan.features.map((feature, idx) => (

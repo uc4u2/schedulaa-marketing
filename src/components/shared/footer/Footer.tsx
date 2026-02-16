@@ -1,58 +1,115 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import { cn } from '@/utils/cn';
 import darkLogo from '@public/images/shared/logo-dark.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
 
 const Footer = ({ className }: { className?: string }) => {
+  const t = useTranslations('footer');
+  const pathname = usePathname() || '/';
+  const locale = detectLocaleFromPath(pathname);
+
   return (
     <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden pt-16', className)}>
       <div className="main-container px-5">
         <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-4">
           <div className="md:col-span-1">
             <Image src={darkLogo} alt="Schedulaa" className="max-w-[170px]" />
-            <p className="text-accent/60 text-tagline-1 mt-4">
-              Schedulaa is the operating system for service businesses: scheduling, payroll, and website booking in one
-              platform.
-            </p>
+            <p className="text-accent/60 text-tagline-1 mt-4">{t('blurb')}</p>
           </div>
 
           <div>
-            <p className="text-primary-50 text-tagline-1 font-medium">Product</p>
+            <p className="text-primary-50 text-tagline-1 font-medium">{t('product')}</p>
             <ul className="mt-5 space-y-3">
-              <li><Link href="/features" className="footer-link">Features</Link></li>
-              <li><Link href="/pricing" className="footer-link">Pricing</Link></li>
-              <li><Link href="/payroll" className="footer-link">Payroll</Link></li>
-              <li><Link href="/docs" className="footer-link">Docs</Link></li>
+              <li>
+                <Link href={withLocalePath('/features', locale)} className="footer-link">
+                  {t('features')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/pricing', locale)} className="footer-link">
+                  {t('pricing')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/payroll', locale)} className="footer-link">
+                  {t('payroll')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/docs', locale)} className="footer-link">
+                  {t('docs')}
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <p className="text-primary-50 text-tagline-1 font-medium">Resources</p>
+            <p className="text-primary-50 text-tagline-1 font-medium">{t('resources')}</p>
             <ul className="mt-5 space-y-3">
-              <li><Link href="/blog" className="footer-link">Blog</Link></li>
-              <li><Link href="/compare" className="footer-link">Compare</Link></li>
-              <li><Link href="/alternatives" className="footer-link">Alternatives</Link></li>
-              <li><Link href="/faq" className="footer-link">FAQ</Link></li>
+              <li>
+                <Link href={withLocalePath('/blog', locale)} className="footer-link">
+                  {t('blog')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/compare', locale)} className="footer-link">
+                  {t('compare')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/alternatives', locale)} className="footer-link">
+                  {t('alternatives')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/faq', locale)} className="footer-link">
+                  {t('faq')}
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <p className="text-primary-50 text-tagline-1 font-medium">Legal</p>
+            <p className="text-primary-50 text-tagline-1 font-medium">{t('legal')}</p>
             <ul className="mt-5 space-y-3">
-              <li><Link href="/privacy" className="footer-link">Privacy</Link></li>
-              <li><Link href="/terms" className="footer-link">Terms</Link></li>
-              <li><Link href="/login" className="footer-link">Log in</Link></li>
-              <li><Link href="/signup" className="footer-link">Get started</Link></li>
+              <li>
+                <Link href={withLocalePath('/privacy', locale)} className="footer-link">
+                  {t('privacy')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/terms', locale)} className="footer-link">
+                  {t('terms')}
+                </Link>
+              </li>
+              <li>
+                <a href={`${APP_ORIGIN}/login`} className="footer-link">
+                  {t('login')}
+                </a>
+              </li>
+              <li>
+                <a href={`${APP_ORIGIN}/register`} className="footer-link">
+                  {t('getStarted')}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="border-accent/10 border-t py-6 text-center">
-          <p className="text-tagline-2 text-primary-50">© {new Date().getFullYear()} Schedulaa. All rights reserved.</p>
+          <p className="text-tagline-2 text-primary-50">{t('copyright', { year: new Date().getFullYear() })}</p>
         </div>
       </div>
     </footer>
   );
 };
+
 Footer.displayName = 'Footer';
 export default Footer;
