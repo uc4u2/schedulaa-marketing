@@ -3,6 +3,7 @@ import LocaleProvider from '@/components/shared/LocaleProvider';
 import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import Footer from '@/components/shared/footer/Footer';
 import Navbar from '@/components/shared/navbar/Navbar';
+import SchedulaaAssistant from '@/components/shared/assistant/SchedulaaAssistant';
 import { interTight } from '@/utils/font';
 import { generateMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -28,6 +29,7 @@ export default function RootLayout({
                 <Navbar />
                 {children}
                 <Footer />
+                <SchedulaaAssistant />
               </SmoothScrollProvider>
             </Suspense>
           </ThemeProvider>
