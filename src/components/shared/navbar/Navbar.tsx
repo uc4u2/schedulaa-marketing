@@ -7,7 +7,7 @@ import legacyLogo from '@public/images/shared/schedulaa-logo-legacy.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
 
@@ -58,7 +58,7 @@ const MenuPanel = ({
   return (
     <div
       className={cn(
-        'absolute left-0 top-full mt-3 w-[min(760px,92vw)] rounded-2xl border border-stroke-2 bg-white p-4 shadow-xl dark:border-stroke-7 dark:bg-background-8',
+        'absolute left-0 top-full w-[min(760px,92vw)] rounded-2xl border border-stroke-2 bg-white p-4 shadow-xl dark:border-stroke-7 dark:bg-background-8',
         open ? 'block' : 'hidden',
       )}
     >
@@ -100,8 +100,24 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
+  const closeTimerRef = useRef<number | null>(null);
 
   const locale = detectLocaleFromPath(pathname);
+
+  const clearCloseTimer = () => {
+    if (closeTimerRef.current != null) {
+      window.clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+
+  const scheduleClose = (menu: 'product' | 'resources') => {
+    clearCloseTimer();
+    closeTimerRef.current = window.setTimeout(() => {
+      if (menu === 'product') setProductOpen(false);
+      if (menu === 'resources') setResourcesOpen(false);
+    }, 140);
+  };
 
   const onLocaleChange = (newLocale: AppLocale) => {
     if (!isSupportedLocale(newLocale)) return;
@@ -135,10 +151,20 @@ const Navbar = () => {
           </Link>
 
           <nav className="relative hidden items-center gap-4 xl:flex" aria-label="Primary">
-            <div className="relative" onMouseLeave={() => setProductOpen(false)}>
+            <div
+              className="relative pb-3 -mb-3"
+              onMouseEnter={() => {
+                clearCloseTimer();
+                setProductOpen(true);
+              }}
+              onMouseLeave={() => scheduleClose('product')}
+            >
               <button
                 type="button"
-                onMouseEnter={() => setProductOpen(true)}
+                onMouseEnter={() => {
+                  clearCloseTimer();
+                  setProductOpen(true);
+                }}
                 onClick={() => setProductOpen((p) => !p)}
                 className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
               >
@@ -153,10 +179,20 @@ const Navbar = () => {
               />
             </div>
 
-            <div className="relative" onMouseLeave={() => setResourcesOpen(false)}>
+            <div
+              className="relative pb-3 -mb-3"
+              onMouseEnter={() => {
+                clearCloseTimer();
+                setResourcesOpen(true);
+              }}
+              onMouseLeave={() => scheduleClose('resources')}
+            >
               <button
                 type="button"
-                onMouseEnter={() => setResourcesOpen(true)}
+                onMouseEnter={() => {
+                  clearCloseTimer();
+                  setResourcesOpen(true);
+                }}
                 onClick={() => setResourcesOpen((p) => !p)}
                 className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
               >
