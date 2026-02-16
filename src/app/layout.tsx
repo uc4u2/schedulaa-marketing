@@ -4,16 +4,35 @@ import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import Footer from '@/components/shared/footer/Footer';
 import Navbar from '@/components/shared/navbar/Navbar';
 import SchedulaaAssistant from '@/components/shared/assistant/SchedulaaAssistant';
-import CanonicalLink from '@/components/shared/seo/CanonicalLink';
 import { interTight } from '@/utils/font';
-import { generateMetadata } from '@/utils/generateMetaData';
+import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
+import { headers } from 'next/headers';
 import { ReactNode, Suspense } from 'react';
 import './globals.css';
 
-export const metadata: Metadata = {
-  ...generateMetadata(),
-};
+const SITE_URL = 'https://www.schedulaa.com';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const h = await headers();
+  const locale = h.get('x-locale') === 'fa' ? 'fa' : 'en';
+  const canonicalPathRaw = h.get('x-canonical-path') || '/';
+  const canonicalPath = canonicalPathRaw === '/' ? '' : canonicalPathRaw;
+  const canonical = `${SITE_URL}/${locale}${canonicalPath}`;
+  const languagePath = canonicalPath || '';
+
+  return {
+    ...defaultMetadata,
+    metadataBase: new URL(SITE_URL),
+    alternates: {
+      canonical,
+      languages: {
+        en: `${SITE_URL}/en${languagePath}`,
+        fa: `${SITE_URL}/fa${languagePath}`,
+      },
+    },
+  };
+}
 
 export default function RootLayout({
   children,
@@ -28,7 +47,6 @@ export default function RootLayout({
             <Suspense>
               <SmoothScrollProvider>
                 <Navbar />
-                <CanonicalLink />
                 {children}
                 <Footer />
                 <SchedulaaAssistant />

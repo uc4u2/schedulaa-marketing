@@ -53,6 +53,7 @@ export function middleware(request: NextRequest) {
 
     const requestHeaders = new Headers(request.headers);
     requestHeaders.set('x-locale', maybeLocale);
+    requestHeaders.set('x-canonical-path', normalizedPath);
     const response = NextResponse.rewrite(rewriteUrl, { request: { headers: requestHeaders } });
     response.cookies.set('NEXT_LOCALE', maybeLocale, { path: '/', sameSite: 'lax' });
     return response;
