@@ -1,81 +1,97 @@
 # Legacy Route Parity Report
 
-Generated from legacy source of truth:
-- `scheduling-frontend/src/App.js` (`MARKETING_PATHS`)
-- `scheduling-frontend/src/components/Footer.js` (Compare column)
+- Legacy sources:
+  - `scheduling-frontend/config/seoRoutes.js`
+  - `scheduling-frontend/public/sitemap.xml`
+  - `scheduling-frontend/src/components/Footer.js` (Compare links)
 
-## Route Status (MARKETING_PATHS)
-
-| Legacy route | Status | Next behavior | Recommended action |
-| --- | --- | --- | --- |
-| `/` | exists | Page route | Keep |
-| `/features` | exists | Page route | Keep |
-| `/platform` | redirected | `-> /features` | Keep redirect |
-| `/pricing` | exists | Page route | Keep |
-| `/website-builder` | exists | Page route | Keep |
-| `/workforce` | exists | Page route | Keep |
-| `/booking` | exists | Page route | Keep |
-| `/booking/salon` | redirected | `-> /booking` | Keep redirect |
-| `/booking/spa` | redirected | `-> /booking` | Keep redirect |
-| `/booking/tutor` | redirected | `-> /booking` | Keep redirect |
-| `/booking/doctor` | redirected | `-> /booking` | Keep redirect |
-| `/marketing` | exists | Page route | Keep |
-| `/marketing/email-campaigns` | redirected | `-> /marketing` | Keep redirect |
-| `/marketing/analytics-dashboard` | redirected | `-> /marketing` | Keep redirect |
-| `/marketing/clients-360` | redirected | `-> /marketing` | Keep redirect |
-| `/zapier` | exists | Page route | Keep |
-| `/payroll` | exists | Page route | Keep |
-| `/payroll/canada` | exists | Page route | Keep |
-| `/payroll/usa` | exists | Page route | Keep |
-| `/payroll/tools/roe` | exists | Page route | Keep |
-| `/payroll/tools/t4` | exists | Page route | Keep |
-| `/payroll/tools/w2` | exists | Page route | Keep |
-| `/payslips` | exists | Page route | Keep |
-| `/compare/adp` | exists | Dynamic compare vendor page | Keep |
-| `/compare/gusto` | exists | Dynamic compare vendor page | Keep |
-| `/about` | redirected | `-> /features` | Keep redirect |
-| `/contact` | exists | Page route | Keep |
-| `/demo` | exists | Page route | Keep |
-| `/faq` | exists | Page route | Keep |
-| `/docs` | exists | Page route | Keep |
-| `/help/domains` | redirected | `-> /docs` | Keep redirect |
-| `/blog` | exists | Page route | Keep |
-| `/blog/category/automation` | exists | Dynamic category route | Keep |
-| `/blog/category/payroll` | exists | Dynamic category route | Keep |
-| `/status` | exists | Page route | Keep |
-| `/terms` | exists | Page route | Keep |
-| `/privacy` | exists | Page route | Keep |
-| `/cookie` | redirected | `-> /privacy` | Keep redirect |
-| `/acceptable-use` | redirected | `-> /terms` | Keep redirect |
-| `/data-processing` | redirected | `-> /privacy` | Keep redirect |
-| `/security` | redirected | `-> /terms` | Keep redirect |
-| `/user-agreement` | redirected | `-> /terms` | Keep redirect |
-| `/legal/support-access-consent` | redirected | `-> /terms` | Keep redirect |
-| `/industries` | exists | Page route | Keep |
-
-## Footer Compare Column Parity
-
-| Legacy footer compare link | Status in Next |
-| --- | --- |
-| `/compare` | exists |
-| `/alternatives` | exists |
-| `/compare/vagaro` | exists |
-| `/compare/quickbooks` | exists |
-| `/compare/quickbooks-payroll` | exists |
-| `/compare/humi` | exists |
-| `/compare/square-appointments` | exists |
-| `/compare/xero` | exists |
-| `/compare/deputy` | exists |
-| `/compare/homebase` | exists |
-| `/compare/when-i-work` | exists |
-| `/compare/schedulaa-vs-acuity-scheduling` | exists |
-| `/compare/gusto` | exists |
-| `/compare/adp` | exists |
-| `/compare/paychex` | exists |
-
-## Notes
-
-- Footer now includes the full legacy Compare list.
-- On mobile, footer Compare section shows first 8 links plus `View all comparisons`.
-- Locale-prefixed behavior is preserved (`/en/...`, `/fa/...`) through `withLocalePath(...)`.
-- No legacy marketing route is intentionally dropped; legacy-only pages without Next equivalents are mapped to closest hub pages via redirects.
+| Legacy URL | In legacy sitemap? | In legacy seoRoutes? | In legacy footer? | Next status (200/redirect/missing) | Notes |
+| --- | --- | --- | --- | --- | --- |
+| `/` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/about` | Yes | Yes | No | REDIRECTS | Redirects to `/features` |
+| `/acceptable-use` | Yes | Yes | No | REDIRECTS | Redirects to `/terms` |
+| `/alternatives` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/acuity-scheduling` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/adp` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/deputy` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/gusto` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/homebase` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/hubspot-meetings` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/humi` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/paychex` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/quickbooks` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/quickbooks-payroll` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/square-appointments` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/vagaro` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/when-i-work` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/alternatives/xero` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/adp-alternative-canada-us-service-teams` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/booking-app-alone` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/break-enforcement-matters` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/category/automation` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/category/payroll` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/client-journey` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/employee-self-service` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/enterprise-payroll-workflows-qb-xero-zapier` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/fix-scheduling-chaos` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/multi-location-operations` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/payroll-errors-cost` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/quickbooks-xero-integration` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/scheduling-and-booking-together` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/scheduling-improves-payroll` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/secure-hiring-resume-upload-onboarding` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/smarter-invoice-system-service-businesses` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/blog/too-many-tools-cost` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/booking` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/booking/doctor` | Yes | Yes | No | REDIRECTS | Redirects to `/booking` |
+| `/booking/salon` | Yes | Yes | No | REDIRECTS | Redirects to `/booking` |
+| `/booking/spa` | Yes | Yes | No | REDIRECTS | Redirects to `/booking` |
+| `/booking/tutor` | Yes | Yes | No | REDIRECTS | Redirects to `/booking` |
+| `/compare` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/adp` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/deputy` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/gusto` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/homebase` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/hubspot-meetings` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/humi` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/paychex` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/quickbooks` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/quickbooks-payroll` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/schedulaa-vs-acuity-scheduling` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/square-appointments` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/vagaro` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/when-i-work` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/compare/xero` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
+| `/contact` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/cookie` | Yes | Yes | No | REDIRECTS | Redirects to `/privacy` |
+| `/data-processing` | Yes | Yes | No | REDIRECTS | Redirects to `/privacy` |
+| `/demo` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/docs` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/faq` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/features` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/help/domains` | Yes | Yes | No | REDIRECTS | Redirects to `/docs` |
+| `/industries` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/marketing` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/marketing/analytics-dashboard` | Yes | Yes | No | REDIRECTS | Redirects to `/marketing` |
+| `/marketing/clients-360` | Yes | Yes | No | REDIRECTS | Redirects to `/marketing` |
+| `/marketing/email-campaigns` | Yes | Yes | No | REDIRECTS | Redirects to `/marketing` |
+| `/payroll` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/payroll/canada` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/payroll/tools/roe` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/payroll/tools/t4` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/payroll/tools/w2` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/payroll/usa` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/payslips` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/platform` | Yes | Yes | No | REDIRECTS | Redirects to `/features` |
+| `/pricing` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/privacy` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/resources/schedulaa-vs-quickbooks-payroll.doc` | Yes | Yes | No | missing | No page and no redirect detected |
+| `/resources/staffing-formulas` | Yes | Yes | No | missing | No page and no redirect detected |
+| `/security` | Yes | Yes | No | REDIRECTS | Redirects to `/terms` |
+| `/status` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/terms` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/user-agreement` | Yes | Yes | No | REDIRECTS | Redirects to `/terms` |
+| `/webinars/payroll-compliance` | Yes | Yes | No | missing | No page and no redirect detected |
+| `/website-builder` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/zapier` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
