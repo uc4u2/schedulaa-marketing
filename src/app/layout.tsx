@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import Footer from '@/components/shared/footer/Footer';
 import Navbar from '@/components/shared/navbar/Navbar';
 import SchedulaaAssistant from '@/components/shared/assistant/SchedulaaAssistant';
+import CanonicalLink from '@/components/shared/seo/CanonicalLink';
 import { interTight } from '@/utils/font';
 import { generateMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -27,6 +28,7 @@ export default function RootLayout({
             <Suspense>
               <SmoothScrollProvider>
                 <Navbar />
+                <CanonicalLink />
                 {children}
                 <Footer />
                 <SchedulaaAssistant />

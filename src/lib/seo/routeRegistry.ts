@@ -12,9 +12,14 @@ export const toLocalePath = (locale: Locale, path: string) => {
 export const STATIC_ROUTES = [
   '/',
   '/features',
+  '/platform',
+  '/about',
   '/workforce',
   '/booking',
   '/marketing',
+  '/marketing/email-campaigns',
+  '/marketing/analytics-dashboard',
+  '/marketing/clients-360',
   '/payroll',
   '/payroll/usa',
   '/payroll/canada',
@@ -30,12 +35,17 @@ export const STATIC_ROUTES = [
   '/faq',
   '/client/support',
   '/docs',
+  '/help/domains',
   '/contact',
   '/pricing',
   '/compare',
   '/alternatives',
   '/zapier',
   '/payslips',
+  '/resources/staffing-formulas',
+  '/resources/schedulaa-vs-quickbooks-payroll',
+  '/resources/schedulaa-vs-quickbooks-payroll.doc',
+  '/webinars/payroll-compliance',
 ] as const;
 
 export const INDUSTRY_BOOKING_ROUTES = [
@@ -45,14 +55,17 @@ export const INDUSTRY_BOOKING_ROUTES = [
   '/booking/doctor',
 ] as const;
 
-export const LEGAL_ROUTES = ['/privacy', '/terms'] as const;
+export const LEGAL_ROUTES = [
+  '/privacy',
+  '/terms',
+  '/cookie',
+  '/acceptable-use',
+  '/data-processing',
+  '/security',
+  '/user-agreement',
+] as const;
 
 export const LEGAL_ALIASES = {
-  '/cookie': '/privacy',
-  '/acceptable-use': '/terms',
-  '/data-processing': '/privacy',
-  '/security': '/terms',
-  '/user-agreement': '/terms',
   '/legal/support-access-consent': '/terms',
 } as const;
 
