@@ -143,8 +143,8 @@ const Pricing = () => {
                         Get started
                       </Link>
                       <ul className="relative list-none space-y-2.5">
-                        {plan.features.map((feature) => (
-                          <li key={`${plan.id}-${feature.label}`} className="flex items-center gap-2.5">
+                        {plan.features.map((feature, idx) => (
+                          <li key={`${plan.id}-${feature.label}-${idx}`} className="flex items-center gap-2.5">
                             <span
                               className={cn(
                                 'flex h-5 w-5 items-center justify-center rounded-full',
