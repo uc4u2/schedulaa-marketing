@@ -118,7 +118,7 @@ const Navbar = () => {
 
   const dashboardLinks = [
     { href: `${APP_ORIGIN}/employee`, label: t('employeeDashboard') },
-    { href: `${APP_ORIGIN}/manager`, label: t('managerDashboard') },
+    { href: `${APP_ORIGIN}/manager/dashboard`, label: t('managerDashboard') },
   ];
 
   return (
@@ -254,7 +254,7 @@ const Navbar = () => {
                 {t('employeeDashboard')}
               </a>
               <a
-                href={`${APP_ORIGIN}/manager`}
+                href={`${APP_ORIGIN}/manager/dashboard`}
                 className="rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7"
               >
                 {t('managerDashboard')}
