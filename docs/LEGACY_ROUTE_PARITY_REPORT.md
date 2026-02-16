@@ -8,8 +8,8 @@
 | Legacy URL | In legacy sitemap? | In legacy seoRoutes? | In legacy footer? | Next status (200/redirect/missing) | Notes |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
-| `/about` | Yes | Yes | No | REDIRECTS | Redirects to `/features` |
-| `/acceptable-use` | Yes | Yes | No | REDIRECTS | Redirects to `/terms` |
+| `/about` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/acceptable-use` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/alternatives` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
 | `/alternatives/acuity-scheduling` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/alternatives/adp` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
@@ -44,10 +44,10 @@
 | `/blog/smarter-invoice-system-service-businesses` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/blog/too-many-tools-cost` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/booking` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
-| `/booking/doctor` | Yes | Yes | No | REDIRECTS | Redirects to `/booking` |
-| `/booking/salon` | Yes | Yes | No | REDIRECTS | Redirects to `/booking` |
-| `/booking/spa` | Yes | Yes | No | REDIRECTS | Redirects to `/booking` |
-| `/booking/tutor` | Yes | Yes | No | REDIRECTS | Redirects to `/booking` |
+| `/booking/doctor` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/booking/salon` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/booking/spa` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/booking/tutor` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/compare` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
 | `/compare/adp` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
 | `/compare/deputy` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
@@ -64,18 +64,18 @@
 | `/compare/when-i-work` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
 | `/compare/xero` | Yes | Yes | Yes | 200_EXISTS | Implemented page (static or dynamic) |
 | `/contact` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
-| `/cookie` | Yes | Yes | No | REDIRECTS | Redirects to `/privacy` |
-| `/data-processing` | Yes | Yes | No | REDIRECTS | Redirects to `/privacy` |
+| `/cookie` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/data-processing` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/demo` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/docs` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/faq` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/features` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
-| `/help/domains` | Yes | Yes | No | REDIRECTS | Redirects to `/docs` |
+| `/help/domains` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/industries` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/marketing` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
-| `/marketing/analytics-dashboard` | Yes | Yes | No | REDIRECTS | Redirects to `/marketing` |
-| `/marketing/clients-360` | Yes | Yes | No | REDIRECTS | Redirects to `/marketing` |
-| `/marketing/email-campaigns` | Yes | Yes | No | REDIRECTS | Redirects to `/marketing` |
+| `/marketing/analytics-dashboard` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/marketing/clients-360` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/marketing/email-campaigns` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/payroll` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/payroll/canada` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/payroll/tools/roe` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
@@ -83,15 +83,15 @@
 | `/payroll/tools/w2` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/payroll/usa` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/payslips` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
-| `/platform` | Yes | Yes | No | REDIRECTS | Redirects to `/features` |
+| `/platform` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/pricing` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/privacy` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
-| `/resources/schedulaa-vs-quickbooks-payroll.doc` | Yes | Yes | No | missing | No page and no redirect detected |
-| `/resources/staffing-formulas` | Yes | Yes | No | missing | No page and no redirect detected |
-| `/security` | Yes | Yes | No | REDIRECTS | Redirects to `/terms` |
+| `/resources/schedulaa-vs-quickbooks-payroll.doc` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/resources/staffing-formulas` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/security` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/status` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/terms` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
-| `/user-agreement` | Yes | Yes | No | REDIRECTS | Redirects to `/terms` |
-| `/webinars/payroll-compliance` | Yes | Yes | No | missing | No page and no redirect detected |
+| `/user-agreement` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
+| `/webinars/payroll-compliance` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/website-builder` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |
 | `/zapier` | Yes | Yes | No | 200_EXISTS | Implemented page (static or dynamic) |

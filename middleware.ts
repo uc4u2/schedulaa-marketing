@@ -6,23 +6,8 @@ import { DEFAULT_LOCALE, isSupportedLocale } from '@/utils/locale';
 const PUBLIC_FILE = /\.(.*)$/;
 const KNOWN_BUT_UNSUPPORTED = new Set(['ru', 'zh']);
 const LEGACY_REDIRECTS: Record<string, string> = {
-  '/platform': '/features',
-  '/about': '/features',
-  '/help/domains': '/docs',
-  '/marketing/email-campaigns': '/marketing',
-  '/marketing/analytics-dashboard': '/marketing',
-  '/marketing/clients-360': '/marketing',
-  '/booking/salon': '/booking',
-  '/booking/spa': '/booking',
-  '/booking/tutor': '/booking',
-  '/booking/doctor': '/booking',
   '/payroll/adp': '/compare/adp',
   '/payroll/gusto': '/compare/gusto',
-  '/cookie': '/privacy',
-  '/acceptable-use': '/terms',
-  '/data-processing': '/privacy',
-  '/security': '/terms',
-  '/user-agreement': '/terms',
   '/legal/support-access-consent': '/terms',
 };
 
