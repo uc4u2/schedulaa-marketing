@@ -9,6 +9,21 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
+const COMPARE_LINKS = [
+  { label: 'Schedulaa vs Vagaro', href: '/compare/vagaro' },
+  { label: 'Schedulaa vs QuickBooks', href: '/compare/quickbooks' },
+  { label: 'Schedulaa vs QuickBooks Payroll', href: '/compare/quickbooks-payroll' },
+  { label: 'Schedulaa vs Humi', href: '/compare/humi' },
+  { label: 'Schedulaa vs Square Appointments', href: '/compare/square-appointments' },
+  { label: 'Schedulaa vs Xero', href: '/compare/xero' },
+  { label: 'Schedulaa vs Deputy', href: '/compare/deputy' },
+  { label: 'Schedulaa vs Homebase', href: '/compare/homebase' },
+  { label: 'Schedulaa vs When I Work', href: '/compare/when-i-work' },
+  { label: 'Schedulaa vs Acuity Scheduling', href: '/compare/schedulaa-vs-acuity-scheduling' },
+  { label: 'Schedulaa vs Gusto', href: '/compare/gusto' },
+  { label: 'Schedulaa vs ADP', href: '/compare/adp' },
+  { label: 'Schedulaa vs Paychex', href: '/compare/paychex' },
+];
 
 const Footer = ({ className }: { className?: string }) => {
   const t = useTranslations('footer');
@@ -130,9 +145,16 @@ const Footer = ({ className }: { className?: string }) => {
                   {t('alternativesHub')}
                 </Link>
               </li>
-              <li>
-                <Link href={withLocalePath('/compare/quickbooks-payroll', locale)} className="footer-link">
-                  {t('vsQuickBooksPayroll')}
+              {COMPARE_LINKS.map((item, idx) => (
+                <li key={item.href} className={idx >= 8 ? 'hidden md:list-item' : ''}>
+                  <Link href={withLocalePath(item.href, locale)} className="footer-link">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              <li className="md:hidden">
+                <Link href={withLocalePath('/compare', locale)} className="footer-link">
+                  View all comparisons
                 </Link>
               </li>
             </ul>
