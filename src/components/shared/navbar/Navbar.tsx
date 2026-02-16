@@ -3,9 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { cn } from '@/utils/cn';
 import { AppLocale, DEFAULT_LOCALE, detectLocaleFromPath, isSupportedLocale, withLocalePath } from '@/utils/locale';
-import logoDark from '@public/images/shared/logo-dark.svg';
-import logo from '@public/images/shared/logo.svg';
-import mainLogo from '@public/images/shared/main-logo.svg';
+import legacyLogo from '@public/images/shared/schedulaa-logo-legacy.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -129,11 +127,10 @@ const Navbar = () => {
         <div className="mx-auto flex max-w-[1220px] items-center justify-between gap-3">
           <Link href={withLocalePath('/', locale)} className="shrink-0" aria-label="Schedulaa home">
             <figure className="hidden max-w-[190px] lg:block">
-              <Image src={mainLogo} alt="Schedulaa" className="dark:invert" />
+              <Image src={legacyLogo} alt="Schedulaa" className="h-auto w-full" priority />
             </figure>
-            <figure className="block max-w-[44px] lg:hidden">
-              <Image src={logo} alt="Schedulaa" className="block w-full dark:hidden" />
-              <Image src={logoDark} alt="Schedulaa" className="hidden w-full dark:block" />
+            <figure className="block max-w-[140px] lg:hidden">
+              <Image src={legacyLogo} alt="Schedulaa" className="h-auto w-full" priority />
             </figure>
           </Link>
 

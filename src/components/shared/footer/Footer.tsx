@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import { cn } from '@/utils/cn';
-import darkLogo from '@public/images/shared/logo-dark.svg';
+import legacyLogo from '@public/images/shared/schedulaa-logo-legacy.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -20,7 +20,7 @@ const Footer = ({ className }: { className?: string }) => {
       <div className="main-container px-5">
         <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-6">
           <div className="md:col-span-2">
-            <Image src={darkLogo} alt="Schedulaa" className="max-w-[170px]" />
+            <Image src={legacyLogo} alt="Schedulaa" className="h-auto max-w-[190px]" />
             <p className="text-accent/60 text-tagline-1 mt-4">{t('blurb')}</p>
           </div>
 
