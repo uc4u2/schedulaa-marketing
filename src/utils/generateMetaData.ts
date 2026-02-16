@@ -10,6 +10,11 @@ const defaultMetadata: Metadata = {
   metadataBase: new URL(DEFAULT_URL),
   title: DEFAULT_TITLE,
   description: DEFAULT_DESCRIPTION,
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     type: 'website',
     siteName: 'Schedulaa',
