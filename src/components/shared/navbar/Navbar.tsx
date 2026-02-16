@@ -20,7 +20,6 @@ type NavItem = {
 
 const productLeftLinks: NavItem[] = [
   { href: '/features', labelKey: 'features' },
-  { href: '/workforce', labelKey: 'workforce' },
   { href: '/booking', labelKey: 'booking' },
   { href: '/marketing', labelKey: 'marketing' },
   { href: '/payroll', labelKey: 'payroll' },
@@ -112,8 +111,10 @@ const Navbar = () => {
 
   const mobileLinks = [
     ...productLeftLinks,
-    ...resourceLeftLinks,
     { href: '/pricing', labelKey: 'pricing' },
+    { href: '/demo', labelKey: 'demo' },
+    { href: '/contact', labelKey: 'contact' },
+    ...resourceLeftLinks,
   ];
 
   const dashboardLinks = [
@@ -177,6 +178,18 @@ const Navbar = () => {
               className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
             >
               {t('pricing')}
+            </Link>
+            <Link
+              href={withLocalePath('/demo', locale)}
+              className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
+            >
+              {t('demo')}
+            </Link>
+            <Link
+              href={withLocalePath('/contact', locale)}
+              className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
+            >
+              {t('contact')}
             </Link>
           </nav>
 

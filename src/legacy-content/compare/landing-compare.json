@@ -1,0 +1,2361 @@
+{
+  "vagaro": {
+    "competitor": "Vagaro",
+    "metaTitle": "Schedulaa vs Vagaro | Booking, Payroll, and Operations Comparison",
+    "metaDescription": "See how Schedulaa compares to Vagaro for booking, payroll, and analytics. Learn which platform fits growing service businesses best.",
+    "heroTitle": "Schedulaa vs Vagaro — Which Platform Is Right for Your Business?",
+    "heroSubtitle": "Vagaro focuses on salons and spas. Schedulaa unifies booking, staff scheduling, payroll, e-commerce, and analytics for service brands of any size.",
+    "intro": [
+      "Both Schedulaa and Vagaro help service-based businesses manage clients and appointments, but their focus is different.",
+      "Vagaro is built primarily for salons and spas, while Schedulaa is designed as an all-in-one operations platform that unifies booking, staff scheduling, payroll, e-commerce, and analytics — from beauty studios to creative agencies."
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "Vagaro"
+      ],
+      "rows": [
+        {
+          "label": "Core Purpose",
+          "schedulaa": "All-in-one operations platform: booking, scheduling, payroll, analytics, and commerce.",
+          "competitor": "Appointment software for salons, spas, and fitness studios."
+        },
+        {
+          "label": "Target Industry",
+          "schedulaa": "Service businesses across beauty, creative, and professional sectors.",
+          "competitor": "Primarily beauty and wellness."
+        },
+        {
+          "label": "Platform Model",
+          "schedulaa": "Business-branded platform (custom domain + logo).",
+          "competitor": "Marketplace platform (Vagaro brand visible)."
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "Built-in booking pages, customizable intake forms, automated confirmations.",
+          "competitor": "Booking via Vagaro marketplace and app."
+        },
+        {
+          "label": "Staff Scheduling",
+          "schedulaa": "Integrated team scheduling, shifts, notifications, and swaps.",
+          "competitor": "Basic staff calendar management."
+        },
+        {
+          "label": "Payroll & Compliance",
+          "schedulaa": "Built-in Canadian (T4, ROE) and U.S. (W-2) payroll tools.",
+          "competitor": "Limited payroll functionality; requires third-party integrations."
+        },
+        {
+          "label": "E-Commerce & Sales",
+          "schedulaa": "Direct product and service sales through company domain.",
+          "competitor": "Available through Vagaro platform with fees."
+        },
+        {
+          "label": "Automation",
+          "schedulaa": "Automatic confirmations, cancellations, reschedules, and 10-minute reminders.",
+          "competitor": "Reminders and confirmations through SMS and app."
+        },
+        {
+          "label": "Video Meetings",
+          "schedulaa": "Integrated Jitsi link generation for virtual services.",
+          "competitor": "Not available natively."
+        },
+        {
+          "label": "Analytics Dashboard",
+          "schedulaa": "End-to-end reporting across bookings, sales, payroll, and staff.",
+          "competitor": "Insights focused on bookings and client metrics."
+        },
+        {
+          "label": "Brand Customization",
+          "schedulaa": "Full brand control and white-label experience.",
+          "competitor": "Vagaro branding across most client interfaces."
+        },
+        {
+          "label": "Pricing Structure",
+          "schedulaa": "Flat monthly tiers starting at $19.99.",
+          "competitor": "Per-user and per-feature pricing model."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Platform identity and brand ownership",
+        "body": "Schedulaa lets you operate under your own domain, logo, and booking experience — ideal for premium or multi-brand businesses. Vagaro’s shared marketplace keeps the Vagaro brand front-and-center for every client interaction."
+      },
+      {
+        "title": "Integrated payroll and compliance",
+        "body": "Schedulaa includes payroll and compliance tooling for Canada and the United States, reducing add-ons and manual reconciliation. Vagaro relies on external services when businesses scale beyond a few employees."
+      },
+      {
+        "title": "Custom domains and automation",
+        "body": "Schedulaa pages live on your domain with branded forms, emails, and automated confirmations. Vagaro offers hosted pages with limited customization options."
+      },
+      {
+        "title": "Broader industry fit",
+        "body": "Schedulaa is industry-agnostic: salons, photographers, tutors, clinics, and agencies can run booking, payroll, and analytics in one ecosystem. Vagaro stays focused on beauty and wellness."
+      },
+      {
+        "title": "Simplicity and cost control",
+        "body": "Flat-rate pricing keeps Schedulaa predictable as teams grow. Vagaro’s per-user and add-on fees can increase quickly for multi-location businesses."
+      }
+    ],
+    "summaryTable": {
+      "headers": [
+        "Feature Group",
+        "Schedulaa",
+        "Vagaro"
+      ],
+      "rows": [
+        {
+          "label": "Booking Workflow",
+          "schedulaa": "Integrated and fully automated.",
+          "competitor": "Requires setup through Vagaro app/marketplace."
+        },
+        {
+          "label": "Payroll Support",
+          "schedulaa": "Built-in, cross-border (CA + US).",
+          "competitor": "Partial or external integration."
+        },
+        {
+          "label": "Brand Control",
+          "schedulaa": "Full white-label customization.",
+          "competitor": "Shared Vagaro branding."
+        },
+        {
+          "label": "Reminders & Notifications",
+          "schedulaa": "Automated emails/SMS plus post-visit review and tip nudges.",
+          "competitor": "SMS reminders via the Vagaro app; limited follow-up tooling."
+        },
+        {
+          "label": "Analytics & Insights",
+          "schedulaa": "Unified dashboard for bookings, shifts, payroll.",
+          "competitor": "Focused on client visits and sales."
+        },
+        {
+          "label": "Scalability",
+          "schedulaa": "Built for multi-brand, multi-region expansion.",
+          "competitor": "Optimized for single-location salons."
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "A salon, spa, or fitness studio that values marketplace visibility.",
+        "recommendation": "Vagaro"
+      },
+      {
+        "scenario": "A growing brand or multi-service business that needs automation, payroll, and full control.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "Professional studios, clinics, or agencies needing branded client portals.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "testimonial": {
+      "quote": "Schedulaa replaced multiple tools for our salon. Bookings, shift tracking, and payroll now happen in one dashboard — clients never leave our domain.",
+      "attribution": "BeautyBar Collective, Toronto"
+    },
+    "conclusion": "Vagaro centralizes the beauty marketplace experience. Schedulaa centralizes your operations under your own brand. If your goal is growth, automation, and independence, Schedulaa provides the structure to scale across teams, services, and countries."
+  },
+  "quickbooks": {
+    "competitor": "QuickBooks",
+    "metaTitle": "Schedulaa vs QuickBooks | Operations Platform vs Accounting Suite",
+    "metaDescription": "Compare Schedulaa and QuickBooks. Learn when to use an all-in-one operations platform instead of an accounting-first tool.",
+    "heroTitle": "Schedulaa vs QuickBooks — All-in-One Operations vs Accounting-First Platforms",
+    "heroSubtitle": "QuickBooks focuses on accounting and bookkeeping. Schedulaa unifies booking, scheduling, payroll, and analytics for service-driven teams.",
+    "intro": [
+      "Both Schedulaa and QuickBooks are essential tools for modern businesses, but they serve different purposes.",
+      "QuickBooks manages financial data, while Schedulaa runs the operational workflow that happens before revenue hits the ledger."
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "QuickBooks"
+      ],
+      "rows": [
+        {
+          "label": "Core Purpose",
+          "schedulaa": "All-in-one platform combining booking, scheduling, payroll, and analytics.",
+          "competitor": "Accounting and financial management software with optional payroll."
+        },
+        {
+          "label": "Primary Audience",
+          "schedulaa": "Service businesses and professional teams managing client operations.",
+          "competitor": "Accountants, bookkeepers, and finance departments."
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "Integrated booking pages with automated confirmations.",
+          "competitor": "Requires third-party tools."
+        },
+        {
+          "label": "Payroll & Compliance",
+          "schedulaa": "Built-in Canadian (T4, ROE) and U.S. (W-2) processing.",
+          "competitor": "Payroll available as an add-on module."
+        },
+        {
+          "label": "Shift Scheduling",
+          "schedulaa": "Built-in scheduling and time tracking.",
+          "competitor": "Not available."
+        },
+        {
+          "label": "E-Commerce & Payments",
+          "schedulaa": "Sell services and products from your branded portal.",
+          "competitor": "Invoices and payment collection only."
+        },
+        {
+          "label": "Brand Customization",
+          "schedulaa": "Custom domain, logo, and email branding.",
+          "competitor": "QuickBooks-branded environment."
+        },
+        {
+          "label": "Automation",
+          "schedulaa": "Confirmations, cancellations, reminders, meeting links, and payroll handoffs.",
+          "competitor": "Automation focused on billing and reporting."
+        },
+        {
+          "label": "Analytics Dashboard",
+          "schedulaa": "Unified operational metrics (sales, shifts, payroll).",
+          "competitor": "Financial and accounting insights."
+        },
+        {
+          "label": "Video Meeting Links",
+          "schedulaa": "Automatic Jitsi meeting link creation.",
+          "competitor": "Not supported."
+        },
+        {
+          "label": "Pricing Structure",
+          "schedulaa": "Flat monthly tiers starting at $19.99.",
+          "competitor": "Per-user, per-feature model starting near $25/user."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Operational scope",
+        "body": "Schedulaa covers the client journey from booking to payroll. QuickBooks manages financial records after transactions occur."
+      },
+      {
+        "title": "Integrated payroll across borders",
+        "body": "Schedulaa ships with Canadian and U.S. payroll workflows. QuickBooks Payroll is a separate purchase with regional limits."
+      },
+      {
+        "title": "Brand and client experience",
+        "body": "Schedulaa maintains your brand across domains, portals, and emails. QuickBooks keeps a standardized experience centered on accounting."
+      },
+      {
+        "title": "Automation and communication",
+        "body": "Schedulaa automates confirmations, reschedules, cancellations, and meeting links. QuickBooks automates invoices and financial reminders only."
+      },
+      {
+        "title": "Pricing and scalability",
+        "body": "Flat pricing keeps Schedulaa predictable as departments grow. QuickBooks adds cost per user and per module."
+      }
+    ],
+    "summaryTable": {
+      "headers": [
+        "Feature Group",
+        "Schedulaa",
+        "QuickBooks"
+      ],
+      "rows": [
+        {
+          "label": "Booking & Scheduling",
+          "schedulaa": "Integrated.",
+          "competitor": "Not available."
+        },
+        {
+          "label": "Payroll & Compliance",
+          "schedulaa": "Built-in CA + US.",
+          "competitor": "Add-on module."
+        },
+        {
+          "label": "Automation",
+          "schedulaa": "Full workflow automation.",
+          "competitor": "Limited to billing."
+        },
+        {
+          "label": "Analytics",
+          "schedulaa": "Operational and financial overview.",
+          "competitor": "Financial only."
+        },
+        {
+          "label": "Branding & Domain",
+          "schedulaa": "Custom domain and white-label UI.",
+          "competitor": "QuickBooks-branded."
+        },
+        {
+          "label": "Pricing Model",
+          "schedulaa": "Fixed tiers.",
+          "competitor": "Per-user/per-feature."
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "Beauty, wellness, creative, or professional services needing bookings and payroll.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "Finance-first organizations focused solely on bookkeeping and tax.",
+        "recommendation": "QuickBooks"
+      },
+      {
+        "scenario": "Growing teams seeking automation and cross-department visibility.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "testimonial": {
+      "quote": "Schedulaa unified everything we used to manage separately — bookings, payroll, and analytics — without adding extra licenses.",
+      "attribution": "Photo Artisto Studios, Toronto"
+    },
+    "conclusion": "QuickBooks remains the standard for accounting. Schedulaa extends beyond finance — turning scheduling, team management, and payroll into a single workflow. For service-oriented businesses, this integration saves time, reduces tool overlap, and strengthens brand consistency."
+  },
+  "gusto": {
+    "competitor": "Gusto",
+    "metaTitle": "Schedulaa vs Gusto | Operations OS vs Payroll & HR",
+    "metaDescription": "Compare Schedulaa and Gusto. See how an operations-first platform with scheduling, time tracking, and cross-border payroll differs from a U.S.-only payroll and HR provider.",
+    "heroTitle": "Schedulaa vs Gusto — Operations OS vs Payroll-Only Platforms",
+    "heroSubtitle": "Gusto focuses on payroll and HR. Schedulaa ties together scheduling, time tracking, and cross-border payroll for service teams in Canada and the U.S.",
+    "intro": [
+      "Both Schedulaa and Gusto can run payroll for small and mid-sized teams, but they start from different places.",
+      "Gusto is payroll-first with HR and benefits. Schedulaa is operations-first: shifts, time tracking, and payroll in a single workflow, with built-in support for Canadian and U.S. tax engines."
+    ],
+    "contextBlock": {
+      "title": "Who this is for",
+      "paragraphs": [
+        "This comparison is written for service businesses that manage people by the hour, by the shift, or by the job. If your team relies on schedules, breaks, time tracking, and approvals before payroll runs, your needs are different from office-first or enterprise HR teams.",
+        "Businesses like salons, clinics, call centers, staffing agencies, and field service companies need payroll to reflect what actually happened on the schedule - not what was manually entered at the end of the week.",
+        "Why teams switch to Schedulaa: payroll errors from late schedule changes, break compliance gaps, time data spread across tools, manual adjustments every pay period, and invoices that do not match labor reality.",
+        "Schedulaa reduces these issues by tying payroll directly to scheduling, break enforcement, and approved time. Earnings like overtime, shift premiums, tips, and leave are calculated from operational data, not reconstructed later.",
+        "Why Schedulaa is different: most payroll platforms focus on filing, benefits, and HR administration. Schedulaa focuses on operations - the upstream work that determines whether payroll is correct in the first place. Many teams pair Schedulaa with an accounting or filing provider so finance receives clean, audit-ready inputs."
+      ]
+    },
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "Gusto"
+      ],
+      "rows": [
+        {
+          "label": "Core purpose",
+          "schedulaa": "All-in-one Operations OS combining scheduling, time tracking, and cross-border payroll.",
+          "competitor": "Payroll, HR, and benefits for U.S.-based businesses."
+        },
+        {
+          "label": "Regions & coverage",
+          "schedulaa": "Canada (ex-Québec) and supported U.S. states with federal + state tax engines and ROE/T4/W-2 exports. Local/city payroll taxes are not automated and must be handled externally.",
+          "competitor": "U.S. payroll with broad state + local/city tax support and electronic filings. No Canadian T4/ROE support."
+        },
+        {
+          "label": "Time tracking & scheduling",
+          "schedulaa": "Built-in scheduling, shift templates, break enforcement, and time tracking that feed directly into payroll.",
+          "competitor": "Time tracking available via add-ons; no scheduling suite for client bookings and shifts like Schedulaa."
+        },
+        {
+          "label": "Tips, shift premium, union dues, garnishments",
+          "schedulaa": "First-class fields for tips, shift premiums, bonuses, commission, union dues, simple garnishments, and non-taxable reimbursements.",
+          "competitor": "Supports additional earnings and deductions, but not tightly coupled to a shift/scheduling engine."
+        },
+        {
+          "label": "Benefits & HR",
+          "schedulaa": "Light HR and benefits tracking. No built-in health insurance marketplace; focus stays on operations and payroll.",
+          "competitor": "Strong U.S. HR and benefits administration with integrated health, 401(k), and compliance tools."
+        },
+        {
+          "label": "Automation & integrations",
+          "schedulaa": "Zapier integration with triggers for bookings, shifts, breaks, leave, timeclock, and payroll events, plus QuickBooks/Xero exports.",
+          "competitor": "Native integrations for payroll/HR, but no schedule- or break-driven automation layer."
+        },
+        {
+          "label": "Industry fit",
+          "schedulaa": "Best for salons, spas, clinics, call centers, and field teams where shifts, bookings, and payroll must stay in sync.",
+          "competitor": "Best for U.S.-only businesses that want payroll + HR + benefits and are okay using separate tools for scheduling."
+        },
+        {
+          "label": "Brand & portals",
+          "schedulaa": "Branded employee payslip portal that inherits your Schedulaa site colors.",
+          "competitor": "Gusto-branded employee portal."
+        },
+        {
+          "label": "Automation",
+          "schedulaa": "Automates the flow from schedule → time tracking → payroll → payslips and year-end exports.",
+          "competitor": "Automates payroll runs, filings, and HR workflows for U.S.-based employees."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Operations-first, not payroll-only",
+        "body": "Schedulaa starts with schedules, shifts, and time tracking for service teams. Payroll runs on top of verified hours and tips, not manual spreadsheets."
+      },
+      {
+        "title": "Canada + U.S. payroll in one OS",
+        "body": "Schedulaa supports CRA-style CPP/EI/BPA logic (ex-Québec) and IRS/FICA/state logic for U.S. states in the same platform. Gusto focuses on U.S. payroll only."
+      },
+      {
+        "title": "Shift-connected earnings",
+        "body": "Shift premiums, overtime, tips, commission, and vacation are tied to real-time scheduling data. Managers see the same story in both the schedule and the payslip."
+      },
+      {
+        "title": "Service-team workflows",
+        "body": "Schedulaa is built for salons, spas, clinics, call centers, and field crews that need booking, staffing, and payroll in sync — not just HR forms and benefits."
+      },
+      {
+        "title": "Automation-driven operations",
+        "body": "Schedulaa connects schedule, break logic, leave events, and payroll status to Zapier so teams can automate alerts, calendar syncs, document workflows, and finance hand-offs. Gusto automates payroll and filings, but not the upstream operations."
+      },
+      {
+        "title": "When to keep Gusto",
+        "body": "If you want advanced U.S.-only HR, benefits, and compliance filings, Gusto is the better fit. If you want operations + payroll across Canada and the U.S., Schedulaa is."
+      }
+    ],
+    "summaryTable": {
+      "headers": [
+        "Feature Group",
+        "Schedulaa",
+        "Gusto"
+      ],
+      "rows": [
+        {
+          "label": "Booking & Scheduling",
+          "schedulaa": "Integrated shifts and public booking.",
+          "competitor": "Not provided; relies on third-party tools."
+        },
+        {
+          "label": "Payroll & Compliance",
+          "schedulaa": "Built-in CA (ex-Québec) + U.S. engines with ROE/T4/W-2 exports.",
+          "competitor": "U.S. payroll only; no T4/ROE."
+        },
+        {
+          "label": "Operations Automation",
+          "schedulaa": "Automates schedule → time → payroll.",
+          "competitor": "Automates payroll, HR tasks, and filings for U.S."
+        },
+        {
+          "label": "Automation & Integrations",
+          "schedulaa": "Zapier integration with triggers for bookings, leave, shift swaps, timeclock, breaks, and payroll events plus QuickBooks/Xero exports.",
+          "competitor": "Integrations for payroll/HR tasks, but no schedule- or break-driven automation layer."
+        },
+        {
+          "label": "Branding & Domain",
+          "schedulaa": "Branded portals with your own domain.",
+          "competitor": "Gusto-branded portals."
+        },
+        {
+          "label": "Benefits & HR",
+          "schedulaa": "Light HR tracking; benefits handled externally.",
+          "competitor": "Deep HR stack with benefits marketplace (U.S. only)."
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "Canadian or U.S. service business needing scheduling, time tracking, and payroll in one place.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "U.S.-only company that wants payroll with built-in HR and benefits administration and uses another tool for scheduling.",
+        "recommendation": "Gusto"
+      },
+      {
+        "scenario": "Growing service team reducing tools and keeping ops + payroll tightly connected across regions.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "testimonial": {
+      "quote": "We needed payroll that actually understood our shifts, overtime, and tips. Schedulaa lets us run payroll off the same screen we use to staff our teams.",
+      "attribution": "Photo Artisto Studios, Toronto"
+    },
+    "conclusion": "Gusto remains an excellent option if your company is U.S.-only and needs deeper HR and benefits control. Schedulaa is the better fit when your real pain sits in operations: scheduling shifts, tracking hours, and paying teams correctly across Canada and the U.S. from one Operations OS. Want to see how our tax engines work? Visit the Payroll page for coverage details and scenarios."
+  },
+  "adp": {
+    "competitor": "ADP",
+    "metaTitle": "Schedulaa vs ADP — Cross-Border Payroll for Service Teams",
+    "metaDescription": "Compare Schedulaa and ADP. See how an operations-first OS with scheduling, time tracking, and cross-border payroll serves Canadian and U.S. service teams.",
+    "heroTitle": "Schedulaa vs ADP — Cross-Border Payroll for Service Teams",
+    "heroSubtitle": "ADP is built for large enterprises. Schedulaa gives Canadian and U.S. service teams the same cross-border payroll power in an operations-first OS.",
+    "intro": [
+      "Both Schedulaa and ADP can handle payroll across regions, but they start from different places.",
+      "ADP is payroll/HR built for enterprises. Schedulaa is operations-first — shifts, time tracking, and cross-border payroll for Canadian and U.S. service teams in one OS."
+    ],
+    "contextBlock": {
+      "title": "Who this is for",
+      "paragraphs": [
+        "This comparison is written for service businesses that manage people by the hour, by the shift, or by the job. If your team relies on schedules, breaks, time tracking, and approvals before payroll runs, your needs are different from office-first or enterprise HR teams.",
+        "Businesses like salons, clinics, call centers, staffing agencies, and field service companies need payroll to reflect what actually happened on the schedule - not what was manually entered at the end of the week.",
+        "Why teams switch to Schedulaa: payroll errors from late schedule changes, break compliance gaps, time data spread across tools, manual adjustments every pay period, and invoices that do not match labor reality.",
+        "Schedulaa reduces these issues by tying payroll directly to scheduling, break enforcement, and approved time. Earnings like overtime, shift premiums, tips, and leave are calculated from operational data, not reconstructed later.",
+        "Why Schedulaa is different: most payroll platforms focus on filing, benefits, and HR administration. Schedulaa focuses on operations - the upstream work that determines whether payroll is correct in the first place. Many teams pair Schedulaa with an accounting or filing provider so finance receives clean, audit-ready inputs."
+      ]
+    },
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "ADP"
+      ],
+      "rows": [
+        {
+          "label": "Core purpose",
+          "schedulaa": "All-in-one Operations OS combining scheduling, time tracking, and cross-border payroll.",
+          "competitor": "Payroll, HR, and benefits platform built for larger organizations."
+        },
+        {
+          "label": "Regions & coverage",
+          "schedulaa": "Canada (ex-Québec) and supported U.S. states with federal + state tax engines and ROE/T4/W-2 exports. Local/city payroll taxes are not automated and must be handled externally.",
+          "competitor": "U.S. and global payroll with full tax filing (including many local/city taxes) under enterprise contracts."
+        },
+        {
+          "label": "Time tracking & scheduling",
+          "schedulaa": "Built-in scheduling, break enforcement, and time tracking that feed directly into payroll.",
+          "competitor": "Time tracking/scheduling via add-ons or integrations; not tightly linked to shifts."
+        },
+        {
+          "label": "Tips, shift premium, union dues, garnishments",
+          "schedulaa": "First-class fields for tips, shift premiums, bonuses, commission, union dues, simple garnishments, and non-taxable reimbursements.",
+          "competitor": "Configurable earnings/deductions but not anchored to an operations/scheduling engine."
+        },
+        {
+          "label": "Benefits & HR",
+          "schedulaa": "Light HR tracking; operations-first focus.",
+          "competitor": "Enterprise HR modules, benefits, and compliance workflows."
+        },
+        {
+          "label": "Automation & integrations",
+          "schedulaa": "Zapier integration with triggers for bookings, shifts, breaks, leave, timeclock, and payroll events, plus QuickBooks/Xero exports.",
+          "competitor": "Integrates with many HR/finance systems; most automations require enterprise setup or partner support."
+        },
+        {
+          "label": "Industry fit",
+          "schedulaa": "Best for salons, spas, clinics, call centers, and field teams that need booking + scheduling + payroll in sync.",
+          "competitor": "Best for larger, multi-entity companies needing deep HR and global compliance."
+        },
+        {
+          "label": "Brand & portals",
+          "schedulaa": "Branded employee payslip portal that inherits your Schedulaa site colors.",
+          "competitor": "ADP-branded employee and manager portals."
+        },
+        {
+          "label": "Automation",
+          "schedulaa": "Automates schedule → time tracking → payroll → payslips and year-end exports.",
+          "competitor": "Automates payroll filings and HR workflows for larger teams."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Operations-first, not HR-first",
+        "body": "Schedulaa starts with schedules, shifts, and time tracking for service teams. Payroll runs on top of verified hours and tips, not manual spreadsheets."
+      },
+      {
+        "title": "Canada + U.S. payroll in one OS",
+        "body": "Schedulaa supports CRA-style CPP/EI/BPA logic (ex-Québec) and IRS/FICA/state logic for U.S. states in the same platform. ADP focuses on broader enterprise HR."
+      },
+      {
+        "title": "Shift-connected earnings",
+        "body": "Shift premiums, overtime, tips, commission, and vacation are tied to real-time scheduling data. Managers see the same story in both the schedule and the payslip."
+      },
+      {
+        "title": "Service-team workflows",
+        "body": "Built for salons, spas, clinics, call centers, and field crews that need booking, staffing, and payroll in sync — not just HR forms and benefits."
+      },
+      {
+        "title": "Automation-ready with Zapier",
+        "body": "Schedulaa exposes Zapier triggers and actions for bookings, leave, timeclock, breaks, and payroll events so service teams can connect to 6,000+ apps without custom development. ADP is powerful, but most automations require heavier enterprise implementations."
+      },
+      {
+        "title": "Lower complexity for SMBs",
+        "body": "ADP excels for large enterprises with deep HR needs. Schedulaa keeps cross-border payroll and operations approachable for 10–250 person service teams."
+      }
+    ],
+    "summaryTable": {
+      "headers": [
+        "Feature Group",
+        "Schedulaa",
+        "ADP"
+      ],
+      "rows": [
+        {
+          "label": "Booking & Scheduling",
+          "schedulaa": "Integrated shifts and public booking.",
+          "competitor": "Not provided; relies on integrations."
+        },
+        {
+          "label": "Payroll & Compliance",
+          "schedulaa": "Built-in CA (ex-Québec) + U.S. engines with ROE/T4/W-2 exports.",
+          "competitor": "Enterprise payroll and filings for U.S. and global teams."
+        },
+        {
+          "label": "Operations Automation",
+          "schedulaa": "Automates schedule → time → payroll.",
+          "competitor": "Automates payroll filings and HR workflows."
+        },
+        {
+          "label": "Automation & Integrations",
+          "schedulaa": "Zapier integration with triggers for bookings, leave, shift swaps, timeclock, breaks, and payroll events plus QuickBooks/Xero exports.",
+          "competitor": "Integrations with HR/finance systems; automations often require enterprise implementation."
+        },
+        {
+          "label": "Branding & Domain",
+          "schedulaa": "Branded portals with your own domain.",
+          "competitor": "ADP-branded portals."
+        },
+        {
+          "label": "Benefits & HR",
+          "schedulaa": "Light HR tracking; benefits handled externally.",
+          "competitor": "Deep HR stack with benefits and compliance tooling."
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "Canadian or U.S. service business needing scheduling, time tracking, and payroll in one place.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "U.S.-only or global enterprise needing deep HR modules, benefits, and filings at scale.",
+        "recommendation": "ADP"
+      },
+      {
+        "scenario": "Growing service team reducing tools and keeping ops + payroll tightly connected across regions.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "testimonial": {
+      "quote": "Schedulaa lets us run cross-border payroll off the same screen we use to staff our teams. It’s built for how service work actually happens.",
+      "attribution": "Photo Artisto Studios, Toronto"
+    },
+    "conclusion": "ADP remains a strong enterprise option if you need deep HR and multi-country filings. Schedulaa is the better fit when your real pain sits in operations — scheduling shifts, tracking hours, and paying teams correctly across Canada and the U.S. from one Operations OS. Want to see how our tax engines work? Visit the Payroll page for coverage details and scenarios."
+  },
+  "quickbooks-payroll": {
+    "competitor": "QuickBooks Payroll",
+    "metaTitle": "Schedulaa vs QuickBooks Payroll | Real Cost for 20 Employees",
+    "metaDescription": "See the true monthly cost of QuickBooks Payroll versus Schedulaa for a 20-employee company. Compare features included at that price.",
+    "heroTitle": "Schedulaa vs QuickBooks Payroll — Real cost for a 20-employee team",
+    "heroSubtitle": "Compare pricing, features, and actual cost per 20-employee company — the most common use case.",
+    "intro": [
+      "Compare pricing, features, and actual cost per 20-employee company — the most common use case teams ask us about.",
+      "See what changes when payroll, scheduling, and compliance live in one platform versus buying payroll-only software."
+    ],
+    "contextBlock": {
+      "title": "Who this is for",
+      "paragraphs": [
+        "This comparison is written for service businesses that manage people by the hour, by the shift, or by the job. If your team relies on schedules, breaks, time tracking, and approvals before payroll runs, your needs are different from office-first or enterprise HR teams.",
+        "Businesses like salons, clinics, call centers, staffing agencies, and field service companies need payroll to reflect what actually happened on the schedule - not what was manually entered at the end of the week.",
+        "Why teams switch to Schedulaa: payroll errors from late schedule changes, break compliance gaps, time data spread across tools, manual adjustments every pay period, and invoices that do not match labor reality.",
+        "Schedulaa reduces these issues by tying payroll directly to scheduling, break enforcement, and approved time. Earnings like overtime, shift premiums, tips, and leave are calculated from operational data, not reconstructed later.",
+        "Why Schedulaa is different: most payroll platforms focus on filing, benefits, and HR administration. Schedulaa focuses on operations - the upstream work that determines whether payroll is correct in the first place. Many teams pair Schedulaa with an accounting or filing provider so finance receives clean, audit-ready inputs."
+      ]
+    },
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "QuickBooks Payroll"
+      ],
+      "rows": [
+        {
+          "label": "Pricing model",
+          "schedulaa": "Flat base price with included staff; additional employees are $9 each. Payroll is included on Pro and Business.",
+          "competitor": "Per-employee payroll pricing with short-term promos that expire."
+        },
+        {
+          "label": "20-employee monthly cost",
+          "schedulaa": "$219.99/mo (Business plan for 10 staff + 10 add-ons at $9 each; includes payroll, scheduling, PTO, and compliance).",
+          "competitor": "Payroll only: Core $105, Premium $215, or Elite $380 after promos end."
+        },
+        {
+          "label": "Operations coverage",
+          "schedulaa": "Scheduling, time tracking, break enforcement, PTO workflows, audit log, payroll exports (W-2, T4, ROE).",
+          "competitor": "Payroll engine without scheduling, break rules, shift swaps, or leave workflows."
+        },
+        {
+          "label": "Time tracking & scheduling",
+          "schedulaa": "Included, tied directly to payroll and compliance logic.",
+          "competitor": "Requires third-party scheduling and time tracking tools."
+        },
+        {
+          "label": "Employee self-serve",
+          "schedulaa": "Employee Payslip Portal (self-serve PDF downloads), multi-step approvals, and audits.",
+          "competitor": "Paystub access only; no scheduling or PTO portal."
+        },
+        {
+          "label": "Compliance & overtime",
+          "schedulaa": "Break enforcement, overtime from schedules, location-specific rules, and audit trails.",
+          "competitor": "Manual entry; no shift-level enforcement."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Operations OS vs payroll-only",
+        "body": "Schedulaa fixes scheduling, breaks, PTO, and compliance before payroll. QuickBooks runs payroll after everything is manually entered."
+      },
+      {
+        "title": "Built-in scheduling and time tracking",
+        "body": "Schedules, swaps, and attendance feed payroll automatically. QuickBooks needs separate scheduling and time tools."
+      },
+      {
+        "title": "Predictable cost at 20 employees",
+        "body": "Business plan + 10 extra staff at $9 each = $219.99/mo including payroll, scheduling, PTO, and compliance. QuickBooks Premium is $215/mo for payroll only."
+      },
+      {
+        "title": "Compliance before pay run",
+        "body": "Break rules, PTO logic, and anomalies are enforced before issuing pay. QuickBooks does not manage these workflows."
+      },
+      {
+        "title": "Exports ready for accounting",
+        "body": "W-2, T4, ROE, and payroll reports export cleanly to QuickBooks or Xero. QuickBooks payroll does not add scheduling or compliance data."
+      }
+    ],
+    "summaryTable": {
+      "headers": [
+        "Aspect",
+        "Schedulaa",
+        "QuickBooks Payroll"
+      ],
+      "rows": [
+        {
+          "label": "20-employee cost",
+          "schedulaa": "$219.99/mo (10 included + 10 extra at $9).",
+          "competitor": "$105-$380/mo after promo for payroll only."
+        },
+        {
+          "label": "What that price includes",
+          "schedulaa": "Payroll, scheduling, PTO logic, multi-location compliance, audit logs, and website checkout.",
+          "competitor": "Payroll calculations only; scheduling, time tracking, and PTO require extra tools."
+        },
+        {
+          "label": "Scheduling + time tracking",
+          "schedulaa": "Included and tied to payroll rules.",
+          "competitor": "Requires third-party apps ($70-$140/mo+)."
+        },
+        {
+          "label": "PTO & break management",
+          "schedulaa": "Built-in requests, approvals, accruals, and break enforcement.",
+          "competitor": "Not available."
+        },
+        {
+          "label": "Compliance outputs",
+          "schedulaa": "W-2, T4, ROE, payroll reports, and exports for accounting.",
+          "competitor": "Payroll filings without scheduling context."
+        },
+        {
+          "label": "Growth impact",
+          "schedulaa": "Flat and predictable; extra staff $9 each.",
+          "competitor": "Per-employee pricing escalates with headcount."
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "You need payroll + scheduling + compliance in one place for a 20-employee team.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "You only want payroll and already manage scheduling elsewhere.",
+        "recommendation": "QuickBooks Payroll"
+      },
+      {
+        "scenario": "You want predictable pricing that includes PTO, audits, and scheduling data feeding payroll.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "testimonial": {
+      "quote": "We were paying for payroll plus two other tools for scheduling and time tracking. Schedulaa combined them — the 20-employee math finally made sense.",
+      "attribution": "Ops Lead, 3-location service brand"
+    },
+    "conclusion": "QuickBooks Payroll charges per employee for payroll only. Schedulaa delivers payroll, scheduling, PTO, compliance, and reporting in one platform for $219.99/mo at 20 employees — keeping operations and accounting in sync."
+  },
+  "paychex": {
+    "competitor": "Paychex",
+    "metaTitle": "Schedulaa vs Paychex | Operations-First Payroll vs Enterprise HCM",
+    "metaDescription": "Compare Schedulaa and Paychex. See when an operations-first payroll and scheduling platform beats an enterprise HR and payroll outsourcer.",
+    "heroTitle": "Schedulaa vs Paychex — Operations-First Payroll vs Enterprise HCM",
+    "heroSubtitle": "Paychex is an enterprise payroll and HCM provider for filings, benefits, and HR outsourcing. Schedulaa is an operations-first platform that links scheduling, time tracking, break compliance, and payroll in one system.",
+    "intro": [
+      "Both platforms handle payroll, but they solve different problems and workflows.",
+      "Paychex starts with HR and compliance outsourcing for U.S. and global organizations.",
+      "Schedulaa starts with how work happens — shifts, breaks, hours, and accurate pay for service teams."
+    ],
+    "contextBlock": {
+      "title": "Who this is for",
+      "paragraphs": [
+        "This comparison is written for service businesses that manage people by the hour, by the shift, or by the job. If your team relies on schedules, breaks, time tracking, and approvals before payroll runs, your needs are different from office-first or enterprise HR teams.",
+        "Businesses like salons, clinics, call centers, staffing agencies, and field service companies need payroll to reflect what actually happened on the schedule - not what was manually entered at the end of the week.",
+        "Why teams switch to Schedulaa: payroll errors from late schedule changes, break compliance gaps, time data spread across tools, manual adjustments every pay period, and invoices that do not match labor reality.",
+        "Schedulaa reduces these issues by tying payroll directly to scheduling, break enforcement, and approved time. Earnings like overtime, shift premiums, tips, and leave are calculated from operational data, not reconstructed later.",
+        "Why Schedulaa is different: most payroll platforms focus on filing, benefits, and HR administration. Schedulaa focuses on operations - the upstream work that determines whether payroll is correct in the first place. Many teams pair Schedulaa with an accounting or filing provider so finance receives clean, audit-ready inputs."
+      ]
+    },
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "Paychex"
+      ],
+      "rows": [
+        {
+          "label": "Core Purpose",
+          "schedulaa": "Operations OS combining scheduling, break enforcement, time tracking, and payroll calculations with accounting exports.",
+          "competitor": "Enterprise payroll, HR, benefits, and compliance platform with filing and remittance services."
+        },
+        {
+          "label": "Regions & Coverage",
+          "schedulaa": "Canada (ex-Quebec) and supported U.S. states with federal and state tax engines, W-2, T4, and ROE exports. Local and city payroll taxes are not automated.",
+          "competitor": "U.S. and global payroll with automated federal, state, and many local and city tax filings under enterprise contracts."
+        },
+        {
+          "label": "Payroll Calculations & Exports",
+          "schedulaa": "Payroll preview and finalize with PDF, CSV, and XLSX exports. W-2 (U.S.), T4, and ROE (Canada ex-QC).",
+          "competitor": "Full payroll calculation, filing, remittance, and regulatory reporting."
+        },
+        {
+          "label": "Benefits & Deductions",
+          "schedulaa": "Benefits deduction tracking (medical, dental, life, retirement), union dues, garnishments, and taxable benefits reporting (Canada Box 40). No benefits brokerage or administration.",
+          "competitor": "Health insurance, dental, vision, 401(k), workers' comp, and benefits administration."
+        },
+        {
+          "label": "Scheduling, Time & Break Compliance",
+          "schedulaa": "Native shift scheduling, timeclock, overtime logic, holiday pay, and break compliance events (missed, enforced, compliant) that feed directly into payroll.",
+          "competitor": "Time and attendance via add-ons or integrations; no shift-level break enforcement or compliance signals."
+        },
+        {
+          "label": "Audit Trail & Payroll Finalization",
+          "schedulaa": "Finalization audit logs show who finalized a pay period, when, and what was overridden. Audit data flows into raw exports.",
+          "competitor": "Enterprise audit trails across payroll and HR modules."
+        },
+        {
+          "label": "Employee Portal",
+          "schedulaa": "Branded employee payslip portal with history, downloads, and role-based access.",
+          "competitor": "Paychex-branded employee and manager portals."
+        },
+        {
+          "label": "Automation & Integrations",
+          "schedulaa": "Zapier automation for bookings, shifts, breaks, timeclock events, leave, and payroll status, plus QuickBooks and Xero exports.",
+          "competitor": "Broad HR and finance integrations, typically requiring enterprise setup or partner workflows."
+        },
+        {
+          "label": "PEO & HR Outsourcing",
+          "schedulaa": "No PEO or co-employment model. Employers stay fully in control.",
+          "competitor": "PEO, co-employment, and full HR outsourcing available."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Operations-first, not HR-first",
+        "body": "Schedulaa starts with real schedules, real breaks, and real hours — payroll runs on verified operational data, not manual spreadsheets."
+      },
+      {
+        "title": "Shift-connected earnings",
+        "body": "Overtime, tips, shift premiums, commissions, vacation, and holiday pay are tied directly to live scheduling and time data."
+      },
+      {
+        "title": "Break compliance built in",
+        "body": "Schedulaa enforces and audits break compliance at the shift level — a critical requirement for service teams that Paychex does not address."
+      },
+      {
+        "title": "Cross-border payroll calculations",
+        "body": "Canada (ex-QC) and U.S. payroll calculations live in one system with consistent workflows and exports."
+      },
+      {
+        "title": "Automation-ready",
+        "body": "Schedulaa exposes operational events (shift publishing, break compliance, payroll status) via Zapier so teams can automate alerts, reporting, and finance hand-offs."
+      }
+    ],
+    "bridgeSection": {
+      "title": "Why some teams use both",
+      "paragraphs": [
+        "Schedulaa is not a replacement for enterprise payroll filing or benefits brokerage. Many teams keep Paychex for tax remittance, filings, and benefits administration while using Schedulaa to manage operations.",
+        "Schedulaa sits upstream of Paychex. It ensures schedules, breaks, time, premiums, and leave are correct before payroll is finalized. This reduces corrections, disputes, and rework for finance teams.",
+        "For service businesses, the combination often works better than either tool alone."
+      ]
+    },
+    "featureGrid": {
+      "headers": [
+        "Feature Group",
+        "Schedulaa",
+        "Paychex"
+      ],
+      "rows": [
+        {
+          "label": "Scheduling & Shifts",
+          "schedulaa": "Native scheduling and shift management.",
+          "competitor": "Available as add-ons or integrations."
+        },
+        {
+          "label": "Break Compliance",
+          "schedulaa": "Built-in enforcement and audit signals.",
+          "competitor": "Not built in."
+        },
+        {
+          "label": "Time Tracking",
+          "schedulaa": "Native timeclock and overtime logic.",
+          "competitor": "Available via time and attendance modules."
+        },
+        {
+          "label": "Payroll Calculations",
+          "schedulaa": "Built in with CA (ex-QC) and supported U.S. states.",
+          "competitor": "Built in with filings."
+        },
+        {
+          "label": "Tax Filing & Remittance",
+          "schedulaa": "Exports provided; filings not automated.",
+          "competitor": "Automated filing and remittance."
+        },
+        {
+          "label": "W-2 / T4 / ROE",
+          "schedulaa": "Exports for W-2, T4, and ROE.",
+          "competitor": "Filed and remitted."
+        },
+        {
+          "label": "Benefits Brokerage",
+          "schedulaa": "Not provided; deductions are tracked.",
+          "competitor": "Provided with full administration."
+        },
+        {
+          "label": "PEO / Co-employment",
+          "schedulaa": "Not offered.",
+          "competitor": "Offered under Paychex programs."
+        },
+        {
+          "label": "Employee Portal",
+          "schedulaa": "Branded employee payslip portal.",
+          "competitor": "Paychex-branded portals."
+        },
+        {
+          "label": "Zapier Automation",
+          "schedulaa": "Operations-level triggers for shifts, breaks, and payroll.",
+          "competitor": "Limited; enterprise integrations available."
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "Built-in booking and intake forms.",
+          "competitor": "Not provided."
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "A Canadian or U.S. service business that needs scheduling, break compliance, time tracking, and payroll calculations tightly connected in one platform.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "A U.S.-centric or global organization that wants payroll tax filing, benefits, and HR fully outsourced under enterprise contracts.",
+        "recommendation": "Paychex"
+      },
+      {
+        "scenario": "Schedulaa to manage operations and produce clean, compliant payroll data — and Paychex to handle filings, remittances, and benefits.",
+        "recommendation": "Both"
+      }
+    ],
+    "testimonial": {
+      "quote": "Schedulaa lets us run payroll off the same screen we use to schedule shifts and enforce breaks. It is built for how service work actually happens.",
+      "attribution": "Photo Artisto Studios, Toronto"
+    },
+    "conclusion": "Paychex remains a strong enterprise option for payroll filing, benefits, and HR outsourcing. Schedulaa is the better fit when the real challenge is operations — scheduling shifts, enforcing breaks, tracking hours, and preparing payroll accurately across Canada and the U.S. Schedulaa does not try to be a PEO. It makes sure payroll is correct before it ever reaches one.",
+    "competitorName": "Paychex"
+  },
+  "humi": {
+    "competitor": "Humi",
+    "metaTitle": "Schedulaa vs Humi | HR-Only vs Operations + HR",
+    "metaDescription": "Compare Schedulaa and Humi. See how combining booking, scheduling, payroll, and HR workflows improves service-team efficiency.",
+    "heroTitle": "Schedulaa vs Humi — Operations, Scheduling, and HR in One Connected Platform",
+    "heroSubtitle": "Humi is an HR platform with payroll and benefits. Schedulaa blends HR essentials with booking, scheduling, and client operations.",
+    "intro": [
+      "Both Schedulaa and Humi help modern businesses manage people — but they serve different priorities.",
+      "Humi centers on HR, payroll, and benefits administration. Schedulaa combines HR workflows with booking, scheduling, leave requests, and shift management in one system."
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "Humi"
+      ],
+      "rows": [
+        {
+          "label": "Core Purpose",
+          "schedulaa": "All-in-one platform for booking, scheduling, payroll, and HR workflows.",
+          "competitor": "HR and people-management system with payroll and benefits."
+        },
+        {
+          "label": "Target Audience",
+          "schedulaa": "Service businesses, studios, clinics, and agencies managing shifts and bookings.",
+          "competitor": "HR departments and mid-sized organizations."
+        },
+        {
+          "label": "Employee Profiles",
+          "schedulaa": "Team profiles linked to scheduling and payroll.",
+          "competitor": "HR-centered employee records."
+        },
+        {
+          "label": "Shift Management",
+          "schedulaa": "Built-in scheduling, swaps, and time tracking.",
+          "competitor": "Not natively included."
+        },
+        {
+          "label": "Leave Requests",
+          "schedulaa": "Full workflow with approvals and audit trail.",
+          "competitor": "Available within HR module."
+        },
+        {
+          "label": "Payroll & Compliance",
+          "schedulaa": "Integrated for Canada (T4, ROE) and U.S. (W-2).",
+          "competitor": "Canadian payroll integration only."
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "Direct booking and client management built in.",
+          "competitor": "Not included."
+        },
+        {
+          "label": "Automation",
+          "schedulaa": "Automated confirmations, reminders, and internal notifications.",
+          "competitor": "Focused on HR approvals and onboarding."
+        },
+        {
+          "label": "Brand Customization",
+          "schedulaa": "Branded company domain and communications.",
+          "competitor": "Standardized Humi environment."
+        },
+        {
+          "label": "Analytics & Reporting",
+          "schedulaa": "Combined analytics across clients, staff, payroll.",
+          "competitor": "HR and people metrics only."
+        },
+        {
+          "label": "Pricing Structure",
+          "schedulaa": "Flat tiers starting at $19.99/month.",
+          "competitor": "Modular, per-user pricing."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Unified operations and HR",
+        "body": "Schedulaa merges front-line scheduling, booking, and payroll with HR workflows. Humi focuses on back-office HR administration."
+      },
+      {
+        "title": "Shift scheduling and leave management",
+        "body": "Schedulaa includes native shift planning, swaps, and approvals. Humi requires additional tools for real-time operations."
+      },
+      {
+        "title": "Payroll and multi-region support",
+        "body": "Schedulaa supports Canadian and U.S. compliance inside the same system. Humi payroll is Canadian-only."
+      },
+      {
+        "title": "Cross-department automation",
+        "body": "Schedulaa automates notifications, approvals, and payroll adjustments. Humi automation centers on HR processes."
+      },
+      {
+        "title": "Brand and platform control",
+        "body": "Schedulaa provides a white-label experience for employees and clients. Humi operates under its own centralized interface."
+      }
+    ],
+    "summaryTable": {
+      "headers": [
+        "Feature Group",
+        "Schedulaa",
+        "Humi"
+      ],
+      "rows": [
+        {
+          "label": "Scheduling & Shift Management",
+          "schedulaa": "Integrated with swap and notification system.",
+          "competitor": "Requires external tool."
+        },
+        {
+          "label": "Leave Requests",
+          "schedulaa": "Built-in workflows with approvals.",
+          "competitor": "Available in HR module."
+        },
+        {
+          "label": "Payroll",
+          "schedulaa": "Integrated (CA + US).",
+          "competitor": "Canadian-only."
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "Included.",
+          "competitor": "Not supported."
+        },
+        {
+          "label": "Automation Scope",
+          "schedulaa": "HR + operations.",
+          "competitor": "HR only."
+        },
+        {
+          "label": "Branding",
+          "schedulaa": "Custom domain and emails.",
+          "competitor": "Fixed Humi interface."
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "Service businesses managing shifts, payroll, and client operations.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "Internal HR departments focused solely on employee administration.",
+        "recommendation": "Humi"
+      },
+      {
+        "scenario": "Hybrid organizations needing both HR and scheduling automation.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "testimonial": {
+      "quote": "Schedulaa handles our entire staff lifecycle — from scheduling and shift swaps to payroll and leave management — in one dashboard.",
+      "attribution": "VelvetGlow Studios, Toronto"
+    },
+    "conclusion": "Humi streamlines traditional HR administration. Schedulaa connects HR with real-time operations — from staff schedules to payroll and client-facing bookings — making it ideal for service-driven teams."
+  },
+  "square-appointments": {
+    "competitor": "Square Appointments",
+    "metaTitle": "Schedulaa vs Square Appointments | Booking System Comparison",
+    "metaDescription": "Compare Schedulaa with Square Appointments. Learn when to use a full operations platform instead of a booking-only tool.",
+    "heroTitle": "Schedulaa vs Square Appointments — Complete Operations Platform vs Booking System",
+    "heroSubtitle": "Square Appointments focuses on appointment booking and POS. Schedulaa adds scheduling, payroll, HR, and analytics under your own brand.",
+    "intro": [
+      "Both Schedulaa and Square Appointments make it easier to schedule clients and accept payments.",
+      "Square excels at point-of-sale workflows; Schedulaa delivers the entire operational ecosystem for multi-staff service teams."
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "Square Appointments"
+      ],
+      "rows": [
+        {
+          "label": "Core Purpose",
+          "schedulaa": "All-in-one platform for booking, scheduling, payroll, HR, and analytics.",
+          "competitor": "Appointment scheduling and POS system."
+        },
+        {
+          "label": "Target Audience",
+          "schedulaa": "Service businesses, salons, clinics, studios, agencies.",
+          "competitor": "Independent professionals and small shops."
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "Custom-branded pages with intake forms and domain mapping.",
+          "competitor": "Square-hosted booking page or ecosystem widget."
+        },
+        {
+          "label": "Staff Scheduling",
+          "schedulaa": "Shift management, availability, swap requests.",
+          "competitor": "Appointment calendar only."
+        },
+        {
+          "label": "Payroll & Compliance",
+          "schedulaa": "Integrated for Canada (T4, ROE) and U.S. (W-2).",
+          "competitor": "U.S. payroll sold separately."
+        },
+        {
+          "label": "Leave Management",
+          "schedulaa": "Built-in requests, approvals, tracking.",
+          "competitor": "Not included."
+        },
+        {
+          "label": "Video Meetings",
+          "schedulaa": "Automatic Jitsi meeting link creation.",
+          "competitor": "Not available."
+        },
+        {
+          "label": "Brand Customization",
+          "schedulaa": "Operate on your own domain and color system.",
+          "competitor": "Square-branded checkout and booking links."
+        },
+        {
+          "label": "Analytics & Reports",
+          "schedulaa": "Bookings, shifts, payroll, and sales in one dashboard.",
+          "competitor": "Appointment and sales reports."
+        },
+        {
+          "label": "Automation",
+          "schedulaa": "Email confirmations, reminders, cancellations, reschedules.",
+          "competitor": "SMS/email reminders and basic confirmations."
+        },
+        {
+          "label": "E-Commerce & Payments",
+          "schedulaa": "Built-in commerce for services and products.",
+          "competitor": "Integrated POS for in-person transactions."
+        },
+        {
+          "label": "Pricing Structure",
+          "schedulaa": "Flat tiers starting at $19.99.",
+          "competitor": "Free for individuals; paid tiers per location/team size."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "End-to-end operations",
+        "body": "Square Appointments handles booking and POS. Schedulaa continues through staffing, payroll, HR, and analytics."
+      },
+      {
+        "title": "Branded experience",
+        "body": "Schedulaa keeps clients on your domain with custom forms and emails. Square maintains a shared ecosystem with Square branding."
+      },
+      {
+        "title": "Payroll, HR, and compliance",
+        "body": "Schedulaa ties payroll to scheduling with Canadian/U.S. compliance. Square Payroll is separate and U.S.-centric."
+      },
+      {
+        "title": "Automation beyond reminders",
+        "body": "Schedulaa automates leave approvals, swap notifications, and meeting links in addition to client reminders. Square focuses on appointment reminders only."
+      },
+      {
+        "title": "Pricing flexibility",
+        "body": "Flat pricing keeps Schedulaa predictable as staff counts grow. Square charges per location and headcount."
+      }
+    ],
+    "summaryTable": {
+      "headers": [
+        "Feature Group",
+        "Schedulaa",
+        "Square Appointments"
+      ],
+      "rows": [
+        {
+          "label": "Booking & Client Forms",
+          "schedulaa": "Branded booking pages with customization.",
+          "competitor": "Square-hosted booking interface."
+        },
+        {
+          "label": "Scheduling & Shifts",
+          "schedulaa": "Integrated with swap, leave, and availability tools.",
+          "competitor": "Basic appointment calendar."
+        },
+        {
+          "label": "Payroll Integration",
+          "schedulaa": "Built-in (CA + US).",
+          "competitor": "Separate product."
+        },
+        {
+          "label": "HR & Leave Management",
+          "schedulaa": "Included.",
+          "competitor": "Not available."
+        },
+        {
+          "label": "Branding",
+          "schedulaa": "White-label domain and email.",
+          "competitor": "Square-branded."
+        },
+        {
+          "label": "Automation",
+          "schedulaa": "Full client and staff workflows.",
+          "competitor": "Appointment-focused reminders."
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "Solo stylist or small service provider focused on in-person checkout.",
+        "recommendation": "Square Appointments"
+      },
+      {
+        "scenario": "Multi-staff or multi-location business needing automation, payroll, and scheduling.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "Hybrid or remote businesses offering virtual bookings and team management.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "testimonial": {
+      "quote": "With Schedulaa, our booking, payroll, and scheduling systems finally speak to each other. Every shift, leave request, and payment flows automatically.",
+      "attribution": "Beauty Collective Studio, Toronto"
+    },
+    "conclusion": "Square Appointments is a strong choice for independent professionals needing quick checkout. Schedulaa is built for growing teams that require a unified system for clients, staff, shifts, and payroll across regions."
+  },
+  "xero": {
+    "competitor": "Xero",
+    "metaTitle": "Schedulaa vs Xero | Operations OS vs Cloud Accounting",
+    "metaDescription": "Compare Schedulaa’s booking, scheduling, payroll, and website tools with Xero’s cloud accounting platform. See why service teams run operations in Schedulaa and sync the numbers to Xero.",
+    "heroTitle": "Schedulaa vs Xero — Run Operations + Keep the Books",
+    "heroSubtitle": "Xero is a world-class accounting ledger. Schedulaa is the operations OS that generates the hours, bookings, and payroll data Xero needs. They complement each other, not replace each other.",
+    "intro": [
+      "Schedulaa and Xero both serve modern service businesses but at different layers of the stack.",
+      "Schedulaa runs day-to-day operations — client booking, shift scheduling, payroll prep, and branded websites. Xero records those results in the general ledger, runs direct deposit, and files taxes."
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "Xero"
+      ],
+      "rows": [
+        {
+          "label": "Core Purpose",
+          "schedulaa": "Operations OS: booking, scheduling, shift-aware payroll, websites, analytics.",
+          "competitor": "Cloud accounting & bookkeeping: general ledger, invoices, bank feeds, tax filings."
+        },
+        {
+          "label": "Primary Audience",
+          "schedulaa": "Service businesses managing clients, teams, and multi-location workflows.",
+          "competitor": "Accountants, bookkeepers, and finance-first business owners."
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "Built-in booking website, intake forms, deposits, and reminders on your domain.",
+          "competitor": "Not included; requires external booking or scheduling tools."
+        },
+        {
+          "label": "Payroll & Compliance",
+          "schedulaa": "Integrated CA + US workflows with W-2, T4, ROE exports tied to real shifts.",
+          "competitor": "Payroll modules in select regions; handles remittance and direct deposit but depends on external hour tracking."
+        },
+        {
+          "label": "Shift Scheduling & Leave",
+          "schedulaa": "Native staff scheduling, leave approvals, swap workflows, overtime detection.",
+          "competitor": "Not available; relies on third-party time-tracking/HR apps."
+        },
+        {
+          "label": "Websites & Domains",
+          "schedulaa": "Website builder, custom domains, client/staff portals, Stripe checkout.",
+          "competitor": "No website tools; focuses purely on accounting."
+        },
+        {
+          "label": "Automation Scope",
+          "schedulaa": "Client + staff workflows: confirmations, reminders, leave approvals, payroll exports.",
+          "competitor": "Accounting automation: bank feeds, invoicing rules, recurring bills, tax filings."
+        },
+        {
+          "label": "Analytics",
+          "schedulaa": "Operational analytics across bookings, shifts, payroll, revenue, and departments.",
+          "competitor": "Financial statements: P&L, balance sheet, cash flow, tax summaries."
+        },
+        {
+          "label": "Role in the Stack",
+          "schedulaa": "Runs the business — where hours, bookings, and payroll data are created.",
+          "competitor": "Keeps the books — where revenue, expenses, and payroll payments are reconciled."
+        },
+        {
+          "label": "Integrations",
+          "schedulaa": "Exports clean payroll and revenue data to accounting systems like Xero/QuickBooks.",
+          "competitor": "Connects to POS, expense, and payroll apps; still requires an operations system for service teams."
+        },
+        {
+          "label": "Pricing Structure",
+          "schedulaa": "Flat monthly tiers starting at $19.99 with staff/location bundles.",
+          "competitor": "Per-organization plans plus payroll add-ons by region."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Front-of-house vs. back-office",
+        "body": "Schedulaa orchestrates bookings, shifts, payroll prep, and branded experiences. Xero records the money movement and files taxes. Together they cover the full lifecycle."
+      },
+      {
+        "title": "Shift-aware payroll vs. ledger payroll",
+        "body": "Schedulaa knows who worked, tips, overtime, and leave policies. Xero’s payroll module focuses on direct deposit and remittance after an external system supplies the hours."
+      },
+      {
+        "title": "Website + booking vs. accounting UI",
+        "body": "Schedulaa ships a site builder, booking portals, and Stripe checkout under your domain. Xero assumes you already have client-facing tools and concentrates on finance."
+      },
+      {
+        "title": "Service-business focus",
+        "body": "Schedulaa was designed for salons, studios, clinics, agencies, tutors, and recruiters. Xero is industry-agnostic accounting; it doesn’t replace an operations platform."
+      },
+      {
+        "title": "Designed to work together",
+        "body": "Schedulaa can export payroll and revenue data to Xero so accountants reconcile and run direct deposit. You run the business in Schedulaa and close the books in Xero."
+      }
+    ],
+    "summaryTable": {
+      "headers": [
+        "Feature Group",
+        "Schedulaa",
+        "Xero"
+      ],
+      "rows": [
+        {
+          "label": "Booking & Scheduling",
+          "schedulaa": "Included: client booking pages, staff availability, shift management, leave, and reminders.",
+          "competitor": "Not included; requires external booking/scheduling tools."
+        },
+        {
+          "label": "Payroll & Compliance",
+          "schedulaa": "Shift-aware payroll with W-2, T4, ROE exports tied to schedules, tips, commissions.",
+          "competitor": "Payroll add-on handles direct deposit/remittance once hours are provided."
+        },
+        {
+          "label": "HR & Leave Management",
+          "schedulaa": "Integrated leave approvals, overtime rules, swap workflows, branch policies.",
+          "competitor": "Relies on third-party HR/time-tracking tools."
+        },
+        {
+          "label": "Websites & Domains",
+          "schedulaa": "Website builder, custom domain, booking & Stripe Checkout on your brand.",
+          "competitor": "No website or portal capabilities."
+        },
+        {
+          "label": "Automation Scope",
+          "schedulaa": "Client/staff workflows: confirmations, reminders, swaps, leave, payroll exports.",
+          "competitor": "Accounting workflows: bank feeds, invoicing rules, recurring bills, tax filings."
+        },
+        {
+          "label": "Analytics",
+          "schedulaa": "Operational dashboards across bookings, shifts, payroll, revenue, departments.",
+          "competitor": "Financial statements: P&L, balance sheet, cash flow, GST/VAT returns."
+        },
+        {
+          "label": "Branding & Domain",
+          "schedulaa": "White-label portals on your own domain for clients and staff.",
+          "competitor": "Xero-branded accounting environment."
+        },
+        {
+          "label": "Role in the Stack",
+          "schedulaa": "Runs daily operations — generates the data accountants need.",
+          "competitor": "Keeps the books — reconciles, files, and moves money."
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "You need client booking, shift scheduling, payroll prep, and branded portals.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "You only need a general ledger, invoicing, and tax filings.",
+        "recommendation": "Xero"
+      },
+      {
+        "scenario": "You want operations + clean books without double entry.",
+        "recommendation": "Schedulaa + Xero"
+      }
+    ],
+    "testimonial": {
+      "quote": "Schedulaa tells us what happened — who worked, which services ran, and what was earned. Xero tells our accountant how it rolls up into the books. Together they finally match.",
+      "attribution": "Multi-location service team, North America"
+    },
+    "conclusion": "Xero remains a leading choice for cloud accounting and payroll remittance. Schedulaa focuses on the operational reality of service businesses — from booking and staffing to payroll-ready data and branded portals. Most service brands run daily operations in Schedulaa and sync the results to Xero (or QuickBooks) to keep the books clean."
+  },
+  "hubspot-meetings": {
+    "competitor": "HubSpot Meetings",
+    "metaTitle": "Schedulaa vs HubSpot Meetings | Public Booking Links with Operations Behind Them",
+    "metaDescription": "Compare Schedulaa public booking links with HubSpot Meetings. See how live availability, Jitsi links, cancel/reschedule, and candidate profiles stay in sync with scheduling and payroll.",
+    "heroTitle": "Schedulaa vs HubSpot Meetings — Public Links, Operationally Connected",
+    "heroSubtitle": "HubSpot Meetings captures leads. Schedulaa ties public links to staff availability, Jitsi links, cancel/reschedule controls, and candidate profiles.",
+    "intro": [
+      "Both tools let you share a personal booking link. The difference is what happens after someone books.",
+      "Schedulaa uses the same availability staff use for shifts, applies break/PTO rules, and updates candidate profiles. HubSpot Meetings focuses on calendar slots without operational context."
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "HubSpot Meetings"
+      ],
+      "rows": [
+        {
+          "label": "Availability source",
+          "schedulaa": "Shared with staff scheduling (break/PTO-aware).",
+          "competitor": "Connected calendar availability only."
+        },
+        {
+          "label": "Client experience",
+          "schedulaa": "Local timezone picker + host timezone label.",
+          "competitor": "Local timezone picker."
+        },
+        {
+          "label": "Video links",
+          "schedulaa": "Automatic Jitsi link per booking.",
+          "competitor": "Requires separate video integration."
+        },
+        {
+          "label": "Cancel / reschedule",
+          "schedulaa": "Built-in links in confirmations.",
+          "competitor": "Requires workflow configuration."
+        },
+        {
+          "label": "Candidate/client profile",
+          "schedulaa": "Booking enriches candidate workspace (contact info, notes, latest booking time).",
+          "competitor": "Lead capture only; no scheduling-to-profile enrichment."
+        },
+        {
+          "label": "Paid services",
+          "schedulaa": "Use services/checkout for paid flows; public link is free consult/interview.",
+          "competitor": "No native paid services flow."
+        },
+        {
+          "label": "Operations linkage",
+          "schedulaa": "Bookings appear in Upcoming Meetings + live roster; time is removed from free slots.",
+          "competitor": "Creates calendar events; ops/scheduling handled elsewhere."
+        },
+        {
+          "label": "Exports to payroll/accounting",
+          "schedulaa": "Hours/meetings can flow into ops + exports (QuickBooks/Xero).",
+          "competitor": "No direct payroll/export linkage."
+        },
+        {
+          "label": "Pricing model",
+          "schedulaa": "Included with platform; one login for ops + booking links.",
+          "competitor": "Included in HubSpot Sales/Service plans."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "One availability for clients and staff",
+        "body": "The same availability powers public links, invitations, and shift planning. No double-booking or surprise conflicts."
+      },
+      {
+        "title": "Built-in confirmations with Jitsi + cancel/resched",
+        "body": "Every booking ships with a Jitsi link, host/client time labels, and cancel/reschedule controls—no extra workflow setup."
+      },
+      {
+        "title": "Candidate enrichment",
+        "body": "Public bookings enrich the candidate profile (contact, country, website, latest meeting time) so recruiters have context instantly."
+      },
+      {
+        "title": "Ops-to-payroll continuity",
+        "body": "Meetings sit beside shifts and bookings; managers see them in Upcoming Meetings, and exports stay clean for finance."
+      }
+    ],
+    "summaryTable": {
+      "headers": [
+        "Feature Group",
+        "Schedulaa",
+        "HubSpot Meetings"
+      ],
+      "rows": [
+        {
+          "label": "Public booking link",
+          "schedulaa": "Yes, backed by staff availability and break/PTO rules.",
+          "competitor": "Yes, calendar-based."
+        },
+        {
+          "label": "Video link automation",
+          "schedulaa": "Auto Jitsi link in confirmations.",
+          "competitor": "Requires integration/config."
+        },
+        {
+          "label": "Cancel/reschedule links",
+          "schedulaa": "Included in every confirmation.",
+          "competitor": "Requires workflow setup."
+        },
+        {
+          "label": "Profile enrichment",
+          "schedulaa": "Candidate profile updated with booking details.",
+          "competitor": "Lead capture; no ops profile enrichment."
+        },
+        {
+          "label": "Ops + payroll linkage",
+          "schedulaa": "Shows in Upcoming Meetings/live roster; hours can export to accounting.",
+          "competitor": "Not linked to scheduling or payroll."
+        },
+        {
+          "label": "Paid services",
+          "schedulaa": "Handled via Services/Checkout (separate from free public link).",
+          "competitor": "Not supported natively."
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "You need a quick lead-capture link tied to CRM only.",
+        "recommendation": "HubSpot Meetings"
+      },
+      {
+        "scenario": "You want a public link that respects staff availability and updates candidate profiles.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "You run interviews/consults plus paid services from one platform.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "conclusion": "Use HubSpot Meetings when you just need a lightweight calendar link inside a CRM. Use Schedulaa when you need public booking links that stay in sync with staff availability, generate Jitsi + cancel/reschedule links automatically, and enrich candidate profiles while keeping operations and payroll aligned."
+  },
+  "homebase": {
+    "competitor": "Homebase",
+    "metaTitle": "Schedulaa vs Homebase | Booking, Break Enforcement, and Payroll vs Shift Scheduling",
+    "metaDescription": "Compare Schedulaa and Homebase. See why service teams that run bookings, break rules, and payroll choose Schedulaa over a shift-only scheduler.",
+    "heroTitle": "Schedulaa vs Homebase — Which Operations Platform Fits Your Service Team?",
+    "heroSubtitle": "Homebase is great for storefront shift scheduling. Schedulaa unifies client booking, smart breaks, time tracking, and US/CA payroll for service teams.",
+    "intro": [
+      "Homebase is a popular scheduling/time-clock tool for retail and restaurants. Schedulaa goes further for service teams that juggle bookings, break rules, attendance, and payroll in one workflow.",
+      "If you run appointments, need break enforcement, and want payroll-ready exports, Schedulaa keeps those pieces connected."
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "Homebase"
+      ],
+      "rows": [
+        {
+          "label": "Core Purpose",
+          "schedulaa": "All-in-one operations OS: booking, scheduling, breaks, time tracking, US/CA payroll, QuickBooks/Xero exports.",
+          "competitor": "Scheduling and time tracking for hourly shift teams."
+        },
+        {
+          "label": "Target Industry",
+          "schedulaa": "Service teams: salons, clinics, wellness, cleaning, tutors, agencies.",
+          "competitor": "Retail, restaurants, hospitality."
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "Built-in booking pages, intake, confirmations, Jitsi links, staff invites.",
+          "competitor": "Not supported."
+        },
+        {
+          "label": "Break Enforcement",
+          "schedulaa": [
+            "Paid/unpaid rules",
+            "Staggered + enforced timing",
+            "Live break monitoring",
+            "Break compliance % reporting",
+            "Break deviation analytics",
+            "Missing break alerts",
+            "Break anomaly detection"
+          ],
+          "competitor": [
+            "Basic break recording",
+            "No enforcement rules",
+            "No compliance analytics"
+          ]
+        },
+        {
+          "label": "Payroll & Compliance",
+          "schedulaa": [
+            "US + Canada payroll workflows",
+            "Regular/OT hour buckets",
+            "Shift deviation → payroll corrections",
+            "Break compliance → labor law protection",
+            "Exports to QuickBooks / Xero",
+            "Support for W-2, T4, ROE files"
+          ],
+          "competitor": [
+            "US payroll add-on",
+            "No Canadian payroll",
+            "No break compliance or deviation analytics"
+          ]
+        },
+        {
+          "label": "Branding & Website",
+          "schedulaa": "Website builder, custom domain, branded booking checkout.",
+          "competitor": "Not included."
+        },
+        {
+          "label": "Notifications & Automation",
+          "schedulaa": "Confirmations, reschedules, cancellations, break alerts, swap approvals.",
+          "competitor": "Shift reminders and late alerts."
+        },
+        {
+          "label": "Pricing Model",
+          "schedulaa": "Flat tiers + $9 per extra staff; built for 3–100 employees.",
+          "competitor": "Per-location pricing; payroll as add-on."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Service-first workflows",
+        "body": "Schedulaa links client bookings to staff availability, break rules, and payroll outputs. Homebase doesn’t handle client booking."
+      },
+      {
+        "title": "Break compliance",
+        "body": "Staggered, paid/unpaid, and monitored breaks are built in. Homebase records breaks but doesn’t enforce complex rules."
+      },
+      {
+        "title": "Payroll coverage",
+        "body": "Schedulaa supports US + Canada with exports to accounting. Homebase payroll is US-only."
+      },
+      {
+        "title": "Brand + website",
+        "body": "Schedulaa ships a booking-ready site on your domain. Homebase has no website or client-facing booking."
+      },
+      {
+        "title": "Shift deviation reporting",
+        "body": "Schedulaa shows late starts, early finishes, and long/short shifts vs schedule for every shift. Homebase has no shift deviation analytics."
+      },
+      {
+        "title": "Fraud prevention",
+        "body": "Schedulaa logs IP and timezone on every punch to flag remote/suspicious clock-ins. Homebase does not include IP auditing."
+      }
+    ],
+    "fitMatrix": [
+      {
+        "scenario": "Retail or restaurant needing only scheduling/time clocks.",
+        "recommendation": "Homebase"
+      },
+      {
+        "scenario": "Service team needing booking + scheduling + payroll in one flow.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "Multi-location service brand that needs break enforcement and branded booking.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "A business that must prove labor compliance (breaks, overtime, audit logs).",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "complianceSafeguards": {
+      "headers": [
+        "Compliance & HR Safeguards",
+        "Schedulaa",
+        "Homebase"
+      ],
+      "rows": [
+        {
+          "label": "Break compliance %",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Missing break detection",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Shift deviation analysis",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Audit-ready PDF/CSV",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "IP logging / fraud detection",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        }
+      ]
+    },
+    "featureGrid": {
+      "headers": [
+        "Feature",
+        "Schedulaa",
+        "Homebase"
+      ],
+      "rows": [
+        {
+          "label": "Client booking",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Break enforcement",
+          "schedulaa": "✔",
+          "competitor": "Limited"
+        },
+        {
+          "label": "Break compliance %",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Shift deviation",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "IP fraud checks",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Payroll (US/CA)",
+          "schedulaa": "✔",
+          "competitor": "US only"
+        },
+        {
+          "label": "QuickBooks/Xero export",
+          "schedulaa": "✔",
+          "competitor": "Limited"
+        },
+        {
+          "label": "Website builder",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Scheduling",
+          "schedulaa": "✔",
+          "competitor": "✔"
+        },
+        {
+          "label": "Time tracking",
+          "schedulaa": "✔",
+          "competitor": "✔"
+        },
+        {
+          "label": "Swap approvals",
+          "schedulaa": "✔",
+          "competitor": "✔"
+        },
+        {
+          "label": "Multi-location",
+          "schedulaa": "✔",
+          "competitor": "✔"
+        }
+      ]
+    },
+    "conclusion": "Homebase is strong for storefront shift scheduling. Schedulaa is better for service teams that need booking, break enforcement, attendance, and payroll tied together under their own brand."
+  },
+  "when-i-work": {
+    "competitor": "When I Work",
+    "metaTitle": "Schedulaa vs When I Work | Booking + Break Compliance vs Shift Scheduling",
+    "metaDescription": "Compare Schedulaa and When I Work. Learn why teams that run bookings, smart breaks, and US/CA payroll choose Schedulaa over a scheduling-only tool.",
+    "heroTitle": "Schedulaa vs When I Work — The Right Choice for Modern Service Teams",
+    "heroSubtitle": "When I Work excels at scheduling shift workers. Schedulaa unifies booking, smart breaks, attendance, and payroll with branded client experiences.",
+    "intro": [
+      "When I Work is a respected scheduling/time-tracking app. Schedulaa is an operations platform for teams that also manage clients, bookings, and payroll.",
+      "If you need client-facing booking plus break enforcement and payroll, Schedulaa keeps it all in one place."
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "When I Work"
+      ],
+      "rows": [
+        {
+          "label": "Core Purpose",
+          "schedulaa": "Operations OS: booking, scheduling, breaks, time tracking, US/CA payroll, websites, accounting exports.",
+          "competitor": "Shift scheduling and attendance for hourly teams."
+        },
+        {
+          "label": "Target Industry",
+          "schedulaa": "Service teams: beauty, wellness, clinics, tutoring, cleaning, agencies.",
+          "competitor": "Retail, restaurants, hospitality."
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "Complete booking system with intake, confirmations, video links.",
+          "competitor": "Not included."
+        },
+        {
+          "label": "Break Enforcement",
+          "schedulaa": "Advanced break rules, staggered breaks, compliance visibility.",
+          "competitor": "Basic break recording; no automated enforcement."
+        },
+        {
+          "label": "Payroll",
+          "schedulaa": "US + Canada payroll workflows; QuickBooks/Xero exports.",
+          "competitor": "Payroll add-on, US-focused."
+        },
+        {
+          "label": "Branding",
+          "schedulaa": "Website builder + branded booking under your domain.",
+          "competitor": "No website or booking tools."
+        },
+        {
+          "label": "Automation",
+          "schedulaa": "Confirmations, cancellations, break alerts, PTO workflows, swap approvals.",
+          "competitor": "Shift reminders and team messaging."
+        },
+        {
+          "label": "Pricing",
+          "schedulaa": "Flat tiers + $9 per additional staff; predictable for 3–100 employees.",
+          "competitor": "Per-user pricing; add-ons for payroll."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Booking + scheduling together",
+        "body": "Schedulaa serves teams managing clients and staff in one platform. When I Work is scheduling-only."
+      },
+      {
+        "title": "Smart breaks and compliance",
+        "body": "Staggered, paid/unpaid, enforced breaks keep coverage intact. When I Work records breaks but doesn’t enforce them."
+      },
+      {
+        "title": "Payroll reach",
+        "body": "Schedulaa covers US and Canada with exports to accounting. When I Work payroll is US-focused."
+      },
+      {
+        "title": "Branded experience",
+        "body": "Schedulaa includes a website and booking pages on your domain. When I Work has no client-facing booking."
+      }
+    ],
+    "fitMatrix": [
+      {
+        "scenario": "Restaurant/retail needing straightforward scheduling + time tracking.",
+        "recommendation": "When I Work"
+      },
+      {
+        "scenario": "Service team running bookings, breaks, and payroll together.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "Teams wanting branded client experiences plus staff scheduling.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "conclusion": "When I Work is solid for shift scheduling. Schedulaa is the better fit for service teams that need booking, smart breaks, attendance, and payroll linked to one operational workflow."
+  },
+  "schedulaa-vs-acuity-scheduling": {
+    "competitor": "Acuity Scheduling",
+    "metaTitle": "Schedulaa vs Acuity Scheduling | Operations OS vs Booking-Only",
+    "metaDescription": "Compare Schedulaa and Acuity. Acuity is a polished booking tool; Schedulaa runs booking, scheduling, breaks, payroll (US/CA), websites, and analytics in one platform.",
+    "heroTitle": "Schedulaa vs Acuity Scheduling — Which Platform Fits Your Service Team?",
+    "heroSubtitle": "Acuity delivers beautiful booking. Schedulaa unifies booking, scheduling, break compliance, time tracking, payroll, websites, commerce, and analytics for multi-staff teams.",
+    "intro": [
+      "Acuity Scheduling is a clean, modern booking system for solo providers and small studios.",
+      "Schedulaa is an Operations OS for service teams that need booking plus staff scheduling, break enforcement, time tracking, PTO, payroll, websites, and analytics."
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "Acuity Scheduling"
+      ],
+      "rows": [
+        {
+          "label": "Core Purpose",
+          "schedulaa": "Operations OS: booking, scheduling, breaks, time, leave, payroll, websites, commerce, analytics.",
+          "competitor": "Client booking system with payments and reminders."
+        },
+        {
+          "label": "Target Users",
+          "schedulaa": "Service teams with 3–100 staff, often multi-location.",
+          "competitor": "Solo providers, freelancers, small studios."
+        },
+        {
+          "label": "Internal Scheduling",
+          "schedulaa": "Shift templates, recurring availability, swaps, PTO, multi-location.",
+          "competitor": "Calendars only; no shift engine."
+        },
+        {
+          "label": "Breaks & Compliance",
+          "schedulaa": "Fixed/windowed/staggered breaks with enforcement and alerts.",
+          "competitor": "Not supported."
+        },
+        {
+          "label": "Time Tracking",
+          "schedulaa": "Clock-in/out tied to shifts, audit logs, overtime flags.",
+          "competitor": "Not supported."
+        },
+        {
+          "label": "Payroll",
+          "schedulaa": "US + Canada payroll, W-2/T4/ROE, QB/Xero export.",
+          "competitor": "Not supported."
+        },
+        {
+          "label": "Website / Branding",
+          "schedulaa": "Built-in builder, custom domains, booking widgets.",
+          "competitor": "Uses Squarespace for site design; booking widget available."
+        },
+        {
+          "label": "Products / POS",
+          "schedulaa": "Products, mixed carts, taxes, refunds, coupons.",
+          "competitor": "Packages/subscriptions/gift certificates; no full POS."
+        },
+        {
+          "label": "Multi-Location",
+          "schedulaa": "Branch-aware booking + scheduling + analytics.",
+          "competitor": "Not designed for multi-location operations."
+        },
+        {
+          "label": "Automations",
+          "schedulaa": "Confirmations, cancellations, break alerts, shift/PTO flows, follow-ups.",
+          "competitor": "Reminders, follow-ups, Zapier."
+        },
+        {
+          "label": "Pricing Focus",
+          "schedulaa": "Flat tiers plus per-staff add-on; built for teams.",
+          "competitor": "Per calendar count; rises as staff grow."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Booking vs operations",
+        "body": "Acuity schedules clients. Schedulaa runs booking, staffing, breaks, time, and payroll in one workflow."
+      },
+      {
+        "title": "Staff scheduling + breaks",
+        "body": "Schedulaa offers shift templates, swaps, PTO, and break enforcement. Acuity does not handle internal staffing."
+      },
+      {
+        "title": "Payroll and compliance",
+        "body": "US + Canada payroll, W-2/T4/ROE, and accounting exports are built in. Acuity has no payroll or compliance."
+      },
+      {
+        "title": "Commerce depth",
+        "body": "Schedulaa supports products, mixed carts, taxes, and refunds. Acuity limits commerce to packages/subscriptions/gift certificates."
+      },
+      {
+        "title": "Multi-location readiness",
+        "body": "Schedulaa unifies branches for booking, scheduling, and analytics. Acuity is not built for multi-location operations."
+      }
+    ],
+    "summaryTable": {
+      "headers": [
+        "Feature Group",
+        "Schedulaa",
+        "Acuity Scheduling"
+      ],
+      "rows": [
+        {
+          "label": "Client Booking",
+          "schedulaa": "✔",
+          "competitor": "✔"
+        },
+        {
+          "label": "Website Builder",
+          "schedulaa": "✔ (integrated)",
+          "competitor": "✔ (via Squarespace templates)"
+        },
+        {
+          "label": "Internal Staff Scheduling",
+          "schedulaa": "✔",
+          "competitor": "✘ (calendars only)"
+        },
+        {
+          "label": "Break Enforcement",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Time Tracking",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Payroll (US + CA)",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "W-2 / T4 / ROE",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "QuickBooks/Xero Export",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Products + POS",
+          "schedulaa": "✔",
+          "competitor": "Limited (packages only)"
+        },
+        {
+          "label": "Multi-Location Support",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Shift Swaps",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Analytics",
+          "schedulaa": "✔",
+          "competitor": "Partial"
+        },
+        {
+          "label": "Automations",
+          "schedulaa": "Advanced",
+          "competitor": "Basic"
+        },
+        {
+          "label": "Staff Portal",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Compliance",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        }
+      ]
+    },
+    "fitMatrix": [
+      {
+        "scenario": "You are a solo provider wanting a beautiful booking experience.",
+        "recommendation": "Acuity Scheduling"
+      },
+      {
+        "scenario": "You have 3–100 staff and need booking, scheduling, breaks, and payroll together.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "You run multiple locations and need branch-aware scheduling and analytics.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "conclusion": "Acuity Scheduling is exceptional for simple, elegant client booking. Schedulaa is the better long-term choice for teams that need booking plus staffing, break compliance, time tracking, payroll, websites, and analytics in one platform."
+  },
+  "deputy": {
+    "competitor": "Deputy",
+    "metaTitle": "Schedulaa vs Deputy | Operations OS vs Workforce Scheduling",
+    "metaDescription": "See how Schedulaa stacks up against Deputy. Schedulaa unifies booking, website, payroll, commerce, and analytics, while Deputy focuses on scheduling/time‑clock alone.",
+    "heroTitle": "Schedulaa vs Deputy — Run Your Entire Business, Not Just Shifts",
+    "heroSubtitle": "Deputy is a strong workforce scheduling app. Schedulaa is the operating system that connects booking, websites, payroll, and analytics to scheduling.",
+    "intro": [
+      "Deputy shines at employee scheduling, time clocks, and labor compliance. Schedulaa includes all of that plus client booking, websites, payroll, eCommerce, analytics, and marketing automation.",
+      "If you outgrow a pure timeclock tool, Schedulaa becomes the single platform to run every customer and staff workflow end to end."
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Category",
+        "Schedulaa",
+        "Deputy"
+      ],
+      "rows": [
+        {
+          "label": "Core Purpose",
+          "schedulaa": "Operations OS for booking, scheduling, payroll, websites, and analytics.",
+          "competitor": "Workforce management: scheduling, time & attendance, labor forecasting."
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "Built-in booking flows, deposits, reschedules, add-ons.",
+          "competitor": "Not included (relies on external tools)."
+        },
+        {
+          "label": "Payroll",
+          "schedulaa": "Integrated CA + US payroll engine (W-2, T4, ROE).",
+          "competitor": "Exports timesheets to third-party payroll—no built-in payroll."
+        },
+        {
+          "label": "Website & Ecommerce",
+          "schedulaa": "Website builder, custom domain, Stripe checkout, product catalogs.",
+          "competitor": "No website or commerce capabilities."
+        },
+        {
+          "label": "Marketing & CRM",
+          "schedulaa": "Email/SMS automation, win-back sequences, client CRM.",
+          "competitor": "Not available."
+        },
+        {
+          "label": "Analytics",
+          "schedulaa": [
+            "Revenue & payroll analytics",
+            "Staff performance tracking",
+            "Cancellations & rebook funnels",
+            "Multi-branch dashboards",
+            "Shift deviation reporting (late starts, early finishes, long shifts)",
+            "Break compliance % + missing-break alerts",
+            "IP/anomaly detection"
+          ],
+          "competitor": [
+            "Labor & scheduling analytics",
+            "No break compliance",
+            "No deviation analytics",
+            "No fraud/IP logging",
+            "No revenue or client analytics"
+          ]
+        },
+        {
+          "label": "Shift Management",
+          "schedulaa": [
+            "Scheduling, swaps, leave approvals, department views",
+            "Break enforcement with smart break rules",
+            "Shift deviation monitoring",
+            "Live roster with anomalies & break overage alerts"
+          ],
+          "competitor": [
+            "Scheduling, swaps, leave approvals",
+            "Break recording only (no enforcement)",
+            "No shift deviation dashboard"
+          ]
+        },
+        {
+          "label": "Time Clock",
+          "schedulaa": "Planned (schedule-driven).",
+          "competitor": "Clock-in/out via mobile or kiosk."
+        },
+        {
+          "label": "Branding & Multi-site",
+          "schedulaa": "Multi-tenant, white-label, branch landing pages, legal pages.",
+          "competitor": "Single account per brand; no public website layer."
+        }
+      ]
+    },
+    "complianceSafeguards": {
+      "headers": [
+        "Break Compliance & Labor Protection",
+        "Schedulaa",
+        "Deputy"
+      ],
+      "rows": [
+        {
+          "label": "Break enforcement (paid/unpaid)",
+          "schedulaa": "✔",
+          "competitor": "Limited (no enforcement)"
+        },
+        {
+          "label": "Staggered break rules",
+          "schedulaa": "✔",
+          "competitor": "✖"
+        },
+        {
+          "label": "Break compliance %",
+          "schedulaa": "✔",
+          "competitor": "✖"
+        },
+        {
+          "label": "Missing-break alerts",
+          "schedulaa": "✔",
+          "competitor": "✖"
+        },
+        {
+          "label": "Break deviation tracking",
+          "schedulaa": "✔",
+          "competitor": "✖"
+        }
+      ]
+    },
+    "featureGrid": {
+      "headers": [
+        "Feature",
+        "Schedulaa",
+        "Deputy"
+      ],
+      "rows": [
+        {
+          "label": "Break Compliance & Enforcement",
+          "schedulaa": "✔",
+          "competitor": "✖"
+        },
+        {
+          "label": "Shift Deviation Insights",
+          "schedulaa": "✔",
+          "competitor": "✖"
+        },
+        {
+          "label": "IP Logging / Fraud Detection",
+          "schedulaa": "✔",
+          "competitor": "✖"
+        },
+        {
+          "label": "End-to-End Booking → Payroll",
+          "schedulaa": "✔",
+          "competitor": "✖"
+        }
+      ]
+    },
+    "summaryTable": {
+      "headers": [
+        "Feature",
+        "Schedulaa",
+        "Deputy"
+      ],
+      "rows": [
+        {
+          "label": "Employee Scheduling",
+          "schedulaa": "✔",
+          "competitor": "✔"
+        },
+        {
+          "label": "Client Booking",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Website Builder & Custom Domain",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Online Store / eCommerce",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Integrated Payroll",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "W-2 / T4 / ROE Exports",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Tips & Commissions",
+          "schedulaa": "✔",
+          "competitor": "Partial (via timesheets)"
+        },
+        {
+          "label": "Time Clock / Attendance",
+          "schedulaa": "Planned",
+          "competitor": "✔"
+        },
+        {
+          "label": "Marketing Automations",
+          "schedulaa": "✔",
+          "competitor": "✘"
+        },
+        {
+          "label": "Revenue Analytics",
+          "schedulaa": "✔",
+          "competitor": "✘ (labor only)"
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "All-in-one vs timeclock",
+        "body": "Schedulaa replaces booking, payroll, website builder, eCommerce, analytics, and scheduling. Deputy delivers scheduling/time & attendance only."
+      },
+      {
+        "title": "Payroll + Booking loop",
+        "body": "Schedulaa connects bookings → scheduling → payroll → Xero. Deputy requires separate booking systems and payroll processors."
+      },
+      {
+        "title": "Website & client experience",
+        "body": "Schedulaa ships white-label websites, booking widgets, and custom domains. Deputy has no client-facing layer."
+      },
+      {
+        "title": "Revenue + marketing insight",
+        "body": "Schedulaa tracks revenue, tips, products, cancellations, and rebook triggers with automation. Deputy tracks labor metrics only."
+      },
+      {
+        "title": "Xero-ready exports",
+        "body": "Schedulaa syncs revenue and payroll journals directly to Xero. Deputy exports timesheets that still require another system to process."
+      },
+      {
+        "title": "Shift deviation analytics",
+        "body": "Schedulaa flags late starts, early outs, extended shifts, and overnight overruns. Deputy doesn’t provide per-shift deviation insights without expensive enterprise add-ons."
+      },
+      {
+        "title": "Fraud prevention & security",
+        "body": "Schedulaa logs IP/timezone on every punch to flag suspicious remote clock-ins. Deputy has no IP-based auditing."
+      }
+    ],
+    "fitMatrix": [
+      {
+        "scenario": "You only need staff scheduling and time-clocking.",
+        "recommendation": "Deputy"
+      },
+      {
+        "scenario": "You need booking, payroll, website, and scheduling in one place.",
+        "recommendation": "Schedulaa"
+      },
+      {
+        "scenario": "You want to feed both revenue and payroll to Xero automatically.",
+        "recommendation": "Schedulaa"
+      }
+    ],
+    "testimonial": {
+      "quote": "Deputy helped us schedule shifts, but Schedulaa became the full command center: bookings, websites, payroll, and analytics all tie together.",
+      "attribution": "Hybrid salon + studio operator, Canada"
+    },
+    "conclusion": "Deputy is a great choice when shift scheduling and time clocks are the only requirements. Schedulaa is the better fit when service businesses want to run bookings, websites, scheduling, payroll, commerce, and analytics in one platform and sync it all back to Xero."
+  }
+}

@@ -33,8 +33,13 @@ const Footer = ({ className }: { className?: string }) => {
                 </Link>
               </li>
               <li>
-                <Link href={withLocalePath('/pricing', locale)} className="footer-link">
-                  {t('pricing')}
+                <Link href={withLocalePath('/booking', locale)} className="footer-link">
+                  {t('booking')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/marketing', locale)} className="footer-link">
+                  {t('marketing')}
                 </Link>
               </li>
               <li>
@@ -43,8 +48,13 @@ const Footer = ({ className }: { className?: string }) => {
                 </Link>
               </li>
               <li>
-                <Link href={withLocalePath('/docs', locale)} className="footer-link">
-                  {t('docs')}
+                <Link href={withLocalePath('/website-builder', locale)} className="footer-link">
+                  {t('websiteBuilder')}
+                </Link>
+              </li>
+              <li>
+                <Link href={withLocalePath('/pricing', locale)} className="footer-link">
+                  {t('pricing')}
                 </Link>
               </li>
             </ul>
@@ -59,18 +69,18 @@ const Footer = ({ className }: { className?: string }) => {
                 </Link>
               </li>
               <li>
-                <Link href={withLocalePath('/compare', locale)} className="footer-link">
-                  {t('compare')}
+                <Link href={withLocalePath('/demo', locale)} className="footer-link">
+                  {t('demo')}
                 </Link>
               </li>
               <li>
-                <Link href={withLocalePath('/alternatives', locale)} className="footer-link">
-                  {t('alternatives')}
+                <Link href={withLocalePath('/contact', locale)} className="footer-link">
+                  {t('contact')}
                 </Link>
               </li>
               <li>
-                <Link href={withLocalePath('/faq', locale)} className="footer-link">
-                  {t('faq')}
+                <Link href={withLocalePath('/docs', locale)} className="footer-link">
+                  {t('docs')}
                 </Link>
               </li>
             </ul>
