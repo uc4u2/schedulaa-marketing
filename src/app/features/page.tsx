@@ -134,78 +134,93 @@ export default async function FeaturesPage() {
     <main className="bg-background-3 dark:bg-background-7 overflow-x-hidden">
       <section className="overflow-hidden pt-[150px] pb-20 md:pt-[190px] lg:pt-[220px] lg:pb-[120px]">
         <div className="main-container">
-          <div className="relative overflow-hidden rounded-[30px] border border-accent/15 bg-background-8 px-7 py-10 text-white md:px-12 md:py-14">
-            <div className="pointer-events-none absolute -top-44 -left-24 h-[28rem] w-[28rem] rounded-full bg-primary-500/30 blur-3xl" />
-            <div className="pointer-events-none absolute -right-28 -bottom-44 h-[30rem] w-[30rem] rounded-full bg-ns-green/20 blur-3xl" />
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(255,255,255,0.12),transparent_48%),radial-gradient(circle_at_90%_90%,rgba(133,255,122,0.10),transparent_44%)]" />
-
-            <div className="relative grid gap-9 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+          <div className="rounded-[30px] border border-secondary/10 bg-[#f3f0e9] p-6 md:p-10 dark:border-white/10 dark:bg-background-8">
+            <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
               <div>
-                <span className="badge badge-cyan">Platform highlights</span>
-                <h1 className="mt-6 max-w-[780px] text-white">
-                  Features built for
+                <span className="badge badge-green-v2">Features</span>
+                <h1 className="mt-6 max-w-[760px] text-secondary dark:text-white">
+                  Powerful operations tools
                   <br />
-                  enterprise service teams.
+                  built for modern service teams
                 </h1>
-                <p className="mt-4 max-w-[720px] text-accent/75">
-                  Schedulaa brings scheduling, payroll, websites, and eCommerce into one experience so your staff and clients stay connected.
+                <p className="mt-4 max-w-[690px] text-secondary/70 dark:text-accent/70">
+                  From booking and scheduling to payroll workflows and websites, Schedulaa helps teams run daily operations from one connected platform.
                 </p>
-
-                <div className="mt-7 rounded-2xl border border-accent/20 bg-accent/8 p-5 backdrop-blur">
-                  <p className="text-tagline-2 font-medium text-ns-green">Schedulaa OS</p>
-                  <p className="text-heading-6 mt-1 text-white">Unified command center</p>
-                  <p className="mt-2 text-tagline-2 text-accent/65">
-                    Booking, workforce scheduling, payroll workflows, and customer touchpoints in one operational layer.
-                  </p>
-                </div>
-
-                <ul className="mt-7 grid gap-2 text-tagline-2 text-accent/75 sm:grid-cols-2">
-                  <li className="rounded-xl border border-accent/15 bg-accent/5 px-3 py-2">Snapshot-first audit trail</li>
-                  <li className="rounded-xl border border-accent/15 bg-accent/5 px-3 py-2">US + Canada payroll workflows</li>
-                  <li className="rounded-xl border border-accent/15 bg-accent/5 px-3 py-2">Department-aware scheduling</li>
-                  <li className="rounded-xl border border-accent/15 bg-accent/5 px-3 py-2">Website + commerce integrated</li>
-                </ul>
-
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <a href={`${APP_ORIGIN}/register`} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
-                    Start free trial
-                  </a>
-                  <Link
-                    href={withLocalePath('/pricing', locale)}
-                    className="btn btn-md btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent"
-                  >
-                    Compare plans
-                  </Link>
-                </div>
               </div>
-
-              <div className="rounded-[22px] border border-accent/20 bg-background-7/70 p-5 backdrop-blur-xl">
-                <p className="text-tagline-2 text-accent/85">Platform signals</p>
-                <div className="mt-3 grid grid-cols-2 gap-3">
-                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
-                    <p className="text-tagline-3 text-accent/70">Modules</p>
-                    <p className="text-heading-6 mt-1 text-white">5 Core</p>
-                  </div>
-                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
-                    <p className="text-tagline-3 text-accent/70">Regions</p>
-                    <p className="text-heading-6 mt-1 text-white">US + CA</p>
-                  </div>
-                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
-                    <p className="text-tagline-3 text-accent/70">Audit</p>
-                    <p className="text-heading-6 mt-1 text-white">Snapshot-first</p>
-                  </div>
-                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
-                    <p className="text-tagline-3 text-accent/70">Ops fit</p>
-                    <p className="text-heading-6 mt-1 text-white">1-80 staff</p>
-                  </div>
-                </div>
-                <div className="mt-4 rounded-xl border border-accent/20 bg-accent/5 p-3">
-                  <p className="text-tagline-3 text-accent/70">Coverage</p>
-                  <p className="text-tagline-2 mt-1 text-accent/85">
-                    Scheduling + Payroll + Websites + Commerce + Reporting
-                  </p>
-                </div>
+              <div className="flex justify-start lg:justify-end">
+                <Link href={withLocalePath('/demo', locale)} className="btn btn-secondary btn-md dark:hover:btn-accent">
+                  Explore features
+                </Link>
               </div>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-12">
+              <article className="relative overflow-hidden rounded-[22px] border border-secondary/10 bg-white p-5 shadow-box dark:border-white/10 dark:bg-background-7 lg:col-span-6 lg:min-h-[280px]">
+                <div className="pointer-events-none absolute -right-20 -bottom-20 h-44 w-44 rounded-full bg-primary-500/20 blur-2xl" />
+                <h3 className="text-heading-5">Unified command center</h3>
+                <p className="mt-2 text-secondary/70 dark:text-accent/70">
+                  Connect booking, workforce scheduling, payroll workflows, and customer touchpoints without tool switching.
+                </p>
+                <div className="mt-6 grid grid-cols-2 gap-2">
+                  <span className="rounded-lg border border-secondary/10 bg-background-2 px-3 py-2 text-tagline-2 dark:border-white/10 dark:bg-background-8">Snapshot audit logs</span>
+                  <span className="rounded-lg border border-secondary/10 bg-background-2 px-3 py-2 text-tagline-2 dark:border-white/10 dark:bg-background-8">US + CA payroll</span>
+                  <span className="rounded-lg border border-secondary/10 bg-background-2 px-3 py-2 text-tagline-2 dark:border-white/10 dark:bg-background-8">Shift + leave workflows</span>
+                  <span className="rounded-lg border border-secondary/10 bg-background-2 px-3 py-2 text-tagline-2 dark:border-white/10 dark:bg-background-8">Website + commerce</span>
+                </div>
+              </article>
+
+              <article className="relative overflow-hidden rounded-[22px] border border-secondary/10 bg-white p-5 shadow-box dark:border-white/10 dark:bg-background-7 lg:col-span-6">
+                <h3 className="text-heading-5">Platform signals</h3>
+                <p className="mt-1 text-secondary/70 dark:text-accent/70">Key operating metrics for enterprise service teams.</p>
+                <div className="mt-4 grid grid-cols-2 gap-2">
+                  <div className="rounded-lg border border-secondary/10 bg-background-2 p-3 dark:border-white/10 dark:bg-background-8">
+                    <p className="text-tagline-3 text-secondary/60 dark:text-accent/60">Modules</p>
+                    <p className="text-heading-6 mt-1">5 Core</p>
+                  </div>
+                  <div className="rounded-lg border border-secondary/10 bg-background-2 p-3 dark:border-white/10 dark:bg-background-8">
+                    <p className="text-tagline-3 text-secondary/60 dark:text-accent/60">Regions</p>
+                    <p className="text-heading-6 mt-1">US + CA</p>
+                  </div>
+                  <div className="rounded-lg border border-secondary/10 bg-background-2 p-3 dark:border-white/10 dark:bg-background-8">
+                    <p className="text-tagline-3 text-secondary/60 dark:text-accent/60">Ops fit</p>
+                    <p className="text-heading-6 mt-1">1-80 staff</p>
+                  </div>
+                  <div className="rounded-lg border border-secondary/10 bg-background-2 p-3 dark:border-white/10 dark:bg-background-8">
+                    <p className="text-tagline-3 text-secondary/60 dark:text-accent/60">Mode</p>
+                    <p className="text-heading-6 mt-1">Snapshot-first</p>
+                  </div>
+                </div>
+              </article>
+
+              <article className="rounded-[22px] border border-secondary/10 bg-white p-5 shadow-box dark:border-white/10 dark:bg-background-7 lg:col-span-4">
+                <h3 className="text-heading-5">Scheduling engine</h3>
+                <p className="mt-2 text-secondary/70 dark:text-accent/70">
+                  Dynamic availability, shift planning, swaps, and leave approvals in one timeline.
+                </p>
+              </article>
+
+              <article className="rounded-[22px] border border-secondary/10 bg-white p-5 shadow-box dark:border-white/10 dark:bg-background-7 lg:col-span-4">
+                <h3 className="text-heading-5">Payroll workflows</h3>
+                <p className="mt-2 text-secondary/70 dark:text-accent/70">
+                  Overtime, exports, deduction controls, and audit-safe finalization with multi-region support.
+                </p>
+              </article>
+
+              <article className="rounded-[22px] border border-secondary/10 bg-white p-5 shadow-box dark:border-white/10 dark:bg-background-7 lg:col-span-4">
+                <h3 className="text-heading-5">Website + bookings</h3>
+                <p className="mt-2 text-secondary/70 dark:text-accent/70">
+                  Publish branded service pages with embedded booking and commerce-ready customer flows.
+                </p>
+              </article>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href={`${APP_ORIGIN}/register`} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
+                Start free trial
+              </a>
+              <Link href={withLocalePath('/pricing', locale)} className="btn btn-md btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
+                Compare plans
+              </Link>
             </div>
           </div>
         </div>
