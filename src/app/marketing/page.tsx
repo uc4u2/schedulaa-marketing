@@ -122,33 +122,39 @@ export default async function MarketingPage() {
           {page.sections.map((section: any) => (
             <article
               key={section.title}
-              className="group relative overflow-hidden rounded-[22px] border border-stroke-2 bg-white p-6 shadow-box transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8 md:p-8"
+              className="group relative overflow-hidden rounded-[24px] border border-accent/15 bg-secondary p-6 text-white shadow-3 transition hover:-translate-y-1 hover:shadow-4 dark:bg-background-8 md:p-9"
             >
-              <div className="pointer-events-none absolute -right-16 -bottom-16 h-40 w-40 rounded-full bg-primary-500/10 blur-3xl transition group-hover:bg-primary-500/15" />
-              <div className="space-y-2 relative">
-                <p className="premium-eyebrow">{section.overline}</p>
-                <h3 className="text-heading-4">{section.title}</h3>
-                <p className="text-secondary/70 dark:text-accent/70">{section.body}</p>
-              </div>
-              {section.points?.length ? (
-                <ul className="mt-6 grid gap-3 md:grid-cols-2 relative">
-                  {section.points.map((point: string) => (
-                    <li
-                      key={point}
-                      className="rounded-xl border border-stroke-2 bg-background-2 px-4 py-3 text-tagline-2 transition hover:bg-white dark:border-stroke-7 dark:bg-background-7 dark:hover:bg-background-8"
-                    >
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              {section.buttons?.length ? (
-                <div className="mt-6 flex flex-wrap gap-3">
-                  {section.buttons.map((btn: any) => (
-                    <CtaLink key={btn.href} href={btn.href} locale={locale} label={btn.label} primary />
-                  ))}
+              <div className="pointer-events-none absolute -left-24 -top-24 h-60 w-60 rounded-full bg-primary-500/25 blur-3xl" />
+              <div className="pointer-events-none absolute -right-24 -bottom-24 h-60 w-60 rounded-full bg-ns-green/15 blur-3xl" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,255,255,0.08),transparent_40%),radial-gradient(circle_at_90%_90%,rgba(163,230,53,0.10),transparent_46%)]" />
+
+              <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+                <div className="space-y-3">
+                  <p className="badge badge-cyan">{section.overline}</p>
+                  <h3 className="text-heading-3 text-white">{section.title}</h3>
+                  <p className="max-w-[780px] text-accent/75">{section.body}</p>
+                  {section.buttons?.length ? (
+                    <div className="pt-2">
+                      {section.buttons.map((btn: any) => (
+                        <CtaLink key={btn.href} href={btn.href} locale={locale} label={btn.label} primary />
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
-              ) : null}
+
+                {section.points?.length ? (
+                  <ul className="grid gap-2">
+                    {section.points.map((point: string) => (
+                      <li
+                        key={point}
+                        className="rounded-xl border border-accent/20 bg-accent/5 px-4 py-3 text-tagline-2 text-accent/85 backdrop-blur transition hover:bg-accent/10"
+                      >
+                        • {point}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
             </article>
           ))}
 
