@@ -6,12 +6,12 @@ import Image from 'next/image';
 import WorkflowExperience from '@/components/marketing/home/WorkflowExperience';
 import hero1 from '@public/images/ns-img-77.png';
 import hero2 from '@public/images/ns-img-78.png';
-import hero3 from '@public/images/ns-img-79.png';
+import hero3 from '@public/images/marketing/analytics-main.png';
 import hero1Dark from '@public/images/ns-img-dark-52.png';
-import hero3Dark from '@public/images/ns-img-dark-53.png';
-import analytics1 from '@public/images/ns-img-367.png';
-import analytics2 from '@public/images/ns-img-368.png';
-import analytics3 from '@public/images/ns-img-369.png';
+import hero3Dark from '@public/images/marketing/analytics-main.png';
+import analytics1 from '@public/images/marketing/analytics-board.png';
+import analytics2 from '@public/images/marketing/analytics-side-a.png';
+import analytics3 from '@public/images/marketing/analytics-side-b.png';
 import avatar5 from '@public/images/ns-avatar-5.png';
 import { marketingPages } from '@/legacy-content/marketing/config';
 import { AppLocale, withLocalePath } from '@/utils/locale';
@@ -280,13 +280,22 @@ export default async function MarketingPage() {
               Deep-dive pages for email, analytics, and client intelligence workflows.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link href={withLocalePath('/marketing/email-campaigns', locale)} className="btn btn-outline btn-sm">
+              <Link
+                href={withLocalePath('/marketing/email-campaigns', locale)}
+                className="rounded-full border border-stroke-7 bg-background-8 px-4 py-2 text-tagline-2 font-medium text-white transition hover:border-primary-400 hover:text-primary-200"
+              >
                 Email campaigns
               </Link>
-              <Link href={withLocalePath('/marketing/analytics-dashboard', locale)} className="btn btn-outline btn-sm">
+              <Link
+                href={withLocalePath('/marketing/analytics-dashboard', locale)}
+                className="rounded-full border border-stroke-7 bg-background-8 px-4 py-2 text-tagline-2 font-medium text-white transition hover:border-primary-400 hover:text-primary-200"
+              >
                 Analytics dashboard
               </Link>
-              <Link href={withLocalePath('/marketing/clients-360', locale)} className="btn btn-outline btn-sm">
+              <Link
+                href={withLocalePath('/marketing/clients-360', locale)}
+                className="rounded-full border border-stroke-7 bg-background-8 px-4 py-2 text-tagline-2 font-medium text-white transition hover:border-primary-400 hover:text-primary-200"
+              >
                 Clients 360
               </Link>
             </div>
