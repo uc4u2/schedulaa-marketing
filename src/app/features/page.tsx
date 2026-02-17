@@ -2,7 +2,9 @@ import Link from 'next/link';
 import { headers } from 'next/headers';
 import { Metadata } from 'next';
 
+import AiFeatureWorkflowSteps from '@/components/features/AiFeatureWorkflowSteps';
 import AiMobileFeaturesSection from '@/components/features/AiMobileFeaturesSection';
+import AiOperationalFeatureGrid from '@/components/features/AiOperationalFeatureGrid';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { AppLocale, withLocalePath } from '@/utils/locale';
 
@@ -100,6 +102,33 @@ export const metadata: Metadata = {
 
 export default async function FeaturesPage() {
   const locale = await getLocale();
+  const visualGridItems = [
+    {
+      title: highlightCards[0].title,
+      description: highlightCards[0].description,
+    },
+    {
+      title: highlightCards[1].title,
+      description: highlightCards[1].description,
+    },
+    {
+      title: highlightCards[2].title,
+      description: highlightCards[2].description,
+    },
+    {
+      title: platformPillars[0].title,
+      description: platformPillars[0].points[0],
+    },
+    {
+      title: platformPillars[1].title,
+      description: platformPillars[1].points[0],
+    },
+  ];
+
+  const workflowSteps = platformPillars.map((pillar) => ({
+    title: pillar.title,
+    description: pillar.points[1],
+  }));
 
   return (
     <main className="bg-background-3 dark:bg-background-7 overflow-x-hidden">
@@ -161,65 +190,16 @@ export default async function FeaturesPage() {
       </section>
 
       <AiMobileFeaturesSection />
-
-      <section className="pb-20 lg:pb-[120px]">
-        <div className="main-container">
-          <div className="mb-8 flex items-end justify-between gap-4 max-md:flex-col max-md:items-start">
-            <div>
-              <span className="badge badge-green-v2">Schedulaa platform</span>
-              <h2 className="mt-4">Operational capabilities that compound together</h2>
-            </div>
-            <Link href={withLocalePath('/demo', locale)} className="btn btn-secondary btn-md dark:btn-accent dark:hover:btn-white">
-              Book demo
-            </Link>
-          </div>
-          <div className="grid gap-8 lg:grid-cols-3">
-            {highlightCards.map((card) => (
-              <article key={card.title} className="dark:bg-background-8 rounded-[20px] bg-white p-6 shadow-[0_12px_40px_rgba(16,24,40,0.06)]">
-                <h2 className="text-heading-5">{card.title}</h2>
-                <p className="mt-3">{card.description}</p>
-                <ul className="mt-6 space-y-3">
-                  {card.points.map((point) => (
-                    <li key={point} className="flex gap-3">
-                      <span className="bg-secondary dark:bg-accent mt-1 inline-flex h-2 w-2 shrink-0 rounded-full" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background-2 dark:bg-background-5 py-20 lg:py-[120px]">
-        <div className="main-container">
-          <div className="mx-auto max-w-[880px] text-center">
-            <span className="badge badge-yellow-v2">Platform Pillars</span>
-            <h2 className="mt-5">Features that work together</h2>
-            <p className="mt-3">
-              Each module is built to hand off context so your staff and clients never lose the thread.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {platformPillars.map((pillar) => (
-              <article key={pillar.icon} className="dark:bg-background-8 rounded-[20px] bg-white p-6 shadow-[0_12px_40px_rgba(16,24,40,0.06)]">
-                <span className="text-primary-500 text-heading-5">{pillar.icon}</span>
-                <h3 className="mt-3 text-heading-6">{pillar.title}</h3>
-                <ul className="mt-4 space-y-3">
-                  {pillar.points.map((point) => (
-                    <li key={point} className="flex gap-3">
-                      <span className="bg-primary-500 mt-1 inline-flex h-2 w-2 shrink-0 rounded-full" />
-                      <span className="text-tagline-1">{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AiOperationalFeatureGrid
+        heading="Operational capabilities that compound together"
+        subheading="The same features that power your scheduling, payroll, and commerce workflows are now shown in a stronger visual system."
+        items={visualGridItems}
+      />
+      <AiFeatureWorkflowSteps
+        steps={workflowSteps}
+        ctaHref={withLocalePath('/demo', locale)}
+        ctaLabel="Book demo"
+      />
 
       <section className="py-20 lg:py-[110px]">
         <div className="main-container">
