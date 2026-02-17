@@ -53,7 +53,7 @@ const integrationLinks: IntegrationLink[] = [
   },
   {
     label: 'Analytics & Reporting',
-    href: '/analytics',
+    href: '/marketing/analytics-dashboard',
     icon: AnalyticsIconV2,
   },
   {
