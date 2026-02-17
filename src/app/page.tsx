@@ -3,9 +3,15 @@ import { headers } from 'next/headers';
 import { Metadata } from 'next';
 
 import Hero from '@/components/home/Hero';
+import Feature from '@/components/home/Feature';
 import FeaturesV2 from '@/components/home/FeaturesV2';
 import SuccessStats from '@/components/home/SuccessStats';
 import WhyUs from '@/components/home/WhyUs';
+import FeatureV3 from '@/components/home/FeatureV3';
+import Benefits from '@/components/home/Benefits';
+import Testimonial from '@/components/home/Testimonial';
+import FAQ from '@/components/home/FAQ';
+import CTA from '@/components/shared/cta/CTA';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { AppLocale, withLocalePath } from '@/utils/locale';
 
@@ -36,11 +42,24 @@ export default async function Homepage() {
   const locale = await getLocale();
 
   return (
-    <>
+    <main className="bg-background-3 dark:bg-background-7 overflow-x-hidden">
       <Hero />
-      <SuccessStats />
-      <FeaturesV2 />
+      <Feature />
+      <FeatureV3 />
       <WhyUs />
+      <Benefits />
+      <Testimonial />
+      <FAQ />
+      <CTA
+        className="bg-background-2 dark:bg-background-7"
+        badgeText="Get started"
+        badgeClass="!badge-cyan"
+        ctaHeading="Ready to capture demand and run cleaner operations?"
+        description="Move scheduling, booking, payroll workflows, and service pages into one operating platform."
+        descriptionClass="text-secondary/60"
+        btnClass="hover:btn-secondary dark:hover:btn-white"
+        ctaBtnText="Get started"
+      />
 
       <section className="bg-background-2 dark:bg-background-5 py-20 lg:py-[110px]">
         <div className="main-container grid gap-6 lg:grid-cols-2">
@@ -90,6 +109,8 @@ export default async function Homepage() {
           </div>
         </div>
       </section>
-    </>
+      <SuccessStats />
+      <FeaturesV2 />
+    </main>
   );
 }

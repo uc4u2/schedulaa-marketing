@@ -1,6 +1,7 @@
-import Features from '@/components/home/Features';
-import FeaturesV2 from '@/components/home/FeaturesV2';
-import WhyUs from '@/components/home/WhyUs';
+import Feature from '@/components/features/Feature';
+import Features from '@/components/features/Features';
+import Reviews from '@/components/features/Reviews';
+import WhyChooseUs from '@/components/features/WhyChooseUs';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -21,10 +22,11 @@ export const metadata: Metadata = {
 
 export default function FeaturesPage() {
   return (
-    <>
+    <main className="overflow-x-hidden">
       <Features />
-      <FeaturesV2 />
-      <WhyUs />
-    </>
+      <Feature />
+      <WhyChooseUs />
+      <Reviews />
+    </main>
   );
 }
