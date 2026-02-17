@@ -120,16 +120,23 @@ export default async function MarketingPage() {
       <section className="analytics pt-[70px] pb-[100px]">
         <div className="mx-auto flex w-[95%] max-w-[1100px] flex-col space-y-16">
           {page.sections.map((section: any) => (
-            <article key={section.title} className="rounded-[20px] border border-stroke-2 bg-white p-6 shadow-box dark:border-stroke-7 dark:bg-background-8 md:p-8">
-              <div className="space-y-2">
+            <article
+              key={section.title}
+              className="group relative overflow-hidden rounded-[22px] border border-stroke-2 bg-white p-6 shadow-box transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8 md:p-8"
+            >
+              <div className="pointer-events-none absolute -right-16 -bottom-16 h-40 w-40 rounded-full bg-primary-500/10 blur-3xl transition group-hover:bg-primary-500/15" />
+              <div className="space-y-2 relative">
                 <p className="premium-eyebrow">{section.overline}</p>
                 <h3 className="text-heading-4">{section.title}</h3>
                 <p className="text-secondary/70 dark:text-accent/70">{section.body}</p>
               </div>
               {section.points?.length ? (
-                <ul className="mt-6 grid gap-3 md:grid-cols-2">
+                <ul className="mt-6 grid gap-3 md:grid-cols-2 relative">
                   {section.points.map((point: string) => (
-                    <li key={point} className="rounded-xl border border-stroke-2 bg-background-2 px-4 py-3 text-tagline-2 dark:border-stroke-7 dark:bg-background-7">
+                    <li
+                      key={point}
+                      className="rounded-xl border border-stroke-2 bg-background-2 px-4 py-3 text-tagline-2 transition hover:bg-white dark:border-stroke-7 dark:bg-background-7 dark:hover:bg-background-8"
+                    >
                       {point}
                     </li>
                   ))}
@@ -145,7 +152,7 @@ export default async function MarketingPage() {
             </article>
           ))}
 
-          <div className="space-y-6">
+          <div className="space-y-6 rounded-[22px] border border-stroke-2 bg-white p-6 shadow-box dark:border-stroke-7 dark:bg-background-8 md:p-8">
             <p className="premium-eyebrow">Execution flow</p>
             <h3 className="text-heading-4">From campaign launch to measurable retention outcomes</h3>
             <p className="text-secondary/70 dark:text-accent/70">
@@ -160,7 +167,11 @@ export default async function MarketingPage() {
             <p className="text-secondary/70 dark:text-accent/70">{analyticsList.intro}</p>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {analyticsList.items.map((item: any) => (
-                <article key={item.title} className="rounded-[20px] border border-stroke-2 bg-white p-5 shadow-box transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8">
+                <article
+                  key={item.title}
+                  className="group relative overflow-hidden rounded-[20px] border border-stroke-2 bg-white p-5 shadow-box transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8"
+                >
+                  <div className="pointer-events-none absolute -left-10 -top-10 h-28 w-28 rounded-full bg-ns-green/10 blur-2xl transition group-hover:bg-ns-green/20" />
                   <p className="text-tagline-3 uppercase tracking-[0.14em] text-primary-500">{item.label}</p>
                   <h4 className="mt-2 text-heading-6">{item.title}</h4>
                   <p className="mt-2 text-tagline-2 text-secondary/70 dark:text-accent/70">{item.body}</p>
@@ -171,7 +182,11 @@ export default async function MarketingPage() {
 
           <div className="grid gap-5 md:grid-cols-2">
             {page.highlights.map((highlight: any) => (
-              <article key={highlight.title} className="rounded-[20px] border border-stroke-2 bg-white p-6 shadow-box dark:border-stroke-7 dark:bg-background-8">
+              <article
+                key={highlight.title}
+                className="group relative overflow-hidden rounded-[20px] border border-stroke-2 bg-white p-6 shadow-box transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8"
+              >
+                <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary-500/10 blur-2xl transition group-hover:bg-primary-500/20" />
                 <p className="premium-eyebrow">{highlight.overline}</p>
                 <h4 className="mt-2 text-heading-5">{highlight.title}</h4>
                 <p className="mt-3 text-secondary/70 dark:text-accent/70">{highlight.content}</p>
@@ -196,7 +211,10 @@ export default async function MarketingPage() {
             <p className="mt-3 text-secondary/70 dark:text-accent/70">{page.faqIntro}</p>
             <div className="mt-6 space-y-3">
               {page.faq.map((item: any) => (
-                <article key={item.question} className="rounded-xl border border-stroke-2 bg-background-2 p-4 dark:border-stroke-7 dark:bg-background-7">
+                <article
+                  key={item.question}
+                  className="rounded-xl border border-stroke-2 bg-background-2 p-4 transition hover:bg-white dark:border-stroke-7 dark:bg-background-7 dark:hover:bg-background-8"
+                >
                   <h3 className="text-heading-6">{item.question}</h3>
                   <p className="mt-2 text-tagline-2 text-secondary/70 dark:text-accent/70">{item.answer}</p>
                 </article>
@@ -204,7 +222,8 @@ export default async function MarketingPage() {
             </div>
           </div>
 
-          <div className="rounded-[20px] border border-stroke-2 bg-white p-6 shadow-box dark:border-stroke-7 dark:bg-background-8 md:p-8">
+          <div className="relative overflow-hidden rounded-[20px] border border-stroke-2 bg-white p-6 shadow-box dark:border-stroke-7 dark:bg-background-8 md:p-8">
+            <div className="pointer-events-none absolute -top-20 -right-20 h-44 w-44 rounded-full bg-primary-500/10 blur-3xl" />
             <p className="premium-eyebrow">{page.cta.overline}</p>
             <h2 className="mt-3">{page.cta.title}</h2>
             <p className="mt-3 text-secondary/70 dark:text-accent/70">{page.cta.body}</p>
