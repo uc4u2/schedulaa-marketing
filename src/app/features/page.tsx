@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { headers } from 'next/headers';
 import { Metadata } from 'next';
 
+import AiMobileFeaturesSection from '@/components/features/AiMobileFeaturesSection';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { AppLocale, withLocalePath } from '@/utils/locale';
 
@@ -104,39 +105,77 @@ export default async function FeaturesPage() {
     <main className="bg-background-3 dark:bg-background-7 overflow-x-hidden">
       <section className="overflow-hidden pt-[150px] pb-20 md:pt-[190px] lg:pt-[220px] lg:pb-[120px]">
         <div className="main-container">
-          <div className="rounded-[28px] bg-secondary p-8 text-white md:p-12 dark:bg-background-8">
-            <span className="badge badge-cyan">Platform Highlights</span>
-            <h1 className="mt-6 max-w-[860px] text-white">
-              Features built for
-              <br />
-              enterprise service teams.
-            </h1>
-            <p className="mt-4 max-w-[860px] text-accent/70">
-              Schedulaa brings scheduling, payroll, websites, and eCommerce into one experience so your staff and clients stay connected.
-            </p>
+          <div className="relative overflow-hidden rounded-[28px] bg-secondary p-8 text-white md:p-12 dark:bg-background-8">
+            <div className="pointer-events-none absolute -top-44 -left-20 h-96 w-96 rounded-full bg-primary-500/25 blur-3xl" />
+            <div className="pointer-events-none absolute -right-24 -bottom-44 h-[28rem] w-[28rem] rounded-full bg-ns-green/20 blur-3xl" />
+            <div className="relative grid gap-8 lg:grid-cols-[1.3fr_0.9fr] lg:items-end">
+              <div>
+                <span className="badge badge-cyan">Platform Highlights</span>
+                <h1 className="mt-6 max-w-[860px] text-white">
+                  Features built for
+                  <br />
+                  enterprise service teams.
+                </h1>
+                <p className="mt-4 max-w-[860px] text-accent/70">
+                  Schedulaa brings scheduling, payroll, websites, and eCommerce into one experience so your staff and clients stay connected.
+                </p>
 
-            <div className="mt-8 rounded-2xl border border-accent/20 bg-accent/5 p-5">
-              <p className="text-tagline-2 font-medium text-ns-green">Schedulaa OS</p>
-              <p className="text-heading-6 mt-1 text-white">Unified command center</p>
-            </div>
+                <div className="mt-8 rounded-2xl border border-accent/20 bg-accent/5 p-5">
+                  <p className="text-tagline-2 font-medium text-ns-green">Schedulaa OS</p>
+                  <p className="text-heading-6 mt-1 text-white">Unified command center</p>
+                </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href={`${APP_ORIGIN}/register`} className="btn btn-primary hover:btn-white dark:hover:btn-accent">
-                Start Free Trial
-              </a>
-              <Link href={withLocalePath('/pricing', locale)} className="btn btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
-                Compare Plans
-              </Link>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a href={`${APP_ORIGIN}/register`} className="btn btn-primary hover:btn-white dark:hover:btn-accent">
+                    Start Free Trial
+                  </a>
+                  <Link href={withLocalePath('/pricing', locale)} className="btn btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
+                    Compare Plans
+                  </Link>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-accent/20 bg-accent/10 p-5">
+                <p className="text-tagline-2 text-accent/80">Platform signals</p>
+                <div className="mt-3 grid grid-cols-2 gap-3">
+                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
+                    <p className="text-tagline-3 text-accent/70">Modules</p>
+                    <p className="text-heading-6 mt-1 text-white">5 Core</p>
+                  </div>
+                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
+                    <p className="text-tagline-3 text-accent/70">Regions</p>
+                    <p className="text-heading-6 mt-1 text-white">US + CA</p>
+                  </div>
+                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
+                    <p className="text-tagline-3 text-accent/70">Audit</p>
+                    <p className="text-heading-6 mt-1 text-white">Snapshot-first</p>
+                  </div>
+                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
+                    <p className="text-tagline-3 text-accent/70">Ops Fit</p>
+                    <p className="text-heading-6 mt-1 text-white">1-80 Staff</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <AiMobileFeaturesSection />
+
       <section className="pb-20 lg:pb-[120px]">
         <div className="main-container">
+          <div className="mb-8 flex items-end justify-between gap-4 max-md:flex-col max-md:items-start">
+            <div>
+              <span className="badge badge-green-v2">Schedulaa platform</span>
+              <h2 className="mt-4">Operational capabilities that compound together</h2>
+            </div>
+            <Link href={withLocalePath('/demo', locale)} className="btn btn-secondary btn-md dark:btn-accent dark:hover:btn-white">
+              Book demo
+            </Link>
+          </div>
           <div className="grid gap-8 lg:grid-cols-3">
             {highlightCards.map((card) => (
-              <article key={card.title} className="dark:bg-background-8 rounded-[20px] bg-white p-6">
+              <article key={card.title} className="dark:bg-background-8 rounded-[20px] bg-white p-6 shadow-[0_12px_40px_rgba(16,24,40,0.06)]">
                 <h2 className="text-heading-5">{card.title}</h2>
                 <p className="mt-3">{card.description}</p>
                 <ul className="mt-6 space-y-3">
@@ -165,7 +204,7 @@ export default async function FeaturesPage() {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {platformPillars.map((pillar) => (
-              <article key={pillar.icon} className="dark:bg-background-8 rounded-[20px] bg-white p-6">
+              <article key={pillar.icon} className="dark:bg-background-8 rounded-[20px] bg-white p-6 shadow-[0_12px_40px_rgba(16,24,40,0.06)]">
                 <span className="text-primary-500 text-heading-5">{pillar.icon}</span>
                 <h3 className="mt-3 text-heading-6">{pillar.title}</h3>
                 <ul className="mt-4 space-y-3">
@@ -181,7 +220,26 @@ export default async function FeaturesPage() {
           </div>
         </div>
       </section>
+
+      <section className="py-20 lg:py-[110px]">
+        <div className="main-container">
+          <div className="rounded-[24px] bg-secondary px-8 py-10 text-white md:px-12 md:py-12 dark:bg-background-8">
+            <p className="badge badge-cyan">Next step</p>
+            <h2 className="mt-5 max-w-[920px] text-white">Run booking, shifts, payroll workflows, and web operations from one command center.</h2>
+            <p className="mt-3 max-w-[860px] text-accent/70">
+              Keep your current team and tools, then phase into Schedulaa modules with a clear rollout path.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href={`${APP_ORIGIN}/register`} className="btn btn-primary hover:btn-white dark:hover:btn-accent">
+                Start Free Trial
+              </a>
+              <Link href={withLocalePath('/contact', locale)} className="btn btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
+                Talk to sales
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
-
