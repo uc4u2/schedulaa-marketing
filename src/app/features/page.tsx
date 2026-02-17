@@ -1,13 +1,8 @@
-import EnterpriseFeaturesPage from '@/components/features/EnterpriseFeaturesPage';
+import Features from '@/components/home/Features';
+import FeaturesV2 from '@/components/home/FeaturesV2';
+import WhyUs from '@/components/home/WhyUs';
 import { defaultMetadata } from '@/utils/generateMetaData';
-import { AppLocale } from '@/utils/locale';
-import { headers } from 'next/headers';
 import { Metadata } from 'next';
-
-const getLocale = async (): Promise<AppLocale> => {
-  const h = await headers();
-  return h.get('x-locale') === 'fa' ? 'fa' : 'en';
-};
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -24,7 +19,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function FeaturesPage() {
-  const locale = await getLocale();
-  return <EnterpriseFeaturesPage locale={locale} />;
+export default function FeaturesPage() {
+  return (
+    <>
+      <Features />
+      <FeaturesV2 />
+      <WhyUs />
+    </>
+  );
 }

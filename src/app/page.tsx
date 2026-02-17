@@ -2,14 +2,10 @@ import Link from 'next/link';
 import { headers } from 'next/headers';
 import { Metadata } from 'next';
 
-import { MiniLinkCard, PillarCard } from '@/components/marketing/sections/EnterpriseCards';
-import SectionHeading from '@/components/marketing/sections/SectionHeading';
-import HeroV2 from '@/components/sections/HeroV2';
-import ProofStrip from '@/components/sections/ProofStrip';
-import Workflow from '@/components/sections/Workflow';
-import PageShell from '@/components/shared/layout/PageShell';
-import AnimatedSection from '@/components/shared/motion/AnimatedSection';
-import StaggerGrid from '@/components/shared/motion/StaggerGrid';
+import Hero from '@/components/home/Hero';
+import FeaturesV2 from '@/components/home/FeaturesV2';
+import SuccessStats from '@/components/home/SuccessStats';
+import WhyUs from '@/components/home/WhyUs';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { AppLocale, withLocalePath } from '@/utils/locale';
 
@@ -36,135 +32,64 @@ export const metadata: Metadata = {
   },
 };
 
-const pillars = [
-  {
-    title: 'Booking',
-    description: 'Public booking pages, reminders, and structured intake forms for service operations.',
-    href: '/booking',
-    cta: 'Explore booking',
-  },
-  {
-    title: 'Scheduling',
-    description: 'Shift planning, availability, conflict controls, and manager-ready calendar views.',
-    href: '/workforce',
-    cta: 'Explore scheduling',
-  },
-  {
-    title: 'Time tracking',
-    description: 'Track hours and attendance with export-ready records for payroll and audits.',
-    href: '/features',
-    cta: 'Explore time tracking',
-  },
-  {
-    title: 'Payroll workflows',
-    description: 'US/Canada payroll workflows with exports, audit trails, and employer tax visibility.',
-    href: '/payroll',
-    cta: 'Explore payroll',
-  },
-  {
-    title: 'Websites & commerce',
-    description: 'Launch branded websites with service pages, booking CTAs, and payment-ready flows.',
-    href: '/website-builder',
-    cta: 'Explore websites',
-  },
-];
-
 export default async function Homepage() {
   const locale = await getLocale();
 
   return (
-    <PageShell>
-      <HeroV2 locale={locale} />
-      <ProofStrip />
+    <>
+      <Hero />
+      <SuccessStats />
+      <FeaturesV2 />
+      <WhyUs />
 
-      <AnimatedSection>
-        <section>
-          <SectionHeading
-            eyebrow="Product pillars"
-            title="One system across your core operational workflows"
-            description="Each pillar is strong on its own and synchronized when you need full operational visibility."
-          />
-          <StaggerGrid className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {pillars.map((item) => (
-              <div key={item.title} data-stagger-item>
-                <PillarCard {...item} href={withLocalePath(item.href, locale)} />
-              </div>
-            ))}
-          </StaggerGrid>
-        </section>
-      </AnimatedSection>
-
-      <Workflow />
-
-      <AnimatedSection>
-        <section className="grid gap-6 lg:grid-cols-2">
-          <div className="premium-card rounded-[20px] p-6 dark:border-stroke-7 dark:bg-background-8">
-            <SectionHeading
-              eyebrow="Compare"
-              title="Evaluate Schedulaa side-by-side"
-              description="Use direct comparison pages to assess operational fit, migration effort, and long-term scalability."
-              className="max-w-none"
-            />
-            <div className="mt-5 grid gap-3">
-              <MiniLinkCard
-                title="Schedulaa vs Vagaro"
-                description="Compare booking control, scheduling depth, and workflow flexibility."
-                href={withLocalePath('/compare/vagaro', locale)}
-              />
-              <MiniLinkCard
-                title="Schedulaa vs Square Appointments"
-                description="See differences in staffing workflows, reporting, and growth readiness."
-                href={withLocalePath('/compare/square-appointments', locale)}
-              />
-              <MiniLinkCard
-                title="Schedulaa vs QuickBooks Payroll"
-                description="Understand where operations orchestration extends beyond payroll software."
-                href={withLocalePath('/compare/quickbooks-payroll', locale)}
-              />
+      <section className="bg-background-2 dark:bg-background-5 py-20 lg:py-[110px]">
+        <div className="main-container grid gap-6 lg:grid-cols-2">
+          <div className="dark:bg-background-8 rounded-[20px] bg-white p-6 md:p-8">
+            <span className="badge badge-green-v2">Compare</span>
+            <h3 className="mt-5">Evaluate Schedulaa side-by-side</h3>
+            <p className="mt-2">
+              Compare booking, scheduling, payroll workflows, and operating visibility before migration.
+            </p>
+            <div className="mt-6 grid gap-3">
+              <Link href={withLocalePath('/compare/vagaro', locale)} className="footer-link-v2 w-fit">
+                Schedulaa vs Vagaro
+              </Link>
+              <Link href={withLocalePath('/compare/square-appointments', locale)} className="footer-link-v2 w-fit">
+                Schedulaa vs Square Appointments
+              </Link>
+              <Link href={withLocalePath('/compare/quickbooks-payroll', locale)} className="footer-link-v2 w-fit">
+                Schedulaa vs QuickBooks Payroll
+              </Link>
             </div>
-            <Link href={withLocalePath('/compare', locale)} className="premium-link mt-5 inline-flex text-tagline-2">
+            <Link href={withLocalePath('/compare', locale)} className="btn btn-secondary btn-md mt-7 inline-block">
               View compare hub
             </Link>
           </div>
 
-          <div className="premium-card rounded-[20px] p-6 dark:border-stroke-7 dark:bg-background-8">
-            <SectionHeading
-              eyebrow="Industries"
-              title="Industry landing pages for service-specific workflows"
-              description="Explore guides aligned with booking-heavy service models."
-              className="max-w-none"
-            />
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              <MiniLinkCard title="Spa booking" description="Rooms, therapist schedules, and recurring treatment plans." href={withLocalePath('/booking/spa', locale)} />
-              <MiniLinkCard title="Salon booking" description="Staff, chair capacity, and service-duration coordination." href={withLocalePath('/booking/salon', locale)} />
-              <MiniLinkCard title="Doctor booking" description="Clinic workflows, intake, and calendar reliability." href={withLocalePath('/booking/doctor', locale)} />
-              <MiniLinkCard title="Tutor booking" description="Session windows, instructor capacity, and student flows." href={withLocalePath('/booking/tutor', locale)} />
+          <div className="dark:bg-background-8 rounded-[20px] bg-white p-6 md:p-8">
+            <span className="badge badge-green-v2">Industry pages</span>
+            <h3 className="mt-5">Explore booking use-cases</h3>
+            <p className="mt-2">Choose the workflow guide that matches your service model.</p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <Link href={withLocalePath('/booking/spa', locale)} className="footer-link-v2 w-fit">
+                Spa booking
+              </Link>
+              <Link href={withLocalePath('/booking/salon', locale)} className="footer-link-v2 w-fit">
+                Salon booking
+              </Link>
+              <Link href={withLocalePath('/booking/doctor', locale)} className="footer-link-v2 w-fit">
+                Doctor booking
+              </Link>
+              <Link href={withLocalePath('/booking/tutor', locale)} className="footer-link-v2 w-fit">
+                Tutor booking
+              </Link>
             </div>
-            <Link href={withLocalePath('/booking', locale)} className="premium-link mt-5 inline-flex text-tagline-2">
+            <Link href={withLocalePath('/booking', locale)} className="btn btn-secondary btn-md mt-7 inline-block">
               View booking hub
             </Link>
           </div>
-        </section>
-      </AnimatedSection>
-
-      <AnimatedSection>
-        <section className="premium-card rounded-[24px] p-8 dark:border-stroke-7 dark:bg-background-8 md:p-10">
-          <SectionHeading
-            eyebrow="Next step"
-            title="Plan your rollout with one integrated operations platform"
-            description="Get a practical rollout map for your current stack, staffing model, and compliance requirements."
-            className="max-w-none"
-          />
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link href={withLocalePath('/demo', locale)} className="btn btn-primary hover:btn-secondary dark:hover:btn-accent">
-              Schedule a demo
-            </Link>
-            <Link href={withLocalePath('/features', locale)} className="btn btn-primary-v2 dark:btn-transparent">
-              Explore features
-            </Link>
-          </div>
-        </section>
-      </AnimatedSection>
-    </PageShell>
+        </div>
+      </section>
+    </>
   );
 }
