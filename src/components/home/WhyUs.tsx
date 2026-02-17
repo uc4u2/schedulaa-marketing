@@ -1,5 +1,5 @@
 import { cn } from '@/utils/cn';
-import holdMobile from '@public/images/ns-img-206.png';
+import holdMobile from '@public/images/marketing/whyus-panel.png';
 import gradient11 from '@public/images/ns-img-503.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
