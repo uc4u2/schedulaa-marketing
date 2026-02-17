@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import posts from '@/legacy-content/blog/posts';
-import { defaultMetadata } from '@/utils/generateMetaData';
+import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 const CATEGORY_COPY: Record<string, { title: string; subtitle: string }> = {
@@ -18,11 +18,11 @@ const CATEGORY_COPY: Record<string, { title: string; subtitle: string }> = {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const copy = CATEGORY_COPY[slug] || CATEGORY_COPY.automation;
-  return {
-    ...defaultMetadata,
-    title: `${copy.title} | Schedulaa Blog`,
-    description: copy.subtitle,
-  };
+  return buildPageMetadata(
+    `${copy.title} | Schedulaa Blog`,
+    copy.subtitle,
+    `https://www.schedulaa.com/blog/category/${slug}`,
+  );
 }
 
 export default async function BlogCategoryPage({ params }: { params: Promise<{ slug: string }> }) {

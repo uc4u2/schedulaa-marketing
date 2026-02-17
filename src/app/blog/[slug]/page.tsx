@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import posts from '@/legacy-content/blog/posts';
-import { defaultMetadata } from '@/utils/generateMetaData';
+import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -11,11 +11,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = (posts as any[]).find((item) => item.slug === slug);
-  return {
-    ...defaultMetadata,
-    title: post ? `${post.title} | Schedulaa` : 'Blog Details | Schedulaa',
-    description: post?.description,
-  };
+  const title = post ? `${post.title} | Schedulaa` : 'Blog Details | Schedulaa';
+  const description = post?.description || 'Read the latest Schedulaa article.';
+  const image = post?.image?.src || post?.heroImage || undefined;
+  return buildPageMetadata(title, description, `https://www.schedulaa.com/blog/${slug}`, image);
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -1,17 +1,15 @@
 import Link from 'next/link';
 import { getCompareEntry } from '@/legacy-content/compare/config';
-import { defaultMetadata } from '@/utils/generateMetaData';
+import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 export async function generateMetadata({ params }: { params: Promise<{ vendor: string }> }): Promise<Metadata> {
   const { vendor } = await params;
   const entry = getCompareEntry(vendor, 'compare');
-  return {
-    ...defaultMetadata,
-    title: entry?.metaTitle || 'Comparison | Schedulaa',
-    description: entry?.metaDescription,
-  };
+  const title = entry?.metaTitle || 'Comparison | Schedulaa';
+  const description = entry?.metaDescription || 'Compare Schedulaa with alternative platforms for service teams.';
+  return buildPageMetadata(title, description, `https://www.schedulaa.com/compare/${vendor}`);
 }
 
 export default async function CompareVendorPage({ params }: { params: Promise<{ vendor: string }> }) {

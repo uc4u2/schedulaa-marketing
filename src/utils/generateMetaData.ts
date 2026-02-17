@@ -15,42 +15,34 @@ const defaultMetadata: Metadata = {
     shortcut: '/favicon.ico',
     apple: '/favicon.ico',
   },
-  openGraph: {
-    type: 'website',
-    siteName: 'Schedulaa',
-    url: DEFAULT_URL,
-    title: DEFAULT_TITLE,
-    description: DEFAULT_DESCRIPTION,
-    images: [{ url: DEFAULT_IMAGE_URL, width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: DEFAULT_TITLE,
-    description: DEFAULT_DESCRIPTION,
-    images: [DEFAULT_IMAGE_URL],
-  },
 };
 
-const generateMetadata = (title?: string, description?: string, canonicaUrl?: string, imageUrl?: string): Metadata => {
+const generateMetadata = (title?: string, description?: string, canonicalUrl?: string, imageUrl?: string): Metadata => {
+  const resolvedTitle = title ?? DEFAULT_TITLE;
+  const resolvedDescription = description ?? DEFAULT_DESCRIPTION;
+  const resolvedCanonical = canonicalUrl ?? DEFAULT_URL;
+  const resolvedImage = imageUrl ?? DEFAULT_IMAGE_URL;
+
   return {
     ...defaultMetadata,
-    title: title ?? defaultMetadata.title,
-    description: description ?? defaultMetadata.description,
+    title: resolvedTitle,
+    description: resolvedDescription,
     alternates: {
-      canonical: canonicaUrl,
+      canonical: resolvedCanonical,
     },
     openGraph: {
-      ...defaultMetadata.openGraph,
-      title: title ?? defaultMetadata.openGraph?.title,
-      description: description ?? defaultMetadata.openGraph?.description,
-      url: canonicaUrl ?? defaultMetadata.openGraph?.url,
-      images: imageUrl ? [{ url: imageUrl, width: 1200, height: 630 }] : defaultMetadata.openGraph?.images,
+      type: 'website',
+      siteName: 'Schedulaa',
+      title: resolvedTitle,
+      description: resolvedDescription,
+      url: resolvedCanonical,
+      images: [{ url: resolvedImage, width: 1200, height: 630 }],
     },
     twitter: {
-      ...defaultMetadata.twitter,
-      title: title ?? defaultMetadata.twitter?.title,
-      description: description ?? defaultMetadata.twitter?.description,
-      images: imageUrl ? [imageUrl] : defaultMetadata.twitter?.images,
+      card: 'summary_large_image',
+      title: resolvedTitle,
+      description: resolvedDescription,
+      images: [resolvedImage],
     },
   };
 };

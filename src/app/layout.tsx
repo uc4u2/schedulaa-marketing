@@ -22,7 +22,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const languagePath = canonicalPath || '';
 
   return {
-    ...defaultMetadata,
+    title: defaultMetadata.title,
+    description: defaultMetadata.description,
+    icons: defaultMetadata.icons,
     metadataBase: new URL(SITE_URL),
     alternates: {
       canonical,

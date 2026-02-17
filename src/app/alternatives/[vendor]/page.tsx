@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getCompareEntry } from '@/legacy-content/compare/config';
-import { defaultMetadata } from '@/utils/generateMetaData';
+import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -8,13 +8,11 @@ export async function generateMetadata({ params }: { params: Promise<{ vendor: s
   const { vendor } = await params;
   const entry = getCompareEntry(vendor, 'alternatives');
   const competitor = entry?.competitor || vendor;
-  return {
-    ...defaultMetadata,
-    title: `Best ${competitor} alternatives for service teams | Schedulaa`,
-    description:
-      entry?.metaDescription ||
-      `Looking for ${competitor} alternatives? Compare Schedulaa with ${competitor} for service operations and payroll workflows.`,
-  };
+  const title = `Best ${competitor} alternatives for service teams | Schedulaa`;
+  const description =
+    entry?.metaDescription ||
+    `Looking for ${competitor} alternatives? Compare Schedulaa with ${competitor} for service operations and payroll workflows.`;
+  return buildPageMetadata(title, description, `https://www.schedulaa.com/alternatives/${vendor}`);
 }
 
 export default async function AlternativesVendorPage({ params }: { params: Promise<{ vendor: string }> }) {
