@@ -134,37 +134,53 @@ export default async function FeaturesPage() {
     <main className="bg-background-3 dark:bg-background-7 overflow-x-hidden">
       <section className="overflow-hidden pt-[150px] pb-20 md:pt-[190px] lg:pt-[220px] lg:pb-[120px]">
         <div className="main-container">
-          <div className="relative overflow-hidden rounded-[28px] bg-secondary p-8 text-white md:p-12 dark:bg-background-8">
-            <div className="pointer-events-none absolute -top-44 -left-20 h-96 w-96 rounded-full bg-primary-500/25 blur-3xl" />
-            <div className="pointer-events-none absolute -right-24 -bottom-44 h-[28rem] w-[28rem] rounded-full bg-ns-green/20 blur-3xl" />
-            <div className="relative grid gap-8 lg:grid-cols-[1.3fr_0.9fr] lg:items-end">
+          <div className="relative overflow-hidden rounded-[30px] border border-accent/15 bg-background-8 px-7 py-10 text-white md:px-12 md:py-14">
+            <div className="pointer-events-none absolute -top-44 -left-24 h-[28rem] w-[28rem] rounded-full bg-primary-500/30 blur-3xl" />
+            <div className="pointer-events-none absolute -right-28 -bottom-44 h-[30rem] w-[30rem] rounded-full bg-ns-green/20 blur-3xl" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(255,255,255,0.12),transparent_48%),radial-gradient(circle_at_90%_90%,rgba(133,255,122,0.10),transparent_44%)]" />
+
+            <div className="relative grid gap-9 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
               <div>
-                <span className="badge badge-cyan">Platform Highlights</span>
-                <h1 className="mt-6 max-w-[860px] text-white">
+                <span className="badge badge-cyan">Platform highlights</span>
+                <h1 className="mt-6 max-w-[780px] text-white">
                   Features built for
                   <br />
                   enterprise service teams.
                 </h1>
-                <p className="mt-4 max-w-[860px] text-accent/70">
+                <p className="mt-4 max-w-[720px] text-accent/75">
                   Schedulaa brings scheduling, payroll, websites, and eCommerce into one experience so your staff and clients stay connected.
                 </p>
 
-                <div className="mt-8 rounded-2xl border border-accent/20 bg-accent/5 p-5">
+                <div className="mt-7 rounded-2xl border border-accent/20 bg-accent/8 p-5 backdrop-blur">
                   <p className="text-tagline-2 font-medium text-ns-green">Schedulaa OS</p>
                   <p className="text-heading-6 mt-1 text-white">Unified command center</p>
+                  <p className="mt-2 text-tagline-2 text-accent/65">
+                    Booking, workforce scheduling, payroll workflows, and customer touchpoints in one operational layer.
+                  </p>
                 </div>
 
+                <ul className="mt-7 grid gap-2 text-tagline-2 text-accent/75 sm:grid-cols-2">
+                  <li className="rounded-xl border border-accent/15 bg-accent/5 px-3 py-2">Snapshot-first audit trail</li>
+                  <li className="rounded-xl border border-accent/15 bg-accent/5 px-3 py-2">US + Canada payroll workflows</li>
+                  <li className="rounded-xl border border-accent/15 bg-accent/5 px-3 py-2">Department-aware scheduling</li>
+                  <li className="rounded-xl border border-accent/15 bg-accent/5 px-3 py-2">Website + commerce integrated</li>
+                </ul>
+
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a href={`${APP_ORIGIN}/register`} className="btn btn-primary hover:btn-white dark:hover:btn-accent">
-                    Start Free Trial
+                  <a href={`${APP_ORIGIN}/register`} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
+                    Start free trial
                   </a>
-                  <Link href={withLocalePath('/pricing', locale)} className="btn btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
-                    Compare Plans
+                  <Link
+                    href={withLocalePath('/pricing', locale)}
+                    className="btn btn-md btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent"
+                  >
+                    Compare plans
                   </Link>
                 </div>
               </div>
-              <div className="rounded-2xl border border-accent/20 bg-accent/10 p-5">
-                <p className="text-tagline-2 text-accent/80">Platform signals</p>
+
+              <div className="rounded-[22px] border border-accent/20 bg-background-7/70 p-5 backdrop-blur-xl">
+                <p className="text-tagline-2 text-accent/85">Platform signals</p>
                 <div className="mt-3 grid grid-cols-2 gap-3">
                   <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
                     <p className="text-tagline-3 text-accent/70">Modules</p>
@@ -179,9 +195,15 @@ export default async function FeaturesPage() {
                     <p className="text-heading-6 mt-1 text-white">Snapshot-first</p>
                   </div>
                   <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
-                    <p className="text-tagline-3 text-accent/70">Ops Fit</p>
-                    <p className="text-heading-6 mt-1 text-white">1-80 Staff</p>
+                    <p className="text-tagline-3 text-accent/70">Ops fit</p>
+                    <p className="text-heading-6 mt-1 text-white">1-80 staff</p>
                   </div>
+                </div>
+                <div className="mt-4 rounded-xl border border-accent/20 bg-accent/5 p-3">
+                  <p className="text-tagline-3 text-accent/70">Coverage</p>
+                  <p className="text-tagline-2 mt-1 text-accent/85">
+                    Scheduling + Payroll + Websites + Commerce + Reporting
+                  </p>
                 </div>
               </div>
             </div>
