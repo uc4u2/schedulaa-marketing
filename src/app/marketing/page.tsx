@@ -86,6 +86,7 @@ export default async function MarketingPage() {
   const page = marketingPages.hub;
   const hero = page.hero;
   const analyticsList = page.lists[0];
+  const sectionVisuals = [analytics2, analytics3, hero3];
 
   return (
     <main className="bg-background-3 dark:bg-background-7 overflow-x-hidden">
@@ -121,22 +122,32 @@ export default async function MarketingPage() {
         </div>
       </section>
 
-      <section className="analytics pt-[70px] pb-[100px]">
-        <div className="mx-auto flex w-[95%] max-w-[950px] flex-col space-y-16">
-          {page.sections.map((section: any) => (
-            <div key={section.title} className="space-y-5">
+      <section className="analytics relative overflow-hidden pt-[70px] pb-[100px]">
+        <div className="pointer-events-none absolute inset-0 opacity-55">
+          <div className="absolute -top-14 left-1/2 h-[320px] w-[320px] -translate-x-1/2 rounded-full bg-primary-500/12 blur-[120px]" />
+          <div className="absolute right-0 bottom-10 h-[420px] w-[420px] rounded-full bg-primary-300/10 blur-[140px]" />
+        </div>
+        <div className="mx-auto flex w-[95%] max-w-[1050px] flex-col space-y-16">
+          {page.sections.map((section: any, idx: number) => (
+            <div
+              key={section.title}
+              className="grid gap-5 rounded-[26px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-7 shadow-box md:grid-cols-12 md:p-8"
+            >
+              <div className="space-y-5 md:col-span-8">
               <div className="space-y-2">
                 <p className="premium-eyebrow">{section.overline}</p>
-                <h3 className="text-heading-4">{section.title}</h3>
-                <p className="text-secondary/70 dark:text-accent/70">{section.body}</p>
+                <h3 className="text-heading-4 text-white">{section.title}</h3>
+                <p className="text-accent/70">{section.body}</p>
               </div>
               {section.points?.length ? (
-                <ul className="grid gap-2 md:grid-cols-2">
+                <ul className="grid list-none gap-3 p-0 md:grid-cols-2">
                   {section.points.map((point: string) => (
-                    <li key={point}>
-                      <span className="rounded-xl border border-stroke-2 bg-white px-4 py-3 text-tagline-2 text-secondary/70 dark:border-stroke-7 dark:bg-background-8 dark:text-accent/70">
-                        • {point}
-                      </span>
+                    <li
+                      key={point}
+                      className="flex items-start gap-2 rounded-xl border border-stroke-7 bg-background-8 px-4 py-3 text-tagline-2 text-accent/80"
+                    >
+                      <span className="mt-[7px] size-[6px] shrink-0 rounded-full bg-primary-500" />
+                      <span>{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -149,30 +160,44 @@ export default async function MarketingPage() {
                 </div>
               ) : null}
             </div>
+              <div className="md:col-span-4">
+                <div className="h-full rounded-[20px] border border-stroke-7 bg-background-8 p-3">
+                  <Image
+                    src={sectionVisuals[idx % sectionVisuals.length]}
+                    alt={`${section.title} preview`}
+                    className="h-full min-h-[180px] w-full rounded-[14px] object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           ))}
 
-          <div className="space-y-6">
+          <div className="rounded-[26px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-7 shadow-box md:p-8">
+            <div className="space-y-6">
             <p className="premium-eyebrow">Execution flow</p>
-            <h3 className="text-heading-4">From campaign launch to measurable retention outcomes</h3>
-            <p className="text-secondary/70 dark:text-accent/70">
+            <h3 className="text-heading-4 text-white">From campaign launch to measurable retention outcomes</h3>
+            <p className="text-accent/70">
               The same marketing data powering campaigns also drives lifecycle segmentation, client intelligence, and analytics reporting.
             </p>
             <WorkflowExperience />
           </div>
+          </div>
 
-          <div className="space-y-6">
+          <div className="rounded-[26px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-7 shadow-box md:p-8">
+            <div className="space-y-6">
             <p className="premium-eyebrow">{analyticsList.overline}</p>
-            <h3 className="text-heading-4">{analyticsList.title}</h3>
-            <p className="text-secondary/70 dark:text-accent/70">{analyticsList.intro}</p>
+            <h3 className="text-heading-4 text-white">{analyticsList.title}</h3>
+            <p className="text-accent/70">{analyticsList.intro}</p>
             <div className="grid gap-4 md:grid-cols-2">
               {analyticsList.items.map((item: any) => (
-                <article key={item.title} className="rounded-[20px] border border-stroke-2 bg-white p-5 shadow-box dark:border-stroke-7 dark:bg-background-8">
+                <article key={item.title} className="rounded-[20px] border border-stroke-7 bg-linear-[145deg,#191d2a_0%,#1f273b_100%] p-5 shadow-box">
                   <p className="text-tagline-3 uppercase tracking-[0.14em] text-primary-500">{item.label}</p>
-                  <h4 className="mt-2 text-heading-6">{item.title}</h4>
-                  <p className="mt-2 text-tagline-2 text-secondary/70 dark:text-accent/70">{item.body}</p>
+                  <h4 className="mt-2 text-heading-6 text-white">{item.title}</h4>
+                  <p className="mt-2 text-tagline-2 text-accent/70">{item.body}</p>
                 </article>
               ))}
             </div>
+          </div>
           </div>
 
           <div className="grid-column-12 grid gap-y-[30px]">
@@ -193,10 +218,10 @@ export default async function MarketingPage() {
 
           <div className="grid gap-5 md:grid-cols-2">
             {page.highlights.map((highlight: any) => (
-              <article key={highlight.title} className="rounded-[20px] border border-stroke-2 bg-white p-6 shadow-box dark:border-stroke-7 dark:bg-background-8">
+              <article key={highlight.title} className="rounded-[20px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-6 shadow-box">
                 <p className="premium-eyebrow">{highlight.overline}</p>
-                <h4 className="mt-2 text-heading-5">{highlight.title}</h4>
-                <p className="mt-3 text-secondary/70 dark:text-accent/70">{highlight.content}</p>
+                <h4 className="mt-2 text-heading-5 text-white">{highlight.title}</h4>
+                <p className="mt-3 text-accent/70">{highlight.content}</p>
                 {highlight.actions?.length ? (
                   <div className="mt-5 flex flex-wrap gap-3">
                     {highlight.actions.map((action: any) => (
@@ -211,17 +236,17 @@ export default async function MarketingPage() {
       </section>
 
       <section className="pt-[20px] pb-[120px]">
-        <div className="mx-auto flex w-[95%] max-w-[950px] flex-col space-y-10">
-          <div className="space-y-3">
+        <div className="mx-auto flex w-[95%] max-w-[1050px] flex-col space-y-10">
+          <div className="space-y-3 rounded-[26px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-7 md:p-8">
             <p className="premium-eyebrow">{page.faqHeading}</p>
-            <h2>{page.faqTitle}</h2>
-            <p className="text-secondary/70 dark:text-accent/70">{page.faqIntro}</p>
+            <h2 className="text-white">{page.faqTitle}</h2>
+            <p className="text-accent/70">{page.faqIntro}</p>
           </div>
-          <div className="space-y-3">
+          <div className="grid gap-3 md:grid-cols-2">
             {page.faq.map((item: any) => (
-              <article key={item.question} className="rounded-xl border border-stroke-2 bg-white p-4 dark:border-stroke-7 dark:bg-background-8">
-                <h3 className="text-heading-6">{item.question}</h3>
-                <p className="mt-2 text-tagline-2 text-secondary/70 dark:text-accent/70">{item.answer}</p>
+              <article key={item.question} className="rounded-xl border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-4">
+                <h3 className="text-heading-6 text-white">{item.question}</h3>
+                <p className="mt-2 text-tagline-2 text-accent/70">{item.answer}</p>
               </article>
             ))}
           </div>
@@ -249,9 +274,9 @@ export default async function MarketingPage() {
             </a>
           </div>
 
-          <div className="rounded-[20px] border border-stroke-2 bg-white p-6 shadow-box dark:border-stroke-7 dark:bg-background-8 md:p-8">
-            <h3 className="text-heading-5">Marketing subpages</h3>
-            <p className="mt-3 text-secondary/70 dark:text-accent/70">
+          <div className="rounded-[20px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-6 shadow-box md:p-8">
+            <h3 className="text-heading-5 text-white">Marketing subpages</h3>
+            <p className="mt-3 text-accent/70">
               Deep-dive pages for email, analytics, and client intelligence workflows.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
