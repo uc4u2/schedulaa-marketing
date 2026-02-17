@@ -2,12 +2,13 @@ import Link from 'next/link';
 import { headers } from 'next/headers';
 import { Metadata } from 'next';
 
-import WorkflowExperience from '@/components/marketing/home/WorkflowExperience';
-import { MetricCard, MiniLinkCard, PillarCard } from '@/components/marketing/sections/EnterpriseCards';
+import { MiniLinkCard, PillarCard } from '@/components/marketing/sections/EnterpriseCards';
 import SectionHeading from '@/components/marketing/sections/SectionHeading';
+import HeroV2 from '@/components/sections/HeroV2';
+import ProofStrip from '@/components/sections/ProofStrip';
+import Workflow from '@/components/sections/Workflow';
 import PageShell from '@/components/shared/layout/PageShell';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
-import ParallaxAccent from '@/components/shared/motion/ParallaxAccent';
 import StaggerGrid from '@/components/shared/motion/StaggerGrid';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { AppLocale, withLocalePath } from '@/utils/locale';
@@ -34,12 +35,6 @@ export const metadata: Metadata = {
       'Schedulaa gives service teams one operating system for booking, workforce scheduling, payroll-ready exports, and website commerce.',
   },
 };
-
-const metrics = [
-  { label: 'Team fit', value: '1-80 employees', detail: 'Built for local operators, multi-location clinics, and modern service teams.' },
-  { label: 'Operations scope', value: '5 pillars', detail: 'Booking, scheduling, time, payroll-ready outputs, and websites in one stack.' },
-  { label: 'Launch velocity', value: '< 2 weeks', detail: 'Migrate core workflows quickly with guided rollout support.' },
-];
 
 const pillars = [
   {
@@ -79,70 +74,8 @@ export default async function Homepage() {
 
   return (
     <PageShell>
-      <AnimatedSection>
-        <section className="relative overflow-hidden rounded-[24px] border border-stroke-2 bg-[linear-gradient(120deg,#0f172a_0%,#111827_45%,#172554_100%)] p-8 shadow-2 dark:border-stroke-7 md:p-12">
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.12]"
-            style={{
-              backgroundImage:
-                'radial-gradient(circle at 10% 10%, rgba(255,255,255,0.9) 0.5px, transparent 0.5px), radial-gradient(circle at 80% 30%, rgba(255,255,255,0.5) 0.5px, transparent 0.5px)',
-              backgroundSize: '28px 28px, 36px 36px',
-            }}
-            aria-hidden="true"
-          />
-          <ParallaxAccent className="-top-20 -right-12 h-72 w-72 opacity-80" />
-          <ParallaxAccent className="-bottom-16 left-10 h-56 w-56 opacity-60" />
-          <div className="relative z-10 grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
-            <div>
-              <p className="badge badge-yellow-v2">Enterprise operations platform</p>
-              <h1 className="mt-5 max-w-[760px] text-white">Run booking, shifts, payroll-ready exports, and website ops from one command center.</h1>
-              <p className="mt-4 max-w-[700px] text-tagline-1 text-white/80">
-                Schedulaa removes fragmented tooling for service teams and gives managers one source of truth across client
-                bookings, workforce operations, and payroll preparation.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link href={withLocalePath('/pricing', locale)} className="btn btn-primary hover:btn-secondary dark:hover:btn-accent">
-                  View pricing
-                </Link>
-                <Link href={withLocalePath('/demo', locale)} className="btn btn-primary-v2 dark:btn-transparent">
-                  Book demo
-                </Link>
-              </div>
-            </div>
-            <div className="rounded-[20px] border border-white/20 bg-white/8 p-5 backdrop-blur-sm">
-              <p className="text-tagline-3 uppercase tracking-[0.16em] text-primary-300">How it works</p>
-              <ol className="mt-4 space-y-4">
-                {[
-                  'Booking captures demand and customer context.',
-                  'Scheduling aligns people, shifts, and resources.',
-                  'Payroll exports stay auditable and ready for filing workflows.',
-                ].map((step) => (
-                  <li key={step} className="rounded-xl border border-white/20 bg-white/10 p-4 text-tagline-1 text-white/90">
-                    {step}
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
-
-      <AnimatedSection>
-        <section>
-          <SectionHeading
-            eyebrow="Proof"
-            title="Built for service businesses with 1 to 80 employees"
-            description="Teams use Schedulaa to coordinate daily execution without switching between disconnected scheduling, payroll, and website tools."
-          />
-          <StaggerGrid className="mt-6 grid gap-4 md:grid-cols-3">
-            {metrics.map((item) => (
-              <div key={item.label} data-stagger-item>
-                <MetricCard {...item} />
-              </div>
-            ))}
-          </StaggerGrid>
-        </section>
-      </AnimatedSection>
+      <HeroV2 locale={locale} />
+      <ProofStrip />
 
       <AnimatedSection>
         <section>
@@ -161,18 +94,7 @@ export default async function Homepage() {
         </section>
       </AnimatedSection>
 
-      <AnimatedSection>
-        <section>
-          <SectionHeading
-            eyebrow="Workflow"
-            title="Connect booking, scheduling, and payroll readiness in one operating loop"
-            description="This workflow view shows how teams move from demand capture to shift execution and final payroll outputs without tool handoffs."
-          />
-          <div className="mt-6">
-            <WorkflowExperience />
-          </div>
-        </section>
-      </AnimatedSection>
+      <Workflow />
 
       <AnimatedSection>
         <section className="grid gap-6 lg:grid-cols-2">
