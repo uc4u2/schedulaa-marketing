@@ -1,12 +1,16 @@
 import IndustryBookingLanding from '@/components/booking/IndustryBookingLanding';
-import { defaultMetadata } from '@/utils/generateMetaData';
+import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  ...defaultMetadata,
-  title: 'Spa Booking Software | Schedulaa',
+  ...buildPageMetadata(
+    'Spa Booking Software for Therapists & Rooms | Schedulaa',
+    'Coordinate spa appointments, treatment rooms, therapist schedules, packages, reminders, and deposits in one operations platform—built for multi-staff spa teams.',
+    'https://www.schedulaa.com/booking/spa',
+  ),
+  title: 'Spa Booking Software for Therapists & Rooms | Schedulaa',
   description:
-    'Coordinate spa appointments, treatment rooms, therapist schedules, reminders, and deposits in a single operations platform.',
+    'Coordinate spa appointments, treatment rooms, therapist schedules, packages, reminders, and deposits in one operations platform—built for multi-staff spa teams.',
 };
 
 export default function SpaBookingPage() {
@@ -14,67 +18,147 @@ export default function SpaBookingPage() {
     <IndustryBookingLanding
       overline="Spa booking"
       title="Spa booking software for therapists, rooms, and recurring treatment plans"
-      intro="Spa teams need more than a generic calendar. They need room-level coordination, therapist utilization, package tracking, and reliable reminders. This page outlines how Schedulaa supports spa operations from intake to checkout."
+      intro="Spa teams do not run on a simple calendar. You are balancing therapist availability, treatment rooms, equipment, service durations, packages, memberships, and last-minute changes while still protecting revenue and guest experience. Schedulaa is spa booking software designed for service businesses that need more than pick-a-time-slot scheduling."
       sections={[
         {
-          heading: 'Coordinate therapist schedules with room availability',
+          heading: 'Why spa booking breaks as you grow',
           paragraphs: [
-            'Spa workflows are constrained by both people and space. A booking can fail even when a therapist is free if the treatment room or equipment is not. Schedulaa helps teams manage appointment flow with resource-aware planning so front desk staff avoid accidental overlaps.',
-            'This matters most during peak hours, weekends, and seasonal promotions. Without room-aware scheduling, teams overcommit and then manually reschedule clients, which hurts trust and revenue. With a unified booking view, planners can see capacity before confirming an appointment.',
-            'The result is smoother service delivery: fewer surprises for guests, less stress for therapists, and a predictable daily schedule for managers.',
+            'When you are small, spreadsheets and generic schedulers can feel good enough. As soon as you add more therapists, room types, service tiers, and promotions, operations fragment quickly. A therapist can be free while the room is not. A room can be free while equipment is booked. Peak windows trigger double-booking risk and front-desk reschedule stress.',
+            'Package usage is often tracked manually, cancellation rules are applied inconsistently, and reporting is completed after the fact. In spa operations, the cost of these workflow gaps is high because service blocks are long, staff are specialized, and peak inventory is limited. A missed premium slot is not easily recovered.',
+            'Schedulaa addresses this by keeping booking, staffing context, and operational reporting connected in one workflow. Teams spend less time fixing conflicts and more time delivering predictable service quality.',
           ],
         },
         {
-          heading: 'Run membership and package-friendly booking flows',
+          heading: 'What Schedulaa supports for spa operations',
           paragraphs: [
-            'Spa clients often buy treatment series or recurring wellness plans. If package logic lives outside booking, teams struggle to verify what was consumed, what remains, and which services were upgraded. Schedulaa keeps booking history tied to service records, making package usage transparent.',
-            'That transparency improves both operations and client communication. Teams can answer questions quickly, avoid billing confusion, and propose next treatments based on real visit history instead of guesswork. Managers gain cleaner reporting on package performance and repeat behavior.',
-            'The same dataset can feed retention campaigns. If a guest has not returned within an expected cycle, marketing outreach can be targeted using actual appointment intervals.',
+            'Schedulaa brings spa scheduling, booking workflows, and operational visibility into one platform so front desk teams can confirm appointments with confidence and managers can run service days with fewer surprises.',
           ],
         },
         {
-          heading: 'Protect margin with deposits and proactive reminders',
+          heading: '1) Coordinate therapist schedules with room availability',
           paragraphs: [
-            'No-shows are expensive in spa businesses because premium time slots often involve long service durations and specialized staff. Schedulaa supports reminder workflows and deposit-aware booking experiences that reduce late cancellations and improve attendance rates.',
-            'When cancellation rules are clear and consistently enforced, teams spend less time handling exceptions. Staff can focus on guest experience instead of back-office cleanup. This discipline is essential when businesses scale across multiple practitioners and service tiers.',
-            'If teams still need flexibility for VIP clients or special cases, workflows can handle those policies without losing visibility in reporting.',
+            'Spa services are constrained by people and space. A booking is only valid when both therapist and room are available. Schedulaa supports resource-aware planning so teams reduce accidental overlaps, last-minute room swaps, and avoidable guest delays before they happen.',
+            'This is especially important during weekends, holidays, and campaign-driven peaks. Instead of discovering conflicts after confirmation, staff can validate real capacity first. The result is smoother appointment flow and less manual intervention during high-pressure windows.',
+            'Result: fewer front-desk emergencies, improved on-time starts, and more predictable day-to-day operations.',
           ],
         },
         {
-          heading: 'Connect booking outcomes to workforce and payroll decisions',
+          heading: '2) Run package and membership-friendly booking',
           paragraphs: [
-            'Spa profitability depends on how well bookings translate into efficient staffing. Schedulaa links booking records with schedule and hours data, giving managers a clearer picture of demand, utilization, and payout implications. This helps prevent overstaffing on low-demand days and understaffing during promotions.',
-            'As teams grow, this connection also supports cleaner review cycles. Managers can validate attendance, service volume, and incentive assumptions before payroll export. Even if finance is handled externally, your operational data remains structured and auditable.',
-            'Over time, these habits create a stronger operating rhythm: forecast demand better, schedule with confidence, and protect quality standards without exhausting your team.',
+            'Spa clients frequently purchase treatment series, wellness bundles, or recurring plans. When package logic sits outside the booking system, teams struggle to confirm what is included, what remains, and what was upgraded. Schedulaa keeps booking history connected to service records so package usage remains transparent.',
+            'This reduces billing confusion and helps staff answer questions faster without manual lookups. Managers also gain clearer repeat-visit signals and retention patterns because history is organized and consistent.',
+            'Result: cleaner operations, better client trust, and less reconciliation overhead.',
+          ],
+        },
+        {
+          heading: '3) Reduce no-shows with deposits and proactive reminders',
+          paragraphs: [
+            'No-shows are expensive in spa businesses because premium durations and prime slots are difficult to refill. Schedulaa supports booking workflows that help teams reduce missed appointments and protect high-value capacity.',
+            'Teams can enforce consistent cancellation expectations, support deposit-ready booking experiences, and run proactive reminders that lower late-cancel risk.',
+            'Result: better attendance and more predictable revenue from your highest-value service windows.',
+          ],
+        },
+        {
+          heading: '4) Keep booking outcomes connected to staffing and payroll',
+          paragraphs: [
+            'Spa profitability depends on how well bookings translate into efficient staffing. Schedulaa helps managers align service demand with therapist schedules so they can plan with better confidence and less guesswork.',
+            'When operational data is structured, teams can validate attendance and service volume before payroll export and reporting. Even when filings remain external, your workforce and service records are consistent and auditable.',
+            'Result: fewer disputes, better utilization, and stronger operational control across busy weeks.',
+          ],
+        },
+        {
+          heading: 'Who this spa booking software is built for',
+          paragraphs: [
+            'Schedulaa works best for service businesses that need operational control: spas and wellness studios with multiple therapists, clinics offering recurring bundles, and multi-location teams coordinating shifts and approvals.',
+            'If your team has outgrown basic booking tools and spends too much time on manual cleanup, this is the category we are designed for.',
+          ],
+        },
+        {
+          heading: 'Spa booking vs generic scheduling tools',
+          paragraphs: [
+            'Many products can schedule a time slot. Spa operations need more than that. Generic booking tools often break down on room-level constraints, package usage workflows, and staffing/reporting continuity.',
+            'As teams scale, exceptions become the system. Schedulaa is designed to run booking and operations end-to-end so appointment management does not become daily firefighting.',
           ],
         },
       ]}
       faqs={[
         {
-          question: 'Can the system handle room-based constraints?',
+          question: 'Can this handle room-based scheduling constraints?',
           answer:
-            'Yes. Spa pages and scheduling workflows can be managed with resource awareness so room conflicts are reduced before confirmation.',
+            'Yes. Schedulaa supports resource-aware planning so spa teams can reduce room conflicts and avoid accidental overlaps before confirming appointments.',
         },
         {
-          question: 'Is this suitable for treatment packages and memberships?',
+          question: 'Is it suitable for packages and memberships?',
           answer:
-            'Yes. Teams can tie booking history to service/package workflows and use that data for retention and rebooking campaigns.',
+            'Yes. Booking history can be tied to service records so package usage is transparent and staff can answer client questions quickly without manual tracking.',
         },
         {
           question: 'Does it help reduce no-shows?',
           answer:
-            'Yes. Reminder and deposit-ready workflows help reduce missed appointments and protect high-value service blocks.',
+            'Yes. Deposit-ready booking flows and proactive reminders help reduce missed appointments and protect high-value service time blocks.',
         },
         {
-          question: 'Can this support multi-therapist, multi-service spas?',
+          question: 'Can it support multi-therapist, multi-service spas?',
           answer:
-            'Yes. The platform is built to coordinate multiple therapists, services, and calendars while keeping reporting unified.',
+            'Yes. Schedulaa is built for multi-staff scheduling and can support multiple therapists, service tiers, and operational workflows as teams scale.',
+        },
+        {
+          question: 'Do you replace payroll filing providers?',
+          answer:
+            'No. Schedulaa is an operations OS that keeps scheduling and time data structured and auditable so payroll exports and reporting are correct before they happen. Filing can still be handled by your payroll provider.',
         },
       ]}
       compareLinks={[
         { href: '/compare/vagaro', label: 'Schedulaa vs Vagaro' },
+        { href: '/compare/square-appointments', label: 'Schedulaa vs Square Appointments' },
         { href: '/compare/homebase', label: 'Schedulaa vs Homebase' },
       ]}
+      faqJsonLd={{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Can this handle room-based scheduling constraints?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Schedulaa supports resource-aware planning so spa teams can reduce room conflicts and avoid accidental overlaps before confirming appointments.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is it suitable for packages and memberships?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Booking history can be tied to service records so package usage is transparent and staff can answer client questions quickly without manual tracking.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does it help reduce no-shows?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Deposit-ready booking flows and proactive reminders help reduce missed appointments and protect high-value service time blocks.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can it support multi-therapist, multi-service spas?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Schedulaa is built for multi-staff scheduling and can support multiple therapists, service tiers, and operational workflows as teams scale.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Do you replace payroll filing providers?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. Schedulaa is an operations OS that keeps scheduling and time data structured and auditable so payroll exports and reporting are correct before they happen. Filing can still be handled by your payroll provider.',
+            },
+          },
+        ],
+      }}
     />
   );
 }

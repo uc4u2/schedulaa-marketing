@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Script from 'next/script';
 
 type FaqItem = {
   question: string;
@@ -12,6 +13,7 @@ type IndustryBookingLandingProps = {
   sections: Array<{ heading: string; paragraphs: string[] }>;
   faqs: FaqItem[];
   compareLinks: Array<{ href: string; label: string }>;
+  faqJsonLd?: Record<string, unknown>;
 };
 
 export default function IndustryBookingLanding({
@@ -21,10 +23,18 @@ export default function IndustryBookingLanding({
   sections,
   faqs,
   compareLinks,
+  faqJsonLd,
 }: IndustryBookingLandingProps) {
   return (
     <main className="section-padding-x overflow-hidden pb-24 pt-20">
       <div className="mx-auto max-w-4xl">
+        {faqJsonLd ? (
+          <Script
+            id="spa-booking-faq-jsonld"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        ) : null}
         <p className="badge badge-yellow-v2">{overline}</p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-secondary dark:text-white">{title}</h1>
         <p className="mt-5 text-lg text-secondary/75 dark:text-accent/70">{intro}</p>
