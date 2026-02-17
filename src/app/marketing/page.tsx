@@ -31,8 +31,8 @@ type CtaLinkProps = {
 function CtaLink({ href, locale, label, primary = false }: CtaLinkProps) {
   const mapped = mapHref(href, locale);
   const cls = primary
-    ? 'btn btn-primary hover:btn-white dark:hover:btn-accent'
-    : 'btn btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent';
+    ? 'btn btn-primary btn-md hover:btn-white dark:hover:btn-accent'
+    : 'btn btn-white btn-md hover:btn-secondary dark:btn-transparent dark:hover:btn-accent';
 
   if (isExternalLink(mapped)) {
     return (
@@ -78,17 +78,18 @@ export default async function MarketingPage() {
     <main className="bg-background-3 dark:bg-background-7 overflow-x-hidden">
       <section className="overflow-hidden pt-[150px] pb-20 md:pt-[190px] lg:pt-[220px] lg:pb-[120px]">
         <div className="main-container">
-          <div className="relative overflow-hidden rounded-[28px] border border-accent/15 bg-secondary px-7 py-10 text-white md:px-12 md:py-14 dark:bg-background-8">
+          <div className="relative overflow-hidden rounded-[30px] border border-accent/15 bg-secondary px-7 py-10 text-white shadow-3 md:px-12 md:py-14 dark:bg-background-8">
             <div className="pointer-events-none absolute -top-44 -left-24 h-[28rem] w-[28rem] rounded-full bg-primary-500/30 blur-3xl" />
             <div className="pointer-events-none absolute -right-28 -bottom-44 h-[30rem] w-[30rem] rounded-full bg-ns-green/20 blur-3xl" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_14%,rgba(255,255,255,0.14),transparent_42%),radial-gradient(circle_at_82%_86%,rgba(166,255,0,0.10),transparent_46%)]" />
             <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
               <div>
                 <span className="badge badge-cyan">{hero.badge}</span>
-                <h1 className="mt-6 max-w-[860px] text-white">{hero.title}</h1>
+                <h1 className="mt-6 max-w-[860px] text-white md:text-[4.3rem] md:leading-[1.05]">{hero.title}</h1>
                 <p className="mt-4 max-w-[840px] text-accent/75">{hero.subtitle}</p>
                 <ul className="mt-6 space-y-2">
                   {hero.points?.map((point: string) => (
-                    <li key={point} className="rounded-xl border border-accent/15 bg-accent/5 px-4 py-3 text-tagline-2 text-accent/80">
+                    <li key={point} className="rounded-xl border border-accent/15 bg-accent/5 px-4 py-3 text-tagline-2 text-accent/80 backdrop-blur">
                       {point}
                     </li>
                   ))}
@@ -102,19 +103,19 @@ export default async function MarketingPage() {
               <div className="rounded-[22px] border border-accent/20 bg-accent/5 p-5 backdrop-blur-xl">
                 <p className="text-tagline-2 text-accent/80">Lifecycle and analytics scope</p>
                 <div className="mt-3 grid grid-cols-2 gap-3">
-                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
+                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3 transition hover:-translate-y-0.5 hover:bg-accent/10">
                     <p className="text-tagline-3 text-accent/70">Campaigns</p>
                     <p className="text-heading-6 mt-1 text-white">8 Types</p>
                   </div>
-                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
+                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3 transition hover:-translate-y-0.5 hover:bg-accent/10">
                     <p className="text-tagline-3 text-accent/70">Segments</p>
                     <p className="text-heading-6 mt-1 text-white">Lifecycle-ready</p>
                   </div>
-                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
+                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3 transition hover:-translate-y-0.5 hover:bg-accent/10">
                     <p className="text-tagline-3 text-accent/70">Exports</p>
                     <p className="text-heading-6 mt-1 text-white">CSV + Client 360°</p>
                   </div>
-                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3">
+                  <div className="rounded-xl border border-accent/20 bg-accent/5 p-3 transition hover:-translate-y-0.5 hover:bg-accent/10">
                     <p className="text-tagline-3 text-accent/70">KPI scope</p>
                     <p className="text-heading-6 mt-1 text-white">Bookings + Revenue</p>
                   </div>
@@ -131,14 +132,14 @@ export default async function MarketingPage() {
       <section className="pb-20 lg:pb-[110px]">
         <div className="main-container space-y-6">
           {page.sections.map((section: any) => (
-            <article key={section.title} className="rounded-[22px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8 md:p-8">
+            <article key={section.title} className="rounded-[22px] border border-stroke-2 bg-white p-6 shadow-box transition hover:-translate-y-0.5 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8 md:p-8">
               <p className="premium-eyebrow">{section.overline}</p>
               <h2 className="mt-3 text-heading-4">{section.title}</h2>
               <p className="mt-3 text-tagline-1 text-secondary/72 dark:text-accent/72">{section.body}</p>
               {section.points?.length ? (
                 <ul className="mt-5 grid gap-2 md:grid-cols-2">
                   {section.points.map((point: string) => (
-                    <li key={point} className="rounded-xl border border-stroke-2 bg-background-2 px-4 py-3 text-tagline-2 dark:border-stroke-7 dark:bg-background-7">
+                    <li key={point} className="rounded-xl border border-stroke-2 bg-background-2 px-4 py-3 text-tagline-2 transition hover:bg-background-1 dark:border-stroke-7 dark:bg-background-7 dark:hover:bg-background-8">
                       {point}
                     </li>
                   ))}
@@ -165,7 +166,8 @@ export default async function MarketingPage() {
               <p className="mt-3 max-w-[860px]">{list.intro}</p>
               <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {list.items.map((item: any) => (
-                  <article key={item.title} className="rounded-[20px] border border-stroke-2 bg-white p-5 dark:border-stroke-7 dark:bg-background-8">
+                  <article key={item.title} className="group relative overflow-hidden rounded-[20px] border border-stroke-2 bg-white p-5 shadow-box transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8">
+                    <div className="pointer-events-none absolute -right-12 -bottom-12 h-28 w-28 rounded-full bg-primary-500/8 blur-2xl transition group-hover:bg-primary-500/15" />
                     <p className="text-tagline-3 uppercase tracking-[0.14em] text-primary-500">{item.label}</p>
                     <h3 className="mt-2 text-heading-6">{item.title}</h3>
                     <p className="mt-2 text-tagline-2 text-secondary/70 dark:text-accent/70">{item.body}</p>
@@ -180,7 +182,7 @@ export default async function MarketingPage() {
       <section className="py-20 lg:py-[110px]">
         <div className="main-container grid gap-6 md:grid-cols-2">
           {page.highlights.map((highlight: any) => (
-            <article key={highlight.title} className="rounded-[20px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+            <article key={highlight.title} className="rounded-[20px] border border-stroke-2 bg-white p-6 shadow-box transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8">
               <p className="premium-eyebrow">{highlight.overline}</p>
               <h3 className="mt-3 text-heading-5">{highlight.title}</h3>
               <p className="mt-3 text-tagline-2 text-secondary/70 dark:text-accent/70">{highlight.content}</p>
@@ -198,13 +200,13 @@ export default async function MarketingPage() {
 
       <section className="bg-background-2 dark:bg-background-5 py-20 lg:py-[110px]">
         <div className="main-container">
-          <div className="rounded-[22px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8 md:p-8">
+          <div className="rounded-[22px] border border-stroke-2 bg-white p-6 shadow-box dark:border-stroke-7 dark:bg-background-8 md:p-8">
             <p className="premium-eyebrow">{page.faqHeading}</p>
             <h2 className="mt-3">{page.faqTitle}</h2>
             <p className="mt-3 max-w-[860px]">{page.faqIntro}</p>
             <div className="mt-8 space-y-4">
               {page.faq.map((item: any) => (
-                <article key={item.question} className="rounded-xl border border-stroke-2 bg-background-2 p-4 dark:border-stroke-7 dark:bg-background-7">
+                <article key={item.question} className="rounded-xl border border-stroke-2 bg-background-2 p-4 transition hover:bg-white dark:border-stroke-7 dark:bg-background-7 dark:hover:bg-background-8">
                   <h3 className="text-heading-6">{item.question}</h3>
                   <p className="mt-2 text-tagline-2 text-secondary/72 dark:text-accent/72">{item.answer}</p>
                 </article>
@@ -216,7 +218,8 @@ export default async function MarketingPage() {
 
       <section className="py-20 lg:py-[110px]">
         <div className="main-container">
-          <div className="rounded-[22px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8 md:p-8">
+          <div className="relative overflow-hidden rounded-[22px] border border-stroke-2 bg-white p-6 shadow-box dark:border-stroke-7 dark:bg-background-8 md:p-8">
+            <div className="pointer-events-none absolute -top-20 -right-20 h-44 w-44 rounded-full bg-primary-500/10 blur-3xl" />
             <p className="premium-eyebrow">{page.cta.overline}</p>
             <h2 className="mt-3">{page.cta.title}</h2>
             <p className="mt-3 max-w-[860px]">{page.cta.body}</p>
@@ -226,7 +229,13 @@ export default async function MarketingPage() {
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               {page.secondaryLinks.map((link: any) => (
-                <CtaLink key={link.href} href={link.href} locale={locale} label={link.label} />
+                <Link
+                  key={link.href}
+                  href={mapHref(link.href, locale)}
+                  className="rounded-full border border-stroke-3 px-4 py-2 text-tagline-2 font-medium text-secondary/75 transition hover:border-primary-400 hover:text-primary-600 dark:border-stroke-7 dark:text-accent/75 dark:hover:text-accent"
+                >
+                  {link.label}
+                </Link>
               ))}
             </div>
           </div>
@@ -234,7 +243,7 @@ export default async function MarketingPage() {
       </section>
 
       <section className="section-padding-x pb-20">
-        <div className="mx-auto max-w-6xl rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+        <div className="mx-auto max-w-6xl rounded-2xl border border-stroke-2 bg-white p-6 shadow-box dark:border-stroke-7 dark:bg-background-8">
           <h2 className="text-2xl font-semibold text-secondary dark:text-white">Marketing subpages</h2>
           <p className="mt-3 text-secondary/75 dark:text-accent/70">
             Deep-dive pages for email, analytics, and client intelligence workflows.
