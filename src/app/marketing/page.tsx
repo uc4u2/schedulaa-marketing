@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { headers } from 'next/headers';
 import { Metadata } from 'next';
 
+import WorkflowExperience from '@/components/marketing/home/WorkflowExperience';
 import { marketingPages } from '@/legacy-content/marketing/config';
 import { AppLocale, withLocalePath } from '@/utils/locale';
 
@@ -157,13 +158,28 @@ export default async function MarketingPage() {
         </div>
       </section>
 
+      <section className="pb-20 lg:pb-[110px]">
+        <div className="main-container">
+          <div className="mb-8 text-center">
+            <p className="premium-eyebrow">Execution flow</p>
+            <h2 className="mt-3">From campaign launch to measurable retention outcomes</h2>
+            <p className="mx-auto mt-3 max-w-[820px] text-tagline-1 text-secondary/72 dark:text-accent/72">
+              The same marketing data powering campaigns also drives lifecycle segmentation, client intelligence, and analytics reporting.
+            </p>
+          </div>
+          <WorkflowExperience />
+        </div>
+      </section>
+
       <section className="bg-background-2 dark:bg-background-5 py-20 lg:py-[110px]">
         <div className="main-container space-y-10">
           {page.lists.map((list: any) => (
             <div key={list.title}>
-              <p className="premium-eyebrow">{list.overline}</p>
-              <h2 className="mt-3">{list.title}</h2>
-              <p className="mt-3 max-w-[860px]">{list.intro}</p>
+              <div className="mx-auto max-w-[880px] text-center">
+                <p className="premium-eyebrow">{list.overline}</p>
+                <h2 className="mt-3">{list.title}</h2>
+                <p className="mt-3">{list.intro}</p>
+              </div>
               <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {list.items.map((item: any) => (
                   <article key={item.title} className="group relative overflow-hidden rounded-[20px] border border-stroke-2 bg-white p-5 shadow-box transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8">
@@ -182,7 +198,8 @@ export default async function MarketingPage() {
       <section className="py-20 lg:py-[110px]">
         <div className="main-container grid gap-6 md:grid-cols-2">
           {page.highlights.map((highlight: any) => (
-            <article key={highlight.title} className="rounded-[20px] border border-stroke-2 bg-white p-6 shadow-box transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8">
+            <article key={highlight.title} className="relative overflow-hidden rounded-[20px] border border-stroke-2 bg-white p-6 shadow-box transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8">
+              <div className="pointer-events-none absolute -left-12 -top-12 h-28 w-28 rounded-full bg-primary-500/8 blur-2xl" />
               <p className="premium-eyebrow">{highlight.overline}</p>
               <h3 className="mt-3 text-heading-5">{highlight.title}</h3>
               <p className="mt-3 text-tagline-2 text-secondary/70 dark:text-accent/70">{highlight.content}</p>
