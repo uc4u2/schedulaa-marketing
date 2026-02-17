@@ -6,8 +6,12 @@ import { useState } from 'react';
 
 import { CheckIcon } from '@/icons';
 import { cn } from '@/utils/cn';
+import { AppLocale, detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 
 import RevealAnimation from '../animation/RevealAnimation';
+import { usePathname } from 'next/navigation';
+
+const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
 
 type PricingPlan = {
   id: string;
@@ -71,6 +75,8 @@ const pricingPlans: PricingPlan[] = [
 const Pricing = () => {
   const t = useTranslations('pricing');
   const [isAnnual, setIsAnnual] = useState<boolean>(false);
+  const pathname = usePathname() || '/';
+  const locale = detectLocaleFromPath(pathname) as AppLocale;
 
   return (
     <section className="relative pt-[100px] pb-20 md:pt-[160px] md:pb-[100px] lg:pb-[150px] xl:pb-[200px]">
@@ -134,16 +140,17 @@ const Pricing = () => {
                         </h4>
                         <p className="text-secondary dark:text-accent">{isAnnual ? t('perYear') : t('perMonth')}</p>
                       </div>
-                      <Link
-                        href="/contact-us"
+                      <a
+                        href={`${APP_ORIGIN}/register`}
                         className={cn(
                           'btn btn-md mb-8 block w-full text-center first-letter:uppercase before:content-none',
                           plan.featured
                             ? 'btn-secondary dark:btn-accent hover:btn-primary'
                             : 'btn-white dark:btn-white-dark hover:btn-secondary dark:hover:btn-accent',
-                        )}>
+                        )}
+                      >
                         {t('getStarted')}
-                      </Link>
+                      </a>
                       <ul className="relative list-none space-y-2.5">
                         {plan.features.map((feature, idx) => (
                           <li key={`${plan.id}-${feature.label}-${idx}`} className="flex items-center gap-2.5">
@@ -173,6 +180,11 @@ const Pricing = () => {
                 </RevealAnimation>
               );
             })}
+          </div>
+          <div className="mt-10 text-center">
+            <Link href={withLocalePath('/website-builder', locale)} className="btn btn-md btn-white dark:btn-white-dark hover:btn-secondary dark:hover:btn-accent">
+              Explore Website Builder
+            </Link>
           </div>
         </div>
       </div>
