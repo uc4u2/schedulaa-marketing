@@ -1,6 +1,7 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
+import PageShell from '@/components/shared/layout/PageShell';
 
 const API_ORIGIN =
   process.env.NEXT_PUBLIC_BACKEND_URL ||
@@ -94,8 +95,7 @@ export default function MarketingContactContent() {
   };
 
   return (
-    <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
-      <section className="main-container space-y-8 px-5">
+    <PageShell>
         <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
           <p className="badge badge-yellow-v2">Contact</p>
           <h1 className="mt-5">Let&apos;s talk about your rollout.</h1>
@@ -182,7 +182,6 @@ export default function MarketingContactContent() {
             ))}
           </div>
         </div>
-      </section>
-    </main>
+    </PageShell>
   );
 }

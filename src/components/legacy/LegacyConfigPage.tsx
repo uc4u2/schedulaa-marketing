@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PageShell from '@/components/shared/layout/PageShell';
 
 type Cfg = Record<string, any>;
 
@@ -41,9 +42,8 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
   ];
 
   return (
-    <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
-      <section className="main-container px-5">
-        <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
+    <PageShell>
+      <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
           {hero.badge ? <p className="badge badge-yellow-v2">{valueToDisplay(hero.badge)}</p> : null}
           {hero.title ? <h1 className="mt-5">{valueToDisplay(hero.title)}</h1> : null}
           {hero.subtitle ? (
@@ -69,10 +69,10 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
             ) : null}
           </div>
           {notice ? <p className="mt-4 text-sm text-secondary/70 dark:text-accent/70">{notice}</p> : null}
-        </div>
+      </div>
 
         {sections.map((s: any, idx: number) => (
-          <div key={`${s.title || s.label || 'section'}-${idx}`} className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+          <div key={`${s.title || s.label || 'section'}-${idx}`} className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
             {s.overline ? <p className="text-sm uppercase tracking-wide text-primary-500">{valueToDisplay(s.overline)}</p> : null}
             {s.title ? <h2 className="mt-2 text-2xl font-semibold">{valueToDisplay(s.title)}</h2> : null}
             {s.body ? <p className="mt-3 text-secondary/70 dark:text-accent/70">{valueToDisplay(s.body)}</p> : null}
@@ -134,7 +134,7 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
         ))}
 
         {asArray(config?.steps).length > 0 ? (
-          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+          <div className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
             {config.stepsTitle ? <h2 className="text-2xl font-semibold">{config.stepsTitle}</h2> : null}
             {config.stepsIntro ? <p className="mt-3 text-secondary/70 dark:text-accent/70">{config.stepsIntro}</p> : null}
             <ol className="mt-4 list-decimal space-y-3 pl-5 text-secondary/80 dark:text-accent/80">
@@ -149,7 +149,7 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
         ) : null}
 
         {asArray(config?.faq).length > 0 ? (
-          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+          <div className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
             {config.faqTitle ? <h2 className="text-2xl font-semibold">{config.faqTitle}</h2> : null}
             <div className="mt-4 space-y-4">
               {asArray(config.faq).map((entry: any) => (
@@ -163,7 +163,7 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
         ) : null}
 
         {config?.cta ? (
-          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+          <div className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
             {config.cta.overline ? <p className="text-sm uppercase tracking-wide text-primary-500">{config.cta.overline}</p> : null}
             {config.cta.title ? <h2 className="mt-2 text-2xl font-semibold">{config.cta.title}</h2> : null}
             {config.cta.body ? <p className="mt-3 text-secondary/70 dark:text-accent/70">{config.cta.body}</p> : null}
@@ -181,7 +181,6 @@ export default function LegacyConfigPage({ config }: { config: Cfg }) {
             </div>
           </div>
         ) : null}
-      </section>
-    </main>
+    </PageShell>
   );
 }

@@ -1,29 +1,127 @@
-import { FooterData } from '@/interface';
+export type FooterSectionKey = 'company' | 'product' | 'resources' | 'compare' | 'legal';
 
-export const footerLinks: FooterData[] = [
+export type FooterTranslationKey =
+  | 'company'
+  | 'product'
+  | 'resources'
+  | 'compareGroup'
+  | 'legal'
+  | 'contact'
+  | 'status'
+  | 'roadmap'
+  | 'features'
+  | 'booking'
+  | 'marketing'
+  | 'payroll'
+  | 'websiteBuilder'
+  | 'pricing'
+  | 'blog'
+  | 'demo'
+  | 'docs'
+  | 'helpCenter'
+  | 'zapier'
+  | 'compareHub'
+  | 'alternativesHub'
+  | 'privacy'
+  | 'terms'
+  | 'login'
+  | 'getStarted';
+
+export type FooterLinkItem = {
+  id: string;
+  href: string;
+  label?: string;
+  labelKey?: FooterTranslationKey;
+  externalAppLink?: boolean;
+};
+
+export type FooterSection = {
+  id: FooterSectionKey;
+  titleKey: FooterTranslationKey;
+  links: FooterLinkItem[];
+};
+
+const COMPARE_LINKS: FooterLinkItem[] = [
+  { id: 'compare-vagaro', label: 'Schedulaa vs Vagaro', href: '/compare/vagaro' },
+  { id: 'compare-quickbooks', label: 'Schedulaa vs QuickBooks', href: '/compare/quickbooks' },
   {
-    title: 'Product',
+    id: 'compare-quickbooks-payroll',
+    label: 'Schedulaa vs QuickBooks Payroll',
+    href: '/compare/quickbooks-payroll',
+  },
+  { id: 'compare-humi', label: 'Schedulaa vs Humi', href: '/compare/humi' },
+  {
+    id: 'compare-square-appointments',
+    label: 'Schedulaa vs Square Appointments',
+    href: '/compare/square-appointments',
+  },
+  { id: 'compare-xero', label: 'Schedulaa vs Xero', href: '/compare/xero' },
+  { id: 'compare-deputy', label: 'Schedulaa vs Deputy', href: '/compare/deputy' },
+  { id: 'compare-homebase', label: 'Schedulaa vs Homebase', href: '/compare/homebase' },
+  { id: 'compare-when-i-work', label: 'Schedulaa vs When I Work', href: '/compare/when-i-work' },
+  {
+    id: 'compare-acuity',
+    label: 'Schedulaa vs Acuity Scheduling',
+    href: '/compare/schedulaa-vs-acuity-scheduling',
+  },
+  { id: 'compare-gusto', label: 'Schedulaa vs Gusto', href: '/compare/gusto' },
+  { id: 'compare-adp', label: 'Schedulaa vs ADP', href: '/compare/adp' },
+  { id: 'compare-paychex', label: 'Schedulaa vs Paychex', href: '/compare/paychex' },
+];
+
+export const FOOTER_COMPARE_MOBILE_LIMIT = 8;
+
+export const FOOTER_SECTIONS: FooterSection[] = [
+  {
+    id: 'company',
+    titleKey: 'company',
     links: [
-      { label: 'Features', href: '/features' },
-      { label: 'Pricing', href: '/pricing' },
-      { label: 'Payroll', href: '/payroll' },
-      { label: 'Docs', href: '/docs' },
+      { id: 'company-contact', href: '/contact', labelKey: 'contact' },
+      { id: 'company-status', href: '/status', labelKey: 'status' },
+      { id: 'company-roadmap', href: '/roadmap', labelKey: 'roadmap' },
     ],
   },
   {
-    title: 'Resources',
+    id: 'product',
+    titleKey: 'product',
     links: [
-      { label: 'Blog', href: '/blog' },
-      { label: 'Compare', href: '/compare' },
-      { label: 'Alternatives', href: '/alternatives' },
-      { label: 'FAQ', href: '/faq' },
+      { id: 'product-features', href: '/features', labelKey: 'features' },
+      { id: 'product-booking', href: '/booking', labelKey: 'booking' },
+      { id: 'product-marketing', href: '/marketing', labelKey: 'marketing' },
+      { id: 'product-payroll', href: '/payroll', labelKey: 'payroll' },
+      { id: 'product-website-builder', href: '/website-builder', labelKey: 'websiteBuilder' },
+      { id: 'product-pricing', href: '/pricing', labelKey: 'pricing' },
     ],
   },
   {
-    title: 'Legal',
+    id: 'resources',
+    titleKey: 'resources',
     links: [
-      { label: 'Privacy', href: '/privacy' },
-      { label: 'Terms', href: '/terms' },
+      { id: 'resources-blog', href: '/blog', labelKey: 'blog' },
+      { id: 'resources-demo', href: '/demo', labelKey: 'demo' },
+      { id: 'resources-contact', href: '/contact', labelKey: 'contact' },
+      { id: 'resources-docs', href: '/docs', labelKey: 'docs' },
+      { id: 'resources-help', href: '/client/support', labelKey: 'helpCenter' },
+      { id: 'resources-zapier', href: '/zapier', labelKey: 'zapier' },
+    ],
+  },
+  {
+    id: 'compare',
+    titleKey: 'compareGroup',
+    links: [
+      { id: 'compare-hub', href: '/compare', labelKey: 'compareHub' },
+      { id: 'alternatives-hub', href: '/alternatives', labelKey: 'alternativesHub' },
+      ...COMPARE_LINKS,
+    ],
+  },
+  {
+    id: 'legal',
+    titleKey: 'legal',
+    links: [
+      { id: 'legal-privacy', href: '/privacy', labelKey: 'privacy' },
+      { id: 'legal-terms', href: '/terms', labelKey: 'terms' },
+      { id: 'legal-login', href: '/login', labelKey: 'login', externalAppLink: true },
+      { id: 'legal-get-started', href: '/register', labelKey: 'getStarted', externalAppLink: true },
     ],
   },
 ];

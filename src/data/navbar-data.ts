@@ -1,61 +1,70 @@
-import { MobileMenuGroup } from '@/components/shared/mobile-menu/MobileMenu';
-import { FooterOneData } from '@/interface';
+export type NavbarLabelKey =
+  | 'product'
+  | 'resources'
+  | 'pricing'
+  | 'features'
+  | 'booking'
+  | 'marketing'
+  | 'payroll'
+  | 'websiteBuilder'
+  | 'demo'
+  | 'contact'
+  | 'blog'
+  | 'documentation'
+  | 'faq'
+  | 'helpCenter'
+  | 'employeeDashboard'
+  | 'managerDashboard'
+  | 'login'
+  | 'startFree'
+  | 'language';
 
-export const mobileMenuData: MobileMenuGroup[] = [
-  {
-    id: 'product',
-    title: 'Product',
-    submenu: [
-      { id: 'features', label: 'Features', href: '/features' },
-      { id: 'pricing', label: 'Pricing', href: '/pricing' },
-      { id: 'payroll', label: 'Payroll', href: '/payroll' },
-      { id: 'docs', label: 'Docs', href: '/docs' },
-    ],
-  },
-  {
-    id: 'resources',
-    title: 'Resources',
-    submenu: [
-      { id: 'blog', label: 'Blog', href: '/blog' },
-      { id: 'compare', label: 'Compare', href: '/compare' },
-      { id: 'alternatives', label: 'Alternatives', href: '/alternatives' },
-      { id: 'faq', label: 'FAQ', href: '/faq' },
-    ],
-  },
-  {
-    id: 'legal',
-    title: 'Legal',
-    submenu: [
-      { id: 'privacy', label: 'Privacy', href: '/privacy' },
-      { id: 'terms', label: 'Terms', href: '/terms' },
-    ],
-  },
+export type NavbarLinkItem = {
+  id: string;
+  href: string;
+  labelKey: NavbarLabelKey;
+};
+
+export type NavbarLocaleOption = {
+  code: 'en' | 'fa' | 'ru' | 'zh';
+  label: string;
+  supported: boolean;
+};
+
+export const PRODUCT_MENU_LINKS: NavbarLinkItem[] = [
+  { id: 'features', href: '/features', labelKey: 'features' },
+  { id: 'booking', href: '/booking', labelKey: 'booking' },
+  { id: 'marketing', href: '/marketing', labelKey: 'marketing' },
+  { id: 'payroll', href: '/payroll', labelKey: 'payroll' },
+  { id: 'website-builder', href: '/website-builder', labelKey: 'websiteBuilder' },
+  { id: 'demo', href: '/demo', labelKey: 'demo' },
+  { id: 'contact', href: '/contact', labelKey: 'contact' },
 ];
 
-export const footerData: FooterOneData[] = [
-  {
-    title: 'Product',
-    links: [
-      { label: 'Features', href: '/features' },
-      { label: 'Pricing', href: '/pricing' },
-      { label: 'Payroll', href: '/payroll' },
-      { label: 'Docs', href: '/docs' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { label: 'Blog', href: '/blog' },
-      { label: 'Compare', href: '/compare' },
-      { label: 'Alternatives', href: '/alternatives' },
-      { label: 'FAQ', href: '/faq' },
-    ],
-  },
-  {
-    title: 'Legal',
-    links: [
-      { label: 'Privacy', href: '/privacy' },
-      { label: 'Terms', href: '/terms' },
-    ],
-  },
+export const RESOURCES_MENU_LINKS: NavbarLinkItem[] = [
+  { id: 'blog', href: '/blog', labelKey: 'blog' },
+  { id: 'docs', href: '/docs', labelKey: 'documentation' },
+  { id: 'faq', href: '/faq', labelKey: 'faq' },
+  { id: 'help-center', href: '/client/support', labelKey: 'helpCenter' },
+];
+
+export const PRIMARY_NAV_LINKS: NavbarLinkItem[] = [{ id: 'pricing', href: '/pricing', labelKey: 'pricing' }];
+
+export const MOBILE_NAV_LINKS: NavbarLinkItem[] = [...PRODUCT_MENU_LINKS, ...PRIMARY_NAV_LINKS, ...RESOURCES_MENU_LINKS];
+
+export const DASHBOARD_LINKS: Array<{ id: string; href: string; labelKey: NavbarLabelKey }> = [
+  { id: 'employee-dashboard', href: '/employee', labelKey: 'employeeDashboard' },
+  { id: 'manager-dashboard', href: '/manager/dashboard', labelKey: 'managerDashboard' },
+];
+
+export const AUTH_LINKS: Array<{ id: string; href: string; labelKey: NavbarLabelKey }> = [
+  { id: 'login', href: '/login', labelKey: 'login' },
+  { id: 'start-free', href: '/register', labelKey: 'startFree' },
+];
+
+export const LOCALE_OPTIONS: NavbarLocaleOption[] = [
+  { code: 'en', label: 'EN', supported: true },
+  { code: 'fa', label: 'FA', supported: true },
+  { code: 'ru', label: 'RU', supported: false },
+  { code: 'zh', label: 'ZH', supported: false },
 ];
