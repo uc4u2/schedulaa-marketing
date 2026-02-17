@@ -1,0 +1,44 @@
+/* Controlled premium utilities for marketing pages */
+
+.premium-page-bg {
+  background:
+    radial-gradient(1200px 600px at 8% 6%, rgba(249, 115, 22, 0.08), transparent 55%),
+    radial-gradient(1000px 580px at 95% 12%, rgba(99, 102, 241, 0.08), transparent 58%),
+    linear-gradient(180deg, #f8fafc 0%, #f4f7fb 100%);
+}
+
+.premium-card {
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.06),
+    0 18px 40px -24px rgba(15, 23, 42, 0.28);
+  backdrop-filter: blur(3px);
+}
+
+.premium-card-dark {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.42);
+  box-shadow: 0 20px 50px -28px rgba(15, 23, 42, 0.75);
+}
+
+.premium-eyebrow {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: #f97316;
+}
+
+.premium-heading {
+  letter-spacing: -0.02em;
+}
+
+.premium-link {
+  color: #ea580c;
+  font-weight: 700;
+}
+
+.premium-link:hover {
+  color: #c2410c;
+}

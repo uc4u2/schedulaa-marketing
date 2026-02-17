@@ -141,7 +141,7 @@ const Navbar = () => {
                   setResourcesOpen(false);
                   setProductOpen((p) => !p);
                 }}
-                className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
+                className="text-sm font-medium text-secondary/72 hover:text-primary-600 dark:text-accent/72 dark:hover:text-accent"
               >
                 {t('product')}
               </button>
@@ -174,7 +174,7 @@ const Navbar = () => {
                   setProductOpen(false);
                   setResourcesOpen((p) => !p);
                 }}
-                className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
+                className="text-sm font-medium text-secondary/72 hover:text-primary-600 dark:text-accent/72 dark:hover:text-accent"
               >
                 {t('resources')}
               </button>
@@ -191,7 +191,7 @@ const Navbar = () => {
               <Link
                 key={item.id}
                 href={withLocalePath(item.href, locale)}
-                className="text-tagline-2 text-secondary/70 hover:text-primary-600 dark:text-accent/70 dark:hover:text-accent"
+                className="text-sm font-medium text-secondary/72 hover:text-primary-600 dark:text-accent/72 dark:hover:text-accent"
               >
                 {t(item.labelKey)}
               </Link>

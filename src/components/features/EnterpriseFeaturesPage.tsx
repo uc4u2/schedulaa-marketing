@@ -20,7 +20,7 @@ export default function EnterpriseFeaturesPage({ locale }: FeaturesPageProps) {
   return (
     <PageShell>
       <AnimatedSection>
-        <section className="rounded-[24px] border border-stroke-2 bg-white p-8 shadow-2 dark:border-stroke-7 dark:bg-background-8 md:p-12">
+        <section className="premium-card rounded-[24px] p-8 dark:border-stroke-7 dark:bg-background-8 md:p-12">
           <p className="badge badge-yellow-v2">Features</p>
           <h1 className="mt-5 max-w-[800px]">Enterprise-grade capabilities for scheduling, booking, time, and payroll workflows.</h1>
           <p className="mt-4 max-w-[860px] text-tagline-1 text-secondary/70 dark:text-accent/70">
@@ -60,7 +60,7 @@ export default function EnterpriseFeaturesPage({ locale }: FeaturesPageProps) {
               <div
                 key={integration}
                 data-stagger-item
-                className="flex items-center justify-center rounded-xl border border-stroke-2 bg-white px-5 py-6 text-tagline-1 font-semibold shadow-1 transition hover:-translate-y-0.5 hover:border-primary-300 hover:shadow-2 dark:border-stroke-7 dark:bg-background-8"
+                className="premium-card flex items-center justify-center rounded-xl px-5 py-6 text-tagline-1 font-semibold transition hover:-translate-y-1 hover:border-primary-300 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8"
               >
                 {integration}
               </div>
@@ -82,7 +82,7 @@ export default function EnterpriseFeaturesPage({ locale }: FeaturesPageProps) {
       </AnimatedSection>
 
       <AnimatedSection>
-        <section className="rounded-[24px] border border-stroke-2 bg-white p-8 shadow-2 dark:border-stroke-7 dark:bg-background-8 md:p-10">
+        <section className="premium-card rounded-[24px] p-8 dark:border-stroke-7 dark:bg-background-8 md:p-10">
           <SectionHeading
             eyebrow="Next step"
             title="Ready to deploy features that match your operating model?"

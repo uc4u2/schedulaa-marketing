@@ -12,9 +12,9 @@ type SectionHeadingProps = {
 export default function SectionHeading({ eyebrow, title, description, className }: SectionHeadingProps) {
   return (
     <div className={cn('max-w-[860px]', className)}>
-      {eyebrow ? <p className="text-tagline-3 font-semibold tracking-[0.2em] text-primary-500 uppercase">{eyebrow}</p> : null}
-      <h2 className="mt-3 text-heading-4 md:text-heading-3">{title}</h2>
-      {description ? <p className="mt-3 text-tagline-1 text-secondary/70 dark:text-accent/70">{description}</p> : null}
+      {eyebrow ? <p className="premium-eyebrow">{eyebrow}</p> : null}
+      <h2 className="premium-heading mt-3 text-[2rem] leading-[1.12] font-semibold md:text-[2.6rem]">{title}</h2>
+      {description ? <p className="mt-4 max-w-[760px] text-tagline-1 text-secondary/72 dark:text-accent/72">{description}</p> : null}
     </div>
   );
 }

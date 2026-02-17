@@ -34,10 +34,10 @@ export default function PageShell({
   header,
 }: PageShellProps) {
   return (
-    <main className={cn('bg-background-3 pt-44 pb-24 dark:bg-background-7', className)}>
+    <main className={cn('premium-page-bg pt-44 pb-24 dark:bg-background-7', className)}>
       <section className={cn('main-container px-5', containerClassName)}>
         {header ? <PageHeader {...header} /> : null}
-        <div className={cn(header ? 'mt-8 space-y-8' : 'space-y-8', sectionClassName)}>{children}</div>
+        <div className={cn(header ? 'mt-10 space-y-10' : 'space-y-10', sectionClassName)}>{children}</div>
       </section>
     </main>
   );

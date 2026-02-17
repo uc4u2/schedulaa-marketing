@@ -98,7 +98,7 @@ export default async function Homepage() {
 
       <AnimatedSection>
         <section className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-[20px] border border-stroke-2 bg-white p-6 shadow-1 dark:border-stroke-7 dark:bg-background-8">
+          <div className="premium-card rounded-[20px] p-6 dark:border-stroke-7 dark:bg-background-8">
             <SectionHeading
               eyebrow="Compare"
               title="Evaluate Schedulaa side-by-side"
@@ -122,12 +122,12 @@ export default async function Homepage() {
                 href={withLocalePath('/compare/quickbooks-payroll', locale)}
               />
             </div>
-            <Link href={withLocalePath('/compare', locale)} className="mt-5 inline-flex text-tagline-2 font-semibold text-primary-500">
+            <Link href={withLocalePath('/compare', locale)} className="premium-link mt-5 inline-flex text-tagline-2">
               View compare hub
             </Link>
           </div>
 
-          <div className="rounded-[20px] border border-stroke-2 bg-white p-6 shadow-1 dark:border-stroke-7 dark:bg-background-8">
+          <div className="premium-card rounded-[20px] p-6 dark:border-stroke-7 dark:bg-background-8">
             <SectionHeading
               eyebrow="Industries"
               title="Industry landing pages for service-specific workflows"
@@ -140,7 +140,7 @@ export default async function Homepage() {
               <MiniLinkCard title="Doctor booking" description="Clinic workflows, intake, and calendar reliability." href={withLocalePath('/booking/doctor', locale)} />
               <MiniLinkCard title="Tutor booking" description="Session windows, instructor capacity, and student flows." href={withLocalePath('/booking/tutor', locale)} />
             </div>
-            <Link href={withLocalePath('/booking', locale)} className="mt-5 inline-flex text-tagline-2 font-semibold text-primary-500">
+            <Link href={withLocalePath('/booking', locale)} className="premium-link mt-5 inline-flex text-tagline-2">
               View booking hub
             </Link>
           </div>
@@ -148,7 +148,7 @@ export default async function Homepage() {
       </AnimatedSection>
 
       <AnimatedSection>
-        <section className="rounded-[24px] border border-stroke-2 bg-white p-8 shadow-2 dark:border-stroke-7 dark:bg-background-8 md:p-10">
+        <section className="premium-card rounded-[24px] p-8 dark:border-stroke-7 dark:bg-background-8 md:p-10">
           <SectionHeading
             eyebrow="Next step"
             title="Plan your rollout with one integrated operations platform"

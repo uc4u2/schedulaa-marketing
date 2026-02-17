@@ -7,10 +7,10 @@ type MetricCardProps = {
 };
 
 export const MetricCard = ({ label, value, detail }: MetricCardProps) => (
-  <article className="rounded-[20px] border border-stroke-2 bg-white p-5 shadow-1 dark:border-stroke-7 dark:bg-background-8">
-    <p className="text-tagline-3 uppercase tracking-[0.16em] text-primary-500">{label}</p>
-    <p className="mt-3 text-3xl font-semibold text-secondary dark:text-accent">{value}</p>
-    <p className="mt-2 text-tagline-2 text-secondary/70 dark:text-accent/70">{detail}</p>
+  <article className="premium-card rounded-[20px] p-6 dark:border-stroke-7 dark:bg-background-8">
+    <p className="premium-eyebrow">{label}</p>
+    <p className="premium-heading mt-3 text-[2rem] leading-[1.05] font-semibold text-secondary dark:text-accent">{value}</p>
+    <p className="mt-3 text-tagline-2 text-secondary/72 dark:text-accent/72">{detail}</p>
   </article>
 );
 
@@ -22,10 +22,10 @@ type PillarCardProps = {
 };
 
 export const PillarCard = ({ title, description, href, cta }: PillarCardProps) => (
-  <article className="rounded-[20px] border border-stroke-2 bg-white p-6 shadow-1 transition hover:-translate-y-0.5 hover:shadow-2 dark:border-stroke-7 dark:bg-background-8">
-    <h3 className="text-heading-6 font-semibold">{title}</h3>
-    <p className="mt-3 text-tagline-1 text-secondary/70 dark:text-accent/70">{description}</p>
-    <Link href={href} className="mt-4 inline-flex text-tagline-2 font-semibold text-primary-500">
+  <article className="premium-card rounded-[20px] p-6 transition hover:-translate-y-1 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8">
+    <h3 className="premium-heading text-[1.26rem] leading-[1.2] font-semibold">{title}</h3>
+    <p className="mt-3 text-tagline-1 text-secondary/72 dark:text-accent/72">{description}</p>
+    <Link href={href} className="premium-link mt-5 inline-flex text-tagline-2">
       {cta}
     </Link>
   </article>
@@ -40,9 +40,9 @@ type MiniLinkCardProps = {
 export const MiniLinkCard = ({ title, description, href }: MiniLinkCardProps) => (
   <Link
     href={href}
-    className="block rounded-[20px] border border-stroke-2 bg-white p-5 shadow-1 transition hover:-translate-y-0.5 hover:border-primary-300 hover:shadow-2 dark:border-stroke-7 dark:bg-background-8"
+    className="premium-card block rounded-[20px] p-5 transition hover:-translate-y-1 hover:border-primary-300 hover:shadow-3 dark:border-stroke-7 dark:bg-background-8"
   >
-    <h3 className="text-heading-6 font-semibold">{title}</h3>
-    <p className="mt-2 text-tagline-2 text-secondary/70 dark:text-accent/70">{description}</p>
+    <h3 className="premium-heading text-[1.18rem] font-semibold">{title}</h3>
+    <p className="mt-2 text-tagline-2 text-secondary/72 dark:text-accent/72">{description}</p>
   </Link>
 );
