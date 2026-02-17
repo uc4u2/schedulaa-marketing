@@ -28,11 +28,11 @@ type IntegrationLink = SimpleNavLink & {
 
 const overviewLinks: SimpleNavLink[] = [
   { label: 'Features & Capabilities', href: '/features', closesMenu: true },
-  { label: 'Process & Workflow', href: '/booking' },
+  { label: 'Process & Workflow', href: '/process' },
   { label: 'Security & Compliance', href: '/security' },
-  { label: 'Our Brandkit', href: '/website-builder' },
-  { label: 'Download App', href: '/demo' },
-  { label: 'Press', href: '/blog' },
+  { label: 'Our Brandkit', href: '/brandkit' },
+  { label: 'Download App', href: '/download' },
+  { label: 'Press', href: '/press' },
 ];
 
 const integrationLinks: IntegrationLink[] = [
@@ -43,27 +43,27 @@ const integrationLinks: IntegrationLink[] = [
   },
   {
     label: 'HR & Payroll',
-    href: '/payroll',
+    href: '/career',
     icon: CareerIconV2,
   },
   {
     label: 'Customer Support',
-    href: '/client/support',
+    href: '/support',
     icon: SupportIconV2,
   },
   {
     label: 'Analytics & Reporting',
-    href: '/marketing/analytics-dashboard',
+    href: '/analytics',
     icon: AnalyticsIconV2,
   },
   {
     label: 'Whitepaper & Reports',
-    href: '/docs',
+    href: '/whitepaper',
     icon: WhitePaperIconV2,
   },
   {
     label: 'Explore All Integrations',
-    href: '/compare',
+    href: '/integration',
     icon: IntegrationIconV2,
   },
 ];
