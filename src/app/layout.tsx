@@ -1,9 +1,9 @@
-import SmoothScrollProvider from '@/components/shared/SmoothScroll';
 import LocaleProvider from '@/components/shared/LocaleProvider';
 import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import Footer from '@/components/shared/footer/Footer';
 import Navbar from '@/components/shared/navbar/Navbar';
 import SchedulaaAssistant from '@/components/shared/assistant/SchedulaaAssistant';
+import MotionProvider from '@/components/shared/motion/MotionProvider';
 import { interTight } from '@/utils/font';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -47,12 +47,12 @@ export default function RootLayout({
         <LocaleProvider>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
             <Suspense>
-              <SmoothScrollProvider>
+              <MotionProvider>
                 <Navbar />
                 {children}
                 <Footer />
                 <SchedulaaAssistant />
-              </SmoothScrollProvider>
+              </MotionProvider>
             </Suspense>
           </ThemeProvider>
         </LocaleProvider>
