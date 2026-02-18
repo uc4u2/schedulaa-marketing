@@ -12,16 +12,16 @@ import { buildAppUrl, buildBillingUrl, marketingReturnTo } from '@/utils/appLink
 import { AppLocale, withLocalePath } from '@/utils/locale';
 
 import newArrow from '@public/images/icons/new-arrow.svg';
-import clientLogo10Dark from '@public/images/icons/client-logo-10-dark.svg';
-import clientLogo10 from '@public/images/icons/client-logo-10.svg';
-import clientLogo6Dark from '@public/images/icons/client-logo-6-dark.svg';
-import clientLogo6 from '@public/images/icons/client-logo-6.svg';
-import clientLogo7Dark from '@public/images/icons/client-logo-7-dark.svg';
-import clientLogo7 from '@public/images/icons/client-logo-7.svg';
-import clientLogo8Dark from '@public/images/icons/client-logo-8-dark.svg';
-import clientLogo8 from '@public/images/icons/client-logo-8.svg';
-import clientLogo9Dark from '@public/images/icons/client-logo-9-dark.svg';
-import clientLogo9 from '@public/images/icons/client-logo-9.svg';
+import googleLogo from '@public/images/icons/google.svg';
+import microsoftLogo from '@public/images/icons/microsoft.svg';
+import appleLogo from '@public/images/icons/apple.svg';
+import stripeLogo from '@public/images/icons/stripe.svg';
+import dropboxLogo from '@public/images/icons/dropbox-v2.svg';
+import notionLogo from '@public/images/icons/notion-v2.svg';
+import slackLogo from '@public/images/icons/slack.svg';
+import asanaLogo from '@public/images/icons/asana.svg';
+import youtubeLogo from '@public/images/icons/youtube.svg';
+import trustpilotLogo from '@public/images/icons/trustpilot-logo.svg';
 import analyticsMain from '@public/images/marketing/analytics-main.png';
 import analyticsBoard from '@public/images/marketing/analytics-board.png';
 import analyticsA from '@public/images/marketing/analytics-side-a.png';
@@ -104,11 +104,16 @@ const compareCards = [
 ];
 
 const logoList = [
-  { light: clientLogo6, dark: clientLogo6Dark, alt: 'Client logo 1' },
-  { light: clientLogo7, dark: clientLogo7Dark, alt: 'Client logo 2' },
-  { light: clientLogo8, dark: clientLogo8Dark, alt: 'Client logo 3' },
-  { light: clientLogo9, dark: clientLogo9Dark, alt: 'Client logo 4' },
-  { light: clientLogo10, dark: clientLogo10Dark, alt: 'Client logo 5' },
+  { src: googleLogo, alt: 'Google logo' },
+  { src: microsoftLogo, alt: 'Microsoft logo' },
+  { src: appleLogo, alt: 'Apple logo' },
+  { src: stripeLogo, alt: 'Stripe logo' },
+  { src: dropboxLogo, alt: 'Dropbox logo' },
+  { src: notionLogo, alt: 'Notion logo' },
+  { src: slackLogo, alt: 'Slack logo' },
+  { src: asanaLogo, alt: 'Asana logo' },
+  { src: youtubeLogo, alt: 'YouTube logo' },
+  { src: trustpilotLogo, alt: 'Trustpilot logo' },
 ];
 
 export default function HomeAiApplicationLayout({ locale }: Props) {
@@ -154,28 +159,13 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
 
             <AnimatedSection>
               <div className="mx-auto -mb-3 max-w-[1160px] rounded-[20px] border border-stroke-2 bg-white p-4 shadow-2 dark:border-stroke-7 dark:bg-background-8">
-                <div className="grid grid-cols-12 gap-4">
-                  <div className="col-span-12 overflow-hidden rounded-xl border border-stroke-2 dark:border-stroke-7 lg:col-span-8">
-                    <video className="h-full w-full object-cover" autoPlay muted loop playsInline>
-                      <source src="/video/getty-watch.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                  <div className="col-span-12 grid gap-4 lg:col-span-4">
-                    <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
-                      <Image src={analyticsMain} alt={source.hero.mediaAlt} className="h-full w-full rounded-lg object-cover" />
-                    </div>
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
-                        <Image src={analyticsA} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
-                      </div>
-                      <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
-                        <Image src={analyticsB} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
-                      </div>
-                    </div>
-                  </div>
+                <div className="overflow-hidden rounded-xl border border-stroke-2 dark:border-stroke-7">
+                  <video className="h-full w-full object-cover" autoPlay muted loop playsInline>
+                    <source src="/video/getty-watch.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </div>
-            </AnimatedSection>
+              </AnimatedSection>
           </div>
         </div>
       </section>
@@ -188,9 +178,8 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
             <Marquee autoFill speed={40}>
               <div className="flex items-center justify-center gap-8 py-7.5">
                 {logoList.map((logo, idx) => (
-                  <figure key={logo.alt} className={idx === 0 ? 'ml-8 min-w-[140px] md:min-w-[201px]' : 'min-w-[140px] md:min-w-[201px]'}>
-                    <Image src={logo.light} alt={logo.alt} loading="lazy" className="dark:hidden" />
-                    <Image src={logo.dark} alt={logo.alt} loading="lazy" className="hidden dark:inline-block" />
+                  <figure key={logo.alt} className={idx === 0 ? 'ml-8 min-w-[120px] md:min-w-[180px]' : 'min-w-[120px] md:min-w-[180px]'}>
+                    <Image src={logo.src} alt={logo.alt} loading="lazy" className="h-6 w-auto opacity-70" />
                   </figure>
                 ))}
               </div>
@@ -259,7 +248,7 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
                     </ul>
                   </div>
                 </div>
-              </AnimatedSection>
+            </AnimatedSection>
 
               <div className="col-span-12 space-y-8 md:col-span-6">
                 {highlightCards.slice(1).map((card, index) => (
