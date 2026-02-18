@@ -1,9 +1,13 @@
 import Link from 'next/link';
 import { headers } from 'next/headers';
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 import { payrollPages } from '@/legacy-content/payroll/config';
 import { AppLocale, withLocalePath } from '@/utils/locale';
+import heroVisualMain from '@public/images/marketing/analytics-board.png';
+import heroVisualSideA from '@public/images/marketing/analytics-side-a.png';
+import heroVisualSideB from '@public/images/marketing/analytics-side-b.png';
 
 const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
 
@@ -51,30 +55,50 @@ export default async function PayrollPage() {
     <main className="bg-background-3 dark:bg-background-7 overflow-x-hidden">
       <section className="relative pt-30 pb-20 md:pt-38 md:pb-24">
         <div className="main-container">
-          <div className="rounded-[28px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-8 shadow-box md:p-10">
-            <span className="badge badge-cyan">{hero.badge}</span>
-            <h1 className="mt-5 max-w-[980px] text-white">{hero.title}</h1>
-            <p className="mt-4 max-w-[980px] text-tagline-1 text-accent/72">{hero.subtitle}</p>
+          <div className="grid gap-6 rounded-[28px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-8 shadow-box lg:grid-cols-12 md:p-10">
+            <div className="space-y-6 lg:col-span-8">
+              <div>
+                <span className="badge badge-cyan">{hero.badge}</span>
+                <h1 className="mt-5 max-w-[980px] text-white">{hero.title}</h1>
+                <p className="mt-4 max-w-[980px] text-tagline-1 text-accent/72">{hero.subtitle}</p>
+              </div>
 
-            <ul className="mt-6 grid list-none gap-3 p-0 md:grid-cols-2">
-              {hero.bullets.map((bullet: string) => (
-                <li key={bullet} className="flex items-start gap-2 rounded-xl border border-stroke-7 bg-background-8 px-4 py-3 text-tagline-2 text-accent/80">
-                  <span className="mt-[7px] size-[6px] shrink-0 rounded-full bg-primary-500" />
-                  <span>{bullet}</span>
-                </li>
-              ))}
-            </ul>
+              <ul className="grid list-none gap-3 p-0 md:grid-cols-2">
+                {hero.bullets.map((bullet: string) => (
+                  <li key={bullet} className="flex items-start gap-2 rounded-xl border border-stroke-7 bg-background-8 px-4 py-3 text-tagline-2 text-accent/80">
+                    <span className="mt-[7px] size-[6px] shrink-0 rounded-full bg-primary-500" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              <a href={mapHref(hero.primaryCta.href, locale)} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
-                {hero.primaryCta.label}
-              </a>
-              <Link href={mapHref(hero.secondaryCta.href, locale)} className="btn btn-white btn-md hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
-                {hero.secondaryCta.label}
-              </Link>
+              <div className="flex flex-wrap gap-3">
+                <a href={mapHref(hero.primaryCta.href, locale)} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
+                  {hero.primaryCta.label}
+                </a>
+                <Link href={mapHref(hero.secondaryCta.href, locale)} className="btn btn-white btn-md hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
+                  {hero.secondaryCta.label}
+                </Link>
+              </div>
+
+              <p className="text-tagline-2 text-accent/62">{hero.notice}</p>
             </div>
 
-            <p className="mt-5 text-tagline-2 text-accent/62">{hero.notice}</p>
+            <div className="space-y-3 lg:col-span-4">
+              <div className="rounded-[18px] border border-stroke-7 bg-background-8 p-3">
+                <Image src={heroVisualMain} alt="Payroll operations dashboard" className="h-[230px] w-full rounded-[12px] object-cover" />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-[16px] border border-stroke-7 bg-background-8 p-3">
+                  <p className="text-tagline-3 uppercase tracking-[0.12em] text-primary-300">Regions</p>
+                  <p className="mt-2 text-heading-6 text-white">CA + US</p>
+                </div>
+                <div className="rounded-[16px] border border-stroke-7 bg-background-8 p-3">
+                  <p className="text-tagline-3 uppercase tracking-[0.12em] text-primary-300">Mode</p>
+                  <p className="mt-2 text-heading-6 text-white">Snapshot-first</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -100,6 +124,18 @@ export default async function PayrollPage() {
                 ) : null}
               </article>
             ))}
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <figure className="overflow-hidden rounded-[18px] border border-stroke-7 bg-background-8 p-2">
+              <Image src={heroVisualMain} alt="Payroll summary panel" className="h-[190px] w-full rounded-[12px] object-cover" />
+            </figure>
+            <figure className="overflow-hidden rounded-[18px] border border-stroke-7 bg-background-8 p-2">
+              <Image src={heroVisualSideA} alt="Payroll comparison panel" className="h-[190px] w-full rounded-[12px] object-cover" />
+            </figure>
+            <figure className="overflow-hidden rounded-[18px] border border-stroke-7 bg-background-8 p-2">
+              <Image src={heroVisualSideB} alt="Payroll detail panel" className="h-[190px] w-full rounded-[12px] object-cover" />
+            </figure>
           </div>
         </div>
       </section>
@@ -219,6 +255,24 @@ export default async function PayrollPage() {
               ))}
             </div>
           </article>
+        </div>
+      </section>
+
+      <section className="pb-20 md:pb-24">
+        <div className="main-container rounded-[24px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-8 shadow-box md:p-10">
+          <p className="premium-eyebrow">Payroll links</p>
+          <h2 className="mt-3 text-white">Regional pages and tools</h2>
+          <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            {page.secondaryLinks.map((item: any) => (
+              <Link
+                key={item.href}
+                href={mapHref(item.href, locale)}
+                className="rounded-xl border border-stroke-7 bg-background-8 px-4 py-3 text-tagline-2 font-medium text-accent/80 transition hover:border-primary-300 hover:text-primary-200"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
     </main>
