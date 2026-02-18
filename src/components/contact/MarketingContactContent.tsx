@@ -46,11 +46,14 @@ const FAQ = [
   },
 ];
 
+const PLAN_OPTIONS = ['Starter', 'Plus', 'Pro', 'Enterprise', 'Partnership', 'Migration Support'];
+
 export default function MarketingContactContent() {
   const [form, setForm] = useState({
     name: '',
     email: '',
     company: '',
+    plan: PLAN_OPTIONS[0],
     message: '',
   });
   const [submitting, setSubmitting] = useState(false);
@@ -62,11 +65,12 @@ export default function MarketingContactContent() {
     setError('');
     setSuccess('');
 
+    const metaLines = [form.company.trim() && `Company: ${form.company.trim()}`, form.plan && `Plan interest: ${form.plan}`].filter(Boolean);
     const payload = {
       name: form.name.trim(),
       email: form.email.trim(),
       company: form.company.trim(),
-      message: form.message.trim(),
+      message: [...metaLines, metaLines.length ? '' : null, form.message.trim()].filter(Boolean).join('\n'),
     };
 
     if (!payload.name || !payload.email || !payload.message) {
@@ -86,7 +90,7 @@ export default function MarketingContactContent() {
         throw new Error(data?.error || 'Unable to submit message.');
       }
       setSuccess(data?.success_msg || "Thanks! We'll get back to you shortly.");
-      setForm({ name: '', email: '', company: '', message: '' });
+      setForm({ name: '', email: '', company: '', plan: PLAN_OPTIONS[0], message: '' });
     } catch (err: any) {
       setError(err?.message || "We couldn't send your message. Please try again.");
     } finally {
@@ -152,6 +156,17 @@ export default function MarketingContactContent() {
               value={form.company}
               onChange={(e) => setForm((prev) => ({ ...prev, company: e.target.value }))}
             />
+            <select
+              className="rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
+              value={form.plan}
+              onChange={(e) => setForm((prev) => ({ ...prev, plan: e.target.value }))}
+            >
+              {PLAN_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
             <textarea
               className="min-h-[140px] rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
               placeholder="Message"
