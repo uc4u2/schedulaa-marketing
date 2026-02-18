@@ -1,4 +1,4 @@
-import TemplateFeaturesLayout from '@/components/website-builder-template/TemplateFeaturesLayout';
+import WebsiteBuilderAiApplicationLayout from '@/components/aiapp-skin/website-builder/WebsiteBuilderAiApplicationLayout';
 import { websiteBuilderPage } from '@/legacy-content/website-builder/config';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function WebsiteBuilderPage() {
-  return <TemplateFeaturesLayout page={websiteBuilderPage as any} />;
+  return <WebsiteBuilderAiApplicationLayout page={websiteBuilderPage as any} />;
 }

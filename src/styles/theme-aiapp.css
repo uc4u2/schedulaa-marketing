@@ -1,0 +1,23 @@
+@theme {
+  --color-primary-50: #f4f2fe;
+  --color-primary-100: #ece8ff;
+  --color-primary-200: #dcd4ff;
+  --color-primary-300: #c3b1ff;
+  --color-primary-400: #a585ff;
+  --color-primary-500: #864ffe;
+  --color-primary-600: #7c31f6;
+  --color-primary-700: #6d1fe2;
+  --color-primary-800: #5a19be;
+
+  --color-gradient-1: linear-gradient(135deg, #a585ff 0%, #ffc2ad 100%);
+  --color-gradient-4: linear-gradient(135deg, #864ffe 0%, #23eed6 100%);
+  --color-background-12: #eaeceb;
+}
+
+.premium-page-bg {
+  background: radial-gradient(130% 95% at 50% 0%, rgba(165, 133, 255, 0.16) 0%, rgba(244, 245, 248, 0.92) 44%, #f4f5f8 100%);
+}
+
+.dark .premium-page-bg {
+  background: radial-gradient(130% 95% at 50% 0%, rgba(165, 133, 255, 0.16) 0%, rgba(24, 29, 38, 0.95) 44%, #181d26 100%);
+}

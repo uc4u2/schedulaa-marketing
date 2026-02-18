@@ -42,6 +42,7 @@
   ],
   "exclude": [
     "node_modules",
-    "src/vendor-template"
+    "src/vendor-template",
+    "src/vendor-aiapp"
   ]
 }
