@@ -22,10 +22,17 @@ import slackLogo from '@public/images/icons/slack.svg';
 import asanaLogo from '@public/images/icons/asana.svg';
 import youtubeLogo from '@public/images/icons/youtube.svg';
 import trustpilotLogo from '@public/images/icons/trustpilot-logo.svg';
+import figmaLogo from '@public/images/icons/figma.svg';
 import analyticsMain from '@public/images/marketing/analytics-main.png';
 import analyticsBoard from '@public/images/marketing/analytics-board.png';
 import analyticsA from '@public/images/marketing/analytics-side-a.png';
 import analyticsB from '@public/images/marketing/analytics-side-b.png';
+import featureCard1 from '@public/images/ns-img-90.png';
+import featureCard2 from '@public/images/ns-img-91.png';
+import featureCard3 from '@public/images/ns-img-92.png';
+import featureCard4 from '@public/images/ns-img-93.png';
+import featureCard5 from '@public/images/ns-img-94.png';
+import featureCard6 from '@public/images/ns-img-120.png';
 
 type Props = {
   locale: AppLocale;
@@ -81,6 +88,28 @@ const useCases = [
     href: '/booking/tutor',
   },
 ];
+const useCaseMedia = [
+  {
+    image: analyticsMain,
+    alt: 'Spa booking scheduling preview',
+    tag: 'Spa',
+  },
+  {
+    image: analyticsBoard,
+    alt: 'Salon staff scheduling preview',
+    tag: 'Salon',
+  },
+  {
+    image: analyticsA,
+    alt: 'Medical intake and scheduling preview',
+    tag: 'Medical',
+  },
+  {
+    image: analyticsB,
+    alt: 'Tutor scheduling and payments preview',
+    tag: 'Tutor',
+  },
+];
 
 const compareCards = [
   {
@@ -114,7 +143,10 @@ const logoList = [
   { src: asanaLogo, alt: 'Asana logo' },
   { src: youtubeLogo, alt: 'YouTube logo' },
   { src: trustpilotLogo, alt: 'Trustpilot logo' },
+  { src: figmaLogo, alt: 'Figma logo' },
 ];
+
+const pillarMedia = [featureCard1, featureCard2, featureCard3, featureCard4, featureCard5, featureCard6];
 
 export default function HomeAiApplicationLayout({ locale }: Props) {
   const returnTo = marketingReturnTo(locale, '/');
@@ -176,9 +208,9 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
             <div className="absolute top-0 left-0 z-40 h-full w-[15%] bg-gradient-to-r from-white to-transparent dark:from-background-5 md:w-[20%]" />
             <div className="absolute top-0 right-0 z-40 h-full w-[15%] bg-gradient-to-l from-white to-transparent dark:from-background-5 md:w-[20%]" />
             <Marquee autoFill speed={40}>
-              <div className="flex items-center justify-center gap-8 py-7.5">
-                {logoList.map((logo, idx) => (
-                  <figure key={logo.alt} className={idx === 0 ? 'ml-8 min-w-[120px] md:min-w-[180px]' : 'min-w-[120px] md:min-w-[180px]'}>
+              <div className="flex items-center justify-center gap-7 py-7.5">
+                {logoList.map((logo) => (
+                  <figure key={logo.alt} className="min-w-[110px] md:min-w-[148px]">
                     <Image src={logo.src} alt={logo.alt} loading="lazy" className="h-6 w-auto opacity-70" />
                   </figure>
                 ))}
@@ -229,63 +261,48 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
               </AnimatedSection>
             </div>
 
-            <div className="grid grid-cols-12 gap-y-10 md:gap-x-8">
-              <AnimatedSection className="col-span-12 md:col-span-6">
-                <div className="relative h-full min-h-[450px] max-w-full overflow-hidden rounded-[20px] bg-white p-6 sm:min-h-[780px] md:min-h-[720px] lg:p-10.5 dark:bg-background-8">
-                  <div className="absolute bottom-0 left-0 z-10 h-[480px] w-full bg-(image:--color-gradient-11) blur-[2px] md:bottom-20 lg:bottom-0" />
-                  <figure className="absolute right-0 bottom-2 md:bottom-40 lg:bottom-20 xl:bottom-2">
-                    <Image src={analyticsBoard} alt={source.integrations.mediaAlt} className="h-full w-full object-cover" />
-                  </figure>
-                  <div className="absolute right-10.5 bottom-10.5 left-6 z-20 max-md:space-y-0.5 sm:left-10.5 md:left-6 md:space-y-1.5 xl:left-10.5">
-                    <h3 className="text-heading-6 md:text-heading-5">{highlightCards[0]?.title}</h3>
-                    <p className="max-w-[450px]">{highlightCards[0]?.description}</p>
-                    <ul className="mt-3 space-y-1.5">
-                      {(highlightCards[0]?.points || []).slice(0, 3).map((point) => (
-                        <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/80 dark:text-accent/80">
+            <div className="grid grid-cols-12 gap-6 lg:gap-8">
+              <AnimatedSection className="col-span-12 lg:col-span-7">
+                <article className="relative overflow-hidden rounded-[24px] border border-stroke-2 bg-gradient-to-br from-white via-[#f4f8ff] to-[#e6eefc] p-6 shadow-xl dark:border-stroke-7 dark:from-background-8 dark:via-background-8 dark:to-background-7 lg:p-8">
+                  <div className="absolute -top-20 -right-16 h-56 w-56 rounded-full bg-primary-500/20 blur-3xl" />
+                  <div className="absolute -bottom-24 -left-10 h-60 w-60 rounded-full bg-ns-green/30 blur-3xl" />
+                  <div className="relative z-10">
+                    <h3 className="text-heading-5 md:text-heading-4">{highlightCards[0]?.title}</h3>
+                    <p className="mt-2 max-w-[640px]">{highlightCards[0]?.description}</p>
+                    <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                      {(highlightCards[0]?.points || []).slice(0, 4).map((point) => (
+                        <div key={point} className="rounded-xl border border-stroke-2 bg-white/85 px-4 py-3 text-tagline-2 text-secondary/85 shadow-sm dark:border-stroke-7 dark:bg-background-8/80 dark:text-accent/85">
                           {point}
-                        </li>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
+                    <div className="mt-6 overflow-hidden rounded-2xl border border-stroke-2 bg-white p-3 dark:border-stroke-7 dark:bg-background-8">
+                      <Image src={analyticsBoard} alt={source.integrations.mediaAlt} className="h-full w-full rounded-xl object-cover" />
+                    </div>
                   </div>
-                </div>
-            </AnimatedSection>
+                </article>
+              </AnimatedSection>
 
-              <div className="col-span-12 space-y-8 md:col-span-6">
+              <div className="col-span-12 space-y-6 lg:col-span-5">
                 {highlightCards.slice(1).map((card, index) => (
                   <AnimatedSection key={card.title}>
-                    <article className={index === 0 ? 'space-y-6 rounded-[20px] bg-white p-5 sm:p-8 md:p-5 xl:p-8 dark:bg-background-8' : 'space-y-4 rounded-[20px] bg-white p-6 dark:bg-background-8'}>
+                    <article className={`rounded-[22px] border border-stroke-2 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-stroke-7 ${index === 0 ? 'bg-gradient-to-br from-[#ffffff] to-[#eef4ff] dark:from-background-8 dark:to-background-7' : 'bg-white dark:bg-background-8'}`}>
                       <h3 className="text-heading-6 md:text-heading-5">{card.title}</h3>
-                      <p className="max-w-[450px]">{card.description}</p>
-                      <ul className="space-y-1.5">
+                      <p className="mt-2">{card.description}</p>
+                      <ul className="mt-4 space-y-2">
                         {card.points.slice(0, 4).map((point) => (
-                          <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/80 dark:text-accent/80">
+                          <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/85 dark:text-accent/85">
                             {point}
                           </li>
                         ))}
                       </ul>
                       {index === 0 ? (
-                        <div className="bg-background-12 relative space-y-7 overflow-hidden rounded-2xl pt-[25px] pb-[27px]">
-                          <div className="from-background-12 pointer-events-none absolute top-0 left-0 z-10 h-full w-[20%] bg-gradient-to-r to-transparent" />
-                          <div className="from-background-12 pointer-events-none absolute top-0 right-0 z-10 h-full w-[20%] bg-gradient-to-l to-transparent" />
-                          <Marquee>
-                            <div className="flex items-center gap-x-5">
-                              {(card.points || []).slice(0, 4).map((point, idx) => (
-                                <div
-                                  key={`${point}-${idx}`}
-                                  className="inline-flex w-full max-w-[260px] min-w-[260px] items-center gap-x-3 rounded-[300px] bg-white p-3 first:ml-7 dark:bg-background-8"
-                                >
-                                  <span className="text-it-heading-6 text-secondary font-normal dark:text-accent">{point}</span>
-                                </div>
-                              ))}
-                            </div>
-                          </Marquee>
-                          <div className="grid grid-cols-2 gap-3 px-7">
-                            <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
-                              <Image src={analyticsA} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
-                            </div>
-                            <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
-                              <Image src={analyticsB} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
-                            </div>
+                        <div className="mt-5 grid grid-cols-2 gap-3">
+                          <div className="overflow-hidden rounded-xl border border-stroke-2 bg-white p-2 dark:border-stroke-7 dark:bg-background-8">
+                            <Image src={analyticsA} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
+                          </div>
+                          <div className="overflow-hidden rounded-xl border border-stroke-2 bg-white p-2 dark:border-stroke-7 dark:bg-background-8">
+                            <Image src={analyticsB} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
                           </div>
                         </div>
                       ) : null}
@@ -296,21 +313,31 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
             </div>
 
             <StaggerGrid className="mt-10 grid grid-cols-12 gap-5" childSelector="[data-stagger-item]">
-              {pillars.slice(0, 6).map((pillar) => (
+              {pillars.slice(0, 6).map((pillar, index) => (
                 <article
                   key={pillar.title}
                   data-stagger-item
-                  className="col-span-12 rounded-[20px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8 md:col-span-6 lg:col-span-4"
+                  className="col-span-12 space-y-4 rounded-[20px] border border-stroke-2 bg-white p-2.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-stroke-7 dark:bg-background-8 md:col-span-6 lg:col-span-4"
                 >
-                  <p className="text-tagline-3 uppercase tracking-[0.14em] text-primary-500">{pillar.icon}</p>
-                  <h3 className="mt-2 text-heading-5">{pillar.title}</h3>
-                  <ul className="mt-4 space-y-2">
-                    {pillar.description.map((point) => (
-                      <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/85 dark:text-accent/85">
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
+                  <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-3">
+                    <Image
+                      src={pillarMedia[index % pillarMedia.length]}
+                      alt={`${pillar.title} preview`}
+                      className="h-[160px] w-full rounded-xl object-cover"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <div className="space-y-2 px-3 pb-3">
+                    <p className="text-tagline-3 uppercase tracking-[0.14em] text-primary-500">{pillar.icon}</p>
+                    <h3 className="text-heading-6 md:text-heading-5">{pillar.title}</h3>
+                    <ul className="space-y-1.5">
+                      {pillar.description.slice(0, 3).map((point) => (
+                        <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/85 dark:text-accent/85">
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </article>
               ))}
             </StaggerGrid>
@@ -332,10 +359,10 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
             </AnimatedSection>
           </div>
 
-          <div className="relative flex flex-col items-center justify-center gap-8 max-lg:flex-wrap sm:flex-row">
+          <div className="space-y-8 lg:hidden">
             {workflowSteps.slice(0, 3).map((step, index) => (
-              <AnimatedSection key={step.title}>
-                <div className={`${index % 2 === 0 ? 'bg-ns-green' : 'bg-background-3'} flex w-full max-w-[408px] flex-col justify-between rounded-[20px] p-11 max-sm:space-y-8 sm:min-h-[350px]`}>
+              <AnimatedSection key={step.title} x={-120 + index * 20} y={8} delay={0.18 * (index + 1)} duration={0.62}>
+                <div className={`${index % 2 === 0 ? 'bg-ns-green' : 'bg-background-3'} mx-auto flex w-full max-w-[408px] flex-col justify-between rounded-[20px] p-11 max-sm:space-y-8 sm:min-h-[350px]`}>
                   <div className="text-center">
                     <span className="text-secondary text-[52px]">0{index + 1}</span>
                   </div>
@@ -346,22 +373,37 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
                 </div>
               </AnimatedSection>
             ))}
-            <div className="bg-background-3 absolute top-1/2 left-[31%] z-10 hidden w-full max-w-[52px] -translate-y-1/2 overflow-hidden rounded-[80px] px-4 py-9 ring-8 ring-white lg:inline-block">
-              <Marquee autoFill speed={30} direction="right" className="size-6 overflow-hidden">
-                <figure className="flex size-6 items-center justify-center">
-                  <Image src={newArrow} alt="new-arrow" className="size-full object-cover" />
-                  <Image src={newArrow} alt="new-arrow" className="size-full object-cover" />
-                </figure>
-              </Marquee>
-            </div>
-            <div className="bg-background-3 absolute top-1/2 right-[31%] z-10 hidden w-full max-w-[52px] -translate-y-1/2 overflow-hidden rounded-[80px] px-4 py-9 ring-8 ring-white lg:inline-block">
-              <Marquee autoFill speed={30} direction="right" className="size-6 overflow-hidden">
-                <figure className="flex size-6 items-center justify-center">
-                  <Image src={newArrow} alt="new-arrow" className="size-full object-cover" />
-                  <Image src={newArrow} alt="new-arrow" className="size-full object-cover" />
-                </figure>
-              </Marquee>
-            </div>
+          </div>
+
+          <div className="mx-auto hidden w-fit items-center justify-center gap-7 lg:flex">
+            {workflowSteps.slice(0, 3).map((step, index) => (
+              <div key={step.title} className="contents">
+                <AnimatedSection x={-120 + index * 20} y={8} delay={0.18 * (index + 1)} duration={0.62}>
+                  <div className={`${index % 2 === 0 ? 'bg-ns-green' : 'bg-background-3'} flex w-[408px] flex-col justify-between rounded-[20px] p-11 sm:min-h-[350px]`}>
+                    <div className="text-center">
+                      <span className="text-secondary text-[52px]">0{index + 1}</span>
+                    </div>
+                    <div className="space-y-1 text-center max-md:space-y-0.5">
+                      <h3 className="text-heading-6 md:text-heading-5">{step.title}</h3>
+                      <p className="text-tagline-1 text-secondary/60">{step.description}</p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+
+                {index < 2 ? (
+                  <AnimatedSection x={-120} y={0} delay={0.5 + index * 0.2} duration={0.6}>
+                    <div className="bg-background-3 w-[52px] overflow-hidden rounded-[80px] px-4 py-9 ring-8 ring-white">
+                      <Marquee autoFill speed={30} direction="right" className="size-6 overflow-hidden">
+                        <figure className="flex size-6 items-center justify-center">
+                          <Image src={newArrow} alt="new-arrow" className="size-full object-cover" />
+                          <Image src={newArrow} alt="new-arrow" className="size-full object-cover" />
+                        </figure>
+                      </Marquee>
+                    </div>
+                  </AnimatedSection>
+                ) : null}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -381,13 +423,30 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
           </div>
 
           <StaggerGrid className="grid grid-cols-12 gap-6" childSelector="[data-stagger-item]">
-            {useCases.map((item) => (
-              <article key={item.href} data-stagger-item className="bg-background-12 border-background-12 col-span-12 rounded-3xl border p-8 lg:col-span-6">
-                <h3 className="text-heading-5 md:text-heading-4">{item.title}</h3>
-                <p className="mt-3 text-secondary/75 dark:text-accent/75">{item.body}</p>
-                <Link href={withLocalePath(item.href, locale)} className="btn btn-secondary btn-md mt-6 inline-block">
-                  Open page
-                </Link>
+            {useCases.map((item, index) => (
+              <article
+                key={item.href}
+                data-stagger-item
+                className="group bg-background-12 border-background-12 col-span-12 overflow-hidden rounded-3xl border p-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl lg:col-span-6"
+              >
+                <figure className="relative overflow-hidden rounded-2xl border border-stroke-2 dark:border-stroke-7">
+                  <Image
+                    src={useCaseMedia[index % useCaseMedia.length].image}
+                    alt={useCaseMedia[index % useCaseMedia.length].alt}
+                    className="h-[220px] w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                  />
+                  <figcaption className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-tagline-3 font-medium text-secondary shadow-sm dark:bg-background-8/85 dark:text-accent">
+                    {useCaseMedia[index % useCaseMedia.length].tag}
+                  </figcaption>
+                </figure>
+
+                <div className="space-y-3 p-5 md:p-6">
+                  <h3 className="text-heading-5 md:text-heading-4">{item.title}</h3>
+                  <p className="text-secondary/75 dark:text-accent/75">{item.body}</p>
+                  <Link href={withLocalePath(item.href, locale)} className="btn btn-secondary btn-md mt-1 inline-block">
+                    Open page
+                  </Link>
+                </div>
               </article>
             ))}
           </StaggerGrid>

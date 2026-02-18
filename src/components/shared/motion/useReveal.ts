@@ -8,6 +8,7 @@ import { MOTION_CONFIG, isReducedMotionPreferred, registerMotionPlugins } from '
 
 type RevealOptions = {
   start?: string;
+  x?: number;
   y?: number;
   duration?: number;
   delay?: number;
@@ -22,7 +23,7 @@ export const useReveal = (ref: RefObject<HTMLElement | null>, options: RevealOpt
       registerMotionPlugins();
 
       if (isReducedMotionPreferred()) {
-        gsap.set(target, { opacity: 1, y: 0, clearProps: 'all' });
+        gsap.set(target, { opacity: 1, x: 0, y: 0, clearProps: 'all' });
         return;
       }
 
@@ -30,6 +31,7 @@ export const useReveal = (ref: RefObject<HTMLElement | null>, options: RevealOpt
         target,
         {
           autoAlpha: 0,
+          x: options.x ?? 0,
           y: options.y ?? MOTION_CONFIG.revealOffset,
         },
         {
