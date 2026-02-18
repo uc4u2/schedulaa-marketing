@@ -40,9 +40,6 @@ export default function BookingShell({
         <div className="grid grid-cols-12 gap-6">
           <aside className="col-span-12 lg:col-span-3">
             <div className="bg-background-1 dark:bg-background-6 sticky top-28 rounded-[20px] p-5 sm:p-6">
-              <p className="text-tagline-3 text-secondary/60 dark:text-accent/60 mb-4 uppercase tracking-[0.12em]">
-                Overview
-              </p>
               <nav className="space-y-2">
                 {menuItems.map((item) => (
                   <a
@@ -93,4 +90,3 @@ export default function BookingShell({
     </main>
   );
 }
-
