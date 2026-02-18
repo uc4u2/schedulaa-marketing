@@ -21,7 +21,7 @@ import notionLogo from '@public/images/icons/notion-v2.svg';
 import slackLogo from '@public/images/icons/slack.svg';
 import asanaLogo from '@public/images/icons/asana.svg';
 import youtubeLogo from '@public/images/icons/youtube.svg';
-import trustpilotLogo from '@public/images/icons/trustpilot-logo.svg';
+import discordLogo from '@public/images/icons/discord.svg';
 import figmaLogo from '@public/images/icons/figma.svg';
 import analyticsMain from '@public/images/marketing/analytics-main.png';
 import analyticsBoard from '@public/images/marketing/analytics-board.png';
@@ -142,7 +142,7 @@ const logoList = [
   { src: slackLogo, alt: 'Slack logo' },
   { src: asanaLogo, alt: 'Asana logo' },
   { src: youtubeLogo, alt: 'YouTube logo' },
-  { src: trustpilotLogo, alt: 'Trustpilot logo' },
+  { src: discordLogo, alt: 'Discord logo' },
   { src: figmaLogo, alt: 'Figma logo' },
 ];
 
@@ -208,9 +208,9 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
             <div className="absolute top-0 left-0 z-40 h-full w-[15%] bg-gradient-to-r from-white to-transparent dark:from-background-5 md:w-[20%]" />
             <div className="absolute top-0 right-0 z-40 h-full w-[15%] bg-gradient-to-l from-white to-transparent dark:from-background-5 md:w-[20%]" />
             <Marquee autoFill speed={40}>
-              <div className="flex items-center justify-center gap-7 py-7.5">
+              <div className="flex items-center justify-center gap-4 py-7.5 md:gap-6">
                 {logoList.map((logo) => (
-                  <figure key={logo.alt} className="min-w-[110px] md:min-w-[148px]">
+                  <figure key={logo.alt} className="px-4 md:px-5">
                     <Image src={logo.src} alt={logo.alt} loading="lazy" className="h-6 w-auto opacity-70" />
                   </figure>
                 ))}
