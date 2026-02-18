@@ -228,7 +228,7 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
       <section className="max-[1920px]:px-5">
         <div className="bg-background-12 mx-auto max-w-[1880px] rounded-3xl py-20 lg:rounded-4xl lg:py-30 xl:py-39">
           <div className="main-container">
-            <div className="mb-10 space-y-4 text-center md:mb-14 lg:mx-auto lg:max-w-[920px]">
+            <div className="mb-10 space-y-4 text-center md:mb-14 lg:mx-auto lg:max-w-[740px]">
               <AnimatedSection>
                 <span className="badge badge-white-v2 text-secondary font-medium">{source.featureShowcase.eyebrow}</span>
               </AnimatedSection>
@@ -242,15 +242,16 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
 
             <div className="grid grid-cols-12 gap-y-10 md:gap-x-8">
               <AnimatedSection className="col-span-12 md:col-span-6">
-                <div className="relative h-full min-h-[460px] overflow-hidden rounded-[20px] bg-white p-6 dark:bg-background-8 lg:min-h-[620px] lg:p-10.5">
-                  <div className="absolute right-5 bottom-5 left-5 overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
-                    <Image src={analyticsBoard} alt={source.integrations.mediaAlt} className="h-full w-full rounded-lg object-cover" />
-                  </div>
-                  <div className="relative z-10 max-w-[540px] space-y-2">
-                    <h3 className="text-heading-5">{highlightCards[0]?.title}</h3>
-                    <p>{highlightCards[0]?.description}</p>
-                    <ul className="space-y-1 pt-2">
-                      {(highlightCards[0]?.points || []).map((point) => (
+                <div className="relative h-full min-h-[450px] max-w-full overflow-hidden rounded-[20px] bg-white p-6 sm:min-h-[780px] md:min-h-[720px] lg:p-10.5 dark:bg-background-8">
+                  <div className="absolute bottom-0 left-0 z-10 h-[480px] w-full bg-(image:--color-gradient-11) blur-[2px] md:bottom-20 lg:bottom-0" />
+                  <figure className="absolute right-0 bottom-2 md:bottom-40 lg:bottom-20 xl:bottom-2">
+                    <Image src={analyticsBoard} alt={source.integrations.mediaAlt} className="h-full w-full object-cover" />
+                  </figure>
+                  <div className="absolute right-10.5 bottom-10.5 left-6 z-20 max-md:space-y-0.5 sm:left-10.5 md:left-6 md:space-y-1.5 xl:left-10.5">
+                    <h3 className="text-heading-6 md:text-heading-5">{highlightCards[0]?.title}</h3>
+                    <p className="max-w-[450px]">{highlightCards[0]?.description}</p>
+                    <ul className="mt-3 space-y-1.5">
+                      {(highlightCards[0]?.points || []).slice(0, 3).map((point) => (
                         <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/80 dark:text-accent/80">
                           {point}
                         </li>
@@ -263,23 +264,39 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
               <div className="col-span-12 space-y-8 md:col-span-6">
                 {highlightCards.slice(1).map((card, index) => (
                   <AnimatedSection key={card.title}>
-                    <article className="space-y-4 rounded-[20px] bg-white p-6 dark:bg-background-8">
-                      <h3 className="text-heading-5">{card.title}</h3>
-                      <p>{card.description}</p>
-                      <ul className="space-y-1">
-                        {card.points.map((point) => (
+                    <article className={index === 0 ? 'space-y-6 rounded-[20px] bg-white p-5 sm:p-8 md:p-5 xl:p-8 dark:bg-background-8' : 'space-y-4 rounded-[20px] bg-white p-6 dark:bg-background-8'}>
+                      <h3 className="text-heading-6 md:text-heading-5">{card.title}</h3>
+                      <p className="max-w-[450px]">{card.description}</p>
+                      <ul className="space-y-1.5">
+                        {card.points.slice(0, 4).map((point) => (
                           <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/80 dark:text-accent/80">
                             {point}
                           </li>
                         ))}
                       </ul>
                       {index === 0 ? (
-                        <div className="grid grid-cols-2 gap-3">
-                          <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
-                            <Image src={analyticsA} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
-                          </div>
-                          <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
-                            <Image src={analyticsB} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
+                        <div className="bg-background-12 relative space-y-7 overflow-hidden rounded-2xl pt-[25px] pb-[27px]">
+                          <div className="from-background-12 pointer-events-none absolute top-0 left-0 z-10 h-full w-[20%] bg-gradient-to-r to-transparent" />
+                          <div className="from-background-12 pointer-events-none absolute top-0 right-0 z-10 h-full w-[20%] bg-gradient-to-l to-transparent" />
+                          <Marquee>
+                            <div className="flex items-center gap-x-5">
+                              {(card.points || []).slice(0, 4).map((point, idx) => (
+                                <div
+                                  key={`${point}-${idx}`}
+                                  className="inline-flex w-full max-w-[260px] min-w-[260px] items-center gap-x-3 rounded-[300px] bg-white p-3 first:ml-7 dark:bg-background-8"
+                                >
+                                  <span className="text-it-heading-6 text-secondary font-normal dark:text-accent">{point}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </Marquee>
+                          <div className="grid grid-cols-2 gap-3 px-7">
+                            <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
+                              <Image src={analyticsA} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
+                            </div>
+                            <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
+                              <Image src={analyticsB} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
+                            </div>
                           </div>
                         </div>
                       ) : null}
