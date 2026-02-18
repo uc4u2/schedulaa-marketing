@@ -241,23 +241,21 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
             </div>
 
             <div className="grid grid-cols-12 gap-y-10 md:gap-x-8">
-              <AnimatedSection>
-                <div className="col-span-12 md:col-span-6">
-                  <div className="relative h-full min-h-[460px] overflow-hidden rounded-[20px] bg-white p-6 dark:bg-background-8 lg:min-h-[620px] lg:p-10.5">
-                    <div className="absolute right-5 bottom-5 left-5 overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
-                      <Image src={analyticsBoard} alt={source.integrations.mediaAlt} className="h-full w-full rounded-lg object-cover" />
-                    </div>
-                    <div className="relative z-10 max-w-[540px] space-y-2">
-                      <h3 className="text-heading-5">{highlightCards[0]?.title}</h3>
-                      <p>{highlightCards[0]?.description}</p>
-                      <ul className="space-y-1 pt-2">
-                        {(highlightCards[0]?.points || []).map((point) => (
-                          <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/80 dark:text-accent/80">
-                            {point}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+              <AnimatedSection className="col-span-12 md:col-span-6">
+                <div className="relative h-full min-h-[460px] overflow-hidden rounded-[20px] bg-white p-6 dark:bg-background-8 lg:min-h-[620px] lg:p-10.5">
+                  <div className="absolute right-5 bottom-5 left-5 overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
+                    <Image src={analyticsBoard} alt={source.integrations.mediaAlt} className="h-full w-full rounded-lg object-cover" />
+                  </div>
+                  <div className="relative z-10 max-w-[540px] space-y-2">
+                    <h3 className="text-heading-5">{highlightCards[0]?.title}</h3>
+                    <p>{highlightCards[0]?.description}</p>
+                    <ul className="space-y-1 pt-2">
+                      {(highlightCards[0]?.points || []).map((point) => (
+                        <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/80 dark:text-accent/80">
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </AnimatedSection>
