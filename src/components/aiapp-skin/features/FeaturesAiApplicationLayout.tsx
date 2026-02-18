@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { AppLocale, withLocalePath } from '@/utils/locale';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import StaggerGrid from '@/components/shared/motion/StaggerGrid';
-
-const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
 type Props = { locale: AppLocale };
 
 export default function FeaturesAiApplicationLayout({ locale }: Props) {
+  const returnTo = marketingReturnTo(locale, '/features');
   return (
     <main className="bg-background-3 dark:bg-background-7">
       <section className="pt-[100px] pb-[100px] md:pt-[160px]">
@@ -75,7 +75,7 @@ export default function FeaturesAiApplicationLayout({ locale }: Props) {
             <h3 className="mt-5">Start your rollout with your current team</h3>
             <p className="mt-2">Move from disconnected tools to a unified operations stack with a phased launch plan.</p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a href={`${APP_ORIGIN}/register`} className="btn btn-primary hover:btn-white dark:hover:btn-accent">Start free trial</a>
+              <a href={buildAppUrl('/register', { returnTo })} className="btn btn-primary hover:btn-white dark:hover:btn-accent">Start free trial</a>
               <Link href={withLocalePath('/demo', locale)} className="btn btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">Book demo</Link>
             </div>
           </article>

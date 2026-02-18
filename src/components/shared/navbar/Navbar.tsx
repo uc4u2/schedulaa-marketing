@@ -18,8 +18,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRef, useState } from 'react';
-
-const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
 type MenuPanelProps = {
   open: boolean;
@@ -58,6 +57,7 @@ const Navbar = () => {
   const t = useTranslations('navbar');
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
+  const returnTo = marketingReturnTo(locale, pathname.replace(/^\/(en|fa)/, '') || '/');
 
   const [open, setOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
@@ -171,7 +171,7 @@ const Navbar = () => {
           {DASHBOARD_LINKS.map((item) => (
             <a
               key={item.id}
-              href={`${APP_ORIGIN}${item.href}`}
+              href={buildAppUrl(item.href, { returnTo })}
               className="btn btn-v2-white btn-md-v2 border group-hover/btn-v2:btn-secondary-v2"
             >
               {t(item.labelKey)}
@@ -197,7 +197,7 @@ const Navbar = () => {
           {AUTH_LINKS.map((item) => (
             <a
               key={item.id}
-              href={`${APP_ORIGIN}${item.href}`}
+              href={buildAppUrl(item.href, { returnTo })}
               className={
                 item.id === 'start-free'
                   ? 'btn btn-secondary-v2 btn-md-v2 border group-hover/btn-v2:btn-v2-white'
@@ -239,7 +239,7 @@ const Navbar = () => {
             {DASHBOARD_LINKS.map((item) => (
               <a
                 key={item.id}
-                href={`${APP_ORIGIN}${item.href}`}
+                href={buildAppUrl(item.href, { returnTo })}
                 className="rounded-lg border border-stroke-2 px-3 py-2 text-sm dark:border-stroke-7"
               >
                 {t(item.labelKey)}
@@ -248,7 +248,7 @@ const Navbar = () => {
             {AUTH_LINKS.map((item) => (
               <a
                 key={item.id}
-                href={`${APP_ORIGIN}${item.href}`}
+                href={buildAppUrl(item.href, { returnTo })}
                 className={
                   item.id === 'start-free'
                     ? 'rounded-lg bg-primary-500 px-3 py-2 text-sm font-semibold text-white'

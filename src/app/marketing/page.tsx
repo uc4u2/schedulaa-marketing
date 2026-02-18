@@ -15,8 +15,7 @@ import analytics3 from '@public/images/marketing/analytics-side-b.png';
 import avatar5 from '@public/images/ns-avatar-5.png';
 import { marketingPages } from '@/legacy-content/marketing/config';
 import { AppLocale, withLocalePath } from '@/utils/locale';
-
-const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
 const getLocale = async (): Promise<AppLocale> => {
   const h = await headers();
@@ -27,8 +26,9 @@ const isExternalLink = (href: string) =>
   href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:');
 
 const mapHref = (href: string, locale: AppLocale) => {
-  if (href === '/login') return `${APP_ORIGIN}/login`;
-  if (href === '/register') return `${APP_ORIGIN}/register`;
+  const returnTo = marketingReturnTo(locale, '/marketing');
+  if (href === '/login') return buildAppUrl('/login', { returnTo });
+  if (href === '/register') return buildAppUrl('/register', { returnTo });
   if (isExternalLink(href)) return href;
   return withLocalePath(href as `/${string}`, locale);
 };
@@ -269,7 +269,7 @@ export default async function MarketingPage() {
           </div>
 
           <div className="w-fit">
-            <a href={`${APP_ORIGIN}/register`} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
+            <a href={buildAppUrl('/register', { returnTo: marketingReturnTo(locale, '/marketing') })} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
               {page.cta.primary.label}
             </a>
           </div>

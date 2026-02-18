@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import StaggerGrid from '@/components/shared/motion/StaggerGrid';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
 type BuilderPage = {
   hero: {
@@ -32,11 +33,10 @@ type BuilderPage = {
   };
 };
 
-const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
-
 const mapHref = (href: string, locale: ReturnType<typeof detectLocaleFromPath>) => {
-  if (href === '/register') return `${APP_ORIGIN}/register`;
-  if (href === '/login') return `${APP_ORIGIN}/login`;
+  const returnTo = marketingReturnTo(locale, '/website-builder');
+  if (href === '/register') return buildAppUrl('/register', { returnTo });
+  if (href === '/login') return buildAppUrl('/login', { returnTo });
   if (!href.startsWith('/')) return href;
   return withLocalePath(href, locale);
 };

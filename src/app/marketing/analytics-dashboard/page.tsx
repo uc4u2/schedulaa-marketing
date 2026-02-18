@@ -4,8 +4,7 @@ import { Metadata } from 'next';
 
 import { marketingPages } from '@/legacy-content/marketing/config';
 import { AppLocale, withLocalePath } from '@/utils/locale';
-
-const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
 const getLocale = async (): Promise<AppLocale> => {
   const h = await headers();
@@ -34,6 +33,7 @@ export const metadata: Metadata = {
 
 export default async function MarketingAnalyticsDashboardPage() {
   const locale = await getLocale();
+  const returnTo = marketingReturnTo(locale, '/marketing/analytics-dashboard');
   const hero = pageConfig.hero;
   const section = pageConfig.sections[0];
   const metricsList = pageConfig.lists[0];
@@ -52,7 +52,7 @@ export default async function MarketingAnalyticsDashboardPage() {
               <h1 className="mt-6 max-w-[900px] text-white md:text-[4.1rem] md:leading-[1.05]">{hero.title}</h1>
               <p className="mt-4 max-w-[880px] text-accent/75">{hero.subtitle}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href={`${APP_ORIGIN}/register`} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
+                <a href={buildAppUrl('/register', { returnTo })} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
                   {hero.primaryCta.label}
                 </a>
                 <Link href={withLocalePath('/marketing', locale)} className="btn btn-white btn-md hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
@@ -130,10 +130,10 @@ export default async function MarketingAnalyticsDashboardPage() {
             <h2 className="mt-3">{pageConfig.cta.title}</h2>
             <p className="mt-3 max-w-[860px] text-tagline-1 text-secondary/72 dark:text-accent/72">{pageConfig.cta.body}</p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a href={`${APP_ORIGIN}/register`} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
+              <a href={buildAppUrl('/register', { returnTo })} className="btn btn-primary btn-md hover:btn-white dark:hover:btn-accent">
                 {pageConfig.cta.primary.label}
               </a>
-              <a href={`${APP_ORIGIN}/login`} className="btn btn-white btn-md hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
+              <a href={buildAppUrl('/login', { returnTo })} className="btn btn-white btn-md hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
                 {pageConfig.cta.secondary.label}
               </a>
             </div>

@@ -10,11 +10,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import FooterDivider from './FooterDivider';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
-const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
-
-const linkHref = (link: FooterLinkItem, localePath: (path: string) => string) =>
-  link.externalAppLink ? `${APP_ORIGIN}${link.href}` : localePath(link.href);
+const linkHref = (link: FooterLinkItem, localePath: (path: string) => string, returnTo: string) =>
+  link.externalAppLink ? buildAppUrl(link.href, { returnTo }) : localePath(link.href);
 
 const linkLabel = (link: FooterLinkItem, t: (key: any, values?: any) => string) =>
   link.labelKey ? t(link.labelKey) : link.label || '';
@@ -24,6 +23,7 @@ const Footer = ({ className }: { className?: string }) => {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
   const localePath = (path: string) => withLocalePath(path, locale);
+  const returnTo = marketingReturnTo(locale, pathname.replace(/^\/(en|fa)/, '') || '/');
 
   return (
     <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
@@ -53,7 +53,7 @@ const Footer = ({ className }: { className?: string }) => {
                         key={link.id}
                         className={section.id === 'compare' && idx >= FOOTER_COMPARE_MOBILE_LIMIT ? 'hidden md:list-item' : ''}
                       >
-                        <Link href={linkHref(link, localePath)} className="footer-link">
+                        <Link href={linkHref(link, localePath, returnTo)} className="footer-link">
                           {linkLabel(link, t)}
                         </Link>
                       </li>
