@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import posts from '@/legacy-content/blog/posts';
 import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
-import { buildAppUrl } from '@/utils/appLinks';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { Metadata } from 'next';
+import { headers } from 'next/headers';
 
 const CATEGORY_COPY: Record<string, { title: string; subtitle: string }> = {
   automation: {
@@ -29,6 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogCategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const copy = CATEGORY_COPY[slug] || CATEGORY_COPY.automation;
+  const h = await headers();
+  const locale = h.get('x-locale') === 'fa' ? 'fa' : 'en';
+  const returnTo = marketingReturnTo(locale, `/blog/category/${slug}`);
 
   const categoryPosts = (posts as any[])
     .filter((post) => (post.category || '').toLowerCase() === slug.toLowerCase())
@@ -66,7 +70,7 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ s
           <Link href="/blog" className="text-primary-500 underline">
             Back to blog
           </Link>
-          <Link href={buildAppUrl('/register')} className="text-primary-500 underline">
+          <Link href={buildAppUrl('/register', { returnTo })} className="text-primary-500 underline">
             Start free
           </Link>
         </div>

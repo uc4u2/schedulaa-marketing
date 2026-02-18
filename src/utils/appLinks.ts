@@ -27,3 +27,8 @@ export const buildAppUrl = (
   return url.toString();
 };
 
+export const buildBillingUrl = (options?: { returnTo?: string }) =>
+  buildAppUrl('/manager/settings', {
+    returnTo: options?.returnTo,
+    params: { tab: 'billing' },
+  });

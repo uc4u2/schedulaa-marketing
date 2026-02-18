@@ -4,9 +4,15 @@ import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import Progress from './Progress';
-import { buildAppUrl } from '@/utils/appLinks';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
+import { detectLocaleFromPath } from '@/utils/locale';
+import { usePathname } from 'next/navigation';
 
 const Feature = () => {
+  const pathname = usePathname() || '/';
+  const locale = detectLocaleFromPath(pathname);
+  const returnTo = marketingReturnTo(locale, pathname.replace(/^\/(en|fa)/, '') || '/');
+
   return (
     <section className="bg-background-2 dark:bg-background-5 py-16 md:py-20 lg:py-[100px] xl:py-[200px]">
       <div className="main-container">
@@ -77,7 +83,7 @@ const Feature = () => {
                   <div className="col-span-12 space-y-8 xl:col-span-6">
                     <p className="text-heading-5 text-accent">Custom reports forinformed decision-making</p>
                     <LinkButton
-                      href={buildAppUrl('/login')}
+                      href={buildAppUrl('/login', { returnTo })}
                       className="btn btn-white btn-md dark:btn-transparent hover:btn-primary mx-auto w-[90%] md:mx-0 md:w-auto">
                       Get started
                     </LinkButton>

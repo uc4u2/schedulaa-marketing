@@ -1,16 +1,31 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import Marquee from 'react-fast-marquee';
 
-import { AppLocale, withLocalePath } from '@/utils/locale';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import StaggerGrid from '@/components/shared/motion/StaggerGrid';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { bookingPages } from '@/legacy-content/booking/config';
 import source from '@/legacy-content/features/landing-features.json';
+import { pricingPage } from '@/legacy-content/pricing/config';
+import { buildAppUrl, buildBillingUrl, marketingReturnTo } from '@/utils/appLinks';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 
+import newArrow from '@public/images/icons/new-arrow.svg';
+import clientLogo10Dark from '@public/images/icons/client-logo-10-dark.svg';
+import clientLogo10 from '@public/images/icons/client-logo-10.svg';
+import clientLogo6Dark from '@public/images/icons/client-logo-6-dark.svg';
+import clientLogo6 from '@public/images/icons/client-logo-6.svg';
+import clientLogo7Dark from '@public/images/icons/client-logo-7-dark.svg';
+import clientLogo7 from '@public/images/icons/client-logo-7.svg';
+import clientLogo8Dark from '@public/images/icons/client-logo-8-dark.svg';
+import clientLogo8 from '@public/images/icons/client-logo-8.svg';
+import clientLogo9Dark from '@public/images/icons/client-logo-9-dark.svg';
+import clientLogo9 from '@public/images/icons/client-logo-9.svg';
 import analyticsMain from '@public/images/marketing/analytics-main.png';
 import analyticsBoard from '@public/images/marketing/analytics-board.png';
 import analyticsA from '@public/images/marketing/analytics-side-a.png';
 import analyticsB from '@public/images/marketing/analytics-side-b.png';
-import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
 type Props = {
   locale: AppLocale;
@@ -36,8 +51,69 @@ const insights = (source.insight?.items || []) as Array<{
   ctaHref: string;
 }>;
 
+const faqItems = (bookingPages.hub.faq || []) as Array<{ question: string; answer: string }>;
+const planPreview = (pricingPage.sections?.[0]?.items || []).slice(0, 3) as Array<{ title: string; body: string }>;
+
+const workflowSteps = bookingPages.hub.howItWorks.steps as Array<{
+  title: string;
+  description: string;
+}>;
+
+const useCases = [
+  {
+    title: bookingPages.spa.hero.title,
+    body: bookingPages.spa.hero.subtitle,
+    href: '/booking/spa',
+  },
+  {
+    title: bookingPages.salon.hero.title,
+    body: bookingPages.salon.hero.subtitle,
+    href: '/booking/salon',
+  },
+  {
+    title: bookingPages.doctor.hero.title,
+    body: bookingPages.doctor.hero.subtitle,
+    href: '/booking/doctor',
+  },
+  {
+    title: bookingPages.tutor.hero.title,
+    body: bookingPages.tutor.hero.subtitle,
+    href: '/booking/tutor',
+  },
+];
+
+const compareCards = [
+  {
+    title: 'Schedulaa vs Vagaro',
+    href: '/compare/vagaro',
+    image: analyticsMain,
+    alt: 'Schedulaa vs Vagaro comparison preview',
+  },
+  {
+    title: 'Schedulaa vs Square Appointments',
+    href: '/compare/square-appointments',
+    image: analyticsA,
+    alt: 'Schedulaa vs Square Appointments comparison preview',
+  },
+  {
+    title: 'Schedulaa vs QuickBooks Payroll',
+    href: '/compare/quickbooks-payroll',
+    image: analyticsB,
+    alt: 'Schedulaa vs QuickBooks Payroll comparison preview',
+  },
+];
+
+const logoList = [
+  { light: clientLogo6, dark: clientLogo6Dark, alt: 'Client logo 1' },
+  { light: clientLogo7, dark: clientLogo7Dark, alt: 'Client logo 2' },
+  { light: clientLogo8, dark: clientLogo8Dark, alt: 'Client logo 3' },
+  { light: clientLogo9, dark: clientLogo9Dark, alt: 'Client logo 4' },
+  { light: clientLogo10, dark: clientLogo10Dark, alt: 'Client logo 5' },
+];
+
 export default function HomeAiApplicationLayout({ locale }: Props) {
   const returnTo = marketingReturnTo(locale, '/');
+
   return (
     <main className="space-y-10 bg-white dark:bg-background-7">
       <section className="pt-23 max-[1920px]:px-5">
@@ -48,21 +124,29 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
                 <span className="badge badge-green">{source.hero.eyebrow}</span>
               </AnimatedSection>
               <AnimatedSection>
-                <h1 className="mb-3 font-medium">Run booking, shifts, payroll-ready exports, and website ops from one command center.</h1>
+                <h1 className="mb-3 font-medium">
+                  {source.hero.title.line1} <br className="hidden md:block" /> {source.hero.title.line2}
+                </h1>
               </AnimatedSection>
               <AnimatedSection>
                 <p className="mx-auto mb-7 max-w-[860px] md:mb-12">{source.hero.subtitle}</p>
               </AnimatedSection>
               <ul className="flex flex-col items-center justify-center gap-x-4 gap-y-3 md:flex-row md:gap-y-0">
                 <li>
-                  <a href={buildAppUrl('/register', { returnTo })} className="btn btn-xl-v2 btn-secondary-v2 border group-hover/btn-v2:btn-v2-white">
+                  <a
+                    href={buildAppUrl('/register', { returnTo })}
+                    className="btn btn-xl-v2 btn-secondary-v2 border group-hover/btn-v2:btn-v2-white"
+                  >
                     {source.hero.primaryCta.label}
                   </a>
                 </li>
                 <li>
-                  <Link href={withLocalePath('/demo', locale)} className="btn btn-xl-v2 btn-v2-white group-hover/btn-v2:btn-secondary-v2">
-                    Book demo
-                  </Link>
+                  <a
+                    href={buildAppUrl('/login', { returnTo })}
+                    className="btn btn-xl-v2 btn-v2-white group-hover/btn-v2:btn-secondary-v2"
+                  >
+                    {source.cta.secondaryCta.label}
+                  </a>
                 </li>
               </ul>
               <p className="mt-5 text-tagline-2 text-secondary/65">{source.hero.primaryCta.supporting}</p>
@@ -71,12 +155,12 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
             <AnimatedSection>
               <div className="mx-auto -mb-3 max-w-[1160px] rounded-[20px] border border-stroke-2 bg-white p-4 shadow-2 dark:border-stroke-7 dark:bg-background-8">
                 <div className="grid grid-cols-12 gap-4">
-                  <div className="col-span-12 lg:col-span-8 overflow-hidden rounded-xl border border-stroke-2 dark:border-stroke-7">
+                  <div className="col-span-12 overflow-hidden rounded-xl border border-stroke-2 dark:border-stroke-7 lg:col-span-8">
                     <video className="h-full w-full object-cover" autoPlay muted loop playsInline>
                       <source src="/video/getty-watch.mp4" type="video/mp4" />
                     </video>
                   </div>
-                  <div className="col-span-12 lg:col-span-4 grid gap-4">
+                  <div className="col-span-12 grid gap-4 lg:col-span-4">
                     <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
                       <Image src={analyticsMain} alt={source.hero.mediaAlt} className="h-full w-full rounded-lg object-cover" />
                     </div>
@@ -96,109 +180,290 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
         </div>
       </section>
 
-      <section className="pt-[100px] pb-[90px] md:pt-[140px]" aria-label="Platform highlights">
-        <div className="main-container space-y-[50px]">
-          <AnimatedSection>
-            <div className="space-y-3 text-center">
-              <h2 className="mx-auto max-w-[880px]">{source.hero.featureCard.title}</h2>
-              <p className="mx-auto max-w-[920px]">{source.hero.featureCard.subtitle}</p>
-            </div>
-          </AnimatedSection>
+      <section>
+        <AnimatedSection>
+          <div className="relative">
+            <div className="absolute top-0 left-0 z-40 h-full w-[15%] bg-gradient-to-r from-white to-transparent dark:from-background-5 md:w-[20%]" />
+            <div className="absolute top-0 right-0 z-40 h-full w-[15%] bg-gradient-to-l from-white to-transparent dark:from-background-5 md:w-[20%]" />
+            <Marquee autoFill speed={40}>
+              <div className="flex items-center justify-center gap-8 py-7.5">
+                {logoList.map((logo, idx) => (
+                  <figure key={logo.alt} className={idx === 0 ? 'ml-8 min-w-[140px] md:min-w-[201px]' : 'min-w-[140px] md:min-w-[201px]'}>
+                    <Image src={logo.light} alt={logo.alt} loading="lazy" className="dark:hidden" />
+                    <Image src={logo.dark} alt={logo.alt} loading="lazy" className="hidden dark:inline-block" />
+                  </figure>
+                ))}
+              </div>
+            </Marquee>
+          </div>
+        </AnimatedSection>
+        <div className="main-container mt-5 grid grid-cols-12 gap-4 pb-6 md:pb-10">
+          <div className="col-span-12 rounded-[16px] border border-stroke-2 bg-white p-5 text-center dark:border-stroke-7 dark:bg-background-8 md:col-span-4">
+            <p className="text-heading-5">US + Canada</p>
+            <p className="text-tagline-2 text-secondary/70 dark:text-accent/70">Payroll coverage with regional controls</p>
+          </div>
+          <div className="col-span-12 rounded-[16px] border border-stroke-2 bg-white p-5 text-center dark:border-stroke-7 dark:bg-background-8 md:col-span-4">
+            <p className="text-heading-5">Booking + Payroll + Website</p>
+            <p className="text-tagline-2 text-secondary/70 dark:text-accent/70">One command center across client and staff workflows</p>
+          </div>
+          <div className="col-span-12 rounded-[16px] border border-stroke-2 bg-white p-5 text-center dark:border-stroke-7 dark:bg-background-8 md:col-span-4">
+            <p className="text-heading-5">{source.hero.featureCard.eyebrow}</p>
+            <p className="text-tagline-2 text-secondary/70 dark:text-accent/70">{source.hero.featureCard.subtitle}</p>
+          </div>
+        </div>
+      </section>
 
-          <StaggerGrid className="grid grid-cols-12 gap-5" childSelector="[data-stagger-item]">
-            {highlightCards.map((card) => (
-              <article key={card.title} data-stagger-item className="col-span-12 lg:col-span-4 rounded-[20px] border border-stroke-2 bg-white p-5 shadow-1 dark:border-stroke-7 dark:bg-background-8">
-                <h3 className="text-heading-5">{card.title}</h3>
-                <p className="mt-2">{card.description}</p>
-                <ul className="mt-4 space-y-2">
-                  {card.points.map((point) => (
-                    <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/85 dark:text-accent/85">
-                      {point}
-                    </li>
-                  ))}
-                </ul>
+      <section className="max-[1920px]:px-5">
+        <AnimatedSection>
+          <div className="bg-secondary mx-auto max-w-[1880px] rounded-3xl px-5 py-16 lg:py-20 xl:rounded-4xl xl:py-28">
+            <div className="mx-auto max-w-[1400px]">
+              <h2 className="text-accent text-center text-heading-5 font-light sm:text-heading-4 md:text-heading-3 lg:text-heading-2">
+                {source.featureShowcase.subtitle}
+              </h2>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="max-[1920px]:px-5">
+        <div className="bg-background-12 mx-auto max-w-[1880px] rounded-3xl py-20 lg:rounded-4xl lg:py-30 xl:py-39">
+          <div className="main-container">
+            <div className="mb-10 space-y-4 text-center md:mb-14 lg:mx-auto lg:max-w-[920px]">
+              <AnimatedSection>
+                <span className="badge badge-white-v2 text-secondary font-medium">{source.featureShowcase.eyebrow}</span>
+              </AnimatedSection>
+              <AnimatedSection>
+                <h2>{source.featureShowcase.title}</h2>
+              </AnimatedSection>
+              <AnimatedSection>
+                <p>{source.featureShowcase.subtitle}</p>
+              </AnimatedSection>
+            </div>
+
+            <div className="grid grid-cols-12 gap-y-10 md:gap-x-8">
+              <AnimatedSection>
+                <div className="col-span-12 md:col-span-6">
+                  <div className="relative h-full min-h-[460px] overflow-hidden rounded-[20px] bg-white p-6 dark:bg-background-8 lg:min-h-[620px] lg:p-10.5">
+                    <div className="absolute right-5 bottom-5 left-5 overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
+                      <Image src={analyticsBoard} alt={source.integrations.mediaAlt} className="h-full w-full rounded-lg object-cover" />
+                    </div>
+                    <div className="relative z-10 max-w-[540px] space-y-2">
+                      <h3 className="text-heading-5">{highlightCards[0]?.title}</h3>
+                      <p>{highlightCards[0]?.description}</p>
+                      <ul className="space-y-1 pt-2">
+                        {(highlightCards[0]?.points || []).map((point) => (
+                          <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/80 dark:text-accent/80">
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              <div className="col-span-12 space-y-8 md:col-span-6">
+                {highlightCards.slice(1).map((card, index) => (
+                  <AnimatedSection key={card.title}>
+                    <article className="space-y-4 rounded-[20px] bg-white p-6 dark:bg-background-8">
+                      <h3 className="text-heading-5">{card.title}</h3>
+                      <p>{card.description}</p>
+                      <ul className="space-y-1">
+                        {card.points.map((point) => (
+                          <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/80 dark:text-accent/80">
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                      {index === 0 ? (
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
+                            <Image src={analyticsA} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
+                          </div>
+                          <div className="overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
+                            <Image src={analyticsB} alt="Analytics side panel" className="h-full w-full rounded-lg object-cover" />
+                          </div>
+                        </div>
+                      ) : null}
+                    </article>
+                  </AnimatedSection>
+                ))}
+              </div>
+            </div>
+
+            <StaggerGrid className="mt-10 grid grid-cols-12 gap-5" childSelector="[data-stagger-item]">
+              {pillars.slice(0, 6).map((pillar) => (
+                <article
+                  key={pillar.title}
+                  data-stagger-item
+                  className="col-span-12 rounded-[20px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8 md:col-span-6 lg:col-span-4"
+                >
+                  <p className="text-tagline-3 uppercase tracking-[0.14em] text-primary-500">{pillar.icon}</p>
+                  <h3 className="mt-2 text-heading-5">{pillar.title}</h3>
+                  <ul className="mt-4 space-y-2">
+                    {pillar.description.map((point) => (
+                      <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/85 dark:text-accent/85">
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </StaggerGrid>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 lg:py-34 xl:py-39">
+        <div className="main-container">
+          <div className="mb-10 text-center md:mb-11 lg:mx-auto lg:max-w-[800px]">
+            <AnimatedSection>
+              <span className="badge badge-gray-light-v2 mb-4">{bookingPages.hub.howItWorks.overline}</span>
+            </AnimatedSection>
+            <AnimatedSection>
+              <h2 className="mb-3">{bookingPages.hub.howItWorks.title}</h2>
+            </AnimatedSection>
+            <AnimatedSection>
+              <p>{bookingPages.hub.howItWorks.intro}</p>
+            </AnimatedSection>
+          </div>
+
+          <div className="relative flex flex-col items-center justify-center gap-8 max-lg:flex-wrap sm:flex-row">
+            {workflowSteps.slice(0, 3).map((step, index) => (
+              <AnimatedSection key={step.title}>
+                <div className={`${index % 2 === 0 ? 'bg-ns-green' : 'bg-background-3'} flex w-full max-w-[408px] flex-col justify-between rounded-[20px] p-11 max-sm:space-y-8 sm:min-h-[350px]`}>
+                  <div className="text-center">
+                    <span className="text-secondary text-[52px]">0{index + 1}</span>
+                  </div>
+                  <div className="space-y-1 text-center max-md:space-y-0.5">
+                    <h3 className="text-heading-6 md:text-heading-5">{step.title}</h3>
+                    <p className="text-tagline-1 text-secondary/60">{step.description}</p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+            <div className="bg-background-3 absolute top-1/2 left-[31%] z-10 hidden w-full max-w-[52px] -translate-y-1/2 overflow-hidden rounded-[80px] px-4 py-9 ring-8 ring-white lg:inline-block">
+              <Marquee autoFill speed={30} direction="right" className="size-6 overflow-hidden">
+                <figure className="flex size-6 items-center justify-center">
+                  <Image src={newArrow} alt="new-arrow" className="size-full object-cover" />
+                  <Image src={newArrow} alt="new-arrow" className="size-full object-cover" />
+                </figure>
+              </Marquee>
+            </div>
+            <div className="bg-background-3 absolute top-1/2 right-[31%] z-10 hidden w-full max-w-[52px] -translate-y-1/2 overflow-hidden rounded-[80px] px-4 py-9 ring-8 ring-white lg:inline-block">
+              <Marquee autoFill speed={30} direction="right" className="size-6 overflow-hidden">
+                <figure className="flex size-6 items-center justify-center">
+                  <Image src={newArrow} alt="new-arrow" className="size-full object-cover" />
+                  <Image src={newArrow} alt="new-arrow" className="size-full object-cover" />
+                </figure>
+              </Marquee>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-10 overflow-hidden py-14 md:py-16 lg:py-24 xl:py-28">
+        <div className="main-container">
+          <div className="mb-11 text-center lg:mx-auto lg:mb-9 lg:max-w-[730px]">
+            <AnimatedSection>
+              <span className="badge badge-gray-light-v2 mb-5">Industry pages</span>
+            </AnimatedSection>
+            <AnimatedSection>
+              <h2 className="mb-1 md:mb-3">Explore booking use-cases</h2>
+            </AnimatedSection>
+            <AnimatedSection>
+              <p className="lg:mx-auto lg:max-w-[760px]">{bookingPages.hub.featuresIntro}</p>
+            </AnimatedSection>
+          </div>
+
+          <StaggerGrid className="grid grid-cols-12 gap-6" childSelector="[data-stagger-item]">
+            {useCases.map((item) => (
+              <article key={item.href} data-stagger-item className="bg-background-12 border-background-12 col-span-12 rounded-3xl border p-8 lg:col-span-6">
+                <h3 className="text-heading-5 md:text-heading-4">{item.title}</h3>
+                <p className="mt-3 text-secondary/75 dark:text-accent/75">{item.body}</p>
+                <Link href={withLocalePath(item.href, locale)} className="btn btn-secondary btn-md mt-6 inline-block">
+                  Open page
+                </Link>
               </article>
             ))}
           </StaggerGrid>
         </div>
       </section>
 
-      <section className="bg-background-1 dark:bg-background-6 py-[100px]">
-        <div className="main-container space-y-[60px]">
-          <AnimatedSection>
-            <div className="space-y-3 text-center">
-              <span className="badge badge-green">{source.featureShowcase.eyebrow}</span>
-              <h2 className="mx-auto max-w-[900px]">{source.featureShowcase.title}</h2>
-              <p className="mx-auto max-w-[920px]">{source.featureShowcase.subtitle}</p>
+      <section className="py-16 lg:py-20 xl:py-25">
+        <div className="main-container">
+          <div className="mb-10 text-center lg:mb-[70px]">
+            <div className="space-y-3">
+              <AnimatedSection>
+                <h2>Compare Schedulaa side-by-side</h2>
+              </AnimatedSection>
+              <AnimatedSection>
+                <p className="mx-auto max-w-[680px]">
+                  Compare booking, scheduling, payroll workflows, and operating visibility before migration.
+                </p>
+              </AnimatedSection>
             </div>
-          </AnimatedSection>
+          </div>
 
-          <StaggerGrid className="grid grid-cols-12 gap-5" childSelector="[data-stagger-item]">
-            {pillars.map((pillar) => (
-              <article key={pillar.title} data-stagger-item className="col-span-12 md:col-span-6 lg:col-span-4 rounded-[20px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
-                <p className="text-tagline-3 uppercase tracking-[0.14em] text-primary-500">{pillar.icon}</p>
-                <h3 className="mt-2 text-heading-5">{pillar.title}</h3>
-                <ul className="mt-4 space-y-2">
-                  {pillar.description.map((point) => (
-                    <li key={point} className="list-inside list-disc text-tagline-2 text-secondary/85 dark:text-accent/85">
-                      {point}
-                    </li>
-                  ))}
-                </ul>
+          <StaggerGrid className="grid grid-cols-12 gap-6" childSelector="[data-stagger-item]">
+            {compareCards.map((card) => (
+              <article key={card.href} data-stagger-item className="col-span-12 overflow-hidden rounded-[20px] border border-stroke-2 bg-white p-4 dark:border-stroke-7 dark:bg-background-8 md:col-span-4">
+                <div className="overflow-hidden rounded-xl border border-stroke-2 dark:border-stroke-7">
+                  <Image src={card.image} alt={card.alt} className="h-full w-full object-cover" />
+                </div>
+                <h3 className="mt-4 text-heading-6">{card.title}</h3>
+                <Link href={withLocalePath(card.href, locale)} className="btn btn-v2-white btn-md-v2 mt-4 inline-block border">
+                  View comparison
+                </Link>
               </article>
             ))}
           </StaggerGrid>
-        </div>
-      </section>
 
-      <section className="py-[100px]">
-        <div className="main-container grid gap-6 lg:grid-cols-2">
-          <article className="rounded-[20px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8 md:p-8">
-            <span className="badge badge-green-v2">{source.platformMap.title}</span>
-            <p className="mt-4">{source.platformMap.subtitle}</p>
-            <ul className="mt-5 space-y-2">
-              {Object.values(source.platformMap.points).map((point) => (
-                <li key={point as string} className="list-inside list-disc text-tagline-2 text-secondary/85 dark:text-accent/85">
-                  {point as string}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link href={withLocalePath('/contact', locale)} className="btn btn-secondary btn-md">{source.platformMap.primaryCta.label}</Link>
-              <Link href={withLocalePath('/docs', locale)} className="btn btn-white btn-md dark:btn-transparent dark:hover:btn-accent">{source.platformMap.secondaryCta.label}</Link>
-            </div>
-          </article>
-
-          <article className="rounded-[20px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8 md:p-8">
-            <span className="badge badge-green-v2">{source.integrations.title}</span>
-            <p className="mt-4">{source.integrations.subtitle}</p>
-            <ul className="mt-5 space-y-2">
-              {Object.values(source.integrations.points).map((point) => (
-                <li key={point as string} className="list-inside list-disc text-tagline-2 text-secondary/85 dark:text-accent/85">
-                  {point as string}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 overflow-hidden rounded-xl border border-stroke-2 p-2 dark:border-stroke-7">
-              <Image src={analyticsBoard} alt={source.integrations.mediaAlt} className="h-full w-full rounded-lg object-cover" />
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="bg-background-1 dark:bg-background-6 py-[100px]">
-        <div className="main-container space-y-[40px]">
           <AnimatedSection>
-            <div className="space-y-3 text-center">
-              <span className="badge badge-cyan-v2">{source.insight.eyebrow}</span>
-              <h2>{source.insight.title}</h2>
-              <p className="mx-auto max-w-[850px]">{source.insight.subtitle}</p>
+            <div className="group mt-8 text-center">
+              <Link href={withLocalePath('/compare', locale)} className="btn btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
+                View compare hub
+              </Link>
             </div>
           </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="bg-background-1 py-14 sm:py-16 md:py-24 dark:bg-background-6 2xl:py-28">
+        <div className="main-container">
+          <div className="mb-10 text-center md:mb-[50px]">
+            <AnimatedSection>
+              <span className="badge badge-green-v2 mb-3.5 md:mb-5">Pricing teaser</span>
+            </AnimatedSection>
+            <AnimatedSection>
+              <h2 className="xl:mx-auto xl:max-w-[906px]">{pricingPage.sections?.[0]?.title}</h2>
+            </AnimatedSection>
+            <AnimatedSection>
+              <p className="mx-auto mt-3 max-w-[900px]">{pricingPage.sections?.[0]?.body}</p>
+            </AnimatedSection>
+          </div>
 
           <StaggerGrid className="grid grid-cols-12 gap-5" childSelector="[data-stagger-item]">
+            {planPreview.map((plan) => (
+              <article key={plan.title} data-stagger-item className="col-span-12 rounded-[20px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8 md:col-span-4">
+                <h3 className="text-heading-6">{plan.title}</h3>
+                <p className="mt-2">{plan.body}</p>
+              </article>
+            ))}
+          </StaggerGrid>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Link href={withLocalePath('/pricing', locale)} className="btn btn-secondary btn-md">
+              View pricing
+            </Link>
+            <a href={buildBillingUrl({ returnTo })} className="btn btn-white btn-md dark:btn-transparent dark:hover:btn-accent">
+              {source.hero.secondaryCta.label}
+            </a>
+          </div>
+
+          <StaggerGrid className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3" childSelector="[data-stagger-item]">
             {insights.map((item) => (
-              <article key={item.headline} data-stagger-item className="col-span-12 md:col-span-4 rounded-[20px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+              <article key={item.headline} data-stagger-item className="rounded-[20px] border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
                 <p className="text-tagline-3 uppercase tracking-[0.14em] text-primary-500">{item.tag}</p>
                 <h3 className="mt-2 text-heading-6">{item.headline}</h3>
                 <p className="mt-2">{item.description}</p>
@@ -211,43 +476,69 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
         </div>
       </section>
 
-      <section className="bg-background-2 dark:bg-background-5 py-20 lg:py-[110px]">
-        <div className="main-container grid gap-6 lg:grid-cols-2">
-          <article className="dark:bg-background-8 rounded-[20px] bg-white p-6 md:p-8">
-            <span className="badge badge-green-v2">Compare</span>
-            <h3 className="mt-5">Evaluate Schedulaa side-by-side</h3>
-            <p className="mt-2">Compare booking, scheduling, payroll workflows, and operating visibility before migration.</p>
-            <div className="mt-6 grid gap-3">
-              <Link href={withLocalePath('/compare/vagaro', locale)} className="footer-link-v2 w-fit">Schedulaa vs Vagaro</Link>
-              <Link href={withLocalePath('/compare/square-appointments', locale)} className="footer-link-v2 w-fit">Schedulaa vs Square Appointments</Link>
-              <Link href={withLocalePath('/compare/quickbooks-payroll', locale)} className="footer-link-v2 w-fit">Schedulaa vs QuickBooks Payroll</Link>
+      <section className="max-[1920px]:px-5">
+        <AnimatedSection>
+          <div className="bg-background-12 mx-auto max-w-[1880px] rounded-2xl py-18 md:rounded-4xl md:py-20 lg:py-25 xl:py-28">
+            <div className="main-container">
+              <div className="mx-auto mb-12 max-w-[820px] space-y-3 text-center md:space-y-5 lg:mb-[70px]">
+                <AnimatedSection>
+                  <span className="badge badge-white-v2 uppercase">{bookingPages.hub.faqHeading}</span>
+                </AnimatedSection>
+                <AnimatedSection>
+                  <h2>{bookingPages.hub.faqTitle}</h2>
+                </AnimatedSection>
+                <AnimatedSection>
+                  <p>{bookingPages.hub.faqIntro}</p>
+                </AnimatedSection>
+              </div>
+              <Accordion className="mx-auto max-w-[900px] space-y-4" defaultValue="home-faq-0" enableScrollAnimation animationDelay={0.1}>
+                {faqItems.map((item, idx) => (
+                  <AccordionItem className="rounded-2xl bg-white px-6 md:rounded-4xl md:px-8" key={item.question} value={`home-faq-${idx}`}>
+                    <AccordionTrigger
+                      titleClassName="flex-1 text-left text-tagline-1 font-normal text-secondary lg:text-heading-6"
+                      className="flex w-full cursor-pointer items-center justify-between py-6 md:py-8"
+                      value={`home-faq-${idx}`}
+                      iconType="arrow"
+                    >
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent value={`home-faq-${idx}`}>{item.answer}</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
-            <Link href={withLocalePath('/compare', locale)} className="btn btn-secondary btn-md mt-7 inline-block">View compare hub</Link>
-          </article>
-
-          <article className="dark:bg-background-8 rounded-[20px] bg-white p-6 md:p-8">
-            <span className="badge badge-green-v2">Industry pages</span>
-            <h3 className="mt-5">Explore booking use-cases</h3>
-            <p className="mt-2">Choose the workflow guide that matches your service model.</p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              <Link href={withLocalePath('/booking/spa', locale)} className="footer-link-v2 w-fit">Spa booking</Link>
-              <Link href={withLocalePath('/booking/salon', locale)} className="footer-link-v2 w-fit">Salon booking</Link>
-              <Link href={withLocalePath('/booking/doctor', locale)} className="footer-link-v2 w-fit">Doctor booking</Link>
-              <Link href={withLocalePath('/booking/tutor', locale)} className="footer-link-v2 w-fit">Tutor booking</Link>
-            </div>
-            <Link href={withLocalePath('/booking', locale)} className="btn btn-secondary btn-md mt-7 inline-block">View booking hub</Link>
-          </article>
-        </div>
+          </div>
+        </AnimatedSection>
       </section>
 
-      <section className="bg-background-1 dark:bg-background-6 py-[70px]">
-        <div className="main-container rounded-[20px] border border-stroke-2 bg-white p-8 text-center dark:border-stroke-7 dark:bg-background-8">
-          <span className="badge badge-green">{source.cta.eyebrow}</span>
-          <h2 className="mt-5">{source.cta.title}</h2>
-          <p className="mx-auto mt-4 max-w-[860px]">{source.cta.description}</p>
-          <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <a href={buildAppUrl('/register', { returnTo })} className="btn btn-primary btn-md hover:btn-secondary dark:hover:btn-accent">{source.cta.primaryCta.label}</a>
-            <Link href={withLocalePath('/contact', locale)} className="btn btn-white btn-md hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">{source.cta.secondaryCta.label}</Link>
+      <section className="pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[112px] xl:pb-[112px]">
+        <div className="main-container">
+          <div className="mx-auto max-w-[860px] space-y-8 text-center">
+            <AnimatedSection>
+              <span className="badge badge-green">{source.cta.eyebrow}</span>
+            </AnimatedSection>
+            <AnimatedSection>
+              <h2>{source.cta.title}</h2>
+            </AnimatedSection>
+            <AnimatedSection>
+              <p>{source.cta.description}</p>
+            </AnimatedSection>
+            <div className="flex flex-col items-center justify-center gap-x-4 gap-y-3 md:flex-row md:gap-y-0">
+              <AnimatedSection>
+                <div className="group w-[90%] list-none sm:w-auto">
+                  <a href={buildAppUrl('/register', { returnTo })} className="btn btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
+                    {source.cta.primaryCta.label}
+                  </a>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection>
+                <div className="group w-[90%] list-none sm:w-auto">
+                  <a href={buildAppUrl('/login', { returnTo })} className="btn btn-xl-v2 btn-ash-v2 !border-0 group-hover/btn-v2:btn-secondary-v2">
+                    {source.cta.secondaryCta.label}
+                  </a>
+                </div>
+              </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
