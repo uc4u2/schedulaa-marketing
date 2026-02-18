@@ -1,4 +1,4 @@
-import IndustryBookingLanding from '@/components/booking/IndustryBookingLanding';
+import IndustryBookingTemplate from '@/components/booking-template/IndustryBookingTemplate';
 import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function SpaBookingPage() {
   return (
-    <IndustryBookingLanding
+    <IndustryBookingTemplate
       overline="Spa booking"
       title="Spa booking software for therapists, rooms, and recurring treatment plans"
       intro="Spa teams do not run on a simple calendar. You are balancing therapist availability, treatment rooms, equipment, service durations, packages, memberships, and last-minute changes while still protecting revenue and guest experience. Schedulaa is spa booking software designed for service businesses that need more than pick-a-time-slot scheduling."

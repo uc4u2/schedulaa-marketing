@@ -1,4 +1,4 @@
-import IndustryBookingLanding from '@/components/booking/IndustryBookingLanding';
+import IndustryBookingTemplate from '@/components/booking-template/IndustryBookingTemplate';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function TutorBookingPage() {
   return (
-    <IndustryBookingLanding
+    <IndustryBookingTemplate
       overline="Tutor booking"
       title="Tutor booking software for private sessions, recurring classes, and instructor availability"
       intro="Education services need consistent scheduling across tutors, students, and guardians. This page explains how Schedulaa helps tutoring businesses run booking workflows, reduce admin overhead, and keep sessions on track."

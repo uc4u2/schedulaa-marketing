@@ -1,4 +1,4 @@
-import IndustryBookingLanding from '@/components/booking/IndustryBookingLanding';
+import IndustryBookingTemplate from '@/components/booking-template/IndustryBookingTemplate';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function DoctorBookingPage() {
   return (
-    <IndustryBookingLanding
+    <IndustryBookingTemplate
       overline="Clinic booking"
       title="Doctor booking software for clinics that need clean scheduling and reliable follow-through"
       intro="Medical and wellness clinics rely on precise scheduling. Missed handoffs between booking, provider availability, and operational follow-up create costly delays. This page explains how Schedulaa helps clinics structure booking operations with less friction."

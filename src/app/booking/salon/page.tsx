@@ -1,4 +1,4 @@
-import IndustryBookingLanding from '@/components/booking/IndustryBookingLanding';
+import IndustryBookingTemplate from '@/components/booking-template/IndustryBookingTemplate';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function SalonBookingPage() {
   return (
-    <IndustryBookingLanding
+    <IndustryBookingTemplate
       overline="Salon booking"
       title="Salon booking software that keeps chairs full and schedules in sync"
       intro="Salon operations break when bookings, calendars, no-show controls, and payroll hours live in separate systems. This page explains how Schedulaa helps salon owners run appointment flow, team allocation, and follow-up campaigns from one workspace."
