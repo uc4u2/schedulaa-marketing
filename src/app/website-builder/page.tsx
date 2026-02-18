@@ -1,4 +1,4 @@
-import LegacyConfigPage from '@/components/legacy/LegacyConfigPage';
+import TemplateFeaturesLayout from '@/components/website-builder-template/TemplateFeaturesLayout';
 import { websiteBuilderPage } from '@/legacy-content/website-builder/config';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function WebsiteBuilderPage() {
-  return <LegacyConfigPage config={websiteBuilderPage} />;
+  return <TemplateFeaturesLayout page={websiteBuilderPage as any} />;
 }
