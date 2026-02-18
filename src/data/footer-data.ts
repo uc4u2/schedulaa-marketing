@@ -10,16 +10,20 @@ export type FooterTranslationKey =
   | 'status'
   | 'roadmap'
   | 'features'
+  | 'workforce'
   | 'booking'
   | 'marketing'
   | 'payroll'
   | 'websiteBuilder'
+  | 'industries'
   | 'pricing'
   | 'blog'
   | 'demo'
   | 'docs'
   | 'helpCenter'
   | 'zapier'
+  | 'quickbooks'
+  | 'xero'
   | 'compareHub'
   | 'alternativesHub'
   | 'privacy'
@@ -86,7 +90,9 @@ export const FOOTER_SECTIONS: FooterSection[] = [
     titleKey: 'product',
     links: [
       { id: 'product-features', href: '/features', labelKey: 'features' },
+      { id: 'product-workforce', href: '/workforce', labelKey: 'workforce' },
       { id: 'product-booking', href: '/booking', labelKey: 'booking' },
+      { id: 'product-industries', href: '/industries', labelKey: 'industries' },
       { id: 'product-marketing', href: '/marketing', labelKey: 'marketing' },
       { id: 'product-payroll', href: '/payroll', labelKey: 'payroll' },
       { id: 'product-website-builder', href: '/website-builder', labelKey: 'websiteBuilder' },
@@ -103,6 +109,8 @@ export const FOOTER_SECTIONS: FooterSection[] = [
       { id: 'resources-docs', href: '/docs', labelKey: 'docs' },
       { id: 'resources-help', href: '/client/support', labelKey: 'helpCenter' },
       { id: 'resources-zapier', href: '/zapier', labelKey: 'zapier' },
+      { id: 'resources-quickbooks', href: '/docs?topic=quickbooks-onboarding', labelKey: 'quickbooks' },
+      { id: 'resources-xero', href: '/docs?topic=xero-onboarding', labelKey: 'xero' },
     ],
   },
   {

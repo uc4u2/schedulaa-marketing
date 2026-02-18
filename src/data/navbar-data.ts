@@ -3,14 +3,21 @@ export type NavbarLabelKey =
   | 'resources'
   | 'pricing'
   | 'features'
+  | 'workforce'
   | 'booking'
   | 'marketing'
   | 'payroll'
   | 'websiteBuilder'
+  | 'industries'
+  | 'status'
+  | 'roadmap'
   | 'demo'
   | 'contact'
   | 'blog'
   | 'documentation'
+  | 'zapier'
+  | 'quickbooks'
+  | 'xero'
   | 'faq'
   | 'helpCenter'
   | 'employeeDashboard'
@@ -33,10 +40,14 @@ export type NavbarLocaleOption = {
 
 export const PRODUCT_MENU_LINKS: NavbarLinkItem[] = [
   { id: 'features', href: '/features', labelKey: 'features' },
+  { id: 'workforce', href: '/workforce', labelKey: 'workforce' },
   { id: 'booking', href: '/booking', labelKey: 'booking' },
   { id: 'marketing', href: '/marketing', labelKey: 'marketing' },
   { id: 'payroll', href: '/payroll', labelKey: 'payroll' },
   { id: 'website-builder', href: '/website-builder', labelKey: 'websiteBuilder' },
+  { id: 'industries', href: '/industries', labelKey: 'industries' },
+  { id: 'status', href: '/status', labelKey: 'status' },
+  { id: 'roadmap', href: '/roadmap', labelKey: 'roadmap' },
   { id: 'demo', href: '/demo', labelKey: 'demo' },
   { id: 'contact', href: '/contact', labelKey: 'contact' },
 ];
@@ -44,6 +55,9 @@ export const PRODUCT_MENU_LINKS: NavbarLinkItem[] = [
 export const RESOURCES_MENU_LINKS: NavbarLinkItem[] = [
   { id: 'blog', href: '/blog', labelKey: 'blog' },
   { id: 'docs', href: '/docs', labelKey: 'documentation' },
+  { id: 'zapier', href: '/zapier', labelKey: 'zapier' },
+  { id: 'quickbooks', href: '/docs?topic=quickbooks-onboarding', labelKey: 'quickbooks' },
+  { id: 'xero', href: '/docs?topic=xero-onboarding', labelKey: 'xero' },
   { id: 'faq', href: '/faq', labelKey: 'faq' },
   { id: 'help-center', href: '/client/support', labelKey: 'helpCenter' },
 ];
