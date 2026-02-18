@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import posts from '@/legacy-content/blog/posts';
 import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
+import { buildAppUrl } from '@/utils/appLinks';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -55,7 +56,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <Link href="/blog" className="text-primary-500 underline">
             Back to blog
           </Link>
-          <Link href="/register" className="text-primary-500 underline">
+          <Link href={buildAppUrl('/register')} className="text-primary-500 underline">
             Start free
           </Link>
           <Link href="/contact" className="text-primary-500 underline">

@@ -10,8 +10,7 @@ import { AppLocale, detectLocaleFromPath, withLocalePath } from '@/utils/locale'
 
 import RevealAnimation from '../animation/RevealAnimation';
 import { usePathname } from 'next/navigation';
-
-const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
 type PricingPlan = {
   id: string;
@@ -77,6 +76,7 @@ const Pricing = () => {
   const [isAnnual, setIsAnnual] = useState<boolean>(false);
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname) as AppLocale;
+  const returnTo = marketingReturnTo(locale, '/pricing');
 
   return (
     <section className="relative pt-[100px] pb-20 md:pt-[160px] md:pb-[100px] lg:pb-[150px] xl:pb-[200px]">
@@ -141,7 +141,10 @@ const Pricing = () => {
                         <p className="text-secondary dark:text-accent">{isAnnual ? t('perYear') : t('perMonth')}</p>
                       </div>
                       <a
-                        href={`${APP_ORIGIN}/register`}
+                        href={buildAppUrl('/register', {
+                          returnTo,
+                          params: { plan: plan.id, interval: isAnnual ? 'annual' : 'monthly' },
+                        })}
                         className={cn(
                           'btn btn-md mb-8 block w-full text-center first-letter:uppercase before:content-none',
                           plan.featured

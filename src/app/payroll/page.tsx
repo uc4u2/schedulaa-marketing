@@ -5,11 +5,10 @@ import Image from 'next/image';
 
 import { payrollPages } from '@/legacy-content/payroll/config';
 import { AppLocale, withLocalePath } from '@/utils/locale';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import heroVisualMain from '@public/images/marketing/analytics-board.png';
 import heroVisualSideA from '@public/images/marketing/analytics-side-a.png';
 import heroVisualSideB from '@public/images/marketing/analytics-side-b.png';
-
-const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
 
 const meta = payrollPages.overview.meta;
 
@@ -17,8 +16,9 @@ const isExternalLink = (href: string) =>
   href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:');
 
 const mapHref = (href: string, locale: AppLocale) => {
-  if (href === '/login') return `${APP_ORIGIN}/login`;
-  if (href === '/register') return `${APP_ORIGIN}/register`;
+  const returnTo = marketingReturnTo(locale, '/payroll');
+  if (href === '/login') return buildAppUrl('/login', { returnTo });
+  if (href === '/register') return buildAppUrl('/register', { returnTo });
   if (isExternalLink(href)) return href;
   return withLocalePath(href as `/${string}`, locale);
 };

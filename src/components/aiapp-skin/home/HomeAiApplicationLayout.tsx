@@ -10,8 +10,7 @@ import analyticsMain from '@public/images/marketing/analytics-main.png';
 import analyticsBoard from '@public/images/marketing/analytics-board.png';
 import analyticsA from '@public/images/marketing/analytics-side-a.png';
 import analyticsB from '@public/images/marketing/analytics-side-b.png';
-
-const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
 type Props = {
   locale: AppLocale;
@@ -38,6 +37,7 @@ const insights = (source.insight?.items || []) as Array<{
 }>;
 
 export default function HomeAiApplicationLayout({ locale }: Props) {
+  const returnTo = marketingReturnTo(locale, '/');
   return (
     <main className="space-y-10 bg-white dark:bg-background-7">
       <section className="pt-23 max-[1920px]:px-5">
@@ -55,7 +55,7 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
               </AnimatedSection>
               <ul className="flex flex-col items-center justify-center gap-x-4 gap-y-3 md:flex-row md:gap-y-0">
                 <li>
-                  <a href={`${APP_ORIGIN}/register`} className="btn btn-xl-v2 btn-secondary-v2 border group-hover/btn-v2:btn-v2-white">
+                  <a href={buildAppUrl('/register', { returnTo })} className="btn btn-xl-v2 btn-secondary-v2 border group-hover/btn-v2:btn-v2-white">
                     {source.hero.primaryCta.label}
                   </a>
                 </li>
@@ -246,7 +246,7 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
           <h2 className="mt-5">{source.cta.title}</h2>
           <p className="mx-auto mt-4 max-w-[860px]">{source.cta.description}</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <a href={`${APP_ORIGIN}/register`} className="btn btn-primary btn-md hover:btn-secondary dark:hover:btn-accent">{source.cta.primaryCta.label}</a>
+            <a href={buildAppUrl('/register', { returnTo })} className="btn btn-primary btn-md hover:btn-secondary dark:hover:btn-accent">{source.cta.primaryCta.label}</a>
             <Link href={withLocalePath('/contact', locale)} className="btn btn-white btn-md hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">{source.cta.secondaryCta.label}</Link>
           </div>
         </div>

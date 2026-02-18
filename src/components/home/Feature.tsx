@@ -4,6 +4,7 @@ import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import Progress from './Progress';
+import { buildAppUrl } from '@/utils/appLinks';
 
 const Feature = () => {
   return (
@@ -76,7 +77,7 @@ const Feature = () => {
                   <div className="col-span-12 space-y-8 xl:col-span-6">
                     <p className="text-heading-5 text-accent">Custom reports forinformed decision-making</p>
                     <LinkButton
-                      href="/login"
+                      href={buildAppUrl('/login')}
                       className="btn btn-white btn-md dark:btn-transparent hover:btn-primary mx-auto w-[90%] md:mx-0 md:w-auto">
                       Get started
                     </LinkButton>
