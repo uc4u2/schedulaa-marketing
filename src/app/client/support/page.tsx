@@ -1,4 +1,4 @@
-import LegacyConfigPage from '@/components/legacy/LegacyConfigPage';
+import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
 import { supportPage } from '@/legacy-content/batch2/config';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function ClientSupportPage() {
-  return <LegacyConfigPage config={supportPage} />;
+  return <FeatureStyleContentPage config={supportPage as any} routePath="/client/support" />;
 }

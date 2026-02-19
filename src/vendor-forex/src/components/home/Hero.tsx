@@ -87,9 +87,13 @@ const Hero = () => {
         </ul>
         <RevealAnimation delay={0.8} instant>
           <div className="mt-[50px] lg:mt-[100px]">
-            <figure className="mx-auto max-w-[700px] overflow-hidden rounded-2xl lg:max-w-[900px] xl:max-w-[1240px]">
-              <Image src={heroImg} className="h-full w-full object-cover" alt={source.hero.mediaAlt} />
-            </figure>
+            <div className="relative mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]" style={{ transform: 'perspective(1400px) rotateX(3deg)' }}>
+              <div className="pointer-events-none absolute -inset-4 rounded-[28px] bg-linear-[145deg,rgba(0,194,255,0.22)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.12)_100%] blur-xl" />
+              <div className="pointer-events-none absolute -inset-x-10 -bottom-8 h-16 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,180,255,0.38)_0%,rgba(0,0,0,0)_72%)]" />
+              <figure className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0b1220] p-2 shadow-[0_28px_80px_rgba(0,0,0,0.56)]">
+                <Image src={heroImg} className="h-full w-full rounded-xl object-cover" alt={source.hero.mediaAlt} />
+              </figure>
+            </div>
           </div>
         </RevealAnimation>
       </div>

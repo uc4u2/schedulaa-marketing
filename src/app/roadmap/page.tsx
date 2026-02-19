@@ -1,4 +1,4 @@
-import LegacyConfigPage from '@/components/legacy/LegacyConfigPage';
+import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
 import { roadmapPage } from '@/legacy-content/batch2/config';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function RoadmapPage() {
-  return <LegacyConfigPage config={roadmapPage} />;
+  return <FeatureStyleContentPage config={roadmapPage as any} routePath="/roadmap" />;
 }

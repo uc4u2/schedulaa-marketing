@@ -1,6 +1,6 @@
-import LegacyConfigPage from '@/components/legacy/LegacyConfigPage';
+import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
 import { payrollPages } from '@/legacy-content/payroll/config';
 
 export default function PayrollCanadaPage() {
-  return <LegacyConfigPage config={payrollPages.canada} />;
+  return <FeatureStyleContentPage config={payrollPages.canada as any} routePath="/payroll/canada" />;
 }

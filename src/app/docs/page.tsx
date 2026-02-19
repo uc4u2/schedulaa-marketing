@@ -1,4 +1,4 @@
-import LegacyConfigPage from '@/components/legacy/LegacyConfigPage';
+import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
 import { docsPage } from '@/legacy-content/docs/config';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function DocsPage() {
-  return <LegacyConfigPage config={docsPage} />;
+  return <FeatureStyleContentPage config={docsPage as any} routePath="/docs" />;
 }

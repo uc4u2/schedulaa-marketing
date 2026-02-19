@@ -1,4 +1,4 @@
-import LegacyConfigPage from '@/components/legacy/LegacyConfigPage';
+import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
 import { industriesPage } from '@/legacy-content/batch2/config';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function IndustriesPage() {
-  return <LegacyConfigPage config={industriesPage} />;
+  return <FeatureStyleContentPage config={industriesPage as any} routePath="/industries" />;
 }

@@ -1,4 +1,4 @@
-import LegacyConfigPage from '@/components/legacy/LegacyConfigPage';
+import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
 import { workforcePage } from '@/legacy-content/batch2/config';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function WorkforcePage() {
-  return <LegacyConfigPage config={workforcePage} />;
+  return <FeatureStyleContentPage config={workforcePage as any} routePath="/workforce" />;
 }

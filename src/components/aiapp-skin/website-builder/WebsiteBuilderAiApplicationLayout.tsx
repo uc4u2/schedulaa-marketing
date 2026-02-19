@@ -76,6 +76,38 @@ export default function WebsiteBuilderAiApplicationLayout({ page }: { page: Buil
               </article>
             ))}
           </StaggerGrid>
+
+          {page.sections[1]?.items?.length ? (
+            <div className="space-y-6">
+              <AnimatedSection>
+                <div className="space-y-3 text-center">
+                  {page.sections[1].overline ? <span className="badge badge-cyan-v2">{page.sections[1].overline}</span> : null}
+                  <h3>{page.sections[1].title}</h3>
+                </div>
+              </AnimatedSection>
+              <StaggerGrid className="grid grid-cols-12 gap-5" childSelector="[data-stagger-item]">
+                {page.sections[1].items.map((item) => (
+                  <article
+                    key={item.title}
+                    data-stagger-item
+                    className="col-span-12 md:col-span-6 lg:col-span-4 rounded-[20px] bg-white p-5 shadow-1 dark:bg-background-8"
+                  >
+                    <h3 className="text-heading-5">{item.title}</h3>
+                    <p className="mt-2">{item.body}</p>
+                    {item.links?.length ? (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {item.links.map((link) => (
+                          <Link key={`${item.title}-${link.href}`} href={mapHref(link.href, locale)} className="btn btn-white btn-sm dark:btn-transparent dark:hover:btn-accent">
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : null}
+                  </article>
+                ))}
+              </StaggerGrid>
+            </div>
+          ) : null}
         </div>
       </section>
 
