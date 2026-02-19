@@ -12,17 +12,13 @@ import { buildAppUrl, buildBillingUrl, marketingReturnTo } from '@/utils/appLink
 import { AppLocale, withLocalePath } from '@/utils/locale';
 
 import newArrow from '@public/images/icons/new-arrow.svg';
-import googleLogo from '@public/images/icons/google.svg';
-import microsoftLogo from '@public/images/icons/microsoft.svg';
-import appleLogo from '@public/images/icons/apple.svg';
 import stripeLogo from '@public/images/icons/stripe.svg';
+import googleMeetLogo from '@public/images/icons/google-meet.svg';
+import gmailLogo from '@public/images/icons/gmail.svg';
+import driveGoogleLogo from '@public/images/icons/drive-google.svg';
 import dropboxLogo from '@public/images/icons/dropbox-v2.svg';
 import notionLogo from '@public/images/icons/notion-v2.svg';
 import slackLogo from '@public/images/icons/slack.svg';
-import asanaLogo from '@public/images/icons/asana.svg';
-import youtubeLogo from '@public/images/icons/youtube.svg';
-import discordLogo from '@public/images/icons/discord.svg';
-import figmaLogo from '@public/images/icons/figma.svg';
 import analyticsMain from '@public/images/marketing/analytics-main.png';
 import analyticsBoard from '@public/images/marketing/analytics-board.png';
 import analyticsA from '@public/images/marketing/analytics-side-a.png';
@@ -133,17 +129,13 @@ const compareCards = [
 ];
 
 const logoList = [
-  { src: googleLogo, alt: 'Google logo' },
-  { src: microsoftLogo, alt: 'Microsoft logo' },
-  { src: appleLogo, alt: 'Apple logo' },
-  { src: stripeLogo, alt: 'Stripe logo' },
-  { src: dropboxLogo, alt: 'Dropbox logo' },
-  { src: notionLogo, alt: 'Notion logo' },
-  { src: slackLogo, alt: 'Slack logo' },
-  { src: asanaLogo, alt: 'Asana logo' },
-  { src: youtubeLogo, alt: 'YouTube logo' },
-  { src: discordLogo, alt: 'Discord logo' },
-  { src: figmaLogo, alt: 'Figma logo' },
+  { src: stripeLogo, alt: 'Stripe integration' },
+  { src: googleMeetLogo, alt: 'Google Meet integration' },
+  { src: gmailLogo, alt: 'Gmail integration' },
+  { src: driveGoogleLogo, alt: 'Google Drive integration' },
+  { src: slackLogo, alt: 'Slack integration' },
+  { src: dropboxLogo, alt: 'Dropbox integration' },
+  { src: notionLogo, alt: 'Notion integration' },
 ];
 
 const pillarMedia = [featureCard1, featureCard2, featureCard3, featureCard4, featureCard5, featureCard6];

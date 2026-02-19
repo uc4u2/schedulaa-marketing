@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 import pricingSource from '@/legacy-content/pricing/landing-pricing.json';
-import Pricing from '@/components/pricing/Pricing';
+import PricingForexLayout from '@/components/forex-skin/pricing/PricingForexLayout';
 import { defaultMetadata } from '@/utils/generateMetaData';
 
 export const metadata: Metadata = {
@@ -11,9 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function PricingPage() {
-  return (
-    <main className="bg-background-1 dark:bg-background-6 overflow-x-hidden">
-      <Pricing />
-    </main>
-  );
+  return <PricingForexLayout />;
 }

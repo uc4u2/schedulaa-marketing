@@ -1,6 +1,6 @@
 import { headers } from 'next/headers';
 import { Metadata } from 'next';
-import HomeAiApplicationLayout from '@/components/aiapp-skin/home/HomeAiApplicationLayout';
+import HomeForexLayout from '@/components/forex-skin/home/HomeForexLayout';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { AppLocale } from '@/utils/locale';
 
@@ -30,5 +30,5 @@ export const metadata: Metadata = {
 export default async function Homepage() {
   const locale = await getLocale();
 
-  return <HomeAiApplicationLayout locale={locale} />;
+  return <HomeForexLayout locale={locale} />;
 }

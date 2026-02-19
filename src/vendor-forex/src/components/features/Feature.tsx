@@ -1,0 +1,50 @@
+import { CheckIcon } from '@/icons';
+import aboutBg from '@public/images/ns-img-14.png';
+import Image from 'next/image';
+import source from '@/legacy-content/features/landing-features.json';
+import RevealAnimation from '../animation/RevealAnimation';
+import LinkButton from '../ui/button/LinkButton';
+
+const platformPoints = Object.values(source.platformMap.points || {});
+
+const Feature = () => {
+  return (
+    <section>
+      <RevealAnimation delay={0.2}>
+        <div className="main-container">
+          <div className="relative z-10">
+            <div className="absolute top-0 right-0 bottom-0 left-0 -z-10 overflow-hidden rounded-[20px]">
+              <Image src={aboutBg} alt="about bg" className="h-full w-full object-cover" />
+            </div>
+            <div className="grid grid-cols-2 gap-5 px-6 py-14 max-lg:grid-cols-1 max-sm:gap-10 lg:px-11">
+              <div className="max-w-[560px]">
+                <span className="badge badge-green mb-5">Platform Map</span>
+                <h2 className="text-accent sm:text-heading-5 text-heading-6 mb-6">{source.platformMap.title}</h2>
+                <p className="mb-8 text-accent/70">{source.platformMap.subtitle}</p>
+                <LinkButton
+                  href="/booking"
+                  className="btn btn-primary btn-accent dark:btn-dark hover:btn-primary btn-md btn border-0">
+                  {source.platformMap.primaryCta.label}
+                </LinkButton>
+              </div>
+              <div>
+                <ul className="space-y-4">
+                  {platformPoints.map((point, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <span className="bg-accent/17 dark:bg-accent/10 flex size-5 shrink-0 items-center justify-center rounded-full">
+                        <CheckIcon className="dark:fill-accent" />
+                      </span>
+                      <span className="text-accent">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </RevealAnimation>
+    </section>
+  );
+};
+
+export default Feature;

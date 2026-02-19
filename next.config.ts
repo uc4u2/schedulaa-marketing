@@ -10,6 +10,18 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [
+      { source: '/services', destination: '/features' },
+      { source: '/contact-us', destination: '/contact' },
+      { source: '/support', destination: '/client/support' },
+      { source: '/terms-conditions', destination: '/terms' },
+      { source: '/en/services', destination: '/features' },
+      { source: '/en/contact-us', destination: '/contact' },
+      { source: '/en/support', destination: '/client/support' },
+      { source: '/en/terms-conditions', destination: '/terms' },
+      { source: '/fa/services', destination: '/features' },
+      { source: '/fa/contact-us', destination: '/contact' },
+      { source: '/fa/support', destination: '/client/support' },
+      { source: '/fa/terms-conditions', destination: '/terms' },
       { source: '/en', destination: '/' },
       { source: '/fa', destination: '/' },
       { source: '/en/:path*', destination: '/:path*' },

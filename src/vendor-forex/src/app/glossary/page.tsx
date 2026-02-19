@@ -1,0 +1,20 @@
+import CardsShow from '@/vendor-forex/src/components/glossary/CardsShow';
+import Heading from '@/vendor-forex/src/components/glossary/Heading';
+import { defaultMetadata } from '@/utils/generateMetaData';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  ...defaultMetadata,
+  title: 'Glossary - AI Software || NextSaaS',
+};
+
+const page = () => {
+  return (
+    <main className="bg-background-2 dark:bg-background-7">
+      <Heading />
+      <CardsShow />
+    </main>
+  );
+};
+
+export default page;

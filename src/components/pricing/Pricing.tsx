@@ -252,15 +252,16 @@ const Pricing = () => {
                   <td className="px-3 py-3">{comparison.rows.bestFor.business}</td>
                 </tr>
 
-                {comparisonSections.map((group) => (
-                  <tr key={`${group.section}-title`} className="border-b border-stroke-2 bg-background-3 dark:border-stroke-7 dark:bg-background-5">
+                {comparisonSections.flatMap((group) => [
+                  <tr
+                    key={`${group.section}-title`}
+                    className="border-b border-stroke-2 bg-background-3 dark:border-stroke-7 dark:bg-background-5"
+                  >
                     <td colSpan={4} className="px-3 py-3 font-semibold">
                       {group.section}
                     </td>
-                  </tr>
-                ))}
-                {comparisonSections.map((group) =>
-                  group.items.map((item) => (
+                  </tr>,
+                  ...group.items.map((item) => (
                     <tr key={`${group.section}-${item.label}`} className="border-b border-stroke-2 dark:border-stroke-7">
                       <td className="px-3 py-3">{item.label}</td>
                       <td className="px-3 py-3">{item.starter}</td>
@@ -268,7 +269,7 @@ const Pricing = () => {
                       <td className="px-3 py-3">{item.business}</td>
                     </tr>
                   )),
-                )}
+                ])}
               </tbody>
             </table>
           </div>

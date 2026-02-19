@@ -10,6 +10,7 @@ import { Metadata } from 'next';
 import { headers } from 'next/headers';
 import { ReactNode, Suspense } from 'react';
 import './globals.css';
+import '@/vendor-forex/src/app/globals.css';
 
 const SITE_URL = 'https://www.schedulaa.com';
 

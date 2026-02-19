@@ -1,6 +1,6 @@
 import { headers } from 'next/headers';
 import { Metadata } from 'next';
-import FeaturesAiApplicationLayout from '@/components/aiapp-skin/features/FeaturesAiApplicationLayout';
+import FeaturesForexLayout from '@/components/forex-skin/features/FeaturesForexLayout';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { AppLocale } from '@/utils/locale';
 
@@ -28,5 +28,5 @@ export const metadata: Metadata = {
 export default async function FeaturesPage() {
   const locale = await getLocale();
 
-  return <FeaturesAiApplicationLayout locale={locale} />;
+  return <FeaturesForexLayout locale={locale} />;
 }
