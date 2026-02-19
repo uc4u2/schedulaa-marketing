@@ -28,9 +28,9 @@ export const buildAppUrl = (
 };
 
 export const buildBillingUrl = (options?: { returnTo?: string }) =>
-  buildAppUrl('/manager/settings', {
+  buildAppUrl('/manager/dashboard', {
     returnTo: options?.returnTo,
-    params: { tab: 'billing' },
+    params: { view: 'settings', tab: 'billing' },
   });
 
 export const buildUpgradeUrl = (options: {
