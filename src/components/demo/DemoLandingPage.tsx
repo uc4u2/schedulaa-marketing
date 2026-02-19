@@ -123,7 +123,7 @@ export default function DemoLandingPage() {
             <h2 className="mb-4">3-step quick start</h2>
             <ul className="space-y-3">
               <li>
-                <p className="font-semibold">1. Login at schedulaa.com/login</p>
+                <p className="font-semibold">1. Login at app.schedulaa.com/login</p>
                 <p className="text-tagline-2">Enter the demo email + password above.</p>
               </li>
               <li>

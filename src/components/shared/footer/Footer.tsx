@@ -42,9 +42,9 @@ const Footer = ({ className }: { className?: string }) => {
             </div>
           </div>
 
-          <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-8 xl:col-span-8">
+          <div className="col-span-12 grid grid-cols-1 gap-x-0 gap-y-8 md:grid-cols-2 xl:col-span-8 xl:grid-cols-4">
             {FOOTER_SECTIONS.map((section) => (
-              <div className="col-span-12 md:col-span-4" key={section.id}>
+              <div className="col-span-1" key={section.id}>
                 <div className="space-y-8">
                   <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(section.titleKey)}</p>
                   <ul className="space-y-5">
