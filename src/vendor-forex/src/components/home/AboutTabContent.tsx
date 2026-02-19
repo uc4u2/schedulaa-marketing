@@ -3,8 +3,8 @@ import aboutPayroll from '@public/images/marketing/payroll-dashboard.png';
 import aboutCommerce from '@public/images/marketing/website-builder.png';
 import aboutAutomation from '@public/images/marketing/my-shift.png';
 import Image from 'next/image';
-import LinkButton from '@/components/ui/button/LinkButton';
-import TabContent from '@/components/ui/tab/TabContent';
+import LinkButton from '../ui/button/LinkButton';
+import TabContent from '../ui/tab/TabContent';
 
 const aboutTabsData = [
   {
