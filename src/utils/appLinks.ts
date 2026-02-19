@@ -32,3 +32,16 @@ export const buildBillingUrl = (options?: { returnTo?: string }) =>
     returnTo: options?.returnTo,
     params: { tab: 'billing' },
   });
+
+export const buildUpgradeUrl = (options: {
+  plan: string;
+  interval?: string;
+  returnTo?: string;
+}) =>
+  buildAppUrl('/upgrade', {
+    returnTo: options.returnTo,
+    params: {
+      plan: options.plan,
+      interval: options.interval || 'monthly',
+    },
+  });

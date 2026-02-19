@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import pricingSource from '@/legacy-content/pricing/landing-pricing.json';
-import { buildAppUrl, buildBillingUrl, marketingReturnTo } from '@/utils/appLinks';
+import { buildAppUrl, buildBillingUrl, buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
 import { AppLocale, detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 
 type PlanFeature = string | { type?: string; text?: string };
@@ -195,9 +195,10 @@ const Pricing = () => {
               <p className="mb-3">{plan.description}</p>
               {plan.trialNote ? <p className="mb-5 text-tagline-2 text-secondary/70 dark:text-accent/70">{plan.trialNote}</p> : null}
               <a
-                href={buildAppUrl('/register', {
+                href={buildUpgradeUrl({
+                  plan: plan.key,
+                  interval: 'monthly',
                   returnTo,
-                  params: { plan: plan.key },
                 })}
                 className="btn btn-md btn-secondary mb-5 block w-full text-center">
                 {plan.ctaLabel || 'Start free trial'}
