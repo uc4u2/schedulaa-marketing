@@ -2,7 +2,7 @@
 
 import heroShiftImg from '@public/images/marketing/shift-pre.png';
 import heroEmployeeImg from '@public/images/marketing/showcase/employee-management.png';
-import heroClientsImg from '@public/images/marketing/showcase/clients-pick2.png';
+import heroClientsImg from '@public/images/marketing/showcase/time-tracking.png';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 
