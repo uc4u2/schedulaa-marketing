@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
+import Image from 'next/image';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import StaggerGrid from '@/components/shared/motion/StaggerGrid';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
@@ -167,6 +168,23 @@ export default function FeatureStyleContentPage({
               </div>
             </AnimatedSection>
           )}
+
+          {hero.image ? (
+            <AnimatedSection>
+              <div className="mx-auto w-full max-w-[1200px] rounded-2xl border border-white/10 bg-[#0b1220]/40 p-3 backdrop-blur shadow-[0_24px_80px_rgba(0,0,0,0.55)]">
+                <div className="relative overflow-hidden rounded-[14px] before:absolute before:inset-x-0 before:top-0 before:z-10 before:h-px before:bg-white/20">
+                  <Image
+                    src={hero.image}
+                    alt={hero.imageAlt || hero.title || 'Hero preview'}
+                    width={1600}
+                    height={900}
+                    priority
+                    className="h-auto w-full"
+                  />
+                </div>
+              </div>
+            </AnimatedSection>
+          ) : null}
         </div>
       </section>
 
