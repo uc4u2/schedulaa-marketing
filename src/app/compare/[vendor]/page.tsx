@@ -4,11 +4,44 @@ import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData'
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-function getValueTone(rawValue: string) {
+function getValueTone(rawValue: string, label: string) {
   const value = String(rawValue || '').toLowerCase();
-  if (value.includes('✘') || value.includes(' no ') || value === 'no') return 'negative';
+  const isSchedulaa = String(label || '').toLowerCase().includes('schedulaa');
+
+  if (
+    value.includes('✘') ||
+    value.includes('not supported') ||
+    value.includes('calendar only') ||
+    value.includes('calendars only') ||
+    value.includes('no shift') ||
+    value.includes('no full pos') ||
+    value.includes('not designed for') ||
+    value === 'no'
+  ) {
+    return 'negative';
+  }
+
+  if (
+    value.includes('✔') ||
+    value.includes('advanced') ||
+    value.includes('integrated') ||
+    value.includes('built-in') ||
+    value.includes('operations os') ||
+    value.includes('us + canada') ||
+    value.includes('w-2') ||
+    value.includes('t4') ||
+    value.includes('roe') ||
+    value.includes('multi-location') ||
+    value.includes('branch-aware') ||
+    value.includes('clock-in') ||
+    value.includes('analytics')
+  ) {
+    return 'positive';
+  }
+
   if (value.includes('partial') || value.includes('limited') || value.includes('basic')) return 'neutral';
-  if (value.includes('✔') || value.includes('advanced') || value.includes('integrated') || value === 'yes') return 'positive';
+
+  if (isSchedulaa) return 'positive';
   return 'neutral';
 }
 
@@ -19,7 +52,7 @@ function ComparisonValueCard({
   label: string;
   value: string;
 }) {
-  const tone = getValueTone(value);
+  const tone = getValueTone(value, label);
   const toneClass =
     tone === 'positive'
       ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400'
