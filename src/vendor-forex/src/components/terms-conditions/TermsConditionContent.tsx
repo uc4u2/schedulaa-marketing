@@ -89,7 +89,7 @@ const TermsConditionContent = () => {
           </RevealAnimation>
           <RevealAnimation delay={0.4}>
             <Link
-              href="/refund-policy"
+              href="/terms"
               className="section-button btn dark:btn-accent hover:btn-primary btn-xl btn-secondary">
               <span>Learn more about our refund policy</span>
             </Link>
@@ -141,7 +141,7 @@ const TermsConditionContent = () => {
           </RevealAnimation>
           <RevealAnimation delay={0.4}>
             <Link
-              href="/privacy-policy"
+              href="/privacy"
               className="section-button btn btn-xl dark:btn-accent hover:btn-primary btn-secondary">
               <span>Read our detailed privacy policy</span>
             </Link>

@@ -19,6 +19,7 @@ const legacySeoRoutesPath = path.join(LEGACY_ROOT, 'config/seoRoutes.js');
 const compareSourcePath = path.join(ROOT, 'src/legacy-content/compare/landing-compare.json');
 const blogPostsPath = path.join(ROOT, 'src/legacy-content/blog/posts.js');
 const outputPath = path.join(ROOT, 'docs/SEO_RUNTIME_AUDIT.md');
+const appDir = path.join(ROOT, 'src/app');
 
 const normalizePath = (input) => {
   if (!input) return '/';
@@ -45,6 +46,31 @@ const routeExists = (candidate, knownRoutes) => {
   if (route.startsWith('/alternatives/')) return true;
   if (route.startsWith('/blog/')) return true;
   return false;
+};
+
+const enumerateAppRoutes = () => {
+  const routes = new Set();
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      if (entry.isFile() && entry.name === 'page.tsx') {
+        const rel = path.relative(appDir, full).replace(/\\/g, '/');
+        const route = rel.replace(/\/page\.tsx$/, '');
+        if (route === 'page.tsx') {
+          routes.add('/');
+          continue;
+        }
+        const parts = route
+          .split('/')
+          .filter(Boolean)
+          .filter((part) => part !== '[locale]' && !part.startsWith('['));
+        routes.add(parts.length ? `/${parts.join('/')}` : '/');
+      }
+    }
+  };
+  walk(appDir);
+  return routes;
 };
 
 const textFromHtml = (html) =>
@@ -109,7 +135,9 @@ const readRoutes = () => {
     [...new Set(blogPosts.map((p) => p.category).filter(Boolean))].map((slug) => normalizePath(`/blog/category/${slug}`))
   );
 
-  return new Set([...legacyRoutes, ...compareRoutes, ...alternativeRoutes, ...blogRoutes, ...categoryRoutes]);
+  const appRoutes = enumerateAppRoutes();
+
+  return new Set([...legacyRoutes, ...compareRoutes, ...alternativeRoutes, ...blogRoutes, ...categoryRoutes, ...appRoutes]);
 };
 
 const buildLocaleUrl = (baseUrl, locale, route) => `${baseUrl}/${locale}${route === '/' ? '' : route}`;
@@ -160,7 +188,15 @@ async function main() {
   const brokenLinkCandidates = new Map();
   for (const item of results.filter((r) => r.status === 200)) {
     for (const href of item.links) {
-      if (href.startsWith('/_next/') || href.startsWith('/api/')) continue;
+      if (
+        href.startsWith('/_next/') ||
+        href.startsWith('/api/') ||
+        href.startsWith('/cdn-cgi/') ||
+        href === '/favicon.ico' ||
+        href === '/sitemap.xml'
+      ) {
+        continue;
+      }
       if (!routeExists(href, knownRoutes)) {
         const key = `${item.locale}:${item.route}`;
         const arr = brokenLinkCandidates.get(key) || [];

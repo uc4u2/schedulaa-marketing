@@ -62,19 +62,19 @@ const policyLinks: PlanSupportLink[] = [
   {
     title: 'Terms & Conditions',
     description: 'Learn more about this',
-    href: '/terms-conditions',
+    href: '/terms',
     icon: TermsConditionsIcon,
   },
   {
     title: 'Privacy Policy',
     description: 'Learn more about this',
-    href: '/privacy-policy',
+    href: '/privacy',
     icon: PrivacyIcon,
   },
   {
     title: 'Refund Policy',
     description: 'Learn more about this',
-    href: '/refund-policy',
+    href: '/terms',
     icon: RefundPolicyIcon,
   },
   {

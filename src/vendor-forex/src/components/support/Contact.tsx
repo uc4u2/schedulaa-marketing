@@ -79,7 +79,7 @@ const Contact = () => {
                     htmlFor="agree-terms"
                     className="text-tagline-3 text-secondary/60 dark:text-accent/60 cursor-pointer">
                     I agree with the
-                    <Link href="/terms-conditions" className="text-primary-500 text-tagline-3 underline">
+                    <Link href="/terms" className="text-primary-500 text-tagline-3 underline">
                       terms and conditions
                     </Link>
                   </label>

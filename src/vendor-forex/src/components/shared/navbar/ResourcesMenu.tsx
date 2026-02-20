@@ -129,12 +129,12 @@ const resourceSections: ResourceSection[] = [
       },
       {
         title: 'Privacy Policy',
-        href: '/privacy-policy',
+        href: '/privacy',
         icon: PrivacyIcon,
       },
       {
         title: 'Terms & Conditions',
-        href: '/terms-conditions',
+        href: '/terms',
         icon: RefundPolicyIcon,
       },
       {

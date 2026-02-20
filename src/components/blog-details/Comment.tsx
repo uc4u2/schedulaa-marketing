@@ -89,7 +89,7 @@ const Comment = () => {
                 <span className="border-stroke-3 dark:border-stroke-7 after:bg-primary-500 peer-checked:border-primary-500 relative size-4 cursor-pointer rounded-full border after:absolute after:top-1/2 after:left-1/2 after:size-2.5 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:opacity-0 peer-checked:after:opacity-100" />
                 <span className="text-tagline-3 text-secondary/60 dark:text-accent/60">
                   I agree with the{' '}
-                  <Link href="/terms-conditions" className="text-primary-500 text-tagline-3 underline">
+                  <Link href="/terms" className="text-primary-500 text-tagline-3 underline">
                     terms and conditions
                   </Link>
                 </span>

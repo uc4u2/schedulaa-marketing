@@ -1,7 +1,7 @@
 const BASE_URL = "https://www.schedulaa.com";
 const REGISTER_URL = "/register";
 const CONTACT_URL = "/contact";
-const LIVE_SERVICE_DEMO = "/photo-artisto/services";
+const LIVE_SERVICE_DEMO = "/demo";
 
 const sharedCta = {
   overline: "Booking, payroll, and websites together",
@@ -91,7 +91,7 @@ const bookingHubConfig = {
       title: "Shareable “Book with me” pages",
       description:
         "Let staff publish a public link for consults or interviews. Availability comes from their schedule, confirmations include Jitsi + cancel/reschedule links, and bookings flow into the Upcoming Meetings panel.",
-      link: "/recruiter/public-link",
+      link: "/demo",
       linkLabel: "Open public-link settings",
     },
     {
@@ -139,7 +139,7 @@ const bookingHubConfig = {
         "No payment required — ideal for interviews and consults.",
         "Upcoming Meetings shows public bookings with candidate details.",
       ],
-      links: [{ label: "Enable public bookings (login required)", href: "/recruiter/public-link" }],
+      links: [{ label: "Enable public bookings (login required)", href: "/demo" }],
       image: {
         src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
         alt: "Public booking link example",

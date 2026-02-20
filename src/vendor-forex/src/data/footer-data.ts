@@ -22,9 +22,9 @@ export const footerLinks: FooterData[] = [
   {
     title: 'Legal Policies',
     links: [
-      { label: 'Terms & Conditions', href: '/terms-conditions' },
-      { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Refund Policy', href: '/refund-policy' },
+      { label: 'Terms & Conditions', href: '/terms' },
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Refund Policy', href: '/terms' },
       { label: 'GDPR Compliance', href: '/gdpr' },
       { label: 'Affiliate Policy', href: '/affiliate-policy' },
     ],
