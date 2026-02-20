@@ -85,37 +85,37 @@ export default function SchedulaaAssistant() {
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="fixed right-5 bottom-5 z-[120] inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-3 text-sm font-semibold text-white shadow-[0_14px_34px_rgba(10,15,30,0.24)] transition hover:-translate-y-0.5 hover:bg-primary-500"
+          className="fixed right-5 bottom-5 z-[120] inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-[linear-gradient(135deg,#0f172a_0%,#0b2a45_55%,#154f73_100%)] px-4 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(2,12,33,0.5)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_48px_rgba(2,12,33,0.58)]"
           aria-label="Open Schedulaa Assistant"
         >
-          <span className="inline-block h-2.5 w-2.5 rounded-full bg-ns-green" />
+          <span className="inline-block h-2.5 w-2.5 rounded-full bg-lime-300 shadow-[0_0_14px_rgba(163,230,53,0.8)]" />
           Schedulaa Assistant
         </button>
       ) : (
-        <div className="fixed right-3 bottom-3 z-[130] flex h-[min(78vh,560px)] w-[min(380px,calc(100vw-24px))] flex-col overflow-hidden rounded-3xl border border-stroke-2 bg-white shadow-[0_24px_48px_rgba(8,15,35,0.2)] dark:border-stroke-7 dark:bg-background-8">
-          <div className="flex items-center justify-between border-b border-stroke-2 bg-gradient-to-r from-[#f6f9ff] via-[#f0f4ff] to-[#eef9f5] px-4 py-3 dark:border-stroke-7 dark:from-background-7 dark:via-background-8 dark:to-background-7">
+        <div className="fixed right-3 bottom-3 z-[130] flex h-[min(78vh,560px)] w-[min(390px,calc(100vw-24px))] flex-col overflow-hidden rounded-3xl border border-cyan-200/20 bg-[linear-gradient(180deg,rgba(11,18,32,0.94)_0%,rgba(7,25,41,0.94)_100%)] shadow-[0_30px_70px_rgba(4,10,24,0.62)] backdrop-blur-xl">
+          <div className="flex items-center justify-between border-b border-cyan-200/20 bg-[linear-gradient(120deg,rgba(11,20,35,0.95)_0%,rgba(10,42,67,0.95)_55%,rgba(13,65,93,0.9)_100%)] px-4 py-3">
             <div>
-              <p className="text-sm font-semibold text-secondary dark:text-white">Schedulaa Assistant</p>
-              <p className="text-xs text-secondary/70 dark:text-accent/75">Chatbot Guide & product help</p>
+              <p className="text-sm font-semibold text-white">Schedulaa Assistant</p>
+              <p className="text-xs text-cyan-100/75">Chatbot Guide & product help</p>
             </div>
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-accent/20 bg-white/90 text-base leading-none text-secondary transition hover:border-accent/35 hover:bg-white dark:bg-background-8 dark:text-white"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-cyan-200/30 bg-white/10 text-base leading-none text-cyan-50 transition hover:border-cyan-100/50 hover:bg-white/20"
               aria-label="Close assistant"
             >
               ×
             </button>
           </div>
 
-          <div className="flex-1 space-y-3 overflow-y-auto bg-white px-4 py-4 dark:bg-background-8">
+          <div className="flex-1 space-y-3 overflow-y-auto bg-transparent px-4 py-4">
             {messages.map((msg, idx) => (
               <div key={`${msg.role}-${idx}`} className={msg.role === 'user' ? 'text-right' : 'text-left'}>
                 <div
                   className={`inline-block max-w-[85%] rounded-2xl px-3 py-2 text-sm ${
                     msg.role === 'user'
-                      ? 'bg-secondary text-white shadow-sm'
-                      : 'border border-stroke-2 bg-background-3 text-secondary dark:border-stroke-7 dark:bg-background-7 dark:text-white'
+                      ? 'bg-[linear-gradient(135deg,#1d4ed8_0%,#0ea5e9_100%)] text-white shadow-[0_10px_25px_rgba(14,165,233,0.35)]'
+                      : 'border border-white/15 bg-white/8 text-cyan-50'
                   }`}
                 >
                   {msg.text}
@@ -130,7 +130,7 @@ export default function SchedulaaAssistant() {
                     key={chip}
                     type="button"
                     onClick={() => sendMessage(chip)}
-                    className="rounded-full border border-accent/20 bg-white px-3 py-1 text-xs text-secondary transition hover:border-primary-500 hover:bg-primary-500/5 hover:text-primary-600 dark:border-stroke-7 dark:bg-background-8 dark:text-white"
+                    className="rounded-full border border-cyan-200/25 bg-white/8 px-3 py-1 text-xs text-cyan-50 transition hover:border-lime-300/50 hover:bg-lime-300/15 hover:text-lime-100"
                   >
                     {chip}
                   </button>
@@ -138,11 +138,11 @@ export default function SchedulaaAssistant() {
               </div>
             )}
 
-            {loading && <p className="text-xs text-accent/70">Assistant is typing...</p>}
+            {loading && <p className="text-xs text-cyan-100/70">Assistant is typing...</p>}
           </div>
 
           <form
-            className="border-t border-stroke-2 bg-white p-3 dark:border-stroke-7 dark:bg-background-8"
+            className="border-t border-cyan-200/20 bg-transparent p-3"
             onSubmit={(e) => {
               e.preventDefault();
               sendMessage(draft);
@@ -153,12 +153,12 @@ export default function SchedulaaAssistant() {
                 value={draft}
                 onChange={(e) => setDraft(e.target.value)}
                 placeholder="Ask about payroll, booking, onboarding..."
-                className="h-10 flex-1 rounded-xl border border-accent/20 bg-background-3 px-3 text-sm text-secondary outline-none ring-primary-400 focus:border-primary-500 focus:ring-2 dark:border-stroke-7 dark:bg-background-7 dark:text-white"
+                className="h-10 flex-1 rounded-xl border border-cyan-200/25 bg-white/8 px-3 text-sm text-white outline-none ring-cyan-400 placeholder:text-cyan-50/55 focus:border-cyan-300/55 focus:ring-2"
               />
               <button
                 type="submit"
                 disabled={!canSend}
-                className="h-10 rounded-xl bg-secondary px-3 text-sm font-semibold text-white transition hover:bg-primary-500 disabled:cursor-not-allowed disabled:opacity-50"
+                className="h-10 rounded-xl border border-lime-300/45 bg-[linear-gradient(135deg,#84cc16_0%,#65a30d_100%)] px-3 text-sm font-semibold text-slate-900 transition hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Send
               </button>
