@@ -1,0 +1,427 @@
+{
+  "meta": {
+    "title": "Schedulaa \u5b9a\u4ef7 | \u5728\u81ea\u6709\u57df\u540d\u4e0a\u542f\u7528\u81ea\u52a8 SSL",
+    "description": "\u6bd4\u8f83 Starter\u3001Pro \u4e0e Business \u65b9\u6848\u3002\u6240\u6709\u65b9\u6848\u90fd\u5305\u542b\u81ea\u6709\u57df\u540d\u4e0e\u81ea\u52a8 SSL\uff0c\u4ee5\u53ca\u7f51\u7ad9\u4e0e\u9884\u7ea6\u6838\u5fc3\u529f\u80fd\uff1b\u6392\u73ed\u3001\u85aa\u8d44\u4e0e\u81ea\u52a8\u5316\u5728 Pro \u548c Business \u63d0\u4f9b\u3002",
+    "canonical": "https://www.schedulaa.com/pricing",
+    "keywords": "Schedulaa \u5b9a\u4ef7, \u9884\u7ea6\u8f6f\u4ef6\u4ef7\u683c, \u85aa\u8d44 SaaS \u4ef7\u683c, \u7f51\u7ad9\u6784\u5efa\u65b9\u6848",
+    "og": {
+      "title": "Schedulaa \u5b9a\u4ef7",
+      "description": "\u9002\u7528\u4e8e\u6bcf\u4e2a\u9636\u6bb5\u7684\u65b9\u6848\u3002\u6240\u6709\u65b9\u6848\u5747\u5305\u542b\u81ea\u6709\u57df\u540d\u4e0e\u81ea\u52a8 SSL\u3002",
+      "image": "https://www.schedulaa.com/og/pricing.jpg"
+    }
+  },
+  "hero": {
+    "eyebrow": "\u53ef\u6269\u5c55\u7684\u5b9a\u4ef7",
+    "title": [
+      "\u968f\u4e1a\u52a1\u6210\u957f\u7684\u5b9a\u4ef7\u3002",
+      "\u5728\u81ea\u6709\u57df\u540d\u4e0a\u81ea\u52a8\u542f\u7528 SSL\u3002"
+    ],
+    "subtitle": "\u81ea\u6709\u57df\u540d\uff08TXT/CNAME\uff09\u4e0e\u81ea\u52a8 SSL \u5df2\u5305\u542b\u5728\u6240\u6709\u65b9\u6848\u4e2d\u3002Starter \u63d0\u4f9b\u7f51\u7ad9\u4e0e\u9884\u7ea6\u57fa\u7840\uff0cPro \u4e0e Business \u589e\u52a0\u5458\u5de5\u6392\u73ed\u3001\u85aa\u8d44\u4e0e\u81ea\u52a8\u5316\u3002",
+    "primaryCta": {
+      "label": "\u5f00\u59cb\u514d\u8d39\u8bd5\u7528"
+    },
+    "secondaryCta": {
+      "label": "\u5bf9\u6bd4\u65b9\u6848"
+    },
+    "badge": {
+      "overline": "\u5168\u65b0\u80fd\u529b",
+      "title": "\u81ea\u6709\u57df\u540d + \u81ea\u52a8 SSL"
+    },
+    "mediaAlt": "Schedulaa \u5b9a\u4ef7\u4e0e\u5e73\u53f0\u6982\u89c8"
+  },
+  "promo": {
+    "starterBadge": "5\u6298\u4f18\u60e0",
+    "starterNote": "${{discounted}} / \u6708\uff0c\u524d {{months}} \u4e2a\u6708\u3002\u4e4b\u540e ${{base}} / \u6708"
+  },
+  "plans": {
+    "table": {
+      "list": [
+        {
+          "key": "starter",
+          "name": "Starter",
+          "price": "$19.99/\u6bcf\u6708",
+          "description": "\u4e3a\u4e2a\u4eba\u4e13\u4e1a\u4eba\u58eb\u542f\u52a8\u7f51\u7ad9\u5e76\u63a5\u53d7\u9884\u7ea6\u4e0e\u652f\u4ed8\u3002",
+          "trialNote": "14 \u5929\u514d\u8d39\u8bd5\u7528 \u2022 \u968f\u65f6\u53d6\u6d88",
+          "features": [
+            {
+              "type": "heading",
+              "text": "\u6838\u5fc3\u5e73\u53f0"
+            },
+            "\u9884\u7ea6\u3001\u7f51\u7ad9\u4e0e\u652f\u4ed8\u4e00\u4f53\u5316\u3002",
+            "\u5b89\u5168\u7684\u5ba2\u6237\u4e0e\u5458\u5de5\u95e8\u6237\u3002",
+            "\u7f51\u7ad9\u6784\u5efa\u5668\uff0c\u5e26\u54c1\u724c\u9875\u9762\u4e0e\u6a21\u677f\u3002",
+            "\u5728\u7ebf\u9884\u7ea6\u3001\u786e\u8ba4\u90ae\u4ef6\u4e0e\u5ba2\u6237\u95e8\u6237\u3002",
+            "\u516c\u5f00\u201c\u4e0e\u6211\u9884\u7ea6\u201d\u94fe\u63a5\u3002",
+            "Stripe Checkout \u81ea\u52a8\u7a0e\u52a1\u5408\u89c4\u3002",
+            {
+              "type": "heading",
+              "text": "\u8fd0\u8425\u57fa\u7840"
+            },
+            "\u9884\u7ea6\u901a\u77e5\u4e0e\u63d0\u9192\u3002",
+            "\u53ef\u5d4c\u5165\u7684\u9884\u7ea6\u7ec4\u4ef6\u3002",
+            "Stripe \u9000\u6b3e\u4e0e\u652f\u4ed8\u8bb0\u5f55\u3002",
+            "\u57fa\u7840\u89d2\u8272\u6743\u9650\u3002",
+            {
+              "type": "heading",
+              "text": "\u65f6\u95f4\u4e0e\u62a5\u8868"
+            },
+            "\u4e0e\u9884\u7ea6/\u73ed\u6b21\u5173\u8054\u7684\u57fa\u7840\u5de5\u65f6\u8bb0\u5f55\u3002",
+            "\u5bfc\u51fa\u5de5\u65f6\u4e0e\u8425\u6536 CSV/PDF\u3002",
+            {
+              "type": "heading",
+              "text": "\u5bb9\u91cf"
+            },
+            "\u5305\u542b 1 \u4e2a\u5458\u5de5\u5e2d\u4f4d\u548c 1 \u4e2a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u3002",
+            "\u81ea\u6709\u57df\u540d + \u81ea\u52a8 SSL \u5df2\u5305\u542b\u3002",
+            "\u53ef\u5347\u7ea7\u81f3\u5458\u5de5\u5165\u804c\u6d41\u7a0b\u3002"
+          ],
+          "ctaLabel": "\u5f00\u59cb 14 \u5929\u514d\u8d39\u8bd5\u7528",
+          "ctaTo": "/register"
+        },
+        {
+          "key": "pro",
+          "name": "Pro",
+          "price": "$49.99/\u6bcf\u6708",
+          "positioning": "\u7528\u4e00\u4e2a\u7cfb\u7edf\u7ba1\u7406\u65e5\u5e38\u8fd0\u8425\u3002",
+          "description": "\u9002\u5408\u9700\u8981\u6392\u73ed\u3001\u81ea\u52a8\u5316\u4e0e\u5206\u6790\u7684\u6210\u957f\u56e2\u961f\u3002",
+          "trialNote": "14 \u5929\u514d\u8d39\u8bd5\u7528 \u2022 \u968f\u65f6\u53d6\u6d88",
+          "features": [
+            "\u5305\u542b Starter \u6240\u6709\u529f\u80fd\u3002",
+            {
+              "type": "heading",
+              "text": "\u65f6\u95f4\u4e0e\u52b3\u52a8\u529b"
+            },
+            "\u6309\u73ed\u6b21\u6253\u5361\u4e0a\u4e0b\u73ed\u3002",
+            "\u4f11\u606f\u65f6\u95f4\u89c4\u5219\u4e0e\u81ea\u52a8\u6263\u9664\u3002",
+            "\u52a0\u73ed\u4e0e\u5f02\u5e38\u63d0\u9192\u3002",
+            {
+              "type": "heading",
+              "text": "\u85aa\u8d44"
+            },
+            "\u5b8c\u6574\u85aa\u8d44\u8fd0\u884c\uff08\u65e0\u5355\u6b21\u8d39\u7528\uff09\u3002",
+            "\u85aa\u8d44\u5ba1\u6279\u4e0e\u5ba1\u8ba1\u8bb0\u5f55\u3002",
+            "\u5bfc\u51fa\u5230 QuickBooks \u4e0e Xero\u3002",
+            "\u85aa\u8d44\u53d1\u653e\u4e0e\u5458\u5de5\u5de5\u8d44\u5355\u95e8\u6237\uff08\u81ea\u52a9 PDF\uff09\u3002",
+            {
+              "type": "heading",
+              "text": "\u8bbf\u95ee\u4e0e\u63a7\u5236"
+            },
+            "\u7ecf\u7406\u4e0e\u5458\u5de5\u7684\u89d2\u8272\u6743\u9650\u3002",
+            "\u5458\u5de5\u6743\u9650\u4e0e\u53ef\u89c1\u6027\u63a7\u5236\u3002",
+            "\u90e8\u95e8\u6392\u73ed\u4e0e\u5171\u4eab\u65e5\u5386\u3002",
+            "\u6362\u73ed\u3001\u5ba1\u6279\u4e0e\u5b9e\u65f6\u6392\u73ed\u8868\u3002",
+            {
+              "type": "heading",
+              "text": "\u5206\u6790\u4e0e\u8425\u9500"
+            },
+            "\u90ae\u4ef6\u6d3b\u52a8\uff1a\u7fa4\u53d1\u3001\u53ec\u56de\u3001VIP\u3001\u723d\u7ea6\u3001\u5468\u5e74\u3002",
+            "\u9ad8\u7ea7\u5206\u6790\uff08\u9884\u7ea6\u3001\u8425\u6536\u3001\u5ba2\u6237\u5206\u7fa4\uff09\u3002",
+            {
+              "type": "heading",
+              "text": "\u5bb9\u91cf"
+            },
+            "\u5305\u542b\u6700\u591a 5 \u4e2a\u5458\u5de5\u5e2d\u4f4d\u4e0e 1 \u4e2a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u3002",
+            "\u52a0\u62ff\u5927\u6cd5\u5b9a\u5047\u65e5\u5de5\u8d44\u4e0e\u7d2f\u79ef\u81ea\u52a8\u5316\u3002",
+            "\u4f18\u5148\u652f\u6301\uff08\u5de5\u4f5c\u65f6\u95f4\uff09\u3002"
+          ],
+          "ctaLabel": "\u5f00\u59cb 14 \u5929\u514d\u8d39\u8bd5\u7528",
+          "ctaTo": "/register",
+          "highlight": true,
+          "badge": "\u6700\u53d7\u6b22\u8fce"
+        },
+        {
+          "key": "business",
+          "name": "Business",
+          "price": "$119.99/\u6bcf\u6708",
+          "description": "\u9002\u7528\u4e8e\u5408\u89c4\u3001\u5ba1\u8ba1\u53ca\u591a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u8fd0\u8425\u3002",
+          "trialNote": "14 \u5929\u514d\u8d39\u8bd5\u7528 \u2022 \u968f\u65f6\u53d6\u6d88",
+          "features": [
+            "\u5305\u542b Pro \u6240\u6709\u529f\u80fd\u3002",
+            {
+              "type": "heading",
+              "text": "\u65f6\u95f4\u4e0e\u52b3\u52a8\u529b"
+            },
+            "\u6309\u73ed\u6b21\u6253\u5361\u4e0a\u4e0b\u73ed\u5e76\u5f3a\u5236\u4f11\u606f\u3002",
+            "\u52a0\u73ed\u3001\u5f02\u5e38\u4e0e\u5ba1\u8ba1\u7ea7\u5de5\u65f6\u8bb0\u5f55\u3002",
+            {
+              "type": "heading",
+              "text": "\u85aa\u8d44"
+            },
+            "\u5b8c\u6574\u85aa\u8d44\u8fd0\u884c\uff08\u65e0\u5355\u6b21\u8d39\u7528\uff09\u3002",
+            {
+              "type": "heading",
+              "text": "\u6cbb\u7406\u4e0e\u5408\u89c4"
+            },
+            "\u5ba1\u8ba1\u5c31\u7eea\u7684\u85aa\u8d44\u4e0e\u5408\u89c4\u8bb0\u5f55\u3002",
+            "\u7a0e\u52a1\u5408\u89c4\u5bfc\u51fa\uff08W-2\u3001T4\u3001ROE\uff09\u3002",
+            "\u591a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u7684\u85aa\u8d44\u4e0e\u62a5\u8868\u3002",
+            {
+              "type": "heading",
+              "text": "\u9ad8\u7ea7\u63a7\u5236"
+            },
+            "\u5206\u652f\u7ea7\u6743\u9650\u3002",
+            "\u6279\u91cf\u6392\u73ed\u63a7\u5236\uff08\u5173\u95ed/\u4fdd\u7559\u65f6\u95f4\u7a97\uff09\u3002",
+            "\u964d\u4f4e\u5408\u89c4\u98ce\u9669\u7684\u53ef\u5ba1\u8ba1\u8fd0\u8425\u3002",
+            {
+              "type": "heading",
+              "text": "\u5bb9\u91cf"
+            },
+            "\u5305\u542b 10 \u4e2a\u5458\u5de5\u5e2d\u4f4d\u4e0e\u6700\u591a 5 \u4e2a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u3002",
+            "\u6bcf\u65b0\u589e\u5e2d\u4f4d $9/\u6708\u3002",
+            "\u4f7f\u7528\u85aa\u8d44 + \u6392\u73ed\u53ef\u514d\u8d39\u83b7\u5f97\u54c1\u724c\u7f51\u7ad9\u3002"
+          ],
+          "ctaLabel": "\u5f00\u59cb 14 \u5929\u514d\u8d39\u8bd5\u7528",
+          "ctaTo": "/register"
+        }
+      ],
+      "addons": {
+        "title": "\u70ed\u95e8\u9644\u52a0\u529f\u80fd",
+        "headers": {
+          "addon": "\u9644\u52a0\u9879",
+          "price": "\u4ef7\u683c"
+        },
+        "items": [
+          {
+            "key": "extraSeat",
+            "name": "\u989d\u5916\u5458\u5de5\u5e2d\u4f4d",
+            "price": "$9/\u6bcf\u6708/\u5e2d\u4f4d\uff08\u6309\u6bd4\u4f8b\uff09"
+          }
+        ]
+      }
+    }
+  },
+  "assurances": {
+    "eyebrow": "\u6240\u9700\u4e00\u5e94\u4ff1\u5168",
+    "title": "\u900f\u660e\u5b9a\u4ef7\uff0c\u4f01\u4e1a\u7ea7\u5e73\u53f0",
+    "subtitle": "\u5b89\u5168\u3001\u53ef\u6269\u5c55\u4e14\u9ad8\u901f\uff1a\u5728\u4e00\u4e2a\u540e\u53f0\u5b8c\u6210\u54c1\u724c\u7f51\u7ad9\u3001\u652f\u4ed8\u4e0e\u85aa\u8d44\u81ea\u52a8\u5316\u3002",
+    "items": [
+      {
+        "key": "noHiddenFees",
+        "title": "\u65e0\u9690\u85cf\u8d39\u7528",
+        "description": "\u57fa\u4e8e Stripe \u7684\u7b80\u6d01\u8d39\u7387\u7ed3\u6784\u3002"
+      },
+      {
+        "key": "switchPlans",
+        "title": "\u968f\u65f6\u5207\u6362\u65b9\u6848",
+        "description": "\u968f\u7740\u56e2\u961f\u6210\u957f\u81ea\u7531\u5347\u7ea7\u6216\u964d\u7ea7\uff0c\u81ea\u6709\u57df\u540d\u7acb\u5373\u751f\u6548\u3002"
+      },
+      {
+        "key": "professionReady",
+        "title": "\u54c1\u724c\u7f51\u7ad9",
+        "description": "\u6240\u6709\u65b9\u6848\u90fd\u5305\u542b TXT/CNAME \u9a8c\u8bc1\u7684\u81ea\u6709\u57df\u540d\u4e0e\u81ea\u52a8 SSL\u3002"
+      },
+      {
+        "key": "enterpriseOnboarding",
+        "title": "\u4f01\u4e1a\u7ea7\u4e0a\u7ebf",
+        "description": "\u591a\u95e8\u5e97\u4e0a\u7ebf\u6307\u5bfc\uff0c\u5305\u542b\u7a0e\u52a1\u4e0e\u85aa\u8d44\u6620\u5c04\u3002"
+      },
+      {
+        "key": "roleAccess",
+        "title": "\u57fa\u4e8e\u89d2\u8272\u7684\u6743\u9650",
+        "description": "\u7ecf\u7406\u3001\u5458\u5de5\u4e0e\u8d22\u52a1\u89d2\u8272\u9ed8\u8ba4\u4fdd\u62a4\u6392\u73ed\u4e0e\u85aa\u8d44\u6570\u636e\u3002"
+      },
+      {
+        "key": "globalPayments",
+        "title": "\u652f\u6301\u5168\u7403\u652f\u4ed8",
+        "description": "Stripe Checkout \u652f\u6301\u9000\u6b3e\u3001\u4fdd\u5b58\u5361\u7247\u4e0e\u8de8\u5883\u7ed3\u7b97\u3002"
+      }
+    ]
+  },
+  "ribbon": {
+    "message": "<strong>\u5168\u65b0\u4e0a\u7ebf\uff1a</strong> \u81ea\u6709\u57df\u540d\uff08TXT/CNAME\uff09\u4e0e\u81ea\u52a8 SSL \u5df2\u5305\u542b\u5728\u6240\u6709\u65b9\u6848\u4e2d\u3002",
+    "buttonLabel": "\u8fde\u63a5\u57df\u540d",
+    "buttonTo": "/manager/dashboard"
+  },
+  "footnote": {
+    "message": "<strong>\u81ea\u6709\u57df\u540d + \u81ea\u52a8 SSL\uff1a</strong> \u5df2\u5305\u542b\u5728<strong>\u6240\u6709\u65b9\u6848</strong>\u4e2d\u3002"
+  },
+  "ctaBanner": {
+    "eyebrow": "\u7acb\u5373\u542f\u7528",
+    "title": "\u7acb\u5373\u5f00\u59cb\u514d\u8d39\u8bd5\u7528 - \u65e0\u9700\u4fe1\u7528\u5361",
+    "description": "\u5c06\u6392\u73ed\u3001\u652f\u4ed8\u4e0e\u85aa\u8d44\u96c6\u4e2d\u5728\u4e00\u4e2a\u540e\u53f0\uff0c\u5728\u81ea\u6709\u57df\u540d\u4e0a\u81ea\u52a8\u542f\u7528 SSL\u3002",
+    "primaryCta": {
+      "label": "\u5f00\u59cb\u514d\u8d39\u8bd5\u7528"
+    },
+    "secondaryCta": {
+      "label": "\u8054\u7cfb\u9500\u552e\u56e2\u961f"
+    }
+  },
+  "included": {
+    "title": "\u6240\u6709\u8ba1\u5212\u5747\u5305\u542b",
+    "items": [
+      "\u81ea\u5b9a\u4e49\u57df\u540d\u4e0e\u81ea\u52a8 SSL\u3002",
+      "\u57fa\u4e8e\u89d2\u8272\u7684\u8bbf\u95ee\u4e0e\u5458\u5de5\u6743\u9650\u3002",
+      "\u90ae\u4ef6\u4e0e\u9884\u7ea6\u901a\u77e5\u3002",
+      "\u5b89\u5168\u7684 Stripe \u652f\u4ed8\u4e0e\u9000\u6b3e\u3002",
+      "\u6301\u7eed\u529f\u80fd\u66f4\u65b0\u3002"
+    ]
+  },
+  "comparison": {
+    "title": "Schedulaa \u529f\u80fd\u5bf9\u6bd4",
+    "subtitle": "\u4e00\u76ee\u4e86\u7136\u5bf9\u6bd4\u5404\u8ba1\u5212\u3002",
+    "headers": {
+      "feature": "\u529f\u80fd",
+      "starter": "Starter",
+      "pro": "Pro",
+      "business": "Business"
+    },
+    "values": {
+      "yes": "\u662f",
+      "dash": "\u2014",
+      "businessHours": "\u5de5\u4f5c\u65f6\u95f4",
+      "always": "24 / 7"
+    },
+    "rows": {
+      "price": {
+        "label": "\u4ef7\u683c",
+        "starter": "$19.99 / \u6708",
+        "pro": "$49.99 / \u6708",
+        "business": "$119.99 / \u6708"
+      },
+      "bestFor": {
+        "label": "\u9002\u5408\u5bf9\u8c61",
+        "starter": "\u4e2a\u4eba\u4ece\u4e1a\u8005",
+        "pro": "\u6210\u957f\u578b\u56e2\u961f",
+        "business": "\u5408\u89c4\u4e0e\u591a\u5730\u70b9\u56e2\u961f"
+      },
+      "website": {
+        "section": "\u7f51\u7ad9\u4e0e\u5728\u7ebf\u5f62\u8c61",
+        "builder": "\u54c1\u724c\u7f51\u7ad9\u6784\u5efa\u4e0e\u6a21\u677f",
+        "customDomain": "\u81ea\u5b9a\u4e49\u57df\u540d + \u81ea\u52a8 SSL",
+        "publicBooking": "\u516c\u5f00\u9884\u7ea6\u9875\u9762",
+        "embedded": "\u53ef\u5d4c\u5165\u9884\u7ea6\u7ec4\u4ef6",
+        "branding": "\u516c\u53f8\u7ea7\u54c1\u724c"
+      },
+      "booking": {
+        "section": "\u9884\u7ea6\u4e0e\u6392\u7a0b",
+        "online": "\u5728\u7ebf\u9884\u7ea6\u4e0e\u786e\u8ba4",
+        "reschedule": "\u5ba2\u6237\u81ea\u52a9\u6539\u671f",
+        "multi": "\u591a\u670d\u52a1\u4e0e\u52a0\u8d2d",
+        "staffScheduling": "\u5458\u5de5\u6392\u73ed\u4e0e\u73ed\u6b21\u7ba1\u7406",
+        "shiftSwaps": "\u73ed\u6b21\u4e92\u6362\u4e0e\u8bf7\u5047\u5ba1\u6279",
+        "bulk": "\u6279\u91cf\u6392\u73ed\u63a7\u5236"
+      },
+      "time": {
+        "section": "\u5de5\u65f6\u8ffd\u8e2a",
+        "clock": "\u57fa\u4e8e\u73ed\u6b21\u7684\u6253\u5361",
+        "breakPolicy": "\u4f11\u606f\u653f\u7b56\u6267\u884c",
+        "staggered": "\u9519\u5cf0\u4e0e\u7a97\u53e3\u5316\u4f11\u606f",
+        "ipHints": "IP/\u8bbe\u5907\u5ba1\u8ba1\u63d0\u793a",
+        "overtime": "\u52a0\u73ed\u4e0e\u5f02\u5e38\u6807\u8bb0"
+      },
+      "payroll": {
+        "section": "\u85aa\u8d44",
+        "processing": "\u85aa\u8d44\u5904\u7406\uff08\u7f8e\u56fd\u4e0e\u52a0\u62ff\u5927\uff09",
+        "holiday": "\u6cd5\u5b9a\u8282\u5047\u65e5\u4e0e\u7d2f\u79ef\u8ba1\u63d0",
+        "payslip": "\u5458\u5de5\u5de5\u8d44\u5355\u95e8\u6237\uff08PDF\uff09",
+        "exports": "\u9ad8\u7ea7\u85aa\u8d44\u5bfc\u51fa\u4e0e\u5ba1\u8ba1",
+        "invoicing": "\u4e0e\u85aa\u8d44\u5173\u8054\u7684\u5f00\u7968"
+      },
+      "compliance": {
+        "section": "\u5408\u89c4",
+        "revenueReports": "\u6536\u5165\u4e0e\u9884\u7ea6\u62a5\u544a",
+        "exports": "CSV / PDF \u5bfc\u51fa",
+        "w2": "W\u20112\uff08\u7f8e\u56fd\uff09",
+        "t4": "T4 \u4e0e ROE\uff08\u52a0\u62ff\u5927\uff09",
+        "audit": "\u5408\u89c4\u5ba1\u8ba1\u8ddf\u8e2a"
+      },
+      "analytics": {
+        "section": "\u5206\u6790",
+        "revenueDash": "\u6536\u5165\u4e0e\u9884\u7ea6\u4eea\u8868\u76d8",
+        "utilization": "\u5229\u7528\u7387\u4e0e\u6548\u7387\u5206\u6790",
+        "segmentation": "\u5ba2\u6237\u7ec6\u5206\u4e0e\u8d8b\u52bf",
+        "multiLocation": "\u591a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u5206\u6790"
+      },
+      "automation": {
+        "section": "\u81ea\u52a8\u5316",
+        "notifications": "\u90ae\u4ef6\u901a\u77e5\u4e0e\u63d0\u9192",
+        "campaigns": "\u90ae\u4ef6\u8425\u9500\uff08VIP/\u5524\u56de/\u7f3a\u5e2d\uff09",
+        "zapier": "Zapier \u81ea\u52a8\u5316",
+        "workflows": "\u6d41\u7a0b\u81ea\u52a8\u5316"
+      },
+      "hiring": {
+        "section": "\u62db\u8058",
+        "jobs": "\u804c\u4f4d\u53d1\u5e03\u4e0e\u516c\u5f00\u7533\u8bf7",
+        "resume": "\u7b80\u5386\u4e0a\u4f20\u4e0e\u8ddf\u8e2a",
+        "onboarding": "\u5165\u804c\u6d41\u7a0b",
+        "handoff": "\u62db\u8058\u5230\u85aa\u8d44\u4ea4\u63a5"
+      },
+      "scale": {
+        "section": "\u89c4\u6a21",
+        "seatsIncluded": "\u5305\u542b\u5458\u5de5\u5e2d\u4f4d",
+        "starterSeats": "1",
+        "proSeats": "\u6700\u591a 5",
+        "businessSeats": "10",
+        "additionalSeats": "\u989d\u5916\u5458\u5de5\u5e2d\u4f4d",
+        "seatPrice": "$9 / \u4f4d",
+        "multiLocation": "\u591a\u5730\u70b9\u652f\u6301\uff08\u90e8\u95e8\uff09",
+        "starterLocations": "1",
+        "proLocations": "1",
+        "businessLocations": "\u6700\u591a 2",
+        "roleAccess": "\u89d2\u8272\u6743\u9650",
+        "starterAccess": "\u57fa\u7840",
+        "proAccess": "\u9ad8\u7ea7",
+        "businessAccess": "\u9ad8\u7ea7",
+        "branchPermissions": "\u5206\u652f\u7ea7\u6743\u9650"
+      },
+      "support": {
+        "section": "\u652f\u6301",
+        "standard": "\u6807\u51c6\u652f\u6301",
+        "priority": "\u4f18\u5148\u652f\u6301",
+        "audit": "\u5ba1\u8ba1\u4e0e\u5408\u89c4\u652f\u6301"
+      }
+    },
+    "rowValues": {
+      "price": [
+        "$19.99 / \u6708",
+        "$49.99 / \u6708",
+        "$119.99 / \u6708"
+      ],
+      "bestFor": [
+        "\u4e2a\u4eba\u4ece\u4e1a\u8005",
+        "\u6210\u957f\u578b\u56e2\u961f",
+        "\u5408\u89c4\u4e0e\u591a\u5730\u70b9\u56e2\u961f"
+      ],
+      "seatsIncluded": [
+        "1",
+        "\u6700\u591a 5",
+        "10"
+      ],
+      "additionalSeats": [
+        "\u2014",
+        "$9 / \u4f4d",
+        "$9 / \u4f4d"
+      ],
+      "multiLocationSupport": [
+        "1",
+        "1",
+        "\u6700\u591a 2"
+      ],
+      "roleAccess": [
+        "\u57fa\u7840",
+        "\u9ad8\u7ea7",
+        "\u9ad8\u7ea7"
+      ],
+      "prioritySupport": [
+        "\u2014",
+        "\u5de5\u4f5c\u65f6\u95f4",
+        "24 / 7"
+      ]
+    }
+  },
+  "whyTeams": {
+    "title": "\u4e3a\u4ec0\u4e48\u56e2\u961f\u9009\u62e9 Schedulaa",
+    "items": [
+      "\u9884\u7ea6\u3001\u85aa\u8d44\u3001\u5de5\u65f6\u4e0e\u7f51\u7ad9\u5171\u4eab\u540c\u4e00\u6570\u636e\u6a21\u578b\u3002",
+      "\u907f\u514d\u73ed\u6b21\u3001\u5de5\u65f6\u4e0e\u652f\u4ed8\u4e4b\u95f4\u7684\u540c\u6b65\u9519\u8bef\u3002",
+      "\u51cf\u5c11\u56e0\u5de5\u5177\u5272\u88c2\u9020\u6210\u7684\u5408\u89c4\u7f3a\u53e3\u3002"
+    ]
+  },
+  "websiteDesignService": {
+    "title": "\u7f51\u7ad9\u8bbe\u8ba1\u670d\u52a1",
+    "description": "\u6211\u4eec\u56e2\u961f\u63d0\u4f9b\u4e00\u6b21\u6027\u5b9a\u5236\u7f51\u7ad9\u8bbe\u8ba1\u3002\u8d2d\u4e70\u540e\uff0c\u6211\u4eec\u4f1a\u5f00\u7acb\u8bbe\u8ba1\u5de5\u5355\uff0c\u6536\u96c6\u9700\u6c42\uff0c\u8bbe\u8ba1\u7f51\u7ad9\u5e76\u4e3a\u60a8\u53d1\u5e03\u3002",
+    "includes": "\u5305\u542b\uff1a\u8bbe\u8ba1 + \u4fee\u8ba2 + \u53d1\u5e03\u3002\u4e0d\u5305\u542b\u57df\u540d\u8d2d\u4e70\uff08\u6211\u4eec\u53ef\u534f\u52a9\u60a8\u8fde\u63a5\u57df\u540d\uff09\u3002",
+    "cta": "\u8d2d\u4e70\u7f51\u7ad9\u8bbe\u8ba1",
+    "loadingCta": "\u6b63\u5728\u542f\u52a8\u652f\u4ed8..."
+  }
+}
