@@ -4,19 +4,19 @@ const CONTACT_URL = "/contact";
 const LIVE_SERVICE_DEMO = "/demo";
 
 const sharedCta = {
-  overline: "Booking, payroll, and websites together",
-  title: "Start booking clients the same day you sign up",
-  body: "Launch online booking, publish availability, and connect Stripe without installing plugins or stitching tools together.",
-  primary: { label: "Start free", href: REGISTER_URL },
-  secondary: { label: "Talk to our team", href: CONTACT_URL },
+  overline: "الحجوزات والرواتب والمواقع في نظام واحد",
+  title: "ابدأ حجز العملاء في نفس يوم التسجيل",
+  body: "أطلق الحجز عبر الإنترنت، وانشر التوفر، واربط Stripe بدون تثبيت إضافات أو دمج أدوات متعددة.",
+  primary: { label: "ابدأ مجانا", href: REGISTER_URL },
+  secondary: { label: "تحدث مع فريقنا", href: CONTACT_URL },
 };
 
 const sharedSecondaryLinks = [
-  { label: "Website builder", href: "/website-builder" },
-  { label: "Marketing automation", href: "/marketing" },
-  { label: "Salon booking", href: "/booking/salon" },
-  { label: "Tutor scheduling", href: "/booking/tutor" },
-  { label: "Medical booking", href: "/booking/doctor" },
+  { label: "منشئ المواقع", href: "/website-builder" },
+  { label: "أتمتة التسويق", href: "/marketing" },
+  { label: "حجز الصالونات", href: "/booking/salon" },
+  { label: "جدولة الدروس", href: "/booking/tutor" },
+  { label: "الحجز الطبي", href: "/booking/doctor" },
 ];
 
 const bookingHubConfig = {
@@ -51,202 +51,202 @@ const bookingHubConfig = {
     url: `${BASE_URL}/booking`,
   },
   hero: {
-    badge: "Real-time availability",
-    title: "Online Booking & Team Scheduling — with Stripe Payments",
+    badge: "توفر فوري",
+    title: "الحجز عبر الإنترنت وجدولة الفريق مع مدفوعات Stripe",
     subtitle:
-      "Schedulaa gives you a complete booking flow with real-time availability, provider choice, staff calendars, invitations, and Stripe-powered checkout.",
+      "يوفر Schedulaa تدفق حجز متكامل مع توفر فوري، واختيار مقدم الخدمة، وتقويمات الموظفين، والدعوات، وصفحة دفع مدعومة من Stripe.",
     image: '/images/marketing/showcase/clients-pick2.png',
-    imageAlt: 'Client booking flow preview',
+    imageAlt: 'معاينة تدفق حجز العميل',
     images: [
-      { src: '/images/marketing/showcase/service-management.png', alt: 'Service management' },
-      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'Payment collection' },
-      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'Checkout flow' },
-      { src: '/images/marketing/showcase/employee-availability.png', alt: 'Employee availability' },
+      { src: '/images/marketing/showcase/service-management.png', alt: 'إدارة الخدمات' },
+      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'تحصيل المدفوعات' },
+      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'تدفق الدفع' },
+      { src: '/images/marketing/showcase/employee-availability.png', alt: 'توفر الموظفين' },
     ],
     bullets: [
-      "Publish services and show live availability across providers.",
-      "Give managers a master calendar with shift and leave controls.",
-      "Offer clients a smooth checkout with pay, deposit, or card-on-file.",
+      "انشر الخدمات واعرض التوفر المباشر عبر مقدمي الخدمة.",
+      "امنح المديرين تقويما رئيسيا مع أدوات إدارة الورديات والإجازات.",
+      "قدم للعملاء دفعا سلسا مع الدفع الكامل أو العربون أو حفظ البطاقة.",
     ],
-    primaryCta: { label: "Start booking online", href: REGISTER_URL },
-    secondaryCta: { label: "Preview a live service page", href: LIVE_SERVICE_DEMO },
+    primaryCta: { label: "ابدأ الحجز عبر الإنترنت", href: REGISTER_URL },
+    secondaryCta: { label: "معاينة صفحة خدمة مباشرة", href: LIVE_SERVICE_DEMO },
   },
-  featuresHeading: "Why teams choose Schedulaa",
-  featuresTitle: "Booking, scheduling, and payments in one hub",
+  featuresHeading: "لماذا تختار الفرق Schedulaa",
+  featuresTitle: "الحجز والجدولة والمدفوعات في مركز واحد",
   featuresIntro:
-    "Everything from provider availability to checkout happens inside Schedulaa — no double entry or extra plugins.",
+    "كل شيء من توفر مقدم الخدمة حتى الدفع يتم داخل Schedulaa بدون إدخال مكرر أو إضافات خارجية.",
   features: [
     {
       icon: "availability",
-      label: "Availability",
-      title: "Real-time slot picker",
+      label: "التوفر",
+      title: "اختيار المواعيد في الوقت الفعلي",
       description:
-        "Show open times by provider and let clients pick the person and time that works. Slots adjust immediately when staff update availability.",
+        "اعرض الأوقات المتاحة لكل مقدم خدمة ودع العملاء يختارون الشخص والوقت المناسبين. تتحدث الفترات مباشرة عند تحديث توفر الموظفين.",
       link: LIVE_SERVICE_DEMO,
-      linkLabel: "See live availability",
+      linkLabel: "عرض التوفر المباشر",
     },
     {
       icon: "meeting",
-      label: "Public links",
-      title: "Shareable “Book with me” pages",
+      label: "روابط عامة",
+      title: "صفحات \"احجز معي\" القابلة للمشاركة",
       description:
-        "Let staff publish a public link for consults or interviews. Availability comes from their schedule, confirmations include Jitsi + cancel/reschedule links, and bookings flow into the Upcoming Meetings panel.",
+        "اسمح للموظفين بنشر رابط عام للاستشارات أو المقابلات. التوفر يأتي من جدولهم، وتتضمن التأكيدات رابط Jitsi وروابط الإلغاء وإعادة الجدولة، وتنتقل الحجوزات إلى لوحة الاجتماعات القادمة.",
       link: "/demo",
-      linkLabel: "Open public-link settings",
+      linkLabel: "فتح إعدادات الرابط العام",
     },
     {
       icon: "calendar",
-      label: "Calendars",
-      title: "Manager & team calendars",
+      label: "التقويمات",
+      title: "تقويمات المدير والفريق",
       description:
-        "Use the master calendar to review bookings, shift coverage, and leave. Enterprise availability views make bulk changes fast.",
+        "استخدم التقويم الرئيسي لمراجعة الحجوزات وتغطية الورديات والإجازات. تجعل عروض التوفر المؤسسية التعديلات الجماعية سريعة.",
       link: "/booking/salon",
-      linkLabel: "Explore vertical solutions",
+      linkLabel: "استكشاف حلول القطاعات",
     },
     {
       icon: "payment",
       label: "Checkout",
-      title: "Stripe payments at booking",
+      title: "مدفوعات Stripe عند الحجز",
       description:
-        "Offer pay-now, deposit, or capture (card on file) checkout flows. Support add-ons, coupons, multi-currency display, and tips.",
+        "قدم تدفقات دفع فوري أو عربون أو تحصيل لاحق (بطاقة محفوظة). يدعم الإضافات والقسائم والعرض متعدد العملات والإكراميات.",
       link: "/booking/tutor",
-      linkLabel: "See payment options",
+      linkLabel: "عرض خيارات الدفع",
     },
   ],
   highlights: [
     {
-      overline: "Client experience",
-      title: "Real-time availability with provider choice",
+      overline: "تجربة العميل",
+      title: "توفر فوري مع اختيار مقدم الخدمة",
       body:
-        "Clients see open days and times up front, click a slot, and confirm their provider inside the same modal. Time zones are normalized for each visitor so nobody misses an appointment.",
+        "يرى العملاء الأيام والأوقات المتاحة مسبقا، ثم يختارون فترة ويؤكدون مقدم الخدمة داخل نفس النافذة. يتم توحيد المناطق الزمنية لكل زائر حتى لا يفوّت أحد موعدا.",
       points: [
-        "Green dot calendar view shows days with openings.",
-        "Inline provider picker lists who is available for the chosen time.",
+        "يوضح عرض التقويم بالنقاط الخضراء الأيام التي تحتوي على مواعيد متاحة.",
+        "قائمة اختيار مقدم الخدمة المضمنة تعرض المتاحين للوقت المحدد.",
       ],
-      links: [{ label: "Try a demo calendar", href: LIVE_SERVICE_DEMO }],
+      links: [{ label: "جرّب تقويما تجريبيا", href: LIVE_SERVICE_DEMO }],
       image: {
         src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa service selection screen",
+        alt: "شاشة اختيار الخدمة في Schedulaa",
       },
     },
     {
-      overline: "Meet with me",
-      title: "Public staff booking links without paid services",
+      overline: "قابلني",
+      title: "روابط حجز عامة للموظفين بدون خدمات مدفوعة",
       body:
-        "Employees can toggle a public link from their dashboard, set recurring availability, and share it anywhere. Clients pick a time in their local timezone; confirmations include your timezone label, Jitsi link, and cancel/reschedule controls.",
+        "يمكن للموظفين تفعيل رابط عام من لوحة التحكم، وتحديد توفر متكرر، ومشاركته في أي مكان. يختار العملاء وقتا حسب منطقتهم الزمنية؛ وتتضمن التأكيدات اسم منطقتك الزمنية ورابط Jitsi وعناصر الإلغاء وإعادة الجدولة.",
       points: [
-        "Host-facing availability powers both invites and public links.",
-        "No payment required — ideal for interviews and consults.",
-        "Upcoming Meetings shows public bookings with candidate details.",
+        "توفر المضيف يدعم كل من الدعوات والروابط العامة.",
+        "لا يتطلب دفعا، وهو مثالي للمقابلات والاستشارات.",
+        "تعرض لوحة الاجتماعات القادمة الحجوزات العامة مع تفاصيل المرشحين.",
       ],
-      links: [{ label: "Enable public bookings (login required)", href: "/demo" }],
+      links: [{ label: "تفعيل الحجوزات العامة (يتطلب تسجيل الدخول)", href: "/demo" }],
       image: {
         src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
-        alt: "Public booking link example",
+        alt: "مثال على رابط حجز عام",
       },
     },
     {
-      overline: "Operations",
-      title: "Manager calendar with shift and leave controls",
+      overline: "العمليات",
+      title: "تقويم المدير مع أدوات التحكم في الورديات والإجازات",
       body:
-        "See bookings across departments, approve swap requests, and close or open rolling time ranges. Staff adjust their own availability while managers keep guardrails in place.",
+        "اعرض الحجوزات عبر الأقسام، ووافق على طلبات تبديل الورديات، وأغلق أو افتح نطاقات زمنية متحركة. يضبط الموظفون توفرهم مع بقاء ضوابط المدير.",
       points: [
-        "Filter master calendar by department, employee, or status.",
-        "Bulk close, keep, or reopen ranges without touching booked slots.",
+        "قم بتصفية التقويم الرئيسي حسب القسم أو الموظف أو الحالة.",
+        "أغلق أو أبقِ أو أعد فتح نطاقات بشكل جماعي دون المساس بالفترات المحجوزة.",
       ],
-      links: [{ label: "Review team availability tools", href: "/booking/salon" }],
+      links: [{ label: "مراجعة أدوات توفر الفريق", href: "/booking/salon" }],
       image: {
         src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa team calendar overview",
+        alt: "نظرة عامة على تقويم فريق Schedulaa",
       },
     },
   ],
   howItWorks: {
-    overline: "Process",
-    title: "How online booking works in Schedulaa",
+    overline: "العملية",
+    title: "كيف يعمل الحجز عبر الإنترنت في Schedulaa",
     intro:
-      "From publishing a service to delivering confirmations and payments, the flow takes just a few steps.",
+      "من نشر الخدمة إلى إرسال التأكيدات واستلام المدفوعات، تحتاج العملية إلى بضع خطوات فقط.",
     steps: [
       {
-        title: "Publish services and providers",
+        title: "نشر الخدمات ومقدمي الخدمة",
         description:
-          "Define services, durations, pricing, and assign providers. Availability updates immediately for the client-facing page.",
+          "حدد الخدمات ومددها وأسعارها وعيّن مقدمي الخدمة. يتم تحديث التوفر مباشرة في صفحة العميل.",
       },
       {
-        title: "Clients pick time and provider",
+        title: "اختيار العميل للوقت ومقدم الخدمة",
         description:
-          "Visitors open your booking page, choose a day, select a time, and confirm the provider that fits best.",
+          "يفتح الزوار صفحة الحجز، ويختارون يوما ووقتا، ثم يؤكدون مقدم الخدمة الأنسب.",
       },
       {
-        title: "Checkout and notifications",
+        title: "الدفع والإشعارات",
         description:
-          "Clients pay, leave a deposit, or store a card. Appointments and receipts sync to calendars, and staff see the booking instantly.",
+          "يدفع العملاء أو يتركون عربونا أو يحفظون بطاقة. تتزامن المواعيد والإيصالات مع التقويمات، ويرى الموظفون الحجز فورا.",
       },
     ],
   },
   managerControls: {
-    overline: "Manager controls",
-    title: "Keep your team calendar aligned",
+    overline: "ضوابط المدير",
+    title: "حافظ على تقويم فريقك متناسقا",
     body:
-      "Powerful calendar tooling helps managers guard capacity while keeping staff in control of their own schedules.",
+      "تساعد أدوات التقويم القوية المديرين على ضبط السعة مع إبقاء الموظفين مسيطرين على جداولهم.",
     points: [
-      "Master calendar with filters by department, employee, or shift.",
-      "Bulk close days, keep specific ranges, or edit single slots.",
-      "Approve swap requests and track leave from the same dashboard.",
+      "تقويم رئيسي مع فلاتر حسب القسم أو الموظف أو الوردية.",
+      "إغلاق أيام جماعيا، أو إبقاء نطاقات محددة، أو تعديل فترات منفردة.",
+      "الموافقة على طلبات التبديل وتتبع الإجازات من نفس لوحة التحكم.",
     ],
     image: {
       src: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=1200&auto=format&fit=crop",
-      alt: "Schedulaa manager calendar controls",
+      alt: "ضوابط تقويم المدير في Schedulaa",
     },
   },
   invitations: {
-    overline: "Invitations and intake",
-    title: "Send profession-aware invitations with forms",
+    overline: "الدعوات ونماذج الاستقبال",
+    title: "أرسل دعوات مخصصة حسب التخصص مع نماذج",
     body:
-      "Compose invitations that inject client names, unique booking links, and intake requirements. Attach questionnaires so guests fill out medical or onboarding forms before arriving.",
+      "أنشئ دعوات تتضمن أسماء العملاء وروابط حجز فريدة ومتطلبات الاستقبال. أرفق الاستبيانات ليملأ الضيوف النماذج الطبية أو نماذج الانضمام قبل الوصول.",
     points: [
-      "Profession templates for recruiters, doctors, salons, tutors, and more.",
-      "Auto variables like {client_name} and {booking_link} fill into emails.",
-      "Attach questionnaires and require completion after booking.",
+      "قوالب تخصصية للمجندين والأطباء والصالونات والمعلمين وغيرهم.",
+      "متغيرات تلقائية مثل {client_name} و {booking_link} تُدرج في رسائل البريد.",
+      "إرفاق استبيانات مع اشتراط إكمالها بعد الحجز.",
     ],
     image: {
       src: "https://images.unsplash.com/photo-1521790797524-b2497295b8a0?q=80&w=1200&auto=format&fit=crop",
-      alt: "Schedulaa invitation composer",
+      alt: "محرر الدعوات في Schedulaa",
     },
   },
   checkout: {
-    overline: "Client checkout",
-    title: "Flexible payments and tips powered by Stripe",
+    overline: "دفع العميل",
+    title: "مدفوعات مرنة وإكراميات مدعومة بـ Stripe",
     body:
-      "Offer full payment, deposits, or card-on-file capture. Clients can add tips or apply coupons, and the success page shows every line item for services or products purchased.",
+      "قدم الدفع الكامل أو العربون أو التحصيل اللاحق ببطاقة محفوظة. يمكن للعملاء إضافة إكرامية أو تطبيق قسائم، وتعرض صفحة النجاح كل بنود الخدمات أو المنتجات المشتراة.",
     points: [
-      "Support percentage or fixed tips and optional add-ons.",
-      "Configure per-company payment policies (pay, deposit, capture).",
-      "Receipts and card storage handled through Stripe Connect.",
+      "دعم الإكراميات بنسبة مئوية أو مبلغ ثابت مع إضافات اختيارية.",
+      "تهيئة سياسات الدفع لكل شركة (دفع، عربون، تحصيل).",
+      "معالجة الإيصالات وحفظ البطاقات عبر Stripe Connect.",
     ],
     image: {
       src: "https://images.unsplash.com/photo-1584473457406-6240486418e5?q=80&w=1200&auto=format&fit=crop",
-      alt: "Schedulaa booking checkout screen",
+      alt: "شاشة الدفع للحجز في Schedulaa",
     },
   },
-  faqHeading: "FAQ",
-  faqTitle: "Booking and scheduling questions",
-  faqIntro: "Answers based on what Schedulaa delivers in production today.",
+  faqHeading: "الأسئلة الشائعة",
+  faqTitle: "أسئلة الحجز والجدولة",
+  faqIntro: "إجابات مبنية على ما يقدمه Schedulaa فعليا في بيئة الإنتاج اليوم.",
   faq: [
     {
-      question: "How do clients choose a provider?",
+      question: "كيف يختار العملاء مقدم الخدمة؟",
       answer:
-        "Once a client selects a time, Schedulaa reveals the providers available for that slot. They pick the person they want before confirming.",
+        "بمجرد أن يختار العميل وقتا، يعرض Schedulaa مقدمي الخدمة المتاحين لتلك الفترة. ثم يختار العميل الشخص المناسب قبل التأكيد.",
     },
     {
-      question: "Can managers bulk-edit availability?",
+      question: "هل يمكن للمديرين تعديل التوفر بشكل جماعي؟",
       answer:
-        "Yes. Enterprise availability tools let managers close an entire day, close before or after a time, or keep just a specific range while preserving existing bookings.",
+        "نعم. تتيح أدوات التوفر المؤسسية للمديرين إغلاق يوم كامل، أو الإغلاق قبل/بعد وقت معين، أو الإبقاء على نطاق محدد مع الحفاظ على الحجوزات الحالية.",
     },
     {
-      question: "Do you support deposits or saving a card?",
+      question: "هل تدعمون العربون أو حفظ البطاقة؟",
       answer:
-        "Absolutely. Companies choose pay-now, deposit, or card-on-file capture policies. Stripe processes payments securely either way.",
+        "بالتأكيد. يمكن للشركات اختيار الدفع الفوري أو العربون أو التحصيل ببطاقة محفوظة. يعالج Stripe المدفوعات بأمان في كل الحالات.",
     },
   ],
   cta: sharedCta,
