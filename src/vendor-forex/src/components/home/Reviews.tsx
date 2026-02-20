@@ -7,13 +7,10 @@ import employeeDashboardImg from '@public/images/marketing/showcase/employee-das
 import myShiftImg from '@public/images/marketing/showcase/my-shift.png';
 import qbImg from '@public/images/marketing/showcase/qb.png';
 import roeImg from '@public/images/marketing/showcase/roe.png';
-import shiftAddEditImg from '@public/images/marketing/showcase/schedulaa-shift-add-edit.png';
 import stripeImg from '@public/images/marketing/showcase/stripe.png';
 import t4Img from '@public/images/marketing/showcase/t4.png';
-import w2DashImg from '@public/images/marketing/showcase/w-2.png';
 import w2Img from '@public/images/marketing/showcase/w2.png';
 import websiteBuilderImg from '@public/images/marketing/showcase/website-builder.png';
-import websiteImg from '@public/images/marketing/showcase/website.png';
 import xeroImg from '@public/images/marketing/showcase/xero.png';
 import Image, { StaticImageData } from 'next/image';
 import 'swiper/css';
@@ -33,13 +30,10 @@ const showcaseItems: ShowcaseItem[] = [
   { id: 'my-shift', title: 'Shift timeline', subtitle: 'Live schedule updates', image: myShiftImg },
   { id: 'qb', title: 'QuickBooks sync', subtitle: 'Accounting workflow', image: qbImg },
   { id: 'roe', title: 'ROE workflow', subtitle: 'Compliance records', image: roeImg },
-  { id: 'shift-add-edit', title: 'Shift editor', subtitle: 'Assign and adjust', image: shiftAddEditImg },
   { id: 'stripe', title: 'Stripe status', subtitle: 'Payments and subscriptions', image: stripeImg },
   { id: 't4', title: 'T4 generation', subtitle: 'Canada payroll exports', image: t4Img },
   { id: 'w2', title: 'W-2 forms', subtitle: 'US payroll exports', image: w2Img },
-  { id: 'w-2', title: 'W-2 preview', subtitle: 'Employee tax forms', image: w2DashImg },
   { id: 'website-builder', title: 'Website builder', subtitle: 'Launch pages quickly', image: websiteBuilderImg },
-  { id: 'website', title: 'Published website', subtitle: 'Live booking presence', image: websiteImg },
   { id: 'xero', title: 'Xero integration', subtitle: 'Finance handoff', image: xeroImg },
 ];
 

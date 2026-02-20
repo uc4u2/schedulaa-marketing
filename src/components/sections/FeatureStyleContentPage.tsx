@@ -221,53 +221,116 @@ export default function FeatureStyleContentPage({
       {afterHero}
 
       {blocks.map((block, blockIndex) => (
-        <section
-          key={`${block.title || block.overline || 'section'}-${blockIndex}`}
-          className={blockIndex % 2 === 0 ? 'pb-16 md:pb-20' : 'bg-background-1 dark:bg-background-6 py-16 md:py-20'}
-        >
-          <div className="main-container">
-            {(block.overline || block.title || block.intro) && (
-              <AnimatedSection>
-                <div className="mb-10 space-y-3 text-center">
-                  {block.overline ? <span className="badge badge-cyan-v2">{block.overline}</span> : null}
-                  {block.title ? <h2 className="mx-auto max-w-[900px]">{block.title}</h2> : null}
-                  {block.intro ? <p className="mx-auto max-w-[860px]">{block.intro}</p> : null}
-                </div>
-              </AnimatedSection>
-            )}
+        (() => {
+          const isPayrollPlatformBlock =
+            routePath.startsWith('/payroll') && String(block.overline || '').toLowerCase() === 'platform';
+          if (!isPayrollPlatformBlock) {
+            return (
+              <section
+                key={`${block.title || block.overline || 'section'}-${blockIndex}`}
+                className={blockIndex % 2 === 0 ? 'pb-16 md:pb-20' : 'bg-background-1 dark:bg-background-6 py-16 md:py-20'}
+              >
+                <div className="main-container">
+                  {(block.overline || block.title || block.intro) && (
+                    <AnimatedSection>
+                      <div className="mb-10 space-y-3 text-center">
+                        {block.overline ? <span className="badge badge-cyan-v2">{block.overline}</span> : null}
+                        {block.title ? <h2 className="mx-auto max-w-[900px]">{block.title}</h2> : null}
+                        {block.intro ? <p className="mx-auto max-w-[860px]">{block.intro}</p> : null}
+                      </div>
+                    </AnimatedSection>
+                  )}
 
-            <StaggerGrid className="grid grid-cols-12 gap-5" childSelector="[data-stagger-item]">
-              {block.items.map((item, idx) => (
-                <article
-                  key={`${item.title}-${idx}`}
-                  data-stagger-item
-                  className="col-span-12 md:col-span-6 lg:col-span-4 rounded-[20px] bg-white p-6 shadow-1 dark:bg-background-8"
-                >
-                  {item.title ? <h3 className="text-heading-5">{item.title}</h3> : null}
-                  {item.body ? <p className="mt-2">{item.body}</p> : null}
-                  {item.points?.length ? (
-                    <ul className="mt-4 space-y-2">
-                      {item.points.map((point: string) => (
-                        <li key={point} className="text-tagline-2">
-                          • {point}
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                  {item.links?.length ? (
-                    <div className="mt-5 flex flex-wrap gap-2">
-                      {item.links.map((ln: any) => (
-                        <Link key={`${item.title}-${ln.href}`} href={mapHref(ln.href)} className="btn btn-white btn-sm dark:btn-transparent dark:hover:btn-accent">
-                          {ln.label}
-                        </Link>
-                      ))}
+                  <StaggerGrid className="grid grid-cols-12 gap-5" childSelector="[data-stagger-item]">
+                    {block.items.map((item, idx) => (
+                      <article
+                        key={`${item.title}-${idx}`}
+                        data-stagger-item
+                        className="col-span-12 md:col-span-6 lg:col-span-4 rounded-[20px] bg-white p-6 shadow-1 dark:bg-background-8"
+                      >
+                        {item.title ? <h3 className="text-heading-5">{item.title}</h3> : null}
+                        {item.body ? <p className="mt-2">{item.body}</p> : null}
+                        {item.points?.length ? (
+                          <ul className="mt-4 space-y-2">
+                            {item.points.map((point: string) => (
+                              <li key={point} className="text-tagline-2">
+                                • {point}
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
+                        {item.links?.length ? (
+                          <div className="mt-5 flex flex-wrap gap-2">
+                            {item.links.map((ln: any) => (
+                              <Link key={`${item.title}-${ln.href}`} href={mapHref(ln.href)} className="btn btn-white btn-sm dark:btn-transparent dark:hover:btn-accent">
+                                {ln.label}
+                              </Link>
+                            ))}
+                          </div>
+                        ) : null}
+                      </article>
+                    ))}
+                  </StaggerGrid>
+                </div>
+              </section>
+            );
+          }
+
+          return (
+            <section key={`${block.title || block.overline || 'section'}-${blockIndex}`} className="pb-16 md:pb-20">
+              <div className="main-container">
+                <AnimatedSection>
+                  <div className="mb-10 space-y-3 text-center">
+                    {block.overline ? <span className="badge badge-cyan-v2">{block.overline}</span> : null}
+                    {block.title ? <h2 className="mx-auto max-w-[900px]">{block.title}</h2> : null}
+                    {block.intro ? <p className="mx-auto max-w-[860px]">{block.intro}</p> : null}
+                  </div>
+                </AnimatedSection>
+
+                <AnimatedSection>
+                  <div className="relative overflow-hidden rounded-[26px] border border-white/12 bg-[#0b1322] p-5 shadow-[0_26px_76px_rgba(3,10,24,0.52)] md:p-7">
+                    <div className="pointer-events-none absolute -inset-8 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.22)_0%,rgba(13,20,35,0)_65%)]" />
+                    <div className="relative grid grid-cols-12 gap-5">
+                      <div className="col-span-12 overflow-hidden rounded-[18px] border border-white/10 bg-[#0f1b2d] lg:col-span-7">
+                        <div className="border-b border-white/10 px-4 py-3">
+                          <p className="text-tagline-3 uppercase tracking-[0.12em] text-cyan-100/75">Payroll control center</p>
+                          <p className="mt-1 text-heading-6 text-white">Live calculations, exports, and employee updates</p>
+                        </div>
+                        <figure className="p-2">
+                          <Image
+                            src="/images/marketing/showcase/roe-3d.png"
+                            alt="ROE workflow mockup"
+                            width={1200}
+                            height={720}
+                            className="h-auto w-full rounded-xl border border-white/10"
+                          />
+                        </figure>
+                      </div>
+                      <div className="col-span-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-5">
+                        {block.items.slice(0, 4).map((item, idx) => (
+                          <article
+                            key={`${item.title}-${idx}`}
+                            className="rounded-[16px] border border-cyan-200/15 bg-[linear-gradient(140deg,rgba(16,26,44,0.96)_0%,rgba(10,40,67,0.85)_100%)] p-4 shadow-[0_14px_35px_rgba(2,10,22,0.45)]"
+                          >
+                            {item.title ? <h3 className="text-heading-6 text-white">{item.title}</h3> : null}
+                            {item.body ? <p className="mt-2 text-tagline-2 text-cyan-50/85">{item.body}</p> : null}
+                            {item.links?.[0] ? (
+                              <div className="mt-4">
+                                <Link href={mapHref(item.links[0].href)} className="btn btn-sm btn-white">
+                                  {item.links[0].label}
+                                </Link>
+                              </div>
+                            ) : null}
+                          </article>
+                        ))}
+                      </div>
                     </div>
-                  ) : null}
-                </article>
-              ))}
-            </StaggerGrid>
-          </div>
-        </section>
+                  </div>
+                </AnimatedSection>
+              </div>
+            </section>
+          );
+        })()
       ))}
 
       {faq.length ? (

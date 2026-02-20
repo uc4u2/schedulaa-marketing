@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import Link from 'next/link';
 
 const API_ORIGIN =
   process.env.NEXT_PUBLIC_BACKEND_URL ||
   process.env.NEXT_PUBLIC_API_ORIGIN ||
   (process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://scheduling-application.onrender.com');
+const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
 
 type Company = {
   slug: string;
@@ -59,6 +59,12 @@ const PROFESSION_OPTIONS = [
 
 const industryLabel = (value?: string) =>
   PROFESSION_OPTIONS.find((opt) => opt.value === (value || 'general'))?.label || 'General / Other';
+
+const buildPublicSiteUrl = (slug?: string) => {
+  const safeSlug = (slug || '').trim().replace(/^\/+|\/+$/g, '');
+  if (!safeSlug) return APP_ORIGIN;
+  return `${APP_ORIGIN}/${encodeURIComponent(safeSlug)}?embed=0`;
+};
 
 export default function IndustryDirectoryLiveSection() {
   const [filter, setFilter] = useState('all');
@@ -217,9 +223,13 @@ export default function IndustryDirectoryLiveSection() {
                       <p className="line-clamp-2 text-tagline-2 text-secondary/70 dark:text-accent/72">
                         {company.tagline || 'Book services, sell products, and manage appointments online.'}
                       </p>
-                      <Link href={`/${company.slug}?embed=0`} target="_blank" className="btn btn-primary btn-sm hover:btn-secondary dark:hover:btn-accent">
+                      <a
+                        href={buildPublicSiteUrl(company.slug)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary btn-sm hover:btn-secondary dark:hover:btn-accent">
                         View site
-                      </Link>
+                      </a>
                     </div>
                   </article>
                 );
