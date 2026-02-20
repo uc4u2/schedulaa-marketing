@@ -4,6 +4,44 @@ import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData'
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+function getValueTone(rawValue: string) {
+  const value = String(rawValue || '').toLowerCase();
+  if (value.includes('✘') || value.includes(' no ') || value === 'no') return 'negative';
+  if (value.includes('partial') || value.includes('limited') || value.includes('basic')) return 'neutral';
+  if (value.includes('✔') || value.includes('advanced') || value.includes('integrated') || value === 'yes') return 'positive';
+  return 'neutral';
+}
+
+function ComparisonValueCard({
+  label,
+  value,
+}: {
+  label: string;
+  value: string;
+}) {
+  const tone = getValueTone(value);
+  const toneClass =
+    tone === 'positive'
+      ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400'
+      : tone === 'negative'
+        ? 'bg-rose-500/15 text-rose-600 dark:text-rose-400'
+        : 'bg-sky-500/15 text-sky-600 dark:text-sky-400';
+
+  const cleanValue = String(value || '').replace(/[✔✘]/g, '').trim();
+
+  return (
+    <div className="rounded-xl border border-stroke-2 bg-background-1/60 p-4 dark:border-stroke-7 dark:bg-background-6/40">
+      <p className="text-xs uppercase tracking-[0.12em] text-secondary/60 dark:text-accent/60">{label}</p>
+      <div className="mt-2 flex items-start gap-2">
+        <span className={`rounded-full px-2 py-1 text-xs font-semibold ${toneClass}`}>
+          {tone === 'positive' ? 'Strong' : tone === 'negative' ? 'Gap' : 'Limited'}
+        </span>
+        <p className="text-sm text-secondary/80 dark:text-accent/80">{cleanValue || 'N/A'}</p>
+      </div>
+    </div>
+  );
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ vendor: string }> }): Promise<Metadata> {
   const { vendor } = await params;
   const entry = getCompareEntry(vendor, 'compare');
@@ -54,12 +92,20 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
 
         <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
           <h2 className="text-2xl font-semibold">Executive Overview</h2>
-          <div className="mt-4 space-y-4">
+          <p className="mt-3 text-secondary/70 dark:text-accent/70">
+            Quick high-level comparison of where Schedulaa and {entry.competitor} differ most.
+          </p>
+          <div className="mt-5 space-y-4">
             {rows.map((row: any) => (
-              <div key={row.label} className="rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
-                <h3 className="font-semibold">{row.label}</h3>
-                <p className="mt-1 text-sm text-secondary/70 dark:text-accent/70"><strong>Schedulaa:</strong> {row.schedulaa}</p>
-                <p className="mt-1 text-sm text-secondary/70 dark:text-accent/70"><strong>{entry.competitor}:</strong> {row.competitor}</p>
+              <div
+                key={row.label}
+                className="rounded-2xl border border-stroke-2 bg-linear-to-r from-background-1/80 to-background-2/50 p-4 dark:border-stroke-7 dark:from-background-6/40 dark:to-background-7/40 md:p-5"
+              >
+                <h3 className="text-lg font-semibold">{row.label}</h3>
+                <div className="mt-4 grid gap-3 md:grid-cols-2">
+                  <ComparisonValueCard label="Schedulaa" value={row.schedulaa} />
+                  <ComparisonValueCard label={entry.competitor} value={row.competitor} />
+                </div>
               </div>
             ))}
           </div>
@@ -80,16 +126,20 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
         {summaryRows.length ? (
           <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
             <h2 className="text-2xl font-semibold">Feature group summary</h2>
-            <div className="mt-4 space-y-4">
+            <p className="mt-3 text-secondary/70 dark:text-accent/70">
+              Side-by-side capability checks for service teams evaluating {entry.competitor}.
+            </p>
+            <div className="mt-5 space-y-4">
               {summaryRows.map((row: any) => (
-                <div key={row.label} className="rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
-                  <h3 className="font-semibold">{row.label}</h3>
-                  <p className="mt-1 text-sm text-secondary/70 dark:text-accent/70">
-                    <strong>Schedulaa:</strong> {row.schedulaa}
-                  </p>
-                  <p className="mt-1 text-sm text-secondary/70 dark:text-accent/70">
-                    <strong>{entry.competitor}:</strong> {row.competitor}
-                  </p>
+                <div
+                  key={row.label}
+                  className="rounded-2xl border border-stroke-2 bg-linear-to-r from-background-1/80 to-background-2/50 p-4 dark:border-stroke-7 dark:from-background-6/40 dark:to-background-7/40 md:p-5"
+                >
+                  <h3 className="text-lg font-semibold">{row.label}</h3>
+                  <div className="mt-4 grid gap-3 md:grid-cols-2">
+                    <ComparisonValueCard label="Schedulaa" value={row.schedulaa} />
+                    <ComparisonValueCard label={entry.competitor} value={row.competitor} />
+                  </div>
                 </div>
               ))}
             </div>
