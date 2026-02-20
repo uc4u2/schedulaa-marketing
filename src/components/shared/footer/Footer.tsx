@@ -23,7 +23,27 @@ const Footer = ({ className }: { className?: string }) => {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
   const localePath = (path: string) => withLocalePath(path, locale);
-  const returnTo = marketingReturnTo(locale, pathname.replace(/^\/(en|fa)/, '') || '/');
+  const localizedPrefix = `/${locale}`;
+  const returnPath = pathname === localizedPrefix ? '/' : pathname.startsWith(`${localizedPrefix}/`) ? pathname.slice(localizedPrefix.length) || '/' : pathname;
+  const returnTo = marketingReturnTo(locale, returnPath || '/');
+  const viewAllComparisons =
+    locale === 'fa'
+      ? 'مشاهده همه مقایسه‌ها'
+      : locale === 'ru'
+        ? 'Смотреть все сравнения'
+        : locale === 'zh'
+          ? '查看全部对比'
+          : locale === 'es'
+            ? 'Ver todas las comparaciones'
+            : locale === 'fr'
+              ? 'Voir toutes les comparaisons'
+              : locale === 'de'
+                ? 'Alle Vergleiche ansehen'
+                : locale === 'ar'
+                  ? 'عرض جميع المقارنات'
+                  : locale === 'pt'
+                    ? 'Ver todas as comparações'
+                    : 'View all comparisons';
   const compareSection = FOOTER_SECTIONS.find((section) => section.id === 'compare');
   const legalSection = FOOTER_SECTIONS.find((section) => section.id === 'legal');
   const primarySections = FOOTER_SECTIONS.filter((section) => section.id !== 'compare' && section.id !== 'legal');
@@ -64,7 +84,7 @@ const Footer = ({ className }: { className?: string }) => {
                     {section.id === 'compare' ? (
                       <li className="md:hidden">
                         <Link href={localePath('/compare')} className="footer-link">
-                          View all comparisons
+                          {viewAllComparisons}
                         </Link>
                       </li>
                     ) : null}
@@ -90,7 +110,7 @@ const Footer = ({ className }: { className?: string }) => {
                     ))}
                     <li className="md:hidden">
                       <Link href={localePath('/compare')} className="footer-link">
-                        View all comparisons
+                        {viewAllComparisons}
                       </Link>
                     </li>
                   </ul>

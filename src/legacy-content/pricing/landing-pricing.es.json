@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "title": "Schedulaa Pricing | Launch on your own domain with automatic SSL",
+    "description": "Compare Starter, Pro, and Business plans. All plans include a custom domain with automatic SSL, plus booking and website essentials, with scheduling, payroll, and automation on Pro and Business.",
+    "canonical": "https://www.schedulaa.com/pricing",
+    "keywords": "Schedulaa pricing, booking software pricing, payroll SaaS pricing, website builder plans",
+    "og": {
+      "title": "Schedulaa Pricing",
+      "description": "Plans for every stage. Launch on your own domain with automatic SSL included on every plan.",
+      "image": "https://www.schedulaa.com/og/pricing.jpg"
+    }
+  },
+  "hero": {
+    "eyebrow": "Pricing that scales",
+    "title": [
+      "Pricing that grows with you.",
+      "Launch on your own domain with automatic SSL."
+    ],
+    "subtitle": "Custom domains (TXT/CNAME) with automatic SSL are included on every plan. Start with Starter for website + booking, then add staff scheduling, payroll, and automations on Pro and Business.",
+    "primaryCta": {
+      "label": "Start free trial"
+    },
+    "secondaryCta": {
+      "label": "Compare plans"
+    },
+    "badge": {
+      "overline": "New capability",
+      "title": "Custom domains + automatic SSL"
+    },
+    "mediaAlt": "Schedulaa pricing overview showing plans and platform map"
+  },
+  "promo": {
+    "starterBadge": "50% off",
+    "starterNote": "${{discounted}} / mo for first {{months}} months. Then ${{base}} / mo"
+  },
+  "plans": {
+    "table": {
+      "list": [
+        {
+          "key": "starter",
+          "name": "Starter",
+          "price": "$19.99/mo",
+          "description": "Launch your website and take bookings and payments for solo professionals.",
+          "trialNote": "14-day free trial • Cancel anytime",
+          "features": [
+            {
+              "type": "heading",
+              "text": "Core platform"
+            },
+            "Unified booking, website, and payments.",
+            "Secure client and staff portals.",
+            "Website builder with branded pages and templates.",
+            "Online booking, confirmations, and client portal.",
+            "Public “Book with me” link.",
+            "Stripe Checkout with automatic tax compliance.",
+            {
+              "type": "heading",
+              "text": "Operational basics"
+            },
+            "Booking notifications and reminders.",
+            "Embeddable booking widgets.",
+            "Stripe refunds and payment history.",
+            "Basic role-based access.",
+            {
+              "type": "heading",
+              "text": "Time & reporting"
+            },
+            "Basic time tracking tied to bookings and shifts.",
+            "CSV/PDF exports for worked hours and revenue.",
+            {
+              "type": "heading",
+              "text": "Capacity"
+            },
+            "1 staff seat and 1 location (department) included.",
+            "Custom domain + automatic SSL included.",
+            "Upgrade for onboarding workflows."
+          ],
+          "ctaLabel": "Start 14-day free trial",
+          "ctaTo": "/register"
+        },
+        {
+          "key": "pro",
+          "name": "Pro",
+          "price": "$49.99/mo",
+          "positioning": "Run daily operations from one system.",
+          "description": "For small teams that need scheduling, automation, and analytics.",
+          "trialNote": "14-day free trial • Cancel anytime",
+          "features": [
+            "Everything in Starter.",
+            {
+              "type": "heading",
+              "text": "Time & Labor"
+            },
+            "Shift-based clock-in and clock-out.",
+            "Break enforcement and auto-deductions.",
+            "Overtime and anomaly flags.",
+            {
+              "type": "heading",
+              "text": "Payroll"
+            },
+            "Full payroll runs included (no per-run fees).",
+            "Payroll-ready approvals and audit trails.",
+            "Payroll exports to QuickBooks & Xero.",
+            "Payroll processing with Employee Payslip Portal (self-serve PDFs).",
+            {
+              "type": "heading",
+              "text": "Access & control"
+            },
+            "Role-based access for managers and staff.",
+            "Staff permissions and visibility controls.",
+            "Department scheduling and shared calendars.",
+            "Shift swaps, approvals, and live rosters.",
+            {
+              "type": "heading",
+              "text": "Analytics & marketing"
+            },
+            "Email campaigns: Broadcast, Win-Back, VIP, No-Show, Anniversary.",
+            "Advanced Analytics (bookings, revenue, client segments).",
+            {
+              "type": "heading",
+              "text": "Capacity"
+            },
+            "Up to 5 staff seats and 1 location (department) included.",
+            "Automated Canadian stat holiday pay and accruals.",
+            "Priority support (business hours)."
+          ],
+          "ctaLabel": "Start 14-day free trial",
+          "ctaTo": "/register",
+          "highlight": true,
+          "badge": "Most popular"
+        },
+        {
+          "key": "business",
+          "name": "Business",
+          "price": "$119.99/mo",
+          "description": "Built for compliance, audits, and multi-location (department) operations.",
+          "trialNote": "14-day free trial • Cancel anytime",
+          "features": [
+            "Everything in Pro.",
+            {
+              "type": "heading",
+              "text": "Time & Labor"
+            },
+            "Shift-based clock-in and clock-out with break enforcement.",
+            "Overtime, anomaly flags, and audit-ready time records.",
+            {
+              "type": "heading",
+              "text": "Payroll"
+            },
+            "Full payroll runs included (no per-run fees).",
+            {
+              "type": "heading",
+              "text": "Governance & compliance"
+            },
+            "Audit-ready payroll and compliance records.",
+            "Compliance-ready tax exports (W-2, T4, ROE).",
+            "Multi-location (department) payroll and reporting.",
+            {
+              "type": "heading",
+              "text": "Advanced control"
+            },
+            "Branch-level permissions.",
+            "Bulk scheduling controls (close / keep windows).",
+            "Audit-ready operations with reduced compliance risk.",
+            {
+              "type": "heading",
+              "text": "Capacity"
+            },
+            "10 staff seats and up to 5 locations (departments) included.",
+            "Add seats for $9/mo each.",
+            "Free branded website included when using Payroll + Scheduling."
+          ],
+          "ctaLabel": "Start 14-day free trial",
+          "ctaTo": "/register"
+        }
+      ],
+      "addons": {
+        "title": "Popular add-ons",
+        "headers": {
+          "addon": "Add-on",
+          "price": "Price"
+        },
+        "items": [
+          {
+            "key": "extraSeat",
+            "name": "Additional staff seat",
+            "price": "$9/mo per seat (prorated)"
+          }
+        ]
+      }
+    }
+  },
+  "assurances": {
+    "eyebrow": "Everything you need",
+    "title": "Transparent pricing, enterprise-grade platform",
+    "subtitle": "Secure, scalable, and fast: launch branded sites, process payments, and automate payroll from one login.",
+    "items": [
+      {
+        "key": "noHiddenFees",
+        "title": "No hidden fees",
+        "description": "Simple Stripe-based pricing with predictable processing rates."
+      },
+      {
+        "key": "switchPlans",
+        "title": "Switch plans anytime",
+        "description": "Upgrade or downgrade as your team grows; your custom domain follows instantly."
+      },
+      {
+        "key": "professionReady",
+        "title": "Branded websites",
+        "description": "Custom domains with TXT/CNAME verification and automatic SSL on every plan."
+      },
+      {
+        "key": "enterpriseOnboarding",
+        "title": "Enterprise onboarding",
+        "description": "Guided setup for multi-location brands with tax and payroll mapping."
+      },
+      {
+        "key": "roleAccess",
+        "title": "Role-based access",
+        "description": "Managers, staff, and finance roles keep scheduling and payroll secure by default."
+      },
+      {
+        "key": "globalPayments",
+        "title": "Global payments ready",
+        "description": "Stripe Checkout with refunds, saved cards, and cross-border payouts."
+      }
+    ]
+  },
+  "ribbon": {
+    "message": "<strong>New:</strong> Custom domains (TXT/CNAME) with automatic SSL are included on every plan.",
+    "buttonLabel": "Connect domain",
+    "buttonTo": "/manager/dashboard"
+  },
+  "footnote": {
+    "message": "<strong>Custom domain + automatic SSL:</strong> included on <strong>all plans</strong>."
+  },
+  "ctaBanner": {
+    "eyebrow": "Launch today",
+    "title": "Start your free trial - no credit card required",
+    "description": "Bring scheduling, payments, and payroll into one workspace with automatic SSL on your domain.",
+    "primaryCta": {
+      "label": "Start free trial"
+    },
+    "secondaryCta": {
+      "label": "Talk to sales"
+    }
+  },
+  "included": {
+    "title": "Included in every plan",
+    "items": [
+      "Custom domains with automatic SSL.",
+      "Role-based access and staff permissions.",
+      "Email and booking notifications.",
+      "Secure Stripe payments with refunds.",
+      "Continuous feature updates."
+    ]
+  },
+  "comparison": {
+    "title": "Schedulaa Feature Comparison",
+    "subtitle": "Compare plans at a glance.",
+    "headers": {
+      "feature": "Feature",
+      "starter": "Starter",
+      "pro": "Pro",
+      "business": "Business"
+    },
+    "values": {
+      "yes": "Yes",
+      "dash": "—",
+      "businessHours": "Business hours",
+      "always": "24 / 7"
+    },
+    "rows": {
+      "price": {
+        "label": "Price",
+        "starter": "$19.99 / mo",
+        "pro": "$49.99 / mo",
+        "business": "$119.99 / mo"
+      },
+      "bestFor": {
+        "label": "Best for",
+        "starter": "Solo professionals",
+        "pro": "Growing teams",
+        "business": "Compliance & multi-location (department) teams"
+      },
+      "website": {
+        "section": "Website & Online Presence",
+        "builder": "Branded website builder & templates",
+        "customDomain": "Custom domain + automatic SSL",
+        "publicBooking": "Public booking pages",
+        "embedded": "Embedded booking widgets",
+        "branding": "Company-level branding"
+      },
+      "booking": {
+        "section": "Booking & Scheduling",
+        "online": "Online booking & confirmations",
+        "reschedule": "Client self-serve rescheduling",
+        "multi": "Multi-service & add-on bookings",
+        "staffScheduling": "Staff scheduling & shift management",
+        "shiftSwaps": "Shift swaps & leave approvals",
+        "bulk": "Bulk scheduling controls"
+      },
+      "time": {
+        "section": "Time Tracking",
+        "clock": "Shift-based clock-in / clock-out",
+        "breakPolicy": "Break policy enforcement",
+        "staggered": "Staggered & windowed breaks",
+        "ipHints": "IP / device audit hints",
+        "overtime": "Overtime & anomaly flags"
+      },
+      "payroll": {
+        "section": "Payroll",
+        "processing": "Payroll processing (US & Canada)",
+        "holiday": "Automated stat holiday pay & accruals",
+        "payslip": "Employee payslip portal (PDF)",
+        "exports": "Advanced payroll exports & audits",
+        "invoicing": "Payroll-linked invoicing"
+      },
+      "compliance": {
+        "section": "Compliance",
+        "revenueReports": "Revenue & appointment reports",
+        "exports": "CSV / PDF exports",
+        "w2": "W-2 (US) generation",
+        "t4": "T4 & ROE (Canada)",
+        "audit": "Compliance-ready audit trails"
+      },
+      "analytics": {
+        "section": "Analytics",
+        "revenueDash": "Revenue & booking dashboards",
+        "utilization": "Utilization & productivity analytics",
+        "segmentation": "Client segmentation & trends",
+        "multiLocation": "Multi-location (department) analytics"
+      },
+      "automation": {
+        "section": "Automation",
+        "notifications": "Email notifications & reminders",
+        "campaigns": "Email campaigns (VIP, Win-back, No-show)",
+        "zapier": "Zapier automation",
+        "workflows": "Workflow automations"
+      },
+      "hiring": {
+        "section": "Hiring",
+        "jobs": "Job postings & public apply links",
+        "resume": "Resume uploads & tracking",
+        "onboarding": "Onboarding workflows",
+        "handoff": "Hiring → payroll handoff"
+      },
+      "scale": {
+        "section": "Scale",
+        "seatsIncluded": "Staff seats included",
+        "starterSeats": "1",
+        "proSeats": "Up to 5",
+        "businessSeats": "10",
+        "additionalSeats": "Additional staff seats",
+        "seatPrice": "$9 / seat",
+        "multiLocation": "Multi-location support (use departments as locations)",
+        "starterLocations": "1",
+        "proLocations": "1",
+        "businessLocations": "Up to 2",
+        "roleAccess": "Role-based access & permissions",
+        "starterAccess": "Basic",
+        "proAccess": "Advanced",
+        "businessAccess": "Advanced",
+        "branchPermissions": "Branch-level permissions"
+      },
+      "support": {
+        "section": "Support",
+        "standard": "Standard support",
+        "priority": "Priority support",
+        "audit": "Audit & compliance support"
+      }
+    }
+  },
+  "whyTeams": {
+    "title": "Why teams choose Schedulaa",
+    "items": [
+      "Booking, payroll, time tracking, and websites share one data model.",
+      "No syncing errors between shifts, hours, and pay.",
+      "Fewer compliance gaps from disconnected tools."
+    ]
+  },
+  "websiteDesignService": {
+    "title": "Website Design Service",
+    "description": "One-time custom website design by our team. After purchase, we open a design ticket, collect your requirements, design your site, and publish it for you.",
+    "includes": "Includes: design + revisions + publish. Domain purchase not included (we can help you connect your domain).",
+    "cta": "Buy Website Design",
+    "loadingCta": "Starting checkout..."
+  }
+}
