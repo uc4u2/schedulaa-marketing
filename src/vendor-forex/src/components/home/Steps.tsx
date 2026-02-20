@@ -1,7 +1,7 @@
-import step1Img from '@public/images/ns-img-300.png';
-import step2Img from '@public/images/ns-img-301.png';
-import step3Img from '@public/images/ns-img-302.png';
-import step4Img from '@public/images/ns-img-303.png';
+import step1Img from '@public/images/marketing/showcase/employee-management.png';
+import step2Img from '@public/images/marketing/showcase/clients-pick2.png';
+import step3Img from '@public/images/marketing/showcase/checkout.png';
+import step4Img from '@public/images/marketing/showcase/manager-dashboards1.png';
 import gradient9Img from '@public/images/ns-img-501.png';
 import gradient32Img from '@public/images/ns-img-520.png';
 import gradient33Img from '@public/images/ns-img-521.png';
@@ -74,10 +74,10 @@ const Steps = () => {
   return (
     <RevealAnimation delay={0.1}>
       <section
-        className="bg-background-2 dark:bg-background-5 relative py-16 md:py-20 lg:py-[100px]"
+        className="relative bg-[linear-gradient(180deg,#f4f6f9_0%,#e9edf3_100%)] py-16 md:py-20 lg:py-[100px] dark:bg-[#0f172a]"
         aria-label="Hero section">
-        <div className="main-container">
-          <div className="grid grid-cols-12 items-start justify-items-center gap-y-14 xl:gap-[60px]">
+        <div className="main-container bg-transparent">
+          <div className="grid grid-cols-12 items-start justify-items-center gap-y-14 bg-transparent xl:gap-[60px]">
             <div className="col-span-12 lg:sticky lg:top-28 lg:col-span-6">
               <div className="space-y-10 text-center md:space-y-14 lg:text-left">
                 <div className="space-y-3">
@@ -104,7 +104,7 @@ const Steps = () => {
                 topOffset="11vh"
                 gap="24px"
                 initDelay={100}
-                className="order-2 w-full flex-none sm:order-1 sm:flex-1">
+                className="order-2 w-full flex-none bg-transparent sm:order-1 sm:flex-1">
                 {stepCards.map((step, index) => (
                   <RevealAnimation key={step.id} delay={0.4 + index * 0.1}>
                     <StackCardItem>
@@ -112,7 +112,7 @@ const Steps = () => {
                         <figure className="pointer-events-none absolute -top-[99%] -left-[88%] -z-10 size-[1000px] rotate-[307deg] opacity-50 select-none">
                           <Image src={step.gradientSrc} alt="step" />
                         </figure>
-                        <div className="relative z-10 w-full max-w-full space-y-6 rounded-[14px] bg-white p-8 sm:max-w-[467px] dark:bg-black">
+                        <div className="group relative z-10 w-full max-w-full space-y-6 rounded-[14px] bg-white p-8 sm:max-w-[467px] dark:bg-black">
                           <div className="space-y-1">
                             <p className="text-heading-5 text-secondary dark:text-accent">{step.title}</p>
                             <p className={`${step.maxDescriptionWidth} w-full`}>{step.description}</p>
@@ -123,16 +123,20 @@ const Steps = () => {
                                 <Image
                                   src={step.stepImg}
                                   alt="step"
-                                  className="block md:max-h-[300px] md:min-h-[300px] dark:hidden"
+                                  className="block transition-transform duration-500 ease-out group-hover:scale-110 md:max-h-[300px] md:min-h-[300px] dark:hidden"
                                 />
                                 <Image
                                   src={step.stepDarkImg}
                                   alt="step"
-                                  className="hidden md:max-h-[300px] md:min-h-[300px] dark:block"
+                                  className="hidden transition-transform duration-500 ease-out group-hover:scale-110 md:max-h-[300px] md:min-h-[300px] dark:block"
                                 />
                               </>
                             ) : (
-                              <Image src={step.stepImg} alt="step" className="md:max-h-[300px] md:min-h-[300px]" />
+                              <Image
+                                src={step.stepImg}
+                                alt="step"
+                                className="transition-transform duration-500 ease-out group-hover:scale-110 md:max-h-[300px] md:min-h-[300px]"
+                              />
                             )}
                           </figure>
                         </div>

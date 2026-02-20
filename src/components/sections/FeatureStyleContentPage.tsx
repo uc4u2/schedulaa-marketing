@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ReactNode } from 'react';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import StaggerGrid from '@/components/shared/motion/StaggerGrid';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
@@ -115,9 +116,11 @@ function normalizeSections(config: AnyConfig) {
 export default function FeatureStyleContentPage({
   config,
   routePath,
+  afterHero,
 }: {
   config: AnyConfig;
   routePath: string;
+  afterHero?: ReactNode;
 }) {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
@@ -166,6 +169,8 @@ export default function FeatureStyleContentPage({
           )}
         </div>
       </section>
+
+      {afterHero}
 
       {blocks.map((block, blockIndex) => (
         <section

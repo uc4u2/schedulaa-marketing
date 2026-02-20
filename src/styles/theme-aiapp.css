@@ -21,3 +21,27 @@
 .dark .premium-page-bg {
   background: radial-gradient(130% 95% at 50% 0%, rgba(165, 133, 255, 0.16) 0%, rgba(24, 29, 38, 0.95) 44%, #181d26 100%);
 }
+
+@keyframes heroFloatLeft {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-7deg);
+  }
+  50% {
+    transform: translate3d(-4px, -18px, 0) rotate(-2deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-7deg);
+  }
+}
+
+@keyframes heroFloatRight {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(8deg);
+  }
+  50% {
+    transform: translate3d(4px, -16px, 0) rotate(3deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(8deg);
+  }
+}

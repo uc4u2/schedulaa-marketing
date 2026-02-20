@@ -1,11 +1,13 @@
 import heroVectorImg from '@public/images/ns-img-296.svg';
-import heroImg from '@public/images/marketing/schedulaa-shift.png';
+import heroOverlayClientsImg from '@public/images/marketing/showcase/clients-pick2.png';
+import heroOverlayEmployeeImg from '@public/images/marketing/showcase/employee-management.png';
 import Image from 'next/image';
 import source from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { DEFAULT_LOCALE } from '@/utils/locale';
+import HeroShowcase from './HeroShowcase';
 
 interface FeatureItem {
   id: number;
@@ -90,8 +92,24 @@ const Hero = () => {
             <div className="relative mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]" style={{ transform: 'perspective(1400px) rotateX(3deg)' }}>
               <div className="pointer-events-none absolute -inset-4 rounded-[28px] bg-linear-[145deg,rgba(0,194,255,0.22)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.12)_100%] blur-xl" />
               <div className="pointer-events-none absolute -inset-x-10 -bottom-8 h-16 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,180,255,0.38)_0%,rgba(0,0,0,0)_72%)]" />
-              <figure className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0b1220] p-2 shadow-[0_28px_80px_rgba(0,0,0,0.56)]">
-                <Image src={heroImg} className="h-full w-full rounded-xl object-cover" alt={source.hero.mediaAlt} />
+              <HeroShowcase />
+              <figure
+                className="absolute -left-3 top-[10%] hidden w-[clamp(170px,20vw,250px)] overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_36px_rgba(0,0,0,0.42)] backdrop-blur md:block lg:-left-7"
+                style={{ animation: 'heroFloatLeft 8s ease-in-out infinite', transform: 'rotate(-8deg)' }}>
+                <Image
+                  src={heroOverlayEmployeeImg}
+                  alt="Employee management preview"
+                  className="h-full w-full rounded-lg object-cover opacity-90"
+                />
+              </figure>
+              <figure
+                className="absolute -right-2 bottom-[8%] hidden w-[clamp(180px,21vw,260px)] overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_16px_34px_rgba(0,0,0,0.42)] backdrop-blur md:block lg:-right-6"
+                style={{ animation: 'heroFloatRight 9s ease-in-out infinite', transform: 'rotate(8deg)' }}>
+                <Image
+                  src={heroOverlayClientsImg}
+                  alt="Client booking preview"
+                  className="h-full w-full rounded-lg object-cover opacity-90"
+                />
               </figure>
             </div>
           </div>

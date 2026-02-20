@@ -58,21 +58,21 @@ const Services = () => {
                 <div
                   key={service.id}
                   className={cn(
-                    'bg-background-2 hover:bg-secondary dark:bg-background-5 hover:dark:bg-background-8 group relative z-0 flex min-h-[270px] min-w-[360px] flex-col justify-between gap-y-8 overflow-hidden rounded-[20px] p-8 transition-all duration-700 ease-in-out',
+                    'bg-secondary hover:bg-background-2 dark:bg-background-8 hover:dark:bg-background-5 group relative z-0 flex min-h-[270px] min-w-[360px] flex-col justify-between gap-y-8 overflow-hidden rounded-[20px] p-8 transition-all duration-700 ease-in-out',
                     index === 0 && 'ml-8',
                   )}>
-                  <figure className="pointer-events-none absolute inset-0 -top-[210%] -right-[160%] -z-10 rotate-[-78deg] transform opacity-0 transition-all duration-1000 ease-in-out select-none group-hover:scale-110 group-hover:opacity-100">
+                  <figure className="pointer-events-none absolute inset-0 -top-[210%] -right-[160%] -z-10 rotate-[-78deg] transform opacity-100 transition-all duration-1000 ease-in-out select-none group-hover:scale-110 group-hover:opacity-0">
                     <Image src={gradient28Img} alt="review-bg" className="h-full w-full object-cover" />
                   </figure>
                   <div className="transform transition-all duration-700 ease-in-out group-hover:translate-y-[4px]">
-                    <p className="text-secondary/60 dark:text-accent/60 mb-2 text-lg transition-colors duration-700 ease-in-out group-hover:text-white">
+                    <p className="text-accent/70 dark:text-accent/70 mb-2 text-lg transition-colors duration-700 ease-in-out group-hover:text-secondary/60 group-hover:dark:text-accent/60">
                       {service.label}
                     </p>
-                    <h3 className="group-hover:text-ns-yellow text-secondary dark:text-accent transition-colors duration-700 ease-in-out">
+                    <h3 className="text-ns-yellow transition-colors duration-700 ease-in-out group-hover:text-secondary group-hover:dark:text-accent">
                       {service.value}
                     </h3>
                   </div>
-                  <p className="group-hover:text-accent/60 text-secondary/60 dark:text-accent/60 transform transition-all duration-700 ease-in-out group-hover:translate-y-[-6px] group-hover:opacity-90">
+                  <p className="text-accent/70 dark:text-accent/70 transform transition-all duration-700 ease-in-out group-hover:translate-y-[-6px] group-hover:text-secondary/60 group-hover:dark:text-accent/60 group-hover:opacity-90">
                     {service.description}
                   </p>
                 </div>

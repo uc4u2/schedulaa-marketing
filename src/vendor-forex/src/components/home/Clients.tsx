@@ -1,14 +1,12 @@
 import { cn } from '@/utils/cn';
-import dropboxLogo from '@public/images/icons/dropbox-v2.svg';
-import dropboxDarkLogo from '@public/images/icons/dropbox-v2-dark.svg';
 import driveLogo from '@public/images/icons/drive-google.svg';
-import gmailLogo from '@public/images/icons/gmail.svg';
+import googleLogo from '@public/images/icons/google.svg';
 import googleMeetLogo from '@public/images/icons/google-meet.svg';
-import notionLogo from '@public/images/icons/notion-v2.svg';
-import notionDarkLogo from '@public/images/icons/notion-v2-dark.svg';
-import slackLogo from '@public/images/icons/slack.svg';
+import quickbooksLogo from '@public/images/icons/quickbooks-wordmark.svg';
 import stripeLogo from '@public/images/icons/stripe.svg';
 import stripeDarkLogo from '@public/images/icons/stripe-dark.svg';
+import xeroLogo from '@public/images/icons/xero-wordmark.svg';
+import zapierLogo from '@public/images/icons/zapier-wordmark.svg';
 import Image, { StaticImageData } from 'next/image';
 import Marquee from 'react-fast-marquee';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -29,15 +27,15 @@ const clientLogos: ClientLogo[] = [
   },
   {
     id: 2,
-    lightSrc: googleMeetLogo,
-    darkSrc: googleMeetLogo,
-    alt: 'Google Meet integration',
+    lightSrc: googleLogo,
+    darkSrc: googleLogo,
+    alt: 'Google integration',
   },
   {
     id: 3,
-    lightSrc: gmailLogo,
-    darkSrc: gmailLogo,
-    alt: 'Gmail integration',
+    lightSrc: googleMeetLogo,
+    darkSrc: googleMeetLogo,
+    alt: 'Google Meet integration',
   },
   {
     id: 4,
@@ -47,21 +45,21 @@ const clientLogos: ClientLogo[] = [
   },
   {
     id: 5,
-    lightSrc: slackLogo,
-    darkSrc: slackLogo,
-    alt: 'Slack integration',
+    lightSrc: quickbooksLogo,
+    darkSrc: quickbooksLogo,
+    alt: 'QuickBooks integration',
   },
   {
     id: 6,
-    lightSrc: dropboxLogo,
-    darkSrc: dropboxDarkLogo,
-    alt: 'Dropbox integration',
+    lightSrc: xeroLogo,
+    darkSrc: xeroLogo,
+    alt: 'Xero integration',
   },
   {
     id: 7,
-    lightSrc: notionLogo,
-    darkSrc: notionDarkLogo,
-    alt: 'Notion integration',
+    lightSrc: zapierLogo,
+    darkSrc: zapierLogo,
+    alt: 'Zapier integration',
   },
 ];
 
@@ -79,9 +77,9 @@ const Clients = () => {
                   <figure
                     key={logo.id}
                     aria-label="Client brand logo"
-                    className={cn('min-w-[140px] md:min-w-[201px]', index === 0 && 'ml-8')}>
-                    <Image src={logo.lightSrc} alt={logo.alt} className="block dark:hidden" />
-                    <Image src={logo.darkSrc} alt={logo.alt} className="hidden dark:block" />
+                    className={cn('min-w-[160px] md:min-w-[230px]', index === 0 && 'ml-8')}>
+                    <Image src={logo.lightSrc} alt={logo.alt} className="block h-9 w-auto md:h-11 dark:hidden" />
+                    <Image src={logo.darkSrc} alt={logo.alt} className="hidden h-9 w-auto md:h-11 dark:block" />
                   </figure>
                 ))}
               </div>

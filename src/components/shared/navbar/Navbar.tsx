@@ -13,7 +13,7 @@ import {
   RESOURCES_MENU_LINKS,
   type NavbarLinkItem,
 } from '@/data/navbar-data';
-import legacyLogo from '@public/images/shared/schedulaa-logo-legacy.png';
+import navbarLogo from '@public/images/shared/schedulaa-logo-navbar.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -91,10 +91,10 @@ const Navbar = () => {
       <div className="dark:bg-background-7 flex items-center justify-between rounded-full bg-white/70 px-2.5 py-2.5 backdrop-blur-[25px] xl:py-0">
         <Link href={withLocalePath('/', locale)} aria-label="Schedulaa home" className="shrink-0">
           <figure className="hidden lg:block lg:max-w-[198px]">
-            <Image src={legacyLogo} alt="Schedulaa" className="h-auto w-full" priority />
+            <Image src={navbarLogo} alt="Schedulaa" className="h-auto w-full" priority />
           </figure>
           <figure className="block max-w-[138px] lg:hidden">
-            <Image src={legacyLogo} alt="Schedulaa" className="h-auto w-full" priority />
+            <Image src={navbarLogo} alt="Schedulaa" className="h-auto w-full" priority />
           </figure>
         </Link>
 

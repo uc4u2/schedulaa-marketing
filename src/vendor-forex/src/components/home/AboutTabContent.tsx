@@ -8,6 +8,36 @@ import TabContent from '../ui/tab/TabContent';
 
 const aboutTabsData = [
   {
+    id: 'blockchain',
+    badge: 'About',
+    title: 'Payroll and compliance are built for',
+    titleBreak: false,
+    highlightedText: ' service teams.',
+    description:
+      'Run payroll with overtime, tips, and holiday logic, then export W-2, T4, and ROE records with audit-ready reporting.',
+    image: aboutPayroll,
+    imageAlt: 'Schedulaa payroll and compliance dashboard',
+    buttonText: 'Explore payroll',
+    buttonHref: '/payroll',
+    features: [
+      {
+        icon: 'ns-shape-6',
+        title: 'Region-aware rules',
+        description: 'US + Canada payroll scenarios supported.',
+      },
+      {
+        icon: 'ns-shape-46',
+        title: 'Audit-ready exports',
+        description: 'Generate compliance artifacts with confidence.',
+      },
+      {
+        icon: 'ns-shape-47',
+        title: 'Employee self-service',
+        description: 'Payslips and payroll transparency for staff.',
+      },
+    ],
+  },
+  {
     id: 'decentralization',
     badge: 'About',
     title: 'Booking and scheduling become',
@@ -35,36 +65,6 @@ const aboutTabsData = [
         icon: 'ns-shape-47',
         title: 'Self-serve rescheduling',
         description: 'Reduce manual changes and admin overhead.',
-      },
-    ],
-  },
-  {
-    id: 'blockchain',
-    badge: 'About',
-    title: 'Payroll and compliance are built for',
-    titleBreak: false,
-    highlightedText: ' service teams.',
-    description:
-      'Run payroll with overtime, tips, and holiday logic, then export W-2, T4, and ROE records with audit-ready reporting.',
-    image: aboutPayroll,
-    imageAlt: 'Schedulaa payroll and compliance dashboard',
-    buttonText: 'Explore payroll',
-    buttonHref: '/payroll',
-    features: [
-      {
-        icon: 'ns-shape-6',
-        title: 'Region-aware rules',
-        description: 'US + Canada payroll scenarios supported.',
-      },
-      {
-        icon: 'ns-shape-46',
-        title: 'Audit-ready exports',
-        description: 'Generate compliance artifacts with confidence.',
-      },
-      {
-        icon: 'ns-shape-47',
-        title: 'Employee self-service',
-        description: 'Payslips and payroll transparency for staff.',
       },
     ],
   },
@@ -138,22 +138,26 @@ const AboutTabContent = () => {
           <div className="flex w-full flex-col items-start justify-between gap-x-24 gap-y-14 lg:flex-row">
             <div className="flex-1 sm:mx-auto sm:max-w-[500px] lg:max-w-full">
               <span className="badge badge-green mb-3.5 xl:mb-5">{tab.badge}</span>
-              <h2 className={`${index === 0 ? 'lg:text-heading-2 text-heading-4' : ''} mb-3`}>
+              <h2 className={`${index === 0 ? 'lg:text-heading-2 text-heading-4' : ''} mb-3 text-white`}>
                 {tab.title}
                 {tab.titleBreak && <br className="hidden lg:block" />}
                 {tab.titleContinue && ` ${tab.titleContinue}`}
-                <span className={`text-primary-500 ${index === 1 ? 'inline-block' : ''}`}>{tab.highlightedText}</span>
+                <span className={`hero-text-gradient hero-text-color-2 ${index === 1 ? 'inline-block' : ''}`}>
+                  {tab.highlightedText}
+                </span>
               </h2>
-              <p className={`${index === 0 ? 'mb-6 xl:mb-8' : 'mb-8'} lg:max-w-[478px]`}>{tab.description}</p>
+              <p className={`${index === 0 ? 'mb-6 xl:mb-8' : 'mb-8'} text-white/70 lg:max-w-[478px]`}>
+                {tab.description}
+              </p>
               <ul className={`${index === 0 ? 'mb-7 xl:mb-14' : 'mb-7 md:mb-14'} space-y-1.5`}>
                 {tab.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex list-none items-center gap-4 py-2">
-                    <span className={`${feature.icon} text-secondary text-[36px] dark:text-white`}></span>
+                    <span className={`${feature.icon} text-white/85 text-[36px]`}></span>
                     <div>
-                      <strong className="text-tagline-1 text-secondary dark:text-accent font-medium">
+                      <strong className="text-tagline-1 text-white font-medium">
                         {feature.title}
                       </strong>
-                      <p className="text-secondary/60 text-tagline-2 dark:text-accent/60 font-normal">
+                      <p className="text-tagline-2 text-white/65 font-normal">
                         {feature.description}
                       </p>
                     </div>
@@ -171,9 +175,13 @@ const AboutTabContent = () => {
             {/* About Image */}
             <div className="flex-1 sm:mx-auto sm:max-w-[500px] lg:max-w-full">
               <div className="flex items-center justify-center">
-                <figure className={index === 0 ? 'lg:inline-block' : 'tab-item-image'}>
-                  <Image src={tab.image} alt={tab.imageAlt} className={index === 0 ? 'w-fit object-cover' : ''} />
-                </figure>
+                <div className="relative w-full max-w-[620px]" style={{ transform: 'perspective(1200px) rotateX(2.5deg)' }}>
+                  <div className="pointer-events-none absolute -inset-3 rounded-[24px] bg-linear-[145deg,rgba(0,194,255,0.18)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.1)_100%] blur-lg" />
+                  <div className="pointer-events-none absolute -inset-x-8 -bottom-6 h-14 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,180,255,0.28)_0%,rgba(0,0,0,0)_72%)]" />
+                  <figure className="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#0b1220] p-2 shadow-[0_20px_56px_rgba(0,0,0,0.45)]">
+                    <Image src={tab.image} alt={tab.imageAlt} className="h-full w-full rounded-[14px] object-cover" />
+                  </figure>
+                </div>
               </div>
             </div>
           </div>

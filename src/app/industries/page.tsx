@@ -1,4 +1,5 @@
 import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
+import IndustryDirectoryLiveSection from '@/components/industries/IndustryDirectoryLiveSection';
 import { industriesPage } from '@/legacy-content/batch2/config';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -10,5 +11,11 @@ export const metadata: Metadata = {
 };
 
 export default function IndustriesPage() {
-  return <FeatureStyleContentPage config={industriesPage as any} routePath="/industries" />;
+  return (
+    <FeatureStyleContentPage
+      config={industriesPage as any}
+      routePath="/industries"
+      afterHero={<IndustryDirectoryLiveSection />}
+    />
+  );
 }

@@ -17,7 +17,11 @@ const formatDate = (dateInput?: string) => {
   });
 };
 
-const blogImages = ['/images/marketing/payroll-dashboard.png', '/images/marketing/w2-screen.png', '/images/marketing/t4-screen.png'];
+const blogImages = [
+  '/images/marketing/showcase/job-posting.png',
+  '/images/marketing/showcase/w2.png',
+  '/images/marketing/t4-screen.png',
+];
 
 const blogs = (blogPosts || []).slice(0, 3).map((post, index) => {
   const wordCount = (post.description || '').split(/\s+/).filter(Boolean).length;

@@ -1,6 +1,8 @@
 import { CheckIcon } from '@/icons';
 import { cn } from '@/utils/cn';
 import pricingSource from '@/legacy-content/pricing/landing-pricing.json';
+import { buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
+import { DEFAULT_LOCALE } from '@/utils/locale';
 import gradient4Img from '@public/images/ns-img-496.png';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -81,6 +83,7 @@ const pricingPlans: PricingPlan[] = [
 ];
 
 const Pricing = () => {
+  const returnTo = marketingReturnTo(DEFAULT_LOCALE, '/pricing');
   return (
     <RevealAnimation delay={0.1}>
       <section className="bg-background-2 dark:bg-background-5 py-16 md:py-20 lg:py-[100px]">
@@ -160,7 +163,11 @@ const Pricing = () => {
                         </div>
 
                         <Link
-                          href="/contact-us"
+                          href={buildUpgradeUrl({
+                            plan: plan.id === 'enterprise' ? 'business' : plan.id,
+                            interval: 'monthly',
+                            returnTo,
+                          })}
                           className={cn(
                             'btn btn-md w-full first-letter:uppercase before:content-none',
                             plan.planType === 'featured'

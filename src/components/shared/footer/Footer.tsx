@@ -24,6 +24,9 @@ const Footer = ({ className }: { className?: string }) => {
   const locale = detectLocaleFromPath(pathname);
   const localePath = (path: string) => withLocalePath(path, locale);
   const returnTo = marketingReturnTo(locale, pathname.replace(/^\/(en|fa)/, '') || '/');
+  const compareSection = FOOTER_SECTIONS.find((section) => section.id === 'compare');
+  const legalSection = FOOTER_SECTIONS.find((section) => section.id === 'legal');
+  const primarySections = FOOTER_SECTIONS.filter((section) => section.id !== 'compare' && section.id !== 'legal');
 
   return (
     <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
@@ -43,7 +46,7 @@ const Footer = ({ className }: { className?: string }) => {
           </div>
 
           <div className="col-span-12 grid grid-cols-1 gap-x-0 gap-y-8 md:grid-cols-2 xl:col-span-8 xl:grid-cols-4">
-            {FOOTER_SECTIONS.map((section) => (
+            {primarySections.map((section) => (
               <div className="col-span-1" key={section.id}>
                 <div className="space-y-8">
                   <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(section.titleKey)}</p>
@@ -69,6 +72,46 @@ const Footer = ({ className }: { className?: string }) => {
                 </div>
               </div>
             ))}
+
+            {compareSection ? (
+              <div className="col-span-1 space-y-10">
+                <div className="space-y-8">
+                  <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(compareSection.titleKey)}</p>
+                  <ul className="space-y-5">
+                    {compareSection.links.map((link, idx) => (
+                      <li
+                        key={link.id}
+                        className={compareSection.id === 'compare' && idx >= FOOTER_COMPARE_MOBILE_LIMIT ? 'hidden md:list-item' : ''}
+                      >
+                        <Link href={linkHref(link, localePath, returnTo)} className="footer-link">
+                          {linkLabel(link, t)}
+                        </Link>
+                      </li>
+                    ))}
+                    <li className="md:hidden">
+                      <Link href={localePath('/compare')} className="footer-link">
+                        View all comparisons
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {legalSection ? (
+                  <div className="space-y-8">
+                    <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(legalSection.titleKey)}</p>
+                    <ul className="space-y-5">
+                      {legalSection.links.map((link) => (
+                        <li key={link.id}>
+                          <Link href={linkHref(link, localePath, returnTo)} className="footer-link">
+                            {linkLabel(link, t)}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
           </div>
         </div>
 
