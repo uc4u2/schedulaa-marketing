@@ -64,9 +64,9 @@ const Reviews = () => {
               slidesPerView={3}
               centeredSlides={true}
               loop={true}
-              speed={1500}
+              speed={850}
               autoplay={{
-                delay: 3200,
+                delay: 1400,
                 disableOnInteraction: false,
               }}
               breakpoints={{
@@ -82,7 +82,7 @@ const Reviews = () => {
               <div className="swiper-wrapper">
                 {showcaseItems.map((item) => (
                   <SwiperSlide key={item.id} className="swiper-slide">
-                    <div className="group relative mx-1 overflow-hidden rounded-[22px] sm:mx-0">
+                    <div className="group relative mx-1 overflow-visible rounded-[22px] transition-transform duration-300 hover:z-30 hover:scale-[1.65] sm:mx-0">
                       <div className="pointer-events-none absolute -inset-2 rounded-[26px] bg-linear-[145deg,rgba(0,194,255,0.16)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.1)_100%] blur-md" />
                       <div className="relative rounded-[22px] border border-white/10 bg-[#0d1322] p-3 shadow-[0_20px_58px_rgba(0,0,0,0.42)] transition-transform duration-500 ease-out group-hover:-translate-y-1">
                         <div className="mb-3 rounded-[14px] border border-white/10 bg-white/4 px-4 py-3">
