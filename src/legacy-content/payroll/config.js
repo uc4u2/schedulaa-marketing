@@ -95,7 +95,7 @@ const overviewConfig = {
       { src: "/images/marketing/payroll-manage.png", alt: "Payroll management" },
       { src: "/images/marketing/showcase/t4.png", alt: "T4 generation" },
       { src: "/images/marketing/showcase/roe.png", alt: "ROE workflow" },
-      { src: "/images/marketing/showcase/w2-3d.png", alt: "W-2 generation" },
+      { src: "/images/marketing/showcase/w2-4d.png", alt: "W-2 generation" },
     ],
     bullets: [
       "Regional engines for Canada (CPP/EI/BPA, CPP/EI exemptions) and the USA (federal tax, FICA/Medicare, employer FUTA/SUTA reporting).",

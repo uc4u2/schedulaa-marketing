@@ -18,7 +18,7 @@ const formatDate = (dateInput?: string) => {
 };
 
 const blogImages = [
-  '/images/marketing/showcase/job-posting.png',
+  '/images/marketing/showcase/job-posting-4d.png',
   '/images/marketing/showcase/w2.png',
   '/images/marketing/t4-screen.png',
 ];

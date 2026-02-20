@@ -17,8 +17,16 @@ const BlogCardV2 = ({ blog, className }: BlogCardV2Props) => {
           'bg-background-2 dark:bg-background-7 mx-auto max-w-[627px] scale-100 overflow-hidden rounded-[20px] transition-transform duration-500 hover:scale-[102%] hover:transition-transform hover:duration-500 lg:mx-0 lg:max-w-full',
           className,
         )}>
-        <figure className="h-[260px] w-full max-w-full overflow-hidden rounded-[20px] lg:max-w-[629px]">
-          <Image src={blog.thumbnail} alt="blog" className="h-full w-full object-cover" width={629} height={260} />
+        <figure className="h-[260px] w-full max-w-full overflow-hidden rounded-[20px] bg-[#0f172a] lg:max-w-[629px]">
+          <Image
+            src={blog.thumbnail}
+            alt="blog"
+            className="h-full w-full object-contain"
+            width={629}
+            height={260}
+            quality={100}
+            unoptimized
+          />
         </figure>
         <div className="p-8">
           <div className="flex items-center gap-4">

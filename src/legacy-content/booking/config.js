@@ -55,6 +55,14 @@ const bookingHubConfig = {
     title: "Online Booking & Team Scheduling — with Stripe Payments",
     subtitle:
       "Schedulaa gives you a complete booking flow with real-time availability, provider choice, staff calendars, invitations, and Stripe-powered checkout.",
+    image: '/images/marketing/showcase/clients-pick2.png',
+    imageAlt: 'Client booking flow preview',
+    images: [
+      { src: '/images/marketing/showcase/service-management.png', alt: 'Service management' },
+      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'Payment collection' },
+      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'Checkout flow' },
+      { src: '/images/marketing/showcase/employee-availability.png', alt: 'Employee availability' },
+    ],
     bullets: [
       "Publish services and show live availability across providers.",
       "Give managers a master calendar with shift and leave controls.",

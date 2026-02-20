@@ -9,6 +9,14 @@ export const workforcePage = {
     title: 'All-in-one workforce command center',
     subtitle:
       'Schedulaa already unified online scheduling, payroll, and website pages. Now we’ve closed the loop on time tracking so hours, templates, policy audits, and payroll-ready approvals live in one dashboard—with IP/device hints captured automatically for every punch.',
+    image: '/images/marketing/showcase/time-tracking.png',
+    imageAlt: 'Schedulaa time tracking workspace',
+    images: [
+      { src: '/images/marketing/payroll-manage.png', alt: 'Payroll management' },
+      { src: '/images/marketing/shift-pre.png', alt: 'Shift management' },
+      { src: '/images/marketing/showcase/t4.png', alt: 'T4 generation' },
+      { src: '/images/marketing/showcase/w2-4d.png', alt: 'W-2 generation' },
+    ],
     primaryCta: { label: 'Start free', href: '/register' },
     secondaryCta: { label: 'Request a walkthrough', href: '/contact' },
   },
