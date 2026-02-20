@@ -13,6 +13,7 @@ const require = createRequire(import.meta.url);
 const BASE_URL = process.env.SEO_AUDIT_BASE_URL || 'http://127.0.0.1:3001';
 const LOCALES = ['en', 'fa'];
 const RESERVED_PREFIXES = ['/manager', '/employee', '/app', '/admin', '/recruiter', '/client', '/sales', '/dashboard'];
+const RESERVED_EXACT_ROUTES = new Set(['/login', '/register', '/signup', '/blog/category']);
 const MIN_WORDS = Number(process.env.SEO_MIN_WORDS || 220);
 
 const legacySeoRoutesPath = path.join(LEGACY_ROOT, 'config/seoRoutes.js');
@@ -147,6 +148,7 @@ async function main() {
   const allTargets = [];
   for (const route of [...knownRoutes].sort((a, b) => a.localeCompare(b))) {
     if (RESERVED_PREFIXES.some((prefix) => route === prefix || route.startsWith(`${prefix}/`))) continue;
+    if (RESERVED_EXACT_ROUTES.has(route)) continue;
     for (const locale of LOCALES) allTargets.push({ locale, route, url: buildLocaleUrl(BASE_URL, locale, route) });
   }
 
@@ -161,7 +163,7 @@ async function main() {
       const fingerprint = hashText(fingerprintSource);
       const links = extractInternalLinks(html, BASE_URL)
         .map((href) => deLocalePath(href))
-        .filter((href) => href !== '/login' && href !== '/signup');
+        .filter((href) => href !== '/login' && href !== '/register' && href !== '/signup');
       results.push({
         ...target,
         status: response.status,
