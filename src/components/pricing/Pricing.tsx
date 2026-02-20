@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import type { CSSProperties } from 'react';
 
 import pricingSource from '@/legacy-content/pricing/landing-pricing.json';
 import { buildAppUrl, buildBillingUrl, buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
@@ -181,14 +182,21 @@ const Pricing = () => {
         </div>
 
         <div id="plans" className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {plans.map((plan) => (
+          {plans.map((plan, index) => (
             <article
               key={plan.key}
               className={`rounded-2xl border p-6 ${
                 plan.highlight
                   ? 'border-secondary bg-background-3 dark:border-accent dark:bg-background-8'
                   : 'border-stroke-2 bg-white dark:border-stroke-7 dark:bg-background-5'
-              }`}>
+              }`}
+              style={
+                {
+                  '--card-rotate-start': index === 1 ? '0deg' : index % 2 === 0 ? '-8deg' : '8deg',
+                  '--card-rotate-end': index === 1 ? '0deg' : index % 2 === 0 ? '-1deg' : '1deg',
+                  animation: `heroCardDrop 920ms cubic-bezier(0.23,1,0.32,1) ${120 + index * 220}ms both, heroCardDrift ${7.4 + index * 0.35}s ease-in-out ${1.2 + index * 0.25}s infinite`,
+                } as CSSProperties
+              }>
               {plan.badge ? <span className="badge badge-cyan mb-3">{plan.badge}</span> : null}
               <h2 className="text-heading-4 mb-2">{plan.name}</h2>
               <p className="mb-3 text-tagline-2">{plan.price}</p>
