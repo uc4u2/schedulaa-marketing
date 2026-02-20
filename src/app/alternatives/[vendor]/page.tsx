@@ -19,6 +19,13 @@ export default async function AlternativesVendorPage({ params }: { params: Promi
   const { vendor } = await params;
   const entry = getCompareEntry(vendor, 'alternatives');
   if (!entry) return notFound();
+  const rows = entry.executiveOverview?.rows || [];
+  const summaryRows = entry.summaryTable?.rows || [];
+  const fitMatrix = entry.fitMatrix || [];
+  const contextTitle = entry.contextBlock?.title;
+  const contextParagraphs = entry.contextBlock?.paragraphs || [];
+  const testimonialQuote = entry.testimonial?.quote;
+  const testimonialAttribution = entry.testimonial?.attribution;
 
   return (
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
@@ -34,7 +41,25 @@ export default async function AlternativesVendorPage({ params }: { params: Promi
             Schedulaa replaces disconnected tools with an operations OS that unifies service delivery, payroll, and
             billing in one workflow.
           </p>
+          {(entry.intro || []).map((paragraph: string, idx: number) => (
+            <p key={`${idx}-${paragraph.slice(0, 24)}`} className="mt-4 text-secondary/70 dark:text-accent/70">
+              {paragraph}
+            </p>
+          ))}
         </div>
+
+        {contextParagraphs.length ? (
+          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+            <h2 className="text-2xl font-semibold">{contextTitle || `Why teams replace ${entry.competitor}`}</h2>
+            <div className="mt-4 space-y-3">
+              {contextParagraphs.map((paragraph: string, idx: number) => (
+                <p key={`${idx}-${paragraph.slice(0, 24)}`} className="text-secondary/70 dark:text-accent/70">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
           <h2 className="text-2xl font-semibold">Why teams choose Schedulaa</h2>
@@ -51,7 +76,7 @@ export default async function AlternativesVendorPage({ params }: { params: Promi
         <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
           <h2 className="text-2xl font-semibold">Quick comparison highlights</h2>
           <div className="mt-4 space-y-3">
-            {(entry.executiveOverview?.rows || []).slice(0, 8).map((row: any) => (
+            {rows.slice(0, 10).map((row: any) => (
               <div key={row.label} className="rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
                 <h3 className="font-semibold">{row.label}</h3>
                 <p className="mt-1 text-sm text-secondary/70 dark:text-accent/70"><strong>Schedulaa:</strong> {row.schedulaa}</p>
@@ -61,7 +86,61 @@ export default async function AlternativesVendorPage({ params }: { params: Promi
           </div>
         </div>
 
-        <div className="mt-8 flex gap-4">
+        {summaryRows.length ? (
+          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+            <h2 className="text-2xl font-semibold">Feature group summary</h2>
+            <div className="mt-4 space-y-4">
+              {summaryRows.map((row: any) => (
+                <div key={row.label} className="rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
+                  <h3 className="font-semibold">{row.label}</h3>
+                  <p className="mt-1 text-sm text-secondary/70 dark:text-accent/70">
+                    <strong>Schedulaa:</strong> {row.schedulaa}
+                  </p>
+                  <p className="mt-1 text-sm text-secondary/70 dark:text-accent/70">
+                    <strong>{entry.competitor}:</strong> {row.competitor}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {fitMatrix.length ? (
+          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+            <h2 className="text-2xl font-semibold">When to choose each platform</h2>
+            <div className="mt-4 space-y-3">
+              {fitMatrix.map((item: any, idx: number) => (
+                <div key={`${item.scenario}-${idx}`} className="rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
+                  <p className="text-sm text-secondary/70 dark:text-accent/70">{item.scenario}</p>
+                  <p className="mt-2 text-sm font-semibold">
+                    Recommendation: <span className="text-primary-500">{item.recommendation}</span>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {testimonialQuote ? (
+          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+            <h2 className="text-2xl font-semibold">Team voice</h2>
+            <blockquote className="mt-4 text-secondary/70 dark:text-accent/70">"{testimonialQuote}"</blockquote>
+            {testimonialAttribution ? (
+              <p className="mt-3 text-sm font-medium text-secondary/70 dark:text-accent/70">{testimonialAttribution}</p>
+            ) : null}
+          </div>
+        ) : null}
+
+        {entry.conclusion ? (
+          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+            <h2 className="text-2xl font-semibold">Conclusion</h2>
+            <p className="mt-3 text-secondary/70 dark:text-accent/70">{entry.conclusion}</p>
+          </div>
+        ) : null}
+
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link href="/pricing" className="btn btn-primary btn-md">View pricing plans</Link>
+          <Link href="/payroll" className="btn btn-secondary btn-md">See payroll coverage</Link>
           <Link href="/alternatives" className="text-primary-500 underline">Back to alternatives hub</Link>
           <Link href={`/compare/${entry.key}`} className="text-primary-500 underline">View full comparison</Link>
         </div>
