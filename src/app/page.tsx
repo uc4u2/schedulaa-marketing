@@ -1,13 +1,7 @@
-import { headers } from 'next/headers';
 import { Metadata } from 'next';
 import HomeForexLayout from '@/components/forex-skin/home/HomeForexLayout';
 import { defaultMetadata } from '@/utils/generateMetaData';
-import { AppLocale } from '@/utils/locale';
-
-const getLocale = async (): Promise<AppLocale> => {
-  const h = await headers();
-  return h.get('x-locale') === 'fa' ? 'fa' : 'en';
-};
+import { getServerLocale } from '@/utils/serverLocale';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -28,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Homepage() {
-  const locale = await getLocale();
+  const locale = await getServerLocale();
 
   return <HomeForexLayout locale={locale} />;
 }

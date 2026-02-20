@@ -9,16 +9,8 @@ import cardThreeImgDark from '@public/images/ns-img-dark-65.png';
 import cardFourImgDark from '@public/images/ns-img-dark-66.png';
 import cardFiveImgDark from '@public/images/ns-img-dark-67.png';
 import Image from 'next/image';
-import source from '@/legacy-content/features/landing-features.json';
+import sourceEn from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
-
-const cards = [
-  source.highlightCards?.scheduling,
-  source.highlightCards?.payroll,
-  source.highlightCards?.commerce,
-  (source.featureShowcase?.features || [])[0],
-  (source.featureShowcase?.features || [])[1],
-].filter(Boolean) as Array<{ title: string; description?: string; points?: string[] }>;
 
 const cardImages = [
   { light: cardOneImg, dark: cardOneImgDark },
@@ -28,20 +20,29 @@ const cardImages = [
   { light: cardFiveImg, dark: cardFiveImgDark },
 ];
 
-const Features = () => {
+const Features = ({ source }: { source?: any }) => {
+  const content = source || sourceEn;
+  const cards = [
+    content.highlightCards?.scheduling,
+    content.highlightCards?.payroll,
+    content.highlightCards?.commerce,
+    (content.featureShowcase?.features || [])[0],
+    (content.featureShowcase?.features || [])[1],
+  ].filter(Boolean) as Array<{ title: string; description?: string; points?: string[] }>;
+
   return (
     <section className="pt-[100px] pb-[100px] md:pt-[160px]" aria-label="Features">
       <div className="main-container">
         <div className="space-y-[70px]">
           <div className="space-y-3 text-center">
             <RevealAnimation delay={0.3}>
-              <span className="badge badge-green">{source.hero.featureCard.eyebrow}</span>
+              <span className="badge badge-green">{content.hero.featureCard.eyebrow}</span>
             </RevealAnimation>
             <RevealAnimation delay={0.4}>
-              <h2 className="mx-auto max-w-[814px]">{source.hero.featureCard.title}</h2>
+              <h2 className="mx-auto max-w-[814px]">{content.hero.featureCard.title}</h2>
             </RevealAnimation>
             <RevealAnimation delay={0.5}>
-              <p className="mx-auto max-w-[734px]">{source.hero.featureCard.subtitle}</p>
+              <p className="mx-auto max-w-[734px]">{content.hero.featureCard.subtitle}</p>
             </RevealAnimation>
           </div>
 

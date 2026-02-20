@@ -1,29 +1,32 @@
 import { cn } from '@/utils/cn';
 import gradient28Img from '@public/images/ns-img-516.png';
 import Image from 'next/image';
-import source from '@/legacy-content/features/landing-features.json';
+import sourceEn from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 
-const showcaseData =
-  (source.featureShowcase?.features || []).map((feature) => ({
+type ShowcaseItem = { title: string; description: string };
+
+const Feature = ({ source }: { source?: any }) => {
+  const content = source || sourceEn;
+  const showcaseData =
+    (content.featureShowcase?.features || []).map((feature: { title: string; description: string[] | string }) => ({
+      title: feature.title,
+      description: Array.isArray(feature.description)
+        ? feature.description[0]
+        : String(feature.description || ''),
+    })) as ShowcaseItem[];
+
+  const fallbackData = (Object.values(content.highlightCards || {}) as Array<{
+    title: string;
+    description: string;
+  }>).map((feature): ShowcaseItem => ({
     title: feature.title,
-    description: Array.isArray(feature.description)
-      ? feature.description[0]
-      : String(feature.description || ''),
-  })) || [];
+    description: feature.description,
+  }));
 
-const fallbackData = (Object.values(source.highlightCards || {}) as Array<{
-  title: string;
-  description: string;
-}>).map((feature) => ({
-  title: feature.title,
-  description: feature.description,
-}));
+  const data: ShowcaseItem[] = (showcaseData.length ? showcaseData : fallbackData).slice(0, 4);
 
-const data = (showcaseData.length ? showcaseData : fallbackData).slice(0, 4);
-
-const Feature = () => {
   return (
     <RevealAnimation delay={0.1}>
       <section className="bg-[url('/images/ns-img-527.png')] bg-cover bg-bottom bg-no-repeat py-20 md:py-[100px]">
@@ -31,11 +34,11 @@ const Feature = () => {
           <div className="space-y-10 md:space-y-14">
             <div className="mb-2 space-y-3 text-center md:mb-0">
               <RevealAnimation delay={0.1}>
-                <h2 className="text-heading dark:text-accent">{source.featureShowcase.title}</h2>
+                <h2 className="text-heading dark:text-accent">{content.featureShowcase.title}</h2>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
                 <p className="text-heading/70 dark:text-accent/60 mx-auto max-w-[472px]">
-                  {source.featureShowcase.subtitle}
+                  {content.featureShowcase.subtitle}
                 </p>
               </RevealAnimation>
             </div>

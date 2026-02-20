@@ -3,6 +3,7 @@ import Feature from '@/vendor-forex/src/components/features/Feature';
 import Features from '@/vendor-forex/src/components/features/Features';
 import Reviews from '@/vendor-forex/src/components/features/Reviews';
 import WhyChooseUs from '@/vendor-forex/src/components/features/WhyChooseUs';
+import { getLandingSource } from '@/legacy-content/features/getLandingSource';
 import { AppLocale } from '@/utils/locale';
 
 type Props = {
@@ -11,13 +12,13 @@ type Props = {
 
 // Forex skin features composition in vendor section order.
 export default function FeaturesForexLayout({ locale }: Props) {
-  void locale;
+  const source = getLandingSource(locale, 'features');
   return (
     <main className="bg-background-3 dark:bg-background-7">
-      <Features />
-      <Feature />
-      <WhyChooseUs />
-      <Reviews />
+      <Features source={source} />
+      <Feature source={source} />
+      <WhyChooseUs source={source} />
+      <Reviews source={source} />
       <CTA
         className="bg-white dark:bg-background-6"
         badgeClass="hidden"

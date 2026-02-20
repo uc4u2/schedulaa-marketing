@@ -33,7 +33,7 @@ export type NavbarLinkItem = {
 };
 
 export type NavbarLocaleOption = {
-  code: 'en' | 'fa' | 'ru' | 'zh';
+  code: 'en' | 'fa' | 'ru' | 'zh' | 'es' | 'fr' | 'de' | 'ar' | 'pt';
   label: string;
   supported: boolean;
 };
@@ -79,6 +79,11 @@ export const AUTH_LINKS: Array<{ id: string; href: string; labelKey: NavbarLabel
 export const LOCALE_OPTIONS: NavbarLocaleOption[] = [
   { code: 'en', label: 'EN', supported: true },
   { code: 'fa', label: 'FA', supported: true },
-  { code: 'ru', label: 'RU', supported: false },
-  { code: 'zh', label: 'ZH', supported: false },
+  { code: 'ru', label: 'RU', supported: true },
+  { code: 'zh', label: 'ZH', supported: true },
+  { code: 'es', label: 'ES', supported: true },
+  { code: 'fr', label: 'FR', supported: true },
+  { code: 'de', label: 'DE', supported: true },
+  { code: 'ar', label: 'AR', supported: true },
+  { code: 'pt', label: 'PT', supported: true },
 ];

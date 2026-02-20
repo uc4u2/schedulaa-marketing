@@ -2,11 +2,13 @@ import aboutScheduling from '@public/images/marketing/employee-dashboard.png';
 import aboutPayroll from '@public/images/marketing/payroll-dashboard.png';
 import aboutCommerce from '@public/images/marketing/website-builder.png';
 import aboutAutomation from '@public/images/marketing/my-shift.png';
+import { detectLocaleFromPath } from '@/utils/locale';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import LinkButton from '../ui/button/LinkButton';
 import TabContent from '../ui/tab/TabContent';
 
-const aboutTabsData = [
+const aboutTabsDataEn = [
   {
     id: 'blockchain',
     badge: 'About',
@@ -130,7 +132,135 @@ const aboutTabsData = [
   },
 ];
 
+const aboutTabsDataFa = [
+  {
+    id: 'blockchain',
+    badge: 'درباره',
+    title: 'حقوق و انطباق برای',
+    titleBreak: false,
+    highlightedText: ' تیم‌های خدماتی ساخته شده است.',
+    description:
+      'حقوق را با قوانین اضافه‌کاری، انعام و تعطیلات اجرا کنید و خروجی‌های W-2، T4 و ROE را با گزارش‌گیری آماده ممیزی دریافت کنید.',
+    image: aboutPayroll,
+    imageAlt: 'داشبورد حقوق و انطباق Schedulaa',
+    buttonText: 'مشاهده حقوق',
+    buttonHref: '/payroll',
+    features: [
+      {
+        icon: 'ns-shape-6',
+        title: 'قوانین منطقه‌ای',
+        description: 'سناریوهای حقوق آمریکا و کانادا پشتیبانی می‌شود.',
+      },
+      {
+        icon: 'ns-shape-46',
+        title: 'خروجی‌های آماده ممیزی',
+        description: 'اسناد انطباق را با اطمینان تولید کنید.',
+      },
+      {
+        icon: 'ns-shape-47',
+        title: 'سلف‌سرویس کارمند',
+        description: 'فیش حقوقی و شفافیت حقوق برای کارکنان.',
+      },
+    ],
+  },
+  {
+    id: 'decentralization',
+    badge: 'درباره',
+    title: 'رزرو و زمان‌بندی به',
+    titleBreak: true,
+    titleContinue: 'یک جریان',
+    highlightedText: ' یکپارچه تبدیل می‌شود.',
+    description:
+      'سرویس‌ها، ظرفیت و ارائه‌دهندگان را یک‌بار منتشر کنید. مشتری خودرزرو انجام می‌دهد و تقویم کارکنان در لحظه به‌روزرسانی می‌شود.',
+    image: aboutScheduling,
+    imageAlt: 'داشبورد رزرو و ظرفیت Schedulaa',
+    buttonText: 'مشاهده رزرو',
+    buttonHref: '/booking',
+    features: [
+      {
+        icon: 'ns-shape-6',
+        title: 'ظرفیت لحظه‌ای',
+        description: 'نمای کارکنان و مشتری همیشه همگام است.',
+      },
+      {
+        icon: 'ns-shape-46',
+        title: 'تخصیص ارائه‌دهنده',
+        description: 'مدیریت سرویس، اتاق و تقویم بر اساس نقش.',
+      },
+      {
+        icon: 'ns-shape-47',
+        title: 'تغییر زمان توسط مشتری',
+        description: 'کاهش تغییرات دستی و سربار مدیریتی.',
+      },
+    ],
+  },
+  {
+    id: 'privacy',
+    badge: 'درباره',
+    title: 'سرویس و محصول را از',
+    titleBreak: false,
+    highlightedText: ' یک پرداخت‌یار بفروشید.',
+    description:
+      'رزرو، افزونه، محصول، بیعانه و انعام را در یک سبد ترکیب کنید و با Stripe پرداخت و رسید خودکار داشته باشید.',
+    image: aboutCommerce,
+    imageAlt: 'تحلیل تجارت و پرداخت Schedulaa',
+    buttonText: 'مشاهده قابلیت‌ها',
+    buttonHref: '/features',
+    features: [
+      {
+        icon: 'ns-shape-6',
+        title: 'سبد یکپارچه',
+        description: 'محصول و سرویس در یک مسیر خرید.',
+      },
+      {
+        icon: 'ns-shape-46',
+        title: 'پشتیبانی بازپرداخت و مالیات',
+        description: 'پرداخت امن با کنترل‌های عملیاتی.',
+      },
+      {
+        icon: 'ns-shape-47',
+        title: 'تحلیل درآمد',
+        description: 'پیگیری بهره‌وری، ریزش و عملکرد برتر.',
+      },
+    ],
+  },
+  {
+    id: 'exchanges',
+    badge: 'درباره',
+    title: 'یکپارچه‌سازی و اتوماسیون،',
+    titleBreak: false,
+    highlightedText: ' مقیاس عملیاتی می‌سازد.',
+    description:
+      'Schedulaa را به ابزارهای مالی متصل کنید، کمپین‌های بازگشت را فعال کنید و سیستم‌های بیرونی را با API و webhook همگام نگه دارید.',
+    image: aboutAutomation,
+    imageAlt: 'یکپارچه‌سازی و اتوماسیون گردش‌کار Schedulaa',
+    buttonText: 'مشاهده مستندات',
+    buttonHref: '/docs',
+    features: [
+      {
+        icon: 'ns-shape-6',
+        title: 'Zapier + webhook',
+        description: 'اجرای گردش‌کار بدون تحویل دستی.',
+      },
+      {
+        icon: 'ns-shape-46',
+        title: 'همگام‌سازی مالی',
+        description: 'اتصال داده حقوق و صورتحساب به ابزارهای مالی.',
+      },
+      {
+        icon: 'ns-shape-47',
+        title: 'اتوماسیون کمپین',
+        description: 'بازگردانی مشتریان غایب، VIP و در معرض ریزش.',
+      },
+    ],
+  },
+];
+
 const AboutTabContent = () => {
+  const pathname = usePathname() || '/';
+  const isFa = detectLocaleFromPath(pathname) === 'fa';
+  const aboutTabsData = isFa ? aboutTabsDataFa : aboutTabsDataEn;
+
   return (
     <>
       {aboutTabsData.map((tab, index) => (

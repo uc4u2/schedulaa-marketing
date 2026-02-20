@@ -6,23 +6,23 @@ import transactionChartDark from '@public/images/ns-img-dark-157.svg';
 import profitChartDark from '@public/images/marketing/dahboard.png';
 import transactionRingDark from '@public/images/ns-img-dark-50.png';
 import Image from 'next/image';
-import source from '@/legacy-content/features/landing-features.json';
+import sourceEn from '@/legacy-content/features/landing-features.json';
 
-const integrationPoints = Object.values(source.integrations.points || {});
-
-const WhyChooseUs = () => {
+const WhyChooseUs = ({ source }: { source?: any }) => {
+  const content = source || sourceEn;
+  const integrationPoints = Object.values(content.integrations.points || {}) as string[];
   return (
     <section className="bg-background-3 dark:bg-background-7 overflow-hidden py-20 lg:py-[120px]">
       <div className="main-container flex flex-col items-center justify-between gap-12 lg:flex-row">
         <div>
           <RevealAnimation delay={0.1}>
-            <span className="badge badge-green mb-5">{source.integrations.title}</span>
+            <span className="badge badge-green mb-5">{content.integrations.title}</span>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
-            <h2 className="mb-3">{source.integrations.title}</h2>
+            <h2 className="mb-3">{content.integrations.title}</h2>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
-            <p className="lg:max-w-[536px]">{source.integrations.subtitle}</p>
+            <p className="lg:max-w-[536px]">{content.integrations.subtitle}</p>
           </RevealAnimation>
           <ul className="mt-8 space-y-1 lg:mt-14">
             {integrationPoints.map((point, index) => (
@@ -39,8 +39,8 @@ const WhyChooseUs = () => {
         <div className="relative">
           <RevealAnimation delay={0.2} direction="up" offset={150}>
             <figure className="h-full w-full max-w-[735px] overflow-hidden rounded-[20px] object-cover">
-              <Image src={transactionRing} alt={source.integrations.mediaAlt} className="block size-full object-cover dark:hidden" />
-              <Image src={transactionRingDark} alt={source.integrations.mediaAlt} className="hidden size-full object-cover dark:block" />
+              <Image src={transactionRing} alt={content.integrations.mediaAlt} className="block size-full object-cover dark:hidden" />
+              <Image src={transactionRingDark} alt={content.integrations.mediaAlt} className="hidden size-full object-cover dark:block" />
             </figure>
           </RevealAnimation>
           <RevealAnimation delay={0.5} direction="right" offset={100} useSpring={true} duration={2}>

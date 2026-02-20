@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { CSSProperties } from 'react';
 
-import pricingSource from '@/legacy-content/pricing/landing-pricing.json';
+import { getPricingSource } from '@/legacy-content/pricing/getPricingSource';
 import { buildAppUrl, buildBillingUrl, buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
 import { AppLocale, detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 
@@ -22,129 +22,128 @@ type Plan = {
   badge?: string;
 };
 
-const rows = pricingSource.comparison.rows;
-const values = pricingSource.comparison.values;
-const yes = values.yes || 'Yes';
-const dash = values.dash || '—';
-
-const comparisonSections = [
-  {
-    section: rows.website.section,
-    items: [
-      { label: rows.website.builder, starter: yes, pro: yes, business: yes },
-      { label: rows.website.customDomain, starter: yes, pro: yes, business: yes },
-      { label: rows.website.publicBooking, starter: yes, pro: yes, business: yes },
-      { label: rows.website.embedded, starter: yes, pro: yes, business: yes },
-      { label: rows.website.branding, starter: dash, pro: dash, business: yes },
-    ],
-  },
-  {
-    section: rows.booking.section,
-    items: [
-      { label: rows.booking.online, starter: yes, pro: yes, business: yes },
-      { label: rows.booking.reschedule, starter: yes, pro: yes, business: yes },
-      { label: rows.booking.multi, starter: yes, pro: yes, business: yes },
-      { label: rows.booking.staffScheduling, starter: dash, pro: yes, business: yes },
-      { label: rows.booking.shiftSwaps, starter: dash, pro: yes, business: yes },
-      { label: rows.booking.bulk, starter: dash, pro: dash, business: yes },
-    ],
-  },
-  {
-    section: rows.time.section,
-    items: [
-      { label: rows.time.clock, starter: dash, pro: yes, business: yes },
-      { label: rows.time.breakPolicy, starter: dash, pro: yes, business: yes },
-      { label: rows.time.staggered, starter: dash, pro: yes, business: yes },
-      { label: rows.time.ipHints, starter: dash, pro: yes, business: yes },
-      { label: rows.time.overtime, starter: dash, pro: yes, business: yes },
-    ],
-  },
-  {
-    section: rows.payroll.section,
-    items: [
-      { label: rows.payroll.processing, starter: dash, pro: yes, business: yes },
-      { label: rows.payroll.holiday, starter: dash, pro: yes, business: yes },
-      { label: rows.payroll.payslip, starter: dash, pro: yes, business: yes },
-      { label: rows.payroll.exports, starter: dash, pro: dash, business: yes },
-      { label: rows.payroll.invoicing, starter: dash, pro: yes, business: yes },
-    ],
-  },
-  {
-    section: rows.compliance.section,
-    items: [
-      { label: rows.compliance.revenueReports, starter: yes, pro: yes, business: yes },
-      { label: rows.compliance.exports, starter: yes, pro: yes, business: yes },
-      { label: rows.compliance.w2, starter: dash, pro: dash, business: yes },
-      { label: rows.compliance.t4, starter: dash, pro: dash, business: yes },
-      { label: rows.compliance.audit, starter: dash, pro: dash, business: yes },
-    ],
-  },
-  {
-    section: rows.analytics.section,
-    items: [
-      { label: rows.analytics.revenueDash, starter: yes, pro: yes, business: yes },
-      { label: rows.analytics.utilization, starter: dash, pro: yes, business: yes },
-      { label: rows.analytics.segmentation, starter: dash, pro: yes, business: yes },
-      { label: rows.analytics.multiLocation, starter: dash, pro: dash, business: yes },
-    ],
-  },
-  {
-    section: rows.automation.section,
-    items: [
-      { label: rows.automation.notifications, starter: yes, pro: yes, business: yes },
-      { label: rows.automation.campaigns, starter: dash, pro: yes, business: yes },
-      { label: rows.automation.zapier, starter: dash, pro: yes, business: yes },
-      { label: rows.automation.workflows, starter: dash, pro: yes, business: yes },
-    ],
-  },
-  {
-    section: rows.hiring.section,
-    items: [
-      { label: rows.hiring.jobs, starter: dash, pro: yes, business: yes },
-      { label: rows.hiring.resume, starter: dash, pro: yes, business: yes },
-      { label: rows.hiring.onboarding, starter: dash, pro: yes, business: yes },
-      { label: rows.hiring.handoff, starter: dash, pro: yes, business: yes },
-    ],
-  },
-  {
-    section: rows.scale.section,
-    items: [
-      {
-        label: rows.scale.seatsIncluded,
-        starter: rows.scale.starterSeats,
-        pro: rows.scale.proSeats,
-        business: rows.scale.businessSeats,
-      },
-      { label: rows.scale.additionalSeats, starter: dash, pro: rows.scale.seatPrice, business: rows.scale.seatPrice },
-      {
-        label: rows.scale.multiLocation,
-        starter: rows.scale.starterLocations,
-        pro: rows.scale.proLocations,
-        business: rows.scale.businessLocations,
-      },
-      {
-        label: rows.scale.roleAccess,
-        starter: rows.scale.starterAccess,
-        pro: rows.scale.proAccess,
-        business: rows.scale.businessAccess,
-      },
-      { label: rows.scale.branchPermissions, starter: dash, pro: dash, business: yes },
-    ],
-  },
-  {
-    section: rows.support.section,
-    items: [
-      { label: rows.support.standard, starter: yes, pro: yes, business: yes },
-      { label: rows.support.priority, starter: dash, pro: values.businessHours, business: values.always },
-      { label: rows.support.audit, starter: dash, pro: dash, business: yes },
-    ],
-  },
-];
-
-const Pricing = () => {
+const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
   const pathname = usePathname() || '/';
-  const locale = detectLocaleFromPath(pathname) as AppLocale;
+  const locale = pageLocale ?? (detectLocaleFromPath(pathname) as AppLocale);
   const returnTo = marketingReturnTo(locale, '/pricing');
+  const pricingSource = getPricingSource(locale);
+  const rows = pricingSource.comparison.rows;
+  const values = pricingSource.comparison.values;
+  const yes = values.yes || 'Yes';
+  const dash = values.dash || '—';
+  const comparisonSections = [
+    {
+      section: rows.website.section,
+      items: [
+        { label: rows.website.builder, starter: yes, pro: yes, business: yes },
+        { label: rows.website.customDomain, starter: yes, pro: yes, business: yes },
+        { label: rows.website.publicBooking, starter: yes, pro: yes, business: yes },
+        { label: rows.website.embedded, starter: yes, pro: yes, business: yes },
+        { label: rows.website.branding, starter: dash, pro: dash, business: yes },
+      ],
+    },
+    {
+      section: rows.booking.section,
+      items: [
+        { label: rows.booking.online, starter: yes, pro: yes, business: yes },
+        { label: rows.booking.reschedule, starter: yes, pro: yes, business: yes },
+        { label: rows.booking.multi, starter: yes, pro: yes, business: yes },
+        { label: rows.booking.staffScheduling, starter: dash, pro: yes, business: yes },
+        { label: rows.booking.shiftSwaps, starter: dash, pro: yes, business: yes },
+        { label: rows.booking.bulk, starter: dash, pro: dash, business: yes },
+      ],
+    },
+    {
+      section: rows.time.section,
+      items: [
+        { label: rows.time.clock, starter: dash, pro: yes, business: yes },
+        { label: rows.time.breakPolicy, starter: dash, pro: yes, business: yes },
+        { label: rows.time.staggered, starter: dash, pro: yes, business: yes },
+        { label: rows.time.ipHints, starter: dash, pro: yes, business: yes },
+        { label: rows.time.overtime, starter: dash, pro: yes, business: yes },
+      ],
+    },
+    {
+      section: rows.payroll.section,
+      items: [
+        { label: rows.payroll.processing, starter: dash, pro: yes, business: yes },
+        { label: rows.payroll.holiday, starter: dash, pro: yes, business: yes },
+        { label: rows.payroll.payslip, starter: dash, pro: yes, business: yes },
+        { label: rows.payroll.exports, starter: dash, pro: dash, business: yes },
+        { label: rows.payroll.invoicing, starter: dash, pro: yes, business: yes },
+      ],
+    },
+    {
+      section: rows.compliance.section,
+      items: [
+        { label: rows.compliance.revenueReports, starter: yes, pro: yes, business: yes },
+        { label: rows.compliance.exports, starter: yes, pro: yes, business: yes },
+        { label: rows.compliance.w2, starter: dash, pro: dash, business: yes },
+        { label: rows.compliance.t4, starter: dash, pro: dash, business: yes },
+        { label: rows.compliance.audit, starter: dash, pro: dash, business: yes },
+      ],
+    },
+    {
+      section: rows.analytics.section,
+      items: [
+        { label: rows.analytics.revenueDash, starter: yes, pro: yes, business: yes },
+        { label: rows.analytics.utilization, starter: dash, pro: yes, business: yes },
+        { label: rows.analytics.segmentation, starter: dash, pro: yes, business: yes },
+        { label: rows.analytics.multiLocation, starter: dash, pro: dash, business: yes },
+      ],
+    },
+    {
+      section: rows.automation.section,
+      items: [
+        { label: rows.automation.notifications, starter: yes, pro: yes, business: yes },
+        { label: rows.automation.campaigns, starter: dash, pro: yes, business: yes },
+        { label: rows.automation.zapier, starter: dash, pro: yes, business: yes },
+        { label: rows.automation.workflows, starter: dash, pro: yes, business: yes },
+      ],
+    },
+    {
+      section: rows.hiring.section,
+      items: [
+        { label: rows.hiring.jobs, starter: dash, pro: yes, business: yes },
+        { label: rows.hiring.resume, starter: dash, pro: yes, business: yes },
+        { label: rows.hiring.onboarding, starter: dash, pro: yes, business: yes },
+        { label: rows.hiring.handoff, starter: dash, pro: yes, business: yes },
+      ],
+    },
+    {
+      section: rows.scale.section,
+      items: [
+        {
+          label: rows.scale.seatsIncluded,
+          starter: rows.scale.starterSeats,
+          pro: rows.scale.proSeats,
+          business: rows.scale.businessSeats,
+        },
+        { label: rows.scale.additionalSeats, starter: dash, pro: rows.scale.seatPrice, business: rows.scale.seatPrice },
+        {
+          label: rows.scale.multiLocation,
+          starter: rows.scale.starterLocations,
+          pro: rows.scale.proLocations,
+          business: rows.scale.businessLocations,
+        },
+        {
+          label: rows.scale.roleAccess,
+          starter: rows.scale.starterAccess,
+          pro: rows.scale.proAccess,
+          business: rows.scale.businessAccess,
+        },
+        { label: rows.scale.branchPermissions, starter: dash, pro: dash, business: yes },
+      ],
+    },
+    {
+      section: rows.support.section,
+      items: [
+        { label: rows.support.standard, starter: yes, pro: yes, business: yes },
+        { label: rows.support.priority, starter: dash, pro: values.businessHours, business: values.always },
+        { label: rows.support.audit, starter: dash, pro: dash, business: yes },
+      ],
+    },
+  ];
 
   const plans = pricingSource.plans.table.list as Plan[];
   const hero = pricingSource.hero;

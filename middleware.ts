@@ -4,7 +4,6 @@ import { NextResponse } from 'next/server';
 import { DEFAULT_LOCALE, isSupportedLocale } from '@/utils/locale';
 
 const PUBLIC_FILE = /\.(.*)$/;
-const KNOWN_BUT_UNSUPPORTED = new Set(['ru', 'zh']);
 const LEGACY_REDIRECTS: Record<string, string> = {
   '/payroll/adp': '/compare/adp',
   '/payroll/gusto': '/compare/gusto',
@@ -57,14 +56,6 @@ export function middleware(request: NextRequest) {
     const response = NextResponse.rewrite(rewriteUrl, { request: { headers: requestHeaders } });
     response.cookies.set('NEXT_LOCALE', maybeLocale, { path: '/', sameSite: 'lax' });
     return response;
-  }
-
-  if (maybeLocale && KNOWN_BUT_UNSUPPORTED.has(maybeLocale)) {
-    const rest = segments.slice(1).join('/');
-    const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = rest ? `/${DEFAULT_LOCALE}/${rest}` : `/${DEFAULT_LOCALE}`;
-    redirectUrl.search = search;
-    return NextResponse.redirect(redirectUrl);
   }
 
   // Prevent rewrite->redirect loops: locale-prefixed URLs are rewritten to

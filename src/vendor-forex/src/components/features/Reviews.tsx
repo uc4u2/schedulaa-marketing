@@ -1,10 +1,11 @@
 import testimonials from '@/data/json/testimonials/testimonials.json';
-import source from '@/legacy-content/features/landing-features.json';
+import sourceEn from '@/legacy-content/features/landing-features.json';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 import RevealAnimation from '../animation/RevealAnimation';
 
-const Reviews = () => {
+const Reviews = ({ source }: { source?: any }) => {
+  const content = source || sourceEn;
   return (
     <section className="bg-background-3 dark:bg-background-8 space-y-[70px] pt-[100px] pb-[200px]">
       <div className="main-container">
@@ -15,7 +16,7 @@ const Reviews = () => {
 
           <div className="space-y-3">
             <RevealAnimation delay={0.2}>
-              <h2>{source.testimonials.title}</h2>
+              <h2>{content.testimonials.title}</h2>
             </RevealAnimation>
 
             <RevealAnimation delay={0.3}>

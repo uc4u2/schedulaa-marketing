@@ -1,11 +1,12 @@
 const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
 const MARKETING_ORIGIN = 'https://www.schedulaa.com';
+const LOCALE_PATHS = new Set(['en', 'fa', 'ru', 'zh', 'es', 'fr', 'de', 'ar', 'pt']);
 
 export const getAppOrigin = () => APP_ORIGIN.replace(/\/+$/, '');
 
 export const marketingReturnTo = (locale: string, path: string) => {
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  const localePrefix = locale === 'fa' ? '/fa' : '/en';
+  const localePrefix = LOCALE_PATHS.has(locale) ? `/${locale}` : '/en';
   return `${MARKETING_ORIGIN}${localePrefix}${normalizedPath === '/' ? '' : normalizedPath}`;
 };
 

@@ -6,6 +6,7 @@ import SchedulaaAssistant from '@/components/shared/assistant/SchedulaaAssistant
 import MotionProvider from '@/components/shared/motion/MotionProvider';
 import { interTight } from '@/utils/font';
 import { defaultMetadata } from '@/utils/generateMetaData';
+import { getServerLocale } from '@/utils/serverLocale';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
 import { ReactNode, Suspense } from 'react';
@@ -15,8 +16,8 @@ import '@/vendor-forex/src/app/globals.css';
 const SITE_URL = 'https://www.schedulaa.com';
 
 export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale();
   const h = await headers();
-  const locale = h.get('x-locale') === 'fa' ? 'fa' : 'en';
   const canonicalPathRaw = h.get('x-canonical-path') || '/';
   const canonicalPath = canonicalPathRaw === '/' ? '' : canonicalPathRaw;
   const canonical = `${SITE_URL}/${locale}${canonicalPath}`;
@@ -32,6 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
       languages: {
         en: `${SITE_URL}/en${languagePath}`,
         fa: `${SITE_URL}/fa${languagePath}`,
+        ru: `${SITE_URL}/ru${languagePath}`,
+        zh: `${SITE_URL}/zh${languagePath}`,
       },
     },
   };

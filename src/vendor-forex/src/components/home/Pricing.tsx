@@ -1,11 +1,14 @@
+'use client';
+
 import { CheckIcon } from '@/icons';
 import { cn } from '@/utils/cn';
-import pricingSource from '@/legacy-content/pricing/landing-pricing.json';
+import { getPricingSource } from '@/legacy-content/pricing/getPricingSource';
 import { buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
-import { DEFAULT_LOCALE } from '@/utils/locale';
+import { detectLocaleFromPath } from '@/utils/locale';
 import gradient4Img from '@public/images/ns-img-496.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import RevealAnimation from '../animation/RevealAnimation';
 
 interface Feature {
@@ -31,59 +34,61 @@ const featureLabels = [
   'Multi-location controls',
 ];
 
-const pricingPlans: PricingPlan[] = [
-  {
-    id: 'starter',
-    name: pricingSource.plans.table.list[0]?.name || 'Starter',
-    price: pricingSource.plans.table.list[0]?.price || '$19.99/mo',
-    description: pricingSource.plans.table.list[0]?.description || 'Launch your website and take bookings.',
-    buttonText: pricingSource.plans.table.list[0]?.ctaLabel || 'Start free trial',
-    planType: 'basic',
-    features: [
-      { label: 'Website + booking', value: true },
-      { label: 'Staff scheduling', value: false },
-      { label: 'Payroll workflows', value: false },
-      { label: 'Automation & campaigns', value: false },
-      { label: 'Multi-location controls', value: false },
-    ],
-  },
-  {
-    id: 'pro',
-    name: pricingSource.plans.table.list[1]?.name || 'Pro',
-    price: pricingSource.plans.table.list[1]?.price || '$49.99/mo',
-    description:
-      pricingSource.plans.table.list[1]?.description || 'For teams needing scheduling, automation, and analytics.',
-    buttonText: pricingSource.plans.table.list[1]?.ctaLabel || 'Start free trial',
-    planType: 'featured',
-    features: [
-      { label: 'Website + booking', value: true },
-      { label: 'Staff scheduling', value: true },
-      { label: 'Payroll workflows', value: true },
-      { label: 'Automation & campaigns', value: true },
-      { label: 'Multi-location controls', value: false },
-    ],
-  },
-  {
-    id: 'enterprise',
-    name: pricingSource.plans.table.list[2]?.name || 'Business',
-    price: pricingSource.plans.table.list[2]?.price || '$119.99/mo',
-    description:
-      pricingSource.plans.table.list[2]?.description ||
-      'Built for compliance and multi-location operations.',
-    buttonText: pricingSource.plans.table.list[2]?.ctaLabel || 'Start free trial',
-    planType: 'premium',
-    features: [
-      { label: 'Website + booking', value: true },
-      { label: 'Staff scheduling', value: true },
-      { label: 'Payroll workflows', value: true },
-      { label: 'Automation & campaigns', value: true },
-      { label: 'Multi-location controls', value: true },
-    ],
-  },
-];
-
 const Pricing = () => {
-  const returnTo = marketingReturnTo(DEFAULT_LOCALE, '/pricing');
+  const pathname = usePathname() || '/';
+  const locale = detectLocaleFromPath(pathname);
+  const pricingSource = getPricingSource(locale);
+  const returnTo = marketingReturnTo(locale, '/pricing');
+  const pricingPlans: PricingPlan[] = [
+    {
+      id: 'starter',
+      name: pricingSource.plans.table.list[0]?.name || 'Starter',
+      price: pricingSource.plans.table.list[0]?.price || '$19.99/mo',
+      description: pricingSource.plans.table.list[0]?.description || 'Launch your website and take bookings.',
+      buttonText: pricingSource.plans.table.list[0]?.ctaLabel || 'Start free trial',
+      planType: 'basic',
+      features: [
+        { label: 'Website + booking', value: true },
+        { label: 'Staff scheduling', value: false },
+        { label: 'Payroll workflows', value: false },
+        { label: 'Automation & campaigns', value: false },
+        { label: 'Multi-location controls', value: false },
+      ],
+    },
+    {
+      id: 'pro',
+      name: pricingSource.plans.table.list[1]?.name || 'Pro',
+      price: pricingSource.plans.table.list[1]?.price || '$49.99/mo',
+      description:
+        pricingSource.plans.table.list[1]?.description || 'For teams needing scheduling, automation, and analytics.',
+      buttonText: pricingSource.plans.table.list[1]?.ctaLabel || 'Start free trial',
+      planType: 'featured',
+      features: [
+        { label: 'Website + booking', value: true },
+        { label: 'Staff scheduling', value: true },
+        { label: 'Payroll workflows', value: true },
+        { label: 'Automation & campaigns', value: true },
+        { label: 'Multi-location controls', value: false },
+      ],
+    },
+    {
+      id: 'enterprise',
+      name: pricingSource.plans.table.list[2]?.name || 'Business',
+      price: pricingSource.plans.table.list[2]?.price || '$119.99/mo',
+      description:
+        pricingSource.plans.table.list[2]?.description ||
+        'Built for compliance and multi-location operations.',
+      buttonText: pricingSource.plans.table.list[2]?.ctaLabel || 'Start free trial',
+      planType: 'premium',
+      features: [
+        { label: 'Website + booking', value: true },
+        { label: 'Staff scheduling', value: true },
+        { label: 'Payroll workflows', value: true },
+        { label: 'Automation & campaigns', value: true },
+        { label: 'Multi-location controls', value: true },
+      ],
+    },
+  ];
   return (
     <RevealAnimation delay={0.1}>
       <section className="bg-background-2 dark:bg-background-5 py-16 md:py-20 lg:py-[100px]">

@@ -11,6 +11,7 @@ import step3DarkImg from '@public/images/ns-img-dark-201.png';
 import step4DarkImg from '@public/images/ns-img-dark-202.png';
 import Image, { StaticImageData } from 'next/image';
 import { bookingPages } from '@/legacy-content/booking/config';
+import { AppLocale } from '@/utils/locale';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import StackCardItem from '../ui/stack-card/StackCardItem';
@@ -26,51 +27,95 @@ interface StepCard {
   maxDescriptionWidth: string;
 }
 
-const stepCards: StepCard[] = [
-  {
-    id: 1,
-    title: bookingPages.hub.howItWorks.steps[0]?.title || 'Publish services and providers',
-    description:
-      bookingPages.hub.howItWorks.steps[0]?.description ||
-      'Define services, durations, pricing, and assign providers.',
-    gradientSrc: gradient32Img,
-    stepImg: step1Img,
-    maxDescriptionWidth: 'max-w-[281px]',
-  },
-  {
-    id: 2,
-    title: bookingPages.hub.howItWorks.steps[1]?.title || 'Clients pick time and provider',
-    description:
-      bookingPages.hub.howItWorks.steps[1]?.description ||
-      'Clients choose day, time, and provider from live availability.',
-    gradientSrc: gradient33Img,
-    stepImg: step2Img,
-    stepDarkImg: step2DarkImg,
-    maxDescriptionWidth: 'max-w-[250px]',
-  },
-  {
-    id: 3,
-    title: bookingPages.hub.howItWorks.steps[2]?.title || 'Checkout and notifications',
-    description:
-      bookingPages.hub.howItWorks.steps[2]?.description ||
-      'Payments, receipts, and notifications sync instantly.',
-    gradientSrc: gradient34Img,
-    stepImg: step3Img,
-    stepDarkImg: step3DarkImg,
-    maxDescriptionWidth: 'max-w-[250px]',
-  },
-  {
-    id: 4,
-    title: 'Manager and employee dashboards update live',
-    description: 'Bookings, shifts, and payouts appear in real time across manager and employee views.',
-    gradientSrc: gradient9Img,
-    stepImg: step4Img,
-    stepDarkImg: step4DarkImg,
-    maxDescriptionWidth: 'max-w-[280px]',
-  },
-];
+const faHowItWorks = {
+  title: 'رزرو آنلاین در Schedulaa چطور کار می‌کند',
+  intro: 'از انتشار سرویس تا تایید رزرو و پرداخت، این جریان در چند مرحله ساده انجام می‌شود.',
+  cta: 'مشاهده همه قابلیت‌ها',
+  steps: [
+    {
+      title: 'انتشار سرویس‌ها و ارائه‌دهندگان',
+      description: 'سرویس، زمان، قیمت و ارائه‌دهنده را تعریف کنید تا ظرفیت به‌صورت لحظه‌ای در صفحه رزرو نمایش داده شود.',
+    },
+    {
+      title: 'مشتری زمان و ارائه‌دهنده را انتخاب می‌کند',
+      description: 'کاربر روز، ساعت و ارائه‌دهنده مناسب را از روی ظرفیت زنده انتخاب می‌کند و رزرو را ثبت می‌کند.',
+    },
+    {
+      title: 'پرداخت و اعلان‌ها',
+      description: 'پرداخت، رسید و اعلان‌ها همگام می‌شوند و رزرو بلافاصله در دید تیم قرار می‌گیرد.',
+    },
+    {
+      title: 'داشبورد مدیر و کارمند به‌صورت زنده به‌روزرسانی می‌شود',
+      description: 'رزروها، شیفت‌ها و وضعیت پرداخت در لحظه در داشبوردهای مدیر و کارمند نمایش داده می‌شود.',
+    },
+  ],
+};
 
-const Steps = () => {
+const Steps = ({ locale = 'en' }: { locale?: AppLocale }) => {
+  const isFa = locale === 'fa';
+  const howItWorks = isFa
+    ? faHowItWorks
+    : {
+        title: bookingPages.hub.howItWorks.title,
+        intro: bookingPages.hub.howItWorks.intro,
+        cta: 'Explore all features',
+        steps: [
+          bookingPages.hub.howItWorks.steps[0],
+          bookingPages.hub.howItWorks.steps[1],
+          bookingPages.hub.howItWorks.steps[2],
+          {
+            title: 'Manager and employee dashboards update live',
+            description: 'Bookings, shifts, and payouts appear in real time across manager and employee views.',
+          },
+        ],
+      };
+
+  const stepCards: StepCard[] = [
+    {
+      id: 1,
+      title: howItWorks.steps[0]?.title || 'Publish services and providers',
+      description:
+        howItWorks.steps[0]?.description ||
+        'Define services, durations, pricing, and assign providers.',
+      gradientSrc: gradient32Img,
+      stepImg: step1Img,
+      maxDescriptionWidth: 'max-w-[281px]',
+    },
+    {
+      id: 2,
+      title: howItWorks.steps[1]?.title || 'Clients pick time and provider',
+      description:
+        howItWorks.steps[1]?.description ||
+        'Clients choose day, time, and provider from live availability.',
+      gradientSrc: gradient33Img,
+      stepImg: step2Img,
+      stepDarkImg: step2DarkImg,
+      maxDescriptionWidth: 'max-w-[250px]',
+    },
+    {
+      id: 3,
+      title: howItWorks.steps[2]?.title || 'Checkout and notifications',
+      description:
+        howItWorks.steps[2]?.description ||
+        'Payments, receipts, and notifications sync instantly.',
+      gradientSrc: gradient34Img,
+      stepImg: step3Img,
+      stepDarkImg: step3DarkImg,
+      maxDescriptionWidth: 'max-w-[250px]',
+    },
+    {
+      id: 4,
+      title: howItWorks.steps[3]?.title || 'Manager and employee dashboards update live',
+      description:
+        howItWorks.steps[3]?.description ||
+        'Bookings, shifts, and payouts appear in real time across manager and employee views.',
+      gradientSrc: gradient9Img,
+      stepImg: step4Img,
+      stepDarkImg: step4DarkImg,
+      maxDescriptionWidth: 'max-w-[280px]',
+    },
+  ];
+
   return (
     <RevealAnimation delay={0.1}>
       <section
@@ -82,10 +127,10 @@ const Steps = () => {
               <div className="space-y-10 text-center md:space-y-14 lg:text-left">
                 <div className="space-y-3">
                   <RevealAnimation delay={0.1}>
-                    <h2 className="mx-auto w-full xl:mx-0 xl:max-w-[479px]">{bookingPages.hub.howItWorks.title}</h2>
+                    <h2 className="mx-auto w-full xl:mx-0 xl:max-w-[479px]">{howItWorks.title}</h2>
                   </RevealAnimation>
                   <RevealAnimation delay={0.2}>
-                    <p>{bookingPages.hub.howItWorks.intro}</p>
+                    <p>{howItWorks.intro}</p>
                   </RevealAnimation>
                 </div>
                 <RevealAnimation delay={0.3}>
@@ -93,7 +138,7 @@ const Steps = () => {
                     <LinkButton
                       href="/features"
                       className="btn dark:btn-transparent btn-secondary btn-md hover:btn-green mx-auto w-[90%] md:mx-0 md:w-auto">
-                      Explore all features
+                      {howItWorks.cta}
                     </LinkButton>
                   </div>
                 </RevealAnimation>

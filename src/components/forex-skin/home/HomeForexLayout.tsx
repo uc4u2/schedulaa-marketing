@@ -9,6 +9,7 @@ import Pricing from '@/vendor-forex/src/components/home/Pricing';
 import Reviews from '@/vendor-forex/src/components/home/Reviews';
 import Services from '@/vendor-forex/src/components/home/Services';
 import Steps from '@/vendor-forex/src/components/home/Steps';
+import { getLandingSource } from '@/legacy-content/features/getLandingSource';
 import { AppLocale } from '@/utils/locale';
 
 type Props = {
@@ -17,20 +18,20 @@ type Props = {
 
 // Forex skin homepage composition in vendor section order.
 export default function HomeForexLayout({ locale }: Props) {
-  void locale;
+  const source = getLandingSource(locale, 'home');
   return (
     <main>
-      <Hero />
+      <Hero source={source} />
       <Clients />
-      <Steps />
-      <Feature />
+      <Steps locale={locale} />
+      <Feature source={source} />
       <About />
       <Services />
       <Pricing />
       <Reviews />
-      <Blog />
+      <Blog source={source} />
       <Contact />
-      <CTA />
+      <CTA source={source} />
     </main>
   );
 }

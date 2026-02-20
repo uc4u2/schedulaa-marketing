@@ -1,37 +1,45 @@
+import { detectLocaleFromPath } from '@/utils/locale';
+import { usePathname } from 'next/navigation';
 import Tab from '../ui/tab/Tab';
 import TabList from '../ui/tab/TabList';
 
 const AboutTabList = () => {
+  const pathname = usePathname() || '/';
+  const isFa = detectLocaleFromPath(pathname) === 'fa';
+  const labels = isFa
+    ? ['حقوق', 'رزرو', 'تجارت', 'اتوماسیون']
+    : ['Payroll', 'Booking', 'Commerce', 'Automation'];
+
   return (
     <>
       {/* Desktop TabList */}
       <TabList variant="desktop">
         <Tab index={0} variant="desktop" className="text-white/60 data-[state=selected]:text-white">
-          Payroll
+          {labels[0]}
         </Tab>
         <Tab index={1} variant="desktop" className="text-white/60 data-[state=selected]:text-white">
-          Booking
+          {labels[1]}
         </Tab>
         <Tab index={2} variant="desktop" className="text-white/60 data-[state=selected]:text-white">
-          Commerce
+          {labels[2]}
         </Tab>
         <Tab index={3} variant="desktop" className="text-white/60 data-[state=selected]:text-white">
-          Automation
+          {labels[3]}
         </Tab>
       </TabList>
       {/* Mobile TabList */}
       <TabList variant="mobile">
         <Tab index={0} variant="mobile">
-          Payroll
+          {labels[0]}
         </Tab>
         <Tab index={1} variant="mobile">
-          Booking
+          {labels[1]}
         </Tab>
         <Tab index={2} variant="mobile">
-          Commerce
+          {labels[2]}
         </Tab>
         <Tab index={3} variant="mobile" className="text-nowrap">
-          Automation
+          {labels[3]}
         </Tab>
       </TabList>
     </>

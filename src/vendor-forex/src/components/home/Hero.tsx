@@ -7,7 +7,7 @@ import heroOverlayWebsiteBuilderImg from '@public/images/marketing/showcase/webs
 import Image from 'next/image';
 import type { CSSProperties } from 'react';
 import Link from 'next/link';
-import source from '@/legacy-content/features/landing-features.json';
+import sourceEn from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
@@ -25,7 +25,8 @@ const featureItems: FeatureItem[] = [
   { id: 3, text: 'Websites, checkout, and automation in one OS.' },
 ];
 
-const Hero = () => {
+const Hero = ({ source }: { source?: any }) => {
+  const content = source || sourceEn;
   const returnTo = marketingReturnTo(DEFAULT_LOCALE, '/');
   return (
     <section className="relative z-20 max-h-[900px] bg-[url('/images/ns-img-295.jpg')] bg-cover bg-top bg-no-repeat pt-[170px] pb-[50px] md:pt-[206px] md:pb-[100px] xl:max-h-[1126px]">
@@ -39,13 +40,13 @@ const Hero = () => {
           <RevealAnimation delay={0.1}>
             <h1 className="mx-auto max-w-[380px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[776px]">
               <span className="hero-text-gradient hero-text-color-2 block">
-                {source.hero.title.line1} {source.hero.title.line2}
+                {content.hero.title.line1} {content.hero.title.line2}
               </span>
             </h1>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
             <p className="text-accent/60 mx-auto max-w-[380px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
-              {source.hero.subtitle}
+              {content.hero.subtitle}
             </p>
           </RevealAnimation>
           <ul className="flex flex-wrap items-center gap-5 sm:justify-center md:gap-9">
@@ -78,7 +79,7 @@ const Hero = () => {
               <LinkButton
                 href={buildAppUrl('/register', { returnTo })}
                 className="btn hover:btn-secondary dark:hover:btn-accent btn-green btn-xl w-[90%] border-0 text-center md:w-auto">
-                {source.hero.primaryCta.label}
+                {content.hero.primaryCta.label}
               </LinkButton>
             </li>
           </RevealAnimation>
@@ -87,7 +88,7 @@ const Hero = () => {
               <LinkButton
                 href="/pricing"
                 className="btn btn-dark hover:btn-green bg-accent/22 btn-xl w-[90%] text-center text-white hover:border-0 md:w-auto">
-                {source.hero.secondaryCta.label}
+                {content.hero.secondaryCta.label}
               </LinkButton>
             </li>
           </RevealAnimation>

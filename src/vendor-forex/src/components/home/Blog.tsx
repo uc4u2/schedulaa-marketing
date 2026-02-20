@@ -1,6 +1,6 @@
 import { IBlogPost } from '@/interface';
 import blogPosts from '@/legacy-content/blog/posts';
-import source from '@/legacy-content/features/landing-features.json';
+import sourceEn from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
 import BlogCardV2 from '../shared/card/BlogCardV2';
 import BlogCardV3 from '../shared/card/BlogCardV3';
@@ -40,7 +40,8 @@ const blogs = (blogPosts || []).slice(0, 3).map((post, index) => {
   } as IBlogPost;
 });
 
-const Blog = () => {
+const Blog = ({ source }: { source?: any }) => {
+  const content = source || sourceEn;
   return (
     <RevealAnimation delay={0.1}>
       <section className="bg-background-2 dark:bg-background-5 py-20 sm:py-24 lg:py-[100px]">
@@ -51,10 +52,10 @@ const Blog = () => {
             </RevealAnimation>
             <div className="space-y-3">
               <RevealAnimation delay={0.2}>
-                <h2>{source.insight.title}</h2>
+                <h2>{content.insight.title}</h2>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
-                <p className="mx-auto max-w-[492px]">{source.insight.subtitle}</p>
+                <p className="mx-auto max-w-[492px]">{content.insight.subtitle}</p>
               </RevealAnimation>
             </div>
           </div>

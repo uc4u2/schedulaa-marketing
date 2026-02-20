@@ -1,13 +1,13 @@
 import { CheckIcon } from '@/icons';
 import aboutBg from '@public/images/ns-img-14.png';
 import Image from 'next/image';
-import source from '@/legacy-content/features/landing-features.json';
+import sourceEn from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 
-const platformPoints = Object.values(source.platformMap.points || {});
-
-const Feature = () => {
+const Feature = ({ source }: { source?: any }) => {
+  const content = source || sourceEn;
+  const platformPoints = Object.values(content.platformMap.points || {}) as string[];
   return (
     <section>
       <RevealAnimation delay={0.2}>
@@ -19,12 +19,12 @@ const Feature = () => {
             <div className="grid grid-cols-2 gap-5 px-6 py-14 max-lg:grid-cols-1 max-sm:gap-10 lg:px-11">
               <div className="max-w-[560px]">
                 <span className="badge badge-green mb-5">Platform Map</span>
-                <h2 className="text-accent sm:text-heading-5 text-heading-6 mb-6">{source.platformMap.title}</h2>
-                <p className="mb-8 text-accent/70">{source.platformMap.subtitle}</p>
+                <h2 className="text-accent sm:text-heading-5 text-heading-6 mb-6">{content.platformMap.title}</h2>
+                <p className="mb-8 text-accent/70">{content.platformMap.subtitle}</p>
                 <LinkButton
                   href="/booking"
                   className="btn btn-primary btn-accent dark:btn-dark hover:btn-primary btn-md btn border-0">
-                  {source.platformMap.primaryCta.label}
+                  {content.platformMap.primaryCta.label}
                 </LinkButton>
               </div>
               <div>
