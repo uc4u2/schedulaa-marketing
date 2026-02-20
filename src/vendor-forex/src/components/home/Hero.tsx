@@ -1,7 +1,12 @@
 import heroVectorImg from '@public/images/ns-img-296.svg';
-import heroOverlayClientsImg from '@public/images/marketing/showcase/clients-pick2.png';
+import heroOverlayClientsImg from '@public/images/marketing/payroll-manage.png';
 import heroOverlayEmployeeImg from '@public/images/marketing/showcase/employee-management.png';
+import heroOverlayShiftImg from '@public/images/marketing/shift-pre.png';
+import heroOverlayBookingImg from '@public/images/marketing/showcase/clients-pick2.png';
+import heroOverlayWebsiteBuilderImg from '@public/images/marketing/showcase/website-builder3d.png';
 import Image from 'next/image';
+import type { CSSProperties } from 'react';
+import Link from 'next/link';
 import source from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
@@ -90,27 +95,97 @@ const Hero = () => {
         <RevealAnimation delay={0.8} instant>
           <div className="mt-[50px] lg:mt-[100px]">
             <div className="relative mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]" style={{ transform: 'perspective(1400px) rotateX(3deg)' }}>
+              <div className="mb-5 hidden grid-cols-2 gap-3 md:grid lg:mb-6 lg:grid-cols-5">
+                <figure
+                  className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
+                  style={{
+                    '--card-rotate-start': '-16deg',
+                    '--card-rotate-end': '-2deg',
+                    animation:
+                      'heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) 120ms both, heroCardDrift 7.4s ease-in-out 1.15s infinite',
+                  } as CSSProperties}>
+                  <Image
+                    src={heroOverlayEmployeeImg}
+                    alt="Employee management preview"
+                    quality={100}
+                    unoptimized
+                    className="h-full w-full rounded-lg object-cover opacity-95"
+                  />
+                </figure>
+                <figure
+                  className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
+                  style={{
+                    '--card-rotate-start': '12deg',
+                    '--card-rotate-end': '1deg',
+                    animation:
+                      'heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) 420ms both, heroCardDrift 7.8s ease-in-out 1.45s infinite',
+                  } as CSSProperties}>
+                  <Link href="/payroll" className="group relative block overflow-hidden rounded-lg">
+                    <span className="absolute top-2 right-2 z-10 inline-flex items-center rounded-full border border-lime-200/30 bg-lime-300/95 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-slate-900 shadow-[0_8px_20px_rgba(157,255,0,0.28)]">
+                      Popular
+                    </span>
+                    <span className="pointer-events-none absolute inset-0 z-[1] rounded-lg ring-1 ring-lime-300/35 transition-all duration-300 group-hover:ring-lime-300/55" />
+                    <Image
+                      src={heroOverlayClientsImg}
+                      alt="Payroll management preview"
+                      quality={100}
+                      unoptimized
+                      className="h-full w-full rounded-lg object-cover opacity-95 transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </Link>
+                </figure>
+                <figure
+                  className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
+                  style={{
+                    '--card-rotate-start': '-10deg',
+                    '--card-rotate-end': '-1deg',
+                    animation:
+                      'heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) 720ms both, heroCardDrift 7.2s ease-in-out 1.75s infinite',
+                  } as CSSProperties}>
+                  <Image
+                    src={heroOverlayBookingImg}
+                    alt="Client slot selection preview"
+                    quality={100}
+                    unoptimized
+                    className="h-full w-full rounded-lg object-cover opacity-95"
+                  />
+                </figure>
+                <figure
+                  className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
+                  style={{
+                    '--card-rotate-start': '15deg',
+                    '--card-rotate-end': '2deg',
+                    animation:
+                      'heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) 1020ms both, heroCardDrift 7.9s ease-in-out 2.05s infinite',
+                  } as CSSProperties}>
+                  <Image
+                    src={heroOverlayShiftImg}
+                    alt="Shift management preview"
+                    quality={100}
+                    unoptimized
+                    className="h-full w-full rounded-lg object-cover opacity-95"
+                  />
+                </figure>
+                <figure
+                  className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
+                  style={{
+                    '--card-rotate-start': '-14deg',
+                    '--card-rotate-end': '-1deg',
+                    animation:
+                      'heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) 1300ms both, heroCardDrift 8.1s ease-in-out 2.25s infinite',
+                  } as CSSProperties}>
+                  <Image
+                    src={heroOverlayWebsiteBuilderImg}
+                    alt="Website builder preview"
+                    quality={100}
+                    unoptimized
+                    className="h-full w-full rounded-lg object-cover opacity-95"
+                  />
+                </figure>
+              </div>
               <div className="pointer-events-none absolute -inset-4 rounded-[28px] bg-linear-[145deg,rgba(0,194,255,0.22)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.12)_100%] blur-xl" />
               <div className="pointer-events-none absolute -inset-x-10 -bottom-8 h-16 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,180,255,0.38)_0%,rgba(0,0,0,0)_72%)]" />
               <HeroShowcase />
-              <figure
-                className="absolute -left-3 top-[10%] hidden w-[clamp(170px,20vw,250px)] overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_36px_rgba(0,0,0,0.42)] backdrop-blur md:block lg:-left-7"
-                style={{ animation: 'heroFloatLeft 8s ease-in-out infinite', transform: 'rotate(-8deg)' }}>
-                <Image
-                  src={heroOverlayEmployeeImg}
-                  alt="Employee management preview"
-                  className="h-full w-full rounded-lg object-cover opacity-90"
-                />
-              </figure>
-              <figure
-                className="absolute -right-2 bottom-[8%] hidden w-[clamp(180px,21vw,260px)] overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_16px_34px_rgba(0,0,0,0.42)] backdrop-blur md:block lg:-right-6"
-                style={{ animation: 'heroFloatRight 9s ease-in-out infinite', transform: 'rotate(8deg)' }}>
-                <Image
-                  src={heroOverlayClientsImg}
-                  alt="Client booking preview"
-                  className="h-full w-full rounded-lg object-cover opacity-90"
-                />
-              </figure>
             </div>
           </div>
         </RevealAnimation>

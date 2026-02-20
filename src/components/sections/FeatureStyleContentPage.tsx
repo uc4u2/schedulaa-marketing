@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ReactNode } from 'react';
+import { ReactNode, type CSSProperties } from 'react';
 import Image from 'next/image';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import StaggerGrid from '@/components/shared/motion/StaggerGrid';
@@ -136,6 +136,7 @@ export default function FeatureStyleContentPage({
   };
 
   const hero = config.hero || {};
+  const heroImages = Array.isArray(hero.images) ? hero.images.slice(0, 4) : [];
   const blocks = normalizeSections(config);
   const faq = Array.isArray(config.faq) ? config.faq : [];
   const cta = config.cta || {};
@@ -168,6 +169,35 @@ export default function FeatureStyleContentPage({
               </div>
             </AnimatedSection>
           )}
+
+          {heroImages.length ? (
+            <AnimatedSection>
+              <div className="mx-auto mb-5 hidden w-full max-w-[1200px] grid-cols-2 gap-3 md:grid lg:mb-6 lg:grid-cols-4">
+                {heroImages.map((item: any, index: number) => (
+                  <figure
+                    key={item?.src || `hero-fall-${index}`}
+                    className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
+                    style={
+                      {
+                        '--card-rotate-start': index % 2 === 0 ? '-12deg' : '12deg',
+                        '--card-rotate-end': index % 2 === 0 ? '-2deg' : '2deg',
+                        animation: `heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) ${120 + index * 260}ms both, heroCardDrift ${7.2 + index * 0.2}s ease-in-out ${1.2 + index * 0.25}s infinite`,
+                      } as CSSProperties
+                    }>
+                    <Image
+                      src={item?.src || item}
+                      alt={item?.alt || `Payroll media ${index + 1}`}
+                      width={640}
+                      height={360}
+                      quality={100}
+                      unoptimized
+                      className="h-full w-full rounded-lg object-cover opacity-95"
+                    />
+                  </figure>
+                ))}
+              </div>
+            </AnimatedSection>
+          ) : null}
 
           {hero.image ? (
             <AnimatedSection>

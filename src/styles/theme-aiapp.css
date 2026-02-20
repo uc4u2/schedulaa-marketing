@@ -45,3 +45,30 @@
     transform: translate3d(0, 0, 0) rotate(8deg);
   }
 }
+
+@keyframes heroCardDrop {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -190px, 0) rotate(var(--card-rotate-start, 0deg)) scale(0.92);
+  }
+  70% {
+    opacity: 1;
+    transform: translate3d(0, 14px, 0) rotate(var(--card-rotate-end, 0deg)) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(var(--card-rotate-end, 0deg)) scale(1);
+  }
+}
+
+@keyframes heroCardDrift {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(var(--card-rotate-end, 0deg));
+  }
+  50% {
+    transform: translate3d(0, -8px, 0) rotate(calc(var(--card-rotate-end, 0deg) + 1deg));
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(var(--card-rotate-end, 0deg));
+  }
+}

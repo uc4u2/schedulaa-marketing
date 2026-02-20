@@ -91,6 +91,12 @@ const overviewConfig = {
       "Pull real-time hours from scheduling and time tracking, apply CRA or IRS logic, layer in tips, bonus, commission, shift premiums, union dues, garnishments, and non-taxable reimbursements, then ship payslips plus ROE/T4/W-2 without leaving Schedulaa. U.S. full finalize is currently available in AK, FL, NV, SD, TX, WA, WY, TN, and NH; other U.S. states run in raw preview mode.",
     image: "/images/marketing/payroll-manage.png",
     imageAlt: "Schedulaa payroll management preview",
+    images: [
+      { src: "/images/marketing/payroll-manage.png", alt: "Payroll management" },
+      { src: "/images/marketing/showcase/t4.png", alt: "T4 generation" },
+      { src: "/images/marketing/showcase/roe.png", alt: "ROE workflow" },
+      { src: "/images/marketing/showcase/w2-3d.png", alt: "W-2 generation" },
+    ],
     bullets: [
       "Regional engines for Canada (CPP/EI/BPA, CPP/EI exemptions) and the USA (federal tax, FICA/Medicare, employer FUTA/SUTA reporting).",
       "Taxable extras like shift premium, tips, commission, bonus plus deductions like union dues and garnishments—net pay matches the preview.",
