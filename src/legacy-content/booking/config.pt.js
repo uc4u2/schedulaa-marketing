@@ -4,19 +4,19 @@ const CONTACT_URL = "/contact";
 const LIVE_SERVICE_DEMO = "/demo";
 
 const sharedCta = {
-  overline: "Booking, payroll, and websites together",
-  title: "Start booking clients the same day you sign up",
-  body: "Launch online booking, publish availability, and connect Stripe without installing plugins or stitching tools together.",
-  primary: { label: "Start free", href: REGISTER_URL },
-  secondary: { label: "Talk to our team", href: CONTACT_URL },
+  overline: "Reservas, folha e sites em um s\u00f3 lugar",
+  title: "Comece a receber reservas no mesmo dia em que se cadastra",
+  body: "Ative reservas online, publique disponibilidade e conecte o Stripe sem instalar plugins nem costurar ferramentas.",
+  primary: { label: "Comece gr\u00e1tis", href: REGISTER_URL },
+  secondary: { label: "Fale com nossa equipe", href: CONTACT_URL },
 };
 
 const sharedSecondaryLinks = [
-  { label: "Website builder", href: "/website-builder" },
-  { label: "Marketing automation", href: "/marketing" },
-  { label: "Salon booking", href: "/booking/salon" },
-  { label: "Tutor scheduling", href: "/booking/tutor" },
-  { label: "Medical booking", href: "/booking/doctor" },
+  { label: "Construtor de sites", href: "/website-builder" },
+  { label: "Automa\u00e7\u00e3o de marketing", href: "/marketing" },
+  { label: "Reservas para sal\u00e3o", href: "/booking/salon" },
+  { label: "Agendamento de aulas", href: "/booking/tutor" },
+  { label: "Reserva m\u00e9dica", href: "/booking/doctor" },
 ];
 
 const bookingHubConfig = {
@@ -51,28 +51,28 @@ const bookingHubConfig = {
     url: `${BASE_URL}/booking`,
   },
   hero: {
-    badge: "Real-time availability",
-    title: "Online Booking & Team Scheduling — with Stripe Payments",
+    badge: "Disponibilidade em tempo real",
+    title: "Reserva online e escalas da equipe com pagamentos Stripe",
     subtitle:
-      "Schedulaa gives you a complete booking flow with real-time availability, provider choice, staff calendars, invitations, and Stripe-powered checkout.",
+      "A Schedulaa oferece um fluxo completo de reservas com disponibilidade em tempo real, escolha de profissional, calend\u00e1rios da equipe, convites e checkout com Stripe.",
     image: '/images/marketing/showcase/clients-pick2.png',
-    imageAlt: 'Client booking flow preview',
+    imageAlt: 'Pr\u00e9via do fluxo de reserva do cliente',
     images: [
-      { src: '/images/marketing/showcase/service-management.png', alt: 'Service management' },
-      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'Payment collection' },
-      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'Checkout flow' },
-      { src: '/images/marketing/showcase/employee-availability.png', alt: 'Employee availability' },
+      { src: '/images/marketing/showcase/service-management.png', alt: 'Gest\u00e3o de servi\u00e7os' },
+      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'Coleta de pagamentos' },
+      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'Fluxo de checkout' },
+      { src: '/images/marketing/showcase/employee-availability.png', alt: 'Disponibilidade da equipe' },
     ],
     bullets: [
       "Publish services and show live availability across providers.",
       "Give managers a master calendar with shift and leave controls.",
       "Offer clients a smooth checkout with pay, deposit, or card-on-file.",
     ],
-    primaryCta: { label: "Start booking online", href: REGISTER_URL },
-    secondaryCta: { label: "Preview a live service page", href: LIVE_SERVICE_DEMO },
+    primaryCta: { label: "Come\u00e7ar reservas online", href: REGISTER_URL },
+    secondaryCta: { label: "Ver p\u00e1gina de servi\u00e7o ao vivo", href: LIVE_SERVICE_DEMO },
   },
-  featuresHeading: "Why teams choose Schedulaa",
-  featuresTitle: "Booking, scheduling, and payments in one hub",
+  featuresHeading: "Por que as equipes escolhem a Schedulaa",
+  featuresTitle: "Reservas, escalas e pagamentos em um \u00fanico hub",
   featuresIntro:
     "Everything from provider availability to checkout happens inside Schedulaa — no double entry or extra plugins.",
   features: [
@@ -230,23 +230,23 @@ const bookingHubConfig = {
     },
   },
   faqHeading: "FAQ",
-  faqTitle: "Booking and scheduling questions",
-  faqIntro: "Answers based on what Schedulaa delivers in production today.",
+  faqTitle: "Perguntas sobre reservas e agendamento",
+  faqIntro: "Respostas baseadas no que a Schedulaa entrega em produ\u00e7\u00e3o hoje.",
   faq: [
     {
-      question: "How do clients choose a provider?",
+      question: "Como os clientes escolhem um profissional?",
       answer:
-        "Once a client selects a time, Schedulaa reveals the providers available for that slot. They pick the person they want before confirming.",
+        "Quando o cliente escolhe um hor\u00e1rio, a Schedulaa mostra os profissionais dispon\u00edveis para aquele slot. Ele seleciona a pessoa antes de confirmar.",
     },
     {
-      question: "Can managers bulk-edit availability?",
+      question: "Gerentes podem editar disponibilidade em lote?",
       answer:
-        "Yes. Enterprise availability tools let managers close an entire day, close before or after a time, or keep just a specific range while preserving existing bookings.",
+        "Sim. As ferramentas de disponibilidade empresarial permitem fechar um dia inteiro, fechar antes ou depois de um hor\u00e1rio, ou manter apenas um intervalo espec\u00edfico preservando reservas existentes.",
     },
     {
-      question: "Do you support deposits or saving a card?",
+      question: "Voc\u00eas aceitam dep\u00f3sitos ou cart\u00e3o salvo?",
       answer:
-        "Absolutely. Companies choose pay-now, deposit, or card-on-file capture policies. Stripe processes payments securely either way.",
+        "Com certeza. As empresas escolhem entre pagamento imediato, dep\u00f3sito ou captura com cart\u00e3o salvo. O Stripe processa pagamentos com seguran\u00e7a em qualquer op\u00e7\u00e3o.",
     },
   ],
   cta: sharedCta,

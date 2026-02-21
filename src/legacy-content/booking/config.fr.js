@@ -4,19 +4,19 @@ const CONTACT_URL = "/contact";
 const LIVE_SERVICE_DEMO = "/demo";
 
 const sharedCta = {
-  overline: "Booking, payroll, and websites together",
-  title: "Start booking clients the same day you sign up",
-  body: "Launch online booking, publish availability, and connect Stripe without installing plugins or stitching tools together.",
-  primary: { label: "Start free", href: REGISTER_URL },
-  secondary: { label: "Talk to our team", href: CONTACT_URL },
+  overline: "R\u00e9servation, paie et sites web ensemble",
+  title: "Commencez \u00e0 recevoir des r\u00e9servations le jour de votre inscription",
+  body: "Lancez la r\u00e9servation en ligne, publiez vos disponibilit\u00e9s et connectez Stripe sans plugins ni outils \u00e0 assembler.",
+  primary: { label: "Commencer gratuitement", href: REGISTER_URL },
+  secondary: { label: "Parler \u00e0 notre \u00e9quipe", href: CONTACT_URL },
 };
 
 const sharedSecondaryLinks = [
-  { label: "Website builder", href: "/website-builder" },
-  { label: "Marketing automation", href: "/marketing" },
-  { label: "Salon booking", href: "/booking/salon" },
-  { label: "Tutor scheduling", href: "/booking/tutor" },
-  { label: "Medical booking", href: "/booking/doctor" },
+  { label: "Cr\u00e9ateur de site web", href: "/website-builder" },
+  { label: "Automatisation marketing", href: "/marketing" },
+  { label: "R\u00e9servation salon", href: "/booking/salon" },
+  { label: "Planification cours particuliers", href: "/booking/tutor" },
+  { label: "R\u00e9servation m\u00e9dicale", href: "/booking/doctor" },
 ];
 
 const bookingHubConfig = {
@@ -51,28 +51,28 @@ const bookingHubConfig = {
     url: `${BASE_URL}/booking`,
   },
   hero: {
-    badge: "Real-time availability",
-    title: "Online Booking & Team Scheduling — with Stripe Payments",
+    badge: "Disponibilit\u00e9 en temps r\u00e9el",
+    title: "R\u00e9servation en ligne et planification d'\u00e9quipe avec paiements Stripe",
     subtitle:
-      "Schedulaa gives you a complete booking flow with real-time availability, provider choice, staff calendars, invitations, and Stripe-powered checkout.",
+      "Schedulaa vous offre un flux de r\u00e9servation complet avec disponibilit\u00e9 en temps r\u00e9el, choix du prestataire, calendriers d'\u00e9quipe, invitations et paiement Stripe.",
     image: '/images/marketing/showcase/clients-pick2.png',
-    imageAlt: 'Client booking flow preview',
+    imageAlt: 'Aper\u00e7u du flux de r\u00e9servation client',
     images: [
-      { src: '/images/marketing/showcase/service-management.png', alt: 'Service management' },
-      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'Payment collection' },
-      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'Checkout flow' },
-      { src: '/images/marketing/showcase/employee-availability.png', alt: 'Employee availability' },
+      { src: '/images/marketing/showcase/service-management.png', alt: 'Gestion des services' },
+      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'Collecte des paiements' },
+      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'Flux de paiement' },
+      { src: '/images/marketing/showcase/employee-availability.png', alt: 'Disponibilit\u00e9 des employ\u00e9s' },
     ],
     bullets: [
       "Publish services and show live availability across providers.",
       "Give managers a master calendar with shift and leave controls.",
       "Offer clients a smooth checkout with pay, deposit, or card-on-file.",
     ],
-    primaryCta: { label: "Start booking online", href: REGISTER_URL },
-    secondaryCta: { label: "Preview a live service page", href: LIVE_SERVICE_DEMO },
+    primaryCta: { label: "Commencer la r\u00e9servation en ligne", href: REGISTER_URL },
+    secondaryCta: { label: "Voir une page de service en direct", href: LIVE_SERVICE_DEMO },
   },
-  featuresHeading: "Why teams choose Schedulaa",
-  featuresTitle: "Booking, scheduling, and payments in one hub",
+  featuresHeading: "Pourquoi les \u00e9quipes choisissent Schedulaa",
+  featuresTitle: "R\u00e9servation, planification et paiements dans un seul hub",
   featuresIntro:
     "Everything from provider availability to checkout happens inside Schedulaa — no double entry or extra plugins.",
   features: [
@@ -230,23 +230,23 @@ const bookingHubConfig = {
     },
   },
   faqHeading: "FAQ",
-  faqTitle: "Booking and scheduling questions",
-  faqIntro: "Answers based on what Schedulaa delivers in production today.",
+  faqTitle: "Questions sur la r\u00e9servation et la planification",
+  faqIntro: "R\u00e9ponses bas\u00e9es sur ce que Schedulaa livre aujourd'hui en production.",
   faq: [
     {
-      question: "How do clients choose a provider?",
+      question: "Comment les clients choisissent-ils un prestataire ?",
       answer:
-        "Once a client selects a time, Schedulaa reveals the providers available for that slot. They pick the person they want before confirming.",
+        "Une fois l'horaire choisi, Schedulaa affiche les prestataires disponibles pour ce cr\u00e9neau. Le client choisit la personne avant de confirmer.",
     },
     {
-      question: "Can managers bulk-edit availability?",
+      question: "Les managers peuvent-ils modifier les disponibilit\u00e9s en lot ?",
       answer:
-        "Yes. Enterprise availability tools let managers close an entire day, close before or after a time, or keep just a specific range while preserving existing bookings.",
+        "Oui. Les outils de disponibilit\u00e9 entreprise permettent de fermer une journ\u00e9e enti\u00e8re, fermer avant ou apr\u00e8s une heure, ou conserver une plage sp\u00e9cifique sans casser les r\u00e9servations existantes.",
     },
     {
-      question: "Do you support deposits or saving a card?",
+      question: "Prenez-vous en charge les acomptes ou l'enregistrement de carte ?",
       answer:
-        "Absolutely. Companies choose pay-now, deposit, or card-on-file capture policies. Stripe processes payments securely either way.",
+        "Absolument. Les entreprises choisissent paiement imm\u00e9diat, acompte, ou capture avec carte enregistr\u00e9e. Stripe traite les paiements en toute s\u00e9curit\u00e9.",
     },
   ],
   cta: sharedCta,

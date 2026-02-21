@@ -4,19 +4,19 @@ const CONTACT_URL = "/contact";
 const LIVE_SERVICE_DEMO = "/demo";
 
 const sharedCta = {
-  overline: "Booking, payroll, and websites together",
-  title: "Start booking clients the same day you sign up",
-  body: "Launch online booking, publish availability, and connect Stripe without installing plugins or stitching tools together.",
-  primary: { label: "Start free", href: REGISTER_URL },
-  secondary: { label: "Talk to our team", href: CONTACT_URL },
+  overline: "Reservas, n\u00f3mina y sitios web juntos",
+  title: "Empieza a recibir reservas el mismo d\u00eda que te registras",
+  body: "Activa reservas online, publica disponibilidad y conecta Stripe sin instalar plugins ni unir herramientas separadas.",
+  primary: { label: "Comenzar gratis", href: REGISTER_URL },
+  secondary: { label: "Habla con nuestro equipo", href: CONTACT_URL },
 };
 
 const sharedSecondaryLinks = [
-  { label: "Website builder", href: "/website-builder" },
-  { label: "Marketing automation", href: "/marketing" },
-  { label: "Salon booking", href: "/booking/salon" },
-  { label: "Tutor scheduling", href: "/booking/tutor" },
-  { label: "Medical booking", href: "/booking/doctor" },
+  { label: "Creador de sitios web", href: "/website-builder" },
+  { label: "Automatizaci\u00f3n de marketing", href: "/marketing" },
+  { label: "Reservas para salones", href: "/booking/salon" },
+  { label: "Programaci\u00f3n para tutor\u00edas", href: "/booking/tutor" },
+  { label: "Reservas m\u00e9dicas", href: "/booking/doctor" },
 ];
 
 const bookingHubConfig = {
@@ -51,39 +51,39 @@ const bookingHubConfig = {
     url: `${BASE_URL}/booking`,
   },
   hero: {
-    badge: "Real-time availability",
-    title: "Online Booking & Team Scheduling — with Stripe Payments",
+    badge: "Disponibilidad en tiempo real",
+    title: "Reservas online y programaci\u00f3n de equipo con pagos Stripe",
     subtitle:
-      "Schedulaa gives you a complete booking flow with real-time availability, provider choice, staff calendars, invitations, and Stripe-powered checkout.",
+      "Schedulaa te ofrece un flujo completo de reservas con disponibilidad en tiempo real, elecci\u00f3n de proveedor, calendarios del equipo, invitaciones y checkout con Stripe.",
     image: '/images/marketing/showcase/clients-pick2.png',
-    imageAlt: 'Client booking flow preview',
+    imageAlt: 'Vista previa del flujo de reserva del cliente',
     images: [
-      { src: '/images/marketing/showcase/service-management.png', alt: 'Service management' },
-      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'Payment collection' },
-      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'Checkout flow' },
-      { src: '/images/marketing/showcase/employee-availability.png', alt: 'Employee availability' },
+      { src: '/images/marketing/showcase/service-management.png', alt: 'Gesti\u00f3n de servicios' },
+      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'Cobro de pagos' },
+      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'Flujo de checkout' },
+      { src: '/images/marketing/showcase/employee-availability.png', alt: 'Disponibilidad del personal' },
     ],
     bullets: [
-      "Publish services and show live availability across providers.",
-      "Give managers a master calendar with shift and leave controls.",
-      "Offer clients a smooth checkout with pay, deposit, or card-on-file.",
+      "Publica servicios y muestra disponibilidad en vivo por proveedor.",
+      "Da a los gerentes un calendario maestro con control de turnos y ausencias.",
+      "Ofrece checkout fluido con pago total, dep\u00f3sito o tarjeta guardada.",
     ],
-    primaryCta: { label: "Start booking online", href: REGISTER_URL },
-    secondaryCta: { label: "Preview a live service page", href: LIVE_SERVICE_DEMO },
+    primaryCta: { label: "Empezar reservas online", href: REGISTER_URL },
+    secondaryCta: { label: "Ver una p\u00e1gina de servicio en vivo", href: LIVE_SERVICE_DEMO },
   },
-  featuresHeading: "Why teams choose Schedulaa",
-  featuresTitle: "Booking, scheduling, and payments in one hub",
+  featuresHeading: "Por qu\u00e9 los equipos eligen Schedulaa",
+  featuresTitle: "Reservas, programaci\u00f3n y pagos en un solo centro",
   featuresIntro:
-    "Everything from provider availability to checkout happens inside Schedulaa — no double entry or extra plugins.",
+    "Todo, desde la disponibilidad del proveedor hasta el checkout, ocurre dentro de Schedulaa, sin doble captura ni plugins extra.",
   features: [
     {
       icon: "availability",
-      label: "Availability",
-      title: "Real-time slot picker",
+      label: "Disponibilidad",
+      title: "Selector de horarios en tiempo real",
       description:
-        "Show open times by provider and let clients pick the person and time that works. Slots adjust immediately when staff update availability.",
+        "Muestra horarios abiertos por proveedor y deja que los clientes elijan persona y hora. Los espacios se ajustan al instante cuando el equipo actualiza disponibilidad.",
       link: LIVE_SERVICE_DEMO,
-      linkLabel: "See live availability",
+      linkLabel: "Ver disponibilidad en vivo",
     },
     {
       icon: "meeting",
@@ -230,23 +230,23 @@ const bookingHubConfig = {
     },
   },
   faqHeading: "FAQ",
-  faqTitle: "Booking and scheduling questions",
-  faqIntro: "Answers based on what Schedulaa delivers in production today.",
+  faqTitle: "Preguntas de reservas y programaci\u00f3n",
+  faqIntro: "Respuestas basadas en lo que Schedulaa entrega hoy en producci\u00f3n.",
   faq: [
     {
-      question: "How do clients choose a provider?",
+      question: "\u00bfC\u00f3mo eligen los clientes un proveedor?",
       answer:
-        "Once a client selects a time, Schedulaa reveals the providers available for that slot. They pick the person they want before confirming.",
+        "Cuando un cliente elige una hora, Schedulaa muestra los proveedores disponibles para ese horario. Seleccionan a la persona antes de confirmar.",
     },
     {
-      question: "Can managers bulk-edit availability?",
+      question: "\u00bfLos gerentes pueden editar disponibilidad en lote?",
       answer:
-        "Yes. Enterprise availability tools let managers close an entire day, close before or after a time, or keep just a specific range while preserving existing bookings.",
+        "S\u00ed. Las herramientas de disponibilidad empresarial permiten cerrar un d\u00eda completo, cerrar antes o despu\u00e9s de una hora, o mantener solo un rango concreto sin romper reservas existentes.",
     },
     {
-      question: "Do you support deposits or saving a card?",
+      question: "\u00bfAdmiten dep\u00f3sitos o guardar tarjeta?",
       answer:
-        "Absolutely. Companies choose pay-now, deposit, or card-on-file capture policies. Stripe processes payments securely either way.",
+        "Claro. Las empresas pueden elegir pago inmediato, dep\u00f3sito o captura con tarjeta guardada. Stripe procesa los pagos de forma segura en todos los casos.",
     },
   ],
   cta: sharedCta,
