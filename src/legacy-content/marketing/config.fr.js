@@ -2,36 +2,36 @@ const BASE_URL = "https://www.schedulaa.com";
 const REGISTER_URL = "/register";
 
 const marketingCta = {
-  overline: "Ready when you are",
-  title: "Launch your next campaign and monitor the results",
+  overline: "Pret quand vous l etes",
+  title: "Lancez votre prochaine campagne et suivez les resultats",
   body: "Schedulaa keeps your campaigns, segments, analytics, and exports in one workflow so your team can move fast.",
-  primary: { label: "Start a campaign", href: REGISTER_URL },
-  secondary: { label: "Log in", href: "/login" },
+  primary: { label: "Lancer une campagne", href: REGISTER_URL },
+  secondary: { label: "Connexion", href: "/login" },
 };
 
 const marketingSecondaryLinks = [
-  { label: "Client exports overview", href: "/marketing/clients-360#exports" },
-  { label: "View booking features", href: "/booking" },
-  { label: "Website builder", href: "/website-builder" },
+  { label: "Apercu des exports clients", href: "/marketing/clients-360#exports" },
+  { label: "Voir les fonctions de reservation", href: "/booking" },
+  { label: "Createur de site web", href: "/website-builder" },
 ];
 
 export const marketingPages = {
   hub: {
     meta: {
-      title: "Marketing & Analytics for Service Businesses – Campaigns, Segments & KPIs | Schedulaa",
+      title: "Commercialisation et analytique pour entreprises de services – Campagnes, Segments & KPIs | Schedulaa",
       description:
-        "Run targeted email campaigns (win-back, VIP, no-show recovery), export client lists, and track KPIs with Advanced Analytics. Segments like VIP, At-Risk, Dormant and Client 360° built-in.",
+        "Run targeted email campaigns (win-back, VIP, no-show recovery), export client lists, and track KPIs with Analytique avancee. Segments like VIP, At-Risk, Dormant and Client 360° built-in.",
       canonical: `${BASE_URL}/marketing`,
       og: {
-        title: "Marketing & Analytics for Service Businesses | Schedulaa",
+        title: "Commercialisation et analytique pour entreprises de services | Schedulaa",
         description:
-          "Launch campaigns, auto-build segments, export clients, and monitor KPIs with Advanced Analytics.",
+          "Launch campaigns, auto-build segments, export clients, and monitor KPIs with Analytique avancee.",
         image: `${BASE_URL}/images/marketing-hub-preview.png`,
         url: `${BASE_URL}/marketing`,
       },
       twitter: {
         card: "summary_large_image",
-        title: "Marketing & Analytics for Service Businesses | Schedulaa",
+        title: "Commercialisation et analytique pour entreprises de services | Schedulaa",
         description:
           "Schedulaa unifies campaigns, lifecycle segments, client exports, and enterprise analytics.",
         image: `${BASE_URL}/images/marketing-hub-preview.png`,
@@ -40,7 +40,7 @@ export const marketingPages = {
     schema: {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa Marketing & Analytics",
+      name: "Schedulaa Commercialisation et analytique",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description: "Targeted campaigns, lifecycle segments, client exports, and enterprise analytics for service businesses.",
@@ -48,22 +48,22 @@ export const marketingPages = {
       url: `${BASE_URL}/marketing`,
     },
     hero: {
-      badge: "Lifecycle & KPIs",
-      title: "Marketing & Analytics — Grow, retain, and understand your clients",
+      badge: "Cycle de vie et KPI",
+      title: "Commercialisation et analytique — developpez, fidelisez et comprenez vos clients",
       subtitle:
-          "Schedulaa gives you turnkey campaigns, client exports, lifecycle segments, and an Advanced Analytics suite. Launch win-backs, VIP perks, anniversary notes, and more — then monitor bookings, revenue, no-shows, rebook rates, tip performance, and client value.",
+          "Schedulaa gives you turnkey campaigns, client exports, lifecycle segments, and an Analytique avancee suite. Launch win-backs, VIP perks, anniversary notes, and more — then monitor bookings, revenue, no-shows, rebook rates, tip performance, and client value.",
       points: [
         "Prebuilt campaigns for win-back, VIP, anniversary, new service launch, and more.",
         "Lifecycle segments with tunable thresholds (VIP, Loyal, New, Active, At-Risk, Lost).",
-        "Enterprise analytics covering bookings, revenue, retention, tips, and card-on-file performance.",
+        "Analytique entreprise covering bookings, revenue, retention, tips, and card-on-file performance.",
       ],
-      primaryCta: { label: "Start a campaign", href: REGISTER_URL },
-      secondaryCta: { label: "Log in", href: "/login" },
+      primaryCta: { label: "Lancer une campagne", href: REGISTER_URL },
+      secondaryCta: { label: "Connexion", href: "/login" },
     },
     sections: [
       {
-        overline: "Campaigns",
-        title: "Campaigns you can launch today",
+        overline: "Campagnes",
+        title: "Campagnes you can launch today",
         body:
           "Use prebuilt flows with smart limits, segment filters, coupon prefixes, and expiry windows. Every campaign supports dry-run testing and per-recipient limits.",
         points: [
@@ -76,7 +76,7 @@ export const marketingPages = {
           "No-Show Recovery and Add-on Upsell sequences with optional discounts.",
         ],
         buttons: [
-          { label: "See campaign builder", href: "/marketing/email-campaigns" },
+          { label: "Voir campaign builder", href: "/marketing/email-campaigns" },
         ],
       },
       {
@@ -96,7 +96,7 @@ export const marketingPages = {
     ],
     lists: [
       {
-        overline: "Enterprise analytics",
+        overline: "Analytique entreprise",
         title: "Highlights from the analytics suite",
         intro:
           "Filter by date range, timezone, and grouping (day/week/month). Refresh in seconds to keep leadership dashboards current.",
@@ -127,12 +127,12 @@ export const marketingPages = {
     ],
     highlights: [
       {
-        overline: "Client intelligence",
+        overline: "Intelligence client",
         title: "Client 360° and geo-insights",
         content:
           "Filter by department and employee, search by name/email/phone, and open a 360 panel with geo/IP, devices, booking behavior, messaging history, and per-client KPIs.",
         actions: [
-          { label: "Open Client 360°", href: "/marketing/clients-360", variant: "outlined" },
+          { label: "Ouvrir Client 360°", href: "/marketing/clients-360", variant: "outlined" },
         ],
       },
       {
@@ -141,12 +141,12 @@ export const marketingPages = {
         content:
           "Export company-scoped client lists with filters (seen in last N days, minimum visits, require email, limit). Ideal for external CRM or ad platforms.",
         actions: [
-          { label: "See export workflow", href: "/marketing/clients-360#exports", variant: "contained" },
+          { label: "Voir export workflow", href: "/marketing/clients-360#exports", variant: "contained" },
         ],
       },
     ],
-    faqHeading: "FAQ",
-    faqTitle: "Marketing & Analytics questions",
+    faqHeading: "Questions frequentes",
+    faqTitle: "Commercialisation et analytique questions",
     faqIntro: "Answers based on the campaigns and analytics shipping in Schedulaa today.",
     faq: [
       {
@@ -155,14 +155,14 @@ export const marketingPages = {
           "Yes. Every campaign supports a Limit field so you can cap how many clients receive the message. Use dry-run to review the list before sending.",
       },
       {
-        question: "How do lifecycle segments update?",
+        question: "Comment do lifecycle segments update?",
         answer:
           "Segments refresh automatically using your booking history. Adjust parameters like VIP percentage or at-risk multiplier to fit your business cadence.",
       },
       {
         question: "Can I export analytics data?",
         answer:
-          "Advanced Analytics includes CSV exports for key views, and you can export client cohorts separately using the client export tool.",
+          "Analytique avancee includes CSV exports for key views, and you can export client cohorts separately using the client export tool.",
       },
     ],
     cta: marketingCta,
@@ -170,12 +170,12 @@ export const marketingPages = {
   },
   campaigns: {
     meta: {
-      title: "Email Campaigns – Win-Back, VIP, No-Show & Upsell | Schedulaa",
+      title: "Email Campagnes – Win-Back, VIP, No-Show & Upsell | Schedulaa",
       description:
         "Prebuilt campaigns with filters, coupon prefixes, expiry windows, and deep links to boost rebook and revenue.",
       canonical: `${BASE_URL}/marketing/email-campaigns`,
       og: {
-        title: "Email Campaigns for Service Businesses | Schedulaa",
+        title: "Email Campagnes pour entreprises de services | Schedulaa",
         description:
           "Launch win-back, VIP, no-show recovery, and add-on upsell campaigns with smart filters, coupons, and expiries.",
         image: `${BASE_URL}/images/marketing-campaigns-preview.png`,
@@ -183,7 +183,7 @@ export const marketingPages = {
       },
       twitter: {
         card: "summary_large_image",
-        title: "Email Campaigns for Service Businesses | Schedulaa",
+        title: "Email Campagnes pour entreprises de services | Schedulaa",
         description:
           "Schedulaa gives you ready-made campaigns with coupon prefixes, expiry windows, and deep links.",
         image: `${BASE_URL}/images/marketing-campaigns-preview.png`,
@@ -192,7 +192,7 @@ export const marketingPages = {
     schema: {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa Marketing Campaigns",
+      name: "Schedulaa Commercialisation Campagnes",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description: "Email campaigns for win-back, VIP, no-show recovery, add-on upsell, and more.",
@@ -200,16 +200,16 @@ export const marketingPages = {
       url: `${BASE_URL}/marketing/email-campaigns`,
     },
     hero: {
-      badge: "Campaign builder",
-      title: "Email Campaigns that bring clients back",
+      badge: "Generateur de campagne",
+      title: "Email Campagnes that bring clients back",
       subtitle:
         "Choose a prebuilt strategy, tweak filters, and press send. Every campaign supports limits, coupon prefixes, expiry windows, valid-days, and deep links to your booking pages.",
-      primaryCta: { label: "Start a campaign", href: REGISTER_URL },
+      primaryCta: { label: "Lancer une campagne", href: REGISTER_URL },
       secondaryCta: { label: "Return to marketing hub", href: "/marketing" },
     },
     sections: [
       {
-        overline: "Compliance",
+        overline: "Conformite",
         title: "Respect consent and deliver reliably",
         body:
           "Every send automatically includes unsubscribe and preferences links. Turn on Send only to consented contacts in Settings to stay aligned with GDPR/CASL and verify SPF/DKIM/DMARC on your sending domain for best inbox placement.",
@@ -219,7 +219,7 @@ export const marketingPages = {
         ],
       },
       {
-        overline: "Quality controls",
+        overline: "Controles qualite",
         title: "Preview, throttle, and QA before you send",
         body:
           "Use Preheader text to boost opens, seed list emails for QA, Send later scheduling, and throttling (e.g., 50 emails/minute) to keep deliverability healthy.",
@@ -227,7 +227,7 @@ export const marketingPages = {
           "Changing any field clears previews—click Preview again before sending.",
           "Dry-run logs would-send counts without emailing anyone.",
           "Send Selected/All works on the rows currently previewed.",
-          "Emails don’t create coupons—enable matching codes in Marketing → Coupons first.",
+          "Emails don’t create coupons—enable matching codes in Commercialisation → Coupons first.",
         ],
       },
     ],
@@ -313,20 +313,20 @@ export const marketingPages = {
   },
   analytics: {
     meta: {
-      title: "Advanced Analytics – Bookings, Revenue, No-Shows & Client Value | Schedulaa",
+      title: "Analytique avancee – Reservations, Revenue, No-Shows & Client Value | Schedulaa",
       description:
         "Full KPI suite with trends, leaderboards and retention metrics. Tune segments and filter by date, timezone and grouping.",
       canonical: `${BASE_URL}/marketing/analytics-dashboard`,
       og: {
-        title: "Advanced Analytics Dashboard | Schedulaa",
+        title: "Analytique avancee Dashboard | Schedulaa",
         description:
-          "Track bookings, revenue, no-shows, retention, tip performance, and utilization with Advanced Analytics.",
+          "Track bookings, revenue, no-shows, retention, tip performance, and utilization with Analytique avancee.",
         image: `${BASE_URL}/images/marketing-analytics-preview.png`,
         url: `${BASE_URL}/marketing/analytics-dashboard`,
       },
       twitter: {
         card: "summary_large_image",
-        title: "Advanced Analytics Dashboard | Schedulaa",
+        title: "Analytique avancee Dashboard | Schedulaa",
         description:
           "Schedulaa's analytics suite covers KPIs, retention, leaderboards, coupon performance, and more.",
         image: `${BASE_URL}/images/marketing-analytics-preview.png`,
@@ -335,7 +335,7 @@ export const marketingPages = {
     schema: {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-  name: "Schedulaa Advanced Analytics",
+  name: "Schedulaa Analytique avancee",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description: "Analytics for bookings, revenue, retention, utilization, and client value.",
@@ -344,7 +344,7 @@ export const marketingPages = {
     },
     hero: {
   badge: "Advanced analytics",
-  title: "Advanced Analytics — KPIs, trends, and insights",
+  title: "Analytique avancee — KPIs, trends, and insights",
       subtitle:
         "Pick a date range, timezone, and grouping (day/week/month). Refresh to track bookings, revenue, no-shows, tip performance, card-on-file success, and client value.",
       primaryCta: { label: "Explore analytics", href: REGISTER_URL },
@@ -382,7 +382,7 @@ export const marketingPages = {
             label: "Leaders",
             title: "Leaderboards & effectiveness",
             body:
-              "Bookings and revenue trends, provider utilization, top services by revenue, tip leaderboard (payroll-ready), and coupon effectiveness.",
+              "Reservations and revenue trends, provider utilization, top services by revenue, tip leaderboard (payroll-ready), and coupon effectiveness.",
           },
           {
             icon: "insights",
@@ -436,11 +436,11 @@ export const marketingPages = {
       url: `${BASE_URL}/marketing/clients-360`,
     },
     hero: {
-      badge: "Client intelligence",
+      badge: "Intelligence client",
       title: "Client 360° & Exports",
       subtitle:
         "Find clients by department or employee, search by name/email/phone, open a 360° panel with geo insights, and export CSVs with advanced filters.",
-      primaryCta: { label: "Open Client 360°", href: "/marketing/clients-360" },
+      primaryCta: { label: "Ouvrir Client 360°", href: "/marketing/clients-360" },
       secondaryCta: { label: "Return to marketing hub", href: "/marketing" },
     },
     sections: [
@@ -454,7 +454,7 @@ export const marketingPages = {
         overline: "Segments overview",
         title: "Lifecycle segments with parameters",
         body:
-          "Scan clients as-of a date with Require Email, Limit, and parameters (min_visits, default_gap_days, at_risk_multiplier, dormant_days, new_days, habitual_min_visits, habitual_avg_gap_max, vip_pct). See examples per cohort.",
+          "Scan clients as-of a date with Require Email, Limit, and parameters (min_visits, default_gap_days, at_risk_multiplier, dormant_days, new_days, habitual_min_visits, habitual_avg_gap_max, vip_pct). Voir examples per cohort.",
       },
       {
         overline: "CSV exports",

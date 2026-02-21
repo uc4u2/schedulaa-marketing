@@ -3,19 +3,19 @@ const REGISTER_URL = "/register";
 const CONTACT_URL = "/contact";
 
 const sharedCta = {
-  overline: "Payroll + HR in one hub",
-  title: "Run payroll, issue slips, and publish portals in minutes",
-  body: "Schedulaa unifies payroll calculations, compliance exports, and employee self-serve tools so finance and operations can work from the same dashboard.",
-  primary: { label: "Start free", href: REGISTER_URL },
-  secondary: { label: "Talk to us", href: CONTACT_URL },
+  overline: "Folha + HR in one hub",
+  title: "Executar folha, issue slips, and publish portals in minutes",
+  body: "Schedulaa unifies folha calculations, compliance exportacoes, and funcionario autoatendimento tools so finance and operations can work from the same dashboard.",
+  primary: { label: "Comece gratis", href: REGISTER_URL },
+  secondary: { label: "Fale conosco", href: CONTACT_URL },
 };
 
 const sharedSecondaryLinks = [
-  { label: "Canada payroll", href: "/payroll/canada" },
-  { label: "USA payroll", href: "/payroll/usa" },
-  { label: "ROE generator", href: "/payroll/tools/roe" },
-  { label: "T4 generator", href: "/payroll/tools/t4" },
-  { label: "W-2 generator", href: "/payroll/tools/w2" },
+  { label: "Canada folha", href: "/payroll/canada" },
+  { label: "USA folha", href: "/payroll/usa" },
+  { label: "ROE gerador", href: "/payroll/tools/roe" },
+  { label: "T4 gerador", href: "/payroll/tools/t4" },
+  { label: "W-2 gerador", href: "/payroll/tools/w2" },
   { label: "Employee payslips", href: "/payslips" },
 ];
 
@@ -33,27 +33,27 @@ const buildBreadcrumbList = (items) => ({
 const payrollBreadcrumb = (name, href) =>
   buildBreadcrumbList([
     { name: "Home", href: BASE_URL },
-    { name: "Payroll", href: `${BASE_URL}/payroll` },
+    { name: "Folha", href: `${BASE_URL}/payroll` },
     ...(name && href ? [{ name, href }] : []),
   ]);
 
 const overviewConfig = {
   meta: {
-    title: "Payroll Software & Payslip Automation | Schedulaa",
+    title: "Folha Software & Payslip Automation | Schedulaa",
     description:
-      "Tie scheduling data, regional tax engines, and employee self-serve portals into one payroll workspace. Support Canada, USA, and statement exports from day one.",
+      "Tie agendamento data, regional tax engines, and funcionario autoatendimento portals into one folha workspace. Support Canada, USA, and statement exportacoes from day one.",
     canonical: `${BASE_URL}/payroll`,
     og: {
-      title: "Unified Payroll & Scheduling Platform | Schedulaa",
+      title: "Unified Folha & Agendamento Plataforma | Schedulaa",
       description:
-        "Run payroll for Canada and the USA, generate ROE/T4/W-2 files, and publish payslips through the employee portal.",
+        "Executar folha for Canada and the USA, generate ROE/T4/W-2 files, and publish payslips through the funcionario portal.",
       image: `${BASE_URL}/images/payroll-overview.png`,
       url: `${BASE_URL}/payroll`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Schedulaa Payroll Overview",
-      description: "Preview deductions, finalize slips, and keep employees informed across every region you support.",
+      title: "Schedulaa Folha Overview",
+      description: "Preview deductions, finalizar slips, and keep funcionarios informed across every region you suporte.",
       image: `${BASE_URL}/images/payroll-overview.png`,
     },
   },
@@ -61,12 +61,12 @@ const overviewConfig = {
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      name: "Schedulaa Payroll",
+      name: "Schedulaa Folha",
       applicationCategory: "FinanceApplication",
       operatingSystem: "Web",
       url: `${BASE_URL}/payroll`,
       description:
-        "Schedulaa unifies scheduling, HR, and payroll automation. Employees automatically use the correct Canadian or US compliance engine and can access payslips instantly.",
+        "Schedulaa unifies agendamento, HR, and folha automation. Employees automatically use the correct Canadian or US compliance engine and can access payslips instantly.",
       provider: {
         "@type": "Organization",
         name: "Schedulaa",
@@ -81,74 +81,74 @@ const overviewConfig = {
     },
     buildBreadcrumbList([
       { name: "Home", href: BASE_URL },
-      { name: "Payroll", href: `${BASE_URL}/payroll` },
+      { name: "Folha", href: `${BASE_URL}/payroll` },
     ]),
   ],
   hero: {
-    badge: "Scheduling + payroll + docs",
-    title: "Payroll that stays in sync with operations",
+    badge: "Agendamento + folha + docs",
+    title: "Folha that stays in sync with operations",
     subtitle:
-      "Pull real-time hours from scheduling and time tracking, apply CRA or IRS logic, layer in tips, bonus, commission, shift premiums, union dues, garnishments, and non-taxable reimbursements, then ship payslips plus ROE/T4/W-2 without leaving Schedulaa. U.S. full finalize is currently available in AK, FL, NV, SD, TX, WA, WY, TN, and NH; other U.S. states run in raw preview mode.",
+      "Pull real-time hours from agendamento and time tracking, apply CRA or IRS logic, layer in tips, bonus, commission, shift premiums, union dues, garnishments, and non-taxable reimbursements, then ship payslips plus ROE/T4/W-2 without leaving Schedulaa. U.S. full finalizar is currently available in AK, FL, NV, SD, TX, WA, WY, TN, and NH; other U.S. states run in raw pre-visualizacao mode.",
     image: "/images/marketing/payroll-manage.png",
-    imageAlt: "Schedulaa payroll management preview",
+    imageAlt: "Schedulaa folha management pre-visualizacao",
     images: [
-      { src: "/images/marketing/payroll-manage.png", alt: "Payroll management" },
+      { src: "/images/marketing/payroll-manage.png", alt: "Folha management" },
       { src: "/images/marketing/showcase/t4.png", alt: "T4 generation" },
       { src: "/images/marketing/showcase/roe.png", alt: "ROE workflow" },
       { src: "/images/marketing/showcase/w2-4d.png", alt: "W-2 generation" },
     ],
     bullets: [
       "Regional engines for Canada (CPP/EI/BPA, CPP/EI exemptions) and the USA (federal tax, FICA/Medicare, employer FUTA/SUTA reporting).",
-      "Taxable extras like shift premium, tips, commission, bonus plus deductions like union dues and garnishments—net pay matches the preview.",
-      "Unsupported U.S. states remain available for raw preview, with clear warnings and finalize blocked.",
-      "ROE, T4 (with Box 40/44), W-2, and payslip exports backed by our public docs.",
-      "Employee self-serve portal plus automated notifications.",
+      "Taxable extras like shift premium, tips, commission, bonus plus deductions like union dues and garnishments—net pay matches the pre-visualizacao.",
+      "Unsupported U.S. states remain available for raw pre-visualizacao, with clear warnings and finalizar blocked.",
+      "ROE, T4 (with Box 40/44), W-2, and payslip exportacoes backed by our public docs.",
+      "Employee autoatendimento portal plus automated notificacoes.",
     ],
-    primaryCta: { label: "See payroll workspace", href: REGISTER_URL },
-    secondaryCta: { label: "Read the docs", href: "/docs#payroll" },
+    primaryCta: { label: "Ver espaco de folha", href: REGISTER_URL },
+    secondaryCta: { label: "Leia a documentacao", href: "/docs#payroll" },
     notice:
-      "* U.S. full finalize: AK, FL, NV, SD, TX, WA, WY, TN, NH only. ** Other U.S. states are raw preview only (finalize blocked). *** Local/city taxes and special programs (for example WA PFML / WA Cares) remain external.",
+      "* U.S. full finalizar: AK, FL, NV, SD, TX, WA, WY, TN, NH only. ** Other U.S. states are raw pre-visualizacao only (finalizar blocked). *** Local/city taxes and special programs (for example WA PFML / WA Cares) remain external.",
   },
-  featuresHeading: "Platform",
-  featuresTitle: "One place for calculations, slips, and employee updates",
-  featuresIntro:
-    "Content used here is pulled from our Features, Docs, and region-specific payroll pages so prospects see everything Google expects on /payroll.",
-  features: [
+  recursosHeading: "Plataforma",
+  recursosTitle: "One place for calculations, slips, and funcionario updates",
+  recursosIntro:
+    "Content used here is pulled from our Recursos, Docs, and region-specific folha pages so prospects see everything Google expects on /folha.",
+  recursos: [
     {
       icon: "timeline",
-      label: "Workflow",
+      label: "Fluxo de trabalho",
       title: "Ops-connected pay runs",
       description:
-        "Import actual hours, overtime, and tips from the scheduling suite before calculating deductions. The correct country engine applies automatically per employee. When a run moves to payroll.ready or payroll.finalized, Zapier events can notify finance, push exports, or trigger downstream workflows. Every step is logged for finance and HR audits, including overwrite history when a period is re-finalized.",
-      link: "/features",
-      linkLabel: "Tour the platform",
+        "Import actual hours, overtime, and tips from the agendamento suite before calculating deductions. The correct country engine applies automatically per funcionario. When a run moves to folha.ready or folha.finalized, Zapier events can notify finance, push exportacoes, or trigger downstream workflows. Every passo is logged for finance and HR audits, including overwrite history when a period is re-finalized.",
+      link: "/recursos",
+      linkLabel: "Roteiro da plataforma",
     },
     {
       icon: "compliance",
-      label: "Compliance",
+      label: "Conformidade",
       title: "Canada & USA tax engines",
       description:
-        "Employees automatically run on Canadian CPP/EI/BPA logic (with CPP/EI exemptions) or U.S. federal tax + FICA/Medicare logic based on work location. U.S. full finalize is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states remain available as raw preview with warnings. Both engines support shift premium, tips, commission, bonus, union dues, garnishments, and non-taxable reimbursements.",
+        "Employees automatically run on Canadian CPP/EI/BPA logic (with CPP/EI exemptions) or U.S. federal tax + FICA/Medicare logic based on work location. U.S. full finalizar is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states remain available as raw pre-visualizacao with warnings. Both engines suporte shift premium, tips, commission, bonus, union dues, garnishments, and non-taxable reimbursements.",
       link: "/payroll/canada",
-      linkLabel: "See regional calculators",
+      linkLabel: "Ver calculadoras regionais",
     },
     {
       icon: "retirement",
       label: "Enterprise Retirement (U.S. 401(k))",
       title: "401(k) deferrals, caps, and W-2 alignment",
       description:
-        "Automatic 401(k) and Roth 401(k) calculations with annual caps, employer match limits, and applicable wage bases. Post-finalization exports surface W-2 Box 12D codes so year-end filings align with what payroll produced.",
+        "Automatic 401(k) and Roth 401(k) calculations with annual caps, employer match limites, and applicable wage bases. Post-finalization exportacoes surface W-2 Box 12D codes so year-end filings align with what folha produced.",
       link: "/payroll/usa",
-      linkLabel: "Review U.S. payroll coverage",
+      linkLabel: "Review U.S. folha cobertura",
     },
     {
       icon: "document",
       label: "Documents",
       title: "ROE, T4, W-2, and payslips",
       description:
-        "Finalize payroll, email slips, post them in the payslip portal, and export ROE/T4/W-2 files that align with CRA and IRS specs.",
+        "Finalize folha, email slips, post them in the payslip portal, and export ROE/T4/W-2 files that align with CRA and IRS specs.",
       link: "/payslips",
-      linkLabel: "Open the payslip portal",
+      linkLabel: "Abrir portal de holerites",
     },
   ],
   highlights: [
@@ -159,46 +159,46 @@ const overviewConfig = {
         "Two regional engines, one workspace. Employees automatically use the right CRA or IRS/FICA/state logic based on their work location—no duplicate setups.",
       points: [
         "CA: Federal & provincial tax, CPP/EI (with exemptions), vacation/stat holidays, T4 boxes 14/16/18/22/24/26/40/44, ROE.",
-        "US: Federal income tax, FICA/Medicare, employer FUTA/SUTA reporting, and W-2 exports. Full finalize is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH.",
-        "Local/city/municipal payroll taxes remain external where they apply.",
+        "US: Federal income tax, FICA/Medicare, employer FUTA/SUTA reporting, and W-2 exportacoes. Full finalizar is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH.",
+        "Local/city/municipal folha taxes remain external where they apply.",
       ],
     },
     {
       overline: "Documented flows",
-      title: "Guided payroll that mirrors our Docs",
+      title: "Guided folha that mirrors our Docs",
       body:
-        "Preview → adjust → finalize → publish exactly as shown in the public docs. No hidden steps—new managers can follow the same playbook used by finance.",
+        "Preview → adjust → finalizar → publish exactly as shown in the public docs. No hidden passos—new gerentes can follow the same playbook used by finance.",
       points: [
-        "Screenshots for every preview step live in the docs.",
+        "Screenshots for every pre-visualizacao passo live in the docs.",
         "Direct links to ROE/T4/W-2 (incl. Box 40/44) guides for deeper review.",
-        "Inline help inside the app keeps managers on the rails.",
+        "Inline help inside the app keeps gerentes on the rails.",
       ],
     },
     {
       overline: "Employee experience",
-      title: "Self-serve slips and notifications",
+      title: "Self-serve slips and notificacoes",
       body:
-        "Branded portal + alerts: employees download slips anytime; finance chooses email, SMS, or in-app notifications. Taxable vs non-taxable items are labeled clearly.",
+        "Branded portal + alerts: funcionarios download slips anytime; finance chooses email, SMS, or in-app notificacoes. Taxable vs non-taxable items are labeled clearly.",
       points: [
         "Branded portal inherits your site colors automatically.",
-        "Scoped access per employee keeps data secure.",
-        "Shortcuts to /payroll/tools for region-specific exports.",
+        "Scoped access per funcionario keeps data secure.",
+        "Shortcuts to /folha/tools for region-specific exportacoes.",
       ],
     },
   ],
-  stepsHeading: "How payroll runs inside Schedulaa",
-  stepsTitle: "From schedule to finalized slips in four steps",
-  stepsIntro: "Local and city payroll taxes are handled externally.",
+  stepsHeading: "Como folha runs inside Schedulaa",
+  stepsTitle: "From schedule to finalized slips in four passos",
+  stepsIntro: "Local and city folha taxes are handled externally.",
   steps: [
     {
       title: "Import hours & review context",
       description:
-        "Pull hours from scheduling, sync bonuses, tips, commissions, or shift premium, and compare to historic pay runs before doing any math.",
+        "Pull hours from agendamento, sync bonuses, tips, commissions, or shift premium, and compare to historic pay runs before doing any math.",
     },
     {
       title: "Apply deductions with the right engine",
       description:
-        "The correct country rules apply automatically by employee location. CRA or IRS logic, plus vacation pay, benefits, union dues, garnishments, and non-taxable reimbursements, are applied instantly.",
+        "The correct country rules apply automatically by funcionario location. CRA or IRS logic, plus vacation pay, benefits, union dues, garnishments, and non-taxable reimbursements, are applied instantly.",
     },
     {
       title: "Finalize and export",
@@ -208,7 +208,7 @@ const overviewConfig = {
     {
       title: "Publish to the portal",
       description:
-        "Notify employees, post slips in the portal, and keep everything searchable for future audits.",
+        "Notify funcionarios, post slips in the portal, and keep everything searchable for future audits.",
     },
     {
       title: "Spot-check for year-end readiness",
@@ -218,19 +218,19 @@ const overviewConfig = {
     {
       title: "Share with finance & ops",
       description:
-        "Hand off clean exports to accounting or BI, with the same gross, deduction, and net figures your managers saw in preview.",
+        "Hand off clean exportacoes to accounting or BI, with the same gross, deduction, and net figures your gerentes saw in pre-visualizacao.",
     },
   ],
   callouts: [
     {
       icon: "compliance",
-      label: "Coverage & limits",
-      title: "Current U.S. support boundaries",
+      label: "Coverage & limites",
+      title: "Current U.S. suporte boundaries",
       body:
-        "Full U.S. finalize is currently supported only in AK, FL, NV, SD, TX, WA, WY, TN, and NH. Other U.S. states are available in raw preview mode with warnings and finalize blocked. Employer FUTA/SUTA is reported separately and does not reduce employee net pay.",
+        "Full U.S. finalizar is currently supported only in AK, FL, NV, SD, TX, WA, WY, TN, and NH. Other U.S. states are available in raw pre-visualizacao mode with warnings and finalizar blocked. Employer FUTA/SUTA is reported separately and does not reduce funcionario net pay.",
       points: [
-        "* Full finalize states: AK, FL, NV, SD, TX, WA, WY, TN, NH",
-        "** Unsupported states: preview-only raw mode",
+        "* Full finalizar states: AK, FL, NV, SD, TX, WA, WY, TN, NH",
+        "** Unsupported states: pre-visualizacao-only raw mode",
         "*** Local/city taxes + WA PFML/WA Cares: external handling",
       ],
     },
@@ -239,84 +239,84 @@ const overviewConfig = {
       label: "Insights",
       title: "Finance and HR see the same truth",
       body:
-        "Payroll history, deduction logic, and document exports are visible in analytics dashboards so leadership sees trends without another BI tool.",
+        "Folha history, deduction logic, and document exportacoes are visible in analytics dashboards so leadership sees trends without another BI tool.",
       links: [
-        { label: "Open analytics tour", href: "/marketing/analytics-dashboard" },
-        { label: "Read payroll help guides", href: "/docs#payroll" },
+        { label: "Abrir tour de analitica", href: "/marketing/analytics-dashboard" },
+        { label: "Ler guias de folha", href: "/docs#payroll" },
       ],
     },
     {
       icon: "schedule",
-      label: "Payroll-ready time data",
+      label: "Folha-ready time data",
       title: "Hours arrive with breaks, overtime, and audits attached",
       body:
-        "Approved time entries land with unpaid breaks deducted, overtime and missed-break markers attached, and IP/UA metadata for audits. Finance exports CSV/PDF or syncs to accounting without spreadsheets.",
+        "Approved time entries land with unpaid breaks deducted, overtime and missed-break markers attached, and IP/UA metadata for audits. Finance exportacoes CSV/PDF or syncs to accounting without spreadsheets.",
       points: [
         "Forced clock-out and bulk break template fixes are fully audited.",
         "OT/missed-break flags travel with each pay period.",
-        "Safe portal links keep employees on the right local domain.",
+        "Safe portal links keep funcionarios on the right local domain.",
       ],
     },
   ],
-  faqHeading: "FAQ",
-  faqTitle: "Payroll overview questions",
+  faqHeading: "Perguntas frequentes",
+  faqTitle: "Folha visao geral perguntas",
   faq: [
     {
-      question: "Do you support all U.S. states for finalize?",
+      question: "Do you suporte all U.S. states for finalizar?",
       answer:
-        "Not yet. Full finalize is currently supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH. Other U.S. states remain available as raw preview with finalize blocked.",
+        "Not yet. Full finalizar is currently supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH. Other U.S. states remain available as raw pre-visualizacao with finalizar blocked.",
     },
     {
-      question: "Is /payroll different from the Canada or USA pages?",
+      question: "Is /folha different from the Canada or USA pages?",
       answer:
-        "The overview introduces everything on one page for crawlers and prospects. It links directly to the Canada and USA calculators plus ROE/T4/W-2 tools for deeper regulation details.",
+        "The visao geral introduces everything on one page for crawlers and prospects. It links directly to the Canada and USA calculators plus ROE/T4/W-2 tools for deeper regulation details.",
     },
     {
-      question: "Does Google get blocked from payroll content?",
+      question: "Does Google get blocked from folha content?",
       answer:
-        "No. robots.txt now allows /payroll and the sitemap lists every regional URL so crawlers reach them through HTML links.",
+        "No. robots.txt now allows /folha and the sitemap lists every regional URL so crawlers reach them through HTML links.",
     },
     {
       question: "Do I need separate logins for the payslip portal?",
       answer:
-        "Employees reuse their Schedulaa credentials. Access is gated by role, and managers can revoke permissions at any time.",
+        "Employees reuse their Schedulaa credentials. Access is gated by role, and gerentes can revoke permissions at any time.",
     },
   ],
   cta: sharedCta,
   secondaryLinks: [
-    { label: "Docs: payroll preview", href: "/docs#payroll" },
-    { label: "Compare: Schedulaa vs Gusto", href: "/compare/gusto" },
-    { label: "Compare: Schedulaa vs ADP", href: "/compare/adp" },
+    { label: "Docs: folha pre-visualizacao", href: "/docs#payroll" },
+    { label: "Comparativo: Schedulaa vs Gusto", href: "/compare/gusto" },
+    { label: "Comparativo: Schedulaa vs ADP", href: "/compare/adp" },
     ...sharedSecondaryLinks,
   ],
   nextSteps: {
-    overline: "Next steps",
+    overline: "Proximos passos",
     title: "Choose where to go next",
-    description: "Keep exploring payroll—from pricing to calculators and customer-facing documentation.",
+    description: "Keep exploring folha—from pricing to calculators and customer-facing documentation.",
     links: [
       {
-        label: "Compare pricing plans",
-        description: "See how payroll, scheduling, and marketing features line up.",
+        label: "Comparar planos de preco",
+        description: "Veja como folha, agendamento, and marketing recursos line up.",
         href: "/pricing",
-        cta: "See pricing",
+        cta: "Ver precos",
       },
       {
-        label: "Start a Canadian payroll run",
-        description: "Review CPP, EI, and provincial coverage in detail.",
+        label: "Iniciar ciclo de folha canadense",
+        description: "Review CPP, EI, and provincial cobertura in detail.",
         href: "/payroll/canada",
-        cta: "Canada payroll",
+        cta: "Canada folha",
       },
       {
-        label: "Open the docs",
-        description: "Follow the payroll preview flow step by step in the documentation.",
+        label: "Abrir documentacao",
+        description: "Follow the folha pre-visualizacao flow passo by passo in the documentation.",
         href: "/docs#payroll",
-        cta: "Read docs",
+        cta: "Ler docs",
       },
       {
-        label: "Download ROE/T4/W-2 templates",
-        description: "Jump straight into the payroll tools and final form exports.",
+        label: "Baixar modelos ROE/T4/W-2",
+        description: "Jump straight into the folha tools and final form exportacoes.",
         href: "/payroll/tools/t4",
-        cta: "See tools",
+        cta: "Ver ferramentas",
       },
     ],
   },
@@ -324,22 +324,22 @@ const overviewConfig = {
 
 const canadaConfig = {
   meta: {
-    title: "Canada Payroll Calculator & Software (CPP, EI, BPA) | Schedulaa",
+    title: "Canada Folha Calculator & Software (CPP, EI, BPA) | Schedulaa",
     description:
-      "Run Canadian payroll with CPP, EI, federal and provincial tax, vacation pay, bonuses, tips, and employer matches. Finalize payslips as PDF, CSV, or Excel and email employees automatically.",
+      "Run Canadian folha with CPP, EI, federal and provincial tax, vacation pay, bonuses, tips, and employer matches. Finalize payslips as PDF, CSV, or Excel and email funcionarios automatically.",
     canonical: `${BASE_URL}/payroll/canada`,
     og: {
-      title: "Canada Payroll Calculator for Small Businesses | Schedulaa",
+      title: "Canada Folha Calculator for Small Businesses | Schedulaa",
       description:
-        "Preview and finalize Canadian payroll with CPP, EI, provincial tax, bonuses, and tips. Export payslips, email staff, and provide a self-serve portal.",
+        "Preview and finalizar Canadian folha with CPP, EI, provincial tax, bonuses, and tips. Export payslips, email staff, and provide a autoatendimento portal.",
       image: `${BASE_URL}/images/payroll-canada-preview.png`,
       url: `${BASE_URL}/payroll/canada`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Canada Payroll Calculator for Small Businesses | Schedulaa",
+      title: "Canada Folha Calculator for Small Businesses | Schedulaa",
       description:
-        "Automate Canadian payroll with CPP, EI, provincial tax, vacation pay, and employee portals in one platform.",
+        "Automate Canadian folha with CPP, EI, provincial tax, vacation pay, and funcionario portals in one platform.",
       image: `${BASE_URL}/images/payroll-canada-preview.png`,
     },
   },
@@ -347,7 +347,7 @@ const canadaConfig = {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa Canada Payroll",
+      name: "Schedulaa Canada Folha",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       offers: {
@@ -359,7 +359,7 @@ const canadaConfig = {
         "CPP and EI calculations",
         "Federal and provincial income tax deductions",
         "Vacation pay automation",
-        "Bonuses, tips, and commissions support",
+        "Bonuses, tips, and commissions suporte",
         "Payslip PDF, CSV, and Excel export",
         "Employee self-service payslip portal",
       ],
@@ -370,67 +370,67 @@ const canadaConfig = {
         url: BASE_URL,
       },
     },
-    payrollBreadcrumb("Canada payroll", `${BASE_URL}/payroll/canada`),
+    payrollBreadcrumb("Canada folha", `${BASE_URL}/payroll/canada`),
   ],
   hero: {
     badge: "CPP, EI, BPA tracking",
-    title: "Canada Payroll Calculator for Small Businesses",
+    title: "Canada Folha Calculator for Small Businesses",
     subtitle:
       "Calculate gross-to-net with CPP, EI, federal and provincial tax, vacation pay, bonuses, tips, and employer matches in one dashboard.",
     bullets: [
-      "Preview deductions line by line before finalizing payroll.",
+      "Preview deductions line by line before finalizing folha.",
       "Automate BPA pro-rating, CPP/EI ceilings, and YTD breakouts.",
-      "Export payslips as PDF, CSV, or Excel and email employees instantly.",
+      "Export payslips as PDF, CSV, or Excel and email funcionarios instantly.",
     ],
-    primaryCta: { label: "Run Canadian payroll", href: REGISTER_URL },
+    primaryCta: { label: "Run Canadian folha", href: REGISTER_URL },
     secondaryCta: { label: "Book a walkthrough", href: CONTACT_URL },
   },
-  featuresHeading: "Features",
-  featuresTitle: "Everything Canadian payroll teams expect",
-  featuresIntro:
+  recursosHeading: "Recursos",
+  recursosTitle: "Everything Canadian folha equipes expect",
+  recursosIntro:
     "Schedulaa aligns with CRA guidance for CPP, EI, and federal/provincial tax brackets so you can trust every pay cycle.",
-  features: [
+  recursos: [
     {
       icon: "compliance",
-      label: "Compliance",
+      label: "Conformidade",
       title: "CPP, EI, and tax automation",
       description:
-        "Calculate CPP, EI, and federal/provincial income tax with BPA pro-rating per employee. YTD ceilings and clawbacks are tracked automatically.",
+        "Calculate CPP, EI, and federal/provincial income tax with BPA pro-rating per funcionario. YTD ceilings and clawbacks are tracked automatically.",
     },
     {
       icon: "document",
       label: "Payslips",
       title: "Finalize and export slips",
       description:
-        "Finalize payroll and export slips as PDF, CSV, or Excel. Email documents to each employee directly from the pay run.",
+        "Finalize folha and export slips as PDF, CSV, or Excel. Email documents to each funcionario directly from the pay run.",
       link: "/payslips",
-      linkLabel: "See the payslip portal",
+      linkLabel: "Ver o payslip portal",
     },
     {
       icon: "timeline",
-      label: "Workflow",
-      title: "Preview, adjust, finalize",
+      label: "Fluxo de trabalho",
+      title: "Preview, adjust, finalizar",
       description:
-        "Preview every deduction, edit overtime, bonuses, tips, commissions, and employer contributions, then finalize once amounts look right.",
+        "Preview every deduction, edit overtime, bonuses, tips, commissions, and employer contributions, then finalizar once amounts look right.",
     },
   ],
   highlights: [
     {
-      overline: "Preview and finalize",
-      title: "Line-item preview with BPA and YTD context",
+      overline: "Preview and finalizar",
+      title: "Line-item pre-visualizacao with BPA and YTD context",
       body:
-        "See how federal, provincial, CPP, and EI deductions apply before committing a pay run. Every employee view includes BPA usage, vacation pay, and net pay totals.",
+        "Veja como federal, provincial, CPP, and EI deductions apply before committing a pay run. Every funcionario view includes BPA usage, vacation pay, and net pay totals.",
       points: [
         "Override hours, rates, and taxable benefits on the fly.",
-        "Break out employer contributions alongside employee deductions.",
+        "Break out employer contributions alongside funcionario deductions.",
         "Keep an audit trail of each recalculation before finalizing.",
       ],
       links: [
-        { label: "View payroll workflow", href: "/payroll/usa" },
+        { label: "View folha workflow", href: "/payroll/usa" },
       ],
       image: {
         src: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa payroll preview showing Canadian deductions",
+        alt: "Schedulaa folha pre-visualizacao showing Canadian deductions",
       },
     },
     {
@@ -439,7 +439,7 @@ const canadaConfig = {
       body:
         "Finalize a run, export slips as PDF, CSV, or Excel, and send them to staff instantly. Need year-end filings? Jump straight into T4 or ROE generation with prefilled data.",
       points: [
-        "One-click email of finalized PDF slips to each employee.",
+        "One-click email of finalized PDF slips to each funcionario.",
         "Batch downloads for accounting and year-end review.",
       ],
       links: [
@@ -448,19 +448,19 @@ const canadaConfig = {
       ],
       image: {
         src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa payroll export options",
+        alt: "Schedulaa folha export options",
       },
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "Run a Canadian pay cycle in three steps",
+  stepsTitle: "Run a Canadian pay cycle in three passos",
   stepsIntro:
-    "Schedulaa connects scheduling, timesheets, and payroll data so finance teams can close each pay period quickly.",
+    "Schedulaa connects agendamento, timesheets, and folha data so finance equipes can close each pay period quickly.",
   steps: [
     {
       title: "Import hours or enter earnings",
       description:
-        "Bring in hours from scheduling or upload CSV data. Add bonuses, tips, commissions, and employer contributions before calculating.",
+        "Bring in hours from agendamento or upload CSV data. Add bonuses, tips, commissions, and employer contributions before calculating.",
     },
     {
       title: "Preview deductions and adjust",
@@ -470,7 +470,7 @@ const canadaConfig = {
     {
       title: "Finalize and deliver payslips",
       description:
-        "Lock the pay run, email PDF slips to employees, download CSV or Excel exports, and queue T4/ROE filings directly.",
+        "Lock the pay run, email PDF slips to funcionarios, download CSV or Excel exportacoes, and queue T4/ROE filings directly.",
     },
   ],
   callouts: [
@@ -479,65 +479,65 @@ const canadaConfig = {
       label: "Employee access",
       title: "Self-serve payslip portal",
       body:
-        "Employees can sign in to Schedulaa and download their finalized PDF payslips any time. Filters make it easy to locate past periods without asking payroll staff.",
-      links: [{ label: "See the portal", href: "/payslips" }],
+        "Employees can sign in to Schedulaa and download their finalized PDF payslips any time. Filters make it easy to locate past periods without asking folha staff.",
+      links: [{ label: "Ver o portal", href: "/payslips" }],
     },
     {
       icon: "document",
       label: "Year-end filings",
       title: "T4 and ROE tooling included",
       body:
-        "Generate CRA-compliant T4 slips and XML files, plus Records of Employment with PDF and XML exports. Prefilled data comes straight from the latest pay runs.",
+        "Generate CRA-compliant T4 slips and XML files, plus Records of Employment with PDF and XML exportacoes. Prefilled data comes straight from the latest pay runs.",
       links: [
-        { label: "Open the T4 generator", href: "/payroll/tools/t4" },
-        { label: "Open the ROE generator", href: "/payroll/tools/roe" },
+        { label: "Abrir o T4 gerador", href: "/payroll/tools/t4" },
+        { label: "Abrir o ROE gerador", href: "/payroll/tools/roe" },
       ],
     },
   ],
-  faqHeading: "FAQ",
-  faqTitle: "Canadian payroll questions",
-  faqIntro: "Honest answers based on what Schedulaa already powers for Canadian teams.",
+  faqHeading: "Perguntas frequentes",
+  faqTitle: "Canadian folha perguntas",
+  faqIntro: "Honest answers based on what Schedulaa already powers for Canadian equipes.",
   faq: [
     {
-      question: "Do you support Québec payroll?",
+      question: "Do you suporte Québec folha?",
       answer:
-        "Schedulaa's standard payroll flow covers every province except Québec. We maintain a dedicated Québec path to handle QPP and RQAP; contact us so we can review your setup and enable the correct configuration.",
+        "Schedulaa's standard folha flow covers every province except Québec. We maintain a dedicated Québec path to handle QPP and RQAP; contact us so we can review your setup and enable the correct configuration.",
     },
     {
-      question: "Can employees download their own payslips?",
+      question: "Can funcionarios download their own payslips?",
       answer:
-        "Yes. Once you finalize payroll, Schedulaa can email PDF slips to employees and surfaces the same documents inside the Employee Payslip Portal for self-serve downloads.",
+        "Yes. Once you finalizar folha, Schedulaa can email PDF slips to funcionarios and surfaces the same documents inside the Employee Payslip Portal for autoatendimento downloads.",
     },
     {
-      question: "How are CPP and EI ceilings handled?",
+      question: "Como are CPP and EI ceilings handled?",
       answer:
-        "Schedulaa tracks CPP and EI year-to-date totals per employee. When annual maximums are reached, deductions automatically stop and employer portions adjust accordingly.",
+        "Schedulaa tracks CPP and EI year-to-date totals per funcionario. When annual maximums are reached, deductions automatically stop and employer portions adjust accordingly.",
     },
   ],
   cta: sharedCta,
   secondaryLinks: sharedSecondaryLinks,
   notice:
-    "Note: Local provincial programs such as health premiums or workers' compensation remittances remain manager-configured outside the core payroll engine.",
+    "Note: Local provincial programs such as health premiums or workers' compensation remittances remain gerente-configured outside the core folha engine.",
 };
 
 const usaConfig = {
   meta: {
-    title: "USA Payroll Calculator (Federal, FICA/Medicare, Supported State Finalize) | Schedulaa",
+    title: "USA Folha Calculator (Federal, FICA/Medicare, Supported State Finalize) | Schedulaa",
     description:
-      "Calculate US payroll with federal tax, FICA, Medicare, and employer FUTA/SUTA reporting. Full finalize is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; other states run in raw preview mode.",
+      "Calculate US folha with federal tax, FICA, Medicare, and employer FUTA/SUTA reporting. Full finalizar is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; other states run in raw pre-visualizacao mode.",
     canonical: `${BASE_URL}/payroll/usa`,
     og: {
-      title: "USA Payroll Calculator for Teams with Multi-State Workers | Schedulaa",
+      title: "USA Folha Calculator for Teams with Multi-State Workers | Schedulaa",
       description:
-        "Preview US payroll in all states with federal tax, FICA, and Medicare. Finalize is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH.",
+        "Preview US folha in all states with federal tax, FICA, and Medicare. Finalize is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH.",
       image: `${BASE_URL}/images/payroll-usa-preview.png`,
       url: `${BASE_URL}/payroll/usa`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "USA Payroll Calculator for Teams with Multi-State Workers | Schedulaa",
+      title: "USA Folha Calculator for Teams with Multi-State Workers | Schedulaa",
       description:
-        "Schedulaa automates US payroll calculations, payslip exports, and employee self-serve downloads in one workflow.",
+        "Schedulaa automates US folha calculations, payslip exportacoes, and funcionario autoatendimento downloads in one workflow.",
       image: `${BASE_URL}/images/payroll-usa-preview.png`,
     },
   },
@@ -545,7 +545,7 @@ const usaConfig = {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa USA Payroll",
+      name: "Schedulaa USA Folha",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       offers: {
@@ -555,11 +555,11 @@ const usaConfig = {
       },
       featureList: [
         "Federal income tax withholding",
-        "Supported-state full finalize (AK, FL, NV, SD, TX, WA, WY, TN, NH)",
-        "Raw preview mode for unsupported states",
+        "Supported-state full finalizar (AK, FL, NV, SD, TX, WA, WY, TN, NH)",
+        "Raw pre-visualizacao mode for unsupported states",
         "FICA and Medicare deductions",
         "Employer FUTA/SUTA reporting (not deducted from net pay)",
-        "Bonuses, tips, and commissions support",
+        "Bonuses, tips, and commissions suporte",
         "Payslip PDF, CSV, and Excel export",
         "Employee self-service portal",
       ],
@@ -570,119 +570,119 @@ const usaConfig = {
         url: BASE_URL,
       },
     },
-    payrollBreadcrumb("USA payroll", `${BASE_URL}/payroll/usa`),
+    payrollBreadcrumb("USA folha", `${BASE_URL}/payroll/usa`),
   ],
   hero: {
     badge: "Federal + FICA + employer unemployment",
-    title: "USA Payroll Calculator with FICA and Medicare built in",
+    title: "USA Folha Calculator with FICA and Medicare built in",
     subtitle:
-      "Handle federal withholding, FICA, Medicare, bonuses, tips, commissions, and employer taxes in the same pay run. Full finalize is available in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states stay in raw preview mode.",
+      "Handle federal withholding, FICA, Medicare, bonuses, tips, commissions, and employer taxes in the same pay run. Full finalizar is available in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states stay in raw pre-visualizacao mode.",
     bullets: [
-      "Preview payroll in all U.S. states before finalize.",
-      "Track employer FUTA/SUTA alongside employee withholding without reducing employee net pay.",
-      "Unsupported states return raw mode warnings and finalize is blocked.",
+      "Preview folha in all U.S. states before finalizar.",
+      "Track employer FUTA/SUTA alongside funcionario withholding without reducing funcionario net pay.",
+      "Unsupported states return raw mode warnings and finalizar is blocked.",
       "Email PDF payslips and keep a downloadable archive for staff.",
     ],
-    primaryCta: { label: "Run US payroll", href: REGISTER_URL },
-    secondaryCta: { label: "See a live demo", href: CONTACT_URL },
+    primaryCta: { label: "Run US folha", href: REGISTER_URL },
+    secondaryCta: { label: "Ver demo ao vivo", href: CONTACT_URL },
   },
-  featuresHeading: "Features",
-  featuresTitle: "US payroll covered from preview to payslip",
-  featuresIntro:
-    "Schedulaa keeps the deductions accurate while giving finance teams control over overrides and exceptions.",
-  features: [
+  recursosHeading: "Recursos",
+  recursosTitle: "US folha covered from pre-visualizacao to payslip",
+  recursosIntro:
+    "Schedulaa keeps the deductions accurate while giving finance equipes control over overrides and exceptions.",
+  recursos: [
     {
       icon: "compliance",
       label: "Tax engine",
-      title: "Federal withholding + supported-state finalize",
+      title: "Federal withholding + supported-state finalizar",
       description:
-        "Automatically apply federal income tax and FICA/Medicare by employee work location. Full finalize is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states remain available in raw preview with explicit warnings. Employer FUTA/SUTA is reported separately from employee deductions.",
+        "Automatically apply federal income tax and FICA/Medicare by funcionario work location. Full finalizar is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states remain available in raw pre-visualizacao with explicit warnings. Employer FUTA/SUTA is reported separately from funcionario deductions.",
     },
     {
       icon: "retirement",
       label: "Enterprise Retirement (U.S. 401(k))",
       title: "401(k) and Roth 401(k) with wage bases and caps",
       description:
-        "Calculate 401(k) and Roth 401(k) deferrals with annual caps, employer match limits, and applicable wage bases. Post-finalization exports surface W-2 Box 12D codes so filings stay aligned with payroll data.",
+        "Calculate 401(k) and Roth 401(k) deferrals with annual caps, employer match limites, and applicable wage bases. Post-finalization exportacoes surface W-2 Box 12D codes so filings stay aligned with folha data.",
     },
     {
       icon: "timeline",
-      label: "Workflow",
+      label: "Fluxo de trabalho",
       title: "Multi-state previews",
       description:
-        "Preview each employee's deductions, edit wages and taxable benefits, rerun in seconds, and keep payroll audit/overwrite history when a period is re-finalized. Unsupported states can preview in raw mode but cannot finalize.",
+        "Preview each funcionario's deductions, edit wages and taxable benefits, rerun in seconds, and keep folha audit/overwrite history when a period is re-finalized. Unsupported states can pre-visualizacao in raw mode but cannot finalizar.",
     },
     {
       icon: "document",
       label: "Exports",
       title: "Payslips and W-2 outputs",
       description:
-        "Finalize payroll, export PDF, CSV, or Excel for accounting, and generate W-2 PDF and EFW2 files at year-end with prefilled data.",
+        "Finalize folha, export PDF, CSV, or Excel for accounting, and generate W-2 PDF and EFW2 files at year-end with prefilled data.",
       link: "/payroll/tools/w2",
-      linkLabel: "Open the W-2 generator",
+      linkLabel: "Abrir o W-2 gerador",
     },
   ],
   highlights: [
     {
       overline: "Preview",
-      title: "Transparent deductions before you finalize",
+      title: "Transparent deductions before you finalizar",
       body:
-        "See how each tax and contribution will hit net pay, including federal brackets, FICA, and Medicare. Employer FUTA/SUTA is shown for reporting and does not reduce employee net pay. Override earnings and recalc on demand.",
+        "Veja como each tax and contribution will hit net pay, including federal brackets, FICA, and Medicare. Employer FUTA/SUTA is shown for reporting and does not reduce funcionario net pay. Override earnings and recalc on demand.",
       points: [
-        "Highlight overtime, tips, bonuses, and commissions for every employee.",
-        "Record employer 401(k) matches and insurance premiums next to payroll taxes.",
+        "Highlight overtime, tips, bonuses, and commissions for every funcionario.",
+        "Record employer 401(k) matches and insurance premiums next to folha taxes.",
       ],
       image: {
         src: "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa payroll preview showing US deductions",
+        alt: "Schedulaa folha pre-visualizacao showing US deductions",
       },
     },
     {
       overline: "Delivery",
-      title: "Finalize, export, and notify employees",
+      title: "Finalize, export, and notify funcionarios",
       body:
-        "Once numbers look correct, finalize the run, email payslips, and archive exports for finance. Employees can log in to download past slips any time.",
+        "Once numbers look correct, finalizar the run, email payslips, and archive exportacoes for finance. Employees can log in to download past slips any time.",
       points: [
-        "Generated slips stay available in the employee portal.",
-        "Accounting teams can download CSV or Excel for journal entries.",
+        "Generated slips stay available in the funcionario portal.",
+        "Accounting equipes can download CSV or Excel for journal entries.",
       ],
       links: [
-        { label: "See employee portal", href: "/payslips" },
+        { label: "Ver portal do funcionario", href: "/payslips" },
       ],
       image: {
         src: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
-        alt: "Laptop with payroll export confirmation",
+        alt: "Laptop with folha export confirmation",
       },
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "How teams finish a US pay cycle in Schedulaa",
+  stepsTitle: "Como equipes finish a US pay cycle in Schedulaa",
   stepsIntro:
-    "Bring in hours, preview withholding, and finalize where supported without leaving the platform.",
+    "Bring in hours, pre-visualizacao withholding, and finalizar where supported without leaving the platform.",
   steps: [
     {
       title: "Import hours or salaries",
       description:
-        "Pull data from scheduling or upload spreadsheets. Enter bonuses, tips, commissions, and employer contributions.",
+        "Pull data from agendamento or upload spreadsheets. Enter bonuses, tips, commissions, and employer contributions.",
     },
     {
       title: "Preview deductions per jurisdiction",
       description:
-        "Review federal withholding, FICA, Medicare, and employer FUTA/SUTA. Unsupported states run in raw preview mode with warnings. Adjust wages or overrides and rerun the preview.",
+        "Review federal withholding, FICA, Medicare, and employer FUTA/SUTA. Unsupported states run in raw pre-visualizacao mode with warnings. Adjust wages or overrides and rerun the pre-visualizacao.",
     },
     {
       title: "Finalize and export",
       description:
-        "Finalize payroll in AK, FL, NV, SD, TX, WA, WY, TN, and NH; email PDF payslips, download CSV/Excel, and prepare W-2s at year end.",
+        "Finalize folha in AK, FL, NV, SD, TX, WA, WY, TN, and NH; email PDF payslips, download CSV/Excel, and prepare W-2s at year end.",
     },
   ],
   callouts: [
     {
       icon: "compliance",
       label: "Limitations",
-      title: "State support and local taxes",
+      title: "State suporte and local taxes",
       body:
-        "Full U.S. finalize is currently supported only in AK, FL, NV, SD, TX, WA, WY, TN, and NH. Other states remain preview-only (raw mode). Local/city taxes and special programs (for example WA PFML / WA Cares) are not automated and should be handled externally.",
+        "Full U.S. finalizar is currently supported only in AK, FL, NV, SD, TX, WA, WY, TN, and NH. Other states remain pre-visualizacao-only (raw mode). Local/city taxes and special programs (for example WA PFML / WA Cares) are not automated and should be handled externally.",
     },
     {
       icon: "document",
@@ -693,8 +693,8 @@ const usaConfig = {
       links: [{ label: "Generate W-2s", href: "/payroll/tools/w2" }],
     },
   ],
-  faqHeading: "FAQ",
-  faqTitle: "US payroll questions",
+  faqHeading: "Perguntas frequentes",
+  faqTitle: "US folha perguntas",
   faqIntro: "Answers based on the capabilities shipping in Schedulaa today.",
   faq: [
     {
@@ -703,27 +703,27 @@ const usaConfig = {
         "Not yet. Schedulaa calculates federal withholding plus FICA/Medicare, and reports employer FUTA/SUTA. Local and city levies should be tracked separately and uploaded if needed.",
     },
     {
-      question: "Can I run multi-state payroll?",
+      question: "Can I run multi-state folha?",
       answer:
-        "Yes for preview. You can preview payroll in all U.S. states. Finalize is currently supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states remain in raw preview mode.",
+        "Yes for pre-visualizacao. You can pre-visualizacao folha in all U.S. states. Finalize is currently supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states remain in raw pre-visualizacao mode.",
     },
     {
-      question: "How do employees get their payslips?",
+      question: "Como do funcionarios get their payslips?",
       answer:
-        "Once you finalize payroll you can email PDF payslips directly to recipients. The same documents appear in the Employee Payslip Portal for self-serve downloads.",
+        "Once you finalizar folha you can email PDF payslips directly to recipients. The same documents appear in the Employee Payslip Portal for autoatendimento downloads.",
     },
   ],
   cta: sharedCta,
   secondaryLinks: sharedSecondaryLinks,
   notice:
-    "* Full U.S. finalize: AK, FL, NV, SD, TX, WA, WY, TN, NH. ** Other states: raw preview only (finalize blocked). *** Employer FUTA/SUTA is reporting-only (not deducted from employee net pay). **** Local/city taxes and WA PFML / WA Cares are handled externally.",
+    "* Full U.S. finalizar: AK, FL, NV, SD, TX, WA, WY, TN, NH. ** Other states: raw pre-visualizacao only (finalizar blocked). *** Employer FUTA/SUTA is reporting-only (not deducted from funcionario net pay). **** Local/city taxes and WA PFML / WA Cares are handled externally.",
 };
 
 const roeConfig = {
   meta: {
     title: "ROE Generator (Record of Employment) – Canada | Schedulaa",
     description:
-      "Generate Canadian ROEs with prefilled insurable hours and earnings, approval workflow, and PDF/XML exports ready for Service Canada.",
+      "Generate Canadian ROEs with prefilled insurable hours and earnings, approval workflow, and PDF/XML exportacoes ready for Service Canada.",
     canonical: `${BASE_URL}/payroll/tools/roe`,
     og: {
       title: "ROE Generator with PDF & XML Export | Schedulaa",
@@ -736,7 +736,7 @@ const roeConfig = {
       card: "summary_large_image",
       title: "ROE Generator with PDF & XML Export | Schedulaa",
       description:
-        "Schedulaa automates ROEs with prefilled insurable earnings, approvals, and CRA-compliant PDF/XML exports.",
+        "Schedulaa automates ROEs with prefilled insurable earnings, approvals, and CRA-compliant PDF/XML exportacoes.",
       image: `${BASE_URL}/images/payroll-roe-preview.png`,
     },
   },
@@ -749,14 +749,14 @@ const roeConfig = {
       operatingSystem: "Web",
       offers: { "@type": "Offer", price: "0.00", priceCurrency: "CAD" },
       featureList: [
-        "Prefill insurable hours and earnings from payroll",
+        "Prefill insurable hours and earnings from folha",
         "Approval workflow with audit trail",
         "PDF and XML export for Service Canada",
-        "Department and employee filters",
+        "Department and funcionario filters",
       ],
       url: `${BASE_URL}/payroll/tools/roe`,
     },
-    payrollBreadcrumb("ROE generator", `${BASE_URL}/payroll/tools/roe`),
+    payrollBreadcrumb("ROE gerador", `${BASE_URL}/payroll/tools/roe`),
   ],
   hero: {
     badge: "Record of Employment",
@@ -764,27 +764,27 @@ const roeConfig = {
     subtitle:
       "Prefill insurable hours and earnings from your latest pay runs, review in-app, and export CRA-compliant PDF and XML files.",
     bullets: [
-      "Prefill ROEs using finalized payroll data.",
+      "Prefill ROEs using finalized folha data.",
       "Route submissions through approve or reject workflow.",
       "Export PDF or XML packages for Service Canada.",
     ],
     primaryCta: { label: "Generate an ROE", href: REGISTER_URL },
     secondaryCta: { label: "Talk to compliance", href: CONTACT_URL },
   },
-  featuresHeading: "Capabilities",
-  featuresTitle: "Everything needed for compliant ROEs",
-  featuresIntro: "Schedulaa keeps your ROE workflow fast, auditable, and ready for Service Canada.",
-  features: [
+  recursosHeading: "Capabilities",
+  recursosTitle: "Everything needed for compliant ROEs",
+  recursosIntro: "Schedulaa keeps your ROE workflow fast, auditable, and ready for Service Canada.",
+  recursos: [
     {
       icon: "document",
       label: "Prefill",
-      title: "Auto-complete with payroll data",
+      title: "Auto-complete with folha data",
       description:
-        "Pull insurable hours and earnings from the latest paystub for each employee, including vacation pay and separation pay.",
+        "Pull insurable hours and earnings from the latest paystub for each funcionario, including vacation pay and separation pay.",
     },
     {
       icon: "timeline",
-      label: "Workflow",
+      label: "Fluxo de trabalho",
       title: "Approve or reject submissions",
       description:
         "Route drafted ROEs through approvals. Capture comments and maintain an audit trail before exporting.",
@@ -802,20 +802,20 @@ const roeConfig = {
       overline: "Audit trail",
       title: "Track every change and approval",
       body:
-        "Schedulaa keeps a detailed log for each ROE. See who prepared, approved, or rejected the form, with timestamps for compliance reviews.",
+        "A Schedulaa mantem um registro detalhado de cada ROE. Mostra quem preparou, aprovou ou rejeitou o formulario, com carimbos de data para revisoes de conformidade.",
       image: {
         src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
         alt: "ROE approval audit trail",
       },
     },
   ],
-  stepsHeading: "Workflow",
-  stepsTitle: "How the ROE generator works",
+  stepsHeading: "Fluxo de trabalho",
+  stepsTitle: "Como the ROE gerador works",
   steps: [
     {
-      title: "Create from payroll history",
+      title: "Create from folha history",
       description:
-        "Choose an employee and pull their latest pay runs to prefill insurable hours, earnings, and separation details.",
+        "Choose an funcionario and pull their latest pay runs to prefill insurable hours, earnings, and separation details.",
     },
     {
       title: "Review and approve",
@@ -825,7 +825,7 @@ const roeConfig = {
     {
       title: "Export and submit",
       description:
-        "Download PDF for records or XML for Service Canada upload. Batch exports help you keep filings organized.",
+        "Download PDF for records or XML for Service Canada upload. Batch exportacoes help you keep filings organized.",
     },
   ],
   callouts: [
@@ -834,12 +834,12 @@ const roeConfig = {
       label: "Related tools",
       title: "Need T4 slips too?",
       body:
-        "Schedulaa links ROE data to year-end filings. Generate T4s from the same payroll data set and stay compliant without duplicating work.",
+        "Schedulaa links ROE data to year-end filings. Generate T4s from the same folha data set and stay compliant without duplicating work.",
       links: [{ label: "Generate T4s", href: "/payroll/tools/t4" }],
     },
   ],
-  faqHeading: "FAQ",
-  faqTitle: "ROE questions",
+  faqHeading: "Perguntas frequentes",
+  faqTitle: "ROE perguntas",
   faq: [
     {
       question: "Which fields are prefilled automatically?",
@@ -849,7 +849,7 @@ const roeConfig = {
     {
       question: "Can I export XML for bulk upload?",
       answer:
-        "Yes. The generator creates XML files ready for upload to the Service Canada portal, alongside PDF copies for internal records.",
+        "Yes. The gerador creates XML files ready for upload to the Service Canada portal, alongside PDF copies for internal records.",
     },
   ],
   cta: sharedCta,
@@ -860,7 +860,7 @@ const t4Config = {
   meta: {
     title: "T4 Generator – Canada Year-End Slips (PDF & XML) | Schedulaa",
     description:
-      "Generate CRA-compliant T4 slips with PDF, XML, and ZIP packages. Prefill boxes from payroll runs and batch deliver to employees.",
+      "Generate CRA-compliant T4 slips with PDF, XML, and ZIP packages. Prefill boxes from folha runs and batch deliver to funcionarios.",
     canonical: `${BASE_URL}/payroll/tools/t4`,
     og: {
       title: "T4 Generator with CRA XML Export | Schedulaa",
@@ -873,7 +873,7 @@ const t4Config = {
       card: "summary_large_image",
       title: "T4 Generator with CRA XML Export | Schedulaa",
       description:
-        "Schedulaa fills T4 boxes from payroll data, renders PDF, builds CRA XML, and bundles slips in one workflow.",
+        "Schedulaa fills T4 boxes from folha data, renders PDF, builds CRA XML, and bundles slips in one workflow.",
       image: `${BASE_URL}/images/payroll-t4-preview.png`,
     },
   },
@@ -886,7 +886,7 @@ const t4Config = {
       operatingSystem: "Web",
       offers: { "@type": "Offer", price: "0.00", priceCurrency: "CAD" },
       featureList: [
-        "Prefill CRA boxes from payroll",
+        "Prefill CRA boxes from folha",
         "Render PDF copies",
         "Generate CRA XML",
         "Batch ZIP download",
@@ -894,65 +894,65 @@ const t4Config = {
       ],
       url: `${BASE_URL}/payroll/tools/t4`,
     },
-    payrollBreadcrumb("T4 generator", `${BASE_URL}/payroll/tools/t4`),
+    payrollBreadcrumb("T4 gerador", `${BASE_URL}/payroll/tools/t4`),
   ],
   hero: {
-    badge: "Year-end payroll",
-    title: "T4 Generator with PDF and CRA XML exports",
+    badge: "Year-end folha",
+    title: "T4 Generator with PDF and CRA XML exportacoes",
     subtitle:
-      "Prefill CRA boxes from your Schedulaa payroll history, render PDF slips for employees, and export CRA XML with one click.",
+      "Prefill CRA boxes from your Schedulaa folha history, render PDF slips for funcionarios, and export CRA XML with one click.",
     bullets: [
-      "Prefill T4 boxes from finalized payroll data.",
-      "Render employee-ready PDF slips.",
+      "Prefill T4 boxes from finalized folha data.",
+      "Render funcionario-ready PDF slips.",
       "Export CRA XML and batch ZIP for filing.",
     ],
     primaryCta: { label: "Generate T4 slips", href: REGISTER_URL },
     secondaryCta: { label: "Get help with filings", href: CONTACT_URL },
   },
-  featuresHeading: "Capabilities",
-  featuresTitle: "Year-end slips without manual data entry",
-  features: [
+  recursosHeading: "Capabilities",
+  recursosTitle: "Year-end slips without manual data entry",
+  recursos: [
     {
       icon: "document",
       label: "Prefill",
       title: "Auto-populated CRA boxes",
       description:
-        "Schedulaa maps payroll earnings, deductions, and taxable benefits into the correct CRA boxes so you spend time reviewing, not retyping.",
+        "Schedulaa maps folha earnings, deductions, and taxable benefits into the correct CRA boxes so you spend time reviewing, not retyping.",
     },
     {
       icon: "compliance",
-      label: "Compliance",
+      label: "Conformidade",
       title: "XML ready for CRA upload",
       description:
-        "Produce CRA XML files that align with the latest specifications. Keep archives organized with batch ZIP exports.",
+        "Produce CRA XML files that align with the latest specifications. Keep archives organized with batch ZIP exportacoes.",
     },
     {
       icon: "timeline",
-      label: "Workflow",
+      label: "Fluxo de trabalho",
       title: "Batch delivery",
       description:
-        "Bundle PDF, XML, and CSV summaries in a single ZIP file for safe storage or delivery to your compliance team.",
+        "Bundle PDF, XML, and CSV summaries in a single ZIP file for safe storage or delivery to your compliance equipe.",
     },
   ],
   highlights: [
     {
       overline: "Prefill accuracy",
-      title: "CRA boxes filled straight from payroll",
+      title: "CRA boxes filled straight from folha",
       body:
-        "Every T4 uses the same data you finalized in payroll. Review employment income, CPP/EI, taxable benefits, and pension adjustments before exporting.",
+        "Every T4 uses the same data you finalized in folha. Review employment income, CPP/EI, taxable benefits, and pension adjustments before exporting.",
       image: {
         src: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
-        alt: "T4 generator showing CRA boxes",
+        alt: "T4 gerador showing CRA boxes",
       },
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "From payroll history to T4 packages",
+  stepsTitle: "From folha history to T4 packages",
   steps: [
     {
       title: "Select the tax year",
       description:
-        "Choose the year you need slips for and let Schedulaa fetch the payroll history.",
+        "Choose the year you need slips for and let Schedulaa fetch the folha history.",
     },
     {
       title: "Review prefilled data",
@@ -962,28 +962,28 @@ const t4Config = {
     {
       title: "Export PDF, XML, ZIP",
       description:
-        "Download employee PDFs, CRA XML, and a ZIP archive to share with stakeholders or upload to the CRA portal.",
+        "Download funcionario PDFs, CRA XML, and a ZIP archive to share with stakeholders or upload to the CRA portal.",
     },
   ],
   callouts: [
     {
       icon: "document",
       label: "Connected tools",
-      title: "ROE generator included",
-      body: "Need Records of Employment as well? Switch to the ROE generator without leaving your workflow.",
-      links: [{ label: "Open ROE generator", href: "/payroll/tools/roe" }],
+      title: "ROE gerador included",
+      body: "Need Records of Employment as well? Switch to the ROE gerador without leaving your workflow.",
+      links: [{ label: "Abrir ROE gerador", href: "/payroll/tools/roe" }],
     },
   ],
-  faqHeading: "FAQ",
-  faqTitle: "T4 generator questions",
+  faqHeading: "Perguntas frequentes",
+  faqTitle: "T4 gerador perguntas",
   faq: [
     {
       question: "Do you generate CRA XML automatically?",
       answer:
-        "Yes. The T4 generator produces XML files ready for CRA submission along with PDF copies for employees.",
+        "Yes. The T4 gerador produces XML files ready for CRA submission along with PDF copies for funcionarios.",
     },
     {
-      question: "Can employees receive their T4 online?",
+      question: "Can funcionarios receive their T4 online?",
       answer:
         "After you generate T4 slips, you can distribute the PDF copies through the payslip portal or your preferred delivery channel.",
     },
@@ -996,12 +996,12 @@ const w2Config = {
   meta: {
     title: "W-2 Generator – US Year-End (IRS Fillable PDF & EFW2) | Schedulaa",
     description:
-      "Generate IRS W-2 forms with fillable multi-copy PDFs, flattened employee copies, and EFW2 text files ready for SSA submission.",
+      "Generate IRS W-2 forms with fillable multi-copy PDFs, flattened funcionario copies, and EFW2 text files ready for SSA submission.",
     canonical: `${BASE_URL}/payroll/tools/w2`,
     og: {
       title: "W-2 Generator with IRS PDF and EFW2 Export | Schedulaa",
       description:
-        "Prefill W-2 boxes from Schedulaa payroll data, render six-copy PDFs, flatten for e-delivery, and export EFW2 files.",
+        "Prefill W-2 boxes from Schedulaa folha data, render six-copy PDFs, flatten for e-delivery, and export EFW2 files.",
       image: `${BASE_URL}/images/payroll-w2-preview.png`,
       url: `${BASE_URL}/payroll/tools/w2`,
     },
@@ -1022,45 +1022,45 @@ const w2Config = {
       operatingSystem: "Web",
       offers: { "@type": "Offer", price: "0.00", priceCurrency: "USD" },
       featureList: [
-        "Prefill IRS W-2 boxes from payroll",
+        "Prefill IRS W-2 boxes from folha",
         "Render six-copy IRS PDF",
-        "Flatten employee copies",
+        "Flatten funcionario copies",
         "Generate EFW2 text files",
         "Support for multi-state wages",
       ],
       url: `${BASE_URL}/payroll/tools/w2`,
     },
-    payrollBreadcrumb("W-2 generator", `${BASE_URL}/payroll/tools/w2`),
+    payrollBreadcrumb("W-2 gerador", `${BASE_URL}/payroll/tools/w2`),
   ],
   hero: {
-    badge: "Year-end payroll",
+    badge: "Year-end folha",
     title: "W-2 Generator with IRS PDF and EFW2 export",
     subtitle:
-      "Fill every W-2 box automatically, render the official six-copy PDF, flatten employee copies, and generate EFW2 text in one workflow.",
+      "Fill every W-2 box automatically, render the official six-copy PDF, flatten funcionario copies, and generate EFW2 text in one workflow.",
     bullets: [
-      "Prefill wages, withholding, and benefits from Schedulaa payroll.",
-      "Render multi-copy IRS PDF forms and flattened employee versions.",
+      "Prefill wages, withholding, and benefits from Schedulaa folha.",
+      "Render multi-copy IRS PDF forms and flattened funcionario versions.",
       "Generate SSA EFW2 text files for electronic submission.",
     ],
     primaryCta: { label: "Generate W-2 forms", href: REGISTER_URL },
     secondaryCta: { label: "Request onboarding", href: CONTACT_URL },
   },
-  featuresHeading: "Capabilities",
-  featuresTitle: "Accurate W-2 filing without manual edits",
-  features: [
+  recursosHeading: "Capabilities",
+  recursosTitle: "Accurate W-2 filing without manual edits",
+  recursos: [
     {
       icon: "document",
       label: "Prefill",
-      title: "W-2 boxes filled from payroll history",
+      title: "W-2 boxes filled from folha history",
       description:
         "Schedulaa maps wages, withholding, tips, and deferred compensation right into the correct W-2 boxes.",
     },
     {
       icon: "compliance",
-      label: "Compliance",
+      label: "Conformidade",
       title: "IRS PDF and EFW2 outputs",
       description:
-        "Generate the official six-copy W-2 PDF, flattened employee copies for e-delivery, and EFW2 text files for SSA.",
+        "Generate the official six-copy W-2 PDF, flattened funcionario copies for e-delivery, and EFW2 text files for SSA.",
     },
     {
       icon: "timeline",
@@ -1075,20 +1075,20 @@ const w2Config = {
       overline: "Ready for SSA",
       title: "EFW2 export in one click",
       body:
-        "Generate the EFW2 text file using your finalized payroll data. Keep employer and employee copies synced without duplicate data entry.",
+        "Generate the EFW2 text file using your finalized folha data. Keep employer and funcionario copies synced without duplicate data entry.",
       image: {
         src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-        alt: "W-2 generator export options",
+        alt: "W-2 gerador export options",
       },
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "From payroll to filed W-2s",
+  stepsTitle: "From folha to filed W-2s",
   steps: [
     {
-      title: "Select tax year and employees",
+      title: "Select tax year and funcionarios",
       description:
-        "Pick the tax year, filter the employees you need, and let Schedulaa prefill their data.",
+        "Pick the tax year, filter the funcionarios you need, and let Schedulaa prefill their data.",
     },
     {
       title: "Review and approve forms",
@@ -1098,31 +1098,31 @@ const w2Config = {
     {
       title: "Export PDF and EFW2",
       description:
-        "Download the six-copy PDF and flattened versions for employees, plus the EFW2 file for SSA submission.",
+        "Download the six-copy PDF and flattened versions for funcionarios, plus the EFW2 file for SSA submission.",
     },
   ],
   callouts: [
     {
       icon: "document",
       label: "Connected tools",
-      title: "Need live payroll runs?",
+      title: "Need live folha runs?",
       body:
-        "W-2 forms are built on the same payroll engine that handles federal, state, FICA, and Medicare calculations.",
-      links: [{ label: "Run US payroll", href: "/payroll/usa" }],
+        "W-2 forms are built on the same folha engine that handles federal, state, FICA, and Medicare calculations.",
+      links: [{ label: "Run US folha", href: "/payroll/usa" }],
     },
   ],
-  faqHeading: "FAQ",
-  faqTitle: "W-2 generator questions",
+  faqHeading: "Perguntas frequentes",
+  faqTitle: "W-2 gerador perguntas",
   faq: [
     {
-      question: "Do you support multi-state wages?",
+      question: "Do you suporte multi-state wages?",
       answer:
-        "Yes. W-2 exports include per-state wage totals and codes so employees with multiple work locations are supported.",
+        "Yes. W-2 exportacoes include per-state wage totals and codes so funcionarios with multiple work locations are supported.",
     },
     {
       question: "Can I deliver W-2s electronically?",
       answer:
-        "Schedulaa renders flattened PDF copies you can distribute electronically alongside the employee portal.",
+        "Schedulaa renders flattened PDF copies you can distribute electronically alongside the funcionario portal.",
     },
   ],
   cta: sharedCta,
@@ -1146,7 +1146,7 @@ const payslipConfig = {
       card: "summary_large_image",
       title: "Employee Payslip Portal | Schedulaa",
       description:
-        "Schedulaa powers a secure payslip portal so employees can download PDF slips without emailing payroll.",
+        "Schedulaa powers a secure payslip portal so funcionarios can download PDF slips without emailing folha.",
       image: `${BASE_URL}/images/payroll-payslip-portal.png`,
     },
   },
@@ -1161,7 +1161,7 @@ const payslipConfig = {
       featureList: [
         "Employee self-service payslip access",
         "PDF downloads with date filters",
-        "Email notifications on new slips",
+        "Email notificacoes on new slips",
         "Manager controls and auditing",
       ],
       url: `${BASE_URL}/payslips`,
@@ -1172,18 +1172,18 @@ const payslipConfig = {
     badge: "Employee experience",
     title: "Employee payslip portal with instant downloads",
     subtitle:
-      "Give staff a secure, branded portal where they can view and download finalized payslips any time without emailing payroll.",
+      "Give staff a secure, branded portal where they can view and download finalized payslips any time without emailing folha.",
     bullets: [
-      "Search and filter payslips by date or payroll run.",
+      "Search and filter payslips by date or folha run.",
       "Download PDF copies that match the finalized export.",
       "Control access with role-based permissions.",
     ],
     primaryCta: { label: "Enable the portal", href: REGISTER_URL },
-    secondaryCta: { label: "See payroll features", href: "/payroll/canada" },
+    secondaryCta: { label: "Ver recursos da folha", href: "/payroll/canada" },
   },
-  featuresHeading: "Highlights",
-  featuresTitle: "Keep employees informed without extra tickets",
-  features: [
+  recursosHeading: "Highlights",
+  recursosTitle: "Keep funcionarios informed without extra tickets",
+  recursos: [
     {
       icon: "timeline",
       label: "Access",
@@ -1196,20 +1196,20 @@ const payslipConfig = {
       label: "Delivery",
       title: "Secure PDF downloads",
       description:
-        "Every payslip matches the finalized PDF generated during payroll. Employees can download on desktop or mobile instantly.",
+        "Every payslip matches the finalized PDF generated during folha. Employees can download on desktop or mobile instantly.",
     },
     {
       icon: "compliance",
       label: "Controls",
       title: "Role-based permissions and logging",
       description:
-        "Managers control who can access the portal and review logs for auditing. Disable access when employees leave.",
+        "Managers control who can access the portal and review logs for auditing. Disable access when funcionarios leave.",
     },
   ],
   highlights: [
     {
       overline: "Experience",
-      title: "Branded portal your team trusts",
+      title: "Branded portal your equipe trusts",
       body:
         "Customize colors, logos, and links so the portal matches your company brand. Employees log in with their existing Schedulaa credentials.",
       image: {
@@ -1219,17 +1219,17 @@ const payslipConfig = {
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "How the payslip portal works",
+  stepsTitle: "Como the payslip portal works",
   steps: [
     {
-      title: "Finalize payroll",
+      title: "Finalize folha",
       description:
-        "Run payroll in Schedulaa. Finalized PDF slips automatically sync to the payslip portal.",
+        "Executar folha in Schedulaa. Finalized PDF slips automatically sync to the payslip portal.",
     },
     {
-      title: "Notify employees",
+      title: "Notify funcionarios",
       description:
-        "Send emails from payroll or notify staff through your HR channels that new slips are ready.",
+        "Send emails from folha or notify staff through your HR channels that new slips are ready.",
     },
     {
       title: "Employees download securely",
@@ -1241,24 +1241,24 @@ const payslipConfig = {
     {
       icon: "document",
       label: "Connected",
-      title: "Works with Canadian and US payroll",
+      title: "Works with Canadian and US folha",
       body:
-        "The payslip portal receives finalized slips from both Canadian and US payroll runs, so multinational teams share the same experience.",
-      links: [{ label: "Run a payroll preview", href: "/payroll/canada" }],
+        "The payslip portal receives finalized slips from both Canadian and US folha runs, so multinational equipes share the same experience.",
+      links: [{ label: "Run a folha pre-visualizacao", href: "/payroll/canada" }],
     },
   ],
-  faqHeading: "FAQ",
-  faqTitle: "Payslip portal questions",
+  faqHeading: "Perguntas frequentes",
+  faqTitle: "Payslip portal perguntas",
   faq: [
     {
-      question: "Do employees need a separate login?",
+      question: "Do funcionarios need a separate login?",
       answer:
-        "No. Employees use their existing Schedulaa login. Access is controlled by manager permissions and can be revoked any time.",
+        "No. Employees use their existing Schedulaa login. Access is controlled by gerente permissions and can be revoked any time.",
     },
     {
       question: "Can we email payslips as well?",
       answer:
-        "Yes. When you finalize payroll you can email PDF copies to each employee and still keep the portal enabled as a backup.",
+        "Yes. When you finalizar folha you can email PDF copies to each funcionario and still keep the portal enabled as a backup.",
     },
   ],
   cta: sharedCta,

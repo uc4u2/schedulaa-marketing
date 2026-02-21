@@ -2,50 +2,50 @@ const PAGE_URL = 'https://www.schedulaa.com/website-builder';
 
 const featureCards = [
   {
-    title: 'Drag-and-drop builder',
+    title: 'Construtor de arrastar e soltar',
     body: 'Launch a polished site in minutes with sections, galleries, testimonials, and bookings - no coding required.',
   },
   {
-    title: 'Stripe payments built-in',
+    title: 'Pagamentos Stripe integrados',
     body: 'Collect deposits, take full payments, and save cards on file with Stripe from day one.',
   },
   {
-    title: 'Free domain + SSL hosting',
+    title: 'Dominio gratis + hospedagem SSL',
     body: 'Map your own domain or use a schedulaa.site address. Automatic SSL keeps every page secure.',
   },
   {
-    title: 'Analytics that make sense',
-    body: 'See visits, bookings, and revenue in a single dashboard. Connect Google Analytics or use our native insights.',
+    title: 'Analitica clara',
+    body: 'Veja visitas, reservas e receita em um unico painel. Conecte o Google Analytics ou use nossos insights nativos.',
   },
   {
-    title: 'Responsive templates',
+    title: 'Modelos responsivos',
     body: 'Choose from industry-ready templates for salons, coaches, tutors, clinics, and more.',
   },
   {
-    title: 'Secure customer data',
+    title: 'Dados de clientes protegidos',
     body: 'SOC 2-ready policies, role-based access, and encrypted storage keep client data protected.',
   },
 ];
 
 const howToSteps = [
   {
-    title: 'Create your Schedulaa account',
+    title: 'Crie sua conta Schedulaa',
     description: 'Start for free in less than two minutes. No credit card required to publish your first site.',
   },
   {
-    title: 'Pick a template that matches your brand',
+    title: 'Escolha um modelo que combine com sua marca',
     description: 'Choose from modern designs for salons, coaches, fitness studios, trades, and more - all fully responsive.',
   },
   {
-    title: 'Customize pages with drag-and-drop blocks',
+    title: 'Personalize paginas com blocos de arrastar e soltar',
     description: 'Edit copy, swap hero images, add services, and surface testimonials without touching code.',
   },
   {
-    title: 'Connect Stripe and booking flows',
+    title: 'Conecte Stripe e fluxos de reserva',
     description: 'Enable checkout, card-on-file, and scheduling so clients can book and pay in one visit.',
   },
   {
-    title: 'Publish with your domain and monitor analytics',
+    title: 'Publique com seu dominio e acompanhe a analitica',
     description: 'Go live with free SSL, view analytics, and keep improving with built-in SEO recommendations.',
   },
 ];
@@ -99,7 +99,7 @@ const resourceHighlights = [
   },
   {
     title: 'Index-ready structure',
-    body: 'Schedulaa publishes canonical URLs, Open Graph tags, and sitemap updates automatically so Google can crawl every template.',
+    body: 'A Schedulaa publica URLs canonicas, tags OG e atualizacoes de sitemap automaticamente para que o Google rastreie cada modelo.',
     links: [
       { label: 'View SEO checklist', href: '/docs#seo' },
       { label: 'Contact rollout team', href: '/contact' },
@@ -117,12 +117,12 @@ const resourceHighlights = [
 
 export const websiteBuilderPage = {
   meta: {
-    title: 'Website Builder for Small Business - Free Domain & Hosting | Schedulaa',
+    title: 'Construtor de sites para pequenos negocios - Dominio e hospedagem gratis | Schedulaa',
     description:
       'Build your business website with Schedulaa\'s free website builder. Get a free site on a Schedulaa URL, connect your domain, or use our Website Design Service for done-for-you design.',
     canonical: PAGE_URL,
     og: {
-      title: 'Website Builder for Small Business - Schedulaa',
+      title: 'Construtor de sites para pequenos negocios - Schedulaa',
       description:
         'Build and host your business website with booking, Stripe, and analytics. Launch free or choose our Website Design Service for a done-for-you site.',
       image: 'https://www.schedulaa.com/images/website-builder-preview.png',
@@ -130,34 +130,34 @@ export const websiteBuilderPage = {
     },
   },
   hero: {
-    badge: 'Free Website Builder for Small Business',
-    title: 'Website Builder for Small Businesses - Free Hosting Included',
+    badge: 'Construtor de sites gratuito para pequenos negocios',
+    title: 'Construtor de sites para pequenos negocios - Hospedagem gratis incluida',
     subtitle:
       'Build a responsive website with booking, Stripe payments, and analytics in one platform. Every account includes a free website at www.schedulaa.com/your-company-slug (even before you subscribe).',
-    primaryCta: { label: 'Start your free website', href: '/register' },
-    secondaryCta: { label: 'Explore booking', href: '/booking' },
+    primaryCta: { label: 'Inicie seu site gratis', href: '/register' },
+    secondaryCta: { label: 'Explorar reservas', href: '/booking' },
   },
   sections: [
     {
-      overline: 'Core capabilities',
+      overline: 'Capacidades principais',
       title: 'Build, publish, and monetize in one workflow',
       items: featureCards,
     },
     {
-      overline: 'Resources',
-      title: 'Guides, SEO, and rollout support',
+      overline: 'Recursos',
+      title: 'Guias, SEO e suporte de rollout',
       items: resourceHighlights,
     },
   ],
-  stepsTitle: 'How to launch your site in Schedulaa',
+  stepsTitle: 'Como lancar seu site no Schedulaa',
   steps: howToSteps,
-  faqTitle: 'Website Builder FAQ',
+  faqTitle: 'Perguntas frequentes do construtor de sites',
   faq: faqs,
   cta: {
-    overline: 'Ready to launch?',
-    title: 'Start your free website and connect bookings today',
+    overline: 'Pronto para lancar?',
+    title: 'Inicie seu site gratis and connect bookings today',
     body: 'Go live now, then add advanced automations and multi-location workflows whenever your business needs them.',
-    primary: { label: 'Start free', href: '/register' },
-    secondary: { label: 'Talk to our team', href: '/contact' },
+    primary: { label: 'Comece gratis', href: '/register' },
+    secondary: { label: 'Fale com nossa equipe', href: '/contact' },
   },
 };

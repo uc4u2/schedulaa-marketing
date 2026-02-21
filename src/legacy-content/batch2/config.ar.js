@@ -1,12 +1,12 @@
 export const workforcePage = {
   meta: {
-    title: 'Workforce Command Center | Time Tracking, Scheduling & Payroll',
+    title: 'مركز قيادة القوى العاملة | تتبع الوقت والجدولة والرواتب',
     description:
       'Close the loop with Schedulaa’s workforce command center—clock-in/out policies, approvals, availability, and payroll-ready exports in one dashboard.',
   },
   hero: {
-    badge: 'Workforce',
-    title: 'All-in-one workforce command center',
+    badge: 'القوى العاملة',
+    title: 'مركز موحد لادارة القوى العاملة',
     subtitle:
       'Schedulaa already unified online scheduling, payroll, and website pages. Now we’ve closed the loop on time tracking so hours, templates, policy audits, and payroll-ready approvals live in one dashboard—with IP/device hints captured automatically for every punch.',
     image: '/images/marketing/showcase/time-tracking.png',
@@ -17,12 +17,12 @@ export const workforcePage = {
       { src: '/images/marketing/showcase/t4.png', alt: 'T4 generation' },
       { src: '/images/marketing/showcase/w2-4d.png', alt: 'W-2 generation' },
     ],
-    primaryCta: { label: 'Start free', href: '/register' },
-    secondaryCta: { label: 'Request a walkthrough', href: '/contact' },
+    primaryCta: { label: 'ابدأ مجانا', href: '/register' },
+    secondaryCta: { label: 'اطلب جولة توضيحية', href: '/contact' },
   },
   sections: [
     {
-      title: 'Real-time clocking with policy enforcement',
+      title: 'تسجيل وقت فوري مع تطبيق السياسات',
       points: [
         'Employees clock in/out from the streamlined My Time workspace with a live timer that subtracts break minutes, shows hours worked, and visualizes the shift timeline.',
         'Break controls respect company policy—managers define default windows inside shift templates and the employee UI enforces them for payroll, flagging missed or overdue breaks instantly.',
@@ -30,7 +30,7 @@ export const workforcePage = {
       ],
     },
     {
-      title: 'Manager-grade oversight',
+      title: 'اشراف بمستوى اداري',
       points: [
         'Every time entry flows into the approvals page where supervisors filter by department, employee, or status before approving or rejecting—even mid-shift if something looks off.',
         'IP/device hints expose unusual punch locations while compliance chips surface shifts missing breaks or trending toward overtime.',
@@ -38,7 +38,7 @@ export const workforcePage = {
       ],
     },
     {
-      title: 'Shift templates with compliance baked in',
+      title: 'قوالب ورديات مع امتثال مدمج',
       points: [
         'Templates capture break start/end times, duration, paid/unpaid flags, and availability links.',
         'Applying a template pushes those rules into every shift assignment and the employee clock UI automatically—no manual edits.',
@@ -46,7 +46,7 @@ export const workforcePage = {
       ],
     },
     {
-      title: 'Payroll-ready exports',
+      title: 'تصدير جاهز للرواتب',
       points: [
         'Approved entries carry metadata for both supervisors and payroll teams (who approved, when, policy references, and punch location hints).',
         'Exports stay clean, audits stay simple, and payroll files ingest directly into accounting.',
@@ -54,32 +54,32 @@ export const workforcePage = {
     },
   ],
   cta: {
-    overline: 'Workforce + payroll together',
+    overline: 'القوى العاملة + payroll together',
     title:
-      'Booking, scheduling, payroll, websites, and policy-aware time tracking in the same platform.',
+      'الحجوزات والجدولة والرواتب والمواقع وتتبع الوقت وفق السياسات في نفس المنصة.',
     body: 'No spreadsheets, no copy/paste, and no compliance surprises.',
-    primary: { label: 'See the time tracking workspace', href: '/register' },
-    secondary: { label: 'Talk to sales', href: '/contact' },
+    primary: { label: 'عرض مساحة تتبع الوقت', href: '/register' },
+    secondary: { label: 'تحدث مع المبيعات', href: '/contact' },
   },
 };
 
 export const industriesPage = {
   meta: {
-    title: 'Industry Directory | Schedulaa booking sites by industry',
+    title: 'دليل القطاعات | Schedulaa booking sites by industry',
     description:
       'Browse Schedulaa-powered workflows by industry. Discover salons, clinics, fitness studios, legal services, and more using unified scheduling, payroll, and commerce.',
   },
   hero: {
     badge: 'Industries',
-    title: 'Browse by industry',
+    title: 'تصفح حسب القطاع',
     subtitle:
       'Pick an industry to see how businesses use Schedulaa for booking, payroll, workforce operations, websites, and commerce.',
-    primaryCta: { label: 'Explore booking', href: '/booking' },
-    secondaryCta: { label: 'Contact team', href: '/contact' },
+    primaryCta: { label: 'استكشف الحجوزات', href: '/booking' },
+    secondaryCta: { label: 'تواصل مع الفريق', href: '/contact' },
   },
   sections: [
     {
-      title: 'Popular verticals',
+      title: 'قطاعات شائعة',
       items: [
         { title: 'Salons & spas', body: 'Real-time stylist booking, tips, and retention campaigns.' },
         { title: 'Healthcare clinics', body: 'Scheduling, reminders, and documentation-aware workflows.' },
@@ -94,31 +94,31 @@ export const industriesPage = {
 
 export const statusPage = {
   meta: {
-    title: 'Schedulaa Status | System Availability',
+    title: 'Schedulaa الحالة | System Availability',
     description: 'Real-time system status for Schedulaa booking, payroll, HR, websites, and integrations.',
   },
   hero: {
-    badge: 'Status',
-    title: 'All systems operational',
+    badge: 'الحالة',
+    title: 'جميع الانظمة تعمل',
     subtitle:
       'Monitor platform health, incident history, and upcoming maintenance across booking, payroll, websites, and integrations.',
-    primaryCta: { label: 'Subscribe for alerts', href: 'mailto:status@schedulaa.com' },
+    primaryCta: { label: 'اشترك في التنبيهات', href: 'mailto:status@schedulaa.com' },
     secondaryCta: { label: 'RSS feed', href: 'https://status.schedulaa.com/rss' },
   },
   sections: [
     {
       title: 'Service availability',
       items: [
-        { title: 'Schedulaa Dashboard & Login', body: 'Operational' },
-        { title: 'Booking & Appointments API', body: 'Operational' },
-        { title: 'Stripe Payments & Checkout', body: 'Operational' },
-        { title: 'Payroll & Compliance (US & Canada)', body: 'Operational' },
-        { title: 'Website Builder / Hosting', body: 'Operational' },
-        { title: 'Notifications & Marketing Emails', body: 'Operational' },
+        { title: 'Schedulaa Dashboard & Login', body: 'يعمل' },
+        { title: 'واجهة برمجة الحجوزات والمواعيد', body: 'يعمل' },
+        { title: 'Stripe Payments & Checkout', body: 'يعمل' },
+        { title: 'الرواتب والامتثال (الولايات المتحدة وكندا)', body: 'يعمل' },
+        { title: 'منشئ المواقع / الاستضافة', body: 'يعمل' },
+        { title: 'الاشعارات ورسائل التسويق', body: 'يعمل' },
       ],
     },
     {
-      title: 'Recent incident example',
+      title: 'مثال حادث حديث',
       points: [
         'October 10, 2025: Temporary slowdown in appointment booking API due to a caching layer misconfiguration.',
         'Impact: 4% of requests experienced increased latency for roughly 18 minutes.',
@@ -126,7 +126,7 @@ export const statusPage = {
       ],
     },
     {
-      title: 'Uptime overview',
+      title: 'ملخص التوافر',
       points: ['Last 24 hours: 100%', 'Last 7 days: 99.97%', 'Last 30 days: 99.99%', 'Last 90 days: 99.98%'],
     },
   ],
@@ -134,12 +134,12 @@ export const statusPage = {
 
 export const roadmapPage = {
   hero: {
-    badge: 'Roadmap',
-    title: 'Product roadmap requests',
+    badge: 'خارطة الطريق',
+    title: 'طلبات خارطة طريق المنتج',
     subtitle:
       'Share roadmap requests with our team at admin@schedulaa.com. We review customer feedback continuously and publish updates in release notes.',
-    primaryCta: { label: 'Email roadmap request', href: 'mailto:admin@schedulaa.com' },
-    secondaryCta: { label: 'See status', href: '/status' },
+    primaryCta: { label: 'ارسل طلب خارطة الطريق بالبريد', href: 'mailto:admin@schedulaa.com' },
+    secondaryCta: { label: 'عرض الحالة', href: '/status' },
   },
 };
 
@@ -150,20 +150,20 @@ export const demoPage = {
       'Use the shared manager credentials to explore scheduling, payroll, compliance, automation, and integrations to Zapier, QuickBooks, and Xero.',
   },
   hero: {
-    badge: 'Demo / Test Drive',
+    badge: 'عرض تجريبي / تجربة',
     title: 'Experience the Schedulaa manager dashboard in minutes',
     subtitle:
-      'Use the shared staging login to explore scheduling, time tracking, payroll, compliance, Zapier automations, and accounting exports end-to-end.',
-    primaryCta: { label: 'Go to login', href: '/login' },
-    secondaryCta: { label: 'Talk to rollout team', href: '/contact' },
+      'Use the shared staging login to explore scheduling, time tracking, payroll, compliance, اتمتة Zapiers, and accounting exports end-to-end.',
+    primaryCta: { label: 'الانتقال الى تسجيل الدخول', href: '/login' },
+    secondaryCta: { label: 'تحدث مع فريق الاطلاق', href: '/contact' },
   },
   sections: [
     {
-      title: 'Demo credentials',
+      title: 'بيانات دخول تجريبية',
       points: ['Email: testschedulaa@gmail.com', 'Password: Test!12345', 'OTP code: 0000', 'Environment: Staging'],
     },
     {
-      title: '3-step quick start',
+      title: 'بدء سريع من 3 خطوات',
       points: [
         '1. Login at /login with the demo email + password.',
         '2. Use OTP code 0000.',
@@ -175,20 +175,20 @@ export const demoPage = {
 
 export const contactPage = {
   meta: {
-    title: 'Contact Schedulaa',
+    title: 'اتصال Schedulaa',
     description: 'Talk to the Schedulaa team about custom rollouts, partnerships, or migration support.',
   },
   hero: {
-    badge: 'Contact',
-    title: "Let's talk about your rollout.",
+    badge: 'اتصال',
+    title: "دعنا نتحدث عن اطلاقك.",
     subtitle:
       'Looking for a custom implementation, partner program, or migration help? Our specialists respond within one business day.',
-    primaryCta: { label: 'Email us', href: 'mailto:admin@schedulaa.com' },
+    primaryCta: { label: 'راسلنا', href: 'mailto:admin@schedulaa.com' },
     secondaryCta: { label: 'Call +1 (415) 555-0198', href: 'tel:+14155550198' },
   },
   sections: [
     {
-      title: 'How we help',
+      title: 'كيف نساعد',
       items: [
         { title: 'Sales & demos', body: 'Plan walkthroughs, pricing guidance, and migration timelines tailored to your team.' },
         { title: 'Partnerships', body: 'Reseller, integration, and co-marketing opportunities for platforms serving creatives.' },
@@ -197,10 +197,10 @@ export const contactPage = {
       ],
     },
   ],
-  faqTitle: 'Contact FAQ',
+  faqTitle: 'الاسئلة الشائعة للتواصل',
   faq: [
     {
-      question: 'How fast will someone reply?',
+      question: 'ما مدى سرعة الرد؟',
       answer: 'Enterprise rollout specialists respond within one business day for scheduling, payroll, and migration requests.',
     },
     {
@@ -208,7 +208,7 @@ export const contactPage = {
       answer: 'Yes. Our team handles data imports, template mapping, staff onboarding, and payroll validation for every location.',
     },
     {
-      question: 'How do partners or resellers reach you?',
+      question: 'كيف يتواصل الشركاء او الموزعون معكم؟',
       answer: 'Email admin@schedulaa.com and we will route your note to our partnership, integration, or reseller teams.',
     },
   ],
@@ -216,19 +216,19 @@ export const contactPage = {
 
 export const supportPage = {
   hero: {
-    badge: 'Help Center',
-    title: 'Support for clients and teams',
+    badge: 'مركز المساعدة',
+    title: 'دعم للعملاء والفرق',
     subtitle:
-      'Get help with account setup, booking, payroll, workflows, Zapier automation, and accounting integrations. Our team responds quickly and can route technical issues to specialists.',
-    primaryCta: { label: 'Contact support', href: 'mailto:admin@schedulaa.com' },
-    secondaryCta: { label: 'Open docs', href: '/docs' },
+      'Get help with account setup, booking, payroll, workflows, اتمتة Zapier, and accounting integrations. Our team responds quickly and can route technical issues to specialists.',
+    primaryCta: { label: 'اتصال support', href: 'mailto:admin@schedulaa.com' },
+    secondaryCta: { label: 'افتح الوثائق', href: '/docs' },
   },
   sections: [
     {
-      title: 'Support topics',
+      title: 'مواضيع الدعم',
       points: [
         'Account, access, and onboarding',
-        'Booking and scheduling operations',
+        'عمليات الحجوزات والجدولة',
         'Payroll preview/finalize and export questions',
         'Website builder and domain setup',
         'Zapier, QuickBooks, and Xero setup',
@@ -244,18 +244,18 @@ export const zapierPage = {
       'Connect Schedulaa to 6,000+ apps with Zapier. Stream bookings, shifts, timeclock, break compliance, PTO, onboarding, and payroll data.',
   },
   hero: {
-    badge: 'Zapier automation',
+    badge: 'اتمتة Zapier',
     title: 'Automate every booking, shift, break, and payroll moment with Zapier',
     subtitle:
       'Schedulaa streams bookings, scheduling, timeclock, break compliance, PTO, onboarding, and payroll detail into Zapier while actions can create bookings, employees, and shifts inside Schedulaa.',
-    primaryCta: { label: 'Open Zapier settings', href: '/settings/zapier' },
-    secondaryCta: { label: 'See demo', href: '/demo' },
+    primaryCta: { label: 'افتح اعدادات Zapier', href: '/settings/zapier' },
+    secondaryCta: { label: 'عرض التجربة', href: '/demo' },
   },
   sections: [
     {
-      title: 'Live trigger groups',
+      title: 'مجموعات مشغلات مباشرة',
       items: [
-        { title: 'Booking events', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
+        { title: 'احداث الحجوزات', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
         { title: 'Scheduling & shifts', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
         { title: 'Timeclock & break compliance', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
         { title: 'Leave, onboarding, documents', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },

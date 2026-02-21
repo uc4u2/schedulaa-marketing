@@ -2,50 +2,50 @@ const PAGE_URL = 'https://www.schedulaa.com/website-builder';
 
 const featureCards = [
   {
-    title: 'Drag-and-drop builder',
+    title: 'منشئ بالسحب والافلات',
     body: 'Launch a polished site in minutes with sections, galleries, testimonials, and bookings - no coding required.',
   },
   {
-    title: 'Stripe payments built-in',
+    title: 'مدفوعات Stripe مدمجة',
     body: 'Collect deposits, take full payments, and save cards on file with Stripe from day one.',
   },
   {
-    title: 'Free domain + SSL hosting',
+    title: 'نطاق مجاني + استضافة SSL',
     body: 'Map your own domain or use a schedulaa.site address. Automatic SSL keeps every page secure.',
   },
   {
-    title: 'Analytics that make sense',
-    body: 'See visits, bookings, and revenue in a single dashboard. Connect Google Analytics or use our native insights.',
+    title: 'تحليلات واضحة',
+    body: 'شاهد الزيارات والحجوزات والايرادات في لوحة واحدة. اربط Google Analytics او استخدم التحليلات المدمجة.',
   },
   {
-    title: 'Responsive templates',
+    title: 'قوالب متجاوبة',
     body: 'Choose from industry-ready templates for salons, coaches, tutors, clinics, and more.',
   },
   {
-    title: 'Secure customer data',
+    title: 'بيانات عملاء آمنة',
     body: 'SOC 2-ready policies, role-based access, and encrypted storage keep client data protected.',
   },
 ];
 
 const howToSteps = [
   {
-    title: 'Create your Schedulaa account',
+    title: 'انشئ حساب Schedulaa الخاص بك',
     description: 'Start for free in less than two minutes. No credit card required to publish your first site.',
   },
   {
-    title: 'Pick a template that matches your brand',
+    title: 'اختر قالبا يناسب علامتك التجارية',
     description: 'Choose from modern designs for salons, coaches, fitness studios, trades, and more - all fully responsive.',
   },
   {
-    title: 'Customize pages with drag-and-drop blocks',
+    title: 'خصص الصفحات باستخدام كتل السحب والافلات',
     description: 'Edit copy, swap hero images, add services, and surface testimonials without touching code.',
   },
   {
-    title: 'Connect Stripe and booking flows',
+    title: 'اربط Stripe وتدفقات الحجز',
     description: 'Enable checkout, card-on-file, and scheduling so clients can book and pay in one visit.',
   },
   {
-    title: 'Publish with your domain and monitor analytics',
+    title: 'انشر بنطاقك وتابع التحليلات',
     description: 'Go live with free SSL, view analytics, and keep improving with built-in SEO recommendations.',
   },
 ];
@@ -99,7 +99,7 @@ const resourceHighlights = [
   },
   {
     title: 'Index-ready structure',
-    body: 'Schedulaa publishes canonical URLs, Open Graph tags, and sitemap updates automatically so Google can crawl every template.',
+    body: 'ينشر Schedulaa الروابط القياسية وعلامات OG وتحديثات خريطة الموقع تلقائيا حتى يتمكن Google من فهرسة كل قالب.',
     links: [
       { label: 'View SEO checklist', href: '/docs#seo' },
       { label: 'Contact rollout team', href: '/contact' },
@@ -117,12 +117,12 @@ const resourceHighlights = [
 
 export const websiteBuilderPage = {
   meta: {
-    title: 'Website Builder for Small Business - Free Domain & Hosting | Schedulaa',
+    title: 'منشئ مواقع للاعمال الصغيرة - نطاق واستضافة مجانيان | Schedulaa',
     description:
       'Build your business website with Schedulaa\'s free website builder. Get a free site on a Schedulaa URL, connect your domain, or use our Website Design Service for done-for-you design.',
     canonical: PAGE_URL,
     og: {
-      title: 'Website Builder for Small Business - Schedulaa',
+      title: 'منشئ مواقع للاعمال الصغيرة - Schedulaa',
       description:
         'Build and host your business website with booking, Stripe, and analytics. Launch free or choose our Website Design Service for a done-for-you site.',
       image: 'https://www.schedulaa.com/images/website-builder-preview.png',
@@ -130,34 +130,34 @@ export const websiteBuilderPage = {
     },
   },
   hero: {
-    badge: 'Free Website Builder for Small Business',
-    title: 'Website Builder for Small Businesses - Free Hosting Included',
+    badge: 'منشئ مواقع مجاني للاعمال الصغيرة',
+    title: 'منشئ مواقع للاعمال الصغيرة - استضافة مجانية متضمنة',
     subtitle:
       'Build a responsive website with booking, Stripe payments, and analytics in one platform. Every account includes a free website at www.schedulaa.com/your-company-slug (even before you subscribe).',
-    primaryCta: { label: 'Start your free website', href: '/register' },
-    secondaryCta: { label: 'Explore booking', href: '/booking' },
+    primaryCta: { label: 'ابدأ موقعك المجاني', href: '/register' },
+    secondaryCta: { label: 'استكشف الحجوزات', href: '/booking' },
   },
   sections: [
     {
-      overline: 'Core capabilities',
+      overline: 'القدرات الاساسية',
       title: 'Build, publish, and monetize in one workflow',
       items: featureCards,
     },
     {
-      overline: 'Resources',
-      title: 'Guides, SEO, and rollout support',
+      overline: 'الموارد',
+      title: 'ادلة وSEO ودعم الاطلاق',
       items: resourceHighlights,
     },
   ],
-  stepsTitle: 'How to launch your site in Schedulaa',
+  stepsTitle: 'كيف تطلق موقعك في Schedulaa',
   steps: howToSteps,
-  faqTitle: 'Website Builder FAQ',
+  faqTitle: 'اسئلة منشئ المواقع الشائعة',
   faq: faqs,
   cta: {
-    overline: 'Ready to launch?',
-    title: 'Start your free website and connect bookings today',
+    overline: 'جاهز للاطلاق؟',
+    title: 'ابدأ موقعك المجاني and connect bookings today',
     body: 'Go live now, then add advanced automations and multi-location workflows whenever your business needs them.',
-    primary: { label: 'Start free', href: '/register' },
-    secondary: { label: 'Talk to our team', href: '/contact' },
+    primary: { label: 'ابدأ مجانا', href: '/register' },
+    secondary: { label: 'تحدث مع فريقنا', href: '/contact' },
   },
 };

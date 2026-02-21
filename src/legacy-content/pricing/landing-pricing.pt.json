@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Schedulaa Pricing | Launch on your own domain with automatic SSL",
-    "description": "Compare Starter, Pro, and Business plans. All plans include a custom domain with automatic SSL, plus booking and website essentials, with scheduling, payroll, and automation on Pro and Business.",
+    "description": "Avalie os planos Starter, Pro e Business. Todos os planos incluem dominio personalizado com SSL automatico, alem dos recursos essenciais de reserva e site, com agendamento, folha e automacao nos planos Pro e Business.",
     "canonical": "https://www.schedulaa.com/pricing",
     "keywords": "Schedulaa pricing, booking software pricing, payroll SaaS pricing, website builder plans",
     "og": {
@@ -18,10 +18,10 @@
     ],
     "subtitle": "Custom domains (TXT/CNAME) with automatic SSL are included on every plan. Start with Starter for website + booking, then add staff scheduling, payroll, and automations on Pro and Business.",
     "primaryCta": {
-      "label": "Start free trial"
+      "label": "Iniciar teste gratis"
     },
     "secondaryCta": {
-      "label": "Compare plans"
+      "label": "Comparar planos"
     },
     "badge": {
       "overline": "New capability",
@@ -57,7 +57,7 @@
               "type": "heading",
               "text": "Operational basics"
             },
-            "Booking notifications and reminders.",
+            "Notificacoes e lembretes de reservas.",
             "Embeddable booking widgets.",
             "Stripe refunds and payment history.",
             "Basic role-based access.",
@@ -153,7 +153,7 @@
               "text": "Governance & compliance"
             },
             "Audit-ready payroll and compliance records.",
-            "Compliance-ready tax exports (W-2, T4, ROE).",
+            "Exportacoes fiscais prontas para conformidade (W-2, T4, ROE).",
             "Multi-location (department) payroll and reporting.",
             {
               "type": "heading",
@@ -240,7 +240,7 @@
     "title": "Start your free trial - no credit card required",
     "description": "Bring scheduling, payments, and payroll into one workspace with automatic SSL on your domain.",
     "primaryCta": {
-      "label": "Start free trial"
+      "label": "Iniciar teste gratis"
     },
     "secondaryCta": {
       "label": "Talk to sales"
@@ -258,7 +258,7 @@
   },
   "comparison": {
     "title": "Schedulaa Feature Comparison",
-    "subtitle": "Compare plans at a glance.",
+    "subtitle": "Comparar planos at a glance.",
     "headers": {
       "feature": "Feature",
       "starter": "Starter",
@@ -282,18 +282,18 @@
         "label": "Best for",
         "starter": "Solo professionals",
         "pro": "Growing teams",
-        "business": "Compliance & multi-location (department) teams"
+        "business": "Conformidade e equipes multiunidade (departamento)"
       },
       "website": {
         "section": "Website & Online Presence",
         "builder": "Branded website builder & templates",
         "customDomain": "Custom domain + automatic SSL",
-        "publicBooking": "Public booking pages",
+        "publicBooking": "Paginas publicas de reserva",
         "embedded": "Embedded booking widgets",
         "branding": "Company-level branding"
       },
       "booking": {
-        "section": "Booking & Scheduling",
+        "section": "Reservas e agendamento",
         "online": "Online booking & confirmations",
         "reschedule": "Client self-serve rescheduling",
         "multi": "Multi-service & add-on bookings",
@@ -318,12 +318,12 @@
         "invoicing": "Payroll-linked invoicing"
       },
       "compliance": {
-        "section": "Compliance",
+        "section": "Conformidade",
         "revenueReports": "Revenue & appointment reports",
         "exports": "CSV / PDF exports",
         "w2": "W-2 (US) generation",
         "t4": "T4 & ROE (Canada)",
-        "audit": "Compliance-ready audit trails"
+        "audit": "Conformidade-ready audit trails"
       },
       "analytics": {
         "section": "Analytics",
@@ -337,7 +337,7 @@
         "notifications": "Email notifications & reminders",
         "campaigns": "Email campaigns (VIP, Win-back, No-show)",
         "zapier": "Zapier automation",
-        "workflows": "Workflow automations"
+        "workflows": "Automacoes de fluxo de trabalho"
       },
       "hiring": {
         "section": "Hiring",
@@ -375,7 +375,7 @@
   "whyTeams": {
     "title": "Why teams choose Schedulaa",
     "items": [
-      "Booking, payroll, time tracking, and websites share one data model.",
+      "Reservas, folha, controle de tempo e sites compartilham um unico modelo de dados.",
       "No syncing errors between shifts, hours, and pay.",
       "Fewer compliance gaps from disconnected tools."
     ]

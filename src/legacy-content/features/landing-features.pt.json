@@ -1,15 +1,15 @@
 {
   "meta": {
-    "title": "Schedulaa Platform Features | Scheduling, Payroll, and Online Sales Unified",
+    "title": "Recursos da plataforma Schedulaa | Scheduling, Payroll, and Online Sales Unified",
     "description": "Schedulaa unifies scheduling, payroll, hiring, website building, and eCommerce for teams. Sell services or products, automate payments, and manage multi-branch operations in one platform.",
-    "ogTitle": "Schedulaa Platform Features",
+    "ogTitle": "Recursos da plataforma Schedulaa",
     "ogDescription": "Book clients, sell products, pay your team – all from one platform."
   },
   "hero": {
-    "eyebrow": "Platform Highlights",
+    "eyebrow": "Destaques da plataforma",
     "title": {
-      "line1": "Features built for",
-      "line2": "enterprise service teams."
+      "line1": "Recursos criados para",
+      "line2": "equipes de servicos empresariais."
     },
     "subtitle": "Schedulaa brings scheduling, payroll, websites, and eCommerce into one experience so your staff and clients stay connected.",
     "badge": {
@@ -17,11 +17,11 @@
       "subtitle": "Unified command center"
     },
     "primaryCta": {
-      "label": "Start Free Trial",
+      "label": "Iniciar teste gratis",
       "supporting": "No card required"
     },
     "secondaryCta": {
-      "label": "Compare Plans"
+      "label": "Comparar planos"
     },
     "mediaAlt": "Schedulaa scheduling and payroll screens",
     "banner": {
@@ -37,7 +37,7 @@
   },
   "highlightCards": {
     "scheduling": {
-      "title": "Smarter Scheduling & Booking",
+      "title": "Agendamento e reservas mais inteligentes",
       "description": "Live department-based service lists, recurring templates, and branded booking modals embedded anywhere.",
       "points": [
         "Recurring availability and editable slots (Vagaro-style).",
@@ -47,7 +47,7 @@
       ]
     },
     "payroll": {
-      "title": "Payroll & Compliance",
+      "title": "Folha e conformidade",
       "description": "Run region-aware payroll with YTD summaries, tax exports, and self-serve employee portals.",
       "points": [
         "Overtime, tips, and holidays calculated automatically.",
@@ -57,7 +57,7 @@
       ]
     },
     "commerce": {
-      "title": "Commerce, Analytics, and Marketing",
+      "title": "Comercio, analitica e comercial",
       "description": "Sell products and services together, automate campaigns, and measure results in one dashboard.",
       "points": [
         "Mixed carts for products and services with add-ons and coupons.",
@@ -68,13 +68,13 @@
     }
   },
   "featureShowcase": {
-    "eyebrow": "Platform Pillars",
-    "title": "Features that work together",
+    "eyebrow": "Pilares da plataforma",
+    "title": "Recursos que funcionam juntos",
     "subtitle": "Each module is built to hand off context so your staff and clients never lose the thread.",
     "features": [
       {
         "icon": "01",
-        "title": "Unified Booking & Scheduling",
+        "title": "Reserva e agendamento unificados",
         "description": [
           "Real-time client bookings with service selection and self-serve rescheduling.",
           "Employee availability, shift templates, and multi-branch support.",
@@ -94,7 +94,7 @@
       },
       {
         "icon": "03",
-        "title": "Website Builder & Online Presence",
+        "title": "Construtor de sites e presenca online",
         "description": [
           "Drag-and-drop templates for services, products, hero sections, and contact flows.",
           "Theme customization across fonts, colors, backgrounds, and layout blocks.",
@@ -134,17 +134,17 @@
       },
       {
         "icon": "07",
-        "title": "Security, Compliance & Scale",
+        "title": "Seguranca, conformidade e escala",
         "description": [
           "Role-based access control for managers, admins, recruiters, and employees.",
           "Secure data storage with encryption, audit logs, and automated backups.",
           "Multi-location, multi-branch support with centralized oversight.",
-          "Compliance with regional payroll and privacy regulations out of the box."
+          "Conformidade com regras regionais de folha e privacidade desde o inicio."
         ]
       },
       {
         "icon": "08",
-        "title": "Time Tracking & Break Compliance",
+        "title": "Controle de tempo e conformidade de pausas",
         "description": [
           "Clock-in/out tied to scheduled shifts with IP/device hints captured per punch.",
           "Break policies that enforce fixed, windowed, or staggered slots and flag missed breaks.",
@@ -179,7 +179,7 @@
     "subtitle": "Multi-location? Franchise? Recruiting pods? The platform map keeps each branch aligned while honoring local branding and roles.",
     "points": {
       "branches": "Manage branches, departments, and teams with unique themes and permissions.",
-      "analytics": "Compare performance across branches with live analytics and revenue insights.",
+      "analytics": "Avalie o desempenho entre unidades com analitica ao vivo e insights de receita.",
       "templates": "Each profession template (fitness, real estate, recruiter, teacher, photographer) includes tailored emails and questionnaires.",
       "sync": "Client booking, shift scheduling, and payroll sync seamlessly under one dashboard.",
       "domains": "Launch branded sites on your own domain with automatic SSL."
@@ -211,7 +211,7 @@
         ]
       },
       "compliance": {
-        "title": "Compliance",
+        "title": "Conformidade",
         "items": [
           "CRA + IRS exports",
           "SOC2 in flight"
@@ -255,7 +255,7 @@
     "title": "Run scheduling, payroll, and online sales from one login.",
     "description": "Whether you manage a salon, fitness studio, recruiter network, or real estate team — Schedulaa connects bookings, sales, and payroll in one secure workspace.",
     "primaryCta": {
-      "label": "Start free"
+      "label": "Comece gratis"
     },
     "secondaryCta": {
       "label": "Talk to sales"
