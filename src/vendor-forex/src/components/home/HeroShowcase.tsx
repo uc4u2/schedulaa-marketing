@@ -3,18 +3,36 @@
 import heroShiftImg from '@public/images/marketing/shift-pre.png';
 import heroEmployeeImg from '@public/images/marketing/showcase/employee-management.png';
 import heroClientsImg from '@public/images/marketing/showcase/time-tracking.png';
+import { AppLocale } from '@/utils/locale';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 
-const slides: Array<{ src: StaticImageData; alt: string }> = [
-  { src: heroEmployeeImg, alt: 'Employee management overview' },
-  { src: heroShiftImg, alt: 'Shift management overview' },
-  { src: heroClientsImg, alt: 'Client booking overview' },
-];
+const slidesByLocale = (locale: AppLocale): Array<{ src: StaticImageData; alt: string }> => {
+  if (locale === 'ru') {
+    return [
+      { src: heroEmployeeImg, alt: 'Обзор управления сотрудниками' },
+      { src: heroShiftImg, alt: 'Обзор управления сменами' },
+      { src: heroClientsImg, alt: 'Обзор бронирования клиентов' },
+    ];
+  }
+  if (locale === 'zh') {
+    return [
+      { src: heroEmployeeImg, alt: '员工管理总览' },
+      { src: heroShiftImg, alt: '班次管理总览' },
+      { src: heroClientsImg, alt: '客户预约总览' },
+    ];
+  }
+  return [
+    { src: heroEmployeeImg, alt: 'Employee management overview' },
+    { src: heroShiftImg, alt: 'Shift management overview' },
+    { src: heroClientsImg, alt: 'Client booking overview' },
+  ];
+};
 
 const ROTATION_MS = 4500;
 
-const HeroShowcase = () => {
+const HeroShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
+  const slides = slidesByLocale(locale);
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 

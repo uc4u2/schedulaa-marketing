@@ -1,45 +1,9 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
+import { AppLocale } from '@/utils/locale';
+import { getFaqCopy } from './localeCopy';
 
-const faqData = [
-  {
-    id: 1,
-    question: 'What are terms & conditions?',
-    answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
-  },
-  {
-    id: 2,
-    question: 'Why do i need to accept the terms & conditions?',
-    answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
-  },
-  {
-    id: 3,
-    question: 'Can the terms & conditions change?',
-    answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
-  },
-  {
-    id: 4,
-    question: 'What happens if I violate the terms & conditions?',
-    answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
-  },
-  {
-    id: 5,
-    question: 'Where can I read the full terms & conditions?',
-    answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
-  },
-  {
-    id: 6,
-    question: 'What kind of activities are prohibited under your terms?',
-    answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
-  },
-];
-
-const TermsConditionsTab = () => {
+const TermsConditionsTab = ({ locale }: { locale: AppLocale | string | null | undefined }) => {
+  const faqData = getFaqCopy(locale).termsItems;
   return (
     <Accordion
       className="mx-auto w-full max-w-[850px] space-y-4"

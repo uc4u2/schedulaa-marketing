@@ -1,14 +1,16 @@
-import { detectLocaleFromPath } from '@/utils/locale';
-import { usePathname } from 'next/navigation';
+import { AppLocale } from '@/utils/locale';
 import Tab from '../ui/tab/Tab';
 import TabList from '../ui/tab/TabList';
 
-const AboutTabList = () => {
-  const pathname = usePathname() || '/';
-  const isFa = detectLocaleFromPath(pathname) === 'fa';
-  const labels = isFa
-    ? ['حقوق', 'رزرو', 'تجارت', 'اتوماسیون']
-    : ['Payroll', 'Booking', 'Commerce', 'Automation'];
+const labelsByLocale: Record<string, string[]> = {
+  en: ['Payroll', 'Booking', 'Commerce', 'Automation'],
+  fa: ['حقوق', 'رزرو', 'تجارت', 'اتوماسیون'],
+  ru: ['Зарплата', 'Бронирование', 'Коммерция', 'Автоматизация'],
+  zh: ['薪资', '预约', '电商', '自动化'],
+};
+
+const AboutTabList = ({ locale = 'en' }: { locale?: AppLocale }) => {
+  const labels = labelsByLocale[locale] || labelsByLocale.en;
 
   return (
     <>

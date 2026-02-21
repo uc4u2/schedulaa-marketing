@@ -1,16 +1,24 @@
 import { IBlogPost } from '@/interface';
 import blogPosts from '@/legacy-content/blog/posts';
 import sourceEn from '@/legacy-content/features/landing-features.json';
+import { AppLocale } from '@/utils/locale';
 import RevealAnimation from '../animation/RevealAnimation';
 import BlogCardV2 from '../shared/card/BlogCardV2';
 import BlogCardV3 from '../shared/card/BlogCardV3';
 import LinkButton from '../ui/button/LinkButton';
 
-const formatDate = (dateInput?: string) => {
+const localeCodeByLocale: Record<string, string> = {
+  en: 'en-US',
+  fa: 'fa-IR',
+  ru: 'ru-RU',
+  zh: 'zh-CN',
+};
+
+const formatDate = (dateInput?: string, locale: AppLocale = 'en') => {
   if (!dateInput) return 'Jan 01, 2025';
   const date = new Date(dateInput);
   if (Number.isNaN(date.getTime())) return 'Jan 01, 2025';
-  return date.toLocaleDateString('en-US', {
+  return date.toLocaleDateString(localeCodeByLocale[locale] || 'en-US', {
     month: 'short',
     day: '2-digit',
     year: 'numeric',
@@ -23,25 +31,27 @@ const blogImages = [
   '/images/marketing/t4-screen.png',
 ];
 
-const blogs = (blogPosts || []).slice(0, 3).map((post, index) => {
-  const wordCount = (post.description || '').split(/\s+/).filter(Boolean).length;
-  const minRead = Math.max(3, Math.round(wordCount / 40));
-  return {
-    tag: post.category || 'Blog',
-    author: 'Schedulaa Team',
-    authorImage: '',
-    publishDate: formatDate(post.datePublished),
-    title: post.title,
-    description: post.description,
-    thumbnail: blogImages[index] || '/images/marketing/analytics-main.png',
-    readTime: `${minRead} min read`,
-    slug: post.slug,
-    content: '',
-  } as IBlogPost;
-});
-
-const Blog = ({ source }: { source?: any }) => {
+const Blog = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }) => {
   const content = source || sourceEn;
+  const blogs = (blogPosts || []).slice(0, 3).map((post, index) => {
+    const wordCount = (post.description || '').split(/\s+/).filter(Boolean).length;
+    const minRead = Math.max(3, Math.round(wordCount / 40));
+    const tag = locale === 'ru' ? 'Блог' : locale === 'zh' ? '博客' : post.category || 'Blog';
+    const readUnit = locale === 'ru' ? 'мин чтения' : locale === 'zh' ? '分钟阅读' : 'min read';
+    return {
+      tag,
+      author: 'Schedulaa Team',
+      authorImage: '',
+      publishDate: formatDate(post.datePublished, locale),
+      title: post.title,
+      description: post.description,
+      thumbnail: blogImages[index] || '/images/marketing/analytics-main.png',
+      readTime: `${minRead} ${readUnit}`,
+      slug: post.slug,
+      content: '',
+    } as IBlogPost;
+  });
+  const cta = locale === 'ru' ? 'Смотреть материалы' : locale === 'zh' ? '查看洞察' : 'Explore insights';
   return (
     <RevealAnimation delay={0.1}>
       <section className="bg-background-2 dark:bg-background-5 py-20 sm:py-24 lg:py-[100px]">
@@ -81,7 +91,7 @@ const Blog = ({ source }: { source?: any }) => {
               <LinkButton
                 href="/blog"
                 className="btn btn-secondary dark:btn-transparent btn-md hover:btn-green mx-auto w-[90%] md:mx-0 md:w-auto">
-                Explore insights
+                {cta}
               </LinkButton>
             </div>
           </RevealAnimation>

@@ -45,14 +45,12 @@ export const PRODUCT_MENU_LINKS: NavbarLinkItem[] = [
   { id: 'marketing', href: '/marketing', labelKey: 'marketing' },
   { id: 'payroll', href: '/payroll', labelKey: 'payroll' },
   { id: 'website-builder', href: '/website-builder', labelKey: 'websiteBuilder' },
-  { id: 'industries', href: '/industries', labelKey: 'industries' },
-  { id: 'status', href: '/status', labelKey: 'status' },
-  { id: 'roadmap', href: '/roadmap', labelKey: 'roadmap' },
-  { id: 'demo', href: '/demo', labelKey: 'demo' },
-  { id: 'contact', href: '/contact', labelKey: 'contact' },
 ];
 
 export const RESOURCES_MENU_LINKS: NavbarLinkItem[] = [
+  { id: 'industries', href: '/industries', labelKey: 'industries' },
+  { id: 'demo', href: '/demo', labelKey: 'demo' },
+  { id: 'contact', href: '/contact', labelKey: 'contact' },
   { id: 'blog', href: '/blog', labelKey: 'blog' },
   { id: 'docs', href: '/docs', labelKey: 'documentation' },
   { id: 'zapier', href: '/zapier', labelKey: 'zapier' },

@@ -1,11 +1,10 @@
-export type FooterSectionKey = 'company' | 'product' | 'resources' | 'compare' | 'legal';
+export type FooterSectionKey = 'company' | 'product' | 'resources' | 'compare';
 
 export type FooterTranslationKey =
   | 'company'
   | 'product'
   | 'resources'
   | 'compareGroup'
-  | 'legal'
   | 'contact'
   | 'status'
   | 'roadmap'
@@ -83,6 +82,10 @@ export const FOOTER_SECTIONS: FooterSection[] = [
       { id: 'company-contact', href: '/contact', labelKey: 'contact' },
       { id: 'company-status', href: '/status', labelKey: 'status' },
       { id: 'company-roadmap', href: '/roadmap', labelKey: 'roadmap' },
+      { id: 'company-privacy', href: '/privacy', labelKey: 'privacy' },
+      { id: 'company-terms', href: '/terms', labelKey: 'terms' },
+      { id: 'company-login', href: '/login', labelKey: 'login', externalAppLink: true },
+      { id: 'company-get-started', href: '/register', labelKey: 'getStarted', externalAppLink: true },
     ],
   },
   {
@@ -120,16 +123,6 @@ export const FOOTER_SECTIONS: FooterSection[] = [
       { id: 'compare-hub', href: '/compare', labelKey: 'compareHub' },
       { id: 'alternatives-hub', href: '/alternatives', labelKey: 'alternativesHub' },
       ...COMPARE_LINKS,
-    ],
-  },
-  {
-    id: 'legal',
-    titleKey: 'legal',
-    links: [
-      { id: 'legal-privacy', href: '/privacy', labelKey: 'privacy' },
-      { id: 'legal-terms', href: '/terms', labelKey: 'terms' },
-      { id: 'legal-login', href: '/login', labelKey: 'login', externalAppLink: true },
-      { id: 'legal-get-started', href: '/register', labelKey: 'getStarted', externalAppLink: true },
     ],
   },
 ];

@@ -1,4 +1,5 @@
 import { cn } from '@/utils/cn';
+import { AppLocale } from '@/utils/locale';
 import gradient28Img from '@public/images/ns-img-516.png';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
@@ -11,7 +12,7 @@ interface ServiceCard {
   description: string;
 }
 
-export const serviceCards: ServiceCard[] = [
+const serviceCardsEn: ServiceCard[] = [
   {
     id: 1,
     label: 'Platform coverage',
@@ -44,7 +45,24 @@ export const serviceCards: ServiceCard[] = [
   },
 ];
 
-const Services = () => {
+const serviceCardsRu: ServiceCard[] = [
+  { id: 1, label: 'Охват платформы', value: 'US + CA', description: 'Поддерживаются payroll и compliance-процессы' },
+  { id: 2, label: 'Ключевые модули', value: '5+', description: 'Booking, payroll, сайты, eCommerce, аналитика' },
+  { id: 3, label: 'Скорость операций', value: '< 1 мин', description: 'От подтверждения брони до видимости у команды' },
+  { id: 4, label: 'Интеграции', value: 'API + Zapier', description: 'Автоматизация для бухгалтерии и re-engagement' },
+  { id: 5, label: 'Модель масштабирования', value: 'Multi-branch', description: 'Управление филиалами и ролями из коробки' },
+];
+
+const serviceCardsZh: ServiceCard[] = [
+  { id: 1, label: '平台覆盖', value: 'US + CA', description: '支持薪资与合规流程' },
+  { id: 2, label: '核心模块', value: '5+', description: '预约、薪资、网站、电商、分析' },
+  { id: 3, label: '运营速度', value: '< 1 分钟', description: '从预约确认到团队可见仅需片刻' },
+  { id: 4, label: '集成能力', value: 'API + Zapier', description: '面向财务与客户唤回的自动化' },
+  { id: 5, label: '扩展模式', value: 'Multi-branch', description: '开箱即用的多门店与角色管理' },
+];
+
+const Services = ({ locale = 'en' }: { locale?: AppLocale }) => {
+  const serviceCards = locale === 'ru' ? serviceCardsRu : locale === 'zh' ? serviceCardsZh : serviceCardsEn;
   return (
     <RevealAnimation delay={0.1}>
       <section className="bg-white py-24 md:py-[100px] xl:py-[200px] dark:bg-black">

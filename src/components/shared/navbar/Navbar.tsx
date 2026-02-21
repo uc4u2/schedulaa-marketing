@@ -57,7 +57,9 @@ const Navbar = () => {
   const t = useTranslations('navbar');
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
-  const returnTo = marketingReturnTo(locale, pathname.replace(/^\/(en|fa)/, '') || '/');
+  const localizedPrefix = `/${locale}`;
+  const returnPath = pathname === localizedPrefix ? '/' : pathname.startsWith(`${localizedPrefix}/`) ? pathname.slice(localizedPrefix.length) || '/' : pathname;
+  const returnTo = marketingReturnTo(locale, returnPath || '/');
 
   const [open, setOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);

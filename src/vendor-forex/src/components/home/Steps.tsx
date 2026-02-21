@@ -51,11 +51,65 @@ const faHowItWorks = {
   ],
 };
 
+const ruHowItWorks = {
+  title: 'Как работает онлайн-бронирование в Schedulaa',
+  intro: 'От публикации услуги до подтверждений и оплаты весь процесс занимает всего несколько шагов.',
+  cta: 'Смотреть все функции',
+  steps: [
+    {
+      title: 'Публикация услуг и специалистов',
+      description:
+        'Определите услуги, длительность, цены и назначьте специалистов. Доступность сразу отображается на странице бронирования.',
+    },
+    {
+      title: 'Клиенты выбирают время и специалиста',
+      description:
+        'Посетитель открывает страницу бронирования, выбирает день, время и подтверждает нужного специалиста.',
+    },
+    {
+      title: 'Оплата и уведомления',
+      description: 'Клиент оплачивает, вносит депозит или сохраняет карту. Календари и команда обновляются мгновенно.',
+    },
+    {
+      title: 'Дашборды менеджера и сотрудника обновляются в реальном времени',
+      description: 'Бронирования, смены и выплаты моментально видны в интерфейсах менеджера и сотрудника.',
+    },
+  ],
+};
+
+const zhHowItWorks = {
+  title: 'Schedulaa 在线预约流程',
+  intro: '从发布服务到确认通知与支付，只需几个步骤即可完成。',
+  cta: '查看全部功能',
+  steps: [
+    {
+      title: '发布服务与员工',
+      description: '设置服务、时长、价格并分配员工。可用时段会立即同步到客户端预约页面。',
+    },
+    {
+      title: '客户选择时间与员工',
+      description: '访客打开预约页面，选择日期与时段，并确认最合适的服务人员。',
+    },
+    {
+      title: '结账与通知',
+      description: '客户可支付、留押金或保存银行卡。预约与收据同步到日历，团队即时可见。',
+    },
+    {
+      title: '经理与员工看板实时更新',
+      description: '预约、班次与付款状态会实时显示在经理端和员工端。',
+    },
+  ],
+};
+
 const Steps = ({ locale = 'en' }: { locale?: AppLocale }) => {
-  const isFa = locale === 'fa';
-  const howItWorks = isFa
-    ? faHowItWorks
-    : {
+  const howItWorks =
+    locale === 'fa'
+      ? faHowItWorks
+      : locale === 'ru'
+        ? ruHowItWorks
+        : locale === 'zh'
+          ? zhHowItWorks
+          : {
         title: bookingPages.hub.howItWorks.title,
         intro: bookingPages.hub.howItWorks.intro,
         cta: 'Explore all features',
@@ -155,7 +209,7 @@ const Steps = ({ locale = 'en' }: { locale?: AppLocale }) => {
                     <StackCardItem>
                       <div className="relative z-20 mx-auto flex w-full max-w-full items-center justify-center overflow-hidden rounded-[20px] p-2 sm:mx-0 sm:max-w-[483px]">
                         <figure className="pointer-events-none absolute -top-[99%] -left-[88%] -z-10 size-[1000px] rotate-[307deg] opacity-50 select-none">
-                          <Image src={step.gradientSrc} alt="step" />
+                          <Image src={step.gradientSrc} alt="" />
                         </figure>
                         <div className="group relative z-10 w-full max-w-full space-y-6 rounded-[14px] bg-white p-8 sm:max-w-[467px] dark:bg-black">
                           <div className="space-y-1">
@@ -167,19 +221,19 @@ const Steps = ({ locale = 'en' }: { locale?: AppLocale }) => {
                               <>
                                 <Image
                                   src={step.stepImg}
-                                  alt="step"
+                                  alt=""
                                   className="block transition-transform duration-500 ease-out group-hover:scale-110 md:max-h-[300px] md:min-h-[300px] dark:hidden"
                                 />
                                 <Image
                                   src={step.stepDarkImg}
-                                  alt="step"
+                                  alt=""
                                   className="hidden transition-transform duration-500 ease-out group-hover:scale-110 md:max-h-[300px] md:min-h-[300px] dark:block"
                                 />
                               </>
                             ) : (
                               <Image
                                 src={step.stepImg}
-                                alt="step"
+                                alt=""
                                 className="transition-transform duration-500 ease-out group-hover:scale-110 md:max-h-[300px] md:min-h-[300px]"
                               />
                             )}

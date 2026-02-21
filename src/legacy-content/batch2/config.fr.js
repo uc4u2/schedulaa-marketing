@@ -65,28 +65,28 @@ export const workforcePage = {
 
 export const industriesPage = {
   meta: {
-    title: 'En savoir plus',
+    title: 'Annuaire des secteurs | Sites Schedulaa par industrie',
     description:
-      'En savoir plus',
+      'Explorez les workflows Schedulaa par secteur. Decouvrez salons, cliniques, studios fitness, services juridiques et plus avec reservation, paie et commerce unifies.',
   },
   hero: {
-    badge: 'Industries',
-    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    badge: 'Secteurs',
+    title: 'Parcourir par secteur',
     subtitle:
-      'Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.',
-    primaryCta: { label: 'En savoir plus', href: '/booking' },
-    secondaryCta: { label: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', href: '/contact' },
+      'Choisissez un secteur pour voir comment les entreprises utilisent Schedulaa pour la reservation, la paie, les operations RH, les sites web et le commerce.',
+    primaryCta: { label: 'Explorer la reservation', href: '/booking' },
+    secondaryCta: { label: 'Contacter l equipe', href: '/contact' },
   },
   sections: [
     {
-      title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+      title: 'Verticales populaires',
       items: [
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'En savoir plus' },
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'Cette section explique clairement la fonctionnalite dans Schedulaa.' },
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'En savoir plus' },
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'En savoir plus' },
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'Cette section explique clairement la fonctionnalite dans Schedulaa.' },
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'Cette section explique clairement la fonctionnalite dans Schedulaa.' },
+        { title: 'Salons et spas', body: 'Reservation en temps reel par styliste, pourboires et campagnes de retention.' },
+        { title: 'Cliniques de sante', body: 'Planification, rappels et workflows compatibles documentation.' },
+        { title: 'Tuteurs et education', body: 'Reservation de sessions, plannings recurrents et suivi de presence.' },
+        { title: 'Studios creatifs', body: 'Automatisation du parcours client de la reservation a la paie.' },
+        { title: 'Services juridiques et professionnels', body: 'Intake structure, planification et dossiers securises.' },
+        { title: 'Equipes multi-sites', body: 'Controle par site pour staffing, paie et analytique.' },
       ],
     },
   ],
@@ -239,32 +239,32 @@ export const supportPage = {
 
 export const zapierPage = {
   meta: {
-    title: 'En savoir plus',
+    title: 'Zapier pour Schedulaa — automatisez reservations, planning, conformite des pauses et paie',
     description:
-      'En savoir plus',
+      'Connectez Schedulaa a plus de 6 000 applications avec Zapier. Transmettez reservations, shifts, timeclock, pauses, PTO, onboarding et donnees de paie.',
   },
   hero: {
-    badge: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
-    title: 'En savoir plus',
+    badge: 'Automatisation Zapier',
+    title: 'Automatisez chaque reservation, shift, pause et etape paie avec Zapier',
     subtitle:
-      'En savoir plus',
-    primaryCta: { label: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', href: '/settings/zapier' },
-    secondaryCta: { label: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', href: '/demo' },
+      'Schedulaa envoie reservations, planning, timeclock, conformite des pauses, PTO, onboarding et paie vers Zapier; les actions peuvent aussi creer reservations, employes et shifts.',
+    primaryCta: { label: 'Ouvrir les parametres Zapier', href: '/settings/zapier' },
+    secondaryCta: { label: 'Voir la demo', href: '/demo' },
   },
   sections: [
     {
-      title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+      title: 'Groupes de triggers en direct',
       items: [
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'En savoir plus' },
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'Cette section explique clairement la fonctionnalite dans Schedulaa.' },
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'En savoir plus' },
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'En savoir plus' },
-        { title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', body: 'En savoir plus' },
+        { title: 'Evenements de reservation', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
+        { title: 'Planning et shifts', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
+        { title: 'Timeclock et conformite des pauses', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
+        { title: 'Conges, onboarding, documents', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },
+        { title: 'Evenements de paie', body: 'payroll.ready, payroll.finalized, payroll.details' },
       ],
     },
     {
-      title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
-      points: ['create_booking', 'create_employee', 'Cette section explique clairement la fonctionnalite dans Schedulaa.', 'attach_document'],
+      title: 'Actions en direct',
+      points: ['create_booking', 'create_employee', 'create_shift / update_shift', 'attach_document'],
     },
   ],
 };

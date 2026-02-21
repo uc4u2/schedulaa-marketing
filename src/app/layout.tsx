@@ -35,18 +35,26 @@ export async function generateMetadata(): Promise<Metadata> {
         fa: `${SITE_URL}/fa${languagePath}`,
         ru: `${SITE_URL}/ru${languagePath}`,
         zh: `${SITE_URL}/zh${languagePath}`,
+        es: `${SITE_URL}/es${languagePath}`,
+        fr: `${SITE_URL}/fr${languagePath}`,
+        de: `${SITE_URL}/de${languagePath}`,
+        ar: `${SITE_URL}/ar${languagePath}`,
+        pt: `${SITE_URL}/pt${languagePath}`,
       },
     },
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const locale = await getServerLocale();
+  const dir = locale === 'fa' || locale === 'ar' ? 'rtl' : 'ltr';
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} dir={dir} suppressHydrationWarning>
       <body className={`${interTight.variable} antialiased`}>
         <LocaleProvider>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>

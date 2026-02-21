@@ -1,0 +1,483 @@
+{
+  "meta": {
+    "title": "Schedulaa \u6587\u6863 | \u6392\u73ed\u3001\u85aa\u8d44\u4e0e\u5546\u4e1a\u6307\u5357",
+    "description": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+    "canonical": "https://www.schedulaa.com/docs",
+    "og": {
+      "title": "Schedulaa \u6587\u6863 | \u6392\u73ed\u3001\u85aa\u8d44\u4e0e\u5546\u4e1a\u6307\u5357",
+      "description": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+      "image": "https://www.schedulaa.com/og/docs.jpg"
+    }
+  },
+  "hero": {
+    "eyebrow": "\u6587\u6863\u4e2d\u5fc3",
+    "title": [
+      "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+      "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002"
+    ],
+    "subtitle": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+    "primaryCta": {
+      "label": "\u641c\u7d22\u6587\u6863"
+    },
+    "secondaryCta": {
+      "label": "\u67e5\u770b\u8def\u7ebf\u56fe"
+    },
+    "badge": {
+      "overline": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+      "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002"
+    },
+    "mediaAlt": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+  },
+  "quickLinks": {
+    "eyebrow": "\u5feb\u6377\u94fe\u63a5",
+    "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+    "subtitle": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+    "ctaLabel": "\u6253\u5f00",
+    "items": {
+      "gettingStarted": {
+        "label": "\u5feb\u901f\u5f00\u59cb",
+        "description": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002"
+      },
+      "userGuides": {
+        "label": "\u4f7f\u7528\u6307\u5357",
+        "description": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002"
+      },
+      "apiReference": {
+        "label": "API \u53c2\u8003",
+        "description": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002"
+      },
+      "integrations": {
+        "label": "\u96c6\u6210",
+        "description": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002"
+      },
+      "faq": {
+        "label": "\u5e38\u89c1\u95ee\u9898",
+        "description": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002"
+      },
+      "changelog": {
+        "label": "\u66f4\u65b0\u65e5\u5fd7",
+        "description": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002"
+      }
+    }
+  },
+  "search": {
+    "title": "\u641c\u7d22\u6587\u6863",
+    "placeholder": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+    "commonTopicsLabel": "\u5e38\u89c1\u4e3b\u9898\uff1a"
+  },
+  "gettingStarted": {
+    "title": "\u5feb\u901f\u5f00\u59cb",
+    "cards": [
+      {
+        "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+        "items": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      },
+      {
+        "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+        "items": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      },
+      {
+        "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+        "items": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      }
+    ]
+  },
+  "productGuides": {
+    "title": "\u4ea7\u54c1\u6307\u5357",
+    "cards": [
+      {
+        "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+        "highlights": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      },
+      {
+        "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+        "highlights": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      },
+      {
+        "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+        "highlights": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      },
+      {
+        "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+        "highlights": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      },
+      {
+        "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+        "highlights": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      },
+      {
+        "title": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+        "highlights": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      }
+    ]
+  },
+  "apiReference": {
+    "title": "API \u53c2\u8003\uff08\u5373\u5c06\u63a8\u51fa\uff09",
+    "tableHeaders": {
+      "category": "\u7c7b\u522b",
+      "method": "\u65b9\u6cd5",
+      "path": "\u8def\u5f84",
+      "summary": "\u6458\u8981"
+    },
+    "tip": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+    "comingSoon": "Schedulaa \u8fd0\u8425\u6587\u6863\uff1a\u7528\u4e8e\u914d\u7f6e\u4e0e\u65e5\u5e38\u4f7f\u7528\u3002",
+    "endpoints": []
+  },
+  "integrations": {
+    "title": "\u96c6\u6210",
+    "description": "Stripe \u5df2\u4e0a\u7ebf\uff1b\u5176\u4f59\u80fd\u529b\u6807\u8bb0\u4e3a Beta \u6216\u5373\u5c06\u63a8\u51fa\uff0c\u4fbf\u4e8e\u4f60\u4e86\u89e3\u540e\u7eed\u8def\u7ebf\u56fe\u3002",
+    "statusLabels": {
+      "available": "\u53ef\u7528",
+      "beta": "\u6d4b\u8bd5\u7248",
+      "comingSoon": "\u5373\u5c06\u63a8\u51fa"
+    },
+    "items": [
+      {
+        "name": "Stripe",
+        "status": "available",
+        "details": "\u652f\u6301\u7ed3\u8d26\u3001\u6253\u6b3e\u3001\u5361\u7247\u7559\u5b58\u4e0e Stripe Tax \u81ea\u52a8\u5316\u3002"
+      },
+      {
+        "name": "QuickBooks / Xero",
+        "status": "beta",
+        "details": "\u5c06\u85aa\u8d44\u5206\u5f55\u4e0e\u6536\u5165\u6c47\u603b\u5bfc\u51fa\u5230\u4f60\u7684\u4f1a\u8ba1\u8d26\u672c\u3002"
+      },
+      {
+        "name": "Jitsi",
+        "status": "available",
+        "details": "\u5728\u9884\u7ea6\u6d41\u7a0b\u4e2d\u5d4c\u5165\u7ebf\u4e0a\u4f1a\u8bdd\u4e0e\u89c6\u9891\u9762\u8bd5\u3002"
+      },
+      {
+        "name": "Zapier",
+        "status": "comingSoon",
+        "details": "\u7528\u4e8e\u81ea\u5b9a\u4e49\u6d41\u7a0b\u4e0e CRM \u66f4\u65b0\u7684\u81ea\u52a8\u5316\u8fde\u63a5\u5668\u3002"
+      },
+      {
+        "name": "Slack",
+        "status": "comingSoon",
+        "details": "\u65b0\u9884\u7ea6\u3001\u53d6\u6d88\u4e0e\u73ed\u6b21\u53d8\u66f4\u901a\u77e5\u3002"
+      },
+      {
+        "name": "\u57df\u540d\u8d2d\u4e70",
+        "status": "comingSoon",
+        "details": "\u65e0\u9700\u79bb\u5f00 Schedulaa \u5373\u53ef\u8d2d\u4e70\u5e76\u8fde\u63a5\u81ea\u5b9a\u4e49\u57df\u540d\u3002"
+      }
+    ]
+  },
+  "faq": {
+    "title": "\u5e38\u89c1\u95ee\u9898\u4e0e\u6392\u9519",
+    "items": [
+      {
+        "question": "\u8be5\u6d41\u7a0b\u5728 Schedulaa \u4e2d\u5982\u4f55\u5de5\u4f5c\uff1f",
+        "answer": "\u8be5\u6d41\u7a0b\u5df2\u63d0\u4f9b\u5206\u6b65\u6587\u6863\uff0c\u53ef\u76f4\u63a5\u7528\u4e8e\u56e2\u961f\u843d\u5730\u3002"
+      },
+      {
+        "question": "\u8be5\u6d41\u7a0b\u5728 Schedulaa \u4e2d\u5982\u4f55\u5de5\u4f5c\uff1f",
+        "answer": "\u8be5\u6d41\u7a0b\u5df2\u63d0\u4f9b\u5206\u6b65\u6587\u6863\uff0c\u53ef\u76f4\u63a5\u7528\u4e8e\u56e2\u961f\u843d\u5730\u3002"
+      },
+      {
+        "question": "\u8be5\u6d41\u7a0b\u5728 Schedulaa \u4e2d\u5982\u4f55\u5de5\u4f5c\uff1f",
+        "answer": "\u8be5\u6d41\u7a0b\u5df2\u63d0\u4f9b\u5206\u6b65\u6587\u6863\uff0c\u53ef\u76f4\u63a5\u7528\u4e8e\u56e2\u961f\u843d\u5730\u3002"
+      },
+      {
+        "question": "\u8be5\u6d41\u7a0b\u5728 Schedulaa \u4e2d\u5982\u4f55\u5de5\u4f5c\uff1f",
+        "answer": "\u8be5\u6d41\u7a0b\u5df2\u63d0\u4f9b\u5206\u6b65\u6587\u6863\uff0c\u53ef\u76f4\u63a5\u7528\u4e8e\u56e2\u961f\u843d\u5730\u3002"
+      }
+    ],
+    "schema": [
+      {
+        "question": "\u8be5\u6d41\u7a0b\u5728 Schedulaa \u4e2d\u5982\u4f55\u5de5\u4f5c\uff1f",
+        "answer": "\u8be5\u6d41\u7a0b\u5df2\u63d0\u4f9b\u5206\u6b65\u6587\u6863\uff0c\u53ef\u76f4\u63a5\u7528\u4e8e\u56e2\u961f\u843d\u5730\u3002"
+      },
+      {
+        "question": "\u8be5\u6d41\u7a0b\u5728 Schedulaa \u4e2d\u5982\u4f55\u5de5\u4f5c\uff1f",
+        "answer": "\u8be5\u6d41\u7a0b\u5df2\u63d0\u4f9b\u5206\u6b65\u6587\u6863\uff0c\u53ef\u76f4\u63a5\u7528\u4e8e\u56e2\u961f\u843d\u5730\u3002"
+      },
+      {
+        "question": "\u8be5\u6d41\u7a0b\u5728 Schedulaa \u4e2d\u5982\u4f55\u5de5\u4f5c\uff1f",
+        "answer": "\u8be5\u6d41\u7a0b\u5df2\u63d0\u4f9b\u5206\u6b65\u6587\u6863\uff0c\u53ef\u76f4\u63a5\u7528\u4e8e\u56e2\u961f\u843d\u5730\u3002"
+      }
+    ]
+  },
+  "changelog": {
+    "title": "\u66f4\u65b0\u65e5\u5fd7",
+    "releases": [
+      {
+        "version": "v2.5.0",
+        "date": "2025-10-15",
+        "entries": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      },
+      {
+        "version": "v2.4.0",
+        "date": "2025-09-30",
+        "entries": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      },
+      {
+        "version": "v2.3.1",
+        "date": "2025-08-10",
+        "entries": [
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+          "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+        ]
+      }
+    ]
+  },
+  "accountingGuides": {
+    "title": "\u4f1a\u8ba1\u6307\u5357",
+    "subtitle": "QuickBooks \u4e0e Xero \u6df1\u5ea6\u4e0a\u7ebf\u624b\u518c\uff1a\u6620\u5c04\u3001\u9ed8\u8ba4\u8bbe\u7f6e\u4e0e\u5bfc\u51fa\u9632\u62a4\u3002",
+    "guides": {
+      "quickbooks": {
+        "eyebrow": "QuickBooks Online",
+        "title": "Schedulaa + QuickBooks \u914d\u7f6e\u6307\u5357",
+        "summary": "\u4e00\u6b21\u5b8c\u6210\u6620\u5c04\uff0c\u6821\u9a8c\u72b6\u6001\u6807\u8bc6\uff0c\u518d\u4e00\u952e\u540c\u6b65\u85aa\u8d44\u6216\u6536\u5165\u5bfc\u51fa\u3002",
+        "quickLinkLabel": "QuickBooks \u4e0a\u7ebf\u6307\u5357",
+        "quickLinkDescription": "\u6620\u5c04\u3001\u9ed8\u8ba4\u9879\u3001\u6210\u672c\u4e2d\u5fc3\u4e0e\u5bfc\u51fa\u9632\u62a4\u3002",
+        "sections": [
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          }
+        ],
+        "ctaLabel": "\u6253\u5f00 QuickBooks \u8bbe\u7f6e"
+      },
+      "xero": {
+        "eyebrow": "Xero",
+        "title": "Schedulaa + Xero \u914d\u7f6e\u6307\u5357",
+        "summary": "\u5148\u914d\u7f6e\u8d26\u6237\u6620\u5c04\u3001tracking \u9ed8\u8ba4\u503c\u4e0e\u9501\u5b9a\u65e5\u671f\uff0c\u518d\u540c\u6b65\u85aa\u8d44\u548c\u6536\u5165\u5206\u5f55\u3002",
+        "quickLinkLabel": "Xero \u4e0a\u7ebf\u6307\u5357",
+        "quickLinkDescription": "\u624b\u5de5\u5206\u5f55\u6620\u5c04\u3001tracking \u4e0e\u9501\u5b9a\u65e5\u671f\u63a7\u5236\u3002",
+        "sections": [
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          },
+          {
+            "heading": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+            "items": [
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+              "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+            ]
+          }
+        ],
+        "ctaLabel": "\u6253\u5f00 Xero \u8bbe\u7f6e"
+      }
+    }
+  },
+  "footer": {
+    "helpText": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+    "links": {
+      "status": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+      "privacy": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002",
+      "terms": "Schedulaa \u672c\u5730\u5316\u6587\u6863\u5185\u5bb9\u3002"
+    }
+  }
+}

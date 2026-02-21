@@ -1,6 +1,9 @@
 import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
-import { payrollPages } from '@/legacy-content/payroll/config';
+import { getPayrollSource } from '@/legacy-content/payroll/getPayrollSource';
+import { getServerLocale } from '@/utils/serverLocale';
 
-export default function PayslipsPage() {
+export default async function PayslipsPage() {
+  const locale = await getServerLocale();
+  const payrollPages = getPayrollSource(locale);
   return <FeatureStyleContentPage config={payrollPages.payslips as any} routePath="/payslips" />;
 }

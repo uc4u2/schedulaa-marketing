@@ -3,6 +3,7 @@
 import { FormEvent, useState } from 'react';
 import Link from 'next/link';
 import { contactPage } from '@/legacy-content/batch2/config';
+import { AppLocale } from '@/utils/locale';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 
@@ -12,6 +13,85 @@ const API_ORIGIN =
   (process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://scheduling-application.onrender.com');
 
 const PLAN_OPTIONS = ['Starter', 'Plus', 'Pro', 'Business', 'Enterprise', 'Partnership', 'Migration Support'];
+
+const copyByLocale = {
+  en: {
+    supportCta: 'Contact support',
+    fullName: 'Full Name',
+    fullNamePlaceholder: 'Enter your name',
+    email: 'Email address',
+    emailPlaceholder: 'Enter your email',
+    company: 'Company',
+    companyPlaceholder: 'Company name',
+    plan: 'Plan interest',
+    message: 'Message',
+    messagePlaceholder: 'Enter your message',
+    agreePrefix: 'I agree with the',
+    agreeLink: 'terms and conditions',
+    submit: 'Submit',
+    submitting: 'Submitting...',
+    requiredError: 'Please include your name, email, and message.',
+    success: "Thanks! We'll get back to you shortly.",
+    failed: "We couldn't send your message. Please try again.",
+  },
+  ru: {
+    supportCta: 'Связаться с поддержкой',
+    fullName: 'Полное имя',
+    fullNamePlaceholder: 'Введите имя',
+    email: 'Email',
+    emailPlaceholder: 'Введите email',
+    company: 'Компания',
+    companyPlaceholder: 'Название компании',
+    plan: 'Интересующий тариф',
+    message: 'Сообщение',
+    messagePlaceholder: 'Введите сообщение',
+    agreePrefix: 'Я согласен с',
+    agreeLink: 'условиями и положениями',
+    submit: 'Отправить',
+    submitting: 'Отправка...',
+    requiredError: 'Пожалуйста, укажите имя, email и сообщение.',
+    success: 'Спасибо! Мы скоро с вами свяжемся.',
+    failed: 'Не удалось отправить сообщение. Попробуйте снова.',
+  },
+  zh: {
+    supportCta: '联系支持团队',
+    fullName: '姓名',
+    fullNamePlaceholder: '请输入姓名',
+    email: '邮箱地址',
+    emailPlaceholder: '请输入邮箱',
+    company: '公司',
+    companyPlaceholder: '公司名称',
+    plan: '意向方案',
+    message: '留言',
+    messagePlaceholder: '请输入留言',
+    agreePrefix: '我同意',
+    agreeLink: '条款和条件',
+    submit: '提交',
+    submitting: '提交中...',
+    requiredError: '请填写姓名、邮箱和留言。',
+    success: '感谢提交！我们会尽快联系您。',
+    failed: '发送失败，请稍后重试。',
+  },
+  fa: {
+    supportCta: 'تماس با پشتیبانی',
+    fullName: 'نام کامل',
+    fullNamePlaceholder: 'نام خود را وارد کنید',
+    email: 'ایمیل',
+    emailPlaceholder: 'ایمیل خود را وارد کنید',
+    company: 'شرکت',
+    companyPlaceholder: 'نام شرکت',
+    plan: 'پلن موردنظر',
+    message: 'پیام',
+    messagePlaceholder: 'پیام خود را وارد کنید',
+    agreePrefix: 'با',
+    agreeLink: 'شرایط و قوانین',
+    submit: 'ارسال',
+    submitting: 'در حال ارسال...',
+    requiredError: 'نام، ایمیل و پیام را وارد کنید.',
+    success: 'متشکریم! به‌زودی با شما تماس می‌گیریم.',
+    failed: 'ارسال پیام ناموفق بود. دوباره تلاش کنید.',
+  },
+} as const;
 
 interface ContactInfo {
   id: number;
@@ -106,7 +186,8 @@ const getIcon = (type: string) => {
   }
 };
 
-const Contact = () => {
+const Contact = ({ locale = 'en' }: { locale?: AppLocale }) => {
+  const copy = copyByLocale[locale as keyof typeof copyByLocale] || copyByLocale.en;
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -135,7 +216,7 @@ const Contact = () => {
     };
 
     if (!payload.name || !payload.email || !payload.message) {
-      setError('Please include your name, email, and message.');
+      setError(copy.requiredError);
       return;
     }
 
@@ -152,10 +233,10 @@ const Contact = () => {
         throw new Error(data?.error || 'Unable to submit message.');
       }
 
-      setSuccess(data?.success_msg || "Thanks! We'll get back to you shortly.");
+      setSuccess(data?.success_msg || copy.success);
       setForm({ name: '', email: '', company: '', plan: PLAN_OPTIONS[0], message: '' });
     } catch (err: any) {
-      setError(err?.message || "We couldn't send your message. Please try again.");
+      setError(err?.message || copy.failed);
     } finally {
       setSubmitting(false);
     }
@@ -183,7 +264,7 @@ const Contact = () => {
                     <LinkButton
                       href="/client/support"
                       className="btn hover:btn-green dark:btn-transparent btn-lg btn-white mx-auto w-[90%] font-medium md:mx-0 md:w-auto">
-                      Contact support
+                      {copy.supportCta}
                     </LinkButton>
                   </div>
                 </RevealAnimation>
@@ -215,7 +296,7 @@ const Contact = () => {
                 <form onSubmit={onSubmit}>
                   <fieldset className="mb-5 flex w-full flex-col items-start justify-start gap-2 md:mb-8">
                     <label htmlFor="fullName" className="text-tagline-1 text-secondary dark:text-accent font-medium">
-                      Full Name
+                      {copy.fullName}
                     </label>
                     <input
                       type="text"
@@ -224,14 +305,14 @@ const Contact = () => {
                       required
                       value={form.name}
                       onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
-                      placeholder="Enter your name"
+                      placeholder={copy.fullNamePlaceholder}
                       className="placeholder:text-tagline-1 border-stroke-3 dark:border-stroke-7 dark:bg-background-6 dark:placeholder:text-accent/60 dark:text-accent focus-visible:outline-primary-500 w-full rounded-full border px-[18px] py-3 font-normal placeholder:font-normal focus-visible:outline"
                     />
                   </fieldset>
 
                   <fieldset className="mb-5 flex w-full flex-col items-start justify-start gap-2 md:mb-8">
                     <label htmlFor="emailAddress" className="text-tagline-1 text-secondary dark:text-accent font-medium">
-                      Email address
+                      {copy.email}
                     </label>
                     <input
                       type="email"
@@ -240,14 +321,14 @@ const Contact = () => {
                       id="emailAddress"
                       value={form.email}
                       onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
-                      placeholder="Enter your email"
+                      placeholder={copy.emailPlaceholder}
                       className="placeholder:text-tagline-1 border-stroke-3 dark:border-stroke-7 dark:bg-background-6 dark:placeholder:text-accent/60 dark:text-accent focus-visible:outline-primary-500 w-full rounded-full border px-[18px] py-3 font-normal placeholder:font-normal focus-visible:outline"
                     />
                   </fieldset>
 
                   <fieldset className="mb-5 flex w-full flex-col items-start justify-start gap-2 md:mb-8">
                     <label htmlFor="company" className="text-tagline-1 text-secondary dark:text-accent font-medium">
-                      Company
+                      {copy.company}
                     </label>
                     <input
                       type="text"
@@ -255,14 +336,14 @@ const Contact = () => {
                       id="company"
                       value={form.company}
                       onChange={(e) => setForm((prev) => ({ ...prev, company: e.target.value }))}
-                      placeholder="Company name"
+                      placeholder={copy.companyPlaceholder}
                       className="placeholder:text-tagline-1 border-stroke-3 dark:border-stroke-7 dark:bg-background-6 dark:placeholder:text-accent/60 dark:text-accent focus-visible:outline-primary-500 w-full rounded-full border px-[18px] py-3 font-normal placeholder:font-normal focus-visible:outline"
                     />
                   </fieldset>
 
                   <fieldset className="mb-5 flex w-full flex-col items-start justify-start gap-2 md:mb-8">
                     <label htmlFor="plan" className="text-tagline-1 text-secondary dark:text-accent font-medium">
-                      Plan interest
+                      {copy.plan}
                     </label>
                     <select
                       name="plan"
@@ -280,7 +361,7 @@ const Contact = () => {
 
                   <fieldset className="mb-4 flex w-full flex-col items-start justify-start gap-2">
                     <label htmlFor="messages" className="text-tagline-1 text-secondary dark:text-accent font-medium">
-                      Message
+                      {copy.message}
                     </label>
                     <textarea
                       name="messages"
@@ -288,7 +369,7 @@ const Contact = () => {
                       required
                       value={form.message}
                       onChange={(e) => setForm((prev) => ({ ...prev, message: e.target.value }))}
-                      placeholder="Enter your message"
+                      placeholder={copy.messagePlaceholder}
                       className="placeholder:text-tagline-1 border-stroke-3 dark:border-stroke-7 dark:bg-background-6 dark:placeholder:text-accent/60 dark:text-accent focus-visible:outline-primary-500 min-h-[120px] w-full resize-none rounded-xl border px-[18px] py-3 font-normal placeholder:font-normal focus-visible:outline"
                     />
                   </fieldset>
@@ -299,9 +380,9 @@ const Contact = () => {
                       <span className="border-stroke-3 dark:border-stroke-7 after:bg-primary-500 peer-checked:border-primary-500 relative size-4 cursor-pointer rounded-full border after:absolute after:top-1/2 after:left-1/2 after:size-2.5 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:opacity-0 peer-checked:after:opacity-100" />
                     </label>
                     <label htmlFor="agree-terms" className="text-tagline-3 text-secondary/60 dark:text-accent/60 cursor-pointer">
-                      I agree with the{' '}
+                      {copy.agreePrefix}{' '}
                       <Link href="/terms" className="text-primary-500 text-tagline-3 underline">
-                        terms and conditions
+                        {copy.agreeLink}
                       </Link>
                     </label>
                   </fieldset>
@@ -314,7 +395,7 @@ const Contact = () => {
                     disabled={submitting}
                     className="btn btn-secondary dark:btn-accent btn-md hover:btn-green w-full first-letter:uppercase before:content-none disabled:opacity-60"
                     aria-label="Submit contact form">
-                    {submitting ? 'Submitting...' : 'Submit'}
+                    {submitting ? copy.submitting : copy.submit}
                   </button>
                 </form>
               </div>

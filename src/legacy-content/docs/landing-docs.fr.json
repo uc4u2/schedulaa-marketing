@@ -1,0 +1,483 @@
+{
+  "meta": {
+    "title": "Documentation Schedulaa | Guides planification, paie et commerce",
+    "description": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+    "canonical": "https://www.schedulaa.com/docs",
+    "og": {
+      "title": "Documentation Schedulaa | Guides planification, paie et commerce",
+      "description": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+      "image": "https://www.schedulaa.com/og/docs.jpg"
+    }
+  },
+  "hero": {
+    "eyebrow": "Documentation",
+    "title": [
+      "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+      "Guide operationnel Schedulaa pour la configuration et l usage quotidien."
+    ],
+    "subtitle": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+    "primaryCta": {
+      "label": "Rechercher dans la documentation"
+    },
+    "secondaryCta": {
+      "label": "Voir la feuille de route"
+    },
+    "badge": {
+      "overline": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+      "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien."
+    },
+    "mediaAlt": "Contenu localise de la documentation Schedulaa."
+  },
+  "quickLinks": {
+    "eyebrow": "Liens rapides",
+    "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+    "subtitle": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+    "ctaLabel": "Ouvrir",
+    "items": {
+      "gettingStarted": {
+        "label": "Demarrage",
+        "description": "Guide operationnel Schedulaa pour la configuration et l usage quotidien."
+      },
+      "userGuides": {
+        "label": "Guides utilisateur",
+        "description": "Guide operationnel Schedulaa pour la configuration et l usage quotidien."
+      },
+      "apiReference": {
+        "label": "Reference API",
+        "description": "Guide operationnel Schedulaa pour la configuration et l usage quotidien."
+      },
+      "integrations": {
+        "label": "Integrations",
+        "description": "Guide operationnel Schedulaa pour la configuration et l usage quotidien."
+      },
+      "faq": {
+        "label": "FAQ",
+        "description": "Guide operationnel Schedulaa pour la configuration et l usage quotidien."
+      },
+      "changelog": {
+        "label": "Journal des modifications",
+        "description": "Guide operationnel Schedulaa pour la configuration et l usage quotidien."
+      }
+    }
+  },
+  "search": {
+    "title": "Rechercher la documentation",
+    "placeholder": "Contenu localise de la documentation Schedulaa.",
+    "commonTopicsLabel": "Sujets frequents :"
+  },
+  "gettingStarted": {
+    "title": "Demarrage",
+    "cards": [
+      {
+        "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+        "items": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      },
+      {
+        "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+        "items": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      },
+      {
+        "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+        "items": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      }
+    ]
+  },
+  "productGuides": {
+    "title": "Guides produit",
+    "cards": [
+      {
+        "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+        "highlights": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      },
+      {
+        "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+        "highlights": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      },
+      {
+        "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+        "highlights": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      },
+      {
+        "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+        "highlights": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      },
+      {
+        "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+        "highlights": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      },
+      {
+        "title": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+        "highlights": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      }
+    ]
+  },
+  "apiReference": {
+    "title": "Reference API (bientot)",
+    "tableHeaders": {
+      "category": "Categorie",
+      "method": "Methode",
+      "path": "Chemin",
+      "summary": "Resume"
+    },
+    "tip": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+    "comingSoon": "Guide operationnel Schedulaa pour la configuration et l usage quotidien.",
+    "endpoints": []
+  },
+  "integrations": {
+    "title": "Integrations",
+    "description": "Stripe est actif aujourd hui; le reste est marque Beta ou Bientot disponible pour clarifier la roadmap.",
+    "statusLabels": {
+      "available": "Disponible",
+      "beta": "Beta",
+      "comingSoon": "Bientot"
+    },
+    "items": [
+      {
+        "name": "Stripe",
+        "status": "available",
+        "details": "Checkout, versements, carte enregistree et automatisation Stripe Tax."
+      },
+      {
+        "name": "QuickBooks / Xero",
+        "status": "beta",
+        "details": "Export des journaux de paie et des resumes de revenus vers votre comptabilite."
+      },
+      {
+        "name": "Jitsi",
+        "status": "available",
+        "details": "Sessions virtuelles et entretiens video integres au flux de reservation."
+      },
+      {
+        "name": "Zapier",
+        "status": "comingSoon",
+        "details": "Connecteur d automatisation pour workflows personnalises et mises a jour CRM."
+      },
+      {
+        "name": "Slack",
+        "status": "comingSoon",
+        "details": "Notifications de nouvelles reservations, annulations et changements de shift."
+      },
+      {
+        "name": "Achat de domaine",
+        "status": "comingSoon",
+        "details": "Achetez et connectez un domaine personnalise sans quitter Schedulaa."
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ et depannage",
+    "items": [
+      {
+        "question": "Comment fonctionne ce flux dans Schedulaa ?",
+        "answer": "Ce flux est documente et pret a l usage pour les equipes operationnelles."
+      },
+      {
+        "question": "Comment fonctionne ce flux dans Schedulaa ?",
+        "answer": "Ce flux est documente et pret a l usage pour les equipes operationnelles."
+      },
+      {
+        "question": "Comment fonctionne ce flux dans Schedulaa ?",
+        "answer": "Ce flux est documente et pret a l usage pour les equipes operationnelles."
+      },
+      {
+        "question": "Comment fonctionne ce flux dans Schedulaa ?",
+        "answer": "Ce flux est documente et pret a l usage pour les equipes operationnelles."
+      }
+    ],
+    "schema": [
+      {
+        "question": "Comment fonctionne ce flux dans Schedulaa ?",
+        "answer": "Ce flux est documente et pret a l usage pour les equipes operationnelles."
+      },
+      {
+        "question": "Comment fonctionne ce flux dans Schedulaa ?",
+        "answer": "Ce flux est documente et pret a l usage pour les equipes operationnelles."
+      },
+      {
+        "question": "Comment fonctionne ce flux dans Schedulaa ?",
+        "answer": "Ce flux est documente et pret a l usage pour les equipes operationnelles."
+      }
+    ]
+  },
+  "changelog": {
+    "title": "Journal des modifications",
+    "releases": [
+      {
+        "version": "v2.5.0",
+        "date": "2025-10-15",
+        "entries": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      },
+      {
+        "version": "v2.4.0",
+        "date": "2025-09-30",
+        "entries": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      },
+      {
+        "version": "v2.3.1",
+        "date": "2025-08-10",
+        "entries": [
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa.",
+          "Contenu localise de la documentation Schedulaa."
+        ]
+      }
+    ]
+  },
+  "accountingGuides": {
+    "title": "Guides comptables",
+    "subtitle": "Playbooks QuickBooks et Xero avec mapping, valeurs par defaut et garde-fous d export.",
+    "guides": {
+      "quickbooks": {
+        "eyebrow": "QuickBooks Online",
+        "title": "Guide de configuration Schedulaa + QuickBooks",
+        "summary": "Mappez une fois, validez les statuts, puis synchronisez paie ou revenus en un clic.",
+        "quickLinkLabel": "Onboarding QuickBooks",
+        "quickLinkDescription": "Mapping, defauts, centres de cout et garde-fous d export.",
+        "sections": [
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          }
+        ],
+        "ctaLabel": "Ouvrir les parametres QuickBooks"
+      },
+      "xero": {
+        "eyebrow": "Xero",
+        "title": "Guide de configuration Schedulaa + Xero",
+        "summary": "Mappez les comptes, configurez le tracking par defaut et verrouillez les periodes avant synchro.",
+        "quickLinkLabel": "Onboarding Xero",
+        "quickLinkDescription": "Mapping journal manuel, tracking et controle de date de verrouillage.",
+        "sections": [
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          },
+          {
+            "heading": "Contenu localise de la documentation Schedulaa.",
+            "items": [
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa.",
+              "Contenu localise de la documentation Schedulaa."
+            ]
+          }
+        ],
+        "ctaLabel": "Ouvrir les parametres Xero"
+      }
+    }
+  },
+  "footer": {
+    "helpText": "Contenu localise de la documentation Schedulaa.",
+    "links": {
+      "status": "Contenu localise de la documentation Schedulaa.",
+      "privacy": "Contenu localise de la documentation Schedulaa.",
+      "terms": "Contenu localise de la documentation Schedulaa."
+    }
+  }
+}

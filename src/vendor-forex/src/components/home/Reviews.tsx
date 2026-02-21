@@ -2,6 +2,7 @@
 
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import LinkButton from '@/components/ui/button/LinkButton';
+import { AppLocale } from '@/utils/locale';
 import dashboardImg from '@public/images/marketing/showcase/dashboard.png';
 import employeeDashboardImg from '@public/images/marketing/showcase/employee-dashboard.png';
 import myShiftImg from '@public/images/marketing/showcase/my-shift.png';
@@ -37,21 +38,66 @@ const showcaseItems: ShowcaseItem[] = [
   { id: 'xero', title: 'Xero integration', subtitle: 'Finance handoff', image: xeroImg },
 ];
 
-const Reviews = () => {
+const mapShowcaseLocale = (items: ShowcaseItem[], locale: AppLocale) => {
+  if (locale === 'ru') {
+    const ru = {
+      dashboard: { title: 'Панель менеджера', subtitle: 'Общий обзор операций' },
+      'employee-dashboard': { title: 'Панель сотрудника', subtitle: 'Время и смены' },
+      'my-shift': { title: 'Лента смен', subtitle: 'Живые обновления расписания' },
+      qb: { title: 'Синхронизация QuickBooks', subtitle: 'Бухгалтерский workflow' },
+      roe: { title: 'ROE workflow', subtitle: 'Compliance-документы' },
+      stripe: { title: 'Статус Stripe', subtitle: 'Платежи и подписки' },
+      t4: { title: 'Генерация T4', subtitle: 'Payroll-экспорт для Канады' },
+      w2: { title: 'Формы W-2', subtitle: 'Payroll-экспорт для США' },
+      'website-builder': { title: 'Конструктор сайтов', subtitle: 'Быстрый запуск страниц' },
+      xero: { title: 'Интеграция Xero', subtitle: 'Передача в финансы' },
+    } as Record<string, { title: string; subtitle: string }>;
+    return items.map((item) => ({ ...item, ...(ru[item.id] || {}) }));
+  }
+  if (locale === 'zh') {
+    const zh = {
+      dashboard: { title: '经理看板', subtitle: '运营总览' },
+      'employee-dashboard': { title: '员工看板', subtitle: '工时与班次' },
+      'my-shift': { title: '班次时间线', subtitle: '排班实时更新' },
+      qb: { title: 'QuickBooks 同步', subtitle: '财务工作流' },
+      roe: { title: 'ROE 流程', subtitle: '合规记录' },
+      stripe: { title: 'Stripe 状态', subtitle: '支付与订阅' },
+      t4: { title: 'T4 生成', subtitle: '加拿大薪资导出' },
+      w2: { title: 'W-2 表单', subtitle: '美国薪资导出' },
+      'website-builder': { title: '网站构建器', subtitle: '快速发布页面' },
+      xero: { title: 'Xero 集成', subtitle: '财务交接' },
+    } as Record<string, { title: string; subtitle: string }>;
+    return items.map((item) => ({ ...item, ...(zh[item.id] || {}) }));
+  }
+  return items;
+};
+
+const Reviews = ({ locale = 'en' }: { locale?: AppLocale }) => {
+  const showcaseItemsLocalized = mapShowcaseLocale(showcaseItems, locale);
+  const badge = locale === 'ru' ? 'Истории клиентов' : locale === 'zh' ? '客户成功' : 'Customer Success';
+  const title = locale === 'ru' ? 'Реальные продукты. Реальные результаты.' : locale === 'zh' ? '真实产品，真实成果。' : 'Real apps. Real results.';
+  const subtitle =
+    locale === 'ru'
+      ? 'Смотрите живые экраны Schedulaa: расписания, payroll, сайты и интеграции с учётными системами.'
+      : locale === 'zh'
+        ? '查看覆盖预约、薪资、网站与财务集成的真实产品画面。'
+        : 'Explore live product visuals across scheduling, payroll, websites, and accounting integrations.';
+  const cta =
+    locale === 'fa' ? 'مشاهده نمای پلتفرم' : locale === 'ru' ? 'Смотреть визуалы платформы' : locale === 'zh' ? '查看平台展示' : 'Explore platform visuals';
   return (
     <section className="relative bg-[linear-gradient(180deg,#f4f6f9_0%,#e9edf3_100%)] py-16 md:py-20 lg:py-[100px] dark:bg-[#0f172a] shadow-[inset_0_1px_0_rgba(15,23,42,0.06)] dark:shadow-[inset_0_1px_0_rgba(148,163,184,0.14)]">
       <div className="main-container bg-transparent flex flex-col gap-[70px] max-[426px]:gap-10">
         <div className="flex flex-col items-center text-center">
           <RevealAnimation delay={0.1}>
-            <span className="badge badge-green-v2 mb-5">Customer Success</span>
+            <span className="badge badge-green-v2 mb-5">{badge}</span>
           </RevealAnimation>
 
           <RevealAnimation delay={0.2}>
-            <h2 className="mx-auto mb-4 max-w-[750px] max-[426px]:mb-3">Real apps. Real results.</h2>
+            <h2 className="mx-auto mb-4 max-w-[750px] max-[426px]:mb-3">{title}</h2>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
             <p className="max-[426px]:text-tagline-2 max-w-[580px] max-[426px]:max-w-[320px]">
-              Explore live product visuals across scheduling, payroll, websites, and accounting integrations.
+              {subtitle}
             </p>
           </RevealAnimation>
         </div>
@@ -80,7 +126,7 @@ const Reviews = () => {
               scrollbar={false}
             >
               <div className="swiper-wrapper">
-                {showcaseItems.map((item) => (
+                {showcaseItemsLocalized.map((item) => (
                   <SwiperSlide key={item.id} className="swiper-slide">
                     <div className="group relative mx-1 overflow-visible rounded-[22px] transition-transform duration-300 hover:z-30 hover:scale-[1.65] sm:mx-0">
                       <div className="pointer-events-none absolute -inset-2 rounded-[26px] bg-linear-[145deg,rgba(0,194,255,0.16)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.1)_100%] blur-md" />
@@ -111,7 +157,7 @@ const Reviews = () => {
               href="/features"
               className="btn btn-md btn-secondary dark:btn-transparent hover:btn-white w-full sm:w-auto"
             >
-              Explore platform visuals
+              {cta}
             </LinkButton>
           </div>
         </RevealAnimation>

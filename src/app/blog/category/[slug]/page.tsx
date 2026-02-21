@@ -4,6 +4,19 @@ import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData'
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
+import { DEFAULT_LOCALE, isSupportedLocale } from '@/utils/locale';
+
+const categoryShellCopy: Record<string, { badge: string; empty: string; back: string; start: string }> = {
+  en: { badge: 'Blog category', empty: 'No posts in this category yet.', back: 'Back to blog', start: 'Start free' },
+  fa: { badge: 'دسته بندي وبلاگ', empty: 'هنوز پستي در اين دسته منتشر نشده است.', back: 'بازگشت به وبلاگ', start: 'شروع رايگان' },
+  ru: { badge: 'Категория блога', empty: 'В этой категории пока нет публикаций.', back: 'Назад в блог', start: 'Начать бесплатно' },
+  zh: { badge: '博客分类', empty: '该分类下暂无文章。', back: '返回博客', start: '免费开始' },
+  es: { badge: 'Categoria del blog', empty: 'Aun no hay publicaciones en esta categoria.', back: 'Volver al blog', start: 'Comenzar gratis' },
+  fr: { badge: 'Categorie du blog', empty: "Aucun article n'est encore publie dans cette categorie.", back: 'Retour au blog', start: 'Commencer gratuitement' },
+  de: { badge: 'Blogkategorie', empty: 'In dieser Kategorie gibt es noch keine Beitraege.', back: 'Zurueck zum Blog', start: 'Kostenlos starten' },
+  ar: { badge: 'تصنيف المدونة', empty: 'لا توجد مقالات في هذا التصنيف حتى الان.', back: 'العودة الى المدونة', start: 'ابدأ مجانا' },
+  pt: { badge: 'Categoria do blog', empty: 'Ainda nao ha posts nesta categoria.', back: 'Voltar ao blog', start: 'Comecar gratis' },
+};
 
 type CategoryProfile = {
   title: string;
@@ -172,7 +185,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogCategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const h = await headers();
-  const locale = h.get('x-locale') === 'fa' ? 'fa' : 'en';
+  const headerLocale = h.get('x-locale');
+  const locale = isSupportedLocale(headerLocale) ? headerLocale : DEFAULT_LOCALE;
+  const shellCopy = categoryShellCopy[locale] || categoryShellCopy.en;
   const returnTo = marketingReturnTo(locale, `/blog/category/${slug}`);
 
   const categoryPosts = (posts as any[])
@@ -184,7 +199,7 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ s
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
       <section className="main-container px-5">
         <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
-          <p className="badge badge-yellow-v2">Blog category</p>
+          <p className="badge badge-yellow-v2">{shellCopy.badge}</p>
           <h1 className="mt-5">{copy.title}</h1>
           <p className="mt-4 max-w-[900px] text-secondary/70 dark:text-accent/70">{copy.subtitle}</p>
         </div>
@@ -201,7 +216,7 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ s
         <div className="mt-8 space-y-4">
           {categoryPosts.length === 0 ? (
             <div className="rounded-xl border border-stroke-2 bg-white p-5 dark:border-stroke-7 dark:bg-background-8">
-              <p className="text-secondary/70 dark:text-accent/70">No posts in this category yet.</p>
+              <p className="text-secondary/70 dark:text-accent/70">{shellCopy.empty}</p>
             </div>
           ) : (
             categoryPosts.map((post: any) => (
@@ -219,10 +234,10 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ s
 
         <div className="mt-8 flex gap-4">
           <Link href="/blog" className="text-primary-500 underline">
-            Back to blog
+            {shellCopy.back}
           </Link>
           <Link href={buildAppUrl('/register', { returnTo })} className="text-primary-500 underline">
-            Start free
+            {shellCopy.start}
           </Link>
         </div>
       </section>

@@ -12,7 +12,7 @@ import cardFourImg from '@public/images/ns-img-93.png';
 import cardFourImgDark from '@public/images/ns-img-dark-66.png';
 import cardFiveImg from '@public/images/ns-img-94.png';
 import cardFiveImgDark from '@public/images/ns-img-dark-67.png';
-import { AppLocale, withLocalePath } from '@/utils/locale';
+import { AppLocale, DEFAULT_LOCALE, isSupportedLocale, withLocalePath } from '@/utils/locale';
 
 type FeatureGridItem = {
   title: string;
@@ -35,7 +35,8 @@ const assets: Array<{ light: StaticImageData; dark: StaticImageData }> = [
 
 const getLocale = async (): Promise<AppLocale> => {
   const h = await headers();
-  return h.get('x-locale') === 'fa' ? 'fa' : 'en';
+  const headerLocale = h.get('x-locale');
+  return isSupportedLocale(headerLocale) ? headerLocale : DEFAULT_LOCALE;
 };
 
 const mosaicClasses = [

@@ -13,13 +13,14 @@ import analytics1 from '@public/images/marketing/analytics-board.png';
 import analytics2 from '@public/images/marketing/analytics-side-a.png';
 import analytics3 from '@public/images/marketing/analytics-side-b.png';
 import avatar5 from '@public/images/ns-avatar-5.png';
-import { marketingPages } from '@/legacy-content/marketing/config';
-import { AppLocale, withLocalePath } from '@/utils/locale';
+import { getMarketingSource } from '@/legacy-content/marketing/getMarketingSource';
+import { AppLocale, DEFAULT_LOCALE, isSupportedLocale, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
 const getLocale = async (): Promise<AppLocale> => {
   const h = await headers();
-  return h.get('x-locale') === 'fa' ? 'fa' : 'en';
+  const headerLocale = h.get('x-locale');
+  return isSupportedLocale(headerLocale) ? headerLocale : DEFAULT_LOCALE;
 };
 
 const isExternalLink = (href: string) =>
@@ -61,28 +62,33 @@ function CtaLink({ href, locale, label, primary = false }: CtaLinkProps) {
   );
 }
 
-const hubMeta = marketingPages.hub.meta;
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const marketingPages = getMarketingSource(locale);
+  const hubMeta = marketingPages.hub.meta;
 
-export const metadata: Metadata = {
-  title: hubMeta.title,
-  description: hubMeta.description,
-  alternates: { canonical: hubMeta.canonical },
-  openGraph: {
-    title: hubMeta.og.title,
-    description: hubMeta.og.description,
-    url: hubMeta.og.url,
-    images: hubMeta.og.image ? [{ url: hubMeta.og.image }] : undefined,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: hubMeta.twitter.title,
-    description: hubMeta.twitter.description,
-    images: hubMeta.twitter.image ? [hubMeta.twitter.image] : undefined,
-  },
-};
+  return {
+    title: hubMeta.title,
+    description: hubMeta.description,
+    alternates: { canonical: hubMeta.canonical },
+    openGraph: {
+      title: hubMeta.og.title,
+      description: hubMeta.og.description,
+      url: hubMeta.og.url,
+      images: hubMeta.og.image ? [{ url: hubMeta.og.image }] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: hubMeta.twitter.title,
+      description: hubMeta.twitter.description,
+      images: hubMeta.twitter.image ? [hubMeta.twitter.image] : undefined,
+    },
+  };
+}
 
 export default async function MarketingPage() {
   const locale = await getLocale();
+  const marketingPages = getMarketingSource(locale);
   const page = marketingPages.hub;
   const hero = page.hero;
   const analyticsList = page.lists[0];

@@ -1,0 +1,483 @@
+{
+  "meta": {
+    "title": "Schedulaa Dokumentation | Leitfaeden fuer Planung, Abrechnung und Commerce",
+    "description": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+    "canonical": "https://www.schedulaa.com/docs",
+    "og": {
+      "title": "Schedulaa Dokumentation | Leitfaeden fuer Planung, Abrechnung und Commerce",
+      "description": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+      "image": "https://www.schedulaa.com/og/docs.jpg"
+    }
+  },
+  "hero": {
+    "eyebrow": "Dokumentation",
+    "title": [
+      "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+      "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung."
+    ],
+    "subtitle": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+    "primaryCta": {
+      "label": "Dokumentation durchsuchen"
+    },
+    "secondaryCta": {
+      "label": "Roadmap ansehen"
+    },
+    "badge": {
+      "overline": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+      "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung."
+    },
+    "mediaAlt": "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+  },
+  "quickLinks": {
+    "eyebrow": "Schnelllinks",
+    "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+    "subtitle": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+    "ctaLabel": "Oeffnen",
+    "items": {
+      "gettingStarted": {
+        "label": "Erste Schritte",
+        "description": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung."
+      },
+      "userGuides": {
+        "label": "Benutzerleitfaeden",
+        "description": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung."
+      },
+      "apiReference": {
+        "label": "API-Referenz",
+        "description": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung."
+      },
+      "integrations": {
+        "label": "Integrationen",
+        "description": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung."
+      },
+      "faq": {
+        "label": "FAQ",
+        "description": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung."
+      },
+      "changelog": {
+        "label": "Aenderungsprotokoll",
+        "description": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung."
+      }
+    }
+  },
+  "search": {
+    "title": "Dokumentation durchsuchen",
+    "placeholder": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+    "commonTopicsLabel": "Haefige Themen:"
+  },
+  "gettingStarted": {
+    "title": "Erste Schritte",
+    "cards": [
+      {
+        "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+        "items": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      },
+      {
+        "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+        "items": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      },
+      {
+        "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+        "items": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      }
+    ]
+  },
+  "productGuides": {
+    "title": "Produktleitfaeden",
+    "cards": [
+      {
+        "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+        "highlights": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      },
+      {
+        "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+        "highlights": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      },
+      {
+        "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+        "highlights": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      },
+      {
+        "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+        "highlights": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      },
+      {
+        "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+        "highlights": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      },
+      {
+        "title": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+        "highlights": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      }
+    ]
+  },
+  "apiReference": {
+    "title": "API-Referenz (kommt bald)",
+    "tableHeaders": {
+      "category": "Kategorie",
+      "method": "Methode",
+      "path": "Pfad",
+      "summary": "Zusammenfassung"
+    },
+    "tip": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+    "comingSoon": "Operativer Schedulaa-Leitfaden fuer Einrichtung und taegliche Nutzung.",
+    "endpoints": []
+  },
+  "integrations": {
+    "title": "Integrationen",
+    "description": "Stripe ist bereits live; weitere Integrationen sind als Beta oder Coming Soon markiert, damit die Roadmap klar bleibt.",
+    "statusLabels": {
+      "available": "Verfuegbar",
+      "beta": "Beta",
+      "comingSoon": "Demnaechst"
+    },
+    "items": [
+      {
+        "name": "Stripe",
+        "status": "available",
+        "details": "Checkout, Auszahlungen, Card-on-file und Stripe-Tax-Automatisierung."
+      },
+      {
+        "name": "QuickBooks / Xero",
+        "status": "beta",
+        "details": "Export von Payroll-Journalen und Umsatzsummen in Ihr Buchhaltungssystem."
+      },
+      {
+        "name": "Jitsi",
+        "status": "available",
+        "details": "Virtuelle Sessions und Video-Interviews direkt im Buchungsablauf."
+      },
+      {
+        "name": "Zapier",
+        "status": "comingSoon",
+        "details": "Automations-Connector fuer benutzerdefinierte Workflows und CRM-Updates."
+      },
+      {
+        "name": "Slack",
+        "status": "comingSoon",
+        "details": "Benachrichtigungen zu neuen Buchungen, Stornos und Schichtaenderungen."
+      },
+      {
+        "name": "Domain-Kauf",
+        "status": "comingSoon",
+        "details": "Eigene Domains kaufen und verbinden, ohne Schedulaa zu verlassen."
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ und Fehlerbehebung",
+    "items": [
+      {
+        "question": "Wie funktioniert dieser Ablauf in Schedulaa?",
+        "answer": "Dieser Ablauf ist Schritt fuer Schritt dokumentiert und einsatzbereit."
+      },
+      {
+        "question": "Wie funktioniert dieser Ablauf in Schedulaa?",
+        "answer": "Dieser Ablauf ist Schritt fuer Schritt dokumentiert und einsatzbereit."
+      },
+      {
+        "question": "Wie funktioniert dieser Ablauf in Schedulaa?",
+        "answer": "Dieser Ablauf ist Schritt fuer Schritt dokumentiert und einsatzbereit."
+      },
+      {
+        "question": "Wie funktioniert dieser Ablauf in Schedulaa?",
+        "answer": "Dieser Ablauf ist Schritt fuer Schritt dokumentiert und einsatzbereit."
+      }
+    ],
+    "schema": [
+      {
+        "question": "Wie funktioniert dieser Ablauf in Schedulaa?",
+        "answer": "Dieser Ablauf ist Schritt fuer Schritt dokumentiert und einsatzbereit."
+      },
+      {
+        "question": "Wie funktioniert dieser Ablauf in Schedulaa?",
+        "answer": "Dieser Ablauf ist Schritt fuer Schritt dokumentiert und einsatzbereit."
+      },
+      {
+        "question": "Wie funktioniert dieser Ablauf in Schedulaa?",
+        "answer": "Dieser Ablauf ist Schritt fuer Schritt dokumentiert und einsatzbereit."
+      }
+    ]
+  },
+  "changelog": {
+    "title": "Aenderungsprotokoll",
+    "releases": [
+      {
+        "version": "v2.5.0",
+        "date": "2025-10-15",
+        "entries": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      },
+      {
+        "version": "v2.4.0",
+        "date": "2025-09-30",
+        "entries": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      },
+      {
+        "version": "v2.3.1",
+        "date": "2025-08-10",
+        "entries": [
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+          "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+        ]
+      }
+    ]
+  },
+  "accountingGuides": {
+    "title": "Accounting-Leitfaeden",
+    "subtitle": "QuickBooks- und Xero-Playbooks mit Mapping, Standardwerten und Export-Guardrails.",
+    "guides": {
+      "quickbooks": {
+        "eyebrow": "QuickBooks Online",
+        "title": "Schedulaa + QuickBooks Einrichtungsleitfaden",
+        "summary": "Einmal mappen, Statuschips pruefen und Payroll- oder Revenue-Exporte mit einem Klick synchronisieren.",
+        "quickLinkLabel": "QuickBooks Onboarding",
+        "quickLinkDescription": "Mapping, Defaults, Cost-Center und Export-Guardrails.",
+        "sections": [
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          }
+        ],
+        "ctaLabel": "QuickBooks-Einstellungen oeffnen"
+      },
+      "xero": {
+        "eyebrow": "Xero",
+        "title": "Schedulaa + Xero Einrichtungsleitfaden",
+        "summary": "Konten mappen, Tracking-Defaults konfigurieren und Perioden sperren, bevor Sie synchronisieren.",
+        "quickLinkLabel": "Xero Onboarding",
+        "quickLinkDescription": "Manual-Journal-Mapping, Tracking und Lock-Date-Steuerung.",
+        "sections": [
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          },
+          {
+            "heading": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+            "items": [
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+              "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+            ]
+          }
+        ],
+        "ctaLabel": "Xero-Einstellungen oeffnen"
+      }
+    }
+  },
+  "footer": {
+    "helpText": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+    "links": {
+      "status": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+      "privacy": "Lokalisierter Inhalt der Schedulaa-Dokumentation.",
+      "terms": "Lokalisierter Inhalt der Schedulaa-Dokumentation."
+    }
+  }
+}

@@ -4,11 +4,10 @@ import { CheckIcon } from '@/icons';
 import { cn } from '@/utils/cn';
 import { getPricingSource } from '@/legacy-content/pricing/getPricingSource';
 import { buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
-import { detectLocaleFromPath } from '@/utils/locale';
+import { AppLocale } from '@/utils/locale';
 import gradient4Img from '@public/images/ns-img-496.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import RevealAnimation from '../animation/RevealAnimation';
 
 interface Feature {
@@ -34,11 +33,19 @@ const featureLabels = [
   'Multi-location controls',
 ];
 
-const Pricing = () => {
-  const pathname = usePathname() || '/';
-  const locale = detectLocaleFromPath(pathname);
+const featureLabelsByLocale: Record<string, string[]> = {
+  en: featureLabels,
+  fa: ['وب‌سایت + رزرو', 'زمان‌بندی کارکنان', 'گردش‌کار حقوق', 'اتوماسیون و کمپین', 'کنترل چندشعبه‌ای'],
+  ru: ['Сайт + бронирование', 'Расписание сотрудников', 'Payroll workflow', 'Автоматизация и кампании', 'Контроль филиалов'],
+  zh: ['网站与预约', '员工排班', '薪资流程', '自动化与营销', '多门店管理'],
+};
+
+const Pricing = ({ locale = 'en' }: { locale?: AppLocale }) => {
   const pricingSource = getPricingSource(locale);
   const returnTo = marketingReturnTo(locale, '/pricing');
+  const labels = featureLabelsByLocale[locale] || featureLabelsByLocale.en;
+  const includedLabel =
+    locale === 'fa' ? 'موارد شامل' : locale === 'ru' ? 'Что включено' : locale === 'zh' ? '包含内容' : "What's included";
   const pricingPlans: PricingPlan[] = [
     {
       id: 'starter',
@@ -114,14 +121,14 @@ const Pricing = () => {
                   <div>
                     <div className="md:h-[195px] md:w-[290px]" />
                     <div className="space-y-2.5">
-                      <h3 className="text-heading-6">What&apos;s included</h3>
+                      <h3 className="text-heading-6">{includedLabel}</h3>
                       <ul>
-                        {featureLabels.map((feature, index) => (
+                        {labels.map((feature, index) => (
                           <li
                             key={feature}
                             className={cn(
                               'text-secondary/60 dark:text-accent/60 text-tagline-1 py-4 pr-6 font-normal',
-                              index < featureLabels.length - 1 && 'border-b-stroke-4 dark:border-b-stroke-8 border-b',
+                              index < labels.length - 1 && 'border-b-stroke-4 dark:border-b-stroke-8 border-b',
                             )}>
                             {feature}
                           </li>

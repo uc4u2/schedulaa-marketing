@@ -1,45 +1,9 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
+import { AppLocale } from '@/utils/locale';
+import { getFaqCopy } from './localeCopy';
 
-const faqData = [
-  {
-    id: 1,
-    question: 'What is privacy in the digital world?',
-    answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
-  },
-  {
-    id: 2,
-    question: 'Why is online privacy important?',
-    answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
-  },
-  {
-    id: 3,
-    question: 'How can I protect my privacy online?',
-    answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
-  },
-  {
-    id: 4,
-    question: 'Are my messages really private?',
-    answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
-  },
-  {
-    id: 5,
-    question: 'What data do websites collect about me?',
-    answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
-  },
-  {
-    id: 6,
-    question: 'What is a privacy policy?',
-    answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
-  },
-];
-
-const PrivacyTab = () => {
+const PrivacyTab = ({ locale }: { locale: AppLocale | string | null | undefined }) => {
+  const faqData = getFaqCopy(locale).privacyItems;
   return (
     <Accordion
       className="mx-auto w-full max-w-[850px] space-y-4"

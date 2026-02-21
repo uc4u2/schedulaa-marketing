@@ -1,6 +1,14 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 import type { NextConfig } from 'next';
 
+const LOCALES = ['en', 'fa', 'ru', 'zh', 'es', 'fr', 'de', 'ar', 'pt'] as const;
+const LEGACY_ALIASES: Array<{ from: string; to: string }> = [
+  { from: '/services', to: '/features' },
+  { from: '/contact-us', to: '/contact' },
+  { from: '/support', to: '/client/support' },
+  { from: '/terms-conditions', to: '/terms' },
+];
+
 const nextConfig: NextConfig = {
   turbopack: {
     resolveAlias: {
@@ -10,34 +18,15 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [
-      { source: '/services', destination: '/features' },
-      { source: '/contact-us', destination: '/contact' },
-      { source: '/support', destination: '/client/support' },
-      { source: '/terms-conditions', destination: '/terms' },
-      { source: '/en/services', destination: '/features' },
-      { source: '/en/contact-us', destination: '/contact' },
-      { source: '/en/support', destination: '/client/support' },
-      { source: '/en/terms-conditions', destination: '/terms' },
-      { source: '/fa/services', destination: '/features' },
-      { source: '/fa/contact-us', destination: '/contact' },
-      { source: '/fa/support', destination: '/client/support' },
-      { source: '/fa/terms-conditions', destination: '/terms' },
-      { source: '/ru/services', destination: '/features' },
-      { source: '/ru/contact-us', destination: '/contact' },
-      { source: '/ru/support', destination: '/client/support' },
-      { source: '/ru/terms-conditions', destination: '/terms' },
-      { source: '/zh/services', destination: '/features' },
-      { source: '/zh/contact-us', destination: '/contact' },
-      { source: '/zh/support', destination: '/client/support' },
-      { source: '/zh/terms-conditions', destination: '/terms' },
-      { source: '/en', destination: '/' },
-      { source: '/fa', destination: '/' },
-      { source: '/ru', destination: '/' },
-      { source: '/zh', destination: '/' },
-      { source: '/en/:path*', destination: '/:path*' },
-      { source: '/fa/:path*', destination: '/:path*' },
-      { source: '/ru/:path*', destination: '/:path*' },
-      { source: '/zh/:path*', destination: '/:path*' },
+      ...LEGACY_ALIASES.map((alias) => ({ source: alias.from, destination: alias.to })),
+      ...LOCALES.flatMap((locale) =>
+        LEGACY_ALIASES.map((alias) => ({
+          source: `/${locale}${alias.from}`,
+          destination: alias.to,
+        })),
+      ),
+      ...LOCALES.map((locale) => ({ source: `/${locale}`, destination: '/' })),
+      ...LOCALES.map((locale) => ({ source: `/${locale}/:path*`, destination: '/:path*' })),
     ];
   },
   images: {

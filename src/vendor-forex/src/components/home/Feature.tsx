@@ -1,4 +1,5 @@
 import { cn } from '@/utils/cn';
+import { AppLocale } from '@/utils/locale';
 import gradient28Img from '@public/images/ns-img-516.png';
 import Image from 'next/image';
 import sourceEn from '@/legacy-content/features/landing-features.json';
@@ -7,8 +8,12 @@ import LinkButton from '../ui/button/LinkButton';
 
 type ShowcaseItem = { title: string; description: string };
 
-const Feature = ({ source }: { source?: any }) => {
+const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }) => {
   const content = source || sourceEn;
+  const viewFeatureLabel =
+    locale === 'fa' ? 'مشاهده قابلیت' : locale === 'ru' ? 'Смотреть функцию' : locale === 'zh' ? '查看功能' : 'View feature';
+  const compareLabel =
+    locale === 'fa' ? 'مقایسه Schedulaa' : locale === 'ru' ? 'Сравнить Schedulaa' : locale === 'zh' ? '对比 Schedulaa' : 'Compare Schedulaa';
   const showcaseData =
     (content.featureShowcase?.features || []).map((feature: { title: string; description: string[] | string }) => ({
       title: feature.title,
@@ -74,7 +79,7 @@ const Feature = ({ source }: { source?: any }) => {
                         <LinkButton
                           href="/features"
                           className="btn btn-white hover:btn-secondary btn-md dark:btn-transparent dark:hover:btn-accent mx-auto w-[90%] md:mx-0 md:w-auto">
-                          View feature
+                          {viewFeatureLabel}
                         </LinkButton>
                       </div>
                     </div>
@@ -87,7 +92,7 @@ const Feature = ({ source }: { source?: any }) => {
                 <LinkButton
                   href="/compare"
                   className="btn btn-md btn-green hover:btn-secondary mx-auto w-[90%] border-0 md:mx-0 md:w-auto">
-                  Compare Schedulaa
+                  {compareLabel}
                 </LinkButton>
               </div>
             </RevealAnimation>

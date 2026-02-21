@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "seo:runtime-audit": "node scripts/seo-runtime-audit.mjs",
+    "i18n:parity": "node scripts/i18n-parity-check.mjs",
+    "i18n:ascii": "node scripts/i18n-ascii-check.mjs",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",

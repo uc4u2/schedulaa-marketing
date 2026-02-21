@@ -45,8 +45,7 @@ const Footer = ({ className }: { className?: string }) => {
                     ? 'Ver todas as comparações'
                     : 'View all comparisons';
   const compareSection = FOOTER_SECTIONS.find((section) => section.id === 'compare');
-  const legalSection = FOOTER_SECTIONS.find((section) => section.id === 'legal');
-  const primarySections = FOOTER_SECTIONS.filter((section) => section.id !== 'compare' && section.id !== 'legal');
+  const primarySections = FOOTER_SECTIONS.filter((section) => section.id !== 'compare');
 
   return (
     <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
@@ -94,7 +93,7 @@ const Footer = ({ className }: { className?: string }) => {
             ))}
 
             {compareSection ? (
-              <div className="col-span-1 space-y-10">
+              <div className="col-span-1">
                 <div className="space-y-8">
                   <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(compareSection.titleKey)}</p>
                   <ul className="space-y-5">
@@ -115,21 +114,6 @@ const Footer = ({ className }: { className?: string }) => {
                     </li>
                   </ul>
                 </div>
-
-                {legalSection ? (
-                  <div className="space-y-8">
-                    <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(legalSection.titleKey)}</p>
-                    <ul className="space-y-5">
-                      {legalSection.links.map((link) => (
-                        <li key={link.id}>
-                          <Link href={linkHref(link, localePath, returnTo)} className="footer-link">
-                            {linkLabel(link, t)}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
               </div>
             ) : null}
           </div>

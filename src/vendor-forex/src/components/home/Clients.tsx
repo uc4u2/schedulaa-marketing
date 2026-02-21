@@ -1,4 +1,5 @@
 import { cn } from '@/utils/cn';
+import { AppLocale } from '@/utils/locale';
 import driveLogo from '@public/images/icons/drive-google.svg';
 import googleLogo from '@public/images/icons/google.svg';
 import googleMeetLogo from '@public/images/icons/google-meet.svg';
@@ -63,7 +64,8 @@ const clientLogos: ClientLogo[] = [
   },
 ];
 
-const Clients = () => {
+const Clients = ({ locale = 'en' }: { locale?: AppLocale }) => {
+  const ariaLabel = locale === 'ru' ? 'Логотип интеграции' : locale === 'zh' ? '集成品牌标识' : 'Client brand logo';
   return (
     <RevealAnimation delay={0.1}>
       <section className="lg:py-[150px] py-10 md:py-[75px] mt-14 xl:mt-[250px] lg:mt-[200px] sm:mt-[150px]">
@@ -76,10 +78,10 @@ const Clients = () => {
                 {clientLogos.map((logo, index) => (
                   <figure
                     key={logo.id}
-                    aria-label="Client brand logo"
+                    aria-label={ariaLabel}
                     className={cn('min-w-[160px] md:min-w-[230px]', index === 0 && 'ml-8')}>
-                    <Image src={logo.lightSrc} alt={logo.alt} className="block h-9 w-auto md:h-11 dark:hidden" />
-                    <Image src={logo.darkSrc} alt={logo.alt} className="hidden h-9 w-auto md:h-11 dark:block" />
+                    <Image src={logo.lightSrc} alt="" className="block h-9 w-auto md:h-11 dark:hidden" />
+                    <Image src={logo.darkSrc} alt="" className="hidden h-9 w-auto md:h-11 dark:block" />
                   </figure>
                 ))}
               </div>

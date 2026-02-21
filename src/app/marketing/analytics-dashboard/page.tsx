@@ -2,37 +2,41 @@ import Link from 'next/link';
 import { headers } from 'next/headers';
 import { Metadata } from 'next';
 
-import { marketingPages } from '@/legacy-content/marketing/config';
-import { AppLocale, withLocalePath } from '@/utils/locale';
+import { getMarketingSource } from '@/legacy-content/marketing/getMarketingSource';
+import { AppLocale, DEFAULT_LOCALE, isSupportedLocale, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 
 const getLocale = async (): Promise<AppLocale> => {
   const h = await headers();
-  return h.get('x-locale') === 'fa' ? 'fa' : 'en';
+  const headerLocale = h.get('x-locale');
+  return isSupportedLocale(headerLocale) ? headerLocale : DEFAULT_LOCALE;
 };
 
-const pageConfig = marketingPages.analytics;
-
-export const metadata: Metadata = {
-  title: pageConfig.meta.title,
-  description: pageConfig.meta.description,
-  alternates: { canonical: pageConfig.meta.canonical },
-  openGraph: {
-    title: pageConfig.meta.og.title,
-    description: pageConfig.meta.og.description,
-    url: pageConfig.meta.og.url,
-    images: pageConfig.meta.og.image ? [{ url: pageConfig.meta.og.image }] : undefined,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: pageConfig.meta.twitter.title,
-    description: pageConfig.meta.twitter.description,
-    images: pageConfig.meta.twitter.image ? [pageConfig.meta.twitter.image] : undefined,
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const pageConfig = getMarketingSource(locale).analytics;
+  return {
+    title: pageConfig.meta.title,
+    description: pageConfig.meta.description,
+    alternates: { canonical: pageConfig.meta.canonical },
+    openGraph: {
+      title: pageConfig.meta.og.title,
+      description: pageConfig.meta.og.description,
+      url: pageConfig.meta.og.url,
+      images: pageConfig.meta.og.image ? [{ url: pageConfig.meta.og.image }] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageConfig.meta.twitter.title,
+      description: pageConfig.meta.twitter.description,
+      images: pageConfig.meta.twitter.image ? [pageConfig.meta.twitter.image] : undefined,
+    },
+  };
+}
 
 export default async function MarketingAnalyticsDashboardPage() {
   const locale = await getLocale();
+  const pageConfig = getMarketingSource(locale).analytics;
   const returnTo = marketingReturnTo(locale, '/marketing/analytics-dashboard');
   const hero = pageConfig.hero;
   const section = pageConfig.sections[0];

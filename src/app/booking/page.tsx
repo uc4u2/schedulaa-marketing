@@ -1,7 +1,10 @@
 import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
-import { bookingPages } from '@/legacy-content/booking/config';
+import { getBookingSource } from '@/legacy-content/booking/getBookingSource';
+import { getServerLocale } from '@/utils/serverLocale';
 
-export default function BookingPage() {
+export default async function BookingPage() {
+  const locale = await getServerLocale();
+  const bookingPages = getBookingSource(locale);
   const source = bookingPages.hub as any;
   const page = {
     ...source,

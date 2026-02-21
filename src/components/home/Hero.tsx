@@ -13,7 +13,7 @@ const Hero = () => {
   const t = useTranslations('hero');
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
-  const dir = locale === 'fa' ? 'rtl' : 'ltr';
+  const dir = locale === 'fa' || locale === 'ar' ? 'rtl' : 'ltr';
 
   return (
     <section className="md:mt-4 lg:mt-6 xl:mt-[30px]" dir={dir}>

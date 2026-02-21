@@ -21,16 +21,16 @@ export default function HomeForexLayout({ locale }: Props) {
   const source = getLandingSource(locale, 'home');
   return (
     <main>
-      <Hero source={source} />
-      <Clients />
+      <Hero source={source} locale={locale} />
+      <Clients locale={locale} />
       <Steps locale={locale} />
-      <Feature source={source} />
-      <About />
-      <Services />
-      <Pricing />
-      <Reviews />
-      <Blog source={source} />
-      <Contact />
+      <Feature source={source} locale={locale} />
+      <About locale={locale} />
+      <Services locale={locale} />
+      <Pricing locale={locale} />
+      <Reviews locale={locale} />
+      <Blog source={source} locale={locale} />
+      <Contact locale={locale} />
       <CTA source={source} />
     </main>
   );

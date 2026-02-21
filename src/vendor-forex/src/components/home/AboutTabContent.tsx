@@ -2,9 +2,8 @@ import aboutScheduling from '@public/images/marketing/employee-dashboard.png';
 import aboutPayroll from '@public/images/marketing/payroll-dashboard.png';
 import aboutCommerce from '@public/images/marketing/website-builder.png';
 import aboutAutomation from '@public/images/marketing/my-shift.png';
-import { detectLocaleFromPath } from '@/utils/locale';
+import { AppLocale } from '@/utils/locale';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import LinkButton from '../ui/button/LinkButton';
 import TabContent from '../ui/tab/TabContent';
 
@@ -256,10 +255,163 @@ const aboutTabsDataFa = [
   },
 ];
 
-const AboutTabContent = () => {
-  const pathname = usePathname() || '/';
-  const isFa = detectLocaleFromPath(pathname) === 'fa';
-  const aboutTabsData = isFa ? aboutTabsDataFa : aboutTabsDataEn;
+const aboutTabsDataRu = [
+  {
+    id: 'blockchain',
+    badge: 'О платформе',
+    title: 'Payroll и compliance созданы для',
+    titleBreak: false,
+    highlightedText: ' service teams.',
+    description:
+      'Запускайте payroll с учётом overtime, чаевых и праздничных правил, затем выгружайте W-2, T4 и ROE с отчётами, готовыми к аудиту.',
+    image: aboutPayroll,
+    imageAlt: 'Панель payroll и compliance в Schedulaa',
+    buttonText: 'Перейти к payroll',
+    buttonHref: '/payroll',
+    features: [
+      { icon: 'ns-shape-6', title: 'Региональные правила', description: 'Поддерживаются payroll-сценарии США и Канады.' },
+      { icon: 'ns-shape-46', title: 'Экспорт для аудита', description: 'Формируйте compliance-документы с уверенностью.' },
+      { icon: 'ns-shape-47', title: 'Self-service сотрудников', description: 'Payslip и прозрачность payroll для команды.' },
+    ],
+  },
+  {
+    id: 'decentralization',
+    badge: 'О платформе',
+    title: 'Бронирование и расписание становятся',
+    titleBreak: true,
+    titleContinue: 'единым',
+    highlightedText: ' workflow.',
+    description:
+      'Опубликуйте услуги, слоты и специалистов один раз. Клиенты бронируют сами, календари сотрудников обновляются в реальном времени.',
+    image: aboutScheduling,
+    imageAlt: 'Панель бронирования и доступности Schedulaa',
+    buttonText: 'Перейти к booking',
+    buttonHref: '/booking',
+    features: [
+      { icon: 'ns-shape-6', title: 'Live availability', description: 'Вид клиентов и сотрудников всегда синхронизирован.' },
+      { icon: 'ns-shape-46', title: 'Назначение специалистов', description: 'Контроль услуг, комнат и календарей по ролям.' },
+      { icon: 'ns-shape-47', title: 'Self-reschedule', description: 'Меньше ручных изменений и операционной нагрузки.' },
+    ],
+  },
+  {
+    id: 'privacy',
+    badge: 'О платформе',
+    title: 'Продавайте услуги и товары через',
+    titleBreak: false,
+    highlightedText: ' единый checkout.',
+    description:
+      'Объединяйте бронирования, add-ons, товары, депозиты и чаевые в одной корзине со Stripe checkout и авто-квитанциями.',
+    image: aboutCommerce,
+    imageAlt: 'Коммерция и checkout в Schedulaa',
+    buttonText: 'Перейти к функциям',
+    buttonHref: '/features',
+    features: [
+      { icon: 'ns-shape-6', title: 'Единая корзина', description: 'Товары и услуги в одном процессе покупки.' },
+      { icon: 'ns-shape-46', title: 'Налоги и возвраты', description: 'Безопасный checkout с операционными контролями.' },
+      { icon: 'ns-shape-47', title: 'Revenue analytics', description: 'Отслеживайте загрузку, отток и топ-услуги.' },
+    ],
+  },
+  {
+    id: 'exchanges',
+    badge: 'О платформе',
+    title: 'Интеграции и автоматизация дают',
+    titleBreak: false,
+    highlightedText: ' операционный масштаб.',
+    description:
+      'Интегрируйте Schedulaa с учётными системами, запускайте re-engagement кампании и синхронизируйте внешние системы через API и webhook.',
+    image: aboutAutomation,
+    imageAlt: 'Интеграции и автоматизация Schedulaa',
+    buttonText: 'Перейти к документации',
+    buttonHref: '/docs',
+    features: [
+      { icon: 'ns-shape-6', title: 'Zapier + webhook', description: 'Запускайте workflow без ручных передач.' },
+      { icon: 'ns-shape-46', title: 'Синхронизация с финансами', description: 'Связь payroll/инвойсов с финансовыми инструментами.' },
+      { icon: 'ns-shape-47', title: 'Авто-кампании', description: 'Возврат no-show, VIP и клиентов с риском оттока.' },
+    ],
+  },
+];
+
+const aboutTabsDataZh = [
+  {
+    id: 'blockchain',
+    badge: '关于',
+    title: '薪资与合规专为',
+    titleBreak: false,
+    highlightedText: '服务团队打造。',
+    description: '支持加班、小费、节假日规则的薪资流程，并可导出 W-2、T4、ROE，报告可审计。',
+    image: aboutPayroll,
+    imageAlt: 'Schedulaa 薪资与合规看板',
+    buttonText: '查看薪资',
+    buttonHref: '/payroll',
+    features: [
+      { icon: 'ns-shape-6', title: '地区规则', description: '支持美国与加拿大薪资场景。' },
+      { icon: 'ns-shape-46', title: '审计级导出', description: '合规材料生成更可靠。' },
+      { icon: 'ns-shape-47', title: '员工自助', description: '员工可查看工资单与薪资明细。' },
+    ],
+  },
+  {
+    id: 'decentralization',
+    badge: '关于',
+    title: '预约与排班成为',
+    titleBreak: true,
+    titleContinue: '一个连贯的',
+    highlightedText: '工作流。',
+    description: '一次发布服务、时段和人员。客户自助预约，员工日历实时更新，避免重复录入。',
+    image: aboutScheduling,
+    imageAlt: 'Schedulaa 预约与可用时段看板',
+    buttonText: '查看预约',
+    buttonHref: '/booking',
+    features: [
+      { icon: 'ns-shape-6', title: '实时可用性', description: '员工端与客户端始终同步。' },
+      { icon: 'ns-shape-46', title: '人员分配', description: '按角色管理服务、房间与日历。' },
+      { icon: 'ns-shape-47', title: '自助改约', description: '减少手动变更与运营负担。' },
+    ],
+  },
+  {
+    id: 'privacy',
+    badge: '关于',
+    title: '服务与商品可在',
+    titleBreak: false,
+    highlightedText: '一个结账流程中完成。',
+    description: '将预约、附加项、商品、押金和小费合并到同一购物车，配合 Stripe 安全结账与自动回执。',
+    image: aboutCommerce,
+    imageAlt: 'Schedulaa 电商与结账分析',
+    buttonText: '查看功能',
+    buttonHref: '/features',
+    features: [
+      { icon: 'ns-shape-6', title: '统一购物车', description: '商品与服务在同一购买流程中完成。' },
+      { icon: 'ns-shape-46', title: '税务与退款', description: '安全结账并具备运营控制能力。' },
+      { icon: 'ns-shape-47', title: '营收分析', description: '跟踪利用率、流失与高绩效服务。' },
+    ],
+  },
+  {
+    id: 'exchanges',
+    badge: '关于',
+    title: '集成与自动化驱动',
+    titleBreak: false,
+    highlightedText: '运营规模化。',
+    description: '将 Schedulaa 连接到财务工具，触发唤回活动，并通过 API 与 Webhook 同步外部系统。',
+    image: aboutAutomation,
+    imageAlt: 'Schedulaa 集成与自动化工作流',
+    buttonText: '查看文档',
+    buttonHref: '/docs',
+    features: [
+      { icon: 'ns-shape-6', title: 'Zapier + Webhook', description: '无需人工交接即可触发流程。' },
+      { icon: 'ns-shape-46', title: '财务同步', description: '将薪资与发票数据连接到财务系统。' },
+      { icon: 'ns-shape-47', title: '自动化营销', description: '自动触达未到店、VIP 与流失风险客户。' },
+    ],
+  },
+];
+
+const AboutTabContent = ({ locale = 'en' }: { locale?: AppLocale }) => {
+  const aboutTabsData =
+    locale === 'fa'
+      ? aboutTabsDataFa
+      : locale === 'ru'
+        ? aboutTabsDataRu
+        : locale === 'zh'
+          ? aboutTabsDataZh
+          : aboutTabsDataEn;
 
   return (
     <>

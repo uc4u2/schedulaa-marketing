@@ -24,24 +24,24 @@ const isAppPath = (href: string) =>
   href.startsWith('/settings') ||
   href.startsWith('/dashboard');
 
-const mapItem = (item: any) => ({
+const mapItem = (item: any, learnMore: string) => ({
   title: item?.title || '',
   body: item?.body || item?.description || '',
   points: Array.isArray(item?.points) ? item.points : [],
   links: Array.isArray(item?.links)
     ? item.links
     : item?.link
-    ? [{ label: item?.linkLabel || 'Learn more', href: item.link }]
+    ? [{ label: item?.linkLabel || learnMore, href: item.link }]
     : [],
 });
 
-function normalizeSections(config: AnyConfig) {
+function normalizeSections(config: AnyConfig, copy: { highlights: string; process: string; operations: string; quickLinks: string; learnMore: string }) {
   const blocks: Array<{ overline?: string; title?: string; intro?: string; items: any[] }> = [];
 
   if (Array.isArray(config.sections)) {
     config.sections.forEach((section: any) => {
       const sectionItems = Array.isArray(section.items)
-        ? section.items.map(mapItem)
+        ? section.items.map((item: any) => mapItem(item, copy.learnMore))
         : Array.isArray(section.points)
         ? [{ title: section.title, body: section.body || '', points: section.points, links: [] }]
         : [];
@@ -61,22 +61,22 @@ function normalizeSections(config: AnyConfig) {
       overline: config.featuresHeading,
       title: config.featuresTitle,
       intro: config.featuresIntro,
-      items: config.features.map(mapItem),
+      items: config.features.map((item: any) => mapItem(item, copy.learnMore)),
     });
   }
 
   if (Array.isArray(config.highlights) && config.highlights.length) {
     blocks.push({
-      overline: 'Highlights',
+      overline: copy.highlights,
       title: '',
       intro: '',
-      items: config.highlights.map(mapItem),
+      items: config.highlights.map((item: any) => mapItem(item, copy.learnMore)),
     });
   }
 
   if (Array.isArray(config.steps) && config.steps.length) {
     blocks.push({
-      overline: config.stepsHeading || 'Process',
+      overline: config.stepsHeading || copy.process,
       title: config.stepsTitle,
       intro: config.stepsIntro,
       items: config.steps.map((step: any, idx: number) => ({
@@ -90,16 +90,16 @@ function normalizeSections(config: AnyConfig) {
 
   if (Array.isArray(config.callouts) && config.callouts.length) {
     blocks.push({
-      overline: 'Operations',
+      overline: copy.operations,
       title: '',
       intro: '',
-      items: config.callouts.map(mapItem),
+      items: config.callouts.map((item: any) => mapItem(item, copy.learnMore)),
     });
   }
 
   if (Array.isArray(config.secondaryLinks) && config.secondaryLinks.length) {
     blocks.push({
-      overline: 'Quick links',
+      overline: copy.quickLinks,
       title: '',
       intro: '',
       items: config.secondaryLinks.map((link: any) => ({
@@ -126,6 +126,46 @@ export default function FeatureStyleContentPage({
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
   const returnTo = marketingReturnTo(locale, routePath);
+  const copy =
+    locale === 'fa'
+      ? {
+          highlights: 'نکات کلیدی',
+          process: 'فرایند',
+          operations: 'عملیات',
+          quickLinks: 'لینک‌های سریع',
+          learnMore: 'بیشتر بدانید',
+          mediaFallback: 'پیش‌نمایش صفحه',
+          payrollCenter: 'مرکز کنترل حقوق',
+        }
+      : locale === 'ru'
+      ? {
+          highlights: 'Ключевые моменты',
+          process: 'Процесс',
+          operations: 'Операции',
+          quickLinks: 'Быстрые ссылки',
+          learnMore: 'Подробнее',
+          mediaFallback: 'Превью страницы',
+          payrollCenter: 'Центр управления payroll',
+        }
+      : locale === 'zh'
+      ? {
+          highlights: '亮点',
+          process: '流程',
+          operations: '运营',
+          quickLinks: '快捷链接',
+          learnMore: '了解更多',
+          mediaFallback: '页面预览',
+          payrollCenter: '薪资控制中心',
+        }
+      : {
+          highlights: 'Highlights',
+          process: 'Process',
+          operations: 'Operations',
+          quickLinks: 'Quick links',
+          learnMore: 'Learn more',
+          mediaFallback: 'Page preview',
+          payrollCenter: 'Payroll control center',
+        };
 
   const mapHref = (href: string) => {
     if (!href) return '#';
@@ -137,7 +177,7 @@ export default function FeatureStyleContentPage({
 
   const hero = config.hero || {};
   const heroImages = Array.isArray(hero.images) ? hero.images.slice(0, 4) : [];
-  const blocks = normalizeSections(config);
+  const blocks = normalizeSections(config, copy);
   const faq = Array.isArray(config.faq) ? config.faq : [];
   const cta = config.cta || {};
 
@@ -186,7 +226,7 @@ export default function FeatureStyleContentPage({
                     }>
                     <Image
                       src={item?.src || item}
-                      alt={item?.alt || `Payroll media ${index + 1}`}
+                      alt={item?.alt || `${copy.mediaFallback} ${index + 1}`}
                       width={640}
                       height={360}
                       quality={100}
@@ -293,7 +333,7 @@ export default function FeatureStyleContentPage({
                     <div className="relative grid grid-cols-12 gap-5">
                       <div className="col-span-12 overflow-hidden rounded-[18px] border border-white/10 bg-[#0f1b2d] lg:col-span-7">
                         <div className="border-b border-white/10 px-4 py-3">
-                          <p className="text-tagline-3 uppercase tracking-[0.12em] text-cyan-100/75">Payroll control center</p>
+                          <p className="text-tagline-3 uppercase tracking-[0.12em] text-cyan-100/75">{copy.payrollCenter}</p>
                           <p className="mt-1 text-heading-6 text-white">Live calculations, exports, and employee updates</p>
                         </div>
                         <figure className="p-2">

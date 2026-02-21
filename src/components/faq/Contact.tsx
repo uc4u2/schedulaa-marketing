@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
+import { AppLocale } from '@/utils/locale';
+import { getFaqCopy } from './localeCopy';
 
-const Contact = () => {
+const Contact = ({ locale }: { locale: AppLocale | string | null | undefined }) => {
+  const copy = getFaqCopy(locale).contact;
   return (
     <section className="pt-[100px] pb-[200px]">
       <div className="main-container">
@@ -9,17 +12,14 @@ const Contact = () => {
           {/* heading  */}
           <div className="main-w-[850px] mx-auto space-y-5 text-center md:w-full">
             <RevealAnimation delay={0.2}>
-              <span className="badge badge-cyan">Contact</span>
+              <span className="badge badge-cyan">{copy.badge}</span>
             </RevealAnimation>
             <div className="space-y-3">
               <RevealAnimation delay={0.3}>
-                <h2 id="contact-heading">Still have questions?</h2>
+                <h2 id="contact-heading">{copy.title}</h2>
               </RevealAnimation>
               <RevealAnimation delay={0.4}>
-                <p className="mx-auto max-w-[442px] sm:w-full">
-                  If your question isn&apos;t listed here, feel free to contact us or start a live chat with our team.
-                  We&apos;re happy to help!
-                </p>
+                <p className="mx-auto max-w-[442px] sm:w-full">{copy.subtitle}</p>
               </RevealAnimation>
             </div>
           </div>
@@ -32,13 +32,13 @@ const Contact = () => {
                   <label
                     htmlFor="fullname"
                     className="text-tagline-1 text-secondary dark:text-accent block font-medium">
-                    Full name
+                    {copy.fullName}
                   </label>
                   <input
                     type="text"
                     id="fullname"
                     name="fullname"
-                    placeholder="Enter your name"
+                    placeholder={copy.fullNamePlaceholder}
                     required
                     autoComplete="name"
                     className="shadow-1 dark:text-accent dark:bg-background-6 border-stroke-3 dark:border-stroke-6 bg-background-1 text-tagline-1 dark:placeholder:text-accent/60 placeholder:text-secondary/60 focus:border-primary-500 placeholder:text-tagline-1 w-full rounded-full border px-[18px] py-2 font-normal placeholder:font-normal focus:outline-none"
@@ -47,13 +47,13 @@ const Contact = () => {
                 {/* email */}
                 <div className="mb-8 space-y-2">
                   <label htmlFor="email" className="text-tagline-1 text-secondary dark:text-accent block font-medium">
-                    Email address
+                    {copy.email}
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Enter your email"
+                    placeholder={copy.emailPlaceholder}
                     required
                     autoComplete="email"
                     className="dark:text-accent dark:bg-background-6 border-stroke-3 dark:border-stroke-6 bg-background-1 text-tagline-1 dark:placeholder:text-accent/60 placeholder:text-accent/60 focus:border-primary-500 placeholder:text-tagline-1 w-full rounded-full border px-[18px] py-2 font-normal placeholder:font-normal focus:outline-none"
@@ -62,13 +62,13 @@ const Contact = () => {
                 {/* message */}
                 <div className="mb-4 space-y-2">
                   <label htmlFor="message" className="text-tagline-1 text-secondary dark:text-accent block font-medium">
-                    Messages
+                    {copy.message}
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
-                    placeholder="Enter your messages"
+                    placeholder={copy.messagePlaceholder}
                     required
                     className="dark:bg-background-6 dark:text-accent border-stroke-3 dark:border-stroke-6 bg-background-1 text-tagline-1 dark:placeholder:text-accent/60 placeholder:text-secondary/60 focus:border-primary-500 placeholder:text-tagline-1 w-full rounded-xl border px-[18px] py-2 font-normal placeholder:font-normal focus:outline-none"
                     defaultValue={''}
@@ -83,9 +83,9 @@ const Contact = () => {
                   <label
                     htmlFor="terms"
                     className="text-tagline-3 text-secondary/60 dark:text-accent/60 cursor-pointer">
-                    I agree with the
+                    {copy.agreePrefix}{' '}
                     <Link href="/terms" className="text-primary-500 text-tagline-3 underline">
-                      terms and conditions
+                      {copy.agreeLink}
                     </Link>
                   </label>
                 </fieldset>
@@ -93,7 +93,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   className="btn btn-md btn-secondary dark:btn-accent hover:btn-primary w-full first-letter:uppercase before:content-none">
-                  Submit
+                  {copy.submit}
                 </button>
               </form>
             </div>

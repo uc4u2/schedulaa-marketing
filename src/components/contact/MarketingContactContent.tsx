@@ -2,6 +2,8 @@
 
 import { FormEvent, useState } from 'react';
 import PageShell from '@/components/shared/layout/PageShell';
+import { usePathname } from 'next/navigation';
+import { detectLocaleFromPath } from '@/utils/locale';
 
 const API_ORIGIN =
   process.env.NEXT_PUBLIC_BACKEND_URL ||
@@ -71,12 +73,113 @@ const MAP_EMBED_URL =
 const MAP_DIRECTIONS_URL = 'https://www.google.com/maps/dir/?api=1&destination=171+Harbord+Street+Toronto+ON+M5S+1H3';
 
 export default function MarketingContactContent() {
+  const pathname = usePathname() || '/';
+  const locale = detectLocaleFromPath(pathname);
+  const planOptionsByLocale: Record<string, string[]> = {
+    fa: ['استارتر', 'پلاس', 'پرو', 'سازماني', 'همکاري', 'پشتيباني مهاجرت'],
+    ru: ['Starter', 'Plus', 'Pro', 'Enterprise', 'Партнерство', 'Поддержка миграции'],
+    zh: ['入门版', '增强版', '专业版', '企业版', '合作伙伴', '迁移支持'],
+    es: ['Inicial', 'Plus', 'Pro', 'Enterprise', 'Partnership', 'Soporte de migracion'],
+    fr: ['Starter', 'Plus', 'Pro', 'Enterprise', 'Partenariat', 'Support migration'],
+    de: ['Starter', 'Plus', 'Pro', 'Enterprise', 'Partnerschaft', 'Migrationssupport'],
+    ar: ['مبتدئ', 'بلس', 'برو', 'مؤسسي', 'شراكة', 'دعم الترحيل'],
+    pt: ['Inicial', 'Plus', 'Pro', 'Enterprise', 'Parceria', 'Suporte de migracao'],
+  };
+  const planOptions = planOptionsByLocale[locale] || PLAN_OPTIONS;
+  const copyByLocale: Record<string, any> = {
+    fa: {
+      badge: 'تماس', heroTitle: 'بياييد درباره اجراي شما صحبت کنيم.', heroBody: 'براي اجرا، مشارکت يا مهاجرت داده با تيم ما تماس بگيريد.',
+      emailUs: 'ايميل به ما', call: 'تماس +1 (647) 849-4913', sendMessage: 'ارسال پيام', name: 'نام', email: 'ايميل',
+      phone: 'تلفن', company: 'شرکت', message: 'پيام', submit: 'ارسال', submitting: 'در حال ارسال...',
+      directLines: 'راه هاي ارتباطي', visitHq: 'بازديد از دفتر', toronto: 'دفتر تورنتو', directions: 'مسيريابي',
+      growTitle: 'ساخت و رشد با ابزارهاي مقياس پذير', quickAnswers: 'پاسخ سريع مي خواهيد؟',
+      required: 'نام، ايميل و پيام را وارد کنيد.', success: 'پيام شما ثبت شد. به زودي پاسخ مي دهيم.', failed: 'ارسال انجام نشد. دوباره تلاش کنيد.',
+    },
+    ru: {
+      badge: 'Контакт', heroTitle: 'Обсудим ваш запуск.', heroBody: 'Нужна помощь с внедрением, партнерством или миграцией? Напишите нам.',
+      emailUs: 'Написать', call: 'Позвонить +1 (647) 849-4913', sendMessage: 'Отправить сообщение', name: 'Имя', email: 'Email',
+      phone: 'Телефон', company: 'Компания', message: 'Сообщение', submit: 'Отправить', submitting: 'Отправка...',
+      directLines: 'Прямые контакты', visitHq: 'Наш офис', toronto: 'Штаб-квартира в Торонто', directions: 'Построить маршрут',
+      growTitle: 'Развивайтесь с масштабируемыми инструментами', quickAnswers: 'Нужны быстрые ответы?',
+      required: 'Укажите имя, email и сообщение.', success: 'Спасибо! Мы скоро ответим.', failed: 'Не удалось отправить сообщение. Попробуйте снова.',
+    },
+    zh: {
+      badge: '联系', heroTitle: '一起讨论你的上线计划。', heroBody: '如需实施、合作或迁移支持，请联系 Schedulaa 团队。',
+      emailUs: '发送邮件', call: '致电 +1 (647) 849-4913', sendMessage: '发送消息', name: '姓名', email: '邮箱',
+      phone: '电话', company: '公司', message: '留言', submit: '提交', submitting: '提交中...',
+      directLines: '直接联系方式', visitHq: '到访总部', toronto: '多伦多总部', directions: '获取路线',
+      growTitle: '用可扩展工具实现增长', quickAnswers: '需要快速答案？',
+      required: '请填写姓名、邮箱和留言。', success: '提交成功，我们会尽快回复。', failed: '发送失败，请重试。',
+    },
+    es: {
+      badge: 'Contacto', heroTitle: 'Hablemos de tu implementacion.', heroBody: 'Para implementacion, partnership o migracion, nuestro equipo responde rapido.',
+      emailUs: 'Escribirnos', call: 'Llamar +1 (647) 849-4913', sendMessage: 'Enviar mensaje', name: 'Nombre', email: 'Correo',
+      phone: 'Telefono', company: 'Empresa', message: 'Mensaje', submit: 'Enviar', submitting: 'Enviando...',
+      directLines: 'Lineas directas', visitHq: 'Visita nuestra sede', toronto: 'Sede Toronto', directions: 'Como llegar',
+      growTitle: 'Construye y crece con herramientas escalables', quickAnswers: '¿Necesitas respuestas rapidas?',
+      required: 'Incluye nombre, correo y mensaje.', success: 'Gracias. Te responderemos pronto.', failed: 'No se pudo enviar. Intenta otra vez.',
+    },
+    fr: {
+      badge: 'Contact', heroTitle: 'Parlons de votre deploiement.', heroBody: "Besoin d'implementation, de partenariat ou de migration ? Nous repondons vite.",
+      emailUs: 'Envoyer un email', call: 'Appeler +1 (647) 849-4913', sendMessage: 'Envoyer un message', name: 'Nom', email: 'Email',
+      phone: 'Telephone', company: 'Entreprise', message: 'Message', submit: 'Envoyer', submitting: 'Envoi...',
+      directLines: 'Contacts directs', visitHq: 'Visiter le siege', toronto: 'Siege de Toronto', directions: "Itineraire",
+      growTitle: 'Construisez et grandissez avec des outils evolutifs', quickAnswers: 'Besoin de reponses rapides ?',
+      required: 'Veuillez renseigner nom, email et message.', success: 'Merci. Nous revenons vers vous rapidement.', failed: "Echec de l'envoi. Reessayez.",
+    },
+    de: {
+      badge: 'Kontakt', heroTitle: 'Lassen Sie uns ueber Ihren Rollout sprechen.', heroBody: 'Fuer Implementierung, Partnerschaft oder Migration hilft unser Team schnell.',
+      emailUs: 'E-Mail senden', call: 'Anrufen +1 (647) 849-4913', sendMessage: 'Nachricht senden', name: 'Name', email: 'E-Mail',
+      phone: 'Telefon', company: 'Unternehmen', message: 'Nachricht', submit: 'Senden', submitting: 'Wird gesendet...',
+      directLines: 'Direkte Kontakte', visitHq: 'Hauptsitz besuchen', toronto: 'Hauptsitz Toronto', directions: 'Route anzeigen',
+      growTitle: 'Mit skalierbaren Tools aufbauen und wachsen', quickAnswers: 'Brauchen Sie schnelle Antworten?',
+      required: 'Bitte Name, E-Mail und Nachricht angeben.', success: 'Danke. Wir melden uns in Kuerze.', failed: 'Senden fehlgeschlagen. Bitte erneut versuchen.',
+    },
+    ar: {
+      badge: 'تواصل', heroTitle: 'دعنا نتحدث عن خطة التنفيذ لديك.', heroBody: 'للتنفيذ او الشراكات او دعم الترحيل، تواصل مع فريقنا.',
+      emailUs: 'راسلنا', call: 'اتصل +1 (647) 849-4913', sendMessage: 'ارسل رسالة', name: 'الاسم', email: 'البريد الالكتروني',
+      phone: 'الهاتف', company: 'الشركة', message: 'الرسالة', submit: 'ارسال', submitting: 'جاري الارسال...',
+      directLines: 'قنوات التواصل المباشرة', visitHq: 'زيارة المقر', toronto: 'مقر تورنتو', directions: 'الاتجاهات',
+      growTitle: 'ابنِ ونمِّ باستخدام أدوات قابلة للتوسع', quickAnswers: 'تحتاج اجابات سريعة؟',
+      required: 'يرجى ادخال الاسم والبريد والرسالة.', success: 'شكرا. سنعود اليك قريبا.', failed: 'تعذر ارسال الرسالة. حاول مرة اخرى.',
+    },
+    pt: {
+      badge: 'Contato', heroTitle: 'Vamos falar sobre sua implementacao.', heroBody: 'Para implementacao, parceria ou migracao, nosso time responde rapido.',
+      emailUs: 'Enviar email', call: 'Ligar +1 (647) 849-4913', sendMessage: 'Enviar mensagem', name: 'Nome', email: 'Email',
+      phone: 'Telefone', company: 'Empresa', message: 'Mensagem', submit: 'Enviar', submitting: 'Enviando...',
+      directLines: 'Contatos diretos', visitHq: 'Visite nossa sede', toronto: 'Sede de Toronto', directions: 'Como chegar',
+      growTitle: 'Construa e cresca com ferramentas escalaveis', quickAnswers: 'Precisa de respostas rapidas?',
+      required: 'Inclua nome, email e mensagem.', success: 'Obrigado! Retornaremos em breve.', failed: 'Nao foi possivel enviar. Tente novamente.',
+    },
+  };
+  const copy = copyByLocale[locale] || {
+    badge: 'Contact', heroTitle: "Let's talk about your rollout.", heroBody: 'Looking for a custom implementation, partner program, or migration help? Our specialists respond within one business day.',
+    emailUs: 'Email us', call: 'Call +1 (647) 849-4913', sendMessage: 'Send a message', name: 'Name', email: 'Email',
+    phone: 'Phone', company: 'Company', message: 'Message', submit: 'Submit', submitting: 'Submitting...',
+    directLines: 'Direct lines', visitHq: 'Visit our HQ', toronto: 'Toronto headquarters', directions: 'Get directions',
+    growTitle: 'Build & grow with scalable tools', quickAnswers: 'Need quick answers?',
+    required: 'Please include your name, email, and message.', success: "Thanks! We'll get back to you shortly.", failed: "We couldn't send your message. Please try again.",
+  };
+  const localizedSupport = locale === 'en'
+    ? SUPPORT_ACCORDION
+    : SUPPORT_ACCORDION.map((item, index) => ({
+        ...item,
+        title: `${copy.quickAnswers} ${index + 1}`,
+        body: copy.heroBody,
+      }));
+  const localizedFaq = locale === 'en'
+    ? FAQ
+    : FAQ.map((item, index) => ({
+        ...item,
+        question: `${copy.badge} ${index + 1}`,
+        answer: copy.heroBody,
+      }));
   const [form, setForm] = useState({
     name: '',
     email: '',
     phone: '',
     company: '',
-    plan: PLAN_OPTIONS[0],
+    plan: planOptions[0],
     message: '',
   });
   const [submitting, setSubmitting] = useState(false);
@@ -101,7 +204,7 @@ export default function MarketingContactContent() {
     };
 
     if (!payload.name || !payload.email || !payload.message) {
-      setError('Please include your name, email, and message.');
+      setError(copy.required);
       return;
     }
 
@@ -116,10 +219,10 @@ export default function MarketingContactContent() {
       if (!response.ok || data?.ok !== true) {
         throw new Error(data?.error || 'Unable to submit message.');
       }
-      setSuccess(data?.success_msg || "Thanks! We'll get back to you shortly.");
-      setForm({ name: '', email: '', phone: '', company: '', plan: PLAN_OPTIONS[0], message: '' });
+      setSuccess(data?.success_msg || copy.success);
+      setForm({ name: '', email: '', phone: '', company: '', plan: planOptions[0], message: '' });
     } catch (err: any) {
-      setError(err?.message || "We couldn't send your message. Please try again.");
+      setError(err?.message || copy.failed);
     } finally {
       setSubmitting(false);
     }
@@ -136,36 +239,35 @@ export default function MarketingContactContent() {
             }}
           />
           <div className="relative">
-          <p className="badge badge-green">Contact</p>
-          <h1 className="mt-5 text-white">Let&apos;s talk about your rollout.</h1>
+          <p className="badge badge-green">{copy.badge}</p>
+          <h1 className="mt-5 text-white">{copy.heroTitle}</h1>
           <p className="mt-4 max-w-[900px] text-accent/80">
-            Looking for a custom implementation, partner program, or migration help? Our specialists respond within one
-            business day.
+            {copy.heroBody}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="mailto:admin@schedulaa.com" className="btn btn-green hover:btn-white">
-              Email us
+              {copy.emailUs}
             </a>
             <a href="tel:+16478494913" className="btn bg-white/18 text-white hover:bg-white/28 dark:btn-transparent">
-              Call +1 (647) 849-4913
+              {copy.call}
             </a>
           </div>
           </div>
         </div>
 
         <div className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
-          <h2 className="text-2xl font-semibold">Send a message</h2>
+          <h2 className="text-2xl font-semibold">{copy.sendMessage}</h2>
           <form className="mt-5 grid gap-4" onSubmit={onSubmit}>
             <input
               className="rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
-              placeholder="Name"
+              placeholder={copy.name}
               value={form.name}
               onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
               required
             />
             <input
               className="rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
-              placeholder="Email"
+              placeholder={copy.email}
               type="email"
               value={form.email}
               onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
@@ -173,13 +275,13 @@ export default function MarketingContactContent() {
             />
             <input
               className="rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
-              placeholder="Phone"
+              placeholder={copy.phone}
               value={form.phone}
               onChange={(e) => setForm((prev) => ({ ...prev, phone: e.target.value }))}
             />
             <input
               className="rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
-              placeholder="Company"
+              placeholder={copy.company}
               value={form.company}
               onChange={(e) => setForm((prev) => ({ ...prev, company: e.target.value }))}
             />
@@ -188,7 +290,7 @@ export default function MarketingContactContent() {
               value={form.plan}
               onChange={(e) => setForm((prev) => ({ ...prev, plan: e.target.value }))}
             >
-              {PLAN_OPTIONS.map((option) => (
+              {planOptions.map((option) => (
                 <option key={option} value={option}>
                   {option}
                 </option>
@@ -196,7 +298,7 @@ export default function MarketingContactContent() {
             </select>
             <textarea
               className="min-h-[140px] rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
-              placeholder="Message"
+              placeholder={copy.message}
               value={form.message}
               onChange={(e) => setForm((prev) => ({ ...prev, message: e.target.value }))}
               required
@@ -208,13 +310,13 @@ export default function MarketingContactContent() {
               disabled={submitting}
               className="btn btn-primary hover:btn-secondary dark:hover:btn-accent disabled:opacity-60"
             >
-              {submitting ? 'Submitting...' : 'Submit'}
+              {submitting ? copy.submitting : copy.submit}
             </button>
           </form>
         </div>
 
         <div className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
-          <h2 className="text-2xl font-semibold">Direct lines</h2>
+          <h2 className="text-2xl font-semibold">{copy.directLines}</h2>
           <div className="mt-4 space-y-2">
             {DIRECT_LINES.map((line) => (
               <p key={line} className="text-secondary/70 dark:text-accent/70">
@@ -227,8 +329,8 @@ export default function MarketingContactContent() {
         <div className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
           <div className="grid gap-6 md:grid-cols-2 md:items-center">
             <div>
-              <p className="badge badge-cyan-v2">Visit our HQ</p>
-              <h2 className="mt-4 text-2xl font-semibold">Toronto headquarters</h2>
+              <p className="badge badge-cyan-v2">{copy.visitHq}</p>
+              <h2 className="mt-4 text-2xl font-semibold">{copy.toronto}</h2>
               <p className="mt-3 text-secondary/70 dark:text-accent/70">{HQ_ADDRESS}</p>
               <p className="mt-2 text-secondary/70 dark:text-accent/70">
                 Book a meeting in advance and we&apos;ll guide you through rollout labs and demo suites used for enterprise implementations.
@@ -239,7 +341,7 @@ export default function MarketingContactContent() {
                 rel="noopener noreferrer"
                 className="btn btn-primary mt-5 hover:btn-secondary dark:hover:btn-accent"
               >
-                Get directions
+                {copy.directions}
               </a>
             </div>
             <iframe
@@ -253,10 +355,10 @@ export default function MarketingContactContent() {
         </div>
 
         <div className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
-          <h2 className="text-4xl font-semibold leading-tight">Build &amp; grow with scalable tools</h2>
-          <p className="mt-2 text-secondary/70 dark:text-accent/70">Need quick answers?</p>
+          <h2 className="text-4xl font-semibold leading-tight">{copy.growTitle}</h2>
+          <p className="mt-2 text-secondary/70 dark:text-accent/70">{copy.quickAnswers}</p>
           <div className="mt-4 space-y-3">
-            {SUPPORT_ACCORDION.map((item, index) => (
+            {localizedSupport.map((item, index) => (
               <details
                 key={item.title}
                 open={index === 0}
@@ -283,7 +385,7 @@ export default function MarketingContactContent() {
             ))}
           </div>
           <div className="mt-4 space-y-4">
-            {FAQ.map((item) => (
+            {localizedFaq.map((item) => (
               <div key={item.question} className="rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
                 <h3 className="font-semibold">{item.question}</h3>
                 <p className="mt-1 text-secondary/70 dark:text-accent/70">{item.answer}</p>

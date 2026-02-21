@@ -65,28 +65,28 @@ export const workforcePage = {
 
 export const industriesPage = {
   meta: {
-    title: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+    title: 'دليل القطاعات | مواقع Schedulaa حسب المجال',
     description:
-      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+      'تصفح حالات استخدام Schedulaa حسب القطاع. اكتشف الصالونات والعيادات واستوديوهات اللياقة والخدمات القانونية وغيرها مع الحجز والرواتب والتجارة في منصة واحدة.',
   },
   hero: {
-    badge: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
-    title: 'by',
+    badge: 'القطاعات',
+    title: 'تصفح حسب القطاع',
     subtitle:
-      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
-    primaryCta: { label: 'الحجوزات', href: '/booking' },
-    secondaryCta: { label: 'التواصل الفريق', href: '/contact' },
+      'اختر قطاعك لترى كيف تستخدم الشركات Schedulaa للحجوزات والرواتب وعمليات الفرق والمواقع والتجارة.',
+    primaryCta: { label: 'استكشاف الحجز', href: '/booking' },
+    secondaryCta: { label: 'التواصل مع الفريق', href: '/contact' },
   },
   sections: [
     {
-      title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
+      title: 'القطاعات الاكثر استخداما',
       items: [
-        { title: '&', body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.' },
-        { title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.', body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.' },
-        { title: '&', body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.' },
-        { title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.', body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.' },
-        { title: '&', body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.' },
-        { title: 'الفرق', body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.' },
+        { title: 'الصالونات والسبا', body: 'حجز فوري لمقدمي الخدمة مع إدارة الإكراميات وحملات الاحتفاظ بالعملاء.' },
+        { title: 'العيادات الصحية', body: 'جدولة ومتابعة وتنبيهات مع تدفقات عمل متوافقة مع التوثيق.' },
+        { title: 'التعليم والدروس', body: 'حجز الجلسات والجداول المتكررة وتتبع الحضور.' },
+        { title: 'الاستوديوهات الإبداعية', body: 'أتمتة رحلة العميل من الحجز حتى الرواتب.' },
+        { title: 'الخدمات القانونية والمهنية', body: 'نماذج استقبال منظمة وجدولة وسجلات آمنة.' },
+        { title: 'الفرق متعددة الفروع', body: 'تحكم حسب الفرع في التوظيف والرواتب والتحليلات.' },
       ],
     },
   ],
@@ -239,32 +239,32 @@ export const supportPage = {
 
 export const zapierPage = {
   meta: {
-    title: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+    title: 'Zapier مع Schedulaa — اتمتة الحجوزات والجدولة والالتزام بفترات الراحة والرواتب',
     description:
-      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+      'اربط Schedulaa مع اكثر من 6000 تطبيق عبر Zapier. مرر بيانات الحجوزات والمناوبات وtimeclock والراحة وPTO وonboarding والرواتب.',
   },
   hero: {
-    badge: 'Zapier',
-    title: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+    badge: 'اتمتة Zapier',
+    title: 'اتمِت كل لحظة حجز ومناوبة واستراحة ورواتب باستخدام Zapier',
     subtitle:
-      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
-    primaryCta: { label: 'توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.', href: '/settings/zapier' },
-    secondaryCta: { label: 'عرض التجربة', href: '/demo' },
+      'يرسل Schedulaa احداث الحجوزات والجدولة وtimeclock والالتزام بالراحة وPTO وonboarding وتفاصيل الرواتب الى Zapier، كما تستطيع الاجراءات انشاء حجوزات وموظفين ومناوبات.',
+    primaryCta: { label: 'فتح اعدادات Zapier', href: '/settings/zapier' },
+    secondaryCta: { label: 'عرض الديمو', href: '/demo' },
   },
   sections: [
     {
-      title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
+      title: 'مجموعات المشغلات المباشرة',
       items: [
-        { title: 'الحجوزات', body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.' },
-        { title: 'الجدولة &', body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.' },
-        { title: '&', body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.' },
-        { title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.', body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.' },
-        { title: 'الرواتب', body: 'الرواتب., الرواتب., الرواتب.' },
+        { title: 'احداث الحجوزات', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
+        { title: 'الجدولة والمناوبات', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
+        { title: 'timeclock والالتزام بالراحة', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
+        { title: 'الاجازات وonboarding والمستندات', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },
+        { title: 'احداث الرواتب', body: 'payroll.ready, payroll.finalized, payroll.details' },
       ],
     },
     {
-      title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
-      points: ['create_booking', 'create_employee', 'توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.', 'attach_document'],
+      title: 'الاجراءات المباشرة',
+      points: ['create_booking', 'create_employee', 'create_shift / update_shift', 'attach_document'],
     },
   ],
 };

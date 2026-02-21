@@ -1,12 +1,12 @@
 import {
   workforcePage as workforcePageEn,
-  industriesPage,
+  industriesPage as industriesPageEn,
   statusPage,
   roadmapPage,
   demoPage,
   contactPage,
   supportPage,
-  zapierPage,
+  zapierPage as zapierPageEn,
 } from './config';
 
 export const workforcePage = {
@@ -74,6 +74,73 @@ export const workforcePage = {
     primary: { ...workforcePageEn.cta.primary, label: 'مشاهده محیط ثبت زمان' },
     secondary: { ...workforcePageEn.cta.secondary, label: 'گفتگو با فروش' },
   },
+};
+
+export const industriesPage = {
+  ...industriesPageEn,
+  meta: {
+    ...industriesPageEn.meta,
+    title: 'دایرکتوری صنایع | نمونه وب‌سایت‌های Schedulaa بر اساس حوزه',
+    description:
+      'نمونه جریان‌های کاری Schedulaa را بر اساس صنعت ببینید: سالن‌ها، کلینیک‌ها، استودیوهای ورزشی، خدمات حقوقی و موارد بیشتر با زمان‌بندی، حقوق و تجارت یکپارچه.',
+  },
+  hero: {
+    ...industriesPageEn.hero,
+    badge: 'صنایع',
+    title: 'مرور بر اساس صنعت',
+    subtitle:
+      'صنعت خود را انتخاب کنید تا ببینید کسب‌وکارها چگونه از Schedulaa برای رزرو، حقوق، عملیات نیروی کار، وب‌سایت و فروش استفاده می‌کنند.',
+    primaryCta: { ...industriesPageEn.hero.primaryCta, label: 'مشاهده رزرو' },
+    secondaryCta: { ...industriesPageEn.hero.secondaryCta, label: 'تماس با تیم' },
+  },
+  sections: [
+    {
+      title: 'حوزه‌های محبوب',
+      items: [
+        { title: 'سالن‌ها و اسپاها', body: 'رزرو لحظه‌ای آرایشگر، مدیریت انعام و کمپین‌های وفاداری.' },
+        { title: 'کلینیک‌های سلامت', body: 'زمان‌بندی، یادآوری و جریان‌های کاری سازگار با مستندات.' },
+        { title: 'مدرس‌ها و آموزش‌دهندگان', body: 'رزرو جلسه، برنامه‌های تکرارشونده و مسیر حضور.' },
+        { title: 'استودیوهای خلاق', body: 'اتوماسیون مسیر مشتری از رزرو تا حقوق.' },
+        { title: 'خدمات حقوقی و حرفه‌ای', body: 'فرم‌پذیرش ساخت‌یافته، زمان‌بندی و سوابق امن.' },
+        { title: 'تیم‌های چندشعبه‌ای', body: 'کنترل‌های شعبه‌محور برای نیرو، حقوق و تحلیل.' },
+      ],
+    },
+  ],
+};
+
+export const zapierPage = {
+  ...zapierPageEn,
+  meta: {
+    ...zapierPageEn.meta,
+    title: 'Zapier برای Schedulaa — اتوماسیون رزرو، زمان بندی، انطباق استراحت و حقوق',
+    description:
+      'Schedulaa را با Zapier به بیش از ۶۰۰۰ اپ متصل کنید. داده های رزرو، شیفت، timeclock، استراحت، PTO، onboarding و حقوق را ارسال کنید.',
+  },
+  hero: {
+    ...zapierPageEn.hero,
+    badge: 'اتوماسیون Zapier',
+    title: 'هر لحظه رزرو، شیفت، استراحت و حقوق را با Zapier خودکار کنید',
+    subtitle:
+      'Schedulaa رویدادهای رزرو، زمان بندی، timeclock، انطباق استراحت، PTO، onboarding و جزئیات حقوق را به Zapier می فرستد و اکشن ها می توانند رزرو، کارمند و شیفت بسازند.',
+    primaryCta: { ...zapierPageEn.hero.primaryCta, label: 'باز کردن تنظیمات Zapier' },
+    secondaryCta: { ...zapierPageEn.hero.secondaryCta, label: 'مشاهده دمو' },
+  },
+  sections: [
+    {
+      title: 'گروه تریگرهای زنده',
+      items: [
+        { title: 'رویدادهای رزرو', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
+        { title: 'زمان بندی و شیفت ها', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
+        { title: 'timeclock و انطباق استراحت', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
+        { title: 'مرخصی، onboarding و اسناد', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },
+        { title: 'رویدادهای حقوق', body: 'payroll.ready, payroll.finalized, payroll.details' },
+      ],
+    },
+    {
+      title: 'اکشن های زنده',
+      points: ['create_booking', 'create_employee', 'create_shift / update_shift', 'attach_document'],
+    },
+  ],
 };
 
 export { industriesPage, statusPage, roadmapPage, demoPage, contactPage, supportPage, zapierPage };

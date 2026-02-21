@@ -1,0 +1,483 @@
+{
+  "meta": {
+    "title": "Documentacao Schedulaa | Guias de agenda, folha e comercio",
+    "description": "Guia operacional do Schedulaa para configuracao e uso diario.",
+    "canonical": "https://www.schedulaa.com/docs",
+    "og": {
+      "title": "Documentacao Schedulaa | Guias de agenda, folha e comercio",
+      "description": "Guia operacional do Schedulaa para configuracao e uso diario.",
+      "image": "https://www.schedulaa.com/og/docs.jpg"
+    }
+  },
+  "hero": {
+    "eyebrow": "Documentacao",
+    "title": [
+      "Guia operacional do Schedulaa para configuracao e uso diario.",
+      "Guia operacional do Schedulaa para configuracao e uso diario."
+    ],
+    "subtitle": "Guia operacional do Schedulaa para configuracao e uso diario.",
+    "primaryCta": {
+      "label": "Buscar na documentacao"
+    },
+    "secondaryCta": {
+      "label": "Ver roadmap"
+    },
+    "badge": {
+      "overline": "Guia operacional do Schedulaa para configuracao e uso diario.",
+      "title": "Guia operacional do Schedulaa para configuracao e uso diario."
+    },
+    "mediaAlt": "Conteudo localizado da documentacao do Schedulaa."
+  },
+  "quickLinks": {
+    "eyebrow": "Links rapidos",
+    "title": "Guia operacional do Schedulaa para configuracao e uso diario.",
+    "subtitle": "Guia operacional do Schedulaa para configuracao e uso diario.",
+    "ctaLabel": "Abrir",
+    "items": {
+      "gettingStarted": {
+        "label": "Primeiros passos",
+        "description": "Guia operacional do Schedulaa para configuracao e uso diario."
+      },
+      "userGuides": {
+        "label": "Guias do usuario",
+        "description": "Guia operacional do Schedulaa para configuracao e uso diario."
+      },
+      "apiReference": {
+        "label": "Referencia de API",
+        "description": "Guia operacional do Schedulaa para configuracao e uso diario."
+      },
+      "integrations": {
+        "label": "Integracoes",
+        "description": "Guia operacional do Schedulaa para configuracao e uso diario."
+      },
+      "faq": {
+        "label": "Perguntas frequentes",
+        "description": "Guia operacional do Schedulaa para configuracao e uso diario."
+      },
+      "changelog": {
+        "label": "Registro de mudancas",
+        "description": "Guia operacional do Schedulaa para configuracao e uso diario."
+      }
+    }
+  },
+  "search": {
+    "title": "Pesquisar documentacao",
+    "placeholder": "Conteudo localizado da documentacao do Schedulaa.",
+    "commonTopicsLabel": "Topicos comuns:"
+  },
+  "gettingStarted": {
+    "title": "Primeiros passos",
+    "cards": [
+      {
+        "title": "Guia operacional do Schedulaa para configuracao e uso diario.",
+        "items": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      },
+      {
+        "title": "Guia operacional do Schedulaa para configuracao e uso diario.",
+        "items": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      },
+      {
+        "title": "Guia operacional do Schedulaa para configuracao e uso diario.",
+        "items": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      }
+    ]
+  },
+  "productGuides": {
+    "title": "Guias do produto",
+    "cards": [
+      {
+        "title": "Guia operacional do Schedulaa para configuracao e uso diario.",
+        "highlights": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      },
+      {
+        "title": "Guia operacional do Schedulaa para configuracao e uso diario.",
+        "highlights": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      },
+      {
+        "title": "Guia operacional do Schedulaa para configuracao e uso diario.",
+        "highlights": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      },
+      {
+        "title": "Guia operacional do Schedulaa para configuracao e uso diario.",
+        "highlights": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      },
+      {
+        "title": "Guia operacional do Schedulaa para configuracao e uso diario.",
+        "highlights": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      },
+      {
+        "title": "Guia operacional do Schedulaa para configuracao e uso diario.",
+        "highlights": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      }
+    ]
+  },
+  "apiReference": {
+    "title": "Referencia de API (em breve)",
+    "tableHeaders": {
+      "category": "Categoria",
+      "method": "Metodo",
+      "path": "Caminho",
+      "summary": "Resumo"
+    },
+    "tip": "Guia operacional do Schedulaa para configuracao e uso diario.",
+    "comingSoon": "Guia operacional do Schedulaa para configuracao e uso diario.",
+    "endpoints": []
+  },
+  "integrations": {
+    "title": "Integracoes",
+    "description": "Stripe ja esta ativo; o restante aparece como Beta ou Em breve para deixar o roadmap claro.",
+    "statusLabels": {
+      "available": "Disponivel",
+      "beta": "Beta",
+      "comingSoon": "Em breve"
+    },
+    "items": [
+      {
+        "name": "Stripe",
+        "status": "available",
+        "details": "Checkout, repasses, cartao salvo e automacao de Stripe Tax."
+      },
+      {
+        "name": "QuickBooks / Xero",
+        "status": "beta",
+        "details": "Exporte diarios de folha e resumos de receita para seu sistema contabil."
+      },
+      {
+        "name": "Jitsi",
+        "status": "available",
+        "details": "Sessoes virtuais e entrevistas por video embutidas no fluxo de agendamento."
+      },
+      {
+        "name": "Zapier",
+        "status": "comingSoon",
+        "details": "Conector de automacao para fluxos personalizados e atualizacoes de CRM."
+      },
+      {
+        "name": "Slack",
+        "status": "comingSoon",
+        "details": "Notificacoes de novas reservas, cancelamentos e mudancas de turno."
+      },
+      {
+        "name": "Compra de dominio",
+        "status": "comingSoon",
+        "details": "Compre e conecte dominio proprio sem sair do Schedulaa."
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ e solucao de problemas",
+    "items": [
+      {
+        "question": "Como esse fluxo funciona no Schedulaa?",
+        "answer": "Esse fluxo esta documentado passo a passo e pronto para operacao."
+      },
+      {
+        "question": "Como esse fluxo funciona no Schedulaa?",
+        "answer": "Esse fluxo esta documentado passo a passo e pronto para operacao."
+      },
+      {
+        "question": "Como esse fluxo funciona no Schedulaa?",
+        "answer": "Esse fluxo esta documentado passo a passo e pronto para operacao."
+      },
+      {
+        "question": "Como esse fluxo funciona no Schedulaa?",
+        "answer": "Esse fluxo esta documentado passo a passo e pronto para operacao."
+      }
+    ],
+    "schema": [
+      {
+        "question": "Como esse fluxo funciona no Schedulaa?",
+        "answer": "Esse fluxo esta documentado passo a passo e pronto para operacao."
+      },
+      {
+        "question": "Como esse fluxo funciona no Schedulaa?",
+        "answer": "Esse fluxo esta documentado passo a passo e pronto para operacao."
+      },
+      {
+        "question": "Como esse fluxo funciona no Schedulaa?",
+        "answer": "Esse fluxo esta documentado passo a passo e pronto para operacao."
+      }
+    ]
+  },
+  "changelog": {
+    "title": "Registro de mudancas",
+    "releases": [
+      {
+        "version": "v2.5.0",
+        "date": "2025-10-15",
+        "entries": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      },
+      {
+        "version": "v2.4.0",
+        "date": "2025-09-30",
+        "entries": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      },
+      {
+        "version": "v2.3.1",
+        "date": "2025-08-10",
+        "entries": [
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa.",
+          "Conteudo localizado da documentacao do Schedulaa."
+        ]
+      }
+    ]
+  },
+  "accountingGuides": {
+    "title": "Guias de contabilidade",
+    "subtitle": "Playbooks de QuickBooks e Xero com mapeamento, padroes e guardrails de exportacao.",
+    "guides": {
+      "quickbooks": {
+        "eyebrow": "QuickBooks Online",
+        "title": "Guia de configuracao Schedulaa + QuickBooks",
+        "summary": "Mapeie uma vez, valide os status e sincronize folha ou receita com um clique.",
+        "quickLinkLabel": "Onboarding QuickBooks",
+        "quickLinkDescription": "Mapeamento, padroes, centros de custo e guardrails de exportacao.",
+        "sections": [
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          }
+        ],
+        "ctaLabel": "Abrir configuracoes do QuickBooks"
+      },
+      "xero": {
+        "eyebrow": "Xero",
+        "title": "Guia de configuracao Schedulaa + Xero",
+        "summary": "Mapeie contas, configure tracking padrao e trave periodos antes de sincronizar folha ou receita.",
+        "quickLinkLabel": "Onboarding Xero",
+        "quickLinkDescription": "Mapeamento de diario manual, tracking e controle de data de bloqueio.",
+        "sections": [
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          },
+          {
+            "heading": "Conteudo localizado da documentacao do Schedulaa.",
+            "items": [
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa.",
+              "Conteudo localizado da documentacao do Schedulaa."
+            ]
+          }
+        ],
+        "ctaLabel": "Abrir configuracoes do Xero"
+      }
+    }
+  },
+  "footer": {
+    "helpText": "Conteudo localizado da documentacao do Schedulaa.",
+    "links": {
+      "status": "Conteudo localizado da documentacao do Schedulaa.",
+      "privacy": "Conteudo localizado da documentacao do Schedulaa.",
+      "terms": "Conteudo localizado da documentacao do Schedulaa."
+    }
+  }
+}

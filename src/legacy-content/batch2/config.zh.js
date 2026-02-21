@@ -1,12 +1,12 @@
 import {
   workforcePage as workforcePageEn,
-  industriesPage,
+  industriesPage as industriesPageEn,
   statusPage,
   roadmapPage,
   demoPage,
   contactPage,
   supportPage,
-  zapierPage,
+  zapierPage as zapierPageEn,
 } from './config';
 
 export const workforcePage = {
@@ -74,6 +74,73 @@ export const workforcePage = {
     primary: { ...workforcePageEn.cta.primary, label: '查看工时工作区' },
     secondary: { ...workforcePageEn.cta.secondary, label: '联系销售' },
   },
+};
+
+export const industriesPage = {
+  ...industriesPageEn,
+  meta: {
+    ...industriesPageEn.meta,
+    title: '行业目录 | 按行业浏览 Schedulaa 网站',
+    description:
+      '按行业查看 Schedulaa 工作流：沙龙、诊所、健身工作室、法律服务等，在同一平台完成排班、薪资与商业流程。',
+  },
+  hero: {
+    ...industriesPageEn.hero,
+    badge: '行业',
+    title: '按行业浏览',
+    subtitle:
+      '选择行业，查看企业如何使用 Schedulaa 完成预约、薪资、员工运营、网站与交易流程。',
+    primaryCta: { ...industriesPageEn.hero.primaryCta, label: '查看预约能力' },
+    secondaryCta: { ...industriesPageEn.hero.secondaryCta, label: '联系团队' },
+  },
+  sections: [
+    {
+      title: '热门行业场景',
+      items: [
+        { title: '沙龙与水疗', body: '实时技师预约、消费小费与留存营销。' },
+        { title: '医疗门诊', body: '排班、提醒与文档协同流程。' },
+        { title: '家教与教育', body: '课程预约、周期排程与出勤轨迹。' },
+        { title: '创意工作室', body: '从预约到薪资的客户旅程自动化。' },
+        { title: '法律与专业服务', body: '结构化受理、排班与安全记录。' },
+        { title: '多门店团队', body: '按分店管理人力、薪资与分析。' },
+      ],
+    },
+  ],
+};
+
+export const zapierPage = {
+  ...zapierPageEn,
+  meta: {
+    ...zapierPageEn.meta,
+    title: 'Schedulaa 的 Zapier — 自动化预约、排班、休息合规与薪资流程',
+    description:
+      '通过 Zapier 将 Schedulaa 连接到 6000+ 应用。传递预约、班次、timeclock、休息、PTO、onboarding 与薪资数据。',
+  },
+  hero: {
+    ...zapierPageEn.hero,
+    badge: 'Zapier 自动化',
+    title: '用 Zapier 自动化每一次预约、班次、休息与薪资节点',
+    subtitle:
+      'Schedulaa 会将预约、排班、timeclock、休息合规、PTO、onboarding 与薪资明细发送到 Zapier，同时动作也可在 Schedulaa 中创建预约、员工与班次。',
+    primaryCta: { ...zapierPageEn.hero.primaryCta, label: '打开 Zapier 设置' },
+    secondaryCta: { ...zapierPageEn.hero.secondaryCta, label: '查看演示' },
+  },
+  sections: [
+    {
+      title: '实时触发器分组',
+      items: [
+        { title: '预约事件', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
+        { title: '排班与班次', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
+        { title: 'Timeclock 与休息合规', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
+        { title: '请假、onboarding 与文档', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },
+        { title: '薪资事件', body: 'payroll.ready, payroll.finalized, payroll.details' },
+      ],
+    },
+    {
+      title: '实时动作',
+      points: ['create_booking', 'create_employee', 'create_shift / update_shift', 'attach_document'],
+    },
+  ],
 };
 
 export { industriesPage, statusPage, roadmapPage, demoPage, contactPage, supportPage, zapierPage };

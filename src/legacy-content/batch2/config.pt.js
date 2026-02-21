@@ -65,28 +65,28 @@ export const workforcePage = {
 
 export const industriesPage = {
   meta: {
-    title: 'Saiba mais',
+    title: 'Diretorio de industrias | Sites Schedulaa por setor',
     description:
-      'Saiba mais',
+      'Explore fluxos de trabalho da Schedulaa por industria. Descubra saloes, clinicas, estudios fitness, servicos juridicos e mais com agendamento, folha e comercio unificados.',
   },
   hero: {
-    badge: 'Industries',
-    title: 'Esta secao explica claramente o recurso no Schedulaa.',
+    badge: 'Industrias',
+    title: 'Navegue por industria',
     subtitle:
-      'Sim, este recurso e suportado no fluxo atual da plataforma.',
-    primaryCta: { label: 'Esta secao explica claramente o recurso no Schedulaa.', href: '/booking' },
-    secondaryCta: { label: 'Esta secao explica claramente o recurso no Schedulaa.', href: '/contact' },
+      'Escolha uma industria para ver como empresas usam Schedulaa em agendamento, folha, operacoes de equipe, sites e comercio.',
+    primaryCta: { label: 'Explorar agendamento', href: '/booking' },
+    secondaryCta: { label: 'Falar com a equipe', href: '/contact' },
   },
   sections: [
     {
-      title: 'Sim, este recurso e suportado no fluxo atual da plataforma.',
+      title: 'Verticais populares',
       items: [
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Saiba mais' },
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Esta secao explica claramente o recurso no Schedulaa.' },
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Saiba mais' },
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Saiba mais' },
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Esta secao explica claramente o recurso no Schedulaa.' },
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Esta secao explica claramente o recurso no Schedulaa.' },
+        { title: 'Saloes e spas', body: 'Agendamento em tempo real por profissional, gorjetas e campanhas de retencao.' },
+        { title: 'Clinicas de saude', body: 'Agenda, lembretes e fluxos de trabalho orientados por documentacao.' },
+        { title: 'Tutoria e educacao', body: 'Reserva de sessoes, horarios recorrentes e trilhas de presenca.' },
+        { title: 'Estudios criativos', body: 'Automacao da jornada do cliente do agendamento ate a folha.' },
+        { title: 'Servicos juridicos e profissionais', body: 'Intake estruturado, agenda e registros seguros.' },
+        { title: 'Equipes multiunidade', body: 'Controles por filial para staffing, folha e analitica.' },
       ],
     },
   ],
@@ -239,32 +239,32 @@ export const supportPage = {
 
 export const zapierPage = {
   meta: {
-    title: 'Saiba mais',
+    title: 'Zapier para Schedulaa — automatize agendamentos, escalas, compliance de pausas e folha',
     description:
-      'Saiba mais',
+      'Conecte o Schedulaa a mais de 6.000 apps com Zapier. Envie eventos de agendamento, turnos, timeclock, pausas, PTO, onboarding e folha.',
   },
   hero: {
-    badge: 'Esta secao explica claramente o recurso no Schedulaa.',
-    title: 'Saiba mais',
+    badge: 'Automacao Zapier',
+    title: 'Automatize cada agendamento, turno, pausa e momento da folha com Zapier',
     subtitle:
-      'Saiba mais',
-    primaryCta: { label: 'Esta secao explica claramente o recurso no Schedulaa.', href: '/settings/zapier' },
-    secondaryCta: { label: 'Esta secao explica claramente o recurso no Schedulaa.', href: '/demo' },
+      'O Schedulaa envia para o Zapier dados de agendamentos, escalas, timeclock, compliance de pausas, PTO, onboarding e folha; as acoes tambem podem criar reservas, colaboradores e turnos.',
+    primaryCta: { label: 'Abrir configuracoes do Zapier', href: '/settings/zapier' },
+    secondaryCta: { label: 'Ver demo', href: '/demo' },
   },
   sections: [
     {
-      title: 'Esta secao explica claramente o recurso no Schedulaa.',
+      title: 'Grupos de gatilhos ao vivo',
       items: [
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Saiba mais' },
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Esta secao explica claramente o recurso no Schedulaa.' },
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Saiba mais' },
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Saiba mais' },
-        { title: 'Esta secao explica claramente o recurso no Schedulaa.', body: 'Saiba mais' },
+        { title: 'Eventos de agendamento', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
+        { title: 'Escalas e turnos', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
+        { title: 'Timeclock e compliance de pausas', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
+        { title: 'Licencas, onboarding e documentos', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },
+        { title: 'Eventos de folha', body: 'payroll.ready, payroll.finalized, payroll.details' },
       ],
     },
     {
-      title: 'Esta secao explica claramente o recurso no Schedulaa.',
-      points: ['create_booking', 'create_employee', 'Esta secao explica claramente o recurso no Schedulaa.', 'attach_document'],
+      title: 'Acoes ao vivo',
+      points: ['create_booking', 'create_employee', 'create_shift / update_shift', 'attach_document'],
     },
   ],
 };

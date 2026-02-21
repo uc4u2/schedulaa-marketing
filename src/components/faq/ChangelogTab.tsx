@@ -1,45 +1,9 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
+import { AppLocale } from '@/utils/locale';
+import { getFaqCopy } from './localeCopy';
 
-export const faqData = [
-  {
-    id: 1,
-    question: 'What is a changelog?',
-    answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
-  },
-  {
-    id: 2,
-    question: 'How often is the changelog updated?',
-    answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
-  },
-  {
-    id: 3,
-    question: 'Where can I view the latest changelog?',
-    answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
-  },
-  {
-    id: 4,
-    question: 'Am I get notified when something changes?',
-    answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
-  },
-  {
-    id: 5,
-    question: 'What types of updates are included?',
-    answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
-  },
-  {
-    id: 6,
-    question: 'Are minor fixes always included in the changelog?',
-    answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
-  },
-];
-
-const ChangelogTab = () => {
+const ChangelogTab = ({ locale }: { locale: AppLocale | string | null | undefined }) => {
+  const faqData = getFaqCopy(locale).changelogItems;
   return (
     <Accordion
       className="mx-auto w-full max-w-[850px] space-y-4"

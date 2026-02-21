@@ -1,7 +1,9 @@
-import faqData from '@/data/json/faq/faq.json';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
+import { AppLocale } from '@/utils/locale';
+import { getFaqCopy } from './localeCopy';
 
-const GeneralTab = () => {
+const GeneralTab = ({ locale }: { locale: AppLocale | string | null | undefined }) => {
+  const faqData = getFaqCopy(locale).generalItems;
   return (
     <Accordion
       className="mx-auto w-full max-w-[850px] space-y-4"

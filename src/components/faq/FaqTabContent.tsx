@@ -3,31 +3,27 @@ import ChangelogTab from './ChangelogTab';
 import GeneralTab from './GeneralTab';
 import PrivacyTab from './PrivacyTab';
 import TermsConditionsTab from './TermsConditionsTab';
+import { AppLocale } from '@/utils/locale';
 
-const data = [
-  {
-    id: 1,
-    tabTitle: 'General',
-    tabContent: <GeneralTab />,
-  },
-  {
-    id: 2,
-    tabTitle: 'Changelog',
-    tabContent: <ChangelogTab />,
-  },
-  {
-    id: 3,
-    tabTitle: 'Privacy',
-    tabContent: <PrivacyTab />,
-  },
-  {
-    id: 4,
-    tabTitle: 'Terms & Conditions',
-    tabContent: <TermsConditionsTab />,
-  },
-];
-
-const FaqTabContent = () => {
+const FaqTabContent = ({ locale }: { locale: AppLocale | string | null | undefined }) => {
+  const data = [
+    {
+      id: 1,
+      tabContent: <GeneralTab locale={locale} />,
+    },
+    {
+      id: 2,
+      tabContent: <ChangelogTab locale={locale} />,
+    },
+    {
+      id: 3,
+      tabContent: <PrivacyTab locale={locale} />,
+    },
+    {
+      id: 4,
+      tabContent: <TermsConditionsTab locale={locale} />,
+    },
+  ];
   return (
     <>
       {data.map((item, index) => (

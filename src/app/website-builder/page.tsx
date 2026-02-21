@@ -1,14 +1,21 @@
 import WebsiteBuilderAiApplicationLayout from '@/components/aiapp-skin/website-builder/WebsiteBuilderAiApplicationLayout';
-import { websiteBuilderPage } from '@/legacy-content/website-builder/config';
+import { getWebsiteBuilderSource } from '@/legacy-content/website-builder/getWebsiteBuilderSource';
 import { defaultMetadata } from '@/utils/generateMetaData';
+import { getServerLocale } from '@/utils/serverLocale';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  ...defaultMetadata,
-  title: websiteBuilderPage.meta?.title || 'Website Builder | Schedulaa',
-  description: websiteBuilderPage.meta?.description,
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale();
+  const websiteBuilderPage = getWebsiteBuilderSource(locale);
+  return {
+    ...defaultMetadata,
+    title: websiteBuilderPage.meta?.title || 'Website Builder | Schedulaa',
+    description: websiteBuilderPage.meta?.description,
+  };
+}
 
-export default function WebsiteBuilderPage() {
+export default async function WebsiteBuilderPage() {
+  const locale = await getServerLocale();
+  const websiteBuilderPage = getWebsiteBuilderSource(locale);
   return <WebsiteBuilderAiApplicationLayout page={websiteBuilderPage as any} />;
 }

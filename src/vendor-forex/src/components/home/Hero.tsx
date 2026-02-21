@@ -11,7 +11,7 @@ import sourceEn from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
-import { DEFAULT_LOCALE } from '@/utils/locale';
+import { AppLocale, DEFAULT_LOCALE } from '@/utils/locale';
 import HeroShowcase from './HeroShowcase';
 
 interface FeatureItem {
@@ -19,15 +19,34 @@ interface FeatureItem {
   text: string;
 }
 
-const featureItems: FeatureItem[] = [
-  { id: 1, text: 'Real-time booking and provider availability.' },
-  { id: 2, text: 'Payroll-ready exports for US + Canada.' },
-  { id: 3, text: 'Websites, checkout, and automation in one OS.' },
-];
+const featureItemsByLocale: Record<string, FeatureItem[]> = {
+  en: [
+    { id: 1, text: 'Real-time booking and provider availability.' },
+    { id: 2, text: 'Payroll-ready exports for US + Canada.' },
+    { id: 3, text: 'Websites, checkout, and automation in one OS.' },
+  ],
+  fa: [
+    { id: 1, text: 'رزرو لحظه‌ای و ظرفیت زنده ارائه‌دهنده‌ها.' },
+    { id: 2, text: 'خروجی آماده حقوق برای آمریکا و کانادا.' },
+    { id: 3, text: 'وب‌سایت، پرداخت و اتوماسیون در یک سیستم.' },
+  ],
+  ru: [
+    { id: 1, text: 'Бронирование в реальном времени и доступность специалистов.' },
+    { id: 2, text: 'Выгрузки payroll для США и Канады.' },
+    { id: 3, text: 'Сайты, checkout и автоматизация в одной OS.' },
+  ],
+  zh: [
+    { id: 1, text: '实时预约与服务人员可用性。' },
+    { id: 2, text: '支持美国和加拿大的薪资导出。' },
+    { id: 3, text: '网站、结账与自动化在同一套系统中。' },
+  ],
+};
 
-const Hero = ({ source }: { source?: any }) => {
+const Hero = ({ source, locale = DEFAULT_LOCALE }: { source?: any; locale?: AppLocale }) => {
   const content = source || sourceEn;
-  const returnTo = marketingReturnTo(DEFAULT_LOCALE, '/');
+  const returnTo = marketingReturnTo(locale, '/');
+  const featureItems = featureItemsByLocale[locale] || featureItemsByLocale.en;
+  const popularLabel = locale === 'fa' ? 'محبوب' : locale === 'ru' ? 'Популярно' : locale === 'zh' ? '热门' : 'Popular';
   return (
     <section className="relative z-20 max-h-[900px] bg-[url('/images/ns-img-295.jpg')] bg-cover bg-top bg-no-repeat pt-[170px] pb-[50px] md:pt-[206px] md:pb-[100px] xl:max-h-[1126px]">
       <div className="absolute top-[10%] left-1/2 -z-10 mx-auto max-w-[1365px] -translate-x-1/2">
@@ -107,7 +126,7 @@ const Hero = ({ source }: { source?: any }) => {
                   } as CSSProperties}>
                   <Image
                     src={heroOverlayEmployeeImg}
-                    alt="Employee management preview"
+                    alt=""
                     quality={100}
                     unoptimized
                     className="h-full w-full rounded-lg object-cover opacity-95"
@@ -123,12 +142,12 @@ const Hero = ({ source }: { source?: any }) => {
                   } as CSSProperties}>
                   <Link href="/payroll" className="group relative block overflow-hidden rounded-lg">
                     <span className="absolute top-2 right-2 z-10 inline-flex items-center rounded-full border border-lime-200/30 bg-lime-300/95 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-slate-900 shadow-[0_8px_20px_rgba(157,255,0,0.28)]">
-                      Popular
+                      {popularLabel}
                     </span>
                     <span className="pointer-events-none absolute inset-0 z-[1] rounded-lg ring-1 ring-lime-300/35 transition-all duration-300 group-hover:ring-lime-300/55" />
                     <Image
                       src={heroOverlayClientsImg}
-                      alt="Payroll management preview"
+                      alt=""
                       quality={100}
                       unoptimized
                       className="h-full w-full rounded-lg object-cover opacity-95 transition-transform duration-500 group-hover:scale-[1.03]"
@@ -145,7 +164,7 @@ const Hero = ({ source }: { source?: any }) => {
                   } as CSSProperties}>
                   <Image
                     src={heroOverlayBookingImg}
-                    alt="Client slot selection preview"
+                    alt=""
                     quality={100}
                     unoptimized
                     className="h-full w-full rounded-lg object-cover opacity-95"
@@ -161,7 +180,7 @@ const Hero = ({ source }: { source?: any }) => {
                   } as CSSProperties}>
                   <Image
                     src={heroOverlayShiftImg}
-                    alt="Shift management preview"
+                    alt=""
                     quality={100}
                     unoptimized
                     className="h-full w-full rounded-lg object-cover opacity-95"
@@ -177,7 +196,7 @@ const Hero = ({ source }: { source?: any }) => {
                   } as CSSProperties}>
                   <Image
                     src={heroOverlayWebsiteBuilderImg}
-                    alt="Website builder preview"
+                    alt=""
                     quality={100}
                     unoptimized
                     className="h-full w-full rounded-lg object-cover opacity-95"
@@ -188,7 +207,7 @@ const Hero = ({ source }: { source?: any }) => {
             <div className="relative mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]" style={{ transform: 'perspective(1400px) rotateX(3deg)' }}>
               <div className="pointer-events-none absolute -inset-4 rounded-[28px] bg-linear-[145deg,rgba(0,194,255,0.22)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.12)_100%] blur-xl" />
               <div className="pointer-events-none absolute -inset-x-10 -bottom-8 h-16 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,180,255,0.38)_0%,rgba(0,0,0,0)_72%)]" />
-              <HeroShowcase />
+              <HeroShowcase locale={locale} />
             </div>
           </div>
         </RevealAnimation>
