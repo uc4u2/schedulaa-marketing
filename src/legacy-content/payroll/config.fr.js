@@ -3,20 +3,20 @@ const REGISTER_URL = "/register";
 const CONTACT_URL = "/contact";
 
 const sharedCta = {
-  overline: "Paie + HR in one hub",
-  title: "Executer la paie, issue slips, and publish portals in minutes",
-  body: "Schedulaa unifies paie calculations, compliance exports, and employe libre-service tools so finance and operations can work from the same dashboard.",
+  overline: "Paie + RH dans une seule plateforme",
+  title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  body: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   primary: { label: "Commencer gratuitement", href: REGISTER_URL },
-  secondary: { label: "Parlez-nous", href: CONTACT_URL },
+  secondary: { label: "En savoir plus", href: CONTACT_URL },
 };
 
 const sharedSecondaryLinks = [
-  { label: "Canada paie", href: "/payroll/canada" },
-  { label: "USA paie", href: "/payroll/usa" },
-  { label: "ROE generateur", href: "/payroll/tools/roe" },
-  { label: "T4 generateur", href: "/payroll/tools/t4" },
-  { label: "W-2 generateur", href: "/payroll/tools/w2" },
-  { label: "Employee payslips", href: "/payslips" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payroll/canada" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payroll/usa" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payroll/tools/roe" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payroll/tools/t4" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payroll/tools/w2" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payslips" },
 ];
 
 const buildBreadcrumbList = (items) => ({
@@ -33,27 +33,27 @@ const buildBreadcrumbList = (items) => ({
 const payrollBreadcrumb = (name, href) =>
   buildBreadcrumbList([
     { name: "Home", href: BASE_URL },
-    { name: "Paie", href: `${BASE_URL}/payroll` },
+    { name: "Payroll", href: `${BASE_URL}/payroll` },
     ...(name && href ? [{ name, href }] : []),
   ]);
 
 const overviewConfig = {
   meta: {
-    title: "Paie Software & Payslip Automation | Schedulaa",
+    title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     description:
-      "Tie planification data, regional tax engines, and employe libre-service portals into one paie workspace. Support Canada, USA, and statement exports from day one.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     canonical: `${BASE_URL}/payroll`,
     og: {
-      title: "Unified Paie & Planification Plateforme | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Executer la paie for Canada and the USA, generate ROE/T4/W-2 files, and publish payslips through the employe portail.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: `${BASE_URL}/images/payroll-overview.png`,
       url: `${BASE_URL}/payroll`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Schedulaa Paie Overview",
-      description: "Preview deductions, finaliser slips, and keep employes informed across every region you support.",
+      title: "En savoir plus",
+      description: "En savoir plus",
       image: `${BASE_URL}/images/payroll-overview.png`,
     },
   },
@@ -61,12 +61,12 @@ const overviewConfig = {
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      name: "Schedulaa Paie",
+      name: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       applicationCategory: "FinanceApplication",
       operatingSystem: "Web",
       url: `${BASE_URL}/payroll`,
       description:
-        "Schedulaa unifies planification, HR, and paie automation. Employees automatically use the correct Canadian or US compliance engine and can access payslips instantly.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       provider: {
         "@type": "Organization",
         name: "Schedulaa",
@@ -81,242 +81,242 @@ const overviewConfig = {
     },
     buildBreadcrumbList([
       { name: "Home", href: BASE_URL },
-      { name: "Paie", href: `${BASE_URL}/payroll` },
+      { name: "Payroll", href: `${BASE_URL}/payroll` },
     ]),
   ],
   hero: {
-    badge: "Planification + paie + docs",
-    title: "Paie that stays in sync with operations",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     subtitle:
-      "Pull real-time hours from planification and time tracking, apply CRA or IRS logic, layer in tips, bonus, commission, shift premiums, union dues, garnishments, and non-taxable reimbursements, then ship payslips plus ROE/T4/W-2 without leaving Schedulaa. U.S. full finaliser is currently available in AK, FL, NV, SD, TX, WA, WY, TN, and NH; other U.S. states run in raw apercu mode.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     image: "/images/marketing/payroll-manage.png",
-    imageAlt: "Schedulaa paie management apercu",
+    imageAlt: "En savoir plus",
     images: [
-      { src: "/images/marketing/payroll-manage.png", alt: "Paie management" },
-      { src: "/images/marketing/showcase/t4.png", alt: "T4 generation" },
-      { src: "/images/marketing/showcase/roe.png", alt: "ROE workflow" },
-      { src: "/images/marketing/showcase/w2-4d.png", alt: "W-2 generation" },
+      { src: "/images/marketing/payroll-manage.png", alt: "Cette section explique clairement la fonctionnalite dans Schedulaa." },
+      { src: "/images/marketing/showcase/t4.png", alt: "Cette section explique clairement la fonctionnalite dans Schedulaa." },
+      { src: "/images/marketing/showcase/roe.png", alt: "Cette section explique clairement la fonctionnalite dans Schedulaa." },
+      { src: "/images/marketing/showcase/w2-4d.png", alt: "Cette section explique clairement la fonctionnalite dans Schedulaa." },
     ],
     bullets: [
-      "Regional engines for Canada (CPP/EI/BPA, CPP/EI exemptions) and the USA (federal tax, FICA/Medicare, employer FUTA/SUTA reporting).",
-      "Taxable extras like shift premium, tips, commission, bonus plus deductions like union dues and garnishments—net pay matches the apercu.",
-      "Unsupported U.S. states remain available for raw apercu, with clear warnings and finaliser blocked.",
-      "ROE, T4 (with Box 40/44), W-2, and payslip exports backed by our public docs.",
-      "Employee libre-service portail plus automated notifications.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "En savoir plus",
+      "En savoir plus",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Voir l espace paie", href: REGISTER_URL },
-    secondaryCta: { label: "Lire la documentation", href: "/docs#payroll" },
+    primaryCta: { label: "En savoir plus", href: REGISTER_URL },
+    secondaryCta: { label: "En savoir plus", href: "/docs#payroll" },
     notice:
-      "* U.S. full finaliser: AK, FL, NV, SD, TX, WA, WY, TN, NH only. ** Other U.S. states are raw apercu only (finaliser blocked). *** Local/city taxes and special programs (for example WA PFML / WA Cares) remain external.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   },
-  fonctionnalitesHeading: "Plateforme",
-  fonctionnalitesTitle: "One place for calculations, slips, and employe updates",
-  fonctionnalitesIntro:
-    "Content used here is pulled from our Fonctionnalites, Docs, and region-specific paie pages so prospects see everything Google expects on /paie.",
-  fonctionnalites: [
+  featuresHeading: "Platform",
+  featuresTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  featuresIntro:
+    "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+  features: [
     {
       icon: "timeline",
-      label: "Flux de travail",
-      title: "Ops-connected pay runs",
+      label: "Workflow",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Import actual hours, overtime, and tips from the planification suite before calculating deductions. The correct country engine applies automatically per employe. When a run moves to paie.ready or paie.finalized, Zapier events can notify finance, push exports, or trigger downstream workflows. Every etape is logged for finance and HR audits, including overwrite history when a period is re-finalized.",
-      link: "/fonctionnalites",
-      linkLabel: "Visiter la plateforme",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+      link: "/features",
+      linkLabel: "En savoir plus",
     },
     {
       icon: "compliance",
-      label: "Conformite",
-      title: "Canada & USA tax engines",
+      label: "Compliance",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Employees automatically run on Canadian CPP/EI/BPA logic (with CPP/EI exemptions) or U.S. federal tax + FICA/Medicare logic based on work location. U.S. full finaliser is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states remain available as raw apercu with warnings. Both engines support shift premium, tips, commission, bonus, union dues, garnishments, and non-taxable reimbursements.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       link: "/payroll/canada",
-      linkLabel: "Voir les calculateurs regionaux",
+      linkLabel: "En savoir plus",
     },
     {
       icon: "retirement",
-      label: "Enterprise Retirement (U.S. 401(k))",
-      title: "401(k) deferrals, caps, and W-2 alignment",
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Automatic 401(k) and Roth 401(k) calculations with annual caps, employer match limites, and applicable wage bases. Post-finalization exports surface W-2 Box 12D codes so year-end filings align with what paie produced.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       link: "/payroll/usa",
-      linkLabel: "Review U.S. paie couverture",
+      linkLabel: "En savoir plus",
     },
     {
       icon: "document",
       label: "Documents",
-      title: "ROE, T4, W-2, and payslips",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Finalize paie, email slips, post them in the payslip portail, and export ROE/T4/W-2 files that align with CRA and IRS specs.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       link: "/payslips",
-      linkLabel: "Ouvrir le portail des bulletins",
+      linkLabel: "En savoir plus",
     },
   ],
   highlights: [
     {
-      overline: "Coverage at a glance",
-      title: "Engines for Canada (ex-Québec) and supported U.S. states",
+      overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Two regional engines, one workspace. Employees automatically use the right CRA or IRS/FICA/state logic based on their work location—no duplicate setups.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       points: [
-        "CA: Federal & provincial tax, CPP/EI (with exemptions), vacation/stat holidays, T4 boxes 14/16/18/22/24/26/40/44, ROE.",
-        "US: Federal income tax, FICA/Medicare, employer FUTA/SUTA reporting, and W-2 exports. Full finaliser is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH.",
-        "Local/city/municipal paie taxes remain external where they apply.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
     },
     {
-      overline: "Documented flows",
-      title: "Guided paie that mirrors our Docs",
+      overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Preview → adjust → finaliser → publish exactly as shown in the public docs. No hidden etapes—new managers can follow the same playbook used by finance.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       points: [
-        "Screenshots for every apercu etape live in the docs.",
-        "Direct links to ROE/T4/W-2 (incl. Box 40/44) guides for deeper review.",
-        "Inline help inside the app keeps managers on the rails.",
+        "En savoir plus",
+        "En savoir plus",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
     },
     {
-      overline: "Employee experience",
-      title: "Self-serve slips and notifications",
+      overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Branded portail + alerts: employes download slips anytime; finance chooses email, SMS, or in-app notifications. Taxable vs non-taxable items are labeled clearly.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       points: [
-        "Branded portail inherits your site colors automatically.",
-        "Scoped access per employe keeps data secure.",
-        "Shortcuts to /paie/tools for region-specific exports.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
     },
   ],
-  stepsHeading: "Comment paie runs inside Schedulaa",
-  stepsTitle: "From schedule to finalized slips in four etapes",
-  stepsIntro: "Local and city paie taxes are handled externally.",
+  stepsHeading: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+  stepsTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  stepsIntro: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   steps: [
     {
-      title: "Import hours & review context",
+      title: "En savoir plus",
       description:
-        "Pull hours from planification, sync bonuses, tips, commissions, or shift premium, and compare to historic pay runs before doing any math.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      title: "Apply deductions with the right engine",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "The correct country rules apply automatically by employe location. CRA or IRS logic, plus vacation pay, benefits, union dues, garnishments, and non-taxable reimbursements, are applied instantly.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      title: "Finalize and export",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Generate payslips, CSV, or Excel summaries and push ROE/T4/W-2 files to the tools section for auditor review.",
+        "En savoir plus",
     },
     {
-      title: "Publish to the portail",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Notify employes, post slips in the portail, and keep everything searchable for future audits.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      title: "Spot-check for year-end readiness",
+      title: "En savoir plus",
       description:
-        "Confirm union dues, taxable benefits, and exemptions are reflected correctly so T4/W-2 totals align with what finance expects at year-end.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      title: "Share with finance & ops",
+      title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       description:
-        "Hand off clean exports to accounting or BI, with the same gross, deduction, and net figures your managers saw in apercu.",
+        "En savoir plus",
     },
   ],
   callouts: [
     {
       icon: "compliance",
-      label: "Coverage & limites",
-      title: "Current U.S. support boundaries",
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Full U.S. finaliser is currently supported only in AK, FL, NV, SD, TX, WA, WY, TN, and NH. Other U.S. states are available in raw apercu mode with warnings and finaliser blocked. Employer FUTA/SUTA is reported separately and does not reduce employe net pay.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       points: [
-        "* Full finaliser states: AK, FL, NV, SD, TX, WA, WY, TN, NH",
-        "** Unsupported states: apercu-only raw mode",
-        "*** Local/city taxes + WA PFML/WA Cares: external handling",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "En savoir plus",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
     },
     {
       icon: "analytics",
       label: "Insights",
-      title: "Finance and HR see the same truth",
+      title: "En savoir plus",
       body:
-        "Paie history, deduction logic, and document exports are visible in analytics dashboards so leadership sees trends without another BI tool.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       links: [
-        { label: "Ouvrir la visite analytique", href: "/marketing/analytics-dashboard" },
-        { label: "Lire les guides paie", href: "/docs#payroll" },
+        { label: "En savoir plus", href: "/marketing/analytics-dashboard" },
+        { label: "En savoir plus", href: "/docs#payroll" },
       ],
     },
     {
       icon: "schedule",
-      label: "Paie-ready time data",
-      title: "Hours arrive with breaks, overtime, and audits attached",
+      label: "En savoir plus",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Approved time entries land with unpaid breaks deducted, overtime and missed-break markers attached, and IP/UA metadata for audits. Finance exports CSV/PDF or syncs to accounting without spreadsheets.",
+        "En savoir plus",
       points: [
-        "Forced clock-out and bulk break template fixes are fully audited.",
-        "OT/missed-break flags travel with each pay period.",
-        "Safe portail links keep employes on the right local domain.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
     },
   ],
-  faqHeading: "Questions frequentes",
-  faqTitle: "Paie apercu questions",
+  faqHeading: "FAQ",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   faq: [
     {
-      question: "Do you support all U.S. states for finaliser?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Not yet. Full finaliser is currently supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH. Other U.S. states remain available as raw apercu with finaliser blocked.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      question: "Is /paie different from the Canada or USA pages?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "The apercu introduces everything on one page for crawlers and prospects. It links directly to the Canada and USA calculators plus ROE/T4/W-2 tools for deeper regulation details.",
+        "En savoir plus",
     },
     {
-      question: "Does Google get blocked from paie content?",
+      question: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       answer:
-        "No. robots.txt now allows /paie and the sitemap lists every regional URL so crawlers reach them through HTML links.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      question: "Do I need separate logins for the payslip portail?",
+      question: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       answer:
-        "Employees reuse their Schedulaa credentials. Access is gated by role, and managers can revoke permissions at any time.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   cta: sharedCta,
   secondaryLinks: [
-    { label: "Docs: paie apercu", href: "/docs#payroll" },
-    { label: "Comparatif: Schedulaa vs Gusto", href: "/compare/gusto" },
-    { label: "Comparatif: Schedulaa vs ADP", href: "/compare/adp" },
+    { label: "En savoir plus", href: "/docs#payroll" },
+    { label: "En savoir plus", href: "/compare/gusto" },
+    { label: "En savoir plus", href: "/compare/adp" },
     ...sharedSecondaryLinks,
   ],
   nextSteps: {
-    overline: "Etapes suivantes",
-    title: "Choose where to go next",
-    description: "Keep exploring paie—from pricing to calculators and customer-facing documentation.",
+    overline: "Prochaines etapes",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    description: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     links: [
       {
-        label: "Voir les tarifs",
-        description: "Voir comment paie, planification, and marketing fonctionnalites line up.",
+        label: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+        description: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
         href: "/pricing",
-        cta: "Voir les tarifs",
+        cta: "En savoir plus",
       },
       {
-        label: "Demarrer un cycle de paie canadien",
-        description: "Review CPP, EI, and provincial couverture in detail.",
+        label: "En savoir plus",
+        description: "En savoir plus",
         href: "/payroll/canada",
-        cta: "Canada paie",
+        cta: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
       {
-        label: "Ouvrir la documentation",
-        description: "Follow the paie apercu flow etape by etape in the documentation.",
+        label: "En savoir plus",
+        description: "En savoir plus",
         href: "/docs#payroll",
-        cta: "Lire docs",
+        cta: "Lire la documentation",
       },
       {
-        label: "Telecharger les modeles ROE/T4/W-2",
-        description: "Jump straight into the paie tools and final form exports.",
+        label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        description: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
         href: "/payroll/tools/t4",
-        cta: "Voir les outils",
+        cta: "En savoir plus",
       },
     ],
   },
@@ -324,22 +324,22 @@ const overviewConfig = {
 
 const canadaConfig = {
   meta: {
-    title: "Canada Paie Calculator & Software (CPP, EI, BPA) | Schedulaa",
+    title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     description:
-      "Run Canadian paie with CPP, EI, federal and provincial tax, vacation pay, bonuses, tips, and employer matches. Finalize payslips as PDF, CSV, or Excel and email employes automatically.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     canonical: `${BASE_URL}/payroll/canada`,
     og: {
-      title: "Canada Paie Calculator for Small Businesses | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Preview and finaliser Canadian paie with CPP, EI, provincial tax, bonuses, and tips. Export payslips, email staff, and provide a libre-service portail.",
+        "En savoir plus",
       image: `${BASE_URL}/images/payroll-canada-preview.png`,
       url: `${BASE_URL}/payroll/canada`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Canada Paie Calculator for Small Businesses | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Automate Canadian paie with CPP, EI, provincial tax, vacation pay, and employe portals in one platform.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: `${BASE_URL}/images/payroll-canada-preview.png`,
     },
   },
@@ -347,7 +347,7 @@ const canadaConfig = {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa Canada Paie",
+      name: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       offers: {
@@ -356,12 +356,12 @@ const canadaConfig = {
         priceCurrency: "CAD",
       },
       featureList: [
-        "CPP and EI calculations",
-        "Federal and provincial income tax deductions",
-        "Vacation pay automation",
-        "Bonuses, tips, and commissions support",
-        "Payslip PDF, CSV, and Excel export",
-        "Employee self-service payslip portail",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
       url: `${BASE_URL}/payroll/canada`,
       provider: {
@@ -370,174 +370,174 @@ const canadaConfig = {
         url: BASE_URL,
       },
     },
-    payrollBreadcrumb("Canada paie", `${BASE_URL}/payroll/canada`),
+    payrollBreadcrumb("Cette section explique clairement la fonctionnalite dans Schedulaa.", `${BASE_URL}/payroll/canada`),
   ],
   hero: {
-    badge: "CPP, EI, BPA tracking",
-    title: "Canada Paie Calculator for Small Businesses",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     subtitle:
-      "Calculate gross-to-net with CPP, EI, federal and provincial tax, vacation pay, bonuses, tips, and employer matches in one dashboard.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     bullets: [
-      "Preview deductions line by line before finalizing paie.",
-      "Automate BPA pro-rating, CPP/EI ceilings, and YTD breakouts.",
-      "Export payslips as PDF, CSV, or Excel and email employes instantly.",
+      "En savoir plus",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Run Canadian paie", href: REGISTER_URL },
-    secondaryCta: { label: "Book a walkthrough", href: CONTACT_URL },
+    primaryCta: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: REGISTER_URL },
+    secondaryCta: { label: "En savoir plus", href: CONTACT_URL },
   },
-  fonctionnalitesHeading: "Fonctionnalites",
-  fonctionnalitesTitle: "Everything Canadian paie equipes expect",
-  fonctionnalitesIntro:
-    "Schedulaa aligns with CRA guidance for CPP, EI, and federal/provincial tax brackets so you can trust every pay cycle.",
-  fonctionnalites: [
+  featuresHeading: "Features",
+  featuresTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  featuresIntro:
+    "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+  features: [
     {
       icon: "compliance",
-      label: "Conformite",
-      title: "CPP, EI, and tax automation",
+      label: "Compliance",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Calculate CPP, EI, and federal/provincial income tax with BPA pro-rating per employe. YTD ceilings and clawbacks are tracked automatically.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
       icon: "document",
       label: "Payslips",
-      title: "Finalize and export slips",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Finalize paie and export slips as PDF, CSV, or Excel. Email documents to each employe directly from the pay run.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       link: "/payslips",
-      linkLabel: "Voir le payslip portail",
+      linkLabel: "En savoir plus",
     },
     {
       icon: "timeline",
-      label: "Flux de travail",
-      title: "Preview, adjust, finaliser",
+      label: "Workflow",
+      title: "En savoir plus",
       description:
-        "Preview every deduction, edit overtime, bonuses, tips, commissions, and employer contributions, then finaliser once amounts look right.",
+        "En savoir plus",
     },
   ],
   highlights: [
     {
-      overline: "Preview and finaliser",
-      title: "Line-item apercu with BPA and YTD context",
+      overline: "En savoir plus",
+      title: "En savoir plus",
       body:
-        "Voir comment federal, provincial, CPP, and EI deductions apply before committing a pay run. Every employe view includes BPA usage, vacation pay, and net pay totals.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       points: [
-        "Override hours, rates, and taxable benefits on the fly.",
-        "Break out employer contributions alongside employe deductions.",
-        "Keep an audit trail of each recalculation before finalizing.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
       links: [
-        { label: "View paie workflow", href: "/payroll/usa" },
+        { label: "En savoir plus", href: "/payroll/usa" },
       ],
       image: {
         src: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa paie apercu showing Canadian deductions",
+        alt: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       },
     },
     {
       overline: "Exports",
-      title: "Deliver payslips and compliance files in one click",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Finalize a run, export slips as PDF, CSV, or Excel, and send them to staff instantly. Need year-end filings? Jump straight into T4 or ROE generation with prefilled data.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       points: [
-        "One-click email of finalized PDF slips to each employe.",
-        "Batch downloads for accounting and year-end review.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "En savoir plus",
       ],
       links: [
-        { label: "Generate T4 slips", href: "/payroll/tools/t4" },
-        { label: "Create ROEs", href: "/payroll/tools/roe" },
+        { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payroll/tools/t4" },
+        { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payroll/tools/roe" },
       ],
       image: {
         src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa paie export options",
+        alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "Run a Canadian pay cycle in three etapes",
+  stepsTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
   stepsIntro:
-    "Schedulaa connects planification, timesheets, and paie data so finance equipes can close each pay period quickly.",
+    "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   steps: [
     {
-      title: "Import hours or enter earnings",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Bring in hours from planification or upload CSV data. Add bonuses, tips, commissions, and employer contributions before calculating.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      title: "Preview deductions and adjust",
+      title: "En savoir plus",
       description:
-        "Review CPP, EI, and tax amounts with BPA context. Override vacation pay, taxable benefits, or RRSP/401k matches as needed.",
+        "En savoir plus",
     },
     {
-      title: "Finalize and deliver payslips",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Lock the pay run, email PDF slips to employes, download CSV or Excel exports, and queue T4/ROE filings directly.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   ],
   callouts: [
     {
       icon: "compliance",
-      label: "Employee access",
-      title: "Self-serve payslip portail",
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Employees can sign in to Schedulaa and download their finalized PDF payslips any time. Filters make it easy to locate past periods without asking paie staff.",
-      links: [{ label: "Voir le portail", href: "/payslips" }],
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+      links: [{ label: "En savoir plus", href: "/payslips" }],
     },
     {
       icon: "document",
-      label: "Year-end filings",
-      title: "T4 and ROE tooling included",
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Generate CRA-compliant T4 slips and XML files, plus Records of Employment with PDF and XML exports. Prefilled data comes straight from the latest pay runs.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       links: [
-        { label: "Ouvrir le T4 generateur", href: "/payroll/tools/t4" },
-        { label: "Ouvrir le ROE generateur", href: "/payroll/tools/roe" },
+        { label: "En savoir plus", href: "/payroll/tools/t4" },
+        { label: "En savoir plus", href: "/payroll/tools/roe" },
       ],
     },
   ],
-  faqHeading: "Questions frequentes",
-  faqTitle: "Canadian paie questions",
-  faqIntro: "Honest answers based on what Schedulaa already powers for Canadian equipes.",
+  faqHeading: "FAQ",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+  faqIntro: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   faq: [
     {
-      question: "Do you support Québec paie?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Schedulaa's standard paie flow covers every province except Québec. We maintain a dedicated Québec path to handle QPP and RQAP; contact us so we can review your setup and enable the correct configuration.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      question: "Can employes download their own payslips?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Yes. Once you finaliser paie, Schedulaa can email PDF slips to employes and surfaces the same documents inside the Employee Payslip Portal for libre-service downloads.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      question: "Comment are CPP and EI ceilings handled?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Schedulaa tracks CPP and EI year-to-date totals per employe. When annual maximums are reached, deductions automatically stop and employer portions adjust accordingly.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   cta: sharedCta,
   secondaryLinks: sharedSecondaryLinks,
   notice:
-    "Note: Local provincial programs such as health premiums or workers' compensation remittances remain manager-configured outside the core paie engine.",
+    "Cette section explique clairement la fonctionnalite dans Schedulaa.",
 };
 
 const usaConfig = {
   meta: {
-    title: "USA Paie Calculator (Federal, FICA/Medicare, Supported State Finalize) | Schedulaa",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     description:
-      "Calculate US paie with federal tax, FICA, Medicare, and employer FUTA/SUTA reporting. Full finaliser is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; other states run in raw apercu mode.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     canonical: `${BASE_URL}/payroll/usa`,
     og: {
-      title: "USA Paie Calculator for Teams with Multi-State Workers | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Preview US paie in all states with federal tax, FICA, and Medicare. Finalize is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       image: `${BASE_URL}/images/payroll-usa-preview.png`,
       url: `${BASE_URL}/payroll/usa`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "USA Paie Calculator for Teams with Multi-State Workers | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Schedulaa automates US paie calculations, payslip exports, and employe libre-service downloads in one workflow.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: `${BASE_URL}/images/payroll-usa-preview.png`,
     },
   },
@@ -545,7 +545,7 @@ const usaConfig = {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa USA Paie",
+      name: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       offers: {
@@ -554,14 +554,14 @@ const usaConfig = {
         priceCurrency: "USD",
       },
       featureList: [
-        "Federal income tax withholding",
-        "Supported-state full finaliser (AK, FL, NV, SD, TX, WA, WY, TN, NH)",
-        "Raw apercu mode for unsupported states",
-        "FICA and Medicare deductions",
-        "Employer FUTA/SUTA reporting (not deducted from net pay)",
-        "Bonuses, tips, and commissions support",
-        "Payslip PDF, CSV, and Excel export",
-        "Employee self-service portail",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "En savoir plus",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
       url: `${BASE_URL}/payroll/usa`,
       provider: {
@@ -570,173 +570,173 @@ const usaConfig = {
         url: BASE_URL,
       },
     },
-    payrollBreadcrumb("USA paie", `${BASE_URL}/payroll/usa`),
+    payrollBreadcrumb("Cette section explique clairement la fonctionnalite dans Schedulaa.", `${BASE_URL}/payroll/usa`),
   ],
   hero: {
-    badge: "Federal + FICA + employer unemployment",
-    title: "USA Paie Calculator with FICA and Medicare built in",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     subtitle:
-      "Handle federal withholding, FICA, Medicare, bonuses, tips, commissions, and employer taxes in the same pay run. Full finaliser is available in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states stay in raw apercu mode.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     bullets: [
-      "Preview paie in all U.S. states before finaliser.",
-      "Track employer FUTA/SUTA alongside employe withholding without reducing employe net pay.",
-      "Unsupported states return raw mode warnings and finaliser is blocked.",
-      "Email PDF payslips and keep a downloadable archive for staff.",
+      "En savoir plus",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Run US paie", href: REGISTER_URL },
-    secondaryCta: { label: "Voir une demo en direct", href: CONTACT_URL },
+    primaryCta: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: REGISTER_URL },
+    secondaryCta: { label: "En savoir plus", href: CONTACT_URL },
   },
-  fonctionnalitesHeading: "Fonctionnalites",
-  fonctionnalitesTitle: "US paie covered from apercu to payslip",
-  fonctionnalitesIntro:
-    "Schedulaa keeps the deductions accurate while giving finance equipes control over overrides and exceptions.",
-  fonctionnalites: [
+  featuresHeading: "Features",
+  featuresTitle: "En savoir plus",
+  featuresIntro:
+    "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  features: [
     {
       icon: "compliance",
-      label: "Tax engine",
-      title: "Federal withholding + supported-state finaliser",
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Automatically apply federal income tax and FICA/Medicare by employe work location. Full finaliser is supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states remain available in raw apercu with explicit warnings. Employer FUTA/SUTA is reported separately from employe deductions.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
       icon: "retirement",
-      label: "Enterprise Retirement (U.S. 401(k))",
-      title: "401(k) and Roth 401(k) with wage bases and caps",
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Calculate 401(k) and Roth 401(k) deferrals with annual caps, employer match limites, and applicable wage bases. Post-finalization exports surface W-2 Box 12D codes so filings stay aligned with paie data.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
       icon: "timeline",
-      label: "Flux de travail",
-      title: "Multi-state previews",
+      label: "Workflow",
+      title: "En savoir plus",
       description:
-        "Preview each employe's deductions, edit wages and taxable benefits, rerun in seconds, and keep paie audit/overwrite history when a period is re-finalized. Unsupported states can apercu in raw mode but cannot finaliser.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
       icon: "document",
       label: "Exports",
-      title: "Payslips and W-2 outputs",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Finalize paie, export PDF, CSV, or Excel for accounting, and generate W-2 PDF and EFW2 files at year-end with prefilled data.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       link: "/payroll/tools/w2",
-      linkLabel: "Ouvrir le W-2 generateur",
+      linkLabel: "En savoir plus",
     },
   ],
   highlights: [
     {
       overline: "Preview",
-      title: "Transparent deductions before you finaliser",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Voir comment each tax and contribution will hit net pay, including federal brackets, FICA, and Medicare. Employer FUTA/SUTA is shown for reporting and does not reduce employe net pay. Override earnings and recalc on demand.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       points: [
-        "Highlight overtime, tips, bonuses, and commissions for every employe.",
-        "Record employer 401(k) matches and insurance premiums next to paie taxes.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
       image: {
         src: "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa paie apercu showing US deductions",
+        alt: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       },
     },
     {
       overline: "Delivery",
-      title: "Finalize, export, and notify employes",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Once numbers look correct, finaliser the run, email payslips, and archive exports for finance. Employees can log in to download past slips any time.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       points: [
-        "Generated slips stay available in the employe portail.",
-        "Accounting equipes can download CSV or Excel for journal entries.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       ],
       links: [
-        { label: "Voir le portail employe", href: "/payslips" },
+        { label: "En savoir plus", href: "/payslips" },
       ],
       image: {
         src: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
-        alt: "Laptop with paie export confirmation",
+        alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "Comment equipes finish a US pay cycle in Schedulaa",
+  stepsTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   stepsIntro:
-    "Bring in hours, apercu withholding, and finaliser where supported without leaving the platform.",
+    "En savoir plus",
   steps: [
     {
-      title: "Import hours or salaries",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Pull data from planification or upload spreadsheets. Enter bonuses, tips, commissions, and employer contributions.",
+        "En savoir plus",
     },
     {
-      title: "Preview deductions per jurisdiction",
+      title: "En savoir plus",
       description:
-        "Review federal withholding, FICA, Medicare, and employer FUTA/SUTA. Unsupported states run in raw apercu mode with warnings. Adjust wages or overrides and rerun the apercu.",
+        "En savoir plus",
     },
     {
-      title: "Finalize and export",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Finalize paie in AK, FL, NV, SD, TX, WA, WY, TN, and NH; email PDF payslips, download CSV/Excel, and prepare W-2s at year end.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   callouts: [
     {
       icon: "compliance",
       label: "Limitations",
-      title: "State support and local taxes",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Full U.S. finaliser is currently supported only in AK, FL, NV, SD, TX, WA, WY, TN, and NH. Other states remain apercu-only (raw mode). Local/city taxes and special programs (for example WA PFML / WA Cares) are not automated and should be handled externally.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
       icon: "document",
-      label: "Year-end filing",
-      title: "W-2 outputs included",
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Generate six-copy IRS W-2 PDFs, flattened forms for e-delivery, and EFW2 text files. Multi-state wages are supported with per-state coding.",
-      links: [{ label: "Generate W-2s", href: "/payroll/tools/w2" }],
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+      links: [{ label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payroll/tools/w2" }],
     },
   ],
-  faqHeading: "Questions frequentes",
-  faqTitle: "US paie questions",
-  faqIntro: "Answers based on the capabilities shipping in Schedulaa today.",
+  faqHeading: "FAQ",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+  faqIntro: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
   faq: [
     {
-      question: "Do you handle local or city income taxes?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Not yet. Schedulaa calculates federal withholding plus FICA/Medicare, and reports employer FUTA/SUTA. Local and city levies should be tracked separately and uploaded if needed.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      question: "Can I run multi-state paie?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Yes for apercu. You can apercu paie in all U.S. states. Finalize is currently supported in AK, FL, NV, SD, TX, WA, WY, TN, and NH; unsupported states remain in raw apercu mode.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      question: "Comment do employes get their payslips?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Once you finaliser paie you can email PDF payslips directly to recipients. The same documents appear in the Employee Payslip Portal for libre-service downloads.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   cta: sharedCta,
   secondaryLinks: sharedSecondaryLinks,
   notice:
-    "* Full U.S. finaliser: AK, FL, NV, SD, TX, WA, WY, TN, NH. ** Other states: raw apercu only (finaliser blocked). *** Employer FUTA/SUTA is reporting-only (not deducted from employe net pay). **** Local/city taxes and WA PFML / WA Cares are handled externally.",
+    "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
 };
 
 const roeConfig = {
   meta: {
-    title: "ROE Generator (Record of Employment) – Canada | Schedulaa",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     description:
-      "Generate Canadian ROEs with prefilled insurable hours and earnings, approval workflow, and PDF/XML exports ready for Service Canada.",
+      "En savoir plus",
     canonical: `${BASE_URL}/payroll/tools/roe`,
     og: {
-      title: "ROE Generator with PDF & XML Export | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Create, review, and export Records of Employment with prefilled data from your latest pay runs, plus approvals and audit trail.",
+        "En savoir plus",
       image: `${BASE_URL}/images/payroll-roe-preview.png`,
       url: `${BASE_URL}/payroll/tools/roe`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "ROE Generator with PDF & XML Export | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Schedulaa automates ROEs with prefilled insurable earnings, approvals, and CRA-compliant PDF/XML exports.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: `${BASE_URL}/images/payroll-roe-preview.png`,
     },
   },
@@ -744,112 +744,112 @@ const roeConfig = {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa ROE Generator",
+      name: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       offers: { "@type": "Offer", price: "0.00", priceCurrency: "CAD" },
       featureList: [
-        "Prefill insurable hours and earnings from paie",
-        "Approval workflow with audit trail",
-        "PDF and XML export for Service Canada",
-        "Department and employe filters",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
       url: `${BASE_URL}/payroll/tools/roe`,
     },
-    payrollBreadcrumb("ROE generateur", `${BASE_URL}/payroll/tools/roe`),
+    payrollBreadcrumb("Cette section explique clairement la fonctionnalite dans Schedulaa.", `${BASE_URL}/payroll/tools/roe`),
   ],
   hero: {
-    badge: "Record of Employment",
-    title: "ROE Generator with PDF and XML export",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     subtitle:
-      "Prefill insurable hours and earnings from your latest pay runs, review in-app, and export CRA-compliant PDF and XML files.",
+      "En savoir plus",
     bullets: [
-      "Prefill ROEs using finalized paie data.",
-      "Route submissions through approve or reject workflow.",
-      "Export PDF or XML packages for Service Canada.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Generate an ROE", href: REGISTER_URL },
-    secondaryCta: { label: "Talk to compliance", href: CONTACT_URL },
+    primaryCta: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: REGISTER_URL },
+    secondaryCta: { label: "En savoir plus", href: CONTACT_URL },
   },
-  fonctionnalitesHeading: "Capabilities",
-  fonctionnalitesTitle: "Everything needed for compliant ROEs",
-  fonctionnalitesIntro: "Schedulaa keeps your ROE workflow fast, auditable, and ready for Service Canada.",
-  fonctionnalites: [
+  featuresHeading: "Capabilities",
+  featuresTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  featuresIntro: "En savoir plus",
+  features: [
     {
       icon: "document",
       label: "Prefill",
-      title: "Auto-complete with paie data",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Pull insurable hours and earnings from the latest paystub for each employe, including vacation pay and separation pay.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
       icon: "timeline",
-      label: "Flux de travail",
-      title: "Approve or reject submissions",
+      label: "Workflow",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Route drafted ROEs through approvals. Capture comments and maintain an audit trail before exporting.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
       icon: "compliance",
       label: "Export",
-      title: "PDF and XML packages",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Generate PDF copies for internal records and XML submissions compatible with Service Canada portals.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   ],
   highlights: [
     {
-      overline: "Audit trail",
-      title: "Track every change and approval",
+      overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Schedulaa conserve un journal detaille pour chaque ROE. Voyez qui a prepare, approuve ou rejete le formulaire, avec horodatages pour les revues de conformite.",
+        "En savoir plus",
       image: {
         src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
-        alt: "ROE approval audit trail",
+        alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     },
   ],
-  stepsHeading: "Flux de travail",
-  stepsTitle: "Comment the ROE generateur works",
+  stepsHeading: "Workflow",
+  stepsTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   steps: [
     {
-      title: "Create from paie history",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Choose an employe and pull their latest pay runs to prefill insurable hours, earnings, and separation details.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      title: "Review and approve",
+      title: "En savoir plus",
       description:
-        "Validate the data, capture comments, and approve or reject. All changes are logged for auditing.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      title: "Export and submit",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Download PDF for records or XML for Service Canada upload. Batch exports help you keep filings organized.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   ],
   callouts: [
     {
       icon: "document",
-      label: "Related tools",
-      title: "Need T4 slips too?",
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Schedulaa links ROE data to year-end filings. Generate T4s from the same paie data set and stay compliant without duplicating work.",
-      links: [{ label: "Generate T4s", href: "/payroll/tools/t4" }],
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      links: [{ label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payroll/tools/t4" }],
     },
   ],
-  faqHeading: "Questions frequentes",
-  faqTitle: "ROE questions",
+  faqHeading: "FAQ",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   faq: [
     {
-      question: "Which fields are prefilled automatically?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Schedulaa pulls insurable hours, earnings, vacation pay, and separation pay from the latest finalized pay runs so you only confirm details before exporting.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      question: "Can I export XML for bulk upload?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Yes. The generateur creates XML files ready for upload to the Service Canada portail, alongside PDF copies for internal records.",
+        "En savoir plus",
     },
   ],
   cta: sharedCta,
@@ -858,22 +858,22 @@ const roeConfig = {
 
 const t4Config = {
   meta: {
-    title: "T4 Generator – Canada Year-End Slips (PDF & XML) | Schedulaa",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     description:
-      "Generate CRA-compliant T4 slips with PDF, XML, and ZIP packages. Prefill boxes from paie runs and batch deliver to employes.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     canonical: `${BASE_URL}/payroll/tools/t4`,
     og: {
-      title: "T4 Generator with CRA XML Export | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Create T4 slips, render PDF copies, export CRA XML, and bundle everything in a ZIP with a single workflow.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: `${BASE_URL}/images/payroll-t4-preview.png`,
       url: `${BASE_URL}/payroll/tools/t4`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "T4 Generator with CRA XML Export | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Schedulaa fills T4 boxes from paie data, renders PDF, builds CRA XML, and bundles slips in one workflow.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: `${BASE_URL}/images/payroll-t4-preview.png`,
     },
   },
@@ -881,111 +881,111 @@ const t4Config = {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa T4 Generator",
+      name: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       offers: { "@type": "Offer", price: "0.00", priceCurrency: "CAD" },
       featureList: [
-        "Prefill CRA boxes from paie",
-        "Render PDF copies",
-        "Generate CRA XML",
-        "Batch ZIP download",
-        "Delivery-ready slip packages",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "En savoir plus",
       ],
       url: `${BASE_URL}/payroll/tools/t4`,
     },
-    payrollBreadcrumb("T4 generateur", `${BASE_URL}/payroll/tools/t4`),
+    payrollBreadcrumb("Cette section explique clairement la fonctionnalite dans Schedulaa.", `${BASE_URL}/payroll/tools/t4`),
   ],
   hero: {
-    badge: "Year-end paie",
-    title: "T4 Generator with PDF and CRA XML exports",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     subtitle:
-      "Prefill CRA boxes from your Schedulaa paie history, render PDF slips for employes, and export CRA XML with one click.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     bullets: [
-      "Prefill T4 boxes from finalized paie data.",
-      "Render employe-ready PDF slips.",
-      "Export CRA XML and batch ZIP for filing.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "En savoir plus",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Generate T4 slips", href: REGISTER_URL },
-    secondaryCta: { label: "Get help with filings", href: CONTACT_URL },
+    primaryCta: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: REGISTER_URL },
+    secondaryCta: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: CONTACT_URL },
   },
-  fonctionnalitesHeading: "Capabilities",
-  fonctionnalitesTitle: "Year-end slips without manual data entry",
-  fonctionnalites: [
+  featuresHeading: "Capabilities",
+  featuresTitle: "En savoir plus",
+  features: [
     {
       icon: "document",
       label: "Prefill",
-      title: "Auto-populated CRA boxes",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Schedulaa maps paie earnings, deductions, and taxable benefits into the correct CRA boxes so you spend time reviewing, not retyping.",
+        "En savoir plus",
     },
     {
       icon: "compliance",
-      label: "Conformite",
-      title: "XML ready for CRA upload",
+      label: "Compliance",
+      title: "En savoir plus",
       description:
-        "Produce CRA XML files that align with the latest specifications. Keep archives organized with batch ZIP exports.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
       icon: "timeline",
-      label: "Flux de travail",
-      title: "Batch delivery",
+      label: "Workflow",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Bundle PDF, XML, and CSV summaries in a single ZIP file for safe storage or delivery to your compliance equipe.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   ],
   highlights: [
     {
-      overline: "Prefill accuracy",
-      title: "CRA boxes filled straight from paie",
+      overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Every T4 uses the same data you finalized in paie. Review employment income, CPP/EI, taxable benefits, and pension adjustments before exporting.",
+        "En savoir plus",
       image: {
         src: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
-        alt: "T4 generateur showing CRA boxes",
+        alt: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       },
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "From paie history to T4 packages",
+  stepsTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
   steps: [
     {
-      title: "Select the tax year",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Choose the year you need slips for and let Schedulaa fetch the paie history.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      title: "Review prefilled data",
+      title: "En savoir plus",
       description:
-        "Confirm CRA boxes, employer information, and footnotes before exporting.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      title: "Export PDF, XML, ZIP",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Download employe PDFs, CRA XML, and a ZIP archive to share with stakeholders or upload to the CRA portail.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   callouts: [
     {
       icon: "document",
-      label: "Connected tools",
-      title: "ROE generateur included",
-      body: "Need Records of Employment as well? Switch to the ROE generateur without leaving your workflow.",
-      links: [{ label: "Ouvrir ROE generateur", href: "/payroll/tools/roe" }],
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      body: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      links: [{ label: "En savoir plus", href: "/payroll/tools/roe" }],
     },
   ],
-  faqHeading: "Questions frequentes",
-  faqTitle: "T4 generateur questions",
+  faqHeading: "FAQ",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   faq: [
     {
-      question: "Do you generate CRA XML automatically?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Yes. The T4 generateur produces XML files ready for CRA submission along with PDF copies for employes.",
+        "En savoir plus",
     },
     {
-      question: "Can employes receive their T4 online?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "After you generate T4 slips, you can distribute the PDF copies through the payslip portail or your preferred delivery channel.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   cta: sharedCta,
@@ -994,22 +994,22 @@ const t4Config = {
 
 const w2Config = {
   meta: {
-    title: "W-2 Generator – US Year-End (IRS Fillable PDF & EFW2) | Schedulaa",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     description:
-      "Generate IRS W-2 forms with fillable multi-copy PDFs, flattened employe copies, and EFW2 text files ready for SSA submission.",
+      "En savoir plus",
     canonical: `${BASE_URL}/payroll/tools/w2`,
     og: {
-      title: "W-2 Generator with IRS PDF and EFW2 Export | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Prefill W-2 boxes from Schedulaa paie data, render six-copy PDFs, flatten for e-delivery, and export EFW2 files.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: `${BASE_URL}/images/payroll-w2-preview.png`,
       url: `${BASE_URL}/payroll/tools/w2`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "W-2 Generator with IRS PDF and EFW2 Export | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Schedulaa fills W-2 boxes, renders IRS-compliant PDFs, and builds EFW2 text files for SSA reporting.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: `${BASE_URL}/images/payroll-w2-preview.png`,
     },
   },
@@ -1017,112 +1017,112 @@ const w2Config = {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa W-2 Generator",
+      name: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       offers: { "@type": "Offer", price: "0.00", priceCurrency: "USD" },
       featureList: [
-        "Prefill IRS W-2 boxes from paie",
-        "Render six-copy IRS PDF",
-        "Flatten employe copies",
-        "Generate EFW2 text files",
-        "Support for multi-state wages",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
       url: `${BASE_URL}/payroll/tools/w2`,
     },
-    payrollBreadcrumb("W-2 generateur", `${BASE_URL}/payroll/tools/w2`),
+    payrollBreadcrumb("Cette section explique clairement la fonctionnalite dans Schedulaa.", `${BASE_URL}/payroll/tools/w2`),
   ],
   hero: {
-    badge: "Year-end paie",
-    title: "W-2 Generator with IRS PDF and EFW2 export",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     subtitle:
-      "Fill every W-2 box automatically, render the official six-copy PDF, flatten employe copies, and generate EFW2 text in one workflow.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     bullets: [
-      "Prefill wages, withholding, and benefits from Schedulaa paie.",
-      "Render multi-copy IRS PDF forms and flattened employe versions.",
-      "Generate SSA EFW2 text files for electronic submission.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Generate W-2 forms", href: REGISTER_URL },
-    secondaryCta: { label: "Request onboarding", href: CONTACT_URL },
+    primaryCta: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: REGISTER_URL },
+    secondaryCta: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: CONTACT_URL },
   },
-  fonctionnalitesHeading: "Capabilities",
-  fonctionnalitesTitle: "Accurate W-2 filing without manual edits",
-  fonctionnalites: [
+  featuresHeading: "Capabilities",
+  featuresTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  features: [
     {
       icon: "document",
       label: "Prefill",
-      title: "W-2 boxes filled from paie history",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Schedulaa maps wages, withholding, tips, and deferred compensation right into the correct W-2 boxes.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
       icon: "compliance",
-      label: "Conformite",
-      title: "IRS PDF and EFW2 outputs",
+      label: "Compliance",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Generate the official six-copy W-2 PDF, flattened employe copies for e-delivery, and EFW2 text files for SSA.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
       icon: "timeline",
       label: "Multi-state",
-      title: "Support for multi-state wages",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Track wages across multiple states and ensure the correct locality codes are included in the exported forms.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   highlights: [
     {
-      overline: "Ready for SSA",
-      title: "EFW2 export in one click",
+      overline: "En savoir plus",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Generate the EFW2 text file using your finalized paie data. Keep employer and employe copies synced without duplicate data entry.",
+        "En savoir plus",
       image: {
         src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-        alt: "W-2 generateur export options",
+        alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "From paie to filed W-2s",
+  stepsTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
   steps: [
     {
-      title: "Select tax year and employes",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Pick the tax year, filter the employes you need, and let Schedulaa prefill their data.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      title: "Review and approve forms",
+      title: "En savoir plus",
       description:
-        "Confirm each box, adjust if necessary, and approve the batch prior to export.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      title: "Export PDF and EFW2",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Download the six-copy PDF and flattened versions for employes, plus the EFW2 file for SSA submission.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   ],
   callouts: [
     {
       icon: "document",
-      label: "Connected tools",
-      title: "Need live paie runs?",
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "W-2 forms are built on the same paie engine that handles federal, state, FICA, and Medicare calculations.",
-      links: [{ label: "Run US paie", href: "/payroll/usa" }],
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+      links: [{ label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/payroll/usa" }],
     },
   ],
-  faqHeading: "Questions frequentes",
-  faqTitle: "W-2 generateur questions",
+  faqHeading: "FAQ",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   faq: [
     {
-      question: "Do you support multi-state wages?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Yes. W-2 exports include per-state wage totals and codes so employes with multiple work locations are supported.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      question: "Can I deliver W-2s electronically?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Schedulaa renders flattened PDF copies you can distribute electronically alongside the employe portail.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   cta: sharedCta,
@@ -1131,22 +1131,22 @@ const w2Config = {
 
 const payslipConfig = {
   meta: {
-    title: "Employee Payslip Portal – Download Payslips Online | Schedulaa",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     description:
-      "Employees can access finalized payslips, filter by date, and download secure PDF copies any time. Managers control access and track downloads.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     canonical: `${BASE_URL}/payslips`,
     og: {
-      title: "Employee Payslip Portal | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Give staff a secure portail to download finalized payslips, track history, and stay compliant with delivery requirements.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: `${BASE_URL}/images/payroll-payslip-portal.png`,
       url: `${BASE_URL}/payslips`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Employee Payslip Portal | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Schedulaa powers a secure payslip portail so employes can download PDF slips without emailing paie.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       image: `${BASE_URL}/images/payroll-payslip-portal.png`,
     },
   },
@@ -1154,111 +1154,111 @@ const payslipConfig = {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa Payslip Portal",
+      name: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       offers: { "@type": "Offer", price: "0.00", priceCurrency: "USD" },
       featureList: [
-        "Employee self-service payslip access",
-        "PDF downloads with date filters",
-        "Email notifications on new slips",
-        "Manager controls and auditing",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
       url: `${BASE_URL}/payslips`,
     },
-    payrollBreadcrumb("Payslip portail", `${BASE_URL}/payslips`),
+    payrollBreadcrumb("Cette section explique clairement la fonctionnalite dans Schedulaa.", `${BASE_URL}/payslips`),
   ],
   hero: {
-    badge: "Employee experience",
-    title: "Employee payslip portail with instant downloads",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     subtitle:
-      "Give staff a secure, branded portail where they can view and download finalized payslips any time without emailing paie.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     bullets: [
-      "Search and filter payslips by date or paie run.",
-      "Download PDF copies that match the finalized export.",
-      "Control access with role-based permissions.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Enable the portail", href: REGISTER_URL },
-    secondaryCta: { label: "Voir les fonctionnalites de paie", href: "/payroll/canada" },
+    primaryCta: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: REGISTER_URL },
+    secondaryCta: { label: "En savoir plus", href: "/payroll/canada" },
   },
-  fonctionnalitesHeading: "Highlights",
-  fonctionnalitesTitle: "Keep employes informed without extra tickets",
-  fonctionnalites: [
+  featuresHeading: "Highlights",
+  featuresTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  features: [
     {
       icon: "timeline",
       label: "Access",
-      title: "All finalized payslips in one view",
+      title: "En savoir plus",
       description:
-        "Employees see their full payslip history with filters by pay period, employment type, or date range.",
+        "En savoir plus",
     },
     {
       icon: "document",
       label: "Delivery",
-      title: "Secure PDF downloads",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Every payslip matches the finalized PDF generated during paie. Employees can download on desktop or mobile instantly.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
       icon: "compliance",
       label: "Controls",
-      title: "Role-based permissions and logging",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Managers control who can access the portail and review logs for auditing. Disable access when employes leave.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   highlights: [
     {
       overline: "Experience",
-      title: "Branded portail your equipe trusts",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Customize colors, logos, and links so the portail matches your company brand. Employees log in with their existing Schedulaa credentials.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: {
         src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa payslip portail dashboard",
+        alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "Comment the payslip portail works",
+  stepsTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   steps: [
     {
-      title: "Finalize paie",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Executer la paie in Schedulaa. Finalized PDF slips automatically sync to the payslip portail.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      title: "Notify employes",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Send emails from paie or notify staff through your HR channels that new slips are ready.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      title: "Employees download securely",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Employees log in, filter by pay period, and download the PDF copies whenever they need them.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   ],
   callouts: [
     {
       icon: "document",
       label: "Connected",
-      title: "Works with Canadian and US paie",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "The payslip portail receives finalized slips from both Canadian and US paie runs, so multinational equipes share the same experience.",
-      links: [{ label: "Run a paie apercu", href: "/payroll/canada" }],
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+      links: [{ label: "En savoir plus", href: "/payroll/canada" }],
     },
   ],
-  faqHeading: "Questions frequentes",
-  faqTitle: "Payslip portail questions",
+  faqHeading: "FAQ",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   faq: [
     {
-      question: "Do employes need a separate login?",
+      question: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       answer:
-        "No. Employees use their existing Schedulaa login. Access is controlled by manager permissions and can be revoked any time.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      question: "Can we email payslips as well?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Yes. When you finaliser paie you can email PDF copies to each employe and still keep the portail enabled as a backup.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   cta: sharedCta,

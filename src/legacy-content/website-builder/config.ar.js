@@ -2,161 +2,161 @@ const PAGE_URL = 'https://www.schedulaa.com/website-builder';
 
 const featureCards = [
   {
-    title: 'منشئ بالسحب والافلات',
-    body: 'Launch a polished site in minutes with sections, galleries, testimonials, and bookings - no coding required.',
+    title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
+    body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    title: 'مدفوعات Stripe مدمجة',
-    body: 'Collect deposits, take full payments, and save cards on file with Stripe from day one.',
+    title: 'Stripe',
+    body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    title: 'نطاق مجاني + استضافة SSL',
-    body: 'Map your own domain or use a schedulaa.site address. Automatic SSL keeps every page secure.',
+    title: 'توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.',
+    body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    title: 'تحليلات واضحة',
-    body: 'شاهد الزيارات والحجوزات والايرادات في لوحة واحدة. اربط Google Analytics او استخدم التحليلات المدمجة.',
+    title: 'Analytics',
+    body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    title: 'قوالب متجاوبة',
-    body: 'Choose from industry-ready templates for salons, coaches, tutors, clinics, and more.',
+    title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
+    body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    title: 'بيانات عملاء آمنة',
-    body: 'SOC 2-ready policies, role-based access, and encrypted storage keep client data protected.',
+    title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
+    body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
 ];
 
 const howToSteps = [
   {
-    title: 'انشئ حساب Schedulaa الخاص بك',
-    description: 'Start for free in less than two minutes. No credit card required to publish your first site.',
+    title: 'Schedulaa',
+    description: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    title: 'اختر قالبا يناسب علامتك التجارية',
-    description: 'Choose from modern designs for salons, coaches, fitness studios, trades, and more - all fully responsive.',
+    title: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+    description: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    title: 'خصص الصفحات باستخدام كتل السحب والافلات',
-    description: 'Edit copy, swap hero images, add services, and surface testimonials without touching code.',
+    title: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+    description: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    title: 'اربط Stripe وتدفقات الحجز',
-    description: 'Enable checkout, card-on-file, and scheduling so clients can book and pay in one visit.',
+    title: 'توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.',
+    description: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    title: 'انشر بنطاقك وتابع التحليلات',
-    description: 'Go live with free SSL, view analytics, and keep improving with built-in SEO recommendations.',
+    title: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+    description: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
 ];
 
 const faqs = [
   {
-    question: 'Is Schedulaa a free website builder for small businesses?',
+    question: 'هل يدعم هذا الخيار احتياجات فريقك؟',
     answer:
-      'Yes. You can design, preview, and publish your first site for free on a schedulaa.site domain. Upgrade only when you need advanced automation or multiple locations.',
+      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    question: 'Can I keep my website if I haven’t subscribed yet?',
+    question: 'هل يدعم هذا الخيار احتياجات فريقك؟',
     answer:
-      'Yes. Every account includes a free website at www.schedulaa.com/your-company-slug. You can publish and keep it before subscribing, then upgrade when you’re ready.',
+      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    question: 'Can clients book appointments on my site?',
+    question: 'هل يدعم هذا الخيار احتياجات فريقك؟',
     answer:
-      'Absolutely. The booking widget is built into every template, so visitors can reserve appointments, select staff, and pay deposits in real time.',
+      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    question: 'Does the website builder include Stripe integration?',
+    question: 'هل يدعم هذا الخيار احتياجات فريقك؟',
     answer:
-      'Yes. Connect Stripe in one click to accept cards, store payment methods, and sync payouts with your Schedulaa dashboard.',
+      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    question: 'Can I bring my own domain name?',
+    question: 'هل يدعم هذا الخيار احتياجات فريقك؟',
     answer:
-      'You can map any domain you own. Schedulaa provisions SSL certificates automatically, so your site stays secure with zero maintenance.',
+      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    question: 'Is the builder suitable for salons, tutors, and coaches?',
+    question: 'هل يدعم هذا الخيار احتياجات فريقك؟',
     answer:
-      'Schedulaa ships with industry-ready templates and copy blocks for salons, spas, tutors, coaches, clinics, and more. Customize anything in minutes.',
+      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
   {
-    question: 'Do you offer a done-for-you website design service?',
+    question: 'هل يدعم هذا الخيار احتياجات فريقك؟',
     answer:
-      'Yes. Our Website Design Service is a one-time add-on where our team collects your requirements, designs your site, and publishes it for you.',
+      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   },
 ];
 
 const resourceHighlights = [
   {
-    title: 'Step-by-step guides',
-    body: 'Access detailed launch guides that cover page creation, booking flows, Stripe activation, and DNS/domain cutovers.',
+    title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
+    body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
     links: [
-      { label: 'Read the docs', href: '/docs#website-builder' },
-      { label: 'Download sitemap', href: '/sitemap.xml' },
+      { label: 'اقرأ الوثائق', href: '/docs#website-builder' },
+      { label: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.', href: '/sitemap.xml' },
     ],
   },
   {
-    title: 'Index-ready structure',
-    body: 'ينشر Schedulaa الروابط القياسية وعلامات OG وتحديثات خريطة الموقع تلقائيا حتى يتمكن Google من فهرسة كل قالب.',
+    title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
+    body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
     links: [
-      { label: 'View SEO checklist', href: '/docs#seo' },
-      { label: 'Contact rollout team', href: '/contact' },
+      { label: 'SEO', href: '/docs#seo' },
+      { label: 'التواصل الفريق', href: '/contact' },
     ],
   },
   {
-    title: 'Templates that convert',
-    body: 'Studios, clinics, and recruiters ship new landing pages without developers, then monitor conversions from the analytics hub.',
+    title: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
+    body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
     links: [
-      { label: 'Explore industries', href: '/booking' },
-      { label: 'Schedule a walkthrough', href: '/contact' },
+      { label: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.', href: '/booking' },
+      { label: 'توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.', href: '/contact' },
     ],
   },
 ];
 
 export const websiteBuilderPage = {
   meta: {
-    title: 'منشئ مواقع للاعمال الصغيرة - نطاق واستضافة مجانيان | Schedulaa',
+    title: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
     description:
-      'Build your business website with Schedulaa\'s free website builder. Get a free site on a Schedulaa URL, connect your domain, or use our Website Design Service for done-for-you design.',
+      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
     canonical: PAGE_URL,
     og: {
-      title: 'منشئ مواقع للاعمال الصغيرة - Schedulaa',
+      title: 'توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.',
       description:
-        'Build and host your business website with booking, Stripe, and analytics. Launch free or choose our Website Design Service for a done-for-you site.',
+        'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
       image: 'https://www.schedulaa.com/images/website-builder-preview.png',
       url: PAGE_URL,
     },
   },
   hero: {
-    badge: 'منشئ مواقع مجاني للاعمال الصغيرة',
-    title: 'منشئ مواقع للاعمال الصغيرة - استضافة مجانية متضمنة',
+    badge: 'منشئ المواقع',
+    title: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
     subtitle:
-      'Build a responsive website with booking, Stripe payments, and analytics in one platform. Every account includes a free website at www.schedulaa.com/your-company-slug (even before you subscribe).',
-    primaryCta: { label: 'ابدأ موقعك المجاني', href: '/register' },
-    secondaryCta: { label: 'استكشف الحجوزات', href: '/booking' },
+      'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+    primaryCta: { label: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.', href: '/register' },
+    secondaryCta: { label: 'الحجوزات', href: '/booking' },
   },
   sections: [
     {
-      overline: 'القدرات الاساسية',
-      title: 'Build, publish, and monetize in one workflow',
+      overline: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
+      title: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
       items: featureCards,
     },
     {
-      overline: 'الموارد',
-      title: 'ادلة وSEO ودعم الاطلاق',
+      overline: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',
+      title: 'توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.',
       items: resourceHighlights,
     },
   ],
-  stepsTitle: 'كيف تطلق موقعك في Schedulaa',
+  stepsTitle: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
   steps: howToSteps,
-  faqTitle: 'اسئلة منشئ المواقع الشائعة',
+  faqTitle: 'منشئ المواقع الاسئلة الشائعة',
   faq: faqs,
   cta: {
-    overline: 'جاهز للاطلاق؟',
-    title: 'ابدأ موقعك المجاني and connect bookings today',
-    body: 'Go live now, then add advanced automations and multi-location workflows whenever your business needs them.',
+    overline: 'توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.',
+    title: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+    body: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
     primary: { label: 'ابدأ مجانا', href: '/register' },
     secondary: { label: 'تحدث مع فريقنا', href: '/contact' },
   },

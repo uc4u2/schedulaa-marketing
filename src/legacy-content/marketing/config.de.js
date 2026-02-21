@@ -2,125 +2,125 @@ const BASE_URL = "https://www.schedulaa.com";
 const REGISTER_URL = "/register";
 
 const marketingCta = {
-  overline: "Bereit, wenn Sie es sind",
-  title: "Starten Sie Ihre naechste Kampagne und verfolgen Sie die Ergebnisse",
-  body: "Schedulaa keeps your campaigns, segments, analytics, and exports in one workflow so your team can move fast.",
-  primary: { label: "Kampagne starten", href: REGISTER_URL },
+  overline: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+  title: "Mehr erfahren",
+  body: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+  primary: { label: "Mehr erfahren", href: REGISTER_URL },
   secondary: { label: "Anmelden", href: "/login" },
 };
 
 const marketingSecondaryLinks = [
-  { label: "Uebersicht Kundenexporte", href: "/marketing/clients-360#exports" },
-  { label: "Buchungsfunktionen ansehen", href: "/booking" },
+  { label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.", href: "/marketing/clients-360#exports" },
+  { label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.", href: "/booking" },
   { label: "Website-Builder", href: "/website-builder" },
 ];
 
 export const marketingPages = {
   hub: {
     meta: {
-      title: "Vermarktung und Analytik fuer Dienstleistungsunternehmen – Kampagnen, Segmente & KPIs | Schedulaa",
+      title: "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
       description:
-        "Run targeted email campaigns (win-back, VIP, no-show recovery), export client lists, and track KPIs with Erweiterte Analytik. Segmente like VIP, At-Risk, Dormant and Client 360° built-in.",
+        "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
       canonical: `${BASE_URL}/marketing`,
       og: {
-        title: "Vermarktung und Analytik fuer Dienstleistungsunternehmen | Schedulaa",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         description:
-          "Launch campaigns, auto-build segments, export clients, and monitor KPIs with Erweiterte Analytik.",
+          "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
         image: `${BASE_URL}/images/marketing-hub-preview.png`,
         url: `${BASE_URL}/marketing`,
       },
       twitter: {
         card: "summary_large_image",
-        title: "Vermarktung und Analytik fuer Dienstleistungsunternehmen | Schedulaa",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         description:
-          "Schedulaa unifies campaigns, lifecycle segments, client exports, and enterprise analytics.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         image: `${BASE_URL}/images/marketing-hub-preview.png`,
       },
     },
     schema: {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa Vermarktung und Analytik",
+      name: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      description: "Targeted campaigns, lifecycle segments, client exports, and enterprise analytics for service businesses.",
+      description: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
       url: `${BASE_URL}/marketing`,
     },
     hero: {
-      badge: "Lifecycle und KPI",
-      title: "Vermarktung und Analytik — wachsen, binden und verstehen Sie Ihre Kunden",
+      badge: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       subtitle:
-          "Schedulaa gives you turnkey campaigns, client exports, lifecycle segments, and an Erweiterte Analytik suite. Launch win-backs, VIP perks, anniversary notes, and more — then monitor bookings, revenue, no-shows, rebook rates, tip performance, and client value.",
+          "Mehr erfahren",
       points: [
-        "Prebuilt campaigns for win-back, VIP, anniversary, new service launch, and more.",
-        "Lifecycle segments with tunable thresholds (VIP, Loyal, New, Active, At-Risk, Lost).",
-        "Enterprise-Analytik covering bookings, revenue, retention, tips, and card-on-file performance.",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Mehr erfahren",
       ],
-      primaryCta: { label: "Kampagne starten", href: REGISTER_URL },
+      primaryCta: { label: "Mehr erfahren", href: REGISTER_URL },
       secondaryCta: { label: "Anmelden", href: "/login" },
     },
     sections: [
       {
         overline: "Kampagnen",
-        title: "Kampagnen you can launch today",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         body:
-          "Use prebuilt flows with smart limits, segment filters, coupon prefixes, and expiry windows. Every campaign supports dry-run testing and per-recipient limits.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         points: [
-          "Broadcast announcements for closures, holiday hours, or policy updates.",
-          "Win-Back targets clients whose days since last visit exceed 1.5× their norm.",
-          "Skipped Rebook Nudge follows up when clients skip rebooking after a visit.",
-          "VIP perks for top 10% clients with custom coupons and deep links.",
-          "Anniversary thank-you notes based on first-visit month.",
-          "New Service Launch campaigns for clients who haven’t tried a new offer.",
-          "No-Show Recovery and Add-on Upsell sequences with optional discounts.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Mehr erfahren",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
         ],
         buttons: [
-          { label: "Ansehen campaign builder", href: "/marketing/email-campaigns" },
+          { label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.", href: "/marketing/email-campaigns" },
         ],
       },
       {
         overline: "Segmente",
-        title: "Lifecycle segments ready to use",
+        title: "Mehr erfahren",
         body:
-          "Keep retention efforts focused with lifecycle cohorts. Adjust thresholds per cohort to match your business cadence.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         points: [
-          "VIP top % (e.g., 10%), Loyal (min visits ≥ 5), New (≤ 30 days), Active (≤ 90 days).",
-          "At-Risk: 1.5× personal gap since last visit; Lost > 180 days inactive.",
-          "Segmente feed campaigns, analytics, and exports automatically.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         ],
         buttons: [
-          { label: "Explore Client 360°", href: "/marketing/clients-360" },
+          { label: "Mehr erfahren", href: "/marketing/clients-360" },
         ],
       },
     ],
     lists: [
       {
         overline: "Enterprise-Analytik",
-        title: "Highlights from the analytics suite",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         intro:
-          "Filter by date range, timezone, and grouping (day/week/month). Refresh in seconds to keep leadership dashboards current.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         items: [
           {
             icon: "analytics",
             label: "KPIs",
-            title: "Core metrics",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Appointments, cancellations, no-shows (rate), active clients, average lead time and ticket. Revenue metrics include gross, tips, refunds, net, and new vs returning mix.",
+              "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
           },
           {
             icon: "timeline",
-            label: "Mix & trends",
-            title: "Mixes and trends",
+            label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Day-of-week and hour-of-day mix, lifetime value percentiles (P50/P75/P90/P99), bookings and revenue trendlines, provider utilization, and top services by revenue.",
+              "Mehr erfahren",
           },
           {
             icon: "insights",
             label: "Reliability",
-            title: "Reliability & retention",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Show-up reliability, rebook rates (30/60/90 days), average rebook interval, cancellation window distribution, schedule stability, refunds, and card-on-file success.",
+              "Mehr erfahren",
           },
         ],
       },
@@ -128,41 +128,41 @@ export const marketingPages = {
     highlights: [
       {
         overline: "Kundenintelligenz",
-        title: "Client 360° and geo-insights",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         content:
-          "Filter by department and employee, search by name/email/phone, and open a 360 panel with geo/IP, devices, booking behavior, messaging history, and per-client KPIs.",
+          "Mehr erfahren",
         actions: [
-          { label: "Oeffnen Client 360°", href: "/marketing/clients-360", variant: "outlined" },
+          { label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.", href: "/marketing/clients-360", variant: "outlined" },
         ],
       },
       {
         overline: "Exporte",
-        title: "Export clients to CSV in seconds",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         content:
-          "Export company-scoped client lists with filters (seen in last N days, minimum visits, require email, limit). Ideal for external CRM or ad platforms.",
+          "Mehr erfahren",
         actions: [
-          { label: "Ansehen export workflow", href: "/marketing/clients-360#exports", variant: "contained" },
+          { label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.", href: "/marketing/clients-360#exports", variant: "contained" },
         ],
       },
     ],
-    faqHeading: "Haeufige Fragen",
-    faqTitle: "Vermarktung und Analytik Fragen",
-    faqIntro: "Answers based on the campaigns and analytics shipping in Schedulaa today.",
+    faqHeading: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    faqTitle: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    faqIntro: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
     faq: [
       {
-        question: "Can I limit campaign recipients?",
+        question: "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
         answer:
-          "Yes. Every campaign supports a Limit field so you can cap how many clients receive the message. Use dry-run to review the list before sending.",
+          "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
       },
       {
-        question: "Wie do lifecycle segments update?",
+        question: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         answer:
-          "Segmente refresh automatically using your booking history. Adjust parameters like VIP percentage or at-risk multiplier to fit your business cadence.",
+          "Mehr erfahren",
       },
       {
-        question: "Can I export analytics data?",
+        question: "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
         answer:
-          "Erweiterte Analytik includes CSV exports for key views, and you can export client cohorts separately using the client export tool.",
+          "Mehr erfahren",
       },
     ],
     cta: marketingCta,
@@ -170,142 +170,142 @@ export const marketingPages = {
   },
   campaigns: {
     meta: {
-      title: "Email Kampagnen – Win-Back, VIP, No-Show & Upsell | Schedulaa",
+      title: "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
       description:
-        "Prebuilt campaigns with filters, coupon prefixes, expiry windows, and deep links to boost rebook and revenue.",
+        "Mehr erfahren",
       canonical: `${BASE_URL}/marketing/email-campaigns`,
       og: {
-        title: "Email Kampagnen fuer Dienstleistungsunternehmen | Schedulaa",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         description:
-          "Launch win-back, VIP, no-show recovery, and add-on upsell campaigns with smart filters, coupons, and expiries.",
+          "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
         image: `${BASE_URL}/images/marketing-campaigns-preview.png`,
         url: `${BASE_URL}/marketing/email-campaigns`,
       },
       twitter: {
         card: "summary_large_image",
-        title: "Email Kampagnen fuer Dienstleistungsunternehmen | Schedulaa",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         description:
-          "Schedulaa gives you ready-made campaigns with coupon prefixes, expiry windows, and deep links.",
+          "Mehr erfahren",
         image: `${BASE_URL}/images/marketing-campaigns-preview.png`,
       },
     },
     schema: {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa Vermarktung Kampagnen",
+      name: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      description: "Email campaigns for win-back, VIP, no-show recovery, add-on upsell, and more.",
+      description: "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
       offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
       url: `${BASE_URL}/marketing/email-campaigns`,
     },
     hero: {
       badge: "Kampagnen-Builder",
-      title: "Email Kampagnen that bring clients back",
+      title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       subtitle:
-        "Choose a prebuilt strategy, tweak filters, and press send. Every campaign supports limits, coupon prefixes, expiry windows, valid-days, and deep links to your booking pages.",
-      primaryCta: { label: "Kampagne starten", href: REGISTER_URL },
-      secondaryCta: { label: "Return to marketing hub", href: "/marketing" },
+        "Mehr erfahren",
+      primaryCta: { label: "Mehr erfahren", href: REGISTER_URL },
+      secondaryCta: { label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.", href: "/marketing" },
     },
     sections: [
       {
         overline: "Konformitaet",
-        title: "Respect consent and deliver reliably",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         body:
-          "Every send automatically includes unsubscribe and preferences links. Turn on Send only to consented contacts in Settings to stay aligned with GDPR/CASL and verify SPF/DKIM/DMARC on your sending domain for best inbox placement.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         points: [
-          "Configure From/Reply-To once per company.",
-          "Monitor DNS verification status directly in Settings.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         ],
       },
       {
         overline: "Qualitaetskontrollen",
-        title: "Preview, throttle, and QA before you send",
+        title: "Mehr erfahren",
         body:
-          "Use Preheader text to boost opens, seed list emails for QA, Send later scheduling, and throttling (e.g., 50 emails/minute) to keep deliverability healthy.",
+          "Mehr erfahren",
         points: [
-          "Changing any field clears previews—click Preview again before sending.",
-          "Dry-run logs would-send counts without emailing anyone.",
-          "Send Selected/All works on the rows currently previewed.",
-          "Emails don’t create coupons—enable matching codes in Vermarktung → Coupons first.",
+          "Mehr erfahren",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Mehr erfahren",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         ],
       },
     ],
     lists: [
       {
-        overline: "Campaign strategies",
-        title: "Every campaign covers a specific use case",
+        overline: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         columns: 2,
         items: [
           {
             icon: "campaign",
             label: "Broadcast",
-            title: "Broadcast (Simple Announcement)",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Update everyone or filtered segments with subject, heading, intro, and optional button (e.g., View details → /services). Ideal for closures, holiday hours, or policy updates.",
+              "Mehr erfahren",
             points: [
-              "Optional coupon and expiry window.",
-              "Button/link text and URL configurable.",
+              "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+              "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             ],
           },
           {
             icon: "campaign",
             label: "Win-back",
-            title: "Win-Back (Likely to Lapse)",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Targets clients whose days since last visit ≥ 1.5× their normal gap. Add discount %, set valid days or an expiry date, limit recipients, define coupon prefix (e.g., WINBACK), and link to /book.",
+              "Mehr erfahren",
           },
           {
             icon: "campaign",
             label: "Rebook",
-            title: "Skipped Rebook Nudge",
+            title: "Mehr erfahren",
             body:
-              "Follows up a few days after a kept visit when the client skipped rebook. Optional discount %, coupon prefix (REBOOK), expiry date, and deep link /rebook.",
+              "Mehr erfahren",
           },
           {
             icon: "campaign",
             label: "VIP",
-            title: "VIP (Top Clients)",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Rewards top 10% by LTV. Include discount %, limit, coupon prefix (VIP), expiry override, and VIP landing link /vip.",
+              "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
           },
           {
             icon: "campaign",
             label: "Anniversary",
-            title: "Anniversary Thank-You",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Celebrate first-visit month (e.g., Month 11). Set limit, coupon prefix (ANNIV), expiry override, and CTA /book. Works with date range and email filters.",
+              "Mehr erfahren",
           },
           {
             icon: "campaign",
             label: "Launch",
-            title: "New Service Launch",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Announce a new service to clients who haven’t tried it. Choose lookback window, discount %, coupon prefix (NEW), limit, and deep link /services.",
+              "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
           },
           {
             icon: "campaign",
             label: "Recovery",
-            title: "No-Show Recovery",
+            title: "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
             body:
-              "Reach recent no-shows. Filter by required no future booking or fee charged. Add discount %, coupon prefix (RECOVER), expiry, landing /.",
+              "Mehr erfahren",
           },
           {
             icon: "campaign",
             label: "Upsell",
-            title: "Add-on Upsell",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Offer a popular add-on to clients of a base service. Set lookback days, discount %, coupon prefix (ADDON), expiry, and link /services.",
+              "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
           },
         ],
       },
     ],
     highlights: [
       {
-        overline: "Safety controls",
-        title: "Dry-run and recipient limits included",
+        overline: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         content:
-          "Run a dry-run to preview every recipient and message before going live. Daily send caps and Limit fields prevent over-sending, and seed lists keep stakeholders in the loop.",
+          "Mehr erfahren",
       },
     ],
     cta: marketingCta,
@@ -313,90 +313,90 @@ export const marketingPages = {
   },
   analytics: {
     meta: {
-      title: "Erweiterte Analytik – Buchungen, Revenue, No-Shows & Client Value | Schedulaa",
+      title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       description:
-        "Full KPI suite with trends, leaderboards and retention metrics. Tune segments and filter by date, timezone and grouping.",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       canonical: `${BASE_URL}/marketing/analytics-dashboard`,
       og: {
-        title: "Erweiterte Analytik Dashboard | Schedulaa",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         description:
-          "Track bookings, revenue, no-shows, retention, tip performance, and utilization with Erweiterte Analytik.",
+          "Mehr erfahren",
         image: `${BASE_URL}/images/marketing-analytics-preview.png`,
         url: `${BASE_URL}/marketing/analytics-dashboard`,
       },
       twitter: {
         card: "summary_large_image",
-        title: "Erweiterte Analytik Dashboard | Schedulaa",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         description:
-          "Schedulaa's analytics suite covers KPIs, retention, leaderboards, coupon performance, and more.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         image: `${BASE_URL}/images/marketing-analytics-preview.png`,
       },
     },
     schema: {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-  name: "Schedulaa Erweiterte Analytik",
+  name: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      description: "Analytics for bookings, revenue, retention, utilization, and client value.",
+      description: "Mehr erfahren",
       offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
       url: `${BASE_URL}/marketing/analytics-dashboard`,
     },
     hero: {
-  badge: "Advanced analytics",
-  title: "Erweiterte Analytik — KPIs, trends, and insights",
+  badge: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+  title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       subtitle:
-        "Pick a date range, timezone, and grouping (day/week/month). Refresh to track bookings, revenue, no-shows, tip performance, card-on-file success, and client value.",
-      primaryCta: { label: "Explore analytics", href: REGISTER_URL },
-      secondaryCta: { label: "Return to marketing hub", href: "/marketing" },
+        "Mehr erfahren",
+      primaryCta: { label: "Mehr erfahren", href: REGISTER_URL },
+      secondaryCta: { label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.", href: "/marketing" },
     },
     sections: [
       {
         overline: "Filters",
-        title: "Date, timezone, and grouping filters",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         body:
-          "Choose From/To dates, set your timezone (e.g., America/Toronto), and group metrics by day, week, or month. Click Refresh to rebuild the dashboard.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       },
     ],
     lists: [
       {
         overline: "Metrics",
-        title: "Key metrics at a glance",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         items: [
           {
             icon: "analytics",
-            label: "Core KPIs",
-            title: "Appointments & revenue",
+            label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Appointments, cancellations, no-shows (rate), active clients, average lead time, average ticket, gross, tips, refunds, net, and new vs returning.",
+              "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
           },
           {
             icon: "timeline",
             label: "Mix",
-            title: "Mix & distributions",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Day-of-week mix, hour-of-day mix, and lifetime value percentiles (P50/P75/P90/P99).",
+              "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
           },
           {
             icon: "insights",
             label: "Leaders",
-            title: "Leaderboards & effectiveness",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Buchungen and revenue trends, provider utilization, top services by revenue, tip leaderboard (payroll-ready), and coupon effectiveness.",
+              "Mehr erfahren",
           },
           {
             icon: "insights",
             label: "Retention",
-            title: "Reliability & retention",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "Show-up reliability, rebook rates (30/60/90 days), average rebook interval, cancellation window distribution, schedule stability, refund rate, card-on-file attempts/success.",
+              "Mehr erfahren",
           },
           {
             icon: "lifecycle",
             label: "Segmente",
-            title: "Lifecycle scan",
+            title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
             body:
-              "VIP, Loyal, New, Active, At-Risk, and Lost segments with tunable thresholds (VIP top %, Loyal min visits, Active ≤ 90 days, Lost > 180 days, At-Risk multiplier 1.5× personal gap).",
+              "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
           },
         ],
       },
@@ -406,61 +406,61 @@ export const marketingPages = {
   },
   clients360: {
     meta: {
-      title: "Client 360° & Exporte – Segmente, Geo-Insights & CSV | Schedulaa",
+      title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       description:
-        "Search clients, open a 360 panel with geo and behavior, and export CSV with powerful filters for campaigns and reporting.",
+        "Mehr erfahren",
       canonical: `${BASE_URL}/marketing/clients-360`,
       og: {
-        title: "Client 360° & Exporte | Schedulaa",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         description:
-          "Filter by department/employee, open 360° insights, and export CSV with filters (seen in last N days, min visits, require email, limit).",
+          "Mehr erfahren",
         image: `${BASE_URL}/images/marketing-clients360-preview.png`,
         url: `${BASE_URL}/marketing/clients-360`,
       },
       twitter: {
         card: "summary_large_image",
-        title: "Client 360° & Exporte | Schedulaa",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         description:
-          "Schedulaa gives you client 360° views, lifecycle segments, and CSV exports with advanced filters.",
+          "Mehr erfahren",
         image: `${BASE_URL}/images/marketing-clients360-preview.png`,
       },
     },
     schema: {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa Client 360° & Exporte",
+      name: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      description: "Client 360° insights, lifecycle segments, and CSV exports.",
+      description: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
       url: `${BASE_URL}/marketing/clients-360`,
     },
     hero: {
       badge: "Kundenintelligenz",
-      title: "Client 360° & Exporte",
+      title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       subtitle:
-        "Find clients by department or employee, search by name/email/phone, open a 360° panel with geo insights, and export CSVs with advanced filters.",
-      primaryCta: { label: "Oeffnen Client 360°", href: "/marketing/clients-360" },
-      secondaryCta: { label: "Return to marketing hub", href: "/marketing" },
+        "Mehr erfahren",
+      primaryCta: { label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.", href: "/marketing/clients-360" },
+      secondaryCta: { label: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.", href: "/marketing" },
     },
     sections: [
       {
-        overline: "Find a client",
-        title: "Search and open insights instantly",
+        overline: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        title: "Mehr erfahren",
         body:
-          "Scope by department → employee, search name/email/phone, and open a 360° panel for geo/IP, device, booking behavior, messaging history, and client KPIs.",
+          "Mehr erfahren",
       },
       {
-        overline: "Segmente overview",
-        title: "Lifecycle segments with parameters",
+        overline: "Mehr erfahren",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         body:
-          "Scan clients as-of a date with Require Email, Limit, and parameters (min_visits, default_gap_days, at_risk_multiplier, dormant_days, new_days, habitual_min_visits, habitual_avg_gap_max, vip_pct). Ansehen examples per cohort.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       },
       {
-        overline: "CSV exports",
-        title: "Company-scoped exports with filters",
+        overline: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         body:
-          "Export clients to CSV with filters: seen in last N days (blank = all), min visits, require email toggle, and limit. Ideal for external marketing tools.",
+          "Mehr erfahren",
         id: "exports",
       },
     ],

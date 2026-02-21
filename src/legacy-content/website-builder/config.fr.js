@@ -2,162 +2,162 @@ const PAGE_URL = 'https://www.schedulaa.com/website-builder';
 
 const featureCards = [
   {
-    title: 'Constructeur glisser-deposer',
-    body: 'Launch a polished site in minutes with sections, galleries, testimonials, and bookings - no coding required.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    body: 'En savoir plus',
   },
   {
-    title: 'Paiements Stripe integres',
-    body: 'Collect deposits, take full payments, and save cards on file with Stripe from day one.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    body: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
   },
   {
-    title: 'Domaine gratuit + hebergement SSL',
-    body: 'Map your own domain or use a schedulaa.site address. Automatic SSL keeps every page secure.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    body: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
   },
   {
-    title: 'Analytique utile',
-    body: 'Suivez visites, reservations et revenus dans un seul tableau de bord. Connectez Google Analytics ou utilisez nos analyses natives.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    body: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
   },
   {
-    title: 'Modeles responsifs',
-    body: 'Choose from industry-ready templates for salons, coaches, tutors, clinics, and more.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    body: 'En savoir plus',
   },
   {
-    title: 'Donnees clients securisees',
-    body: 'SOC 2-ready policies, role-based access, and encrypted storage keep client data protected.',
+    title: 'En savoir plus',
+    body: 'En savoir plus',
   },
 ];
 
 const howToSteps = [
   {
-    title: 'Creez votre compte Schedulaa',
-    description: 'Start for free in less than two minutes. No credit card required to publish your first site.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    description: 'En savoir plus',
   },
   {
-    title: 'Choisissez un modele adapte a votre marque',
-    description: 'Choose from modern designs for salons, coaches, fitness studios, trades, and more - all fully responsive.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    description: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
   },
   {
-    title: 'Personnalisez les pages avec des blocs glisser-deposer',
-    description: 'Edit copy, swap hero images, add services, and surface testimonials without touching code.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    description: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
   },
   {
-    title: 'Connectez Stripe et les flux de reservation',
-    description: 'Enable checkout, card-on-file, and scheduling so clients can book and pay in one visit.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    description: 'En savoir plus',
   },
   {
-    title: 'Publiez avec votre domaine et suivez l analytique',
-    description: 'Go live with free SSL, view analytics, and keep improving with built-in SEO recommendations.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    description: 'En savoir plus',
   },
 ];
 
 const faqs = [
   {
-    question: 'Is Schedulaa a free website builder for small businesses?',
+    question: 'Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.',
     answer:
-      'Yes. You can design, preview, and publish your first site for free on a schedulaa.site domain. Upgrade only when you need advanced automation or multiple locations.',
+      'En savoir plus',
   },
   {
-    question: 'Can I keep my website if I haven’t subscribed yet?',
+    question: 'Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.',
     answer:
-      'Yes. Every account includes a free website at www.schedulaa.com/your-company-slug. You can publish and keep it before subscribing, then upgrade when you’re ready.',
+      'En savoir plus',
   },
   {
-    question: 'Can clients book appointments on my site?',
+    question: 'En savoir plus',
     answer:
-      'Absolutely. The booking widget is built into every template, so visitors can reserve appointments, select staff, and pay deposits in real time.',
+      'Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.',
   },
   {
-    question: 'Does the website builder include Stripe integration?',
+    question: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
     answer:
-      'Yes. Connect Stripe in one click to accept cards, store payment methods, and sync payouts with your Schedulaa dashboard.',
+      'Cette section explique clairement la fonctionnalite dans Schedulaa.',
   },
   {
-    question: 'Can I bring my own domain name?',
+    question: 'Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.',
     answer:
-      'You can map any domain you own. Schedulaa provisions SSL certificates automatically, so your site stays secure with zero maintenance.',
+      'Cette section explique clairement la fonctionnalite dans Schedulaa.',
   },
   {
-    question: 'Is the builder suitable for salons, tutors, and coaches?',
+    question: 'Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.',
     answer:
-      'Schedulaa ships with industry-ready templates and copy blocks for salons, spas, tutors, coaches, clinics, and more. Customize anything in minutes.',
+      'En savoir plus',
   },
   {
-    question: 'Do you offer a done-for-you website design service?',
+    question: 'Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.',
     answer:
-      'Yes. Our Website Design Service is a one-time add-on where our team collects your requirements, designs your site, and publishes it for you.',
+      'Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.',
   },
 ];
 
 const resourceHighlights = [
   {
-    title: 'Step-by-step guides',
-    body: 'Access detailed launch guides that cover page creation, booking flows, Stripe activation, and DNS/domain cutovers.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    body: 'En savoir plus',
     links: [
-      { label: 'Read the docs', href: '/docs#website-builder' },
-      { label: 'Download sitemap', href: '/sitemap.xml' },
+      { label: 'En savoir plus', href: '/docs#website-builder' },
+      { label: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', href: '/sitemap.xml' },
     ],
   },
   {
-    title: 'Index-ready structure',
-    body: 'Schedulaa publie automatiquement les URLs canoniques, balises OG et mises a jour de sitemap pour que Google explore chaque modele.',
+    title: 'En savoir plus',
+    body: 'En savoir plus',
     links: [
-      { label: 'View SEO checklist', href: '/docs#seo' },
-      { label: 'Contact rollout team', href: '/contact' },
+      { label: 'En savoir plus', href: '/docs#seo' },
+      { label: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', href: '/contact' },
     ],
   },
   {
-    title: 'Templates that convert',
-    body: 'Studios, clinics, and recruiters ship new landing pages without developers, then monitor conversions from the analytics hub.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    body: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
     links: [
-      { label: 'Explore industries', href: '/booking' },
-      { label: 'Schedule a walkthrough', href: '/contact' },
+      { label: 'En savoir plus', href: '/booking' },
+      { label: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', href: '/contact' },
     ],
   },
 ];
 
 export const websiteBuilderPage = {
   meta: {
-    title: 'Createur de site pour petites entreprises - Domaine et hebergement gratuits | Schedulaa',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
     description:
-      'Build your business website with Schedulaa\'s free website builder. Get a free site on a Schedulaa URL, connect your domain, or use our Website Design Service for done-for-you design.',
+      'Cette section explique clairement la fonctionnalite dans Schedulaa.',
     canonical: PAGE_URL,
     og: {
-      title: 'Createur de site pour petites entreprises - Schedulaa',
+      title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
       description:
-        'Build and host your business website with booking, Stripe, and analytics. Launch free or choose our Website Design Service for a done-for-you site.',
+        'En savoir plus',
       image: 'https://www.schedulaa.com/images/website-builder-preview.png',
       url: PAGE_URL,
     },
   },
   hero: {
-    badge: 'Createur de site gratuit pour petites entreprises',
-    title: 'Createur de site pour petites entreprises - Hebergement gratuit inclus',
+    badge: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
     subtitle:
-      'Build a responsive website with booking, Stripe payments, and analytics in one platform. Every account includes a free website at www.schedulaa.com/your-company-slug (even before you subscribe).',
-    primaryCta: { label: 'Lancez votre site gratuit', href: '/register' },
-    secondaryCta: { label: 'Explorer les reservations', href: '/booking' },
+      'En savoir plus',
+    primaryCta: { label: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', href: '/register' },
+    secondaryCta: { label: 'En savoir plus', href: '/booking' },
   },
   sections: [
     {
-      overline: 'Capacites principales',
-      title: 'Build, publish, and monetize in one workflow',
+      overline: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+      title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
       items: featureCards,
     },
     {
       overline: 'Ressources',
-      title: 'Guides, SEO et support de deploiement',
+      title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
       items: resourceHighlights,
     },
   ],
-  stepsTitle: 'Comment lancer votre site dans Schedulaa',
+  stepsTitle: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
   steps: howToSteps,
-  faqTitle: 'Questions frequentes createur de site',
+  faqTitle: 'Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.',
   faq: faqs,
   cta: {
-    overline: 'Pret a lancer ?',
-    title: 'Lancez votre site gratuit and connect bookings today',
-    body: 'Go live now, then add advanced automations and multi-location workflows whenever your business needs them.',
-    primary: { label: 'Commencer gratuitement', href: '/register' },
-    secondary: { label: 'Parler a notre equipe', href: '/contact' },
+    overline: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    title: 'En savoir plus',
+    body: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+    primary: { label: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', href: '/register' },
+    secondary: { label: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', href: '/contact' },
   },
 };

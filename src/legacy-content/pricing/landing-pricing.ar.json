@@ -1,390 +1,390 @@
 {
   "meta": {
-    "title": "Schedulaa Pricing | Launch on your own domain with automatic SSL",
-    "description": "قارن بين خطط Starter وPro وBusiness. All plans include a custom domain with automatic SSL, plus booking and website essentials, with scheduling, payroll, and automation on Pro and Business.",
+    "title": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+    "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
     "canonical": "https://www.schedulaa.com/pricing",
-    "keywords": "Schedulaa pricing, booking software pricing, payroll SaaS pricing, website builder plans",
+    "keywords": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
     "og": {
-      "title": "Schedulaa Pricing",
-      "description": "Plans for every stage. Launch on your own domain with automatic SSL included on every plan.",
+      "title": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+      "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
       "image": "https://www.schedulaa.com/og/pricing.jpg"
     }
   },
   "hero": {
-    "eyebrow": "Pricing that scales",
+    "eyebrow": "الاسعار",
     "title": [
-      "Pricing that grows with you.",
-      "Launch on your own domain with automatic SSL."
+      "الاسعار .",
+      "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
     ],
-    "subtitle": "Custom domains (TXT/CNAME) with automatic SSL are included on every plan. Start with Starter for website + booking, then add staff scheduling, payroll, and automations on Pro and Business.",
+    "subtitle": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
     "primaryCta": {
-      "label": "ابدأ تجربة مجانية"
+      "label": "ابدأ مجانا"
     },
     "secondaryCta": {
       "label": "قارن الخطط"
     },
     "badge": {
-      "overline": "New capability",
-      "title": "Custom domains + automatic SSL"
+      "overline": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+      "title": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa."
     },
-    "mediaAlt": "Schedulaa pricing overview showing plans and platform map"
+    "mediaAlt": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
   },
   "promo": {
-    "starterBadge": "50% off",
+    "starterBadge": "50%",
     "starterNote": "${{discounted}} / mo for first {{months}} months. Then ${{base}} / mo"
   },
   "plans": {
     "table": {
       "list": [
         {
-          "key": "starter",
-          "name": "Starter",
-          "price": "$19.99/mo",
-          "description": "Launch your website and take bookings and payments for solo professionals.",
-          "trialNote": "14-day free trial • Cancel anytime",
+          "key": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+          "name": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+          "price": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+          "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+          "trialNote": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
           "features": [
             {
-              "type": "heading",
-              "text": "Core platform"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
             },
-            "Unified booking, website, and payments.",
-            "Secure client and staff portals.",
-            "Website builder with branded pages and templates.",
-            "Online booking, confirmations, and client portal.",
-            "Public “Book with me” link.",
-            "Stripe Checkout with automatic tax compliance.",
+            "الحجوزات, , .",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "الحجوزات, , البوابة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
             {
-              "type": "heading",
-              "text": "Operational basics"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
             },
-            "اشعارات وتذكيرات الحجوزات.",
-            "Embeddable booking widgets.",
-            "Stripe refunds and payment history.",
-            "Basic role-based access.",
+            "الحجوزات الاشعارات .",
+            "الحجوزات .",
+            "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+            ".",
             {
-              "type": "heading",
-              "text": "Time & reporting"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "&"
             },
-            "Basic time tracking tied to bookings and shifts.",
-            "CSV/PDF exports for worked hours and revenue.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
             {
-              "type": "heading",
-              "text": "Capacity"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
             },
-            "1 staff seat and 1 location (department) included.",
-            "Custom domain + automatic SSL included.",
-            "Upgrade for onboarding workflows."
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+            "."
           ],
-          "ctaLabel": "Start 14-day free trial",
+          "ctaLabel": "14",
           "ctaTo": "/register"
         },
         {
-          "key": "pro",
-          "name": "Pro",
-          "price": "$49.99/mo",
-          "positioning": "Run daily operations from one system.",
-          "description": "For small teams that need scheduling, automation, and analytics.",
-          "trialNote": "14-day free trial • Cancel anytime",
+          "key": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+          "name": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+          "price": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+          "positioning": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+          "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+          "trialNote": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
           "features": [
-            "Everything in Starter.",
+            "اطّلع على التفاصيل",
             {
-              "type": "heading",
-              "text": "Time & Labor"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "&"
             },
-            "Shift-based clock-in and clock-out.",
-            "Break enforcement and auto-deductions.",
-            "Overtime and anomaly flags.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            ".",
             {
-              "type": "heading",
-              "text": "Payroll"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "الرواتب"
             },
-            "Full payroll runs included (no per-run fees).",
-            "Payroll-ready approvals and audit trails.",
-            "Payroll exports to QuickBooks & Xero.",
-            "Payroll processing with Employee Payslip Portal (self-serve PDFs).",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "اطّلع على التفاصيل",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
             {
-              "type": "heading",
-              "text": "Access & control"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "&"
             },
-            "Role-based access for managers and staff.",
-            "Staff permissions and visibility controls.",
-            "Department scheduling and shared calendars.",
-            "Shift swaps, approvals, and live rosters.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "الجدولة .",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
             {
-              "type": "heading",
-              "text": "Analytics & marketing"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "يوضح هذا القسم الميزة بشكل عملي داخل المنصة مع تجربة استخدام واضحة."
             },
-            "Email campaigns: Broadcast, Win-Back, VIP, No-Show, Anniversary.",
-            "Advanced Analytics (bookings, revenue, client segments).",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم الميزة بشكل عملي داخل المنصة مع تجربة استخدام واضحة.",
             {
-              "type": "heading",
-              "text": "Capacity"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
             },
-            "Up to 5 staff seats and 1 location (department) included.",
-            "Automated Canadian stat holiday pay and accruals.",
-            "Priority support (business hours)."
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "الدعم ( )."
           ],
-          "ctaLabel": "Start 14-day free trial",
+          "ctaLabel": "14",
           "ctaTo": "/register",
           "highlight": true,
-          "badge": "Most popular"
+          "badge": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
         },
         {
-          "key": "business",
-          "name": "Business",
-          "price": "$119.99/mo",
-          "description": "Built for compliance, audits, and multi-location (department) operations.",
-          "trialNote": "14-day free trial • Cancel anytime",
+          "key": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+          "name": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+          "price": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+          "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+          "trialNote": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
           "features": [
-            "Everything in Pro.",
+            "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
             {
-              "type": "heading",
-              "text": "Time & Labor"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "&"
             },
-            "Shift-based clock-in and clock-out with break enforcement.",
-            "Overtime, anomaly flags, and audit-ready time records.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
             {
-              "type": "heading",
-              "text": "Payroll"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "الرواتب"
             },
-            "Full payroll runs included (no per-run fees).",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
             {
-              "type": "heading",
-              "text": "Governance & compliance"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "&"
             },
-            "Audit-ready payroll and compliance records.",
-            "تصديرات ضريبية جاهزة للامتثال (W-2, T4, ROE).",
-            "Multi-location (department) payroll and reporting.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
             {
-              "type": "heading",
-              "text": "Advanced control"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
             },
-            "Branch-level permissions.",
-            "Bulk scheduling controls (close / keep windows).",
-            "Audit-ready operations with reduced compliance risk.",
+            ".",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
             {
-              "type": "heading",
-              "text": "Capacity"
+              "type": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+              "text": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
             },
-            "10 staff seats and up to 5 locations (departments) included.",
-            "Add seats for $9/mo each.",
-            "Free branded website included when using Payroll + Scheduling."
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+            "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
           ],
-          "ctaLabel": "Start 14-day free trial",
+          "ctaLabel": "14",
           "ctaTo": "/register"
         }
       ],
       "addons": {
-        "title": "Popular add-ons",
+        "title": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
         "headers": {
-          "addon": "Add-on",
-          "price": "Price"
+          "addon": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+          "price": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
         },
         "items": [
           {
-            "key": "extraSeat",
-            "name": "Additional staff seat",
-            "price": "$9/mo per seat (prorated)"
+            "key": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+            "name": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+            "price": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa."
           }
         ]
       }
     }
   },
   "assurances": {
-    "eyebrow": "Everything you need",
-    "title": "Transparent pricing, enterprise-grade platform",
-    "subtitle": "Secure, scalable, and fast: launch branded sites, process payments, and automate payroll from one login.",
+    "eyebrow": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+    "title": "الاسعار",
+    "subtitle": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
     "items": [
       {
-        "key": "noHiddenFees",
-        "title": "No hidden fees",
-        "description": "Simple Stripe-based pricing with predictable processing rates."
+        "key": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "title": "No",
+        "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
       },
       {
-        "key": "switchPlans",
-        "title": "Switch plans anytime",
-        "description": "Upgrade or downgrade as your team grows; your custom domain follows instantly."
+        "key": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "title": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
       },
       {
-        "key": "professionReady",
-        "title": "Branded websites",
-        "description": "Custom domains with TXT/CNAME verification and automatic SSL on every plan."
+        "key": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "title": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
       },
       {
-        "key": "enterpriseOnboarding",
-        "title": "Enterprise onboarding",
-        "description": "Guided setup for multi-location brands with tax and payroll mapping."
+        "key": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "title": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
       },
       {
-        "key": "roleAccess",
-        "title": "Role-based access",
-        "description": "Managers, staff, and finance roles keep scheduling and payroll secure by default."
+        "key": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "title": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
       },
       {
-        "key": "globalPayments",
-        "title": "Global payments ready",
-        "description": "Stripe Checkout with refunds, saved cards, and cross-border payouts."
+        "key": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "title": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
       }
     ]
   },
   "ribbon": {
-    "message": "<strong>New:</strong> Custom domains (TXT/CNAME) with automatic SSL are included on every plan.",
-    "buttonLabel": "Connect domain",
+    "message": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+    "buttonLabel": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
     "buttonTo": "/manager/dashboard"
   },
   "footnote": {
-    "message": "<strong>Custom domain + automatic SSL:</strong> included on <strong>all plans</strong>."
+    "message": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
   },
   "ctaBanner": {
-    "eyebrow": "Launch today",
-    "title": "Start your free trial - no credit card required",
-    "description": "Bring scheduling, payments, and payroll into one workspace with automatic SSL on your domain.",
+    "eyebrow": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+    "title": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+    "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
     "primaryCta": {
-      "label": "ابدأ تجربة مجانية"
+      "label": "ابدأ مجانا"
     },
     "secondaryCta": {
-      "label": "Talk to sales"
+      "label": "to"
     }
   },
   "included": {
-    "title": "Included in every plan",
+    "title": "in",
     "items": [
-      "Custom domains with automatic SSL.",
-      "Role-based access and staff permissions.",
-      "Email and booking notifications.",
-      "Secure Stripe payments with refunds.",
-      "Continuous feature updates."
+      "SSL.",
+      "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+      "الحجوزات الاشعارات.",
+      "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+      "ميزة ."
     ]
   },
   "comparison": {
-    "title": "Schedulaa Feature Comparison",
-    "subtitle": "قارن الخطط at a glance.",
+    "title": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+    "subtitle": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
     "headers": {
-      "feature": "Feature",
-      "starter": "Starter",
-      "pro": "Pro",
-      "business": "Business"
+      "feature": "ميزة",
+      "starter": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+      "pro": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+      "business": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
     },
     "values": {
-      "yes": "Yes",
+      "yes": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
       "dash": "—",
-      "businessHours": "Business hours",
+      "businessHours": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
       "always": "24 / 7"
     },
     "rows": {
       "price": {
-        "label": "Price",
-        "starter": "$19.99 / mo",
-        "pro": "$49.99 / mo",
-        "business": "$119.99 / mo"
+        "label": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "starter": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+        "pro": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+        "business": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa."
       },
       "bestFor": {
-        "label": "Best for",
-        "starter": "Solo professionals",
-        "pro": "Growing teams",
-        "business": "الامتثال وفرق متعددة المواقع (قسم)"
+        "label": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "starter": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "pro": "الفرق",
+        "business": "الامتثال & () الفرق"
       },
       "website": {
-        "section": "Website & Online Presence",
-        "builder": "Branded website builder & templates",
-        "customDomain": "Custom domain + automatic SSL",
-        "publicBooking": "صفحات حجز عامة",
-        "embedded": "Embedded booking widgets",
-        "branding": "Company-level branding"
+        "section": "&",
+        "builder": "&",
+        "customDomain": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+        "publicBooking": "الحجوزات",
+        "embedded": "الحجوزات",
+        "branding": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
       },
       "booking": {
-        "section": "الحجوزات والجدولة",
-        "online": "Online booking & confirmations",
-        "reschedule": "Client self-serve rescheduling",
-        "multi": "Multi-service & add-on bookings",
-        "staffScheduling": "Staff scheduling & shift management",
-        "shiftSwaps": "Shift swaps & leave approvals",
-        "bulk": "Bulk scheduling controls"
+        "section": "الحجوزات & الجدولة",
+        "online": "الحجوزات &",
+        "reschedule": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "multi": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+        "staffScheduling": "الجدولة &",
+        "shiftSwaps": "&",
+        "bulk": "الجدولة"
       },
       "time": {
-        "section": "Time Tracking",
-        "clock": "Shift-based clock-in / clock-out",
-        "breakPolicy": "Break policy enforcement",
-        "staggered": "Staggered & windowed breaks",
-        "ipHints": "IP / device audit hints",
-        "overtime": "Overtime & anomaly flags"
+        "section": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "clock": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+        "breakPolicy": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "staggered": "&",
+        "ipHints": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+        "overtime": "&"
       },
       "payroll": {
-        "section": "Payroll",
-        "processing": "Payroll processing (US & Canada)",
-        "holiday": "Automated stat holiday pay & accruals",
-        "payslip": "Employee payslip portal (PDF)",
-        "exports": "Advanced payroll exports & audits",
-        "invoicing": "Payroll-linked invoicing"
+        "section": "الرواتب",
+        "processing": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+        "holiday": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+        "payslip": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+        "exports": "الرواتب عمليات التصدير &",
+        "invoicing": "الرواتب"
       },
       "compliance": {
         "section": "الامتثال",
-        "revenueReports": "Revenue & appointment reports",
-        "exports": "CSV / PDF exports",
-        "w2": "W-2 (US) generation",
-        "t4": "T4 & ROE (Canada)",
-        "audit": "الامتثال-ready audit trails"
+        "revenueReports": "&",
+        "exports": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+        "w2": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+        "t4": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+        "audit": "الامتثال"
       },
       "analytics": {
         "section": "Analytics",
-        "revenueDash": "Revenue & booking dashboards",
-        "utilization": "Utilization & productivity analytics",
-        "segmentation": "Client segmentation & trends",
-        "multiLocation": "Multi-location (department) analytics"
+        "revenueDash": "& الحجوزات",
+        "utilization": "& التحليلات",
+        "segmentation": "&",
+        "multiLocation": "() التحليلات"
       },
       "automation": {
-        "section": "Automation",
-        "notifications": "Email notifications & reminders",
-        "campaigns": "Email campaigns (VIP, Win-back, No-show)",
-        "zapier": "Zapier automation",
-        "workflows": "اتمتة سير العمل"
+        "section": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "notifications": "الاشعارات &",
+        "campaigns": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+        "zapier": "Zapier",
+        "workflows": "سير العمل"
       },
       "hiring": {
-        "section": "Hiring",
-        "jobs": "Job postings & public apply links",
-        "resume": "Resume uploads & tracking",
-        "onboarding": "Onboarding workflows",
-        "handoff": "Hiring → payroll handoff"
+        "section": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "jobs": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+        "resume": "&",
+        "onboarding": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "handoff": "→ الرواتب"
       },
       "scale": {
-        "section": "Scale",
-        "seatsIncluded": "Staff seats included",
+        "section": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "seatsIncluded": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
         "starterSeats": "1",
-        "proSeats": "Up to 5",
+        "proSeats": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
         "businessSeats": "10",
-        "additionalSeats": "Additional staff seats",
-        "seatPrice": "$9 / seat",
-        "multiLocation": "Multi-location support (use departments as locations)",
+        "additionalSeats": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "seatPrice": "$9 /",
+        "multiLocation": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
         "starterLocations": "1",
         "proLocations": "1",
-        "businessLocations": "Up to 2",
-        "roleAccess": "Role-based access & permissions",
-        "starterAccess": "Basic",
-        "proAccess": "Advanced",
-        "businessAccess": "Advanced",
-        "branchPermissions": "Branch-level permissions"
+        "businessLocations": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
+        "roleAccess": "&",
+        "starterAccess": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "proAccess": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "businessAccess": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+        "branchPermissions": "يوضح هذا القسم تفاصيل الميزة داخل المنصة."
       },
       "support": {
-        "section": "Support",
-        "standard": "Standard support",
-        "priority": "Priority support",
-        "audit": "Audit & compliance support"
+        "section": "الدعم",
+        "standard": "الدعم",
+        "priority": "الدعم",
+        "audit": "& الدعم"
       }
     }
   },
   "whyTeams": {
-    "title": "Why teams choose Schedulaa",
+    "title": "توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.",
     "items": [
-      "الحجوزات والرواتب وتتبع الوقت والمواقع تشترك في نموذج بيانات واحد.",
-      "No syncing errors between shifts, hours, and pay.",
-      "Fewer compliance gaps from disconnected tools."
+      "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+      "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+      "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة."
     ]
   },
   "websiteDesignService": {
-    "title": "Website Design Service",
-    "description": "One-time custom website design by our team. After purchase, we open a design ticket, collect your requirements, design your site, and publish it for you.",
-    "includes": "Includes: design + revisions + publish. Domain purchase not included (we can help you connect your domain).",
-    "cta": "Buy Website Design",
-    "loadingCta": "Starting checkout..."
+    "title": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+    "description": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+    "includes": "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+    "cta": "يوضح هذا القسم تفاصيل الميزة داخل المنصة.",
+    "loadingCta": "..."
   }
 }

@@ -1,264 +1,264 @@
 {
   "meta": {
-    "title": "Recursos da plataforma Schedulaa | Scheduling, Payroll, and Online Sales Unified",
-    "description": "Schedulaa unifies scheduling, payroll, hiring, website building, and eCommerce for teams. Sell services or products, automate payments, and manage multi-branch operations in one platform.",
-    "ogTitle": "Recursos da plataforma Schedulaa",
-    "ogDescription": "Book clients, sell products, pay your team – all from one platform."
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "description": "Esta secao explica claramente o recurso no Schedulaa.",
+    "ogTitle": "Esta secao explica claramente o recurso no Schedulaa.",
+    "ogDescription": "Saiba mais"
   },
   "hero": {
-    "eyebrow": "Destaques da plataforma",
+    "eyebrow": "Esta secao explica claramente o recurso no Schedulaa.",
     "title": {
-      "line1": "Recursos criados para",
-      "line2": "equipes de servicos empresariais."
+      "line1": "Esta secao explica claramente o recurso no Schedulaa.",
+      "line2": "Esta secao explica claramente o recurso no Schedulaa."
     },
-    "subtitle": "Schedulaa brings scheduling, payroll, websites, and eCommerce into one experience so your staff and clients stay connected.",
+    "subtitle": "Esta secao explica claramente o recurso no Schedulaa.",
     "badge": {
-      "title": "Schedulaa OS",
-      "subtitle": "Unified command center"
+      "title": "Esta secao explica claramente o recurso no Schedulaa.",
+      "subtitle": "Esta secao explica claramente o recurso no Schedulaa."
     },
     "primaryCta": {
-      "label": "Iniciar teste gratis",
-      "supporting": "No card required"
+      "label": "Esta secao explica claramente o recurso no Schedulaa.",
+      "supporting": "Esta secao explica claramente o recurso no Schedulaa."
     },
     "secondaryCta": {
-      "label": "Comparar planos"
+      "label": "Esta secao explica claramente o recurso no Schedulaa."
     },
-    "mediaAlt": "Schedulaa scheduling and payroll screens",
+    "mediaAlt": "Esta secao explica claramente o recurso no Schedulaa.",
     "banner": {
-      "title": "New:",
-      "body": "Custom domains with TXT/CNAME verification and automatic SSL are now live.",
-      "ctaLabel": "Connect your domain"
+      "title": "Esta secao explica claramente o recurso no Schedulaa.",
+      "body": "Esta secao explica claramente o recurso no Schedulaa.",
+      "ctaLabel": "Esta secao explica claramente o recurso no Schedulaa."
     },
     "featureCard": {
-      "eyebrow": "Why teams upgrade",
-      "title": "A single source of truth for operations",
-      "subtitle": "Replace 5+ disconnected tools with booking, payroll, and websites that already know each other."
+      "eyebrow": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+      "title": "Esta secao explica claramente o recurso no Schedulaa.",
+      "subtitle": "Saiba mais"
     }
   },
   "highlightCards": {
     "scheduling": {
-      "title": "Agendamento e reservas mais inteligentes",
-      "description": "Live department-based service lists, recurring templates, and branded booking modals embedded anywhere.",
+      "title": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+      "description": "Saiba mais",
       "points": [
-        "Recurring availability and editable slots (Vagaro-style).",
-        "Clients can book multiple services, add-ons, or providers in one flow.",
-        "Embed branded booking widgets on partner sites or custom domains.",
-        "Shift swaps and leave approvals built into staff scheduling."
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Saiba mais",
+        "Saiba mais",
+        "Esta secao explica claramente o recurso no Schedulaa."
       ]
     },
     "payroll": {
-      "title": "Folha e conformidade",
-      "description": "Run region-aware payroll with YTD summaries, tax exports, and self-serve employee portals.",
+      "title": "Esta secao explica claramente o recurso no Schedulaa.",
+      "description": "Esta secao explica claramente o recurso no Schedulaa.",
       "points": [
-        "Overtime, tips, and holidays calculated automatically.",
-        "Export-ready tax forms (W-2, T4, ROE).",
-        "Integrated with Stripe payouts for fast, secure deposits.",
-        "Auto-recalc and audit-ready reports for US + Canada (except QC)."
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Saiba mais",
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Saiba mais"
       ]
     },
     "commerce": {
-      "title": "Comercio, analitica e comercial",
-      "description": "Sell products and services together, automate campaigns, and measure results in one dashboard.",
+      "title": "Esta secao explica claramente o recurso no Schedulaa.",
+      "description": "Esta secao explica claramente o recurso no Schedulaa.",
       "points": [
-        "Mixed carts for products and services with add-ons and coupons.",
-        "Stripe Checkout with built-in refund and tax automation.",
-        "Analytics for revenue, utilization, churn, and top-performing services.",
-        "Win-back, VIP, and no-show recovery campaigns included."
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Sim, este recurso e suportado no fluxo atual da plataforma."
       ]
     }
   },
   "featureShowcase": {
-    "eyebrow": "Pilares da plataforma",
-    "title": "Recursos que funcionam juntos",
-    "subtitle": "Each module is built to hand off context so your staff and clients never lose the thread.",
+    "eyebrow": "Esta secao explica claramente o recurso no Schedulaa.",
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "Sim, este recurso e suportado no fluxo atual da plataforma.",
     "features": [
       {
         "icon": "01",
-        "title": "Reserva e agendamento unificados",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "description": [
-          "Real-time client bookings with service selection and self-serve rescheduling.",
-          "Employee availability, shift templates, and multi-branch support.",
-          "Shift swaps, leave requests, and recurring availability rules.",
-          "Automated reminders, digital tips, reviews, and post-visit feedback collection."
+          "Saiba mais",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Saiba mais"
         ]
       },
       {
         "icon": "02",
-        "title": "Powerful Payroll & HR",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "description": [
-          "Canada + 45 U.S. states supported (EI, CPP, automated stat holiday pay, W-2, T4, ROE).",
-          "Pay-rate assignment per employee, overtime tiers, province/state holiday rules, and deductions.",
-          "Export payroll journals or plug into remittance APIs for hands-free filing.",
-          "Employee onboarding, time tracking, and performance workflows in one place."
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Sim, este recurso e suportado no fluxo atual da plataforma.",
+          "Esta secao explica claramente o recurso no Schedulaa."
         ]
       },
       {
         "icon": "03",
-        "title": "Construtor de sites e presenca online",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "description": [
-          "Drag-and-drop templates for services, products, hero sections, and contact flows.",
-          "Theme customization across fonts, colors, backgrounds, and layout blocks.",
-          "Add or remove pages, rearrange navigation, and publish changes instantly.",
-          "Connect or purchase a custom domain with SEO-ready structure baked in."
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Saiba mais"
         ]
       },
       {
         "icon": "04",
-        "title": "eCommerce & Product Sales",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "description": [
-          "Native product catalog for physical or digital items with rich detail pages.",
-          "Secure checkout via Stripe Connect with refunds, partial refunds, and tipping.",
-          "Inventory management, pricing controls, and variant options by SKU.",
-          "Sales analytics that surface revenue trends, top performers, and sell-through."
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
         ]
       },
       {
         "icon": "05",
-        "title": "Smart Analytics & Reporting",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "description": [
-          "Dashboards for revenue, bookings, retention, and customer lifetime value.",
-          "Staff performance reporting with utilization and productivity metrics.",
-          "Tax, payout, and settlement reporting with exportable CSV dashboards.",
-          "Insights to drive smarter decisions, forecast demand, and spot gaps early."
+          "Saiba mais",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
         ]
       },
       {
         "icon": "06",
-        "title": "Automation & Integrations",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "description": [
-          "Zapier integration to connect Schedulaa with QuickBooks, Xero, and more.",
-          "Webhooks and REST APIs to trigger workflows or keep external systems in sync.",
-          "Scheduler automations for re-engagement campaigns, no-show alerts, and follow-ups.",
-          "Embed widgets and booking flows directly into existing sites and partner portals."
+          "Saiba mais",
+          "Sim, este recurso e suportado no fluxo atual da plataforma.",
+          "Sim, este recurso e suportado no fluxo atual da plataforma.",
+          "Saiba mais"
         ]
       },
       {
         "icon": "07",
-        "title": "Seguranca, conformidade e escala",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "description": [
-          "Role-based access control for managers, admins, recruiters, and employees.",
-          "Secure data storage with encryption, audit logs, and automated backups.",
-          "Multi-location, multi-branch support with centralized oversight.",
-          "Conformidade com regras regionais de folha e privacidade desde o inicio."
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Sim, este recurso e suportado no fluxo atual da plataforma."
         ]
       },
       {
         "icon": "08",
-        "title": "Controle de tempo e conformidade de pausas",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "description": [
-          "Clock-in/out tied to scheduled shifts with IP/device hints captured per punch.",
-          "Break policies that enforce fixed, windowed, or staggered slots and flag missed breaks.",
-          "Force clock-out and bulk apply break templates with full audit trails for payroll.",
-          "Exports flow to payroll with unpaid breaks deducted and overtime markers included."
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
         ]
       },
       {
         "icon": "09",
-        "title": "Payroll-Linked Invoicing",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "description": [
-          "Generate client invoices directly from finalized payroll and approved time.",
-          "Optional per-employee billing with transparent management fees.",
-          "Country-aware tax labels (US Sales Tax, CA GST/HST) and auto totals.",
-          "PO numbers, payment terms, and client-ready PDFs included."
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Saiba mais",
+          "Saiba mais"
         ]
       },
       {
         "icon": "10",
-        "title": "Hiring, Resume Uploads, and Onboarding",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "description": [
-          "Create job postings with public application links and track candidate applications.",
-          "Secure resume uploads with antivirus scan status (pending, clean, blocked) when enabled.",
-          "Request signed documents via secure links and store uploads in the candidate profile.",
-          "Convert approved candidates into employees with the candidate record linked for reference."
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
         ]
       }
     ]
   },
   "platformMap": {
-    "title": "Orchestrate every site, team, and location from one map",
-    "subtitle": "Multi-location? Franchise? Recruiting pods? The platform map keeps each branch aligned while honoring local branding and roles.",
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "Esta secao explica claramente o recurso no Schedulaa.",
     "points": {
-      "branches": "Manage branches, departments, and teams with unique themes and permissions.",
-      "analytics": "Avalie o desempenho entre unidades com analitica ao vivo e insights de receita.",
-      "templates": "Each profession template (fitness, real estate, recruiter, teacher, photographer) includes tailored emails and questionnaires.",
-      "sync": "Client booking, shift scheduling, and payroll sync seamlessly under one dashboard.",
-      "domains": "Launch branded sites on your own domain with automatic SSL."
+      "branches": "Esta secao explica claramente o recurso no Schedulaa.",
+      "analytics": "Esta secao explica claramente o recurso no Schedulaa.",
+      "templates": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+      "sync": "Saiba mais",
+      "domains": "Esta secao explica claramente o recurso no Schedulaa."
     },
     "primaryCta": {
-      "label": "Talk to our team"
+      "label": "Fale com nossa equipe"
     },
     "secondaryCta": {
-      "label": "Explore docs"
+      "label": "Saiba mais"
     },
-    "mediaAlt": "Schedulaa platform map linking scheduling, payroll, automation, websites, and analytics"
+    "mediaAlt": "Esta secao explica claramente o recurso no Schedulaa."
   },
   "integrations": {
-    "title": "Integrations and automation made visual",
-    "subtitle": "Map your systems, workflows, and automations in one place so marketing, operations, and finance stay aligned.",
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "Esta secao explica claramente o recurso no Schedulaa.",
     "points": {
-      "accounting": "Sync invoices, payments, and payroll exports directly to QuickBooks or Xero.",
-      "automation": "Automate follow-ups, win-back, and no-show recovery campaigns via email or SMS.",
-      "stripe": "Host secure payments through Stripe Checkout with saved cards and refunds.",
-      "domains": "Custom domains with automatic SSL are live; in-app domain registration & Zapier are coming soon."
+      "accounting": "Saiba mais",
+      "automation": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+      "stripe": "Esta secao explica claramente o recurso no Schedulaa.",
+      "domains": "Esta secao explica claramente o recurso no Schedulaa."
     },
-    "mediaAlt": "Schedulaa automation and integration journey",
+    "mediaAlt": "Esta secao explica claramente o recurso no Schedulaa.",
     "blocks": {
       "payments": {
-        "title": "Payments & payouts",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
         "items": [
-          "Card-on-file, Apple Pay, Google Pay supported",
-          "Stripe Radar, PCI DSS, SOC2 in progress"
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
         ]
       },
       "compliance": {
         "title": "Conformidade",
         "items": [
-          "CRA + IRS exports",
-          "SOC2 in flight"
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
         ]
       }
     }
   },
   "insight": {
-    "eyebrow": "From the operations desk",
-    "title": "Guides to level up your team",
-    "subtitle": "Get playbooks on staffing models, payroll compliance, and client retention while we ship new features.",
+    "eyebrow": "Esta secao explica claramente o recurso no Schedulaa.",
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "Saiba mais",
     "items": [
       {
         "tag": "Playbook",
-        "headline": "Design a multi-location staffing strategy",
-        "description": "Map availability, roles, and permissions so every shift is covered without overtime surprises.",
-        "ctaLabel": "Read the guide",
+        "headline": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+        "ctaLabel": "Saiba mais",
         "ctaHref": "https://www.schedulaa.com/blog/multi-location-staffing"
       },
       {
         "tag": "Webinar",
-        "headline": "Payroll deep dive for creative teams",
-        "description": "Walk through taxation, tips, and cross-border payouts in under 30 minutes.",
-        "ctaLabel": "Watch on demand",
+        "headline": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Esta secao explica claramente o recurso no Schedulaa.",
+        "ctaLabel": "Esta secao explica claramente o recurso no Schedulaa.",
         "ctaHref": "https://www.schedulaa.com/webinars/payroll"
       },
       {
         "tag": "Checklist",
-        "headline": "Automation kickoff worksheet",
-        "description": "Audit the client journey and spot where automation saves the most time.",
-        "ctaLabel": "Download PDF",
+        "headline": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Esta secao explica claramente o recurso no Schedulaa.",
+        "ctaLabel": "Esta secao explica claramente o recurso no Schedulaa.",
         "ctaHref": "https://www.schedulaa.com/resources/automation-checklist"
       }
     ]
   },
   "testimonials": {
-    "title": "Teams scaling with Schedulaa"
+    "title": "Esta secao explica claramente o recurso no Schedulaa."
   },
   "cta": {
-    "eyebrow": "Ready to streamline?",
-    "title": "Run scheduling, payroll, and online sales from one login.",
-    "description": "Whether you manage a salon, fitness studio, recruiter network, or real estate team — Schedulaa connects bookings, sales, and payroll in one secure workspace.",
+    "eyebrow": "Saiba mais",
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "description": "Saiba mais",
     "primaryCta": {
-      "label": "Comece gratis"
+      "label": "Esta secao explica claramente o recurso no Schedulaa."
     },
     "secondaryCta": {
-      "label": "Talk to sales"
+      "label": "Saiba mais"
     }
   }
 }

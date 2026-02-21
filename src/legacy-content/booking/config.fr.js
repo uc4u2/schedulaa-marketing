@@ -4,249 +4,249 @@ const CONTACT_URL = "/contact";
 const LIVE_SERVICE_DEMO = "/demo";
 
 const sharedCta = {
-  overline: "R\u00e9servation, paie et sites web ensemble",
-  title: "Commencez \u00e0 recevoir des r\u00e9servations le jour de votre inscription",
-  body: "Lancez la r\u00e9servation en ligne, publiez vos disponibilit\u00e9s et connectez Stripe sans plugins ni outils \u00e0 assembler.",
-  primary: { label: "Commencer gratuitement", href: REGISTER_URL },
-  secondary: { label: "Parler \u00e0 notre \u00e9quipe", href: CONTACT_URL },
+  overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  body: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  primary: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: REGISTER_URL },
+  secondary: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: CONTACT_URL },
 };
 
 const sharedSecondaryLinks = [
-  { label: "Cr\u00e9ateur de site web", href: "/website-builder" },
-  { label: "Automatisation marketing", href: "/marketing" },
-  { label: "R\u00e9servation salon", href: "/booking/salon" },
-  { label: "Planification cours particuliers", href: "/booking/tutor" },
-  { label: "R\u00e9servation m\u00e9dicale", href: "/booking/doctor" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/website-builder" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/marketing" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/booking/salon" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/booking/tutor" },
+  { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: "/booking/doctor" },
 ];
 
 const bookingHubConfig = {
   meta: {
-    title: "Online Booking & Team Scheduling with Payments | Schedulaa",
+    title: "En savoir plus",
     description:
-      "Accept bookings online, manage availability and shifts, send smart invitations with forms, and take payments via Stripe. Powerful calendars and a clean client checkout in one platform.",
+      "En savoir plus",
     canonical: `${BASE_URL}/booking`,
     og: {
-      title: "Online Booking & Team Scheduling with Payments | Schedulaa",
+      title: "En savoir plus",
       description:
-        "Publish services, show real-time availability, manage staff calendars, and let clients pay with Stripe in one booking platform.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       image: `${BASE_URL}/images/booking-hub-preview.png`,
       url: `${BASE_URL}/booking`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Online Booking & Team Scheduling with Payments | Schedulaa",
+      title: "En savoir plus",
       description:
-        "Schedulaa combines booking, availability, team calendars, and Stripe checkout in one workflow.",
+        "En savoir plus",
       image: `${BASE_URL}/images/booking-hub-preview.png`,
     },
   },
   schema: {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Schedulaa Booking & Scheduling",
+    name: "En savoir plus",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    description: "Online booking, staff availability, team calendars, invitations with forms, and Stripe checkout.",
+    description: "En savoir plus",
     offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
     url: `${BASE_URL}/booking`,
   },
   hero: {
-    badge: "Disponibilit\u00e9 en temps r\u00e9el",
-    title: "R\u00e9servation en ligne et planification d'\u00e9quipe avec paiements Stripe",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     subtitle:
-      "Schedulaa vous offre un flux de r\u00e9servation complet avec disponibilit\u00e9 en temps r\u00e9el, choix du prestataire, calendriers d'\u00e9quipe, invitations et paiement Stripe.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     image: '/images/marketing/showcase/clients-pick2.png',
-    imageAlt: 'Aper\u00e7u du flux de r\u00e9servation client',
+    imageAlt: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
     images: [
-      { src: '/images/marketing/showcase/service-management.png', alt: 'Gestion des services' },
-      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'Collecte des paiements' },
-      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'Flux de paiement' },
-      { src: '/images/marketing/showcase/employee-availability.png', alt: 'Disponibilit\u00e9 des employ\u00e9s' },
+      { src: '/images/marketing/showcase/service-management.png', alt: 'Cette section explique clairement la fonctionnalite dans Schedulaa.' },
+      { src: '/images/marketing/showcase/payment-collection3d.png', alt: 'Cette section explique clairement la fonctionnalite dans Schedulaa.' },
+      { src: '/images/marketing/showcase/clients-pick2.png', alt: 'Cette section explique clairement la fonctionnalite dans Schedulaa.' },
+      { src: '/images/marketing/showcase/employee-availability.png', alt: 'Cette section explique clairement la fonctionnalite dans Schedulaa.' },
     ],
     bullets: [
-      "Publish services and show live availability across providers.",
-      "Give managers a master calendar with shift and leave controls.",
-      "Offer clients a smooth checkout with pay, deposit, or card-on-file.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Commencer la r\u00e9servation en ligne", href: REGISTER_URL },
-    secondaryCta: { label: "Voir une page de service en direct", href: LIVE_SERVICE_DEMO },
+    primaryCta: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: REGISTER_URL },
+    secondaryCta: { label: "Cette section explique clairement la fonctionnalite dans Schedulaa.", href: LIVE_SERVICE_DEMO },
   },
-  featuresHeading: "Pourquoi les \u00e9quipes choisissent Schedulaa",
-  featuresTitle: "R\u00e9servation, planification et paiements dans un seul hub",
+  featuresHeading: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+  featuresTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
   featuresIntro:
-    "Everything from provider availability to checkout happens inside Schedulaa — no double entry or extra plugins.",
+    "En savoir plus",
   features: [
     {
       icon: "availability",
       label: "Availability",
-      title: "Real-time slot picker",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Show open times by provider and let clients pick the person and time that works. Slots adjust immediately when staff update availability.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       link: LIVE_SERVICE_DEMO,
-      linkLabel: "See live availability",
+      linkLabel: "En savoir plus",
     },
     {
       icon: "meeting",
-      label: "Public links",
-      title: "Shareable “Book with me” pages",
+      label: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "En savoir plus",
       description:
-        "Let staff publish a public link for consults or interviews. Availability comes from their schedule, confirmations include Jitsi + cancel/reschedule links, and bookings flow into the Upcoming Meetings panel.",
+        "En savoir plus",
       link: "/demo",
-      linkLabel: "Open public-link settings",
+      linkLabel: "En savoir plus",
     },
     {
       icon: "calendar",
       label: "Calendars",
-      title: "Manager & team calendars",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Use the master calendar to review bookings, shift coverage, and leave. Enterprise availability views make bulk changes fast.",
+        "En savoir plus",
       link: "/booking/salon",
-      linkLabel: "Explore vertical solutions",
+      linkLabel: "En savoir plus",
     },
     {
       icon: "payment",
       label: "Checkout",
-      title: "Stripe payments at booking",
+      title: "En savoir plus",
       description:
-        "Offer pay-now, deposit, or capture (card on file) checkout flows. Support add-ons, coupons, multi-currency display, and tips.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       link: "/booking/tutor",
-      linkLabel: "See payment options",
+      linkLabel: "En savoir plus",
     },
   ],
   highlights: [
     {
-      overline: "Client experience",
-      title: "Real-time availability with provider choice",
+      overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Clients see open days and times up front, click a slot, and confirm their provider inside the same modal. Time zones are normalized for each visitor so nobody misses an appointment.",
+        "En savoir plus",
       points: [
-        "Green dot calendar view shows days with openings.",
-        "Inline provider picker lists who is available for the chosen time.",
+        "En savoir plus",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       ],
-      links: [{ label: "Try a demo calendar", href: LIVE_SERVICE_DEMO }],
+      links: [{ label: "En savoir plus", href: LIVE_SERVICE_DEMO }],
       image: {
         src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa service selection screen",
+        alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     },
     {
-      overline: "Meet with me",
-      title: "Public staff booking links without paid services",
+      overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "En savoir plus",
       body:
-        "Employees can toggle a public link from their dashboard, set recurring availability, and share it anywhere. Clients pick a time in their local timezone; confirmations include your timezone label, Jitsi link, and cancel/reschedule controls.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       points: [
-        "Host-facing availability powers both invites and public links.",
-        "No payment required — ideal for interviews and consults.",
-        "Upcoming Meetings shows public bookings with candidate details.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "En savoir plus",
+        "En savoir plus",
       ],
-      links: [{ label: "Enable public bookings (login required)", href: "/demo" }],
+      links: [{ label: "En savoir plus", href: "/demo" }],
       image: {
         src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
-        alt: "Public booking link example",
+        alt: "En savoir plus",
       },
     },
     {
       overline: "Operations",
-      title: "Manager calendar with shift and leave controls",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "See bookings across departments, approve swap requests, and close or open rolling time ranges. Staff adjust their own availability while managers keep guardrails in place.",
+        "En savoir plus",
       points: [
-        "Filter master calendar by department, employee, or status.",
-        "Bulk close, keep, or reopen ranges without touching booked slots.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "En savoir plus",
       ],
-      links: [{ label: "Review team availability tools", href: "/booking/salon" }],
+      links: [{ label: "En savoir plus", href: "/booking/salon" }],
       image: {
         src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
-        alt: "Schedulaa team calendar overview",
+        alt: "En savoir plus",
       },
     },
   ],
   howItWorks: {
     overline: "Process",
-    title: "How online booking works in Schedulaa",
+    title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     intro:
-      "From publishing a service to delivering confirmations and payments, the flow takes just a few steps.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     steps: [
       {
-        title: "Publish services and providers",
+        title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
         description:
-          "Define services, durations, pricing, and assign providers. Availability updates immediately for the client-facing page.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
       {
-        title: "Clients pick time and provider",
+        title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
         description:
-          "Visitors open your booking page, choose a day, select a time, and confirm the provider that fits best.",
+          "En savoir plus",
       },
       {
-        title: "Checkout and notifications",
+        title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
         description:
-          "Clients pay, leave a deposit, or store a card. Appointments and receipts sync to calendars, and staff see the booking instantly.",
+          "En savoir plus",
       },
     ],
   },
   managerControls: {
-    overline: "Manager controls",
-    title: "Keep your team calendar aligned",
+    overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     body:
-      "Powerful calendar tooling helps managers guard capacity while keeping staff in control of their own schedules.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     points: [
-      "Master calendar with filters by department, employee, or shift.",
-      "Bulk close days, keep specific ranges, or edit single slots.",
-      "Approve swap requests and track leave from the same dashboard.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
     image: {
       src: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=1200&auto=format&fit=crop",
-      alt: "Schedulaa manager calendar controls",
+      alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   },
   invitations: {
-    overline: "Invitations and intake",
-    title: "Send profession-aware invitations with forms",
+    overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     body:
-      "Compose invitations that inject client names, unique booking links, and intake requirements. Attach questionnaires so guests fill out medical or onboarding forms before arriving.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     points: [
-      "Profession templates for recruiters, doctors, salons, tutors, and more.",
-      "Auto variables like {client_name} and {booking_link} fill into emails.",
-      "Attach questionnaires and require completion after booking.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "En savoir plus",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     ],
     image: {
       src: "https://images.unsplash.com/photo-1521790797524-b2497295b8a0?q=80&w=1200&auto=format&fit=crop",
-      alt: "Schedulaa invitation composer",
+      alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   },
   checkout: {
-    overline: "Client checkout",
-    title: "Flexible payments and tips powered by Stripe",
+    overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     body:
-      "Offer full payment, deposits, or card-on-file capture. Clients can add tips or apply coupons, and the success page shows every line item for services or products purchased.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     points: [
-      "Support percentage or fixed tips and optional add-ons.",
-      "Configure per-company payment policies (pay, deposit, capture).",
-      "Receipts and card storage handled through Stripe Connect.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
     image: {
       src: "https://images.unsplash.com/photo-1584473457406-6240486418e5?q=80&w=1200&auto=format&fit=crop",
-      alt: "Schedulaa booking checkout screen",
+      alt: "En savoir plus",
     },
   },
   faqHeading: "FAQ",
-  faqTitle: "Questions sur la r\u00e9servation et la planification",
-  faqIntro: "R\u00e9ponses bas\u00e9es sur ce que Schedulaa livre aujourd'hui en production.",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+  faqIntro: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
   faq: [
     {
-      question: "Comment les clients choisissent-ils un prestataire ?",
+      question: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       answer:
-        "Une fois l'horaire choisi, Schedulaa affiche les prestataires disponibles pour ce cr\u00e9neau. Le client choisit la personne avant de confirmer.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      question: "Les managers peuvent-ils modifier les disponibilit\u00e9s en lot ?",
+      question: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       answer:
-        "Oui. Les outils de disponibilit\u00e9 entreprise permettent de fermer une journ\u00e9e enti\u00e8re, fermer avant ou apr\u00e8s une heure, ou conserver une plage sp\u00e9cifique sans casser les r\u00e9servations existantes.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      question: "Prenez-vous en charge les acomptes ou l'enregistrement de carte ?",
+      question: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       answer:
-        "Absolument. Les entreprises choisissent paiement imm\u00e9diat, acompte, ou capture avec carte enregistr\u00e9e. Stripe traite les paiements en toute s\u00e9curit\u00e9.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   ],
   cta: sharedCta,
@@ -255,96 +255,96 @@ const bookingHubConfig = {
 
 const salonConfig = {
   meta: {
-    title: "Salon Booking Software with Online Payments | Schedulaa",
+    title: "En savoir plus",
     description:
-      "Let salon clients pick stylists and times, manage chairs and shifts, and collect payments or tips with Stripe. Real-time availability and team calendars built in.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     canonical: `${BASE_URL}/booking/salon`,
     og: {
-      title: "Salon Booking & Staff Scheduling | Schedulaa",
+      title: "En savoir plus",
       description:
-        "Real-time stylist availability, team calendars, deposits, add-ons, and tips — all in one salon booking platform.",
+        "En savoir plus",
       image: `${BASE_URL}/images/booking-salon-preview.png`,
       url: `${BASE_URL}/booking/salon`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Salon Booking & Staff Scheduling | Schedulaa",
+      title: "En savoir plus",
       description:
-        "Schedulaa powers salon booking, stylist availability, shift calendars, and Stripe checkout with add-ons and tips.",
+        "En savoir plus",
       image: `${BASE_URL}/images/booking-salon-preview.png`,
     },
   },
   schema: {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Schedulaa Salon Booking",
+    name: "En savoir plus",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    description: "Salon booking, staff availability, team scheduling, and Stripe payments in one platform.",
+    description: "En savoir plus",
     offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
     url: `${BASE_URL}/booking/salon`,
   },
   hero: {
-    badge: "Salon scheduling",
-    title: "Salon Booking & Staff Scheduling",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "En savoir plus",
     subtitle:
-      "Let clients choose stylists and times while you manage chairs, shifts, and leave. Stripe checkout handles deposits, add-ons, and tips automatically.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     bullets: [
-      "Show stylist availability with real-time slot selection.",
-      "Manage chair assignments, shift coverage, and time-off requests.",
-      "Collect deposits, tips, and add-ons during checkout.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Start free", href: REGISTER_URL },
-    secondaryCta: { label: "View a live service page", href: LIVE_SERVICE_DEMO },
+    primaryCta: { label: "Commencer gratuitement", href: REGISTER_URL },
+    secondaryCta: { label: "En savoir plus", href: LIVE_SERVICE_DEMO },
   },
-  featuresHeading: "Salon-ready features",
-  featuresTitle: "Stylists, shifts, and payments covered",
+  featuresHeading: "En savoir plus",
+  featuresTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
   features: [
     {
       icon: "availability",
       label: "Stylists",
-      title: "Real-time stylist availability",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Show which stylists have openings, let guests pick their favorite, and keep calendars in sync even when shifts change.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       link: LIVE_SERVICE_DEMO,
-      linkLabel: "See stylist picker",
+      linkLabel: "En savoir plus",
     },
     {
       icon: "calendar",
       label: "Chairs",
-      title: "Team availability calendar",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Track chair usage, close ranges for color processing, and keep service durations aligned with your staff schedule.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
       icon: "payment",
       label: "Checkout",
-      title: "Deposits, add-ons, tips",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Offer pay-in-full or deposit modes and upsell add-ons like deep conditioning. Clients add tips at checkout with one tap.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       link: "/booking",
-      linkLabel: "See full booking flow",
+      linkLabel: "En savoir plus",
     },
   ],
   highlights: [
     {
-      overline: "Stylist picker",
-      title: "Real-time availability across stylists",
+      overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Clients see which stylists are available for their chosen time. The provider modal sits right inside the booking flow so they never lose their spot.",
+        "En savoir plus",
       image: {
         src: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=1200&auto=format&fit=crop",
-        alt: "Salon stylist availability",
+        alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     },
     {
       overline: "Operations",
-      title: "Manage chairs, shifts, and leave",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Use the enterprise availability calendar to bulk-close chairs, limit morning or evening slots, and approve stylist time off without breaking the booking flow.",
+        "En savoir plus",
       image: {
         src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop",
-        alt: "Salon team calendar",
+        alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     },
   ],
@@ -353,17 +353,17 @@ const salonConfig = {
   invitations: bookingHubConfig.invitations,
   checkout: bookingHubConfig.checkout,
   faqHeading: "FAQ",
-  faqTitle: "Salon booking questions",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   faq: [
     {
-      question: "Can clients pick a specific stylist?",
+      question: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       answer:
-        "Yes. When guests choose a time, Schedulaa lists the stylists who are available. They pick the stylist before confirming.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      question: "Do you support chair-based schedules?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Enterprise availability views let you manage chairs, block out processing time, and keep slots aligned with stylist shifts.",
+        "En savoir plus",
     },
   ],
   cta: sharedCta,
@@ -372,92 +372,92 @@ const salonConfig = {
 
 const tutorConfig = {
   meta: {
-    title: "Tutor Scheduling & Booking App with Payments | Schedulaa",
+    title: "En savoir plus",
     description:
-      "Let students book sessions, manage tutor availability, send personalized invitations, and collect payments with Stripe in one platform.",
+      "En savoir plus",
     canonical: `${BASE_URL}/booking/tutor`,
     og: {
-      title: "Tutor Scheduling & Payment in One Place | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Publish tutor availability, send invitations with intake questions, and take payment or store cards for follow-up charges.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       image: `${BASE_URL}/images/booking-tutor-preview.png`,
       url: `${BASE_URL}/booking/tutor`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Tutor Scheduling & Payment in One Place | Schedulaa",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Schedulaa helps tutoring teams manage availability, invitations, and Stripe payments in one dashboard.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: `${BASE_URL}/images/booking-tutor-preview.png`,
     },
   },
   schema: {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Schedulaa Tutor Scheduling",
+    name: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    description: "Tutor scheduling, invitations, and Stripe payments in one workflow.",
+    description: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
     url: `${BASE_URL}/booking/tutor`,
   },
   hero: {
-    badge: "Tutor scheduling",
-    title: "Tutor Scheduling & Payment in One Place",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     subtitle:
-      "Students pick a time in seconds while tutors control availability, rescheduling, and invitations with custom questionnaires. Stripe handles payments or card-on-file capture.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     bullets: [
-      "Real-time tutor availability with provider choice.",
-      "Personalized invitations and intake forms for each session.",
-      "Card-on-file capture to charge after the session if needed.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Start free", href: REGISTER_URL },
-    secondaryCta: { label: "Preview booking flow", href: LIVE_SERVICE_DEMO },
+    primaryCta: { label: "Commencer gratuitement", href: REGISTER_URL },
+    secondaryCta: { label: "En savoir plus", href: LIVE_SERVICE_DEMO },
   },
-  featuresHeading: "Why tutors love Schedulaa",
-  featuresTitle: "Availability, forms, and payments covered",
+  featuresHeading: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+  featuresTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
   features: [
     {
       icon: "availability",
       label: "Availability",
-      title: "Tutor-controlled schedules",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Tutors publish one-time or recurring availability, drag and drop changes, and keep students in the loop automatically.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
       icon: "form",
       label: "Invitations",
-      title: "Personalized outreach",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Send branded invitations with session details, auto variables, and required student questionnaires.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
       icon: "payment",
       label: "Payments",
-      title: "Card on file or upfront payment",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Charge for sessions up front or save the card to settle after the appointment — all through Stripe capture flows.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   ],
   highlights: [
     {
       overline: "Invitations",
-      title: "Templates for every tutoring program",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       body:
-        "Build templates that auto-fill student names, lesson topics, upload links, or homework fields. Require questionnaires so you know what to prepare.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       image: {
         src: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop",
-        alt: "Tutor invitation preview",
+        alt: "En savoir plus",
       },
     },
     {
       overline: "Rescheduling",
-      title: "Student-friendly booking management",
+      title: "En savoir plus",
       body:
-        "Students can reschedule within policy limits, and tutors get instant notifications. Availability updates automatically across calendars.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       image: {
         src: "https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop",
-        alt: "Tutor calendar management",
+        alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     },
   ],
@@ -466,17 +466,17 @@ const tutorConfig = {
   invitations: bookingHubConfig.invitations,
   checkout: bookingHubConfig.checkout,
   faqHeading: "FAQ",
-  faqTitle: "Tutor scheduling questions",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   faq: [
     {
-      question: "Can I save a student's card for later?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Yes. Use the capture (card-on-file) checkout mode to store the card securely via Stripe and charge after the session.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
     {
-      question: "Can I send custom questionnaires?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Absolutely. Attach questionnaires to invitations so students complete intake forms after they confirm a booking.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
   ],
   cta: sharedCta,
@@ -485,92 +485,92 @@ const tutorConfig = {
 
 const doctorConfig = {
   meta: {
-    title: "Doctor Appointment Scheduler with Intake Forms | Schedulaa",
+    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     description:
-      "Give patients a clean booking flow, attach medical intake forms, manage departments, and handle payments or card capture with Stripe.",
+      "En savoir plus",
     canonical: `${BASE_URL}/booking/doctor`,
     og: {
-      title: "Medical Booking with Intake Questionnaires | Schedulaa",
+      title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       description:
-        "Attach medical questionnaires, manage staff calendars, and let patients complete checkout in a HIPAA-friendly Stripe flow.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       image: `${BASE_URL}/images/booking-doctor-preview.png`,
       url: `${BASE_URL}/booking/doctor`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Medical Booking with Intake Questionnaires | Schedulaa",
+      title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       description:
-        "Schedulaa powers medical booking, intake questionnaires, staff calendar management, and Stripe receipts in one platform.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       image: `${BASE_URL}/images/booking-doctor-preview.png`,
     },
   },
   schema: {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Schedulaa Medical Booking",
+    name: "En savoir plus",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    description: "Medical booking, intake questionnaires, staff scheduling, and Stripe checkout in one workflow.",
+    description: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
     url: `${BASE_URL}/booking/doctor`,
   },
   hero: {
-    badge: "Medical scheduling",
-    title: "Medical Booking with Intake Questionnaires",
+    badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     subtitle:
-      "Attach medical questionnaires to invitations, require patients to complete forms, and keep provider calendars synced. Stripe receipts ensure payments and card data stay secure.",
+      "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     bullets: [
-      "Provider calendars scoped by department or specialty.",
-      "Required intake forms attached to invites and follow-up emails.",
-      "Stripe receipts and card storage handled via Stripe Connect.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     ],
-    primaryCta: { label: "Start free", href: REGISTER_URL },
-    secondaryCta: { label: "Preview a patient booking", href: LIVE_SERVICE_DEMO },
+    primaryCta: { label: "Commencer gratuitement", href: REGISTER_URL },
+    secondaryCta: { label: "En savoir plus", href: LIVE_SERVICE_DEMO },
   },
-  featuresHeading: "Clinic-ready workflows",
-  featuresTitle: "Scheduling, intake, and payments on one platform",
+  featuresHeading: "En savoir plus",
+  featuresTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
   features: [
     {
       icon: "availability",
       label: "Providers",
-      title: "Department-based availability",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Group providers by department or specialty, surface the right calendar to patients, and filter views in the manager dashboard.",
+        "En savoir plus",
     },
     {
       icon: "form",
       label: "Intake",
-      title: "Required questionnaires",
+      title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       description:
-        "Attach medical questionnaires to every invitation. Patients must complete forms before the booking is confirmed.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
       icon: "payment",
       label: "Checkout",
-      title: "Secure payments and receipts",
+      title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       description:
-        "Collect payments or save a card via Stripe during checkout. Receipts include itemized services for patient records.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     },
   ],
   highlights: [
     {
-      overline: "Intake workflow",
-      title: "Attach and enforce medical questionnaires",
+      overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       body:
-        "Every invitation can include a required questionnaire. Patients complete forms immediately after selecting a time, keeping compliance on track.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       image: {
         src: "https://images.unsplash.com/photo-1580281657521-054f5ef49902?q=80&w=1200&auto=format&fit=crop",
-        alt: "Medical intake questionnaire",
+        alt: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       },
     },
     {
       overline: "Calendars",
-      title: "Department and provider views",
+      title: "En savoir plus",
       body:
-        "Master and team calendars highlight provider schedules, leaves, and on-call coverage. Bulk close days for internal meetings without canceling booked visits.",
+        "En savoir plus",
       image: {
         src: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop",
-        alt: "Medical team calendar",
+        alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     },
   ],
@@ -579,17 +579,17 @@ const doctorConfig = {
   invitations: bookingHubConfig.invitations,
   checkout: bookingHubConfig.checkout,
   faqHeading: "FAQ",
-  faqTitle: "Medical booking questions",
+  faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
   faq: [
     {
-      question: "Can I require questionnaires before booking?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Yes. Attach questionnaires to invitations and mark them as mandatory. Patients must complete the form to finish the booking.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     },
     {
-      question: "Do you support departments or specialties?",
+      question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       answer:
-        "Absolutely. Organize calendars by department, filter views by provider, and keep leave and shift coverage visible to managers.",
+        "En savoir plus",
     },
   ],
   cta: sharedCta,
@@ -601,92 +601,92 @@ export const bookingPages = {
   salon: salonConfig,
   spa: {
     meta: {
-      title: "Spa Booking Software with Memberships & Payments | Schedulaa",
+      title: "En savoir plus",
       description:
-        "Give spa guests a relaxing booking experience, manage therapists and rooms, and collect deposits, add-ons, and tips at checkout.",
+        "En savoir plus",
       canonical: `${BASE_URL}/booking/spa`,
       og: {
-        title: "Spa Booking & Staff Scheduling | Schedulaa",
+        title: "En savoir plus",
         description:
-          "Manage therapist availability, room capacity, intake forms, and Stripe checkout with deposits and tips.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
         image: `${BASE_URL}/images/booking-spa-preview.png`,
         url: `${BASE_URL}/booking/spa`,
       },
       twitter: {
         card: "summary_large_image",
-        title: "Spa Booking & Staff Scheduling | Schedulaa",
+        title: "En savoir plus",
         description:
-          "Schedulaa brings spa booking, therapist availability, room calendars, and Stripe payments into one flow.",
+          "En savoir plus",
         image: `${BASE_URL}/images/booking-spa-preview.png`,
       },
     },
     schema: {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Schedulaa Spa Booking",
+      name: "En savoir plus",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      description: "Spa booking, therapist scheduling, intake forms, and Stripe checkout in one platform.",
+      description: "En savoir plus",
       offers: { "@type": "Offer", price: "0", priceCurrency: "CAD" },
       url: `${BASE_URL}/booking/spa`,
     },
     hero: {
-      badge: "Spa scheduling",
-      title: "Spa Booking & Therapist Scheduling",
+      badge: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      title: "En savoir plus",
       subtitle:
-        "Guests book treatments online, therapists manage their own schedules, and managers assign rooms while Stripe handles deposits, add-ons, and tips.",
+        "En savoir plus",
       bullets: [
-        "Display therapist availability and room capacity in real time.",
-        "Attach wellness intake forms to bookings.",
-        "Collect deposits or full payment with tips and add-ons.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "En savoir plus",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       ],
-      primaryCta: { label: "Start free", href: REGISTER_URL },
-      secondaryCta: { label: "Preview a spa booking", href: LIVE_SERVICE_DEMO },
+      primaryCta: { label: "Commencer gratuitement", href: REGISTER_URL },
+      secondaryCta: { label: "En savoir plus", href: LIVE_SERVICE_DEMO },
     },
-    featuresHeading: "Spa-friendly features",
-    featuresTitle: "Keep therapists, rooms, and payments aligned",
+    featuresHeading: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    featuresTitle: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
     features: [
       {
         icon: "availability",
         label: "Therapists",
-        title: "Therapist and room availability",
+        title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
         description:
-          "Map therapists to rooms, show combined availability to guests, and keep treatment durations aligned with the calendar.",
+          "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       },
       {
         icon: "form",
         label: "Intake",
-        title: "Wellness questionnaires",
+        title: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
         description:
-          "Require wellness or medical questionnaires before the visit so therapists know the guest profile ahead of time.",
+          "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       },
       {
         icon: "payment",
         label: "Checkout",
-        title: "Deposits, packages, tips",
+        title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
         description:
-          "Accept deposits, upsell add-ons like aromatherapy, apply packages or coupons, and handle tips at checkout.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
     ],
     highlights: [
       {
-        overline: "Guest experience",
-        title: "Room-aware availability picker",
+        overline: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
         body:
-          "Schedulaa shows openings that consider both therapist schedules and room limits, so guests only see valid times.",
+          "En savoir plus",
         image: {
           src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop",
-          alt: "Spa booking availability",
+          alt: "En savoir plus",
         },
       },
       {
         overline: "Operations",
-        title: "Team calendar with room controls",
+        title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
         body:
-          "Use the team availability calendar to block rooms for maintenance, close time ranges for deep cleans, or keep specific windows open.",
+          "En savoir plus",
         image: {
           src: "https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?q=80&w=1200&auto=format&fit=crop",
-          alt: "Spa team calendar",
+          alt: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
         },
       },
     ],
@@ -695,17 +695,17 @@ export const bookingPages = {
     invitations: bookingHubConfig.invitations,
     checkout: bookingHubConfig.checkout,
     faqHeading: "FAQ",
-    faqTitle: "Spa booking questions",
+    faqTitle: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
     faq: [
       {
-        question: "Can I assign rooms as well as therapists?",
+        question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
         answer:
-          "Yes. Map rooms to services, and Schedulaa keeps both therapist and room availability in sync.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
       },
       {
-        question: "Can I require wellness forms?",
+        question: "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
         answer:
-          "Absolutely. Attach questionnaires to each booking so guests complete wellness or consent forms before arrival.",
+          "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
       },
     ],
     cta: sharedCta,

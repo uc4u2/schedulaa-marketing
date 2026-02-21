@@ -1,264 +1,264 @@
 {
   "meta": {
-    "title": "Schedulaa Plattform-Funktionen | Scheduling, Payroll, and Online Sales Unified",
-    "description": "Schedulaa unifies scheduling, payroll, hiring, website building, and eCommerce for teams. Sell services or products, automate payments, and manage multi-branch operations in one platform.",
-    "ogTitle": "Schedulaa Plattform-Funktionen",
-    "ogDescription": "Book clients, sell products, pay your team – all from one platform."
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "description": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "ogTitle": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "ogDescription": "Mehr erfahren"
   },
   "hero": {
     "eyebrow": "Plattform-Highlights",
     "title": {
-      "line1": "Funktionen entwickelt fuer",
+      "line1": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       "line2": "Enterprise-Serviceteams."
     },
-    "subtitle": "Schedulaa brings scheduling, payroll, websites, and eCommerce into one experience so your staff and clients stay connected.",
+    "subtitle": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
     "badge": {
-      "title": "Schedulaa OS",
-      "subtitle": "Unified command center"
+      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "subtitle": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
     },
     "primaryCta": {
-      "label": "Kostenlose Testversion starten",
-      "supporting": "No card required"
+      "label": "Mehr erfahren",
+      "supporting": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
     },
     "secondaryCta": {
-      "label": "Plaene vergleichen"
+      "label": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
     },
-    "mediaAlt": "Schedulaa scheduling and payroll screens",
+    "mediaAlt": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
     "banner": {
-      "title": "New:",
-      "body": "Custom domains with TXT/CNAME verification and automatic SSL are now live.",
-      "ctaLabel": "Connect your domain"
+      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "body": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "ctaLabel": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
     },
     "featureCard": {
-      "eyebrow": "Why teams upgrade",
-      "title": "A single source of truth for operations",
-      "subtitle": "Replace 5+ disconnected tools with booking, payroll, and websites that already know each other."
+      "eyebrow": "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "subtitle": "Mehr erfahren"
     }
   },
   "highlightCards": {
     "scheduling": {
-      "title": "Intelligentere Planung und Buchung",
-      "description": "Live department-based service lists, recurring templates, and branded booking modals embedded anywhere.",
+      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "description": "Mehr erfahren",
       "points": [
-        "Recurring availability and editable slots (Vagaro-style).",
-        "Clients can book multiple services, add-ons, or providers in one flow.",
-        "Embed branded booking widgets on partner sites or custom domains.",
-        "Shift swaps and leave approvals built into staff scheduling."
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Mehr erfahren",
+        "Mehr erfahren",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
       ]
     },
     "payroll": {
-      "title": "Payroll und Konformitaet",
-      "description": "Run region-aware payroll with YTD summaries, tax exports, and self-serve employee portals.",
+      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "description": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       "points": [
-        "Overtime, tips, and holidays calculated automatically.",
-        "Export-ready tax forms (W-2, T4, ROE).",
-        "Integrated with Stripe payouts for fast, secure deposits.",
-        "Auto-recalc and audit-ready reports for US + Canada (except QC)."
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Mehr erfahren",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Mehr erfahren"
       ]
     },
     "commerce": {
-      "title": "Commerce, Analytik und Vermarktung",
-      "description": "Sell products and services together, automate campaigns, and measure results in one dashboard.",
+      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "description": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
       "points": [
-        "Mixed carts for products and services with add-ons and coupons.",
-        "Stripe Checkout with built-in refund and tax automation.",
-        "Analytics for revenue, utilization, churn, and top-performing services.",
-        "Win-back, VIP, and no-show recovery campaigns included."
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt."
       ]
     }
   },
   "featureShowcase": {
     "eyebrow": "Plattform-Saeulen",
-    "title": "Funktionen, die zusammenspielen",
-    "subtitle": "Each module is built to hand off context so your staff and clients never lose the thread.",
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "subtitle": "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
     "features": [
       {
         "icon": "01",
-        "title": "Vereinheitlichte Buchung und Planung",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "description": [
-          "Real-time client bookings with service selection and self-serve rescheduling.",
-          "Employee availability, shift templates, and multi-branch support.",
-          "Shift swaps, leave requests, and recurring availability rules.",
-          "Automated reminders, digital tips, reviews, and post-visit feedback collection."
+          "Mehr erfahren",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Mehr erfahren"
         ]
       },
       {
         "icon": "02",
-        "title": "Powerful Payroll & HR",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "description": [
-          "Canada + 45 U.S. states supported (EI, CPP, automated stat holiday pay, W-2, T4, ROE).",
-          "Pay-rate assignment per employee, overtime tiers, province/state holiday rules, and deductions.",
-          "Export payroll journals or plug into remittance APIs for hands-free filing.",
-          "Employee onboarding, time tracking, and performance workflows in one place."
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
         ]
       },
       {
         "icon": "03",
-        "title": "Website-Builder und Online-Praesenz",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "description": [
-          "Drag-and-drop templates for services, products, hero sections, and contact flows.",
-          "Theme customization across fonts, colors, backgrounds, and layout blocks.",
-          "Add or remove pages, rearrange navigation, and publish changes instantly.",
-          "Connect or purchase a custom domain with SEO-ready structure baked in."
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Mehr erfahren"
         ]
       },
       {
         "icon": "04",
-        "title": "eCommerce & Product Sales",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "description": [
-          "Native product catalog for physical or digital items with rich detail pages.",
-          "Secure checkout via Stripe Connect with refunds, partial refunds, and tipping.",
-          "Inventory management, pricing controls, and variant options by SKU.",
-          "Sales analytics that surface revenue trends, top performers, and sell-through."
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
         ]
       },
       {
         "icon": "05",
-        "title": "Smart Analytics & Reporting",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "description": [
-          "Dashboards for revenue, bookings, retention, and customer lifetime value.",
-          "Staff performance reporting with utilization and productivity metrics.",
-          "Tax, payout, and settlement reporting with exportable CSV dashboards.",
-          "Insights to drive smarter decisions, forecast demand, and spot gaps early."
+          "Mehr erfahren",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
         ]
       },
       {
         "icon": "06",
-        "title": "Automation & Integrations",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "description": [
-          "Zapier integration to connect Schedulaa with QuickBooks, Xero, and more.",
-          "Webhooks and REST APIs to trigger workflows or keep external systems in sync.",
-          "Scheduler automations for re-engagement campaigns, no-show alerts, and follow-ups.",
-          "Embed widgets and booking flows directly into existing sites and partner portals."
+          "Mehr erfahren",
+          "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+          "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+          "Mehr erfahren"
         ]
       },
       {
         "icon": "07",
-        "title": "Sicherheit, Konformitaet und Skalierung",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "description": [
-          "Role-based access control for managers, admins, recruiters, and employees.",
-          "Secure data storage with encryption, audit logs, and automated backups.",
-          "Multi-location, multi-branch support with centralized oversight.",
-          "Konformitaet mit regionalen Payroll- und Datenschutzvorgaben von Anfang an."
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
         ]
       },
       {
         "icon": "08",
-        "title": "Zeiterfassung und Pausen-Konformitaet",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "description": [
-          "Clock-in/out tied to scheduled shifts with IP/device hints captured per punch.",
-          "Break policies that enforce fixed, windowed, or staggered slots and flag missed breaks.",
-          "Force clock-out and bulk apply break templates with full audit trails for payroll.",
-          "Exports flow to payroll with unpaid breaks deducted and overtime markers included."
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
         ]
       },
       {
         "icon": "09",
-        "title": "Payroll-Linked Invoicing",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "description": [
-          "Generate client invoices directly from finalized payroll and approved time.",
-          "Optional per-employee billing with transparent management fees.",
-          "Country-aware tax labels (US Sales Tax, CA GST/HST) and auto totals.",
-          "PO numbers, payment terms, and client-ready PDFs included."
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Mehr erfahren",
+          "Mehr erfahren"
         ]
       },
       {
         "icon": "10",
-        "title": "Hiring, Resume Uploads, and Onboarding",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "description": [
-          "Create job postings with public application links and track candidate applications.",
-          "Secure resume uploads with antivirus scan status (pending, clean, blocked) when enabled.",
-          "Request signed documents via secure links and store uploads in the candidate profile.",
-          "Convert approved candidates into employees with the candidate record linked for reference."
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
         ]
       }
     ]
   },
   "platformMap": {
-    "title": "Orchestrate every site, team, and location from one map",
-    "subtitle": "Multi-location? Franchise? Recruiting pods? The platform map keeps each branch aligned while honoring local branding and roles.",
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "subtitle": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
     "points": {
-      "branches": "Manage branches, departments, and teams with unique themes and permissions.",
-      "analytics": "Vergleichen Sie die Leistung zwischen Standorten mit Live-Analytik und Umsatz-Einblicken.",
-      "templates": "Each profession template (fitness, real estate, recruiter, teacher, photographer) includes tailored emails and questionnaires.",
-      "sync": "Client booking, shift scheduling, and payroll sync seamlessly under one dashboard.",
-      "domains": "Launch branded sites on your own domain with automatic SSL."
+      "branches": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "analytics": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "templates": "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+      "sync": "Mehr erfahren",
+      "domains": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
     },
     "primaryCta": {
-      "label": "Talk to our team"
+      "label": "Mit unserem Team sprechen"
     },
     "secondaryCta": {
-      "label": "Explore docs"
+      "label": "Mehr erfahren"
     },
-    "mediaAlt": "Schedulaa platform map linking scheduling, payroll, automation, websites, and analytics"
+    "mediaAlt": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
   },
   "integrations": {
-    "title": "Integrations and automation made visual",
-    "subtitle": "Map your systems, workflows, and automations in one place so marketing, operations, and finance stay aligned.",
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "subtitle": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
     "points": {
-      "accounting": "Sync invoices, payments, and payroll exports directly to QuickBooks or Xero.",
-      "automation": "Automate follow-ups, win-back, and no-show recovery campaigns via email or SMS.",
-      "stripe": "Host secure payments through Stripe Checkout with saved cards and refunds.",
-      "domains": "Custom domains with automatic SSL are live; in-app domain registration & Zapier are coming soon."
+      "accounting": "Mehr erfahren",
+      "automation": "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+      "stripe": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "domains": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
     },
-    "mediaAlt": "Schedulaa automation and integration journey",
+    "mediaAlt": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
     "blocks": {
       "payments": {
-        "title": "Payments & payouts",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "items": [
-          "Card-on-file, Apple Pay, Google Pay supported",
-          "Stripe Radar, PCI DSS, SOC2 in progress"
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
         ]
       },
       "compliance": {
         "title": "Konformitaet",
         "items": [
-          "CRA + IRS exports",
-          "SOC2 in flight"
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
         ]
       }
     }
   },
   "insight": {
-    "eyebrow": "From the operations desk",
-    "title": "Guides to level up your team",
-    "subtitle": "Get playbooks on staffing models, payroll compliance, and client retention while we ship new features.",
+    "eyebrow": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "subtitle": "Mehr erfahren",
     "items": [
       {
         "tag": "Playbook",
-        "headline": "Design a multi-location staffing strategy",
-        "description": "Map availability, roles, and permissions so every shift is covered without overtime surprises.",
-        "ctaLabel": "Read the guide",
+        "headline": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+        "ctaLabel": "Mehr erfahren",
         "ctaHref": "https://www.schedulaa.com/blog/multi-location-staffing"
       },
       {
         "tag": "Webinar",
-        "headline": "Payroll deep dive for creative teams",
-        "description": "Walk through taxation, tips, and cross-border payouts in under 30 minutes.",
-        "ctaLabel": "Watch on demand",
+        "headline": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "ctaLabel": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "ctaHref": "https://www.schedulaa.com/webinars/payroll"
       },
       {
         "tag": "Checklist",
-        "headline": "Automation kickoff worksheet",
-        "description": "Audit the client journey and spot where automation saves the most time.",
-        "ctaLabel": "Download PDF",
+        "headline": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "ctaLabel": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
         "ctaHref": "https://www.schedulaa.com/resources/automation-checklist"
       }
     ]
   },
   "testimonials": {
-    "title": "Teams scaling with Schedulaa"
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
   },
   "cta": {
-    "eyebrow": "Ready to streamline?",
-    "title": "Run scheduling, payroll, and online sales from one login.",
-    "description": "Whether you manage a salon, fitness studio, recruiter network, or real estate team — Schedulaa connects bookings, sales, and payroll in one secure workspace.",
+    "eyebrow": "Mehr erfahren",
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "description": "Mehr erfahren",
     "primaryCta": {
-      "label": "Kostenlos starten"
+      "label": "Mehr erfahren"
     },
     "secondaryCta": {
-      "label": "Talk to sales"
+      "label": "Mehr erfahren"
     }
   }
 }

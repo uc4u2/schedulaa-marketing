@@ -1,92 +1,92 @@
 export const workforcePage = {
   meta: {
-    title: 'Belegschafts-Kommandozentrale | Zeiterfassung, Planung und Payroll',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     description:
-      'Close the loop with Schedulaa’s workforce command center—clock-in/out policies, approvals, availability, and payroll-ready exports in one dashboard.',
+      'Mehr erfahren',
   },
   hero: {
     badge: 'Belegschaft',
-    title: 'All-in-one Kommandozentrale fuer die Belegschaft',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     subtitle:
-      'Schedulaa already unified online scheduling, payroll, and website pages. Now we’ve closed the loop on time tracking so hours, templates, policy audits, and payroll-ready approvals live in one dashboard—with IP/device hints captured automatically for every punch.',
+      'Mehr erfahren',
     image: '/images/marketing/showcase/time-tracking.png',
-    imageAlt: 'Schedulaa time tracking workspace',
+    imageAlt: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     images: [
-      { src: '/images/marketing/payroll-manage.png', alt: 'Payroll management' },
-      { src: '/images/marketing/shift-pre.png', alt: 'Shift management' },
-      { src: '/images/marketing/showcase/t4.png', alt: 'T4 generation' },
-      { src: '/images/marketing/showcase/w2-4d.png', alt: 'W-2 generation' },
+      { src: '/images/marketing/payroll-manage.png', alt: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+      { src: '/images/marketing/shift-pre.png', alt: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+      { src: '/images/marketing/showcase/t4.png', alt: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+      { src: '/images/marketing/showcase/w2-4d.png', alt: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
     ],
-    primaryCta: { label: 'Kostenlos starten', href: '/register' },
-    secondaryCta: { label: 'Produktfuehrung anfragen', href: '/contact' },
+    primaryCta: { label: 'Mehr erfahren', href: '/register' },
+    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/contact' },
   },
   sections: [
     {
-      title: 'Echtzeit-Stempeln mit Richtlinienkontrolle',
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       points: [
-        'Employees clock in/out from the streamlined My Time workspace with a live timer that subtracts break minutes, shows hours worked, and visualizes the shift timeline.',
-        'Break controls respect company policy—managers define default windows inside shift templates and the employee UI enforces them for payroll, flagging missed or overdue breaks instantly.',
-        'Personal weekly insights (for example “32h worked • 2h overtime • 3 breaks taken”) keep the process transparent.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       ],
     },
     {
-      title: 'Kontrolle auf Manager-Niveau',
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       points: [
-        'Every time entry flows into the approvals page where supervisors filter by department, employee, or status before approving or rejecting—even mid-shift if something looks off.',
-        'IP/device hints expose unusual punch locations while compliance chips surface shifts missing breaks or trending toward overtime.',
-        'Need to correct multiple entries? Apply a break or shift template across selected rows and update everything at once.',
+        'Mehr erfahren',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       ],
     },
     {
-      title: 'Schichtvorlagen mit integrierter Konformitaet',
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       points: [
-        'Templates capture break start/end times, duration, paid/unpaid flags, and availability links.',
-        'Applying a template pushes those rules into every shift assignment and the employee clock UI automatically—no manual edits.',
-        'Force clock-out and annotate overdue shifts so approvals stay clean for payroll.',
+        'Mehr erfahren',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       ],
     },
     {
-      title: 'Payroll-faehige Exporte',
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       points: [
-        'Approved entries carry metadata for both supervisors and payroll teams (who approved, when, policy references, and punch location hints).',
-        'Exports stay clean, audits stay simple, and payroll files ingest directly into accounting.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       ],
     },
   ],
   cta: {
-    overline: 'Belegschaft + payroll together',
+    overline: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     title:
-      'Buchung, Planung, Payroll, Websites und richtlinienbasierte Zeiterfassung in derselben Plattform.',
-    body: 'No spreadsheets, no copy/paste, and no compliance surprises.',
-    primary: { label: 'Zeiterfassungsbereich ansehen', href: '/register' },
-    secondary: { label: 'Mit dem Vertrieb sprechen', href: '/contact' },
+      'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+    body: 'Mehr erfahren',
+    primary: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/register' },
+    secondary: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/contact' },
   },
 };
 
 export const industriesPage = {
   meta: {
-    title: 'Branchenverzeichnis | Schedulaa booking sites by industry',
+    title: 'Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.',
     description:
-      'Browse Schedulaa-powered workflows by industry. Discover salons, clinics, fitness studios, legal services, and more using unified scheduling, payroll, and commerce.',
+      'Mehr erfahren',
   },
   hero: {
     badge: 'Industries',
-    title: 'Nach Branche durchsuchen',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     subtitle:
-      'Pick an industry to see how businesses use Schedulaa for booking, payroll, workforce operations, websites, and commerce.',
-    primaryCta: { label: 'Buchung erkunden', href: '/booking' },
-    secondaryCta: { label: 'Team kontaktieren', href: '/contact' },
+      'Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.',
+    primaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/booking' },
+    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/contact' },
   },
   sections: [
     {
-      title: 'Beliebte Verticals',
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       items: [
-        { title: 'Salons & spas', body: 'Real-time stylist booking, tips, and retention campaigns.' },
-        { title: 'Healthcare clinics', body: 'Scheduling, reminders, and documentation-aware workflows.' },
-        { title: 'Tutors & educators', body: 'Session booking, recurring schedules, and attendance trails.' },
-        { title: 'Creative studios', body: 'Client journey automation from booking to payroll.' },
-        { title: 'Legal & professional services', body: 'Structured intake, scheduling, and secure records.' },
-        { title: 'Multi-location teams', body: 'Branch-aware controls for staffing, payroll, and analytics.' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
       ],
     },
   ],
@@ -94,40 +94,40 @@ export const industriesPage = {
 
 export const statusPage = {
   meta: {
-    title: 'Schedulaa Status | System Availability',
-    description: 'Real-time system status for Schedulaa booking, payroll, HR, websites, and integrations.',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+    description: 'Mehr erfahren',
   },
   hero: {
     badge: 'Status',
-    title: 'Alle Systeme betriebsbereit',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     subtitle:
-      'Monitor platform health, incident history, and upcoming maintenance across booking, payroll, websites, and integrations.',
-    primaryCta: { label: 'Fuer Warnungen abonnieren', href: 'mailto:status@schedulaa.com' },
-    secondaryCta: { label: 'RSS feed', href: 'https://status.schedulaa.com/rss' },
+      'Mehr erfahren',
+    primaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: 'mailto:status@schedulaa.com' },
+    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: 'https://status.schedulaa.com/rss' },
   },
   sections: [
     {
-      title: 'Service availability',
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       items: [
-        { title: 'Schedulaa Dashboard & Login', body: 'Betriebsbereit' },
-        { title: 'API fuer Buchungen und Termine', body: 'Betriebsbereit' },
-        { title: 'Stripe Payments & Checkout', body: 'Betriebsbereit' },
-        { title: 'Payroll und Konformitaet (USA und Kanada)', body: 'Betriebsbereit' },
-        { title: 'Website-Builder / Hosting', body: 'Betriebsbereit' },
-        { title: 'Benachrichtigungen und Kampagnen-E-Mails', body: 'Betriebsbereit' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Betriebsbereit' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Betriebsbereit' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Betriebsbereit' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Betriebsbereit' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Betriebsbereit' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Betriebsbereit' },
       ],
     },
     {
-      title: 'Beispiel fuer kuerzlichen Vorfall',
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       points: [
-        'October 10, 2025: Temporary slowdown in appointment booking API due to a caching layer misconfiguration.',
-        'Impact: 4% of requests experienced increased latency for roughly 18 minutes.',
-        'Resolution: Reverted update and redeployed stable cache instance.',
+        'Mehr erfahren',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       ],
     },
     {
       title: 'Uptime-Uebersicht',
-      points: ['Last 24 hours: 100%', 'Last 7 days: 99.97%', 'Last 30 days: 99.99%', 'Last 90 days: 99.98%'],
+      points: ['Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.'],
     },
   ],
 };
@@ -135,39 +135,39 @@ export const statusPage = {
 export const roadmapPage = {
   hero: {
     badge: 'Roadmap',
-    title: 'Anfragen zur Produkt-Roadmap',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     subtitle:
-      'Share roadmap requests with our team at admin@schedulaa.com. We review customer feedback continuously and publish updates in release notes.',
-    primaryCta: { label: 'Roadmap-Anfrage per E-Mail senden', href: 'mailto:admin@schedulaa.com' },
-    secondaryCta: { label: 'Status ansehen', href: '/status' },
+      'Mehr erfahren',
+    primaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: 'mailto:admin@schedulaa.com' },
+    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/status' },
   },
 };
 
 export const demoPage = {
   meta: {
-    title: 'Schedulaa Demo Login | Test the Manager Dashboard',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     description:
-      'Use the shared manager credentials to explore scheduling, payroll, compliance, automation, and integrations to Zapier, QuickBooks, and Xero.',
+      'Mehr erfahren',
   },
   hero: {
-    badge: 'Demo / Testfahrt',
-    title: 'Experience the Schedulaa manager dashboard in minutes',
+    badge: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     subtitle:
-      'Use the shared staging login to explore scheduling, time tracking, payroll, compliance, Zapier-Automatisierungs, and accounting exports end-to-end.',
-    primaryCta: { label: 'Zum Login', href: '/login' },
-    secondaryCta: { label: 'Mit dem Rollout-Team sprechen', href: '/contact' },
+      'Mehr erfahren',
+    primaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/login' },
+    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/contact' },
   },
   sections: [
     {
       title: 'Demo-Zugangsdaten',
-      points: ['Email: testschedulaa@gmail.com', 'Password: Test!12345', 'OTP code: 0000', 'Environment: Staging'],
+      points: ['Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.'],
     },
     {
       title: '3-Schritte-Schnellstart',
       points: [
-        '1. Login at /login with the demo email + password.',
-        '2. Use OTP code 0000.',
-        '3. Explore Scheduling, Payroll, Websites, and Analytics.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Mehr erfahren',
       ],
     },
   ],
@@ -175,41 +175,41 @@ export const demoPage = {
 
 export const contactPage = {
   meta: {
-    title: 'Kontakt Schedulaa',
-    description: 'Talk to the Schedulaa team about custom rollouts, partnerships, or migration support.',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+    description: 'Mehr erfahren',
   },
   hero: {
     badge: 'Kontakt',
-    title: "Sprechen wir ueber Ihren Rollout.",
+    title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
     subtitle:
-      'Looking for a custom implementation, partner program, or migration help? Our specialists respond within one business day.',
-    primaryCta: { label: 'E-Mail an uns', href: 'mailto:admin@schedulaa.com' },
-    secondaryCta: { label: 'Call +1 (415) 555-0198', href: 'tel:+14155550198' },
+      'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+    primaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: 'mailto:admin@schedulaa.com' },
+    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
   },
   sections: [
     {
-      title: 'Wie wir helfen',
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       items: [
-        { title: 'Sales & demos', body: 'Plan walkthroughs, pricing guidance, and migration timelines tailored to your team.' },
-        { title: 'Partnerships', body: 'Reseller, integration, and co-marketing opportunities for platforms serving creatives.' },
-        { title: 'Support', body: '24-hour ticket response, enterprise onboarding, and dedicated success managers on Pro.' },
-        { title: 'Migration support', body: 'Data imports, template mapping, and sandbox reviews that de-risk your launch.' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+        { title: 'Partnerships', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+        { title: 'Support', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
       ],
     },
   ],
-  faqTitle: 'Haeufige Fragen zum Kontakt',
+  faqTitle: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
   faq: [
     {
-      question: 'Wie schnell antwortet jemand?',
-      answer: 'Enterprise rollout specialists respond within one business day for scheduling, payroll, and migration requests.',
+      question: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+      answer: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     },
     {
-      question: 'Do you offer implementation services?',
-      answer: 'Yes. Our team handles data imports, template mapping, staff onboarding, and payroll validation for every location.',
+      question: 'Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.',
+      answer: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     },
     {
-      question: 'Wie erreichen Partner oder Reseller Sie?',
-      answer: 'Email admin@schedulaa.com and we will route your note to our partnership, integration, or reseller teams.',
+      question: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+      answer: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     },
   ],
 };
@@ -217,21 +217,21 @@ export const contactPage = {
 export const supportPage = {
   hero: {
     badge: 'Hilfe-Center',
-    title: 'Support fuer Kunden und Teams',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     subtitle:
-      'Get help with account setup, booking, payroll, workflows, Zapier-Automatisierung, and accounting integrations. Our team responds quickly and can route technical issues to specialists.',
-    primaryCta: { label: 'Kontakt support', href: 'mailto:admin@schedulaa.com' },
-    secondaryCta: { label: 'Dokumentation oeffnen', href: '/docs' },
+      'Mehr erfahren',
+    primaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: 'mailto:admin@schedulaa.com' },
+    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/docs' },
   },
   sections: [
     {
       title: 'Support-Themen',
       points: [
-        'Account, access, and onboarding',
-        'Buchungs- und Planungsablaeufe',
-        'Payroll preview/finalize and export questions',
-        'Website builder and domain setup',
-        'Zapier, QuickBooks, and Xero setup',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.',
+        'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+        'Mehr erfahren',
       ],
     },
   ],
@@ -239,32 +239,32 @@ export const supportPage = {
 
 export const zapierPage = {
   meta: {
-    title: 'Zapier for Schedulaa — automate bookings, scheduling, break compliance, and payroll',
+    title: 'Mehr erfahren',
     description:
-      'Connect Schedulaa to 6,000+ apps with Zapier. Stream bookings, shifts, timeclock, break compliance, PTO, onboarding, and payroll data.',
+      'Mehr erfahren',
   },
   hero: {
     badge: 'Zapier-Automatisierung',
-    title: 'Automate every booking, shift, break, and payroll moment with Zapier',
+    title: 'Mehr erfahren',
     subtitle:
-      'Schedulaa streams bookings, scheduling, timeclock, break compliance, PTO, onboarding, and payroll detail into Zapier while actions can create bookings, employees, and shifts inside Schedulaa.',
-    primaryCta: { label: 'Zapier-Einstellungen oeffnen', href: '/settings/zapier' },
-    secondaryCta: { label: 'Demo ansehen', href: '/demo' },
+      'Mehr erfahren',
+    primaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/settings/zapier' },
+    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/demo' },
   },
   sections: [
     {
       title: 'Live-Trigger-Gruppen',
       items: [
-        { title: 'Buchungsereignisse', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
-        { title: 'Scheduling & shifts', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
-        { title: 'Timeclock & break compliance', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
-        { title: 'Leave, onboarding, documents', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },
-        { title: 'Payroll events', body: 'payroll.ready, payroll.finalized, payroll.details' },
+        { title: 'Buchungsereignisse', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
       ],
     },
     {
-      title: 'Live actions',
-      points: ['create_booking', 'create_employee', 'create_shift / update_shift', 'attach_document'],
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+      points: ['create_booking', 'create_employee', 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', 'attach_document'],
     },
   ],
 };
