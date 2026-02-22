@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
+import { detectLocaleFromPath, stripLocalePrefix, withLocalePath } from '@/utils/locale';
 import { cn } from '@/utils/cn';
 import { FOOTER_COMPARE_MOBILE_LIMIT, FOOTER_SECTIONS, type FooterLinkItem } from '@/data/footer-data';
 import gradientImg from '@public/images/ns-img-532.png';
@@ -23,29 +23,10 @@ const Footer = ({ className }: { className?: string }) => {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
   const localePath = (path: string) => withLocalePath(path, locale);
-  const localizedPrefix = `/${locale}`;
-  const returnPath = pathname === localizedPrefix ? '/' : pathname.startsWith(`${localizedPrefix}/`) ? pathname.slice(localizedPrefix.length) || '/' : pathname;
-  const returnTo = marketingReturnTo(locale, returnPath || '/');
-  const viewAllComparisons =
-    locale === 'fa'
-      ? 'مشاهده همه مقایسه‌ها'
-      : locale === 'ru'
-        ? 'Смотреть все сравнения'
-        : locale === 'zh'
-          ? '查看全部对比'
-          : locale === 'es'
-            ? 'Ver todas las comparaciones'
-            : locale === 'fr'
-              ? 'Voir toutes les comparaisons'
-              : locale === 'de'
-                ? 'Alle Vergleiche ansehen'
-                : locale === 'ar'
-                  ? 'عرض جميع المقارنات'
-                  : locale === 'pt'
-                    ? 'Ver todas as comparações'
-                    : 'View all comparisons';
+  const returnTo = marketingReturnTo(locale, stripLocalePrefix(pathname, locale) || '/');
   const compareSection = FOOTER_SECTIONS.find((section) => section.id === 'compare');
-  const primarySections = FOOTER_SECTIONS.filter((section) => section.id !== 'compare');
+  const legalSection = FOOTER_SECTIONS.find((section) => section.id === 'legal');
+  const primarySections = FOOTER_SECTIONS.filter((section) => section.id !== 'compare' && section.id !== 'legal');
 
   return (
     <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
@@ -83,7 +64,7 @@ const Footer = ({ className }: { className?: string }) => {
                     {section.id === 'compare' ? (
                       <li className="md:hidden">
                         <Link href={localePath('/compare')} className="footer-link">
-                          {viewAllComparisons}
+                          View all comparisons
                         </Link>
                       </li>
                     ) : null}
@@ -93,7 +74,7 @@ const Footer = ({ className }: { className?: string }) => {
             ))}
 
             {compareSection ? (
-              <div className="col-span-1">
+              <div className="col-span-1 space-y-10">
                 <div className="space-y-8">
                   <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(compareSection.titleKey)}</p>
                   <ul className="space-y-5">
@@ -109,11 +90,26 @@ const Footer = ({ className }: { className?: string }) => {
                     ))}
                     <li className="md:hidden">
                       <Link href={localePath('/compare')} className="footer-link">
-                        {viewAllComparisons}
+                        View all comparisons
                       </Link>
                     </li>
                   </ul>
                 </div>
+
+                {legalSection ? (
+                  <div className="space-y-8">
+                    <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(legalSection.titleKey)}</p>
+                    <ul className="space-y-5">
+                      {legalSection.links.map((link) => (
+                        <li key={link.id}>
+                          <Link href={linkHref(link, localePath, returnTo)} className="footer-link">
+                            {linkLabel(link, t)}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
               </div>
             ) : null}
           </div>

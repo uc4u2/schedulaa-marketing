@@ -10,7 +10,7 @@ import step2DarkImg from '@public/images/ns-img-dark-200.png';
 import step3DarkImg from '@public/images/ns-img-dark-201.png';
 import step4DarkImg from '@public/images/ns-img-dark-202.png';
 import Image, { StaticImageData } from 'next/image';
-import { bookingPages } from '@/legacy-content/booking/config';
+import { getBookingSource } from '@/legacy-content/booking/getBookingSource';
 import { AppLocale } from '@/utils/locale';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
@@ -27,102 +27,32 @@ interface StepCard {
   maxDescriptionWidth: string;
 }
 
-const faHowItWorks = {
-  title: 'رزرو آنلاین در Schedulaa چطور کار می‌کند',
-  intro: 'از انتشار سرویس تا تایید رزرو و پرداخت، این جریان در چند مرحله ساده انجام می‌شود.',
-  cta: 'مشاهده همه قابلیت‌ها',
-  steps: [
-    {
-      title: 'انتشار سرویس‌ها و ارائه‌دهندگان',
-      description: 'سرویس، زمان، قیمت و ارائه‌دهنده را تعریف کنید تا ظرفیت به‌صورت لحظه‌ای در صفحه رزرو نمایش داده شود.',
-    },
-    {
-      title: 'مشتری زمان و ارائه‌دهنده را انتخاب می‌کند',
-      description: 'کاربر روز، ساعت و ارائه‌دهنده مناسب را از روی ظرفیت زنده انتخاب می‌کند و رزرو را ثبت می‌کند.',
-    },
-    {
-      title: 'پرداخت و اعلان‌ها',
-      description: 'پرداخت، رسید و اعلان‌ها همگام می‌شوند و رزرو بلافاصله در دید تیم قرار می‌گیرد.',
-    },
-    {
-      title: 'داشبورد مدیر و کارمند به‌صورت زنده به‌روزرسانی می‌شود',
-      description: 'رزروها، شیفت‌ها و وضعیت پرداخت در لحظه در داشبوردهای مدیر و کارمند نمایش داده می‌شود.',
-    },
-  ],
-};
-
-const ruHowItWorks = {
-  title: 'Как работает онлайн-бронирование в Schedulaa',
-  intro: 'От публикации услуги до подтверждений и оплаты весь процесс занимает всего несколько шагов.',
-  cta: 'Смотреть все функции',
-  steps: [
-    {
-      title: 'Публикация услуг и специалистов',
-      description:
-        'Определите услуги, длительность, цены и назначьте специалистов. Доступность сразу отображается на странице бронирования.',
-    },
-    {
-      title: 'Клиенты выбирают время и специалиста',
-      description:
-        'Посетитель открывает страницу бронирования, выбирает день, время и подтверждает нужного специалиста.',
-    },
-    {
-      title: 'Оплата и уведомления',
-      description: 'Клиент оплачивает, вносит депозит или сохраняет карту. Календари и команда обновляются мгновенно.',
-    },
-    {
-      title: 'Дашборды менеджера и сотрудника обновляются в реальном времени',
-      description: 'Бронирования, смены и выплаты моментально видны в интерфейсах менеджера и сотрудника.',
-    },
-  ],
-};
-
-const zhHowItWorks = {
-  title: 'Schedulaa 在线预约流程',
-  intro: '从发布服务到确认通知与支付，只需几个步骤即可完成。',
-  cta: '查看全部功能',
-  steps: [
-    {
-      title: '发布服务与员工',
-      description: '设置服务、时长、价格并分配员工。可用时段会立即同步到客户端预约页面。',
-    },
-    {
-      title: '客户选择时间与员工',
-      description: '访客打开预约页面，选择日期与时段，并确认最合适的服务人员。',
-    },
-    {
-      title: '结账与通知',
-      description: '客户可支付、留押金或保存银行卡。预约与收据同步到日历，团队即时可见。',
-    },
-    {
-      title: '经理与员工看板实时更新',
-      description: '预约、班次与付款状态会实时显示在经理端和员工端。',
-    },
-  ],
-};
-
 const Steps = ({ locale = 'en' }: { locale?: AppLocale }) => {
-  const howItWorks =
-    locale === 'fa'
-      ? faHowItWorks
-      : locale === 'ru'
-        ? ruHowItWorks
-        : locale === 'zh'
-          ? zhHowItWorks
-          : {
-        title: bookingPages.hub.howItWorks.title,
-        intro: bookingPages.hub.howItWorks.intro,
-        cta: 'Explore all features',
-        steps: [
-          bookingPages.hub.howItWorks.steps[0],
-          bookingPages.hub.howItWorks.steps[1],
-          bookingPages.hub.howItWorks.steps[2],
-          {
-            title: 'Manager and employee dashboards update live',
-            description: 'Bookings, shifts, and payouts appear in real time across manager and employee views.',
-          },
-        ],
-      };
+  const bookingSource = getBookingSource(locale);
+  const localizedCtaByLocale: Record<string, string> = {
+    en: 'Explore all features',
+    fa: '\u0645\u0634\u0627\u0647\u062f\u0647 \u0647\u0645\u0647 \u0642\u0627\u0628\u0644\u06cc\u062a\u200c\u0647\u0627',
+    ru: '\u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0432\u0441\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u0438',
+    zh: '\u67e5\u770b\u5168\u90e8\u529f\u80fd',
+  };
+  const fallbackStepByLocale: Record<string, { title: string; description: string }> = {
+    en: { title: 'Manager and employee dashboards update live', description: 'Bookings, shifts, and payouts appear in real time across manager and employee views.' },
+    fa: { title: '\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u0645\u062f\u06cc\u0631 \u0648 \u06a9\u0627\u0631\u0645\u0646\u062f \u062f\u0631 \u0644\u062d\u0638\u0647 \u0628\u0647\u200c\u0631\u0648\u0632 \u0645\u06cc\u200c\u0634\u0648\u062f', description: '\u0631\u0632\u0631\u0648\u0647\u0627\u060c \u0634\u06cc\u0641\u062a\u200c\u0647\u0627 \u0648 \u0648\u0636\u0639\u06cc\u062a \u067e\u0631\u062f\u0627\u062e\u062a \u0628\u0647\u200c\u0635\u0648\u0631\u062a \u0632\u0646\u062f\u0647 \u062f\u0631 \u062f\u0627\u0634\u0628\u0648\u0631\u062f\u0647\u0627 \u0646\u0645\u0627\u06cc\u0634 \u062f\u0627\u062f\u0647 \u0645\u06cc\u200c\u0634\u0648\u062f.' },
+    ru: { title: '\u041f\u0430\u043d\u0435\u043b\u0438 \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440\u0430 \u0438 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438', description: '\u0411\u0440\u043e\u043d\u0438, \u0441\u043c\u0435\u043d\u044b \u0438 \u0432\u044b\u043f\u043b\u0430\u0442\u044b \u0441\u0440\u0430\u0437\u0443 \u0432\u0438\u0434\u043d\u044b \u0432 \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u0435 \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440\u0430 \u0438 \u043a\u043e\u043c\u0430\u043d\u0434\u044b.' },
+    zh: { title: '\u7ecf\u7406\u4e0e\u5458\u5de5\u770b\u677f\u5b9e\u65f6\u66f4\u65b0', description: '\u9884\u7ea6\u3001\u73ed\u6b21\u4e0e\u4ed8\u6b3e\u72b6\u6001\u4f1a\u5728\u7ecf\u7406\u548c\u5458\u5de5\u89c6\u56fe\u4e2d\u540c\u6b65\u663e\u793a\u3002' },
+  };
+  const fallbackStep = fallbackStepByLocale[locale] || fallbackStepByLocale.en;
+  const howItWorks = {
+    title: bookingSource.hub.howItWorks.title,
+    intro: bookingSource.hub.howItWorks.intro,
+    cta: localizedCtaByLocale[locale] || localizedCtaByLocale.en,
+    steps: [
+      bookingSource.hub.howItWorks.steps[0],
+      bookingSource.hub.howItWorks.steps[1],
+      bookingSource.hub.howItWorks.steps[2],
+      bookingSource.hub.howItWorks.steps[3] || fallbackStep,
+    ],
+  };
 
   const stepCards: StepCard[] = [
     {
@@ -209,7 +139,7 @@ const Steps = ({ locale = 'en' }: { locale?: AppLocale }) => {
                     <StackCardItem>
                       <div className="relative z-20 mx-auto flex w-full max-w-full items-center justify-center overflow-hidden rounded-[20px] p-2 sm:mx-0 sm:max-w-[483px]">
                         <figure className="pointer-events-none absolute -top-[99%] -left-[88%] -z-10 size-[1000px] rotate-[307deg] opacity-50 select-none">
-                          <Image src={step.gradientSrc} alt="" />
+                          <Image src={step.gradientSrc} alt="step" />
                         </figure>
                         <div className="group relative z-10 w-full max-w-full space-y-6 rounded-[14px] bg-white p-8 sm:max-w-[467px] dark:bg-black">
                           <div className="space-y-1">
@@ -221,19 +151,19 @@ const Steps = ({ locale = 'en' }: { locale?: AppLocale }) => {
                               <>
                                 <Image
                                   src={step.stepImg}
-                                  alt=""
+                                  alt="step"
                                   className="block transition-transform duration-500 ease-out group-hover:scale-110 md:max-h-[300px] md:min-h-[300px] dark:hidden"
                                 />
                                 <Image
                                   src={step.stepDarkImg}
-                                  alt=""
+                                  alt="step"
                                   className="hidden transition-transform duration-500 ease-out group-hover:scale-110 md:max-h-[300px] md:min-h-[300px] dark:block"
                                 />
                               </>
                             ) : (
                               <Image
                                 src={step.stepImg}
-                                alt=""
+                                alt="step"
                                 className="transition-transform duration-500 ease-out group-hover:scale-110 md:max-h-[300px] md:min-h-[300px]"
                               />
                             )}

@@ -31,7 +31,7 @@ export default function HomeForexLayout({ locale }: Props) {
       <Reviews locale={locale} />
       <Blog source={source} locale={locale} />
       <Contact locale={locale} />
-      <CTA source={source} />
+      <CTA source={source} locale={locale} />
     </main>
   );
 }

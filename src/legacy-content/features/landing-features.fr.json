@@ -6,33 +6,33 @@
     "ogDescription": "En savoir plus"
   },
   "hero": {
-    "eyebrow": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "eyebrow": "Points forts de la plateforme",
     "title": {
-      "line1": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
-      "line2": "Cette section explique clairement la fonctionnalite dans Schedulaa."
+      "line1": "Des fonctionnalites concues pour",
+      "line2": "les equipes de service enterprise."
     },
-    "subtitle": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "subtitle": "Schedulaa reunit planning, paie, sites web et eCommerce dans une seule experience pour garder vos equipes et clients alignes.",
     "badge": {
-      "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
-      "subtitle": "Cette section explique clairement la fonctionnalite dans Schedulaa."
+      "title": "Schedulaa OS",
+      "subtitle": "Centre de commande unifie"
     },
     "primaryCta": {
-      "label": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
-      "supporting": "Cette section explique clairement la fonctionnalite dans Schedulaa."
+      "label": "Demarrer l essai gratuit",
+      "supporting": "Sans carte bancaire"
     },
     "secondaryCta": {
-      "label": "Cette section explique clairement la fonctionnalite dans Schedulaa."
+      "label": "Comparer les plans"
     },
-    "mediaAlt": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "mediaAlt": "Ecrans de planning et de paie Schedulaa",
     "banner": {
-      "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
-      "body": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
-      "ctaLabel": "Cette section explique clairement la fonctionnalite dans Schedulaa."
+      "title": "Nouveau :",
+      "body": "Les domaines personnalises avec verification TXT/CNAME et SSL automatique sont maintenant disponibles.",
+      "ctaLabel": "Connecter votre domaine"
     },
     "featureCard": {
-      "eyebrow": "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
-      "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
-      "subtitle": "En savoir plus"
+      "eyebrow": "Pourquoi les equipes evoluent",
+      "title": "Une source unique de verite operationnelle",
+      "subtitle": "Remplacez plus de 5 outils deconnectes par la reservation, la paie et les sites web qui fonctionnent deja ensemble."
     }
   },
   "highlightCards": {

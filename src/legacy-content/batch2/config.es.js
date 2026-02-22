@@ -65,28 +65,28 @@ export const workforcePage = {
 
 export const industriesPage = {
   meta: {
-    title: 'Directorio de industrias | Sitios Schedulaa por sector',
+    title: 'Mas informacion',
     description:
-      'Explora flujos de trabajo de Schedulaa por industria. Descubre salones, clinicas, estudios de fitness, servicios legales y mas con reservas, nomina y comercio unificados.',
+      'Mas informacion',
   },
   hero: {
-    badge: 'Industrias',
-    title: 'Explora por industria',
+    badge: 'Industries',
+    title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.',
     subtitle:
-      'Elige una industria para ver como las empresas usan Schedulaa para reservas, nomina, operaciones de equipos, sitios web y comercio.',
-    primaryCta: { label: 'Explorar reservas', href: '/booking' },
-    secondaryCta: { label: 'Contactar al equipo', href: '/contact' },
+      'Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma.',
+    primaryCta: { label: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', href: '/booking' },
+    secondaryCta: { label: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', href: '/contact' },
   },
   sections: [
     {
-      title: 'Verticales populares',
+      title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.',
       items: [
-        { title: 'Salones y spas', body: 'Reservas en tiempo real por estilista, propinas y campanas de retencion.' },
-        { title: 'Clinicas de salud', body: 'Agenda, recordatorios y flujos de trabajo orientados a documentacion.' },
-        { title: 'Tutores y educacion', body: 'Reservas de sesiones, horarios recurrentes y trazabilidad de asistencia.' },
-        { title: 'Estudios creativos', body: 'Automatizacion del recorrido del cliente desde reserva hasta nomina.' },
-        { title: 'Servicios legales y profesionales', body: 'Intake estructurado, agenda y registros seguros.' },
-        { title: 'Equipos multiubicacion', body: 'Controles por sucursal para personal, nomina y analitica.' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Mas informacion' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Mas informacion' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Mas informacion' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.' },
       ],
     },
   ],
@@ -239,32 +239,32 @@ export const supportPage = {
 
 export const zapierPage = {
   meta: {
-    title: 'Zapier para Schedulaa — automatiza reservas, turnos, cumplimiento de pausas y nomina',
+    title: 'Mas informacion',
     description:
-      'Conecta Schedulaa con mas de 6,000 apps mediante Zapier. Envía reservas, turnos, timeclock, pausas, PTO, onboarding y datos de nomina.',
+      'Mas informacion',
   },
   hero: {
-    badge: 'Automatizacion con Zapier',
-    title: 'Automatiza cada reserva, turno, pausa y momento de nomina con Zapier',
+    badge: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.',
+    title: 'Mas informacion',
     subtitle:
-      'Schedulaa envia a Zapier eventos de reservas, planificacion, timeclock, pausas, PTO, onboarding y nomina; ademas puedes crear reservas, empleados y turnos desde acciones.',
-    primaryCta: { label: 'Abrir ajustes de Zapier', href: '/settings/zapier' },
-    secondaryCta: { label: 'Ver demo', href: '/demo' },
+      'Mas informacion',
+    primaryCta: { label: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', href: '/settings/zapier' },
+    secondaryCta: { label: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', href: '/demo' },
   },
   sections: [
     {
-      title: 'Grupos de triggers en vivo',
+      title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.',
       items: [
-        { title: 'Eventos de reservas', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
-        { title: 'Planificacion y turnos', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
-        { title: 'Timeclock y cumplimiento de pausas', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
-        { title: 'Ausencias, onboarding y documentos', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },
-        { title: 'Eventos de nomina', body: 'payroll.ready, payroll.finalized, payroll.details' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Mas informacion' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Mas informacion' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Mas informacion' },
+        { title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', body: 'Mas informacion' },
       ],
     },
     {
-      title: 'Acciones en vivo',
-      points: ['create_booking', 'create_employee', 'create_shift / update_shift', 'attach_document'],
+      title: 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.',
+      points: ['create_booking', 'create_employee', 'Esta seccion explica claramente la funcionalidad dentro de Schedulaa.', 'attach_document'],
     },
   ],
 };

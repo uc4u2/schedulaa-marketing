@@ -6,33 +6,33 @@
     "ogDescription": "Mas informacion"
   },
   "hero": {
-    "eyebrow": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "eyebrow": "Aspectos destacados de la plataforma",
     "title": {
-      "line1": "Mas informacion",
-      "line2": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      "line1": "Funciones creadas para",
+      "line2": "equipos de servicio empresariales."
     },
-    "subtitle": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "subtitle": "Schedulaa unifica agenda, nomina, sitios web y eCommerce en una sola experiencia para mantener conectados a equipos y clientes.",
     "badge": {
-      "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
-      "subtitle": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      "title": "Schedulaa OS",
+      "subtitle": "Centro de control unificado"
     },
     "primaryCta": {
-      "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
-      "supporting": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      "label": "Comenzar prueba gratis",
+      "supporting": "Sin tarjeta"
     },
     "secondaryCta": {
-      "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      "label": "Comparar planes"
     },
-    "mediaAlt": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "mediaAlt": "Pantallas de agenda y nomina de Schedulaa",
     "banner": {
-      "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
-      "body": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
-      "ctaLabel": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      "title": "Nuevo:",
+      "body": "Los dominios personalizados con verificacion TXT/CNAME y SSL automatico ya estan disponibles.",
+      "ctaLabel": "Conectar tu dominio"
     },
     "featureCard": {
-      "eyebrow": "Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma.",
-      "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
-      "subtitle": "Mas informacion"
+      "eyebrow": "Por que los equipos actualizan",
+      "title": "Una sola fuente de verdad operativa",
+      "subtitle": "Reemplaza mas de 5 herramientas desconectadas por reservas, nomina y sitios web que ya trabajan en conjunto."
     }
   },
   "highlightCards": {

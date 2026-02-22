@@ -7,9 +7,11 @@ import Link from 'next/link';
 interface BlogCardV3Props {
   blog: IBlogPost;
   className?: string;
+  ctaLabel?: string;
 }
 
-const BlogCardV3 = ({ blog, className }: BlogCardV3Props) => {
+const BlogCardV3 = ({ blog, className, ctaLabel = 'Read more' }: BlogCardV3Props) => {
+  const href = String(blog.slug || '').startsWith('http') ? String(blog.slug) : `/blog/${blog.slug}`;
   return (
     //wrapper div for animation
     <div>
@@ -71,15 +73,15 @@ const BlogCardV3 = ({ blog, className }: BlogCardV3Props) => {
             </div>
           </div>
           <div className="space-y-4">
-            <Link href={`/blog/${blog.slug}`} className="block">
+            <Link href={href} className="block">
               <h3 className="text-heading-6 md:text-heading-5 line-clamp-2">{blog.title}</h3>
             </Link>
           </div>
           <div>
             <LinkButton
-              href={`/blog/${blog.slug}`}
+              href={href}
               className="btn dark:btn-transparent hover:btn-secondary dark:hover:btn-accent btn-white btn-md mx-auto w-[85%] md:mx-0 md:w-auto">
-              Read more
+              {ctaLabel}
             </LinkButton>
           </div>
         </div>

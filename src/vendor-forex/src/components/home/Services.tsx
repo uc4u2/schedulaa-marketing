@@ -12,7 +12,7 @@ interface ServiceCard {
   description: string;
 }
 
-const serviceCardsEn: ServiceCard[] = [
+export const serviceCards: ServiceCard[] = [
   {
     id: 1,
     label: 'Platform coverage',
@@ -45,24 +45,33 @@ const serviceCardsEn: ServiceCard[] = [
   },
 ];
 
+const serviceCardsFa: ServiceCard[] = [
+  { id: 1, label: '\u067e\u0648\u0634\u0634 \u067e\u0644\u062a\u0641\u0631\u0645', value: 'US + CA', description: '\u067e\u0631\u062f\u0627\u062e\u062a \u062d\u0642\u0648\u0642 \u0648 \u0627\u0646\u0637\u0628\u0627\u0642 \u062f\u0631 \u06cc\u06a9 \u062c\u0631\u06cc\u0627\u0646 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0645\u06cc\u200c\u0634\u0648\u062f' },
+  { id: 2, label: '\u0645\u0627\u0698\u0648\u0644\u200c\u0647\u0627\u06cc \u06a9\u0644\u06cc\u062f\u06cc', value: '5+', description: '\u0631\u0632\u0631\u0648\u060c \u062d\u0642\u0648\u0642\u060c \u0648\u0628\u200c\u0633\u0627\u06cc\u062a\u060c \u062a\u062c\u0627\u0631\u062a \u0627\u0644\u06a9\u062a\u0631\u0648\u0646\u06cc\u06a9 \u0648 \u062a\u062d\u0644\u06cc\u0644' },
+  { id: 3, label: '\u0633\u0631\u0639\u062a \u0639\u0645\u0644\u06cc\u0627\u062a', value: '< 1 \u062f\u0642\u06cc\u0642\u0647', description: '\u0627\u0632 \u062a\u0627\u06cc\u06cc\u062f \u0631\u0632\u0631\u0648 \u062a\u0627 \u0646\u0645\u0627\u06cc\u0634 \u0628\u0631\u0627\u06cc \u062a\u06cc\u0645 \u062f\u0631 \u0644\u062d\u0638\u0647' },
+  { id: 4, label: '\u06cc\u06a9\u067e\u0627\u0631\u0686\u06af\u06cc', value: 'API + Zapier', description: '\u0627\u062a\u0648\u0645\u0627\u0633\u06cc\u0648\u0646 \u0628\u0631\u0627\u06cc \u062d\u0633\u0627\u0628\u062f\u0627\u0631\u06cc \u0648 \u0628\u0627\u0632\u06af\u0634\u062a \u0645\u0634\u062a\u0631\u06cc' },
+  { id: 5, label: '\u0645\u0642\u06cc\u0627\u0633\u200c\u067e\u0630\u06cc\u0631\u06cc', value: '\u0686\u0646\u062f \u0634\u0639\u0628\u0647', description: '\u0645\u062f\u06cc\u0631\u06cc\u062a \u0634\u0639\u0628 \u0648 \u0646\u0642\u0634\u200c\u0647\u0627 \u0628\u0647\u200c\u0635\u0648\u0631\u062a \u0622\u0645\u0627\u062f\u0647' },
+];
+
 const serviceCardsRu: ServiceCard[] = [
-  { id: 1, label: 'Охват платформы', value: 'US + CA', description: 'Поддерживаются payroll и compliance-процессы' },
-  { id: 2, label: 'Ключевые модули', value: '5+', description: 'Booking, payroll, сайты, eCommerce, аналитика' },
-  { id: 3, label: 'Скорость операций', value: '< 1 мин', description: 'От подтверждения брони до видимости у команды' },
-  { id: 4, label: 'Интеграции', value: 'API + Zapier', description: 'Автоматизация для бухгалтерии и re-engagement' },
-  { id: 5, label: 'Модель масштабирования', value: 'Multi-branch', description: 'Управление филиалами и ролями из коробки' },
+  { id: 1, label: '\u041e\u0445\u0432\u0430\u0442 \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u044b', value: 'US + CA', description: '\u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u0437\u0430\u0440\u043f\u043b\u0430\u0442\u044b \u0438 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u043a\u043e\u043c\u043f\u043b\u0430\u0435\u043d\u0441\u0430' },
+  { id: 2, label: '\u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u043c\u043e\u0434\u0443\u043b\u0438', value: '5+', description: '\u0411\u0440\u043e\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435, \u0437\u0430\u0440\u043f\u043b\u0430\u0442\u0430, \u0441\u0430\u0439\u0442\u044b, \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430\u044f \u043a\u043e\u043c\u043c\u0435\u0440\u0446\u0438\u044f, \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430' },
+  { id: 3, label: '\u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u0439', value: '< 1 \u043c\u0438\u043d', description: '\u041e\u0442 \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d\u0438\u044f \u0431\u0440\u043e\u043d\u0438 \u0434\u043e \u0432\u0438\u0434\u0438\u043c\u043e\u0441\u0442\u0438 \u0434\u043b\u044f \u043a\u043e\u043c\u0430\u043d\u0434\u044b' },
+  { id: 4, label: '\u0418\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u0438', value: 'API + Zapier', description: '\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044f \u0434\u043b\u044f \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432 \u0438 \u0440\u0435\u0430\u043a\u0442\u0438\u0432\u0430\u0446\u0438\u0438' },
+  { id: 5, label: '\u041c\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435', value: '\u041d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0444\u0438\u043b\u0438\u0430\u043b\u043e\u0432', description: '\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0444\u0438\u043b\u0438\u0430\u043b\u0430\u043c\u0438 \u0438 \u0440\u043e\u043b\u044f\u043c\u0438 \u0438\u0437 \u043a\u043e\u0440\u043e\u0431\u043a\u0438' },
 ];
 
 const serviceCardsZh: ServiceCard[] = [
-  { id: 1, label: '平台覆盖', value: 'US + CA', description: '支持薪资与合规流程' },
-  { id: 2, label: '核心模块', value: '5+', description: '预约、薪资、网站、电商、分析' },
-  { id: 3, label: '运营速度', value: '< 1 分钟', description: '从预约确认到团队可见仅需片刻' },
-  { id: 4, label: '集成能力', value: 'API + Zapier', description: '面向财务与客户唤回的自动化' },
-  { id: 5, label: '扩展模式', value: 'Multi-branch', description: '开箱即用的多门店与角色管理' },
+  { id: 1, label: '\u5e73\u53f0\u8986\u76d6', value: 'US + CA', description: '\u652f\u6301\u85aa\u8d44\u4e0e\u5408\u89c4\u5de5\u4f5c\u6d41' },
+  { id: 2, label: '\u6838\u5fc3\u6a21\u5757', value: '5+', description: '\u9884\u7ea6\u3001\u85aa\u8d44\u3001\u7f51\u7ad9\u3001\u7535\u5546\u3001\u5206\u6790' },
+  { id: 3, label: '\u8fd0\u8425\u901f\u5ea6', value: '< 1 \u5206\u949f', description: '\u4ece\u9884\u7ea6\u786e\u8ba4\u5230\u56e2\u961f\u53ef\u89c1\u53ea\u9700\u7247\u523b' },
+  { id: 4, label: '\u96c6\u6210\u80fd\u529b', value: 'API + Zapier', description: '\u9762\u5411\u8d22\u52a1\u4e0e\u5ba2\u6237\u53ec\u56de\u7684\u81ea\u52a8\u5316' },
+  { id: 5, label: '\u6269\u5c55\u6a21\u5f0f', value: '\u591a\u95e8\u5e97', description: '\u5f00\u7bb1\u5373\u7528\u7684\u591a\u95e8\u5e97\u4e0e\u89d2\u8272\u7ba1\u7406' },
 ];
 
 const Services = ({ locale = 'en' }: { locale?: AppLocale }) => {
-  const serviceCards = locale === 'ru' ? serviceCardsRu : locale === 'zh' ? serviceCardsZh : serviceCardsEn;
+  const localizedCards =
+    locale === 'fa' ? serviceCardsFa : locale === 'ru' ? serviceCardsRu : locale === 'zh' ? serviceCardsZh : serviceCards;
   return (
     <RevealAnimation delay={0.1}>
       <section className="bg-white py-24 md:py-[100px] xl:py-[200px] dark:bg-black">
@@ -72,7 +81,7 @@ const Services = ({ locale = 'en' }: { locale?: AppLocale }) => {
           <div className="absolute top-0 right-0 z-40 h-full w-[15%] bg-gradient-to-l from-white to-transparent md:w-[20%] dark:from-black" />
           <Marquee>
             <div className="flex items-center justify-center gap-8 md:mb-14">
-              {serviceCards.map((service, index) => (
+              {localizedCards.map((service, index) => (
                 <div
                   key={service.id}
                   className={cn(

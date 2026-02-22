@@ -8,31 +8,31 @@
   "hero": {
     "eyebrow": "Plattform-Highlights",
     "title": {
-      "line1": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "line1": "Funktionen entwickelt fuer",
       "line2": "Enterprise-Serviceteams."
     },
-    "subtitle": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "subtitle": "Schedulaa verbindet Planung, Lohnabrechnung, Websites und eCommerce in einer Plattform, damit Team und Kunden synchron bleiben.",
     "badge": {
-      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
-      "subtitle": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+      "title": "Schedulaa OS",
+      "subtitle": "Zentrale Steuerzentrale"
     },
     "primaryCta": {
-      "label": "Mehr erfahren",
-      "supporting": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+      "label": "Kostenlos testen",
+      "supporting": "Keine Karte erforderlich"
     },
     "secondaryCta": {
-      "label": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+      "label": "Plaene vergleichen"
     },
-    "mediaAlt": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "mediaAlt": "Schedulaa Screens fuer Planung und Lohnabrechnung",
     "banner": {
-      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
-      "body": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
-      "ctaLabel": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+      "title": "Neu:",
+      "body": "Eigene Domains mit TXT/CNAME-Verifizierung und automatischem SSL sind jetzt live.",
+      "ctaLabel": "Domain verbinden"
     },
     "featureCard": {
-      "eyebrow": "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
-      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
-      "subtitle": "Mehr erfahren"
+      "eyebrow": "Warum Teams upgraden",
+      "title": "Eine zentrale Quelle fuer alle Betriebsdaten",
+      "subtitle": "Ersetzen Sie 5+ isolierte Tools durch Buchung, Payroll und Websites, die bereits zusammenarbeiten."
     }
   },
   "highlightCards": {

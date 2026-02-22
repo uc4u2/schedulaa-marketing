@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { cn } from '@/utils/cn';
-import { AppLocale, DEFAULT_LOCALE, detectLocaleFromPath, isSupportedLocale, withLocalePath } from '@/utils/locale';
+import { AppLocale, DEFAULT_LOCALE, detectLocaleFromPath, isSupportedLocale, stripLocalePrefix, withLocalePath } from '@/utils/locale';
 import {
   AUTH_LINKS,
   DASHBOARD_LINKS,
@@ -57,9 +57,7 @@ const Navbar = () => {
   const t = useTranslations('navbar');
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
-  const localizedPrefix = `/${locale}`;
-  const returnPath = pathname === localizedPrefix ? '/' : pathname.startsWith(`${localizedPrefix}/`) ? pathname.slice(localizedPrefix.length) || '/' : pathname;
-  const returnTo = marketingReturnTo(locale, returnPath || '/');
+  const returnTo = marketingReturnTo(locale, stripLocalePrefix(pathname, locale) || '/');
 
   const [open, setOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);

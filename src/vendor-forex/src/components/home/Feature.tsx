@@ -1,19 +1,23 @@
 import { cn } from '@/utils/cn';
-import { AppLocale } from '@/utils/locale';
 import gradient28Img from '@public/images/ns-img-516.png';
 import Image from 'next/image';
 import sourceEn from '@/legacy-content/features/landing-features.json';
+import { AppLocale } from '@/utils/locale';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 
 type ShowcaseItem = { title: string; description: string };
 
+const copyByLocale: Record<string, { view: string; compare: string }> = {
+  en: { view: 'View feature', compare: 'Compare Schedulaa' },
+  fa: { view: '\u0645\u0634\u0627\u0647\u062f\u0647 \u0642\u0627\u0628\u0644\u06cc\u062a', compare: '\u0645\u0642\u0627\u06cc\u0633\u0647 Schedulaa' },
+  ru: { view: '\u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0444\u0443\u043d\u043a\u0446\u0438\u044e', compare: '\u0421\u0440\u0430\u0432\u043d\u0438\u0442\u044c Schedulaa' },
+  zh: { view: '\u67e5\u770b\u529f\u80fd', compare: '\u5bf9\u6bd4 Schedulaa' },
+};
+
 const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }) => {
   const content = source || sourceEn;
-  const viewFeatureLabel =
-    locale === 'fa' ? 'مشاهده قابلیت' : locale === 'ru' ? 'Смотреть функцию' : locale === 'zh' ? '查看功能' : 'View feature';
-  const compareLabel =
-    locale === 'fa' ? 'مقایسه Schedulaa' : locale === 'ru' ? 'Сравнить Schedulaa' : locale === 'zh' ? '对比 Schedulaa' : 'Compare Schedulaa';
+  const copy = copyByLocale[locale] || copyByLocale.en;
   const showcaseData =
     (content.featureShowcase?.features || []).map((feature: { title: string; description: string[] | string }) => ({
       title: feature.title,
@@ -49,7 +53,7 @@ const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }
             </div>
             <div className="grid grid-cols-12 gap-5 md:gap-6">
               {data.map((feature, index) => (
-                <RevealAnimation key={feature.title} delay={0.25 + index * 0.06}>
+                <RevealAnimation key={`${feature.title}-${index}`} delay={0.25 + index * 0.06}>
                   <div
                     className={cn(
                       'col-span-12 md:col-span-6 lg:col-span-4',
@@ -79,7 +83,7 @@ const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }
                         <LinkButton
                           href="/features"
                           className="btn btn-white hover:btn-secondary btn-md dark:btn-transparent dark:hover:btn-accent mx-auto w-[90%] md:mx-0 md:w-auto">
-                          {viewFeatureLabel}
+                          {copy.view}
                         </LinkButton>
                       </div>
                     </div>
@@ -92,7 +96,7 @@ const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }
                 <LinkButton
                   href="/compare"
                   className="btn btn-md btn-green hover:btn-secondary mx-auto w-[90%] border-0 md:mx-0 md:w-auto">
-                  {compareLabel}
+                  {copy.compare}
                 </LinkButton>
               </div>
             </RevealAnimation>

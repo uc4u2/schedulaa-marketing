@@ -64,8 +64,15 @@ const clientLogos: ClientLogo[] = [
   },
 ];
 
+const ariaLabelByLocale: Record<string, string> = {
+  en: 'Client brand logo',
+  fa: '\u0646\u0634\u0627\u0646 \u0628\u0631\u0646\u062f \u06cc\u06a9\u067e\u0627\u0631\u0686\u0647\u200c\u0633\u0627\u0632\u06cc',
+  ru: '\u041b\u043e\u0433\u043e\u0442\u0438\u043f \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u0438',
+  zh: '\u96c6\u6210\u54c1\u724c\u6807\u8bc6',
+};
+
 const Clients = ({ locale = 'en' }: { locale?: AppLocale }) => {
-  const ariaLabel = locale === 'ru' ? 'Логотип интеграции' : locale === 'zh' ? '集成品牌标识' : 'Client brand logo';
+  const ariaLabel = ariaLabelByLocale[locale] || ariaLabelByLocale.en;
   return (
     <RevealAnimation delay={0.1}>
       <section className="lg:py-[150px] py-10 md:py-[75px] mt-14 xl:mt-[250px] lg:mt-[200px] sm:mt-[150px]">
@@ -80,8 +87,8 @@ const Clients = ({ locale = 'en' }: { locale?: AppLocale }) => {
                     key={logo.id}
                     aria-label={ariaLabel}
                     className={cn('min-w-[160px] md:min-w-[230px]', index === 0 && 'ml-8')}>
-                    <Image src={logo.lightSrc} alt="" className="block h-9 w-auto md:h-11 dark:hidden" />
-                    <Image src={logo.darkSrc} alt="" className="hidden h-9 w-auto md:h-11 dark:block" />
+                    <Image src={logo.lightSrc} alt={logo.alt} className="block h-9 w-auto md:h-11 dark:hidden" />
+                    <Image src={logo.darkSrc} alt={logo.alt} className="hidden h-9 w-auto md:h-11 dark:block" />
                   </figure>
                 ))}
               </div>

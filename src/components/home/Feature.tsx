@@ -5,13 +5,13 @@ import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import Progress from './Progress';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
-import { detectLocaleFromPath } from '@/utils/locale';
+import { detectLocaleFromPath, stripLocalePrefix } from '@/utils/locale';
 import { usePathname } from 'next/navigation';
 
 const Feature = () => {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
-  const returnTo = marketingReturnTo(locale, pathname.replace(/^\/(en|fa)/, '') || '/');
+  const returnTo = marketingReturnTo(locale, stripLocalePrefix(pathname, locale) || '/');
 
   return (
     <section className="bg-background-2 dark:bg-background-5 py-16 md:py-20 lg:py-[100px] xl:py-[200px]">

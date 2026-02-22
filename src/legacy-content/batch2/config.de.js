@@ -65,28 +65,28 @@ export const workforcePage = {
 
 export const industriesPage = {
   meta: {
-    title: 'Branchenverzeichnis | Schedulaa-Websites nach Branche',
+    title: 'Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.',
     description:
-      'Entdecken Sie Schedulaa-Workflows nach Branche: Salons, Kliniken, Fitness-Studios, Rechtsdienste und mehr mit einheitlicher Buchung, Payroll und Commerce.',
+      'Mehr erfahren',
   },
   hero: {
-    badge: 'Branchen',
-    title: 'Nach Branche durchsuchen',
+    badge: 'Industries',
+    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
     subtitle:
-      'Wahlen Sie eine Branche und sehen Sie, wie Unternehmen Schedulaa fur Buchung, Payroll, Workforce-Operationen, Websites und Commerce nutzen.',
-    primaryCta: { label: 'Buchung erkunden', href: '/booking' },
-    secondaryCta: { label: 'Team kontaktieren', href: '/contact' },
+      'Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.',
+    primaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/booking' },
+    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/contact' },
   },
   sections: [
     {
-      title: 'Beliebte Verticals',
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
       items: [
-        { title: 'Salons und Spas', body: 'Echtzeit-Buchung je Stylist, Trinkgeldverwaltung und Retention-Kampagnen.' },
-        { title: 'Gesundheitskliniken', body: 'Terminplanung, Erinnerungen und dokumentationsorientierte Workflows.' },
-        { title: 'Nachhilfe und Bildung', body: 'Session-Buchung, wiederkehrende Plane und Anwesenheitsnachweise.' },
-        { title: 'Kreativstudios', body: 'Automatisierte Customer Journey von Buchung bis Payroll.' },
-        { title: 'Recht und Professional Services', body: 'Strukturierte Intake-Prozesse, Planung und sichere Unterlagen.' },
-        { title: 'Teams mit mehreren Standorten', body: 'Standortbezogene Steuerung fur Staffing, Payroll und Analytics.' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
       ],
     },
   ],
@@ -239,32 +239,32 @@ export const supportPage = {
 
 export const zapierPage = {
   meta: {
-    title: 'Zapier fuer Schedulaa — automatisieren Sie Buchungen, Planung, Pausen-Compliance und Payroll',
+    title: 'Mehr erfahren',
     description:
-      'Verbinden Sie Schedulaa mit ueber 6.000 Apps ueber Zapier. Streamen Sie Buchungen, Schichten, Timeclock, Pausen-Compliance, PTO, Onboarding und Payroll-Daten.',
+      'Mehr erfahren',
   },
   hero: {
     badge: 'Zapier-Automatisierung',
-    title: 'Automatisieren Sie jeden Buchungs-, Schicht-, Pausen- und Payroll-Moment mit Zapier',
+    title: 'Mehr erfahren',
     subtitle:
-      'Schedulaa sendet Buchungen, Planung, Timeclock, Pausen-Compliance, PTO, Onboarding und Payroll-Details an Zapier; Aktionen koennen zudem Buchungen, Mitarbeitende und Schichten anlegen.',
-    primaryCta: { label: 'Zapier-Einstellungen oeffnen', href: '/settings/zapier' },
-    secondaryCta: { label: 'Demo ansehen', href: '/demo' },
+      'Mehr erfahren',
+    primaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/settings/zapier' },
+    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/demo' },
   },
   sections: [
     {
       title: 'Live-Trigger-Gruppen',
       items: [
-        { title: 'Buchungsereignisse', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
-        { title: 'Planung und Schichten', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
-        { title: 'Timeclock und Pausen-Compliance', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
-        { title: 'Abwesenheit, Onboarding, Dokumente', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },
-        { title: 'Payroll-Ereignisse', body: 'payroll.ready, payroll.finalized, payroll.details' },
+        { title: 'Buchungsereignisse', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
+        { title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', body: 'Mehr erfahren' },
       ],
     },
     {
-      title: 'Live-Aktionen',
-      points: ['create_booking', 'create_employee', 'create_shift / update_shift', 'attach_document'],
+      title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
+      points: ['create_booking', 'create_employee', 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', 'attach_document'],
     },
   ],
 };

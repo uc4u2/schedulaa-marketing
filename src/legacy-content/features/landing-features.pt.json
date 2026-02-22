@@ -6,33 +6,33 @@
     "ogDescription": "Saiba mais"
   },
   "hero": {
-    "eyebrow": "Esta secao explica claramente o recurso no Schedulaa.",
+    "eyebrow": "Destaques da plataforma",
     "title": {
-      "line1": "Esta secao explica claramente o recurso no Schedulaa.",
-      "line2": "Esta secao explica claramente o recurso no Schedulaa."
+      "line1": "Recursos criados para",
+      "line2": "equipes de servico enterprise."
     },
-    "subtitle": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "A Schedulaa une agendamento, folha, sites e eCommerce em uma experiencia unica para manter equipe e clientes sincronizados.",
     "badge": {
-      "title": "Esta secao explica claramente o recurso no Schedulaa.",
-      "subtitle": "Esta secao explica claramente o recurso no Schedulaa."
+      "title": "Schedulaa OS",
+      "subtitle": "Centro de comando unificado"
     },
     "primaryCta": {
-      "label": "Esta secao explica claramente o recurso no Schedulaa.",
-      "supporting": "Esta secao explica claramente o recurso no Schedulaa."
+      "label": "Iniciar teste gratis",
+      "supporting": "Sem cartao"
     },
     "secondaryCta": {
-      "label": "Esta secao explica claramente o recurso no Schedulaa."
+      "label": "Comparar planos"
     },
-    "mediaAlt": "Esta secao explica claramente o recurso no Schedulaa.",
+    "mediaAlt": "Telas da Schedulaa de agendamento e folha",
     "banner": {
-      "title": "Esta secao explica claramente o recurso no Schedulaa.",
-      "body": "Esta secao explica claramente o recurso no Schedulaa.",
-      "ctaLabel": "Esta secao explica claramente o recurso no Schedulaa."
+      "title": "Novo:",
+      "body": "Dominios personalizados com verificacao TXT/CNAME e SSL automatico ja estao disponiveis.",
+      "ctaLabel": "Conectar seu dominio"
     },
     "featureCard": {
-      "eyebrow": "Sim, este recurso e suportado no fluxo atual da plataforma.",
-      "title": "Esta secao explica claramente o recurso no Schedulaa.",
-      "subtitle": "Saiba mais"
+      "eyebrow": "Por que as equipes fazem upgrade",
+      "title": "Uma unica fonte de verdade operacional",
+      "subtitle": "Substitua 5+ ferramentas desconectadas por agendamento, folha e sites que ja funcionam juntos."
     }
   },
   "highlightCards": {

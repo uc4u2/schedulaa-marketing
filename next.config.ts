@@ -1,12 +1,12 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 import type { NextConfig } from 'next';
 
-const LOCALES = ['en', 'fa', 'ru', 'zh', 'es', 'fr', 'de', 'ar', 'pt'] as const;
-const LEGACY_ALIASES: Array<{ from: string; to: string }> = [
-  { from: '/services', to: '/features' },
-  { from: '/contact-us', to: '/contact' },
-  { from: '/support', to: '/client/support' },
-  { from: '/terms-conditions', to: '/terms' },
+const LOCALES = ['en', 'fa', 'ru', 'zh', 'es', 'fr', 'de', 'ar', 'pt'];
+const LEGACY_ALIAS_ROUTES = [
+  { source: '/services', destination: '/features' },
+  { source: '/contact-us', destination: '/contact' },
+  { source: '/support', destination: '/client/support' },
+  { source: '/terms-conditions', destination: '/terms' },
 ];
 
 const nextConfig: NextConfig = {
@@ -17,16 +17,18 @@ const nextConfig: NextConfig = {
     },
   },
   async rewrites() {
+    const localeRewrites = LOCALES.flatMap((locale) => [
+      ...LEGACY_ALIAS_ROUTES.map((route) => ({
+        source: `/${locale}${route.source}`,
+        destination: route.destination,
+      })),
+      { source: `/${locale}`, destination: '/' },
+      { source: `/${locale}/:path*`, destination: '/:path*' },
+    ]);
+
     return [
-      ...LEGACY_ALIASES.map((alias) => ({ source: alias.from, destination: alias.to })),
-      ...LOCALES.flatMap((locale) =>
-        LEGACY_ALIASES.map((alias) => ({
-          source: `/${locale}${alias.from}`,
-          destination: alias.to,
-        })),
-      ),
-      ...LOCALES.map((locale) => ({ source: `/${locale}`, destination: '/' })),
-      ...LOCALES.map((locale) => ({ source: `/${locale}/:path*`, destination: '/:path*' })),
+      ...LEGACY_ALIAS_ROUTES,
+      ...localeRewrites,
     ];
   },
   images: {
