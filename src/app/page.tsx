@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import HomeForexLayout from '@/components/forex-skin/home/HomeForexLayout';
 import { defaultMetadata } from '@/utils/generateMetaData';
+import { AppLocale } from '@/utils/locale';
 import { getServerLocale } from '@/utils/serverLocale';
 
 const metadataByLocale: Partial<Record<AppLocale, { title: string; description: string }>> = {
@@ -18,7 +19,7 @@ const metadataByLocale: Partial<Record<AppLocale, { title: string; description: 
 const fallbackMetadata = metadataByLocale.en as { title: string; description: string };
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale();
+  const locale = await getServerLocale();
   const resolved = metadataByLocale[locale] || fallbackMetadata;
   const urlPath = locale === 'en' ? '/en' : `/${locale}`;
 

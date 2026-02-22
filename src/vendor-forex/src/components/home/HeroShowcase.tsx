@@ -28,10 +28,10 @@ const HeroShowcase = () => {
 
   return (
     <div
-      className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0b1220]/40 p-2 shadow-[0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-white/20"
+      className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0b1220]/40 p-1.5 shadow-[0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-white/20 lg:p-1"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}>
-      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl lg:aspect-[16/9.4]">
+      <div className="relative aspect-[16/9.1] w-full overflow-hidden rounded-xl lg:aspect-[16/8.5]">
         {slides.map((slide, index) => {
           const active = index === activeIndex;
           const activeTransform =
@@ -49,7 +49,7 @@ const HeroShowcase = () => {
               <Image
                 src={slide.src}
                 alt={slide.alt}
-                className="h-full w-full object-contain object-top"
+                className="h-full w-full object-cover object-top"
                 priority={index === 0}
               />
             </div>

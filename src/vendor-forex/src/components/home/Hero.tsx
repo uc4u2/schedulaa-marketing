@@ -40,13 +40,13 @@ const Hero = ({ source }: { source?: any }) => {
           <RevealAnimation delay={0.1}>
             <h1 className="mx-auto max-w-[380px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[776px]">
               <span className="hero-text-gradient hero-text-color-2 block">
-                {content.hero.title.line1} {content.hero.title.line2}
+                The Operations OS for Service-Based Teams
               </span>
             </h1>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
             <p className="text-accent/60 mx-auto max-w-[380px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
-              {content.hero.subtitle}
+              Booking, scheduling, time tracking, and payroll — unified in one workflow.
             </p>
           </RevealAnimation>
           <ul className="flex flex-wrap items-center gap-5 sm:justify-center md:gap-9">
@@ -95,16 +95,11 @@ const Hero = ({ source }: { source?: any }) => {
         </ul>
         <RevealAnimation delay={0.8} instant>
           <div className="mt-[50px] lg:mt-[100px]">
-            <div className="mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]">
-              <div className="mb-5 hidden grid-cols-2 gap-3 md:grid lg:mb-6 lg:grid-cols-5">
+            <div className="mx-auto max-w-[760px] lg:max-w-[1040px] xl:max-w-[1360px]">
+              <div className="mb-5 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-3 md:justify-center lg:mb-6">
                 <figure
-                  className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
-                  style={{
-                    '--card-rotate-start': '-16deg',
-                    '--card-rotate-end': '-2deg',
-                    animation:
-                      'heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) 120ms both, heroCardDrift 7.4s ease-in-out 1.15s infinite',
-                  } as CSSProperties}>
+                  className="hero-float relative h-[84px] w-[152px] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-white/5 p-1 shadow-xl shadow-black/35 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-2xl hover:shadow-cyan-400/25 sm:h-[92px] sm:w-[168px] lg:h-[100px] lg:w-[184px]"
+                  style={{ animationDelay: '120ms' } as CSSProperties}>
                   <Image
                     src={heroOverlayEmployeeImg}
                     alt="Employee management preview"
@@ -114,13 +109,8 @@ const Hero = ({ source }: { source?: any }) => {
                   />
                 </figure>
                 <figure
-                  className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
-                  style={{
-                    '--card-rotate-start': '12deg',
-                    '--card-rotate-end': '1deg',
-                    animation:
-                      'heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) 420ms both, heroCardDrift 7.8s ease-in-out 1.45s infinite',
-                  } as CSSProperties}>
+                  className="hero-float relative h-[84px] w-[152px] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-white/5 p-1 shadow-xl shadow-black/35 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-2xl hover:shadow-lime-300/25 sm:h-[92px] sm:w-[168px] lg:h-[100px] lg:w-[184px]"
+                  style={{ animationDelay: '300ms' } as CSSProperties}>
                   <Link href="/payroll" className="group relative block overflow-hidden rounded-lg">
                     <span className="absolute top-2 right-2 z-10 inline-flex items-center rounded-full border border-lime-200/30 bg-lime-300/95 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-slate-900 shadow-[0_8px_20px_rgba(157,255,0,0.28)]">
                       Popular
@@ -136,13 +126,8 @@ const Hero = ({ source }: { source?: any }) => {
                   </Link>
                 </figure>
                 <figure
-                  className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
-                  style={{
-                    '--card-rotate-start': '-10deg',
-                    '--card-rotate-end': '-1deg',
-                    animation:
-                      'heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) 720ms both, heroCardDrift 7.2s ease-in-out 1.75s infinite',
-                  } as CSSProperties}>
+                  className="hero-float relative h-[84px] w-[152px] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-white/5 p-1 shadow-xl shadow-black/35 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-2xl hover:shadow-cyan-400/25 sm:h-[92px] sm:w-[168px] lg:h-[100px] lg:w-[184px]"
+                  style={{ animationDelay: '480ms' } as CSSProperties}>
                   <Image
                     src={heroOverlayBookingImg}
                     alt="Client slot selection preview"
@@ -152,13 +137,8 @@ const Hero = ({ source }: { source?: any }) => {
                   />
                 </figure>
                 <figure
-                  className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
-                  style={{
-                    '--card-rotate-start': '15deg',
-                    '--card-rotate-end': '2deg',
-                    animation:
-                      'heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) 1020ms both, heroCardDrift 7.9s ease-in-out 2.05s infinite',
-                  } as CSSProperties}>
+                  className="hero-float relative h-[84px] w-[152px] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-white/5 p-1 shadow-xl shadow-black/35 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-2xl hover:shadow-cyan-400/25 sm:h-[92px] sm:w-[168px] lg:h-[100px] lg:w-[184px]"
+                  style={{ animationDelay: '660ms' } as CSSProperties}>
                   <Image
                     src={heroOverlayShiftImg}
                     alt="Shift management preview"
@@ -168,13 +148,8 @@ const Hero = ({ source }: { source?: any }) => {
                   />
                 </figure>
                 <figure
-                  className="relative overflow-hidden rounded-xl border border-white/20 bg-[#0b1220]/55 p-1 shadow-[0_14px_32px_rgba(0,0,0,0.4)] backdrop-blur transition-transform duration-300 hover:z-30 hover:scale-[2]"
-                  style={{
-                    '--card-rotate-start': '-14deg',
-                    '--card-rotate-end': '-1deg',
-                    animation:
-                      'heroCardDrop 900ms cubic-bezier(0.23,1,0.32,1) 1300ms both, heroCardDrift 8.1s ease-in-out 2.25s infinite',
-                  } as CSSProperties}>
+                  className="hero-float relative h-[84px] w-[152px] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-white/5 p-1 shadow-xl shadow-black/35 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-2xl hover:shadow-cyan-400/25 sm:h-[92px] sm:w-[168px] lg:h-[100px] lg:w-[184px]"
+                  style={{ animationDelay: '840ms' } as CSSProperties}>
                   <Image
                     src={heroOverlayWebsiteBuilderImg}
                     alt="Website builder preview"
@@ -185,7 +160,7 @@ const Hero = ({ source }: { source?: any }) => {
                 </figure>
               </div>
             </div>
-            <div className="relative mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]" style={{ transform: 'perspective(1400px) rotateX(3deg)' }}>
+            <div className="relative mx-auto max-w-[760px] lg:max-w-[1040px] xl:max-w-[1360px]" style={{ transform: 'perspective(1400px) rotateX(2.2deg)' }}>
               <div className="pointer-events-none absolute -inset-4 rounded-[28px] bg-linear-[145deg,rgba(0,194,255,0.22)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.12)_100%] blur-xl" />
               <div className="pointer-events-none absolute -inset-x-10 -bottom-8 h-16 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,180,255,0.38)_0%,rgba(0,0,0,0)_72%)]" />
               <HeroShowcase />
