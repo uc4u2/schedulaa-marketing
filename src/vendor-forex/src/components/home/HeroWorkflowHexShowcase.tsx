@@ -25,37 +25,66 @@ const workflowNodesEn: WorkflowNode[] = [
 ];
 
 const mapNodesByLocale = (locale: AppLocale): WorkflowNode[] => {
-  if (locale === 'fa') {
-    const labels: Record<string, { label: string; alt: string }> = {
+  const labelsByLocale: Record<string, Record<string, { label: string; alt: string }>> = {
+    fa: {
       booking: { label: 'رزرو', alt: 'پیش‌نمایش فرآیند رزرو' },
       scheduling: { label: 'زمان‌بندی', alt: 'پیش‌نمایش فرآیند زمان‌بندی' },
       'time-tracking': { label: 'ردیابی زمان', alt: 'پیش‌نمایش ردیابی زمان' },
       payroll: { label: 'حقوق', alt: 'پیش‌نمایش فرآیند حقوق' },
       reports: { label: 'گزارش‌ها', alt: 'پیش‌نمایش گزارش‌ها' },
-    };
-    return workflowNodesEn.map((node) => ({ ...node, ...(labels[node.id] || {}) }));
-  }
-  if (locale === 'ru') {
-    const labels: Record<string, { label: string; alt: string }> = {
+    },
+    ru: {
       booking: { label: 'Бронирование', alt: 'Предпросмотр процесса бронирования' },
       scheduling: { label: 'Планирование', alt: 'Предпросмотр процесса планирования' },
       'time-tracking': { label: 'Учет времени', alt: 'Предпросмотр учета времени' },
       payroll: { label: 'Зарплата', alt: 'Предпросмотр процесса зарплаты' },
       reports: { label: 'Отчеты', alt: 'Предпросмотр отчетов' },
-    };
-    return workflowNodesEn.map((node) => ({ ...node, ...(labels[node.id] || {}) }));
-  }
-  if (locale === 'zh') {
-    const labels: Record<string, { label: string; alt: string }> = {
+    },
+    zh: {
       booking: { label: '预约', alt: '预约流程预览' },
       scheduling: { label: '排班', alt: '排班流程预览' },
       'time-tracking': { label: '工时追踪', alt: '工时追踪预览' },
       payroll: { label: '薪资', alt: '薪资流程预览' },
       reports: { label: '报表', alt: '报表预览' },
-    };
-    return workflowNodesEn.map((node) => ({ ...node, ...(labels[node.id] || {}) }));
-  }
-  return workflowNodesEn;
+    },
+    es: {
+      booking: { label: 'Reservas', alt: 'Vista previa del flujo de reservas' },
+      scheduling: { label: 'Planificacion', alt: 'Vista previa del flujo de planificacion' },
+      'time-tracking': { label: 'Control horario', alt: 'Vista previa del control horario' },
+      payroll: { label: 'Nomina', alt: 'Vista previa del flujo de nomina' },
+      reports: { label: 'Reportes', alt: 'Vista previa de reportes' },
+    },
+    fr: {
+      booking: { label: 'Reservation', alt: 'Apercu du flux de reservation' },
+      scheduling: { label: 'Planification', alt: 'Apercu du flux de planification' },
+      'time-tracking': { label: 'Suivi du temps', alt: 'Apercu du suivi du temps' },
+      payroll: { label: 'Paie', alt: 'Apercu du flux de paie' },
+      reports: { label: 'Rapports', alt: 'Apercu des rapports' },
+    },
+    de: {
+      booking: { label: 'Buchung', alt: 'Vorschau des Buchungsablaufs' },
+      scheduling: { label: 'Planung', alt: 'Vorschau des Planungsablaufs' },
+      'time-tracking': { label: 'Zeiterfassung', alt: 'Vorschau der Zeiterfassung' },
+      payroll: { label: 'Payroll', alt: 'Vorschau des Payroll-Ablaufs' },
+      reports: { label: 'Berichte', alt: 'Vorschau der Berichte' },
+    },
+    ar: {
+      booking: { label: 'الحجوزات', alt: 'معاينة سير الحجوزات' },
+      scheduling: { label: 'الجدولة', alt: 'معاينة سير الجدولة' },
+      'time-tracking': { label: 'تتبع الوقت', alt: 'معاينة تتبع الوقت' },
+      payroll: { label: 'الرواتب', alt: 'معاينة سير الرواتب' },
+      reports: { label: 'التقارير', alt: 'معاينة التقارير' },
+    },
+    pt: {
+      booking: { label: 'Reservas', alt: 'Previa do fluxo de reservas' },
+      scheduling: { label: 'Agendamento', alt: 'Previa do fluxo de agendamento' },
+      'time-tracking': { label: 'Controle de tempo', alt: 'Previa do controle de tempo' },
+      payroll: { label: 'Folha', alt: 'Previa do fluxo de folha' },
+      reports: { label: 'Relatorios', alt: 'Previa de relatorios' },
+    },
+  };
+  const labels = labelsByLocale[locale] || {};
+  return workflowNodesEn.map((node) => ({ ...node, ...(labels[node.id] || {}) }));
 };
 
 const showByLocale: Record<string, string> = {
@@ -63,6 +92,11 @@ const showByLocale: Record<string, string> = {
   fa: 'نمایش',
   ru: 'Показать',
   zh: '显示',
+  es: 'Mostrar',
+  fr: 'Afficher',
+  de: 'Anzeigen',
+  ar: 'عرض',
+  pt: 'Mostrar',
 };
 
 const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
