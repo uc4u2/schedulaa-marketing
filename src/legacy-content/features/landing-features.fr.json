@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "description": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "ogTitle": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "ogDescription": "En savoir plus"
+  },
+  "hero": {
+    "eyebrow": "Points forts de la plateforme",
+    "title": {
+      "line1": "Des fonctionnalites concues pour",
+      "line2": "les equipes de service enterprise."
+    },
+    "subtitle": "Schedulaa reunit planning, paie, sites web et eCommerce dans une seule experience pour garder vos equipes et clients alignes.",
+    "badge": {
+      "title": "Schedulaa OS",
+      "subtitle": "Centre de commande unifie"
+    },
+    "primaryCta": {
+      "label": "Demarrer l essai gratuit",
+      "supporting": "Sans carte bancaire"
+    },
+    "secondaryCta": {
+      "label": "Comparer les plans"
+    },
+    "mediaAlt": "Ecrans de planning et de paie Schedulaa",
+    "banner": {
+      "title": "Nouveau :",
+      "body": "Les domaines personnalises avec verification TXT/CNAME et SSL automatique sont maintenant disponibles.",
+      "ctaLabel": "Connecter votre domaine"
+    },
+    "featureCard": {
+      "eyebrow": "Pourquoi les equipes evoluent",
+      "title": "Une source unique de verite operationnelle",
+      "subtitle": "Remplacez plus de 5 outils deconnectes par la reservation, la paie et les sites web qui fonctionnent deja ensemble."
+    }
+  },
+  "highlightCards": {
+    "scheduling": {
+      "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "description": "En savoir plus",
+      "points": [
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "En savoir plus",
+        "En savoir plus",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa."
+      ]
+    },
+    "payroll": {
+      "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "description": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "points": [
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "En savoir plus",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "En savoir plus"
+      ]
+    },
+    "commerce": {
+      "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "description": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "points": [
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme."
+      ]
+    }
+  },
+  "featureShowcase": {
+    "eyebrow": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "subtitle": "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+    "features": [
+      {
+        "icon": "01",
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": [
+          "En savoir plus",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "En savoir plus"
+        ]
+      },
+      {
+        "icon": "02",
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": [
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa."
+        ]
+      },
+      {
+        "icon": "03",
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": [
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "En savoir plus"
+        ]
+      },
+      {
+        "icon": "04",
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": [
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa."
+        ]
+      },
+      {
+        "icon": "05",
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": [
+          "En savoir plus",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa."
+        ]
+      },
+      {
+        "icon": "06",
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": [
+          "En savoir plus",
+          "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+          "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+          "En savoir plus"
+        ]
+      },
+      {
+        "icon": "07",
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": [
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa."
+        ]
+      },
+      {
+        "icon": "08",
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": [
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa."
+        ]
+      },
+      {
+        "icon": "09",
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": [
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "En savoir plus",
+          "En savoir plus"
+        ]
+      },
+      {
+        "icon": "10",
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": [
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa."
+        ]
+      }
+    ]
+  },
+  "platformMap": {
+    "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "subtitle": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "points": {
+      "branches": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "analytics": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "templates": "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+      "sync": "En savoir plus",
+      "domains": "Cette section explique clairement la fonctionnalite dans Schedulaa."
+    },
+    "primaryCta": {
+      "label": "Parlez a notre equipe"
+    },
+    "secondaryCta": {
+      "label": "En savoir plus"
+    },
+    "mediaAlt": "Cette section explique clairement la fonctionnalite dans Schedulaa."
+  },
+  "integrations": {
+    "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "subtitle": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "points": {
+      "accounting": "En savoir plus",
+      "automation": "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+      "stripe": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+      "domains": "Cette section explique clairement la fonctionnalite dans Schedulaa."
+    },
+    "mediaAlt": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "blocks": {
+      "payments": {
+        "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "items": [
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa."
+        ]
+      },
+      "compliance": {
+        "title": "Conformite",
+        "items": [
+          "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+          "Cette section explique clairement la fonctionnalite dans Schedulaa."
+        ]
+      }
+    }
+  },
+  "insight": {
+    "eyebrow": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "subtitle": "En savoir plus",
+    "items": [
+      {
+        "tag": "Playbook",
+        "headline": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": "Oui, cette fonctionnalite est prise en charge dans le flux actuel de la plateforme.",
+        "ctaLabel": "En savoir plus",
+        "ctaHref": "https://www.schedulaa.com/blog/multi-location-staffing"
+      },
+      {
+        "tag": "Webinar",
+        "headline": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "ctaLabel": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "ctaHref": "https://www.schedulaa.com/webinars/payroll"
+      },
+      {
+        "tag": "Checklist",
+        "headline": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "description": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "ctaLabel": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+        "ctaHref": "https://www.schedulaa.com/resources/automation-checklist"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Cette section explique clairement la fonctionnalite dans Schedulaa."
+  },
+  "cta": {
+    "eyebrow": "En savoir plus",
+    "title": "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    "description": "En savoir plus",
+    "primaryCta": {
+      "label": "Cette section explique clairement la fonctionnalite dans Schedulaa."
+    },
+    "secondaryCta": {
+      "label": "En savoir plus"
+    }
+  }
+}

@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "description": "Mas informacion",
+    "canonical": "https://www.schedulaa.com/pricing",
+    "keywords": "Mas informacion",
+    "og": {
+      "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "image": "https://www.schedulaa.com/og/pricing.jpg"
+    }
+  },
+  "hero": {
+    "eyebrow": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "title": [
+      "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+    ],
+    "subtitle": "Mas informacion",
+    "primaryCta": {
+      "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+    },
+    "secondaryCta": {
+      "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+    },
+    "badge": {
+      "overline": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+    },
+    "mediaAlt": "Mas informacion"
+  },
+  "promo": {
+    "starterBadge": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "starterNote": "${{discounted}} / mo for first {{months}} months. Then ${{base}} / mo"
+  },
+  "plans": {
+    "table": {
+      "list": [
+        {
+          "key": "starter",
+          "name": "Starter",
+          "price": "$19.99/mo",
+          "description": "Mas informacion",
+          "trialNote": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "features": [
+            {
+              "type": "heading",
+              "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+            },
+            "Mas informacion",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Mas informacion",
+            "Mas informacion",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Mas informacion",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+            },
+            "Mas informacion",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Capacity"
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          ],
+          "ctaLabel": "Mas informacion",
+          "ctaTo": "/register"
+        },
+        {
+          "key": "pro",
+          "name": "Pro",
+          "price": "$49.99/mo",
+          "positioning": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "trialNote": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "features": [
+            "Mas informacion",
+            {
+              "type": "heading",
+              "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Payroll"
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Mas informacion",
+            "Mas informacion",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Mas informacion",
+            {
+              "type": "heading",
+              "text": "Capacity"
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          ],
+          "ctaLabel": "Mas informacion",
+          "ctaTo": "/register",
+          "highlight": true,
+          "badge": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        },
+        {
+          "key": "business",
+          "name": "Business",
+          "price": "$119.99/mo",
+          "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "trialNote": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "features": [
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Mas informacion",
+            {
+              "type": "heading",
+              "text": "Payroll"
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+            },
+            "Mas informacion",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Mas informacion",
+            {
+              "type": "heading",
+              "text": "Capacity"
+            },
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "Add seats for $9/mo each.",
+            "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          ],
+          "ctaLabel": "Mas informacion",
+          "ctaTo": "/register"
+        }
+      ],
+      "addons": {
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "headers": {
+          "addon": "Add-on",
+          "price": "Price"
+        },
+        "items": [
+          {
+            "key": "extraSeat",
+            "name": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+            "price": "$9/mo per seat (prorated)"
+          }
+        ]
+      }
+    }
+  },
+  "assurances": {
+    "eyebrow": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "subtitle": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "items": [
+      {
+        "key": "noHiddenFees",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      {
+        "key": "switchPlans",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      {
+        "key": "professionReady",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      {
+        "key": "enterpriseOnboarding",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      {
+        "key": "roleAccess",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      {
+        "key": "globalPayments",
+        "title": "Mas informacion",
+        "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      }
+    ]
+  },
+  "ribbon": {
+    "message": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "buttonLabel": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "buttonTo": "/manager/dashboard"
+  },
+  "footnote": {
+    "message": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+  },
+  "ctaBanner": {
+    "eyebrow": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "title": "Mas informacion",
+    "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "primaryCta": {
+      "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+    },
+    "secondaryCta": {
+      "label": "Mas informacion"
+    }
+  },
+  "included": {
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "items": [
+      "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "Mas informacion",
+      "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+    ]
+  },
+  "comparison": {
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "subtitle": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "headers": {
+      "feature": "Feature",
+      "starter": "Starter",
+      "pro": "Pro",
+      "business": "Business"
+    },
+    "values": {
+      "yes": "Yes",
+      "dash": "—",
+      "businessHours": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "always": "24 / 7"
+    },
+    "rows": {
+      "price": {
+        "label": "Price",
+        "starter": "$19.99 / mo",
+        "pro": "$49.99 / mo",
+        "business": "$119.99 / mo"
+      },
+      "bestFor": {
+        "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "starter": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "pro": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "business": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      "website": {
+        "section": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "builder": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "customDomain": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "publicBooking": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "embedded": "Mas informacion",
+        "branding": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      "booking": {
+        "section": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "online": "Mas informacion",
+        "reschedule": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "multi": "Mas informacion",
+        "staffScheduling": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "shiftSwaps": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "bulk": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      "time": {
+        "section": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "clock": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "breakPolicy": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "staggered": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "ipHints": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "overtime": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      "payroll": {
+        "section": "Payroll",
+        "processing": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "holiday": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "payslip": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "exports": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "invoicing": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      "compliance": {
+        "section": "Cumplimiento",
+        "revenueReports": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "exports": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "w2": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "t4": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "audit": "Mas informacion"
+      },
+      "analytics": {
+        "section": "Analytics",
+        "revenueDash": "Mas informacion",
+        "utilization": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "segmentation": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "multiLocation": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      "automation": {
+        "section": "Automation",
+        "notifications": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "campaigns": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "zapier": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "workflows": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      "hiring": {
+        "section": "Hiring",
+        "jobs": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "resume": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "onboarding": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "handoff": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      "scale": {
+        "section": "Scale",
+        "seatsIncluded": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "starterSeats": "1",
+        "proSeats": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "businessSeats": "10",
+        "additionalSeats": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "seatPrice": "$9 / seat",
+        "multiLocation": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "starterLocations": "1",
+        "proLocations": "1",
+        "businessLocations": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "roleAccess": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "starterAccess": "Basic",
+        "proAccess": "Advanced",
+        "businessAccess": "Advanced",
+        "branchPermissions": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      "support": {
+        "section": "Support",
+        "standard": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "priority": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "audit": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      }
+    }
+  },
+  "whyTeams": {
+    "title": "Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma.",
+    "items": [
+      "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+    ]
+  },
+  "websiteDesignService": {
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "description": "Mas informacion",
+    "includes": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "cta": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "loadingCta": "Mas informacion"
+  }
+}

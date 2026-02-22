@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "description": "Esta secao explica claramente o recurso no Schedulaa.",
+    "ogTitle": "Esta secao explica claramente o recurso no Schedulaa.",
+    "ogDescription": "Saiba mais"
+  },
+  "hero": {
+    "eyebrow": "Destaques da plataforma",
+    "title": {
+      "line1": "Recursos criados para",
+      "line2": "equipes de servico enterprise."
+    },
+    "subtitle": "A Schedulaa une agendamento, folha, sites e eCommerce em uma experiencia unica para manter equipe e clientes sincronizados.",
+    "badge": {
+      "title": "Schedulaa OS",
+      "subtitle": "Centro de comando unificado"
+    },
+    "primaryCta": {
+      "label": "Iniciar teste gratis",
+      "supporting": "Sem cartao"
+    },
+    "secondaryCta": {
+      "label": "Comparar planos"
+    },
+    "mediaAlt": "Telas da Schedulaa de agendamento e folha",
+    "banner": {
+      "title": "Novo:",
+      "body": "Dominios personalizados com verificacao TXT/CNAME e SSL automatico ja estao disponiveis.",
+      "ctaLabel": "Conectar seu dominio"
+    },
+    "featureCard": {
+      "eyebrow": "Por que as equipes fazem upgrade",
+      "title": "Uma unica fonte de verdade operacional",
+      "subtitle": "Substitua 5+ ferramentas desconectadas por agendamento, folha e sites que ja funcionam juntos."
+    }
+  },
+  "highlightCards": {
+    "scheduling": {
+      "title": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+      "description": "Saiba mais",
+      "points": [
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Saiba mais",
+        "Saiba mais",
+        "Esta secao explica claramente o recurso no Schedulaa."
+      ]
+    },
+    "payroll": {
+      "title": "Esta secao explica claramente o recurso no Schedulaa.",
+      "description": "Esta secao explica claramente o recurso no Schedulaa.",
+      "points": [
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Saiba mais",
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Saiba mais"
+      ]
+    },
+    "commerce": {
+      "title": "Esta secao explica claramente o recurso no Schedulaa.",
+      "description": "Esta secao explica claramente o recurso no Schedulaa.",
+      "points": [
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Esta secao explica claramente o recurso no Schedulaa.",
+        "Sim, este recurso e suportado no fluxo atual da plataforma."
+      ]
+    }
+  },
+  "featureShowcase": {
+    "eyebrow": "Esta secao explica claramente o recurso no Schedulaa.",
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+    "features": [
+      {
+        "icon": "01",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": [
+          "Saiba mais",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Saiba mais"
+        ]
+      },
+      {
+        "icon": "02",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": [
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Sim, este recurso e suportado no fluxo atual da plataforma.",
+          "Esta secao explica claramente o recurso no Schedulaa."
+        ]
+      },
+      {
+        "icon": "03",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": [
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Saiba mais"
+        ]
+      },
+      {
+        "icon": "04",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": [
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
+        ]
+      },
+      {
+        "icon": "05",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": [
+          "Saiba mais",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
+        ]
+      },
+      {
+        "icon": "06",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": [
+          "Saiba mais",
+          "Sim, este recurso e suportado no fluxo atual da plataforma.",
+          "Sim, este recurso e suportado no fluxo atual da plataforma.",
+          "Saiba mais"
+        ]
+      },
+      {
+        "icon": "07",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": [
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Sim, este recurso e suportado no fluxo atual da plataforma."
+        ]
+      },
+      {
+        "icon": "08",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": [
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
+        ]
+      },
+      {
+        "icon": "09",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": [
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Saiba mais",
+          "Saiba mais"
+        ]
+      },
+      {
+        "icon": "10",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": [
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
+        ]
+      }
+    ]
+  },
+  "platformMap": {
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "Esta secao explica claramente o recurso no Schedulaa.",
+    "points": {
+      "branches": "Esta secao explica claramente o recurso no Schedulaa.",
+      "analytics": "Esta secao explica claramente o recurso no Schedulaa.",
+      "templates": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+      "sync": "Saiba mais",
+      "domains": "Esta secao explica claramente o recurso no Schedulaa."
+    },
+    "primaryCta": {
+      "label": "Fale com nossa equipe"
+    },
+    "secondaryCta": {
+      "label": "Saiba mais"
+    },
+    "mediaAlt": "Esta secao explica claramente o recurso no Schedulaa."
+  },
+  "integrations": {
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "Esta secao explica claramente o recurso no Schedulaa.",
+    "points": {
+      "accounting": "Saiba mais",
+      "automation": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+      "stripe": "Esta secao explica claramente o recurso no Schedulaa.",
+      "domains": "Esta secao explica claramente o recurso no Schedulaa."
+    },
+    "mediaAlt": "Esta secao explica claramente o recurso no Schedulaa.",
+    "blocks": {
+      "payments": {
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "items": [
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
+        ]
+      },
+      "compliance": {
+        "title": "Conformidade",
+        "items": [
+          "Esta secao explica claramente o recurso no Schedulaa.",
+          "Esta secao explica claramente o recurso no Schedulaa."
+        ]
+      }
+    }
+  },
+  "insight": {
+    "eyebrow": "Esta secao explica claramente o recurso no Schedulaa.",
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "Saiba mais",
+    "items": [
+      {
+        "tag": "Playbook",
+        "headline": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+        "ctaLabel": "Saiba mais",
+        "ctaHref": "https://www.schedulaa.com/blog/multi-location-staffing"
+      },
+      {
+        "tag": "Webinar",
+        "headline": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Esta secao explica claramente o recurso no Schedulaa.",
+        "ctaLabel": "Esta secao explica claramente o recurso no Schedulaa.",
+        "ctaHref": "https://www.schedulaa.com/webinars/payroll"
+      },
+      {
+        "tag": "Checklist",
+        "headline": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Esta secao explica claramente o recurso no Schedulaa.",
+        "ctaLabel": "Esta secao explica claramente o recurso no Schedulaa.",
+        "ctaHref": "https://www.schedulaa.com/resources/automation-checklist"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Esta secao explica claramente o recurso no Schedulaa."
+  },
+  "cta": {
+    "eyebrow": "Saiba mais",
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "description": "Saiba mais",
+    "primaryCta": {
+      "label": "Esta secao explica claramente o recurso no Schedulaa."
+    },
+    "secondaryCta": {
+      "label": "Saiba mais"
+    }
+  }
+}

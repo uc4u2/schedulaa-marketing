@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "ogTitle": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "ogDescription": "Mas informacion"
+  },
+  "hero": {
+    "eyebrow": "Aspectos destacados de la plataforma",
+    "title": {
+      "line1": "Funciones creadas para",
+      "line2": "equipos de servicio empresariales."
+    },
+    "subtitle": "Schedulaa unifica agenda, nomina, sitios web y eCommerce en una sola experiencia para mantener conectados a equipos y clientes.",
+    "badge": {
+      "title": "Schedulaa OS",
+      "subtitle": "Centro de control unificado"
+    },
+    "primaryCta": {
+      "label": "Comenzar prueba gratis",
+      "supporting": "Sin tarjeta"
+    },
+    "secondaryCta": {
+      "label": "Comparar planes"
+    },
+    "mediaAlt": "Pantallas de agenda y nomina de Schedulaa",
+    "banner": {
+      "title": "Nuevo:",
+      "body": "Los dominios personalizados con verificacion TXT/CNAME y SSL automatico ya estan disponibles.",
+      "ctaLabel": "Conectar tu dominio"
+    },
+    "featureCard": {
+      "eyebrow": "Por que los equipos actualizan",
+      "title": "Una sola fuente de verdad operativa",
+      "subtitle": "Reemplaza mas de 5 herramientas desconectadas por reservas, nomina y sitios web que ya trabajan en conjunto."
+    }
+  },
+  "highlightCards": {
+    "scheduling": {
+      "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "description": "Mas informacion",
+      "points": [
+        "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "Mas informacion",
+        "Mas informacion",
+        "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      ]
+    },
+    "payroll": {
+      "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "points": [
+        "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "Mas informacion",
+        "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "Mas informacion"
+      ]
+    },
+    "commerce": {
+      "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "points": [
+        "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma."
+      ]
+    }
+  },
+  "featureShowcase": {
+    "eyebrow": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "subtitle": "Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma.",
+    "features": [
+      {
+        "icon": "01",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": [
+          "Mas informacion",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Mas informacion"
+        ]
+      },
+      {
+        "icon": "02",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": [
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ]
+      },
+      {
+        "icon": "03",
+        "title": "Mas informacion",
+        "description": [
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Mas informacion"
+        ]
+      },
+      {
+        "icon": "04",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": [
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ]
+      },
+      {
+        "icon": "05",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": [
+          "Mas informacion",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ]
+      },
+      {
+        "icon": "06",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": [
+          "Mas informacion",
+          "Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma.",
+          "Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma.",
+          "Mas informacion"
+        ]
+      },
+      {
+        "icon": "07",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": [
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ]
+      },
+      {
+        "icon": "08",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": [
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ]
+      },
+      {
+        "icon": "09",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": [
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Mas informacion",
+          "Mas informacion"
+        ]
+      },
+      {
+        "icon": "10",
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": [
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ]
+      }
+    ]
+  },
+  "platformMap": {
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "subtitle": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "points": {
+      "branches": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "analytics": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "templates": "Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma.",
+      "sync": "Mas informacion",
+      "domains": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+    },
+    "primaryCta": {
+      "label": "Hablar con nuestro equipo"
+    },
+    "secondaryCta": {
+      "label": "Mas informacion"
+    },
+    "mediaAlt": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+  },
+  "integrations": {
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "subtitle": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "points": {
+      "accounting": "Mas informacion",
+      "automation": "Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma.",
+      "stripe": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "domains": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+    },
+    "mediaAlt": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "blocks": {
+      "payments": {
+        "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "items": [
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ]
+      },
+      "compliance": {
+        "title": "Cumplimiento",
+        "items": [
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ]
+      }
+    }
+  },
+  "insight": {
+    "eyebrow": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "subtitle": "Mas informacion",
+    "items": [
+      {
+        "tag": "Playbook",
+        "headline": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": "Si, esta funcionalidad esta soportada dentro del flujo actual de la plataforma.",
+        "ctaLabel": "Mas informacion",
+        "ctaHref": "https://www.schedulaa.com/blog/multi-location-staffing"
+      },
+      {
+        "tag": "Webinar",
+        "headline": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "ctaLabel": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "ctaHref": "https://www.schedulaa.com/webinars/payroll"
+      },
+      {
+        "tag": "Checklist",
+        "headline": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "ctaLabel": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "ctaHref": "https://www.schedulaa.com/resources/automation-checklist"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+  },
+  "cta": {
+    "eyebrow": "Mas informacion",
+    "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+    "description": "Mas informacion",
+    "primaryCta": {
+      "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+    },
+    "secondaryCta": {
+      "label": "Mas informacion"
+    }
+  }
+}

@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "description": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+    "canonical": "https://www.schedulaa.com/pricing",
+    "keywords": "Saiba mais",
+    "og": {
+      "title": "Esta secao explica claramente o recurso no Schedulaa.",
+      "description": "Esta secao explica claramente o recurso no Schedulaa.",
+      "image": "https://www.schedulaa.com/og/pricing.jpg"
+    }
+  },
+  "hero": {
+    "eyebrow": "Esta secao explica claramente o recurso no Schedulaa.",
+    "title": [
+      "Esta secao explica claramente o recurso no Schedulaa.",
+      "Esta secao explica claramente o recurso no Schedulaa."
+    ],
+    "subtitle": "Saiba mais",
+    "primaryCta": {
+      "label": "Esta secao explica claramente o recurso no Schedulaa."
+    },
+    "secondaryCta": {
+      "label": "Esta secao explica claramente o recurso no Schedulaa."
+    },
+    "badge": {
+      "overline": "Esta secao explica claramente o recurso no Schedulaa.",
+      "title": "Esta secao explica claramente o recurso no Schedulaa."
+    },
+    "mediaAlt": "Saiba mais"
+  },
+  "promo": {
+    "starterBadge": "Esta secao explica claramente o recurso no Schedulaa.",
+    "starterNote": "${{discounted}} / mo for first {{months}} months. Then ${{base}} / mo"
+  },
+  "plans": {
+    "table": {
+      "list": [
+        {
+          "key": "starter",
+          "name": "Starter",
+          "price": "$19.99/mo",
+          "description": "Saiba mais",
+          "trialNote": "Esta secao explica claramente o recurso no Schedulaa.",
+          "features": [
+            {
+              "type": "heading",
+              "text": "Esta secao explica claramente o recurso no Schedulaa."
+            },
+            "Saiba mais",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Saiba mais",
+            "Saiba mais",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta secao explica claramente o recurso no Schedulaa."
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Saiba mais",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta secao explica claramente o recurso no Schedulaa."
+            },
+            "Saiba mais",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Capacity"
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa."
+          ],
+          "ctaLabel": "Saiba mais",
+          "ctaTo": "/register"
+        },
+        {
+          "key": "pro",
+          "name": "Pro",
+          "price": "$49.99/mo",
+          "positioning": "Esta secao explica claramente o recurso no Schedulaa.",
+          "description": "Esta secao explica claramente o recurso no Schedulaa.",
+          "trialNote": "Esta secao explica claramente o recurso no Schedulaa.",
+          "features": [
+            "Saiba mais",
+            {
+              "type": "heading",
+              "text": "Esta secao explica claramente o recurso no Schedulaa."
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Payroll"
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Saiba mais",
+            "Saiba mais",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta secao explica claramente o recurso no Schedulaa."
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta secao explica claramente o recurso no Schedulaa."
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Saiba mais",
+            {
+              "type": "heading",
+              "text": "Capacity"
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa."
+          ],
+          "ctaLabel": "Saiba mais",
+          "ctaTo": "/register",
+          "highlight": true,
+          "badge": "Esta secao explica claramente o recurso no Schedulaa."
+        },
+        {
+          "key": "business",
+          "name": "Business",
+          "price": "$119.99/mo",
+          "description": "Esta secao explica claramente o recurso no Schedulaa.",
+          "trialNote": "Esta secao explica claramente o recurso no Schedulaa.",
+          "features": [
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta secao explica claramente o recurso no Schedulaa."
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Saiba mais",
+            {
+              "type": "heading",
+              "text": "Payroll"
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta secao explica claramente o recurso no Schedulaa."
+            },
+            "Saiba mais",
+            "Sim, este recurso e suportado no fluxo atual da plataforma.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            {
+              "type": "heading",
+              "text": "Esta secao explica claramente o recurso no Schedulaa."
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Saiba mais",
+            {
+              "type": "heading",
+              "text": "Capacity"
+            },
+            "Esta secao explica claramente o recurso no Schedulaa.",
+            "Add seats for $9/mo each.",
+            "Esta secao explica claramente o recurso no Schedulaa."
+          ],
+          "ctaLabel": "Saiba mais",
+          "ctaTo": "/register"
+        }
+      ],
+      "addons": {
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "headers": {
+          "addon": "Add-on",
+          "price": "Price"
+        },
+        "items": [
+          {
+            "key": "extraSeat",
+            "name": "Esta secao explica claramente o recurso no Schedulaa.",
+            "price": "$9/mo per seat (prorated)"
+          }
+        ]
+      }
+    }
+  },
+  "assurances": {
+    "eyebrow": "Esta secao explica claramente o recurso no Schedulaa.",
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "Esta secao explica claramente o recurso no Schedulaa.",
+    "items": [
+      {
+        "key": "noHiddenFees",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      {
+        "key": "switchPlans",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      {
+        "key": "professionReady",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      {
+        "key": "enterpriseOnboarding",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      {
+        "key": "roleAccess",
+        "title": "Esta secao explica claramente o recurso no Schedulaa.",
+        "description": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      {
+        "key": "globalPayments",
+        "title": "Saiba mais",
+        "description": "Esta secao explica claramente o recurso no Schedulaa."
+      }
+    ]
+  },
+  "ribbon": {
+    "message": "Esta secao explica claramente o recurso no Schedulaa.",
+    "buttonLabel": "Esta secao explica claramente o recurso no Schedulaa.",
+    "buttonTo": "/manager/dashboard"
+  },
+  "footnote": {
+    "message": "Esta secao explica claramente o recurso no Schedulaa."
+  },
+  "ctaBanner": {
+    "eyebrow": "Esta secao explica claramente o recurso no Schedulaa.",
+    "title": "Saiba mais",
+    "description": "Esta secao explica claramente o recurso no Schedulaa.",
+    "primaryCta": {
+      "label": "Esta secao explica claramente o recurso no Schedulaa."
+    },
+    "secondaryCta": {
+      "label": "Saiba mais"
+    }
+  },
+  "included": {
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "items": [
+      "Esta secao explica claramente o recurso no Schedulaa.",
+      "Esta secao explica claramente o recurso no Schedulaa.",
+      "Saiba mais",
+      "Esta secao explica claramente o recurso no Schedulaa.",
+      "Esta secao explica claramente o recurso no Schedulaa."
+    ]
+  },
+  "comparison": {
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "subtitle": "Esta secao explica claramente o recurso no Schedulaa.",
+    "headers": {
+      "feature": "Feature",
+      "starter": "Starter",
+      "pro": "Pro",
+      "business": "Business"
+    },
+    "values": {
+      "yes": "Yes",
+      "dash": "—",
+      "businessHours": "Esta secao explica claramente o recurso no Schedulaa.",
+      "always": "24 / 7"
+    },
+    "rows": {
+      "price": {
+        "label": "Price",
+        "starter": "$19.99 / mo",
+        "pro": "$49.99 / mo",
+        "business": "$119.99 / mo"
+      },
+      "bestFor": {
+        "label": "Esta secao explica claramente o recurso no Schedulaa.",
+        "starter": "Esta secao explica claramente o recurso no Schedulaa.",
+        "pro": "Esta secao explica claramente o recurso no Schedulaa.",
+        "business": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      "website": {
+        "section": "Esta secao explica claramente o recurso no Schedulaa.",
+        "builder": "Esta secao explica claramente o recurso no Schedulaa.",
+        "customDomain": "Esta secao explica claramente o recurso no Schedulaa.",
+        "publicBooking": "Esta secao explica claramente o recurso no Schedulaa.",
+        "embedded": "Saiba mais",
+        "branding": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      "booking": {
+        "section": "Esta secao explica claramente o recurso no Schedulaa.",
+        "online": "Saiba mais",
+        "reschedule": "Esta secao explica claramente o recurso no Schedulaa.",
+        "multi": "Saiba mais",
+        "staffScheduling": "Esta secao explica claramente o recurso no Schedulaa.",
+        "shiftSwaps": "Esta secao explica claramente o recurso no Schedulaa.",
+        "bulk": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      "time": {
+        "section": "Esta secao explica claramente o recurso no Schedulaa.",
+        "clock": "Esta secao explica claramente o recurso no Schedulaa.",
+        "breakPolicy": "Esta secao explica claramente o recurso no Schedulaa.",
+        "staggered": "Esta secao explica claramente o recurso no Schedulaa.",
+        "ipHints": "Esta secao explica claramente o recurso no Schedulaa.",
+        "overtime": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      "payroll": {
+        "section": "Payroll",
+        "processing": "Esta secao explica claramente o recurso no Schedulaa.",
+        "holiday": "Esta secao explica claramente o recurso no Schedulaa.",
+        "payslip": "Esta secao explica claramente o recurso no Schedulaa.",
+        "exports": "Esta secao explica claramente o recurso no Schedulaa.",
+        "invoicing": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      "compliance": {
+        "section": "Conformidade",
+        "revenueReports": "Esta secao explica claramente o recurso no Schedulaa.",
+        "exports": "Esta secao explica claramente o recurso no Schedulaa.",
+        "w2": "Esta secao explica claramente o recurso no Schedulaa.",
+        "t4": "Esta secao explica claramente o recurso no Schedulaa.",
+        "audit": "Saiba mais"
+      },
+      "analytics": {
+        "section": "Analytics",
+        "revenueDash": "Saiba mais",
+        "utilization": "Esta secao explica claramente o recurso no Schedulaa.",
+        "segmentation": "Esta secao explica claramente o recurso no Schedulaa.",
+        "multiLocation": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      "automation": {
+        "section": "Automation",
+        "notifications": "Esta secao explica claramente o recurso no Schedulaa.",
+        "campaigns": "Esta secao explica claramente o recurso no Schedulaa.",
+        "zapier": "Esta secao explica claramente o recurso no Schedulaa.",
+        "workflows": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      "hiring": {
+        "section": "Hiring",
+        "jobs": "Esta secao explica claramente o recurso no Schedulaa.",
+        "resume": "Esta secao explica claramente o recurso no Schedulaa.",
+        "onboarding": "Esta secao explica claramente o recurso no Schedulaa.",
+        "handoff": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      "scale": {
+        "section": "Scale",
+        "seatsIncluded": "Esta secao explica claramente o recurso no Schedulaa.",
+        "starterSeats": "1",
+        "proSeats": "Esta secao explica claramente o recurso no Schedulaa.",
+        "businessSeats": "10",
+        "additionalSeats": "Esta secao explica claramente o recurso no Schedulaa.",
+        "seatPrice": "$9 / seat",
+        "multiLocation": "Esta secao explica claramente o recurso no Schedulaa.",
+        "starterLocations": "1",
+        "proLocations": "1",
+        "businessLocations": "Esta secao explica claramente o recurso no Schedulaa.",
+        "roleAccess": "Esta secao explica claramente o recurso no Schedulaa.",
+        "starterAccess": "Basic",
+        "proAccess": "Advanced",
+        "businessAccess": "Advanced",
+        "branchPermissions": "Esta secao explica claramente o recurso no Schedulaa."
+      },
+      "support": {
+        "section": "Support",
+        "standard": "Esta secao explica claramente o recurso no Schedulaa.",
+        "priority": "Esta secao explica claramente o recurso no Schedulaa.",
+        "audit": "Esta secao explica claramente o recurso no Schedulaa."
+      }
+    }
+  },
+  "whyTeams": {
+    "title": "Sim, este recurso e suportado no fluxo atual da plataforma.",
+    "items": [
+      "Esta secao explica claramente o recurso no Schedulaa.",
+      "Esta secao explica claramente o recurso no Schedulaa.",
+      "Esta secao explica claramente o recurso no Schedulaa."
+    ]
+  },
+  "websiteDesignService": {
+    "title": "Esta secao explica claramente o recurso no Schedulaa.",
+    "description": "Saiba mais",
+    "includes": "Esta secao explica claramente o recurso no Schedulaa.",
+    "cta": "Esta secao explica claramente o recurso no Schedulaa.",
+    "loadingCta": "Saiba mais"
+  }
+}

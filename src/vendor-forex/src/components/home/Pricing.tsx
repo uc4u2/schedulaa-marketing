@@ -4,7 +4,7 @@ import { CheckIcon } from '@/icons';
 import { cn } from '@/utils/cn';
 import { getPricingSource } from '@/legacy-content/pricing/getPricingSource';
 import { buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
-import { detectLocaleFromPath } from '@/utils/locale';
+import { AppLocale, detectLocaleFromPath } from '@/utils/locale';
 import gradient4Img from '@public/images/ns-img-496.png';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -26,19 +26,27 @@ interface PricingPlan {
   features: Feature[];
 }
 
-const featureLabels = [
-  'Website + booking',
-  'Staff scheduling',
-  'Payroll workflows',
-  'Automation & campaigns',
-  'Multi-location controls',
-];
+const featureLabelsByLocale: Record<string, string[]> = {
+  en: ['Website + booking', 'Staff scheduling', 'Payroll workflows', 'Automation & campaigns', 'Multi-location controls'],
+  fa: ['\u0648\u0628\u200c\u0633\u0627\u06cc\u062a + \u0631\u0632\u0631\u0648', '\u0632\u0645\u0627\u0646\u200c\u0628\u0646\u062f\u06cc \u06a9\u0627\u0631\u06a9\u0646\u0627\u0646', '\u062c\u0631\u06cc\u0627\u0646\u200c\u0647\u0627\u06cc \u062d\u0642\u0648\u0642', '\u0627\u062a\u0648\u0645\u0627\u0633\u06cc\u0648\u0646 \u0648 \u06a9\u0645\u067e\u06cc\u0646\u200c\u0647\u0627', '\u06a9\u0646\u062a\u0631\u0644 \u0686\u0646\u062f \u0634\u0639\u0628\u0647'],
+  ru: ['\u0421\u0430\u0439\u0442 + \u0431\u0440\u043e\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435', '\u0420\u0430\u0441\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u043a\u043e\u043c\u0430\u043d\u0434\u044b', '\u0417\u0430\u0440\u043f\u043b\u0430\u0442\u043d\u044b\u0435 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u044b', '\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044f \u0438 \u043a\u0430\u043c\u043f\u0430\u043d\u0438\u0438', '\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0442\u043e\u0447\u0435\u043a'],
+  zh: ['\u7f51\u7ad9 + \u9884\u7ea6', '\u5458\u5de5\u6392\u73ed', '\u85aa\u8d44\u6d41\u7a0b', '\u81ea\u52a8\u5316\u4e0e\u8425\u9500', '\u591a\u95e8\u5e97\u7ba1\u7406'],
+};
 
-const Pricing = () => {
+const includedByLocale: Record<string, string> = {
+  en: "What's included",
+  fa: '\u0634\u0627\u0645\u0644 \u0686\u0647 \u0645\u0648\u0627\u0631\u062f\u06cc \u0627\u0633\u062a',
+  ru: '\u0427\u0442\u043e \u0432\u043a\u043b\u044e\u0447\u0435\u043d\u043e',
+  zh: '\u5305\u542b\u5185\u5bb9',
+};
+
+const Pricing = ({ locale: localeProp }: { locale?: AppLocale }) => {
   const pathname = usePathname() || '/';
-  const locale = detectLocaleFromPath(pathname);
+  const locale = localeProp || detectLocaleFromPath(pathname);
   const pricingSource = getPricingSource(locale);
   const returnTo = marketingReturnTo(locale, '/pricing');
+  const featureLabels = featureLabelsByLocale[locale] || featureLabelsByLocale.en;
+  const includedLabel = includedByLocale[locale] || includedByLocale.en;
   const pricingPlans: PricingPlan[] = [
     {
       id: 'starter',
@@ -114,7 +122,7 @@ const Pricing = () => {
                   <div>
                     <div className="md:h-[195px] md:w-[290px]" />
                     <div className="space-y-2.5">
-                      <h3 className="text-heading-6">What&apos;s included</h3>
+                    <h3 className="text-heading-6">{includedLabel}</h3>
                       <ul>
                         {featureLabels.map((feature, index) => (
                           <li

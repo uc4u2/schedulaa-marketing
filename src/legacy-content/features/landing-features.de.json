@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "description": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "ogTitle": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "ogDescription": "Mehr erfahren"
+  },
+  "hero": {
+    "eyebrow": "Plattform-Highlights",
+    "title": {
+      "line1": "Funktionen entwickelt fuer",
+      "line2": "Enterprise-Serviceteams."
+    },
+    "subtitle": "Schedulaa verbindet Planung, Lohnabrechnung, Websites und eCommerce in einer Plattform, damit Team und Kunden synchron bleiben.",
+    "badge": {
+      "title": "Schedulaa OS",
+      "subtitle": "Zentrale Steuerzentrale"
+    },
+    "primaryCta": {
+      "label": "Kostenlos testen",
+      "supporting": "Keine Karte erforderlich"
+    },
+    "secondaryCta": {
+      "label": "Plaene vergleichen"
+    },
+    "mediaAlt": "Schedulaa Screens fuer Planung und Lohnabrechnung",
+    "banner": {
+      "title": "Neu:",
+      "body": "Eigene Domains mit TXT/CNAME-Verifizierung und automatischem SSL sind jetzt live.",
+      "ctaLabel": "Domain verbinden"
+    },
+    "featureCard": {
+      "eyebrow": "Warum Teams upgraden",
+      "title": "Eine zentrale Quelle fuer alle Betriebsdaten",
+      "subtitle": "Ersetzen Sie 5+ isolierte Tools durch Buchung, Payroll und Websites, die bereits zusammenarbeiten."
+    }
+  },
+  "highlightCards": {
+    "scheduling": {
+      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "description": "Mehr erfahren",
+      "points": [
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Mehr erfahren",
+        "Mehr erfahren",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+      ]
+    },
+    "payroll": {
+      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "description": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "points": [
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Mehr erfahren",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Mehr erfahren"
+      ]
+    },
+    "commerce": {
+      "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "description": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "points": [
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt."
+      ]
+    }
+  },
+  "featureShowcase": {
+    "eyebrow": "Plattform-Saeulen",
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "subtitle": "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+    "features": [
+      {
+        "icon": "01",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": [
+          "Mehr erfahren",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Mehr erfahren"
+        ]
+      },
+      {
+        "icon": "02",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": [
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+        ]
+      },
+      {
+        "icon": "03",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": [
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Mehr erfahren"
+        ]
+      },
+      {
+        "icon": "04",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": [
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+        ]
+      },
+      {
+        "icon": "05",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": [
+          "Mehr erfahren",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+        ]
+      },
+      {
+        "icon": "06",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": [
+          "Mehr erfahren",
+          "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+          "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+          "Mehr erfahren"
+        ]
+      },
+      {
+        "icon": "07",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": [
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+        ]
+      },
+      {
+        "icon": "08",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": [
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+        ]
+      },
+      {
+        "icon": "09",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": [
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Mehr erfahren",
+          "Mehr erfahren"
+        ]
+      },
+      {
+        "icon": "10",
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": [
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+        ]
+      }
+    ]
+  },
+  "platformMap": {
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "subtitle": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "points": {
+      "branches": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "analytics": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "templates": "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+      "sync": "Mehr erfahren",
+      "domains": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+    },
+    "primaryCta": {
+      "label": "Mit unserem Team sprechen"
+    },
+    "secondaryCta": {
+      "label": "Mehr erfahren"
+    },
+    "mediaAlt": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+  },
+  "integrations": {
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "subtitle": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "points": {
+      "accounting": "Mehr erfahren",
+      "automation": "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+      "stripe": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+      "domains": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+    },
+    "mediaAlt": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "blocks": {
+      "payments": {
+        "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "items": [
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+        ]
+      },
+      "compliance": {
+        "title": "Konformitaet",
+        "items": [
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+          "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+        ]
+      }
+    }
+  },
+  "insight": {
+    "eyebrow": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "subtitle": "Mehr erfahren",
+    "items": [
+      {
+        "tag": "Playbook",
+        "headline": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": "Ja, diese Funktion wird im aktuellen Plattform-Workflow unterstuetzt.",
+        "ctaLabel": "Mehr erfahren",
+        "ctaHref": "https://www.schedulaa.com/blog/multi-location-staffing"
+      },
+      {
+        "tag": "Webinar",
+        "headline": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "ctaLabel": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "ctaHref": "https://www.schedulaa.com/webinars/payroll"
+      },
+      {
+        "tag": "Checklist",
+        "headline": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "description": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "ctaLabel": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+        "ctaHref": "https://www.schedulaa.com/resources/automation-checklist"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa."
+  },
+  "cta": {
+    "eyebrow": "Mehr erfahren",
+    "title": "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    "description": "Mehr erfahren",
+    "primaryCta": {
+      "label": "Mehr erfahren"
+    },
+    "secondaryCta": {
+      "label": "Mehr erfahren"
+    }
+  }
+}

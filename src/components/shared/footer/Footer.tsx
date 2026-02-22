@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
+import { detectLocaleFromPath, stripLocalePrefix, withLocalePath } from '@/utils/locale';
 import { cn } from '@/utils/cn';
 import { FOOTER_COMPARE_MOBILE_LIMIT, FOOTER_SECTIONS, type FooterLinkItem } from '@/data/footer-data';
 import gradientImg from '@public/images/ns-img-532.png';
@@ -23,7 +23,7 @@ const Footer = ({ className }: { className?: string }) => {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
   const localePath = (path: string) => withLocalePath(path, locale);
-  const returnTo = marketingReturnTo(locale, pathname.replace(/^\/(en|fa)/, '') || '/');
+  const returnTo = marketingReturnTo(locale, stripLocalePrefix(pathname, locale) || '/');
   const compareSection = FOOTER_SECTIONS.find((section) => section.id === 'compare');
   const legalSection = FOOTER_SECTIONS.find((section) => section.id === 'legal');
   const primarySections = FOOTER_SECTIONS.filter((section) => section.id !== 'compare' && section.id !== 'legal');
