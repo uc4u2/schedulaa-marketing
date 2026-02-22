@@ -1,7 +1,6 @@
 import heroVectorImg from '@public/images/ns-img-296.svg';
 import Image from 'next/image';
 import sourceEn from '@/legacy-content/features/landing-features.json';
-import type { ReactNode } from 'react';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
@@ -19,75 +18,24 @@ const featureItems: FeatureItem[] = [
   { id: 3, text: 'Websites, checkout, and automation in one OS.' },
 ];
 
-const workflowLayers: Array<{ title: string; subtitle: string; icon: ReactNode }> = [
-  {
-    title: 'Booking',
-    subtitle: 'Client intake + slots',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <rect x="3.5" y="5.5" width="17" height="15" rx="2.5" stroke="currentColor" strokeWidth="1.8" />
-        <path d="M3.5 10.5h17M8 3.8v3.4M16 3.8v3.4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Scheduling',
-    subtitle: 'Shift orchestration',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M4 12h16M12 4v16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <rect x="5.5" y="5.5" width="13" height="13" rx="2.5" stroke="currentColor" strokeWidth="1.8" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Time Tracking',
-    subtitle: 'Clock + compliance logs',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8" />
-        <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Payroll',
-    subtitle: 'Runs, slips, and exports',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M5 7.5h14M7.5 4.5v6M16.5 4.5v6M6 19.5h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Reports',
-    subtitle: 'Ops + finance analytics',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M5 18V9m7 9V6m7 12v-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M4 20h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-];
-
 const Hero = ({ source }: { source?: any }) => {
   const content = source || sourceEn;
   const returnTo = marketingReturnTo(DEFAULT_LOCALE, '/');
   return (
     <section className="relative z-20 max-h-[900px] bg-[url('/images/ns-img-295.jpg')] bg-cover bg-top bg-no-repeat pt-[170px] pb-[50px] md:pt-[206px] md:pb-[100px] xl:max-h-[1126px]">
+      <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#040914]/52 via-[#030814]/36 to-[#01040b]/28" />
       <div className="absolute top-[10%] left-1/2 -z-10 mx-auto max-w-[1365px] -translate-x-1/2">
         <figure>
           <Image src={heroVectorImg} alt="hero" />
         </figure>
       </div>
-      <div className="main-container">
-        <div className="space-y-5 md:space-y-4 md:text-center">
+      <div className="main-container relative z-10">
+        <div className="mx-auto max-w-[980px] rounded-3xl border border-white/10 bg-black/22 px-4 py-7 shadow-[0_16px_44px_rgba(2,8,20,0.35)] backdrop-blur-[2px] md:px-8 md:py-9">
+          <div className="space-y-5 md:space-y-4 md:text-center">
           <RevealAnimation delay={0.1}>
             <h1 className="mx-auto max-w-[380px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[776px]">
-              <span className="hero-text-gradient hero-text-color-2 block">
-                The Operations OS for Service-Based Teams
-              </span>
+              <span className="block text-white">The Operations OS for</span>
+              <span className="hero-text-gradient hero-text-color-2 block">Service-Based Teams</span>
             </h1>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
@@ -118,48 +66,48 @@ const Hero = ({ source }: { source?: any }) => {
               </RevealAnimation>
             ))}
           </ul>
+          </div>
+          <ul className="mt-10 flex flex-col items-center justify-center gap-4 md:flex-row">
+            <RevealAnimation delay={0.6} direction="left" offset={50}>
+              <li className="w-full text-center sm:w-auto sm:text-left">
+                <LinkButton
+                  href={buildAppUrl('/register', { returnTo })}
+                  className="btn hover:btn-secondary dark:hover:btn-accent btn-green btn-xl w-[90%] rounded-xl border-0 text-center shadow-[0_14px_30px_rgba(157,255,0,0.18)] transition-shadow duration-300 hover:shadow-[0_18px_38px_rgba(157,255,0,0.28)] md:w-auto">
+                  {content.hero.primaryCta.label}
+                </LinkButton>
+              </li>
+            </RevealAnimation>
+            <RevealAnimation delay={0.7} direction="left" offset={50}>
+              <li className="w-full text-center sm:w-auto sm:text-left">
+                <LinkButton
+                  href="/pricing"
+                  className="btn btn-dark hover:btn-green bg-accent/22 btn-xl w-[90%] rounded-xl text-center text-white hover:border-0 md:w-auto">
+                  {content.hero.secondaryCta.label}
+                </LinkButton>
+              </li>
+            </RevealAnimation>
+          </ul>
+          <p className="mt-4 text-center text-xs text-white/68">No credit card required · Cancel anytime</p>
+          <div className="mt-4 space-y-2.5">
+            <p className="text-center text-sm text-white/80">Built for payroll integrity across US + Canada.</p>
+            <ul className="flex flex-wrap items-center justify-center gap-2">
+              {['Role-based access', 'Audit-ready reports', 'QuickBooks/Xero exports', 'Stripe billing'].map((item) => (
+                <li key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/82">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <ul className="mt-14 flex flex-col items-center justify-center gap-4 md:flex-row">
-          <RevealAnimation delay={0.6} direction="left" offset={50}>
-            <li className="w-full text-center sm:w-auto sm:text-left">
-              <LinkButton
-                href={buildAppUrl('/register', { returnTo })}
-                className="btn hover:btn-secondary dark:hover:btn-accent btn-green btn-xl w-[90%] border-0 text-center md:w-auto">
-                {content.hero.primaryCta.label}
-              </LinkButton>
-            </li>
-          </RevealAnimation>
-          <RevealAnimation delay={0.7} direction="left" offset={50}>
-            <li className="w-full text-center sm:w-auto sm:text-left">
-              <LinkButton
-                href="/pricing"
-                className="btn btn-dark hover:btn-green bg-accent/22 btn-xl w-[90%] text-center text-white hover:border-0 md:w-auto">
-                {content.hero.secondaryCta.label}
-              </LinkButton>
-            </li>
-          </RevealAnimation>
-        </ul>
         <RevealAnimation delay={0.8} instant>
           <div className="mt-[50px] lg:mt-[100px]">
             <div className="mx-auto max-w-[760px] lg:max-w-[1040px] xl:max-w-[1360px]">
-              <ul className="mb-5 flex flex-wrap items-center justify-center gap-2.5 md:flex-nowrap md:gap-3 lg:mb-6">
-                {workflowLayers.map((layer, index) => (
-                  <li key={layer.title} className="flex items-center gap-2">
-                    <article className="flex h-[68px] min-w-[168px] items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-3 shadow-sm backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-400/20">
-                      <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-orange-400/30 to-cyan-400/20 text-white/90">
-                        {layer.icon}
-                      </span>
-                      <div className="min-w-0">
-                        <p className="truncate text-base font-semibold tracking-tight leading-none text-white/95">{layer.title}</p>
-                        <p className="mt-1 truncate text-xs leading-none text-white/60">{layer.subtitle}</p>
-                        </div>
-                    </article>
-                    {index !== workflowLayers.length - 1 && (
-                      <div className="hidden h-px w-10 bg-gradient-to-r from-white/20 via-white/40 to-white/20 md:block" />
-                    )}
-                  </li>
-                ))}
-              </ul>
+              <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-r from-cyan-400/20 via-blue-500/20 to-orange-400/20 shadow-lg">
+                <p className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-[12rem] font-bold tracking-[0.08em] text-white/5 md:text-[16rem]">
+                  OPERATIONS
+                </p>
+                <div className="relative h-16 w-full" />
+              </div>
             </div>
             <div className="relative mx-auto max-w-[760px] lg:max-w-[1040px] xl:max-w-[1360px]" style={{ transform: 'perspective(1400px) rotateX(2.2deg)' }}>
               <div className="pointer-events-none absolute -inset-4 rounded-[28px] bg-linear-[145deg,rgba(0,194,255,0.22)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.12)_100%] blur-xl" />
