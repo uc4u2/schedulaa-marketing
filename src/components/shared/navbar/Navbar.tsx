@@ -223,7 +223,37 @@ const Navbar = () => {
       </div>
 
       <div className={cn('overflow-hidden transition-all xl:hidden', open ? 'mt-3 max-h-[900px] pt-2' : 'max-h-0')}>
-        <nav className="grid gap-2 rounded-2xl border border-stroke-2 bg-white/95 p-4 backdrop-blur dark:border-stroke-7 dark:bg-background-8/95" aria-label="Mobile primary">
+        <nav
+          className="grid max-h-[calc(100vh-140px)] gap-2 overflow-y-auto rounded-2xl border border-stroke-2 bg-white/95 p-4 backdrop-blur dark:border-stroke-7 dark:bg-background-8/95"
+          aria-label="Mobile primary"
+        >
+          <div className="grid grid-cols-2 gap-2 border-b border-stroke-2 pb-3 dark:border-stroke-7">
+            {DASHBOARD_LINKS.map((item) => (
+              <a
+                key={item.id}
+                href={buildAppUrl(item.href, { returnTo })}
+                className="rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7"
+                onClick={() => setOpen(false)}
+              >
+                {t(item.labelKey)}
+              </a>
+            ))}
+            {AUTH_LINKS.map((item) => (
+              <a
+                key={item.id}
+                href={buildAppUrl(item.href, { returnTo })}
+                className={
+                  item.id === 'start-free'
+                    ? 'rounded-lg bg-primary-500 px-3 py-2 text-center text-sm font-semibold text-white'
+                    : 'rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7'
+                }
+                onClick={() => setOpen(false)}
+              >
+                {t(item.labelKey)}
+              </a>
+            ))}
+          </div>
+
           {MOBILE_NAV_LINKS.map((item) => (
             <Link
               key={item.id}
@@ -235,30 +265,6 @@ const Navbar = () => {
             </Link>
           ))}
 
-          <div className="mt-2 grid gap-2 border-t border-stroke-2 pt-3 dark:border-stroke-7">
-            {DASHBOARD_LINKS.map((item) => (
-              <a
-                key={item.id}
-                href={buildAppUrl(item.href, { returnTo })}
-                className="rounded-lg border border-stroke-2 px-3 py-2 text-sm dark:border-stroke-7"
-              >
-                {t(item.labelKey)}
-              </a>
-            ))}
-            {AUTH_LINKS.map((item) => (
-              <a
-                key={item.id}
-                href={buildAppUrl(item.href, { returnTo })}
-                className={
-                  item.id === 'start-free'
-                    ? 'rounded-lg bg-primary-500 px-3 py-2 text-sm font-semibold text-white'
-                    : 'rounded-lg border border-stroke-2 px-3 py-2 text-sm dark:border-stroke-7'
-                }
-              >
-                {t(item.labelKey)}
-              </a>
-            ))}
-          </div>
         </nav>
       </div>
     </header>
