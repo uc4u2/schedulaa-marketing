@@ -1,13 +1,7 @@
 import heroVectorImg from '@public/images/ns-img-296.svg';
-import heroOverlayClientsImg from '@public/images/marketing/payroll-manage.png';
-import heroOverlayEmployeeImg from '@public/images/marketing/showcase/employee-management.png';
-import heroOverlayShiftImg from '@public/images/marketing/shift-pre.png';
-import heroOverlayBookingImg from '@public/images/marketing/showcase/clients-pick2.png';
-import heroOverlayWebsiteBuilderImg from '@public/images/marketing/showcase/website-builder3d.png';
 import Image from 'next/image';
-import type { CSSProperties } from 'react';
-import Link from 'next/link';
 import sourceEn from '@/legacy-content/features/landing-features.json';
+import type { ReactNode } from 'react';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
@@ -23,6 +17,58 @@ const featureItems: FeatureItem[] = [
   { id: 1, text: 'Real-time booking and provider availability.' },
   { id: 2, text: 'Payroll-ready exports for US + Canada.' },
   { id: 3, text: 'Websites, checkout, and automation in one OS.' },
+];
+
+const workflowLayers: Array<{ title: string; subtitle: string; icon: ReactNode }> = [
+  {
+    title: 'Booking',
+    subtitle: 'Client intake + slots',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <rect x="3.5" y="5.5" width="17" height="15" rx="2.5" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M3.5 10.5h17M8 3.8v3.4M16 3.8v3.4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Scheduling',
+    subtitle: 'Shift orchestration',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M4 12h16M12 4v16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <rect x="5.5" y="5.5" width="13" height="13" rx="2.5" stroke="currentColor" strokeWidth="1.8" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Time Tracking',
+    subtitle: 'Clock + compliance logs',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Payroll',
+    subtitle: 'Runs, slips, and exports',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M5 7.5h14M7.5 4.5v6M16.5 4.5v6M6 19.5h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Reports',
+    subtitle: 'Ops + finance analytics',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M5 18V9m7 9V6m7 12v-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M4 20h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
 ];
 
 const Hero = ({ source }: { source?: any }) => {
@@ -96,69 +142,24 @@ const Hero = ({ source }: { source?: any }) => {
         <RevealAnimation delay={0.8} instant>
           <div className="mt-[50px] lg:mt-[100px]">
             <div className="mx-auto max-w-[760px] lg:max-w-[1040px] xl:max-w-[1360px]">
-              <div className="mb-5 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-3 md:justify-center lg:mb-6">
-                <figure
-                  className="hero-float relative h-[84px] w-[152px] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-white/5 p-1 shadow-xl shadow-black/35 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-2xl hover:shadow-cyan-400/25 sm:h-[92px] sm:w-[168px] lg:h-[100px] lg:w-[184px]"
-                  style={{ animationDelay: '120ms' } as CSSProperties}>
-                  <Image
-                    src={heroOverlayEmployeeImg}
-                    alt="Employee management preview"
-                    quality={100}
-                    unoptimized
-                    className="h-full w-full rounded-lg object-cover opacity-95"
-                  />
-                </figure>
-                <figure
-                  className="hero-float relative h-[84px] w-[152px] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-white/5 p-1 shadow-xl shadow-black/35 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-2xl hover:shadow-lime-300/25 sm:h-[92px] sm:w-[168px] lg:h-[100px] lg:w-[184px]"
-                  style={{ animationDelay: '300ms' } as CSSProperties}>
-                  <Link href="/payroll" className="group relative block overflow-hidden rounded-lg">
-                    <span className="absolute top-2 right-2 z-10 inline-flex items-center rounded-full border border-lime-200/30 bg-lime-300/95 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-slate-900 shadow-[0_8px_20px_rgba(157,255,0,0.28)]">
-                      Popular
-                    </span>
-                    <span className="pointer-events-none absolute inset-0 z-[1] rounded-lg ring-1 ring-lime-300/35 transition-all duration-300 group-hover:ring-lime-300/55" />
-                    <Image
-                      src={heroOverlayClientsImg}
-                      alt="Payroll management preview"
-                      quality={100}
-                      unoptimized
-                      className="h-full w-full rounded-lg object-cover opacity-95 transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                  </Link>
-                </figure>
-                <figure
-                  className="hero-float relative h-[84px] w-[152px] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-white/5 p-1 shadow-xl shadow-black/35 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-2xl hover:shadow-cyan-400/25 sm:h-[92px] sm:w-[168px] lg:h-[100px] lg:w-[184px]"
-                  style={{ animationDelay: '480ms' } as CSSProperties}>
-                  <Image
-                    src={heroOverlayBookingImg}
-                    alt="Client slot selection preview"
-                    quality={100}
-                    unoptimized
-                    className="h-full w-full rounded-lg object-cover opacity-95"
-                  />
-                </figure>
-                <figure
-                  className="hero-float relative h-[84px] w-[152px] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-white/5 p-1 shadow-xl shadow-black/35 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-2xl hover:shadow-cyan-400/25 sm:h-[92px] sm:w-[168px] lg:h-[100px] lg:w-[184px]"
-                  style={{ animationDelay: '660ms' } as CSSProperties}>
-                  <Image
-                    src={heroOverlayShiftImg}
-                    alt="Shift management preview"
-                    quality={100}
-                    unoptimized
-                    className="h-full w-full rounded-lg object-cover opacity-95"
-                  />
-                </figure>
-                <figure
-                  className="hero-float relative h-[84px] w-[152px] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-white/5 p-1 shadow-xl shadow-black/35 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-2xl hover:shadow-cyan-400/25 sm:h-[92px] sm:w-[168px] lg:h-[100px] lg:w-[184px]"
-                  style={{ animationDelay: '840ms' } as CSSProperties}>
-                  <Image
-                    src={heroOverlayWebsiteBuilderImg}
-                    alt="Website builder preview"
-                    quality={100}
-                    unoptimized
-                    className="h-full w-full rounded-lg object-cover opacity-95"
-                  />
-                </figure>
-              </div>
+              <ul className="mb-5 flex flex-wrap items-center justify-center gap-2.5 md:flex-nowrap md:gap-3 lg:mb-6">
+                {workflowLayers.map((layer, index) => (
+                  <li key={layer.title} className="flex items-center gap-2">
+                    <article className="flex h-[68px] min-w-[168px] items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-3 shadow-sm backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-400/20">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-orange-400/30 to-cyan-400/20 text-white/90">
+                        {layer.icon}
+                      </span>
+                      <div className="min-w-0">
+                        <p className="truncate text-base font-semibold tracking-tight leading-none text-white/95">{layer.title}</p>
+                        <p className="mt-1 truncate text-xs leading-none text-white/60">{layer.subtitle}</p>
+                        </div>
+                    </article>
+                    {index !== workflowLayers.length - 1 && (
+                      <div className="hidden h-px w-10 bg-gradient-to-r from-white/20 via-white/40 to-white/20 md:block" />
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="relative mx-auto max-w-[760px] lg:max-w-[1040px] xl:max-w-[1360px]" style={{ transform: 'perspective(1400px) rotateX(2.2deg)' }}>
               <div className="pointer-events-none absolute -inset-4 rounded-[28px] bg-linear-[145deg,rgba(0,194,255,0.22)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.12)_100%] blur-xl" />
