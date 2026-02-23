@@ -6,7 +6,7 @@ import timeTrackingImg from '@public/images/marketing/showcase/time-tracking.png
 import payrollImg from '@public/images/marketing/payroll-manage.png';
 import reportsImg from '@public/images/marketing/showcase/manager-dashboards1.png';
 import Image, { StaticImageData } from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { AppLocale } from '@/utils/locale';
 
 type WorkflowNode = {
@@ -87,22 +87,11 @@ const mapNodesByLocale = (locale: AppLocale): WorkflowNode[] => {
   return workflowNodesEn.map((node) => ({ ...node, ...(labels[node.id] || {}) }));
 };
 
-const showByLocale: Record<string, string> = {
-  en: 'Show',
-  fa: 'نمایش',
-  ru: 'Показать',
-  zh: '显示',
-  es: 'Mostrar',
-  fr: 'Afficher',
-  de: 'Anzeigen',
-  ar: 'عرض',
-  pt: 'Mostrar',
-};
-
 const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
   const workflowNodes = mapNodesByLocale(locale);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const progress = useMemo(() => ((activeIndex + 1) / workflowNodes.length) * 100, [activeIndex, workflowNodes.length]);
 
   useEffect(() => {
     if (isPaused) return;
@@ -115,55 +104,51 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
   return (
     <div className="mt-[50px] lg:mt-[100px]" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
       <div className="mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]">
-        <div className="mb-5 hidden items-center justify-center gap-3 lg:mb-6 lg:flex">
-          {workflowNodes.map((node, index) => {
-            const isActive = index === activeIndex;
-            return (
-              <div key={node.id} className="flex items-center gap-3">
-                <div className="relative pt-5">
-                  <span
-                    className={`pointer-events-none absolute -top-1 left-1/2 z-20 inline-flex size-7 -translate-x-1/2 items-center justify-center rounded-full border text-xs font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.35)] ${
-                      isActive
-                        ? 'border-lime-300/75 bg-[#0b1220]/95 text-lime-200'
-                        : 'border-white/35 bg-[#0b1220]/90 text-white/90'
-                    }`}
-                  >
-                    {index + 1}
-                  </span>
+        <div className="mb-6 rounded-2xl border border-white/12 bg-[#0b1220]/45 p-3 backdrop-blur-sm lg:mb-8 lg:p-4">
+          <div className="no-scrollbar flex items-center justify-start gap-2 overflow-x-auto pb-1 lg:justify-center">
+            {workflowNodes.map((node, index) => {
+              const isActive = index === activeIndex;
+              return (
+                <div key={node.id} className="flex items-center gap-2">
                   <button
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    className={`relative px-7 py-3.5 [clip-path:polygon(25%_4%,75%_4%,100%_50%,75%_96%,25%_96%,0_50%)] border shadow-[0_14px_26px_rgba(0,0,0,0.36)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
-                      isActive ? 'border-lime-300/70 bg-[#0b1220]/55' : 'border-white/38 bg-[#0b1220]/35'
+                    className={`group relative flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-left transition-all duration-300 ${
+                      isActive
+                        ? 'border-lime-300/65 bg-lime-300/16 shadow-[0_8px_24px_rgba(157,255,0,0.22)]'
+                        : 'border-white/20 bg-white/6 hover:border-white/45 hover:bg-white/10'
                     }`}
-                    style={{
-                      animation: `heroCardDrop 820ms cubic-bezier(0.23,1,0.32,1) ${120 + index * 210}ms both, heroCardDrift 7.8s ease-in-out ${1.1 + index * 0.22}s infinite`,
-                    }}
                     aria-pressed={isActive}
-                    aria-label={`${showByLocale[locale] || showByLocale.en} ${node.label}`}>
-                    <span className={`pointer-events-none absolute inset-[3px] [clip-path:polygon(25%_4%,75%_4%,100%_50%,75%_96%,25%_96%,0_50%)] border ${isActive ? 'border-lime-300/45' : 'border-white/18'}`} />
-                    <span className="pointer-events-none absolute -inset-x-2 top-1/2 h-6 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(0,194,255,0.26)_0%,rgba(0,0,0,0)_68%)]" />
-                    <div className="relative z-10 flex min-w-[120px] items-center">
-                      <span className={`text-sm font-semibold tracking-wide ${isActive ? 'text-lime-100' : 'text-white/92'}`}>{node.label}</span>
-                    </div>
+                    aria-label={node.label}
+                  >
+                    <span
+                      className={`inline-flex size-6 items-center justify-center rounded-full border text-[11px] font-semibold ${
+                        isActive
+                          ? 'border-lime-300/70 bg-[#0b1220]/90 text-lime-200'
+                          : 'border-white/30 bg-[#0b1220]/75 text-white/90'
+                      }`}
+                    >
+                      {index + 1}
+                    </span>
+                    <span className={`whitespace-nowrap text-sm font-semibold tracking-tight ${isActive ? 'text-lime-100' : 'text-white/92'}`}>
+                      {node.label}
+                    </span>
                   </button>
+                  {index < workflowNodes.length - 1 ? (
+                    <div className="h-px w-6 shrink-0 bg-gradient-to-r from-white/25 via-white/55 to-white/25 lg:w-8" />
+                  ) : null}
                 </div>
-                {index < workflowNodes.length - 1 ? (
-                  <span className="inline-flex items-center gap-1 text-white/80 pt-5">
-                    <span className="h-[2px] w-9 bg-white/70" />
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-4">
-                      <path
-                        fillRule="evenodd"
-                        d="M3.25 10a.75.75 0 0 1 .75-.75h10.19l-2.72-2.72a.75.75 0 1 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H4a.75.75 0 0 1-.75-.75Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </span>
-                ) : null}
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+          <div className="mt-3 h-[3px] w-full rounded-full bg-white/12">
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-cyan-300/85 via-blue-300/80 to-lime-300/85 transition-all duration-500"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
         </div>
+
       </div>
 
       <div className="relative mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]" style={{ transform: 'perspective(1400px) rotateX(3deg)' }}>
