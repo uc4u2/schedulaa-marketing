@@ -3,9 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
-const API_ORIGIN =
-  process.env.NEXT_PUBLIC_API_ORIGIN ||
-  (process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://scheduling-application.onrender.com');
+const CHAT_ENDPOINT = '/api/chat';
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -56,7 +54,7 @@ export default function SchedulaaAssistant() {
     setDraft('');
     setLoading(true);
     try {
-      const response = await fetch(`${API_ORIGIN}/chat`, {
+      const response = await fetch(CHAT_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: content }),
