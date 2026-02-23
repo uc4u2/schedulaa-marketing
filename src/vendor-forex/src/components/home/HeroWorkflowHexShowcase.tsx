@@ -115,34 +115,42 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
   return (
     <div className="mt-[50px] lg:mt-[100px]" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
       <div className="mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]">
-        <div className="mb-5 hidden items-center justify-center gap-2 lg:mb-6 lg:flex">
+        <div className="mb-5 hidden items-center justify-center gap-3 lg:mb-6 lg:flex">
           {workflowNodes.map((node, index) => {
             const isActive = index === activeIndex;
             return (
-              <div key={node.id} className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => setActiveIndex(index)}
-                  className={`relative px-7 py-3.5 [clip-path:polygon(25%_4%,75%_4%,100%_50%,75%_96%,25%_96%,0_50%)] border shadow-[0_14px_26px_rgba(0,0,0,0.36)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
-                    isActive ? 'border-lime-300/70 bg-[#0b1220]/55' : 'border-white/38 bg-[#0b1220]/35'
-                  }`}
-                  style={{
-                    animation: `heroCardDrop 820ms cubic-bezier(0.23,1,0.32,1) ${120 + index * 210}ms both, heroCardDrift 7.8s ease-in-out ${1.1 + index * 0.22}s infinite`,
-                  }}
-                  aria-pressed={isActive}
-                  aria-label={`${showByLocale[locale] || showByLocale.en} ${node.label}`}>
-                  <span className={`pointer-events-none absolute inset-[3px] [clip-path:polygon(25%_4%,75%_4%,100%_50%,75%_96%,25%_96%,0_50%)] border ${isActive ? 'border-lime-300/45' : 'border-white/18'}`} />
-                  <span className="pointer-events-none absolute -inset-x-2 top-1/2 h-6 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(0,194,255,0.26)_0%,rgba(0,0,0,0)_68%)]" />
-                  <div className="relative z-10 flex min-w-[120px] items-center gap-2">
-                    <span className={`inline-flex size-7 items-center justify-center rounded-full border text-xs font-semibold ${isActive ? 'border-lime-300/65 bg-lime-300/18 text-lime-200' : 'border-white/25 bg-white/10 text-white/90'}`}>
-                      {index + 1}
-                    </span>
-                    <span className={`text-sm font-semibold tracking-wide ${isActive ? 'text-lime-100' : 'text-white/92'}`}>{node.label}</span>
-                  </div>
-                </button>
+              <div key={node.id} className="flex items-center gap-3">
+                <div className="relative pt-5">
+                  <span
+                    className={`pointer-events-none absolute -top-1 left-1/2 z-20 inline-flex size-7 -translate-x-1/2 items-center justify-center rounded-full border text-xs font-semibold shadow-[0_6px_16px_rgba(0,0,0,0.35)] ${
+                      isActive
+                        ? 'border-lime-300/75 bg-[#0b1220]/95 text-lime-200'
+                        : 'border-white/35 bg-[#0b1220]/90 text-white/90'
+                    }`}
+                  >
+                    {index + 1}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    className={`relative px-7 py-3.5 [clip-path:polygon(25%_4%,75%_4%,100%_50%,75%_96%,25%_96%,0_50%)] border shadow-[0_14px_26px_rgba(0,0,0,0.36)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
+                      isActive ? 'border-lime-300/70 bg-[#0b1220]/55' : 'border-white/38 bg-[#0b1220]/35'
+                    }`}
+                    style={{
+                      animation: `heroCardDrop 820ms cubic-bezier(0.23,1,0.32,1) ${120 + index * 210}ms both, heroCardDrift 7.8s ease-in-out ${1.1 + index * 0.22}s infinite`,
+                    }}
+                    aria-pressed={isActive}
+                    aria-label={`${showByLocale[locale] || showByLocale.en} ${node.label}`}>
+                    <span className={`pointer-events-none absolute inset-[3px] [clip-path:polygon(25%_4%,75%_4%,100%_50%,75%_96%,25%_96%,0_50%)] border ${isActive ? 'border-lime-300/45' : 'border-white/18'}`} />
+                    <span className="pointer-events-none absolute -inset-x-2 top-1/2 h-6 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(0,194,255,0.26)_0%,rgba(0,0,0,0)_68%)]" />
+                    <div className="relative z-10 flex min-w-[120px] items-center">
+                      <span className={`text-sm font-semibold tracking-wide ${isActive ? 'text-lime-100' : 'text-white/92'}`}>{node.label}</span>
+                    </div>
+                  </button>
+                </div>
                 {index < workflowNodes.length - 1 ? (
-                  <span className="inline-flex items-center gap-1 text-white/80">
-                    <span className="h-[2px] w-8 bg-white/70" />
+                  <span className="inline-flex items-center gap-1 text-white/80 pt-5">
+                    <span className="h-[2px] w-9 bg-white/70" />
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-4">
                       <path
                         fillRule="evenodd"
