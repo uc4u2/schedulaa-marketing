@@ -104,51 +104,48 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
   return (
     <div className="mt-[50px] lg:mt-[100px]" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
       <div className="mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]">
-        <div className="mb-6 rounded-2xl border border-white/12 bg-[#0b1220]/45 p-3 backdrop-blur-sm lg:mb-8 lg:p-4">
-          <div className="no-scrollbar flex items-center justify-start gap-2 overflow-x-auto pb-1 lg:justify-center">
+        <div className="relative mb-6 rounded-2xl border border-white/12 bg-[#0b1220]/60 p-3 shadow-[0_14px_40px_rgba(0,0,0,0.28)] backdrop-blur-sm lg:mb-8 lg:p-4">
+          <div className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/35 to-transparent" />
+          <div className="no-scrollbar flex items-center gap-2 overflow-x-auto pb-1 snap-x snap-mandatory md:justify-center md:overflow-visible lg:gap-3">
             {workflowNodes.map((node, index) => {
               const isActive = index === activeIndex;
               return (
-                <div key={node.id} className="flex items-center gap-2">
+                <div key={node.id} className="flex snap-start items-center gap-2 lg:gap-3">
                   <button
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    className={`group relative flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-left transition-all duration-300 ${
+                    className={`group relative flex min-w-[152px] shrink-0 items-center gap-2 rounded-xl border px-3 py-2.5 text-left transition-all duration-300 lg:min-w-[172px] lg:px-4 ${
                       isActive
-                        ? 'border-lime-300/65 bg-lime-300/16 shadow-[0_8px_24px_rgba(157,255,0,0.22)]'
-                        : 'border-white/20 bg-white/6 hover:border-white/45 hover:bg-white/10'
+                        ? 'border-cyan-200/65 bg-gradient-to-r from-cyan-300/16 via-sky-300/12 to-lime-300/10 shadow-[0_10px_28px_rgba(60,186,255,0.28)]'
+                        : 'border-white/20 bg-gradient-to-r from-white/[0.07] to-white/[0.03] opacity-90 hover:-translate-y-0.5 hover:border-white/45 hover:bg-white/10 hover:opacity-100 hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]'
                     }`}
                     aria-pressed={isActive}
                     aria-label={node.label}
                   >
-                    <span
-                      className={`inline-flex size-6 items-center justify-center rounded-full border text-[11px] font-semibold ${
-                        isActive
-                          ? 'border-lime-300/70 bg-[#0b1220]/90 text-lime-200'
-                          : 'border-white/30 bg-[#0b1220]/75 text-white/90'
-                      }`}
-                    >
-                      {index + 1}
-                    </span>
-                    <span className={`whitespace-nowrap text-sm font-semibold tracking-tight ${isActive ? 'text-lime-100' : 'text-white/92'}`}>
-                      {node.label}
+                    <span className={`inline-flex size-2 rounded-full ${isActive ? 'bg-cyan-200 shadow-[0_0_12px_rgba(125,211,252,0.95)]' : 'bg-white/55'}`} />
+                    <span className="grid min-w-0 gap-0.5">
+                      <span className={`whitespace-nowrap text-[11px] tracking-[0.12em] uppercase ${isActive ? 'text-cyan-100/85' : 'text-white/55'}`}>
+                        Module {index + 1}
+                      </span>
+                      <span className={`whitespace-nowrap text-sm font-semibold tracking-tight ${isActive ? 'text-white' : 'text-white/90'}`}>
+                        {node.label}
+                      </span>
                     </span>
                   </button>
                   {index < workflowNodes.length - 1 ? (
-                    <div className="h-px w-6 shrink-0 bg-gradient-to-r from-white/25 via-white/55 to-white/25 lg:w-8" />
+                    <div className="h-px w-5 shrink-0 bg-gradient-to-r from-white/20 via-white/55 to-white/20 lg:w-6" />
                   ) : null}
                 </div>
               );
             })}
           </div>
-          <div className="mt-3 h-[3px] w-full rounded-full bg-white/12">
+          <div className="mt-3 h-[2px] w-full rounded-full bg-white/12">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-cyan-300/85 via-blue-300/80 to-lime-300/85 transition-all duration-500"
+              className="h-full rounded-full bg-gradient-to-r from-cyan-300/85 via-blue-300/80 to-cyan-200/85 transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>
         </div>
-
       </div>
 
       <div className="relative mx-auto max-w-[700px] lg:max-w-[900px] xl:max-w-[1240px]" style={{ transform: 'perspective(1400px) rotateX(3deg)' }}>
