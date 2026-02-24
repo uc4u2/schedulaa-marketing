@@ -75,7 +75,7 @@ const Clients = ({ locale = 'en' }: { locale?: AppLocale }) => {
   const ariaLabel = ariaLabelByLocale[locale] || ariaLabelByLocale.en;
   return (
     <RevealAnimation delay={0.1}>
-      <section className="lg:py-[150px] py-10 md:py-[75px] mt-14 xl:mt-[250px] lg:mt-[200px] sm:mt-[150px]">
+      <section className="py-10 md:py-[75px] lg:py-[120px] mt-0">
         <div className="main-container">
           <div className="relative max-w-[1000px] mx-auto">
             <div className="absolute left-0 top-0 h-full w-[15%] md:w-[20%] bg-gradient-to-r from-background-2 to-transparent dark:from-background-5 z-40" />

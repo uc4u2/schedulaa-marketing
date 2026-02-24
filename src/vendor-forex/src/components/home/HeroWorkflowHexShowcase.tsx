@@ -127,7 +127,11 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
                       <span className={`whitespace-nowrap text-[11px] tracking-[0.12em] uppercase ${isActive ? 'text-cyan-100/85' : 'text-white/55'}`}>
                         Module {index + 1}
                       </span>
-                      <span className={`whitespace-nowrap text-sm font-semibold tracking-tight ${isActive ? 'text-white' : 'text-white/90'}`}>
+                      <span
+                        className={`whitespace-nowrap text-sm font-semibold leading-[1.08] tracking-[-0.02em] ${
+                          isActive ? 'hero-text-gradient hero-text-color-2 inline-block' : 'text-white/85'
+                        }`}
+                      >
                         {node.label}
                       </span>
                     </span>

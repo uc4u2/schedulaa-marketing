@@ -178,7 +178,7 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
   const chips = chipItemsByLocale[locale] || chipItemsByLocale.en;
 
   return (
-    <section className="relative z-20 max-h-[900px] bg-[url('/images/ns-img-295.jpg')] bg-cover bg-top bg-no-repeat pt-[170px] pb-[50px] md:pt-[206px] md:pb-[100px] xl:max-h-[1126px]">
+    <section className="relative z-20 overflow-hidden bg-[url('/images/ns-img-295.jpg')] bg-cover bg-top bg-no-repeat pt-[170px] pb-[110px] md:pt-[206px] md:pb-[150px]">
       <div className="absolute top-[10%] left-1/2 -z-10 mx-auto max-w-[1365px] -translate-x-1/2">
         <figure>
           <Image src={heroVectorImg} alt="hero" />
@@ -187,9 +187,9 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
       <div className="main-container">
         <div className="space-y-5 md:space-y-4 md:text-center">
           <RevealAnimation delay={0.1}>
-            <h1 className="mx-auto max-w-[380px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[776px]">
+            <h1 className="mx-auto max-w-[380px] leading-[1.08] tracking-[-0.02em] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[776px]">
               <span className="block text-white">{heroCopy.line1 || hero.title?.line1 || heroCopyByLocale.en.line1}</span>
-              <span className="hero-text-gradient hero-text-color-2 block">{heroCopy.line2 || hero.title?.line2 || heroCopyByLocale.en.line2}</span>
+              <span className="hero-text-gradient hero-text-color-2 block pt-1 md:pt-1.5">{heroCopy.line2 || hero.title?.line2 || heroCopyByLocale.en.line2}</span>
             </h1>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
