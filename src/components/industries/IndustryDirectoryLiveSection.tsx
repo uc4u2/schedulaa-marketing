@@ -499,14 +499,29 @@ const industryLabel = (value: string | undefined, options: Array<{ value: string
 };
 
 const buildPublicSiteUrl = (company: Company) => {
+  const safeSlug = (company.slug || '').trim().replace(/^\/+|\/+$/g, '');
+  const customDomain = (company.custom_domain || '').trim();
+  if (customDomain && company.domain_verified) {
+    return /^https?:\/\//i.test(customDomain) ? customDomain : `https://${customDomain}`;
+  }
+
   const explicitUrl = (company.public_url || '').trim();
   if (explicitUrl) {
     const normalized = /^https?:\/\//i.test(explicitUrl) ? explicitUrl : `https://${explicitUrl}`;
+    try {
+      const parsed = new URL(normalized);
+      const host = parsed.hostname.toLowerCase();
+      const isMarketingHost = host === 'www.schedulaa.com' || host === 'schedulaa.com';
+      if (isMarketingHost && safeSlug) {
+        return `${APP_ORIGIN}/${encodeURIComponent(safeSlug)}`;
+      }
+    } catch {
+      // Fall back to normalized value below.
+    }
     return normalized;
   }
-  const safeSlug = (company.slug || '').trim().replace(/^\/+|\/+$/g, '');
   if (!safeSlug) return APP_ORIGIN;
-  return `${APP_ORIGIN}/${encodeURIComponent(safeSlug)}?embed=0`;
+  return `${APP_ORIGIN}/${encodeURIComponent(safeSlug)}`;
 };
 
 export default function IndustryDirectoryLiveSection() {
