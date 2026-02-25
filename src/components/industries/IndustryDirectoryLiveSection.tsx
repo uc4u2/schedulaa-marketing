@@ -15,6 +15,9 @@ type Company = {
   tagline?: string;
   industry?: string;
   logo_url?: string;
+  public_url?: string;
+  custom_domain?: string;
+  domain_verified?: boolean;
 };
 
 type Preview = {
@@ -495,8 +498,13 @@ const industryLabel = (value: string | undefined, options: Array<{ value: string
   return selected?.label || options.find((opt) => opt.value === 'general')?.label || '';
 };
 
-const buildPublicSiteUrl = (slug?: string) => {
-  const safeSlug = (slug || '').trim().replace(/^\/+|\/+$/g, '');
+const buildPublicSiteUrl = (company: Company) => {
+  const explicitUrl = (company.public_url || '').trim();
+  if (explicitUrl) {
+    const normalized = /^https?:\/\//i.test(explicitUrl) ? explicitUrl : `https://${explicitUrl}`;
+    return normalized;
+  }
+  const safeSlug = (company.slug || '').trim().replace(/^\/+|\/+$/g, '');
   if (!safeSlug) return APP_ORIGIN;
   return `${APP_ORIGIN}/${encodeURIComponent(safeSlug)}?embed=0`;
 };
@@ -665,7 +673,7 @@ export default function IndustryDirectoryLiveSection() {
                         {company.tagline || copy.fallbackTagline}
                       </p>
                       <a
-                        href={buildPublicSiteUrl(company.slug)}
+                        href={buildPublicSiteUrl(company)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-primary btn-sm hover:btn-secondary dark:hover:btn-accent"
