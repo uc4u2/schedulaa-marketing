@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import type { CSSProperties } from 'react';
 
 import { getPricingSource } from '@/legacy-content/pricing/getPricingSource';
-import { buildAppUrl, buildBillingUrl, buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
+import { buildAppUrl, buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
 import { AppLocale, detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 
 type PlanFeature = string | { type?: string; text?: string };
@@ -234,6 +234,21 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
         </div>
 
         <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+          <h3 className="mb-2">{websiteDesignService.title}</h3>
+          <p className="mb-2">{websiteDesignService.description}</p>
+          <p className="mb-4 text-tagline-2 text-secondary/70 dark:text-accent/70">{websiteDesignService.includes}</p>
+          <a
+            href={buildAppUrl('/upgrade', {
+              returnTo,
+              params: { addon: 'website_design' },
+            })}
+            className="btn btn-secondary btn-md"
+          >
+            {websiteDesignService.cta}
+          </a>
+        </div>
+
+        <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
           <h2 className="mb-2">{comparison.title}</h2>
           <p className="mb-6">{comparison.subtitle}</p>
           <div className="overflow-x-auto">
@@ -339,15 +354,6 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
               </tbody>
             </table>
           </div>
-        </div>
-
-        <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
-          <h3 className="mb-2">{websiteDesignService.title}</h3>
-          <p className="mb-2">{websiteDesignService.description}</p>
-          <p className="mb-4 text-tagline-2 text-secondary/70 dark:text-accent/70">{websiteDesignService.includes}</p>
-          <a href={buildBillingUrl({ returnTo })} className="btn btn-secondary btn-md">
-            {websiteDesignService.cta}
-          </a>
         </div>
 
         <div className="rounded-3xl border border-stroke-2 bg-secondary p-8 text-accent dark:border-stroke-7 dark:bg-background-8">
