@@ -32,6 +32,8 @@ const DEMO_VIDEO_SERVICE_SRC =
 const DEMO_VIDEO_INVITES_SRC =
   process.env.NEXT_PUBLIC_DEMO_VIDEO_INVITES ||
   'https://pub-6cbed1dd8177417b96763fc4eb930d09.r2.dev/assets/videos/invitations.schedulaa.mp4';
+const DEMO_YOUTUBE_EMBED_SRC =
+  process.env.NEXT_PUBLIC_DEMO_YOUTUBE_EMBED || 'https://www.youtube.com/embed/y7kygIhnZm8';
 
 const demoVideos = [
   {
@@ -246,6 +248,20 @@ export default function DemoLandingPage() {
         </div>
 
         <article className="rounded-3xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+          <div className="space-y-3 mb-8">
+            <h3>One Platform. One Source of Truth</h3>
+            <div className="relative w-full overflow-hidden rounded-2xl border border-stroke-2 pb-[56.25%] dark:border-stroke-7">
+              <iframe
+                className="absolute top-0 left-0 h-full w-full"
+                src={DEMO_YOUTUBE_EMBED_SRC}
+                title="Schedulaa demo walkthrough"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
           <div className="space-y-8">
             {demoVideos.map((video) => (
               <div key={video.title} className="space-y-3">

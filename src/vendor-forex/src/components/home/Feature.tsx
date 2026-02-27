@@ -6,7 +6,30 @@ import { AppLocale } from '@/utils/locale';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 
-type ShowcaseItem = { title: string; description: string };
+type ShowcaseItem = { icon?: string; title: string; description: string };
+
+const defaultShowcaseByIcon: Record<string, ShowcaseItem> = {
+  '01': {
+    icon: '01',
+    title: 'Unified Booking & Scheduling',
+    description: 'Real-time client bookings with service selection and self-serve rescheduling.',
+  },
+  '02': {
+    icon: '02',
+    title: 'Powerful Payroll & HR',
+    description: 'Canada + 45 U.S. states supported (EI, CPP, automated stat holiday pay, W-2, T4, ROE).',
+  },
+  '03': {
+    icon: '03',
+    title: 'Website Builder & Online Presence',
+    description: 'Drag-and-drop templates for services, products, hero sections, and contact flows.',
+  },
+  '04': {
+    icon: '04',
+    title: 'eCommerce & Product Sales',
+    description: 'Native product catalog for physical or digital items with rich detail pages.',
+  },
+};
 
 const copyByLocale: Record<string, { view: string; compare: string }> = {
   en: { view: 'View feature', compare: 'Compare Schedulaa' },
@@ -18,13 +41,23 @@ const copyByLocale: Record<string, { view: string; compare: string }> = {
 const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }) => {
   const content = source || sourceEn;
   const copy = copyByLocale[locale] || copyByLocale.en;
-  const showcaseData =
+  const showcaseData: ShowcaseItem[] =
     (content.featureShowcase?.features || []).map((feature: { title: string; description: string[] | string }) => ({
+      icon: String((feature as any).icon || ''),
       title: feature.title,
       description: Array.isArray(feature.description)
         ? feature.description[0]
         : String(feature.description || ''),
-    })) as ShowcaseItem[];
+    }));
+
+  const showcaseEn: ShowcaseItem[] =
+    (sourceEn.featureShowcase?.features || []).map((feature: { title: string; description: string[] | string }) => ({
+      icon: String((feature as any).icon || ''),
+      title: feature.title,
+      description: Array.isArray(feature.description)
+        ? feature.description[0]
+        : String(feature.description || ''),
+    }));
 
   const fallbackData = (Object.values(content.highlightCards || {}) as Array<{
     title: string;
@@ -34,7 +67,19 @@ const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }
     description: feature.description,
   }));
 
-  const data: ShowcaseItem[] = (showcaseData.length ? showcaseData : fallbackData).slice(0, 4);
+  const preferredIcons = ['01', '02', '03', '04'];
+  const dataSource: ShowcaseItem[] = showcaseData.length ? showcaseData : fallbackData;
+  const byIcon = (arr: ShowcaseItem[], icon: string) =>
+    arr.find((item) => String(item.icon || '').padStart(2, '0') === icon);
+
+  const preferred = preferredIcons
+    .map((icon) => byIcon(showcaseData, icon) || byIcon(showcaseEn, icon) || defaultShowcaseByIcon[icon])
+    .filter(Boolean) as ShowcaseItem[];
+
+  const usedKeys = new Set(preferred.map((item) => item.icon || item.title));
+  const remainder = dataSource.filter((item) => !usedKeys.has(item.icon || item.title));
+  const fallbackRemainderEn = showcaseEn.filter((item) => !usedKeys.has(item.icon || item.title));
+  const data: ShowcaseItem[] = [...preferred, ...remainder, ...fallbackRemainderEn].slice(0, 4);
 
   return (
     <RevealAnimation delay={0.1}>
@@ -53,42 +98,41 @@ const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }
             </div>
             <div className="grid grid-cols-12 gap-5 md:gap-6">
               {data.map((feature, index) => (
-                <RevealAnimation key={`${feature.title}-${index}`} delay={0.25 + index * 0.06}>
-                  <div
-                    className={cn(
-                      'col-span-12 md:col-span-6 lg:col-span-4',
-                      index === 0 && 'lg:col-span-8',
-                      (index === 2 || index === 3) && 'lg:col-span-6',
-                    )}>
-                    <div className="bg-secondary hover:bg-background-2 dark:bg-background-8 hover:dark:bg-background-5 group relative z-0 flex h-full min-h-[260px] flex-col justify-between gap-y-8 overflow-hidden rounded-[20px] p-8 transition-all duration-700 ease-in-out hover:-translate-y-1">
-                      <figure className="pointer-events-none absolute inset-0 -top-[210%] -right-[160%] -z-10 rotate-[-78deg] transform opacity-100 transition-all duration-1000 ease-in-out select-none group-hover:scale-110 group-hover:opacity-0">
-                        <Image src={gradient28Img} alt="feature-glow" className="h-full w-full object-cover" />
-                      </figure>
-                      <div className="space-y-4 lg:space-y-6">
-                        <span
-                          className={cn(
-                            'text-ns-yellow text-4xl transition-colors duration-700 group-hover:text-secondary dark:group-hover:text-accent lg:text-[52px]',
-                            'ns-shape-8',
-                          )}></span>
-                        <div className="space-y-2">
-                          <h3 className="text-white transition-colors duration-700 group-hover:text-secondary dark:group-hover:text-accent lg:text-heading-5 text-heading-6">
-                            {feature.title}
-                          </h3>
-                          <p className="text-white/70 transition-colors duration-700 group-hover:text-secondary/70 dark:group-hover:text-accent/70">
-                            {feature.description}
-                          </p>
-                        </div>
-                      </div>
-                      <div>
-                        <LinkButton
-                          href="/features"
-                          className="btn btn-white hover:btn-secondary btn-md dark:btn-transparent dark:hover:btn-accent mx-auto w-[90%] md:mx-0 md:w-auto">
-                          {copy.view}
-                        </LinkButton>
+                <div
+                  key={`${feature.title}-${index}`}
+                  className={cn(
+                    'col-span-12 md:col-span-6 lg:col-span-4',
+                    index === 0 && 'lg:col-span-8',
+                    (index === 2 || index === 3) && 'lg:col-span-6',
+                  )}>
+                  <div className="bg-secondary hover:bg-background-2 dark:bg-background-8 hover:dark:bg-background-5 group relative z-0 flex h-full min-h-[260px] flex-col justify-between gap-y-8 overflow-hidden rounded-[20px] p-8 transition-all duration-700 ease-in-out hover:-translate-y-1">
+                    <figure className="pointer-events-none absolute inset-0 -top-[210%] -right-[160%] -z-10 rotate-[-78deg] transform opacity-100 transition-all duration-1000 ease-in-out select-none group-hover:scale-110 group-hover:opacity-0">
+                      <Image src={gradient28Img} alt="feature-glow" className="h-full w-full object-cover" />
+                    </figure>
+                    <div className="space-y-4 lg:space-y-6">
+                      <span
+                        className={cn(
+                          'text-ns-yellow text-4xl transition-colors duration-700 group-hover:text-secondary dark:group-hover:text-accent lg:text-[52px]',
+                          'ns-shape-8',
+                        )}></span>
+                      <div className="space-y-2">
+                        <h3 className="text-white transition-colors duration-700 group-hover:text-secondary dark:group-hover:text-accent lg:text-heading-5 text-heading-6">
+                          {feature.title}
+                        </h3>
+                        <p className="text-white/70 transition-colors duration-700 group-hover:text-secondary/70 dark:group-hover:text-accent/70">
+                          {feature.description}
+                        </p>
                       </div>
                     </div>
+                    <div>
+                      <LinkButton
+                        href="/features"
+                        className="btn btn-white hover:btn-secondary btn-md dark:btn-transparent dark:hover:btn-accent mx-auto w-[90%] md:mx-0 md:w-auto">
+                        {copy.view}
+                      </LinkButton>
+                    </div>
                   </div>
-                </RevealAnimation>
+                </div>
               ))}
             </div>
             <RevealAnimation delay={0.7}>
