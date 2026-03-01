@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   ...defaultMetadata,
   title: 'Acceptable Use Policy | Schedulaa',
-  description: 'Acceptable use standards for public services and platform usage.',
+  description: 'Acceptable use standards for platform behavior, billing integrity, and abuse prevention.',
 };
 
 export default function AcceptableUsePage() {
@@ -18,7 +18,11 @@ export default function AcceptableUsePage() {
           services and connected resources.
         </p>
         <p className="mt-4 text-secondary/80 dark:text-accent/75">
-          For complete legal terms and enforcement details, review the main terms and security pages.
+          Prohibited behavior includes payment testing, stolen-card use, synthetic identity creation, intentional chargeback abuse,
+          credential theft attempts, and any effort to bypass billing or security controls.
+        </p>
+        <p className="mt-4 text-secondary/80 dark:text-accent/75">
+          Violations may result in immediate review hold, service restrictions, or account suspension.
         </p>
         <div className="mt-8 flex gap-3">
           <Link href="/terms" className="btn btn-primary btn-sm">Terms</Link>

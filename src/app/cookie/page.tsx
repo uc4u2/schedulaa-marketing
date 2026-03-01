@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   ...defaultMetadata,
   title: 'Cookie Policy | Schedulaa',
-  description: 'How Schedulaa uses cookies and similar technologies on marketing pages.',
+  description: 'How Schedulaa uses cookies and related technologies for sessions, analytics, and security.',
 };
 
 export default function CookiePolicyPage() {
@@ -16,6 +16,10 @@ export default function CookiePolicyPage() {
         <p className="mt-6 text-secondary/80 dark:text-accent/75">
           Schedulaa uses cookies and similar technologies to keep sessions stable, understand page performance, and improve user
           experience on public marketing pages.
+        </p>
+        <p className="mt-4 text-secondary/80 dark:text-accent/75">
+          We may also use security-related cookies or equivalent session markers to detect abuse, enforce request integrity,
+          and help prevent fraudulent payment behavior.
         </p>
         <p className="mt-4 text-secondary/80 dark:text-accent/75">
           For legal definitions and broader policy commitments, review our privacy policy and terms.

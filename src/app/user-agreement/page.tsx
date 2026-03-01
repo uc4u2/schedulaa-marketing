@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   ...defaultMetadata,
   title: 'User Agreement | Schedulaa',
-  description: 'User agreement terms for Schedulaa service usage and responsibilities.',
+  description: 'User responsibilities for account security, billing accuracy, and lawful platform use.',
 };
 
 export default function UserAgreementPage() {
@@ -18,7 +18,12 @@ export default function UserAgreementPage() {
           Schedulaa and customer users.
         </p>
         <p className="mt-4 text-secondary/80 dark:text-accent/75">
-          For full contractual terms and privacy details, review linked legal pages below.
+          Users are responsible for safeguarding credentials, maintaining accurate account and billing details, and ensuring
+          that payment methods used on the platform are authorized.
+        </p>
+        <p className="mt-4 text-secondary/80 dark:text-accent/75">
+          Schedulaa may require additional verification, apply billing safeguards, or restrict account access when fraudulent
+          activity is suspected.
         </p>
         <div className="mt-8 flex gap-3">
           <Link href="/terms" className="btn btn-primary btn-sm">Terms</Link>
