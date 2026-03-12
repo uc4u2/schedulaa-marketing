@@ -16,6 +16,19 @@ const normalizePath = (pathname: string) => {
   return pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
 };
 
+const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
+
+const buildAppLegacyRedirect = (request: NextRequest, slug: string, kind: 'review' | 'tip', appointmentId: string) => {
+  const redirectUrl = new URL(`${APP_ORIGIN.replace(/\/$/, '')}/${slug}/${kind}/${appointmentId}`);
+  request.nextUrl.searchParams.forEach((value, key) => {
+    redirectUrl.searchParams.set(key, value);
+  });
+  if (!redirectUrl.searchParams.has('source')) {
+    redirectUrl.searchParams.set('source', 'marketing-legacy');
+  }
+  return redirectUrl;
+};
+
 export function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
   const internalLocale = request.headers.get('x-locale');
@@ -35,6 +48,20 @@ export function middleware(request: NextRequest) {
   const maybeLocale = segments[0];
 
   if (isSupportedLocale(maybeLocale)) {
+    if (
+      segments.length === 4 &&
+      (segments[2] === 'review' || segments[2] === 'tip')
+    ) {
+      return NextResponse.redirect(
+        buildAppLegacyRedirect(
+          request,
+          segments[1],
+          segments[2] as 'review' | 'tip',
+          segments[3]
+        )
+      );
+    }
+
     const rest = segments.slice(1).join('/');
     const rewritePath = rest ? `/${rest}` : '/';
     const normalizedPath = normalizePath(rewritePath);
