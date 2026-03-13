@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
+import { trackMetaPixel } from '@/utils/metaPixel';
 
 const DEMO_EMAIL = process.env.NEXT_PUBLIC_DEMO_EMAIL || 'testschedulaa@gmail.com';
 const DEMO_PASSWORD = process.env.NEXT_PUBLIC_DEMO_PASSWORD || 'Test!12345';
@@ -34,6 +35,9 @@ const DEMO_VIDEO_INVITES_SRC =
   'https://pub-6cbed1dd8177417b96763fc4eb930d09.r2.dev/assets/videos/invitations.schedulaa.mp4';
 const DEMO_YOUTUBE_EMBED_SRC =
   process.env.NEXT_PUBLIC_DEMO_YOUTUBE_EMBED || 'https://www.youtube.com/embed/y7kygIhnZm8';
+const DEMO_BOOKING_URL =
+  process.env.NEXT_PUBLIC_BOOK_DEMO_URL ||
+  'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
 
 const demoVideos = [
   {
@@ -168,11 +172,12 @@ export default function DemoLandingPage() {
   };
   const copy = copyByLocale[locale] || {
     badge: `Test drive - ${DEMO_ENV}`,
-    title: 'Experience the Schedulaa manager dashboard in minutes',
+    title: 'See how Schedulaa manages schedules and payroll for service teams.',
     subtitle:
-      'Use the shared staging login to explore scheduling, time tracking, payroll, compliance, Zapier automations, and accounting exports end-to-end.',
-    login: 'Go to login',
+      'Book a live walkthrough first, then use the demo dashboard to explore scheduling, time tracking, payroll, compliance, and exports on your own.',
+    login: 'Try the demo dashboard',
     talk: 'Talk to our rollout team',
+    bookDemo: 'Book a live demo',
     credentials: 'Demo credentials',
     quickStart: '4-step quick start',
     step1: '1. Login at app.schedulaa.com/login',
@@ -187,6 +192,25 @@ export default function DemoLandingPage() {
     tryDemo: 'Try the demo',
     videos: {},
   };
+  const useCases = [
+    {
+      title: 'Cleaning & field service teams',
+      body: 'Review shift planning, time tracking, and payroll-ready hours for teams working across multiple jobs or crews.',
+    },
+    {
+      title: 'Home-care and support teams',
+      body: 'See how managers handle schedules, attendance, leave, and labor cost visibility without juggling spreadsheets.',
+    },
+    {
+      title: 'Studios, clinics, and appointment-based teams',
+      body: 'Walk through booking, staffing, checkout, and payroll workflows in one connected operating system.',
+    },
+  ];
+  const proofPoints = [
+    'Guided walkthrough for owners, operators, and accountants',
+    'Live Q&A around scheduling, payroll, and labor cost visibility',
+    'Self-serve demo access if you want to validate workflows on your own',
+  ];
 
   return (
     <section className="relative pt-[110px] pb-18 md:pt-[150px] md:pb-24">
@@ -196,7 +220,29 @@ export default function DemoLandingPage() {
           <h1 className="mb-4">{copy.title}</h1>
           <p className="mx-auto mb-6 max-w-[800px]">{copy.subtitle}</p>
           <div className="flex flex-col items-center justify-center gap-3 md:flex-row">
-            <a href={loginHref} className="btn btn-primary btn-md">
+            <a
+              href={DEMO_BOOKING_URL}
+              className="btn btn-primary btn-md"
+              onClick={() =>
+                trackMetaPixel('Lead', {
+                  content_name: 'Demo Page Book Demo',
+                  page_path: '/demo',
+                })
+              }
+            >
+              {copy.bookDemo || 'Book a live demo'}
+            </a>
+            <a
+              href={loginHref}
+              className="btn btn-white btn-md dark:btn-white-dark"
+              onClick={() =>
+                trackMetaPixel('ViewContent', {
+                  content_name: 'Demo Dashboard Login',
+                  content_category: 'Demo',
+                  page_path: '/demo',
+                })
+              }
+            >
               {copy.login}
             </a>
             <Link href={contactHref} className="btn btn-white btn-md dark:btn-white-dark">
@@ -243,6 +289,30 @@ export default function DemoLandingPage() {
                 <p className="font-semibold">{copy.step4}</p>
                 <p className="text-tagline-2">{copy.step4d}</p>
               </li>
+            </ul>
+          </article>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.25fr_1fr]">
+          <article className="rounded-3xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+            <h2 className="mb-4">What this demo is best for</h2>
+            <div className="grid gap-4 md:grid-cols-3">
+              {useCases.map((item) => (
+                <div key={item.title} className="rounded-2xl border border-stroke-2 p-4 dark:border-stroke-7">
+                  <h3 className="mb-2 text-tagline-1 font-semibold">{item.title}</h3>
+                  <p className="text-tagline-2">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+          <article className="rounded-3xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+            <h2 className="mb-4">Why book a live demo first</h2>
+            <ul className="space-y-3">
+              {proofPoints.map((item) => (
+                <li key={item} className="rounded-2xl border border-stroke-2 px-4 py-3 text-tagline-2 dark:border-stroke-7">
+                  {item}
+                </li>
+              ))}
             </ul>
           </article>
         </div>
