@@ -6,8 +6,12 @@ import { CheckIcon } from '@/icons';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import { usePathname } from 'next/navigation';
+import { trackMetaPixel } from '@/utils/metaPixel';
 
 const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
+const DEMO_BOOKING_URL =
+  process.env.NEXT_PUBLIC_BOOK_DEMO_URL ||
+  'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
 
 const Hero = () => {
   const t = useTranslations('hero');
@@ -57,6 +61,12 @@ const Hero = () => {
               <li className="w-full sm:w-auto">
                 <LinkButton
                   href={`${APP_ORIGIN}/register`}
+                  onClick={() =>
+                    trackMetaPixel('CompleteRegistration', {
+                      content_name: 'Hero Start Free Trial',
+                      page_path: pathname,
+                    })
+                  }
                   className="btn btn-primary hover:btn-white dark:hover:btn-accent btn-lg md:btn-xl mx-auto block w-[90%] border-0 sm:mx-0 md:inline-block md:w-auto"
                 >
                   {t('getStarted')}
@@ -66,7 +76,13 @@ const Hero = () => {
             <RevealAnimation delay={0.9} direction="left" offset={50}>
               <li className="w-full sm:w-auto">
                 <LinkButton
-                  href={`${APP_ORIGIN}/login`}
+                  href={DEMO_BOOKING_URL}
+                  onClick={() =>
+                    trackMetaPixel('Lead', {
+                      content_name: 'Hero Book Demo',
+                      page_path: pathname,
+                    })
+                  }
                   className="btn btn-lg md:btn-xl dark:btn-transparent btn-dark bg-accent/20 hover:btn-primary mx-auto block w-[90%] sm:mx-0 md:inline-block md:w-auto dark:border"
                 >
                   {t('login')}

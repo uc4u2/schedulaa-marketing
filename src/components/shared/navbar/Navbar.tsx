@@ -19,6 +19,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRef, useState } from 'react';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
+import { trackMetaPixel } from '@/utils/metaPixel';
 
 type MenuPanelProps = {
   open: boolean;
@@ -58,6 +59,21 @@ const Navbar = () => {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
   const returnTo = marketingReturnTo(locale, stripLocalePrefix(pathname, locale) || '/');
+  const bookDemoHref =
+    process.env.NEXT_PUBLIC_BOOK_DEMO_URL ||
+    'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
+  const bookDemoLabel =
+    {
+      en: 'Book demo',
+      fa: 'رزرو دمو',
+      ru: 'Записаться на демо',
+      zh: '预约演示',
+      es: 'Reservar demo',
+      fr: 'Reserver une demo',
+      de: 'Demo buchen',
+      ar: 'احجز عرضا',
+      pt: 'Agendar demo',
+    }[locale] || 'Book demo';
 
   const [open, setOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
@@ -178,6 +194,19 @@ const Navbar = () => {
             </a>
           ))}
 
+          <a
+            href={bookDemoHref}
+            className="btn btn-primary btn-md-v2 border-0"
+            onClick={() =>
+              trackMetaPixel('Lead', {
+                content_name: 'Navbar Book Demo',
+                page_path: pathname,
+              })
+            }
+          >
+            {bookDemoLabel}
+          </a>
+
           <label className="sr-only" htmlFor="marketing-language">
             {t('language')}
           </label>
@@ -198,6 +227,14 @@ const Navbar = () => {
             <a
               key={item.id}
               href={buildAppUrl(item.href, { returnTo })}
+              onClick={() => {
+                if (item.id === 'start-free') {
+                  trackMetaPixel('CompleteRegistration', {
+                    content_name: 'Navbar Start Free Trial',
+                    page_path: pathname,
+                  });
+                }
+              }}
               className={
                 item.id === 'start-free'
                   ? 'btn btn-secondary-v2 btn-md-v2 border group-hover/btn-v2:btn-v2-white'
@@ -242,16 +279,37 @@ const Navbar = () => {
               <a
                 key={item.id}
                 href={buildAppUrl(item.href, { returnTo })}
+                onClick={() => {
+                  if (item.id === 'start-free') {
+                    trackMetaPixel('CompleteRegistration', {
+                      content_name: 'Mobile Navbar Start Free Trial',
+                      page_path: pathname,
+                    });
+                  }
+                  setOpen(false);
+                }}
                 className={
                   item.id === 'start-free'
                     ? 'rounded-lg bg-primary-500 px-3 py-2 text-center text-sm font-semibold text-white'
                     : 'rounded-lg border border-stroke-2 px-3 py-2 text-center text-sm dark:border-stroke-7'
                 }
-                onClick={() => setOpen(false)}
               >
                 {t(item.labelKey)}
               </a>
             ))}
+            <a
+              href={bookDemoHref}
+              className="col-span-2 rounded-lg bg-primary px-3 py-2 text-center text-sm font-medium text-white"
+              onClick={() => {
+                trackMetaPixel('Lead', {
+                  content_name: 'Mobile Navbar Book Demo',
+                  page_path: pathname,
+                });
+                setOpen(false);
+              }}
+            >
+              {bookDemoLabel}
+            </a>
           </div>
 
           {MOBILE_NAV_LINKS.map((item) => (

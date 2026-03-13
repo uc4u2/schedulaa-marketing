@@ -1,6 +1,7 @@
 import LocaleProvider from '@/components/shared/LocaleProvider';
 import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import Footer from '@/components/shared/footer/Footer';
+import MetaPixel from '@/components/shared/MetaPixel';
 import Navbar from '@/components/shared/navbar/Navbar';
 import SchedulaaAssistant from '@/components/shared/assistant/SchedulaaAssistant';
 import MotionProvider from '@/components/shared/motion/MotionProvider';
@@ -60,6 +61,7 @@ export default async function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
             <Suspense>
               <MotionProvider>
+                <MetaPixel />
                 <Navbar />
                 {children}
                 <Footer />

@@ -7,6 +7,7 @@ import type { CSSProperties } from 'react';
 import { getPricingSource } from '@/legacy-content/pricing/getPricingSource';
 import { buildAppUrl, buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
 import { AppLocale, detectLocaleFromPath, withLocalePath } from '@/utils/locale';
+import { trackMetaPixel } from '@/utils/metaPixel';
 
 type PlanFeature = string | { type?: string; text?: string };
 type Plan = {
@@ -154,6 +155,9 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
   const ctaBanner = pricingSource.ctaBanner;
   const addOns = pricingSource.plans.table.addons;
   const websiteDesignService = pricingSource.websiteDesignService;
+  const bookDemoHref =
+    process.env.NEXT_PUBLIC_BOOK_DEMO_URL ||
+    'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
 
   return (
     <section className="relative pt-[110px] pb-18 md:pt-[150px] md:pb-24">
@@ -167,12 +171,57 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
           </h1>
           <p className="mx-auto mb-8 max-w-[900px]">{hero.subtitle}</p>
           <div className="flex flex-col items-center justify-center gap-3 md:flex-row">
-            <a href={buildAppUrl('/register', { returnTo })} className="btn btn-secondary btn-md">
+            <a
+              href={buildAppUrl('/register', { returnTo })}
+              className="btn btn-secondary btn-md"
+              onClick={() =>
+                trackMetaPixel('CompleteRegistration', {
+                  content_name: 'Pricing Hero Start Free Trial',
+                  page_path: '/pricing',
+                })
+              }
+            >
               {hero.primaryCta.label}
+            </a>
+            <a
+              href={bookDemoHref}
+              className="btn btn-primary btn-md"
+              onClick={() =>
+                trackMetaPixel('Lead', {
+                  content_name: 'Pricing Hero Book Demo',
+                  page_path: '/pricing',
+                })
+              }
+            >
+              Book a demo
             </a>
             <a href="#plans" className="btn btn-white dark:btn-white-dark btn-md">
               {hero.secondaryCta.label}
             </a>
+          </div>
+        </div>
+
+        <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+          <div className="grid gap-5 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <div className="space-y-2">
+              <h2 className="text-heading-5 md:text-heading-4">Choose a plan based on labor visibility and payroll readiness.</h2>
+              <p className="text-secondary/70 dark:text-accent/70">
+                Start free if you want to test the workflow. Book a live demo if you want to see scheduling, labor
+                cost tracking, and payroll-ready reporting mapped to your team.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {[
+                ['Starter', 'Book online and run the basics'],
+                ['Pro', 'Unlock advanced analytics and workforce controls'],
+                ['Business', 'Scale reporting, exports, and multi-location ops'],
+              ].map(([title, body]) => (
+                <div key={title} className="rounded-2xl border border-stroke-2 p-4 text-sm dark:border-stroke-7">
+                  <p className="font-semibold">{title}</p>
+                  <p className="mt-1 text-secondary/70 dark:text-accent/70">{body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -207,8 +256,28 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
                   interval: 'monthly',
                   returnTo,
                 })}
-                className="btn btn-md btn-secondary mb-5 block w-full text-center">
+                className="btn btn-md btn-secondary mb-5 block w-full text-center"
+                onClick={() =>
+                  trackMetaPixel('CompleteRegistration', {
+                    content_name: `Pricing Plan Start Free Trial - ${plan.name}`,
+                    page_path: '/pricing',
+                    plan_name: plan.name,
+                  })
+                }>
                 {plan.ctaLabel || 'Start free trial'}
+              </a>
+              <a
+                href={bookDemoHref}
+                className="mb-5 block text-center text-sm font-medium text-primary underline-offset-4 hover:underline"
+                onClick={() =>
+                  trackMetaPixel('Lead', {
+                    content_name: `Pricing Plan Book Demo - ${plan.name}`,
+                    page_path: '/pricing',
+                    plan_name: plan.name,
+                  })
+                }
+              >
+                Book a live demo
               </a>
               <ul className="space-y-2">
                 {(plan.features || []).map((feature, index) => {

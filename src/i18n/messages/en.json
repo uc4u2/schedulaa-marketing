@@ -66,14 +66,14 @@
     "copyright": "\u00a9 {year} Schedulaa. All rights reserved."
   },
   "hero": {
-    "badge": "Unified operations platform",
-    "title": "Scheduling, payroll, and website booking for modern service teams.",
-    "subtitle": "Schedulaa brings team scheduling, payroll workflows, and public website booking into one system so you can run operations faster and with fewer tools.",
+    "badge": "Workforce scheduling + labor cost intelligence",
+    "title": "Schedule your team and know your labor cost before payroll day.",
+    "subtitle": "Schedulaa helps service companies manage shifts, track labor costs, and generate payroll-ready reports in one place.",
     "point1": "Smart scheduling workflows",
     "point2": "Payroll-ready time tracking",
     "point3": "Website builder with booking",
-    "getStarted": "Get started",
-    "login": "Log in"
+    "getStarted": "Start free trial",
+    "login": "Book a demo"
   },
   "pricing": {
     "badge": "Our Pricing",
