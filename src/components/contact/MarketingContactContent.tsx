@@ -227,7 +227,11 @@ export default function MarketingContactContent() {
         has_company: Boolean(form.company.trim()),
         has_phone: Boolean(form.phone.trim()),
       });
-      setSuccess(data?.success_msg || copy.success);
+      const successMessage =
+        typeof data?.delivered === 'boolean' && data.delivered === false
+          ? data?.success_msg || 'Message received. Our team has it, even if email delivery is delayed.'
+          : data?.success_msg || copy.success;
+      setSuccess(successMessage);
       setForm({ name: '', email: '', phone: '', company: '', plan: planOptions[0], message: '' });
     } catch (err: any) {
       setError(err?.message || copy.failed);
