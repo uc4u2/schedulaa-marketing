@@ -4,6 +4,7 @@ import { FormEvent, useState } from 'react';
 import PageShell from '@/components/shared/layout/PageShell';
 import { usePathname } from 'next/navigation';
 import { detectLocaleFromPath } from '@/utils/locale';
+import { trackMetaPixel } from '@/utils/metaPixel';
 
 const API_ORIGIN =
   process.env.NEXT_PUBLIC_BACKEND_URL ||
@@ -219,6 +220,13 @@ export default function MarketingContactContent() {
       if (!response.ok || data?.ok !== true) {
         throw new Error(data?.error || 'Unable to submit message.');
       }
+      trackMetaPixel('Lead', {
+        content_name: 'Marketing Contact Form',
+        content_category: 'Contact',
+        plan_interest: form.plan,
+        has_company: Boolean(form.company.trim()),
+        has_phone: Boolean(form.phone.trim()),
+      });
       setSuccess(data?.success_msg || copy.success);
       setForm({ name: '', email: '', phone: '', company: '', plan: planOptions[0], message: '' });
     } catch (err: any) {
