@@ -180,6 +180,28 @@ export default function FeatureStyleContentPage({
   const blocks = normalizeSections(config, copy);
   const faq = Array.isArray(config.faq) ? config.faq : [];
   const cta = config.cta || {};
+  const getBlockItemClassName = (items: any[], idx: number) => {
+    const total = items.length;
+    const useThreeColumnsAtXl = total === 3 || total >= 5;
+    const base = ['col-span-12', 'md:col-span-6'];
+    if (useThreeColumnsAtXl) base.push('xl:col-span-4');
+    if (total === 1) {
+      return `${base.join(' ')} md:col-start-4 xl:col-span-6 xl:col-start-4`;
+    }
+    if (!useThreeColumnsAtXl && total % 2 === 1 && idx === total - 1) {
+      return `${base.join(' ')} md:col-start-4`;
+    }
+    if (useThreeColumnsAtXl && total % 3 === 1 && idx === total - 1) {
+      return `${base.join(' ')} xl:col-start-5`;
+    }
+    return base.join(' ');
+  };
+  const getFaqItemClassName = (idx: number) => {
+    const total = faq.length;
+    if (total === 1) return 'col-span-12 md:col-span-8 md:col-start-3';
+    if (total % 2 === 1 && idx === total - 1) return 'col-span-12 md:col-span-6 md:col-start-4';
+    return 'col-span-12 md:col-span-6';
+  };
 
   return (
     <main className="bg-background-3 dark:bg-background-7">
@@ -286,7 +308,7 @@ export default function FeatureStyleContentPage({
                       <article
                         key={`${item.title}-${idx}`}
                         data-stagger-item
-                        className="col-span-12 md:col-span-6 lg:col-span-4 rounded-[20px] bg-white p-6 shadow-1 dark:bg-background-8"
+                        className={`${getBlockItemClassName(block.items, idx)} rounded-[20px] bg-white p-6 shadow-1 dark:bg-background-8`}
                       >
                         {item.title ? <h3 className="text-heading-5">{item.title}</h3> : null}
                         {item.body ? <p className="mt-2">{item.body}</p> : null}
@@ -385,7 +407,11 @@ export default function FeatureStyleContentPage({
             </AnimatedSection>
             <StaggerGrid className="grid grid-cols-12 gap-5" childSelector="[data-stagger-item]">
               {faq.map((item: any, idx: number) => (
-                <article key={`${item.question}-${idx}`} data-stagger-item className="col-span-12 md:col-span-6 rounded-[20px] border border-stroke-1 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+                <article
+                  key={`${item.question}-${idx}`}
+                  data-stagger-item
+                  className={`${getFaqItemClassName(idx)} rounded-[20px] border border-stroke-1 bg-white p-6 dark:border-stroke-7 dark:bg-background-8`}
+                >
                   <h3 className="text-heading-6">{item.question}</h3>
                   <p className="mt-2">{item.answer}</p>
                 </article>
@@ -397,8 +423,8 @@ export default function FeatureStyleContentPage({
 
       {cta.title ? (
         <section className="bg-background-2 dark:bg-background-5 py-20 lg:py-[110px]">
-          <div className="main-container grid gap-6 lg:grid-cols-2">
-            <article className="dark:bg-background-8 rounded-[20px] bg-white p-6 md:p-8">
+          <div className="main-container">
+            <article className="mx-auto max-w-[760px] rounded-[20px] bg-white p-6 dark:bg-background-8 md:p-8">
               {cta.overline ? <span className="badge badge-green-v2">{cta.overline}</span> : null}
               <h3 className="mt-5">{cta.title}</h3>
               {cta.body ? <p className="mt-2">{cta.body}</p> : null}
