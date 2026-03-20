@@ -222,12 +222,18 @@ export default function FeatureStyleContentPage({
             <AnimatedSection>
               <div className="flex flex-wrap justify-center gap-3">
                 {hero.primaryCta ? (
-                  <a href={mapHref(hero.primaryCta.href)} className="btn btn-primary btn-md hover:btn-secondary dark:hover:btn-accent">
+                  <a
+                    href={mapHref(hero.primaryCta.href)}
+                    className="btn btn-primary btn-md min-w-[170px] justify-center px-6 hover:btn-secondary dark:hover:btn-accent"
+                  >
                     {hero.primaryCta.label}
                   </a>
                 ) : null}
                 {hero.secondaryCta ? (
-                  <Link href={mapHref(hero.secondaryCta.href)} className="btn btn-white btn-md hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
+                  <Link
+                    href={mapHref(hero.secondaryCta.href)}
+                    className="btn btn-white btn-md min-w-[170px] justify-center px-6 hover:btn-secondary dark:btn-transparent dark:hover:btn-accent"
+                  >
                     {hero.secondaryCta.label}
                   </Link>
                 ) : null}
@@ -433,12 +439,18 @@ export default function FeatureStyleContentPage({
               {cta.body ? <p className="mt-2">{cta.body}</p> : null}
               <div className="mt-7 flex flex-wrap gap-3">
                 {cta.primary ? (
-                  <a href={mapHref(cta.primary.href)} className="btn btn-primary hover:btn-white dark:hover:btn-accent">
+                  <a
+                    href={mapHref(cta.primary.href)}
+                    className="btn btn-primary btn-md min-w-[190px] justify-center px-6 hover:btn-white dark:hover:btn-accent"
+                  >
                     {cta.primary.label}
                   </a>
                 ) : null}
                 {cta.secondary ? (
-                  <Link href={mapHref(cta.secondary.href)} className="btn btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
+                  <Link
+                    href={mapHref(cta.secondary.href)}
+                    className="btn btn-white btn-md min-w-[160px] justify-center px-6 hover:btn-secondary dark:btn-transparent dark:hover:btn-accent"
+                  >
                     {cta.secondary.label}
                   </Link>
                 ) : null}
