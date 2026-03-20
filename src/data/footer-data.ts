@@ -12,6 +12,7 @@ export type FooterTranslationKey =
   | 'workforce'
   | 'booking'
   | 'marketing'
+  | 'commerce'
   | 'payroll'
   | 'websiteBuilder'
   | 'industries'
@@ -97,6 +98,7 @@ export const FOOTER_SECTIONS: FooterSection[] = [
       { id: 'product-booking', href: '/booking', labelKey: 'booking' },
       { id: 'product-industries', href: '/industries', labelKey: 'industries' },
       { id: 'product-marketing', href: '/marketing', labelKey: 'marketing' },
+      { id: 'product-commerce', href: '/commerce', labelKey: 'commerce' },
       { id: 'product-payroll', href: '/payroll', labelKey: 'payroll' },
       { id: 'product-website-builder', href: '/website-builder', labelKey: 'websiteBuilder' },
       { id: 'product-pricing', href: '/pricing', labelKey: 'pricing' },
