@@ -194,6 +194,9 @@ export default function FeatureStyleContentPage({
     if (useThreeColumnsAtXl && total % 3 === 1 && idx === total - 1) {
       return `${base.join(' ')} xl:col-start-5`;
     }
+    if (useThreeColumnsAtXl && total % 3 === 2 && idx === total - 2) {
+      return `${base.join(' ')} xl:col-start-3`;
+    }
     return base.join(' ');
   };
   const getFaqItemClassName = (idx: number) => {
