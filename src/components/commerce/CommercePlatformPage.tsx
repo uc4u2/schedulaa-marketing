@@ -156,10 +156,16 @@ export default function CommercePlatformPage({ locale }: CommercePlatformPagePro
             and mixed checkout flows so service businesses can sell more without bolting on a separate store stack.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={withLocalePath('/pricing', locale)} className="btn btn-primary hover:btn-secondary dark:hover:btn-accent">
+            <Link
+              href={withLocalePath('/pricing', locale)}
+              className="btn btn-primary btn-md min-w-[160px] justify-center px-6 hover:btn-secondary dark:hover:btn-accent"
+            >
               View pricing
             </Link>
-            <Link href={withLocalePath('/demo', locale)} className="btn btn-primary-v2 dark:btn-transparent">
+            <Link
+              href={withLocalePath('/demo', locale)}
+              className="btn btn-primary-v2 btn-md min-w-[170px] justify-center px-6 dark:btn-transparent"
+            >
               Schedule demo
             </Link>
           </div>
@@ -297,10 +303,16 @@ export default function CommercePlatformPage({ locale }: CommercePlatformPagePro
             className="max-w-none"
           />
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href={withLocalePath('/demo', locale)} className="btn btn-primary hover:btn-secondary dark:hover:btn-accent">
+            <Link
+              href={withLocalePath('/demo', locale)}
+              className="btn btn-primary btn-md min-w-[190px] justify-center px-6 hover:btn-secondary dark:hover:btn-accent"
+            >
               Talk to rollout team
             </Link>
-            <Link href={withLocalePath('/pricing', locale)} className="btn btn-primary-v2 dark:btn-transparent">
+            <Link
+              href={withLocalePath('/pricing', locale)}
+              className="btn btn-primary-v2 btn-md min-w-[150px] justify-center px-6 dark:btn-transparent"
+            >
               See pricing
             </Link>
           </div>
