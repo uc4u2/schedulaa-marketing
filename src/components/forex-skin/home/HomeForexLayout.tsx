@@ -19,9 +19,168 @@ type Props = {
   locale: AppLocale;
 };
 
+const LABOR_VISIBILITY_COPY: Record<
+  AppLocale,
+  {
+    badge: string;
+    title: string;
+    body: string;
+    primaryCta: string;
+    secondaryCta: string;
+    bullets: string[];
+    videoTitle: string;
+  }
+> = {
+  en: {
+    badge: 'Labor cost visibility',
+    title: 'Schedule your team and see labor cost pressure before payroll closes.',
+    body:
+      'Schedulaa gives service managers one place to track worked hours, overtime risk, payroll-ready totals, and staffing pressure without waiting for spreadsheets or end-of-week rollups.',
+    primaryCta: 'Book a demo',
+    secondaryCta: 'See pricing',
+    videoTitle: 'One Platform. One Source of Truth',
+    bullets: [
+      'Today Labor Cost: know what staffing cost looks like before payroll day.',
+      'Overtime Risk: spot employees approaching overtime before it compounds.',
+      'Payroll Ready Hours: review approved hours, leave, and exceptions in one place.',
+      'Daily and weekly labor visibility for managers, operators, and accountants.',
+      'Replace scattered spreadsheets and manual rollups with one operating view.',
+    ],
+  },
+  fa: {
+    badge: 'ديد هزينه نيروي کار',
+    title: 'تيم خود را برنامه‌ريزي کنيد و فشار هزينه نيروي کار را قبل از بسته شدن حقوق ببينيد.',
+    body:
+      'Schedulaa به مديران خدمات يک نماي واحد مي‌دهد تا ساعات کارشده، ريسک اضافه‌کاري، جمع ساعات آماده حقوق و فشار تامين نيرو را بدون انتظار براي فايل‌هاي اکسل يا جمع‌بندي پايان هفته ببينند.',
+    primaryCta: 'رزرو دمو',
+    secondaryCta: 'مشاهده قيمت',
+    videoTitle: 'يک پلتفرم. يک منبع حقيقت',
+    bullets: [
+      'هزينه نيروي کار امروز: پيش از روز حقوق ببينيد هزينه نيرو در چه وضعيتي است.',
+      'ريسك اضافه‌کاري: کارکناني را که به اضافه‌کاري نزديک مي‌شوند زودتر شناسايي کنيد.',
+      'ساعات آماده حقوق: ساعات تاييدشده، مرخصي و استثناها را در يک نما مرور کنيد.',
+      'ديد روزانه و هفتگي نيروي کار براي مديران، اپراتورها و حسابداران.',
+      'فايل‌هاي پراکنده و جمع‌بندي دستي را با يک نماي عملياتي جايگزين کنيد.',
+    ],
+  },
+  ru: {
+    badge: 'Видимость затрат на труд',
+    title: 'Планируйте команду и заранее видьте давление на фонд оплаты до закрытия payroll.',
+    body:
+      'Schedulaa дает менеджерам сервисных компаний единое место для контроля отработанных часов, риска переработок, итогов для payroll и нагрузки на персонал без таблиц и ручных сводок в конце недели.',
+    primaryCta: 'Записаться на демо',
+    secondaryCta: 'Смотреть цены',
+    videoTitle: 'Одна платформа. Один источник правды',
+    bullets: [
+      'Затраты на труд сегодня: понимайте стоимость персонала до дня payroll.',
+      'Риск переработок: замечайте сотрудников, приближающихся к overtime, заранее.',
+      'Часы, готовые к payroll: проверяйте подтвержденные часы, отпуска и исключения в одном месте.',
+      'Ежедневная и недельная видимость трудозатрат для менеджеров, операторов и бухгалтеров.',
+      'Замените разрозненные таблицы и ручные сводки одной операционной панелью.',
+    ],
+  },
+  zh: {
+    badge: '人工成本可视化',
+    title: '安排团队班次，并在工资结算前看到人工成本压力。',
+    body:
+      'Schedulaa 为服务团队管理者提供一个统一视图，用来跟踪已工作时数、加班风险、可直接用于工资的总时数，以及人员压力，无需再等待表格或周末汇总。',
+    primaryCta: '预约演示',
+    secondaryCta: '查看价格',
+    videoTitle: '一个平台。一个真实来源',
+    bullets: [
+      '今日人工成本：在发薪日前先看到人员成本走势。',
+      '加班风险：提前识别接近加班阈值的员工。',
+      '工资可用工时：在一个界面查看已批准工时、休假和例外。',
+      '为经理、运营人员和会计提供每日与每周人工可视化。',
+      '用一个运营视图替代零散表格和人工汇总。',
+    ],
+  },
+  es: {
+    badge: 'Visibilidad del costo laboral',
+    title: 'Programa a tu equipo y detecta la presion del costo laboral antes de cerrar nomina.',
+    body:
+      'Schedulaa ofrece a los managers de servicio un solo lugar para seguir horas trabajadas, riesgo de horas extra, totales listos para nomina y presion de dotacion sin esperar hojas de calculo o cierres semanales.',
+    primaryCta: 'Reservar demo',
+    secondaryCta: 'Ver precios',
+    videoTitle: 'Una plataforma. Una sola fuente de verdad',
+    bullets: [
+      'Costo laboral de hoy: conoce el costo del personal antes del dia de nomina.',
+      'Riesgo de horas extra: detecta empleados que se acercan al overtime antes de que crezca.',
+      'Horas listas para nomina: revisa horas aprobadas, ausencias y excepciones en un solo lugar.',
+      'Visibilidad diaria y semanal del costo laboral para managers, operaciones y contabilidad.',
+      'Sustituye hojas dispersas y cierres manuales por una sola vista operativa.',
+    ],
+  },
+  fr: {
+    badge: 'Visibilite du cout du travail',
+    title: "Planifiez votre equipe et voyez la pression sur les couts de main-d'oeuvre avant la cloture de la paie.",
+    body:
+      "Schedulaa donne aux responsables de service un seul espace pour suivre les heures travaillees, le risque d'heures supplementaires, les totaux prets pour la paie et la pression de staffing sans attendre des feuilles de calcul ni des bilans de fin de semaine.",
+    primaryCta: 'Reserver une demo',
+    secondaryCta: 'Voir les tarifs',
+    videoTitle: 'Une plateforme. Une seule source de verite',
+    bullets: [
+      "Cout du travail du jour : voyez le cout du personnel avant le jour de paie.",
+      "Risque d'heures supplementaires : reperez les employes proches du seuil avant que cela ne s'accumule.",
+      "Heures pretes pour la paie : verifiez heures approuvees, conges et exceptions au meme endroit.",
+      'Visibilite quotidienne et hebdomadaire des couts de main-d oeuvre pour managers, operations et comptabilite.',
+      'Remplacez les tableurs disperses et les consolidations manuelles par une seule vue operationnelle.',
+    ],
+  },
+  de: {
+    badge: 'Transparenz der Personalkosten',
+    title: 'Plane dein Team und erkenne Personalkostendruck, bevor die Lohnabrechnung schliesst.',
+    body:
+      'Schedulaa gibt Service-Managern einen zentralen Ort, um geleistete Stunden, Ueberstundenrisiko, lohnfertige Summen und Staffing-Druck ohne Tabellen oder Wochenend-Rollups zu verfolgen.',
+    primaryCta: 'Demo buchen',
+    secondaryCta: 'Preise ansehen',
+    videoTitle: 'Eine Plattform. Eine Quelle der Wahrheit',
+    bullets: [
+      'Heutige Personalkosten: erkenne Personalkosten vor dem Payroll-Tag.',
+      'Ueberstundenrisiko: erkenne Mitarbeiter, die sich dem Ueberstundenlimit naehern, fruehzeitig.',
+      'Payroll-fertige Stunden: pruefe freigegebene Stunden, Abwesenheiten und Ausnahmen an einem Ort.',
+      'Taegliche und woechentliche Transparenz fuer Manager, Operations und Buchhaltung.',
+      'Ersetze verstreute Tabellen und manuelle Summen durch eine operative Gesamtansicht.',
+    ],
+  },
+  ar: {
+    badge: 'وضوح تكلفة العمالة',
+    title: 'جدول فريقك واعرف ضغط تكلفة العمالة قبل اغلاق دورة الرواتب.',
+    body:
+      'يوفر Schedulaa لمديري الخدمات مكانا واحدا لمتابعة الساعات المنجزة ومخاطر العمل الاضافي والاجماليات الجاهزة للرواتب وضغط التوظيف دون انتظار الجداول او تجميعات نهاية الاسبوع.',
+    primaryCta: 'احجز عرضا',
+    secondaryCta: 'عرض الاسعار',
+    videoTitle: 'منصة واحدة. مصدر حقيقة واحد',
+    bullets: [
+      'تكلفة العمالة اليوم: اعرف شكل تكلفة التوظيف قبل يوم الرواتب.',
+      'مخاطر العمل الاضافي: راقب الموظفين الذين يقتربون من حد العمل الاضافي قبل تفاقمه.',
+      'الساعات الجاهزة للرواتب: راجع الساعات المعتمدة والاجازات والاستثناءات في مكان واحد.',
+      'رؤية يومية واسبوعية لتكلفة العمالة للمديرين والمشغلين والمحاسبين.',
+      'استبدل الجداول المبعثرة والتجميع اليدوي برؤية تشغيلية واحدة.',
+    ],
+  },
+  pt: {
+    badge: 'Visibilidade do custo de trabalho',
+    title: 'Planeje sua equipe e veja a pressao do custo de trabalho antes do fechamento da folha.',
+    body:
+      'A Schedulaa da aos gestores de servicos um unico lugar para acompanhar horas trabalhadas, risco de horas extras, totais prontos para folha e pressao de equipe sem depender de planilhas ou fechamentos manuais.',
+    primaryCta: 'Agendar demo',
+    secondaryCta: 'Ver precos',
+    videoTitle: 'Uma plataforma. Uma unica fonte de verdade',
+    bullets: [
+      'Custo de trabalho hoje: veja como esta o custo da equipe antes do dia da folha.',
+      'Risco de horas extras: identifique funcionarios se aproximando do overtime antes que cresca.',
+      'Horas prontas para folha: revise horas aprovadas, licencas e excecoes em um lugar.',
+      'Visibilidade diaria e semanal do custo de trabalho para gestores, operacoes e financeiro.',
+      'Substitua planilhas dispersas e consolidacoes manuais por uma unica visao operacional.',
+    ],
+  },
+};
+
 // Forex skin homepage composition in vendor section order.
 export default function HomeForexLayout({ locale }: Props) {
   const source = getLandingSource(locale, 'home');
+  const laborCopy = LABOR_VISIBILITY_COPY[locale] || LABOR_VISIBILITY_COPY.en;
   const youtubeEmbedSrc =
     process.env.NEXT_PUBLIC_DEMO_YOUTUBE_EMBED || 'https://www.youtube.com/embed/y7kygIhnZm8';
   const bookDemoHref =
@@ -39,13 +198,12 @@ export default function HomeForexLayout({ locale }: Props) {
             </figure>
             <div className="relative z-10 grid gap-8 lg:grid-cols-[1.05fr_1fr] lg:items-start">
               <div className="space-y-5 rounded-3xl bg-black/16 p-4 backdrop-blur-[1px] md:p-5">
-                <span className="badge badge-yellow-v2 !bg-[#d7efb2] !text-secondary">Labor cost visibility</span>
+                <span className="badge badge-yellow-v2 !bg-[#d7efb2] !text-secondary">{laborCopy.badge}</span>
                 <h2 className="max-w-[560px] text-heading-4 text-white md:text-heading-3">
-                  Schedule your team and see labor cost pressure before payroll closes.
+                  {laborCopy.title}
                 </h2>
                 <p className="max-w-[620px] text-[15px] leading-7 text-white/82">
-                  Schedulaa gives service managers one place to track worked hours, overtime risk, payroll-ready totals,
-                  and staffing pressure without waiting for spreadsheets or end-of-week rollups.
+                  {laborCopy.body}
                 </p>
                 <div className="flex flex-wrap gap-3 pt-2">
                   <TrackedLink
@@ -57,24 +215,18 @@ export default function HomeForexLayout({ locale }: Props) {
                       page_path: '/',
                     }}
                   >
-                    Book a demo
+                    {laborCopy.primaryCta}
                   </TrackedLink>
                   <TrackedLink
                     href="/pricing"
                     className="btn btn-transparent btn-md min-w-[170px] !border-white/25 !text-white hover:!bg-white hover:!text-secondary"
                   >
-                    See pricing
+                    {laborCopy.secondaryCta}
                   </TrackedLink>
                 </div>
               </div>
               <div className="grid gap-3 lg:pt-1">
-                {[
-                  'Today Labor Cost: know what staffing cost looks like before payroll day.',
-                  'Overtime Risk: spot employees approaching overtime before it compounds.',
-                  'Payroll Ready Hours: review approved hours, leave, and exceptions in one place.',
-                  'Daily and weekly labor visibility for managers, operators, and accountants.',
-                  'Replace scattered spreadsheets and manual rollups with one operating view.',
-                ].map((item, index) => (
+                {laborCopy.bullets.map((item, index) => (
                   <div
                     key={item}
                     className="flex items-start gap-3 rounded-2xl border border-white/12 bg-black/18 px-4 py-3 text-white backdrop-blur-sm"
@@ -95,7 +247,7 @@ export default function HomeForexLayout({ locale }: Props) {
         <div className="main-container">
           <article className="rounded-3xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
             <div className="space-y-3">
-              <h2 className="text-heading-4 md:text-heading-3">One Platform. One Source of Truth</h2>
+              <h2 className="text-heading-4 md:text-heading-3">{laborCopy.videoTitle}</h2>
               <div className="relative w-full overflow-hidden rounded-2xl border border-stroke-2 pb-[56.25%] dark:border-stroke-7">
                 <iframe
                   className="absolute top-0 left-0 h-full w-full"

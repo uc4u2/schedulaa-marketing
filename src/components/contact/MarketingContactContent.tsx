@@ -67,7 +67,7 @@ const SUPPORT_ACCORDION = [
     points: ['QuickBooks/Xero payroll exports', 'Zapier automation hooks', 'API-friendly operations workflows'],
   },
 ];
-const DIRECT_LINES = ['Sales: +1 (647) 849-4913', 'Admin: admin@schedulaa.com'];
+const DIRECT_LINES = ['Admin: admin@schedulaa.com'];
 const HQ_ADDRESS = '171 Harbord Street, Toronto, ON M5S 1H3';
 const MAP_EMBED_URL =
   'https://maps.google.com/maps?q=171%20Harbord%20Street%2C%20Toronto%2C%20ON%20M5S%201H3&t=&z=15&ie=UTF8&iwloc=&output=embed';
@@ -257,11 +257,8 @@ export default function MarketingContactContent() {
             {copy.heroBody}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="mailto:admin@schedulaa.com" className="btn btn-green hover:btn-white">
+            <a href="mailto:admin@schedulaa.com" className="btn btn-green btn-md min-w-[152px] justify-center px-6 hover:btn-white">
               {copy.emailUs}
-            </a>
-            <a href="tel:+16478494913" className="btn bg-white/18 text-white hover:bg-white/28 dark:btn-transparent">
-              {copy.call}
             </a>
           </div>
           </div>

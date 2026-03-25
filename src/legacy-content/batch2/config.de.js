@@ -175,16 +175,16 @@ export const demoPage = {
 
 export const contactPage = {
   meta: {
-    title: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
-    description: 'Mehr erfahren',
+    title: 'Kontakt mit Schedulaa',
+    description: 'Sprechen Sie mit dem Schedulaa-Team ueber Implementierung, Partnerschaften oder Migration.',
   },
   hero: {
     badge: 'Kontakt',
-    title: "Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.",
+    title: 'Lassen Sie uns ueber Ihren Rollout sprechen.',
     subtitle:
-      'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.',
-    primaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: 'mailto:admin@schedulaa.com' },
-    secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.' },
+      'Sie suchen eine individuelle Implementierung, ein Partnerprogramm oder Hilfe bei der Migration? Unsere Spezialisten antworten innerhalb eines Werktages.',
+    primaryCta: { label: 'E-Mail senden', href: 'mailto:admin@schedulaa.com' },
+    secondaryCta: { label: 'Team kontaktieren', href: '/contact' },
   },
   sections: [
     {

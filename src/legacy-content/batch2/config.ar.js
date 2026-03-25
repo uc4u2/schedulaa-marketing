@@ -175,16 +175,16 @@ export const demoPage = {
 
 export const contactPage = {
   meta: {
-    title: 'توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.',
-    description: 'يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.',
+    title: 'تواصل مع Schedulaa',
+    description: 'تحدث مع فريق Schedulaa بخصوص التنفيذ او الشراكات او دعم الترحيل.',
   },
   hero: {
     badge: 'التواصل',
-    title: "يوضح هذا القسم تفاصيل الميزة بشكل واضح داخل المنصة.",
+    title: 'دعنا نتحدث عن خطة التنفيذ لديك.',
     subtitle:
-      'هل يدعم هذا الخيار احتياجات فريقك؟',
-    primaryCta: { label: 'us', href: 'mailto:admin@schedulaa.com' },
-    secondaryCta: { label: '+1 (415) 555-0198', href: 'توضح هذه الفقرة الميزة بشكل واضح داخل Schedulaa.' },
+      'إذا كنت تبحث عن تنفيذ مخصص او برنامج شراكة او مساعدة في الترحيل، فسيرد عليك مختصونا خلال يوم عمل واحد.',
+    primaryCta: { label: 'راسلنا', href: 'mailto:admin@schedulaa.com' },
+    secondaryCta: { label: 'تواصل مع الفريق', href: '/contact' },
   },
   sections: [
     {

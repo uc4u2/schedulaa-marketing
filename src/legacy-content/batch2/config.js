@@ -184,7 +184,7 @@ export const contactPage = {
     subtitle:
       'Looking for a custom implementation, partner program, or migration help? Our specialists respond within one business day.',
     primaryCta: { label: 'Email us', href: 'mailto:admin@schedulaa.com' },
-    secondaryCta: { label: 'Call +1 (415) 555-0198', href: 'tel:+14155550198' },
+    secondaryCta: { label: 'Call +1 (289) 514-9260', href: 'tel:+12895149260' },
   },
   sections: [
     {

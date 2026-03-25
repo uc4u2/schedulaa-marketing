@@ -175,16 +175,16 @@ export const demoPage = {
 
 export const contactPage = {
   meta: {
-    title: 'Cette section explique clairement la fonctionnalite dans Schedulaa.',
-    description: 'En savoir plus',
+    title: 'Contacter Schedulaa',
+    description: "Parlez a l'equipe Schedulaa pour l'implementation, les partenariats ou la migration.",
   },
   hero: {
     badge: 'Contact',
-    title: "Cette section explique clairement la fonctionnalite dans Schedulaa.",
+    title: 'Parlons de votre deploiement.',
     subtitle:
-      'Cette section explique clairement la fonctionnalite dans Schedulaa.',
+      "Besoin d'une implementation sur mesure, d'un programme partenaire ou d'un support migration ? Nos specialistes repondent sous un jour ouvrable.",
     primaryCta: { label: 'Ecrivez-nous', href: 'mailto:admin@schedulaa.com' },
-    secondaryCta: { label: 'Cette section explique clairement la fonctionnalite dans Schedulaa.', href: 'Cette section explique clairement la fonctionnalite dans Schedulaa.' },
+    secondaryCta: { label: "Contacter l'equipe", href: '/contact' },
   },
   sections: [
     {

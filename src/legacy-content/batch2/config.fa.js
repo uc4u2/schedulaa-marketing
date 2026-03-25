@@ -4,7 +4,7 @@ import {
   statusPage,
   roadmapPage,
   demoPage,
-  contactPage,
+  contactPage as contactPageEn,
   supportPage,
   zapierPage as zapierPageEn,
 } from './config';
@@ -108,6 +108,23 @@ export const industriesPage = {
   ],
 };
 
+export const contactPage = {
+  ...contactPageEn,
+  meta: {
+    ...contactPageEn.meta,
+    title: 'تماس با Schedulaa',
+    description: 'با تیم Schedulaa درباره اجرا، همکاری یا پشتیبانی مهاجرت صحبت کنید.',
+  },
+  hero: {
+    ...contactPageEn.hero,
+    badge: 'تماس',
+    title: 'بياييد درباره اجراي شما صحبت کنيم.',
+    subtitle: 'برای اجرای سفارشی، برنامه همکاری یا پشتیبانی مهاجرت، متخصصان ما طی یک روز کاری پاسخ می‌دهند.',
+    primaryCta: { ...contactPageEn.hero.primaryCta, label: 'ايميل به ما' },
+    secondaryCta: { ...contactPageEn.hero.secondaryCta, label: 'تماس با تيم', href: '/contact' },
+  },
+};
+
 export const zapierPage = {
   ...zapierPageEn,
   meta: {
@@ -143,4 +160,4 @@ export const zapierPage = {
   ],
 };
 
-export { industriesPage, statusPage, roadmapPage, demoPage, contactPage, supportPage, zapierPage };
+export { industriesPage, statusPage, roadmapPage, demoPage, supportPage, zapierPage };

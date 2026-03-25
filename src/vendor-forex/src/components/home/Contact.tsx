@@ -202,7 +202,7 @@ const Contact = ({ locale = 'en' }: { locale?: AppLocale }) => {
   const contactPage = batch2.contactPage;
   const contactInfo: ContactInfo[] = [
     { id: 1, type: 'email', value: 'admin@schedulaa.com', href: 'mailto:admin@schedulaa.com', ariaLabel: 'Email us at admin@schedulaa.com' },
-    { id: 2, type: 'phone', value: '+1 (415) 555-0198', href: 'tel:+14155550198', ariaLabel: 'Call us at +1 (415) 555-0198' },
+    { id: 2, type: 'phone', value: '+1 (289) 514-9260', href: 'tel:+12895149260', ariaLabel: 'Call us at +1 (289) 514-9260' },
     { id: 3, type: 'address', value: copy.address },
   ];
 
