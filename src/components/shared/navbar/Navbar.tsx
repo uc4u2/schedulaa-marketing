@@ -17,7 +17,7 @@ import navbarLogo from '@public/images/shared/schedulaa-logo-navbar.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { trackMetaPixel } from '@/utils/metaPixel';
 
@@ -62,6 +62,19 @@ const Navbar = () => {
   const bookDemoHref =
     process.env.NEXT_PUBLIC_BOOK_DEMO_URL ||
     'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
+  const bookDemoEmbedHref = (() => {
+    try {
+      const url = new URL(bookDemoHref);
+      url.searchParams.set('embed', '1');
+      url.searchParams.set('mode', 'modal');
+      url.searchParams.set('dialog', '1');
+      url.searchParams.set('focus', 'scheduler');
+      return url.toString();
+    } catch {
+      const join = bookDemoHref.includes('?') ? '&' : '?';
+      return `${bookDemoHref}${join}embed=1&mode=modal&dialog=1&focus=scheduler`;
+    }
+  })();
   const bookDemoLabel =
     {
       en: 'Book demo',
@@ -78,7 +91,22 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [demoOpen, setDemoOpen] = useState(false);
   const closeTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (!demoOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setDemoOpen(false);
+    };
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [demoOpen]);
 
   const clearCloseTimer = () => {
     if (closeTimerRef.current != null) {
@@ -103,8 +131,9 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-5 left-1/2 z-50 mx-auto w-full max-w-[350px] -translate-x-1/2 px-2 transition-all duration-500 ease-in-out max-[400px]:max-w-[350px] min-[425px]:max-w-[375px] min-[500px]:max-w-[450px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1240px]">
-      <div className="dark:bg-background-7 flex items-center justify-between rounded-full bg-white/70 px-2.5 py-2.5 backdrop-blur-[25px] xl:py-0">
+    <>
+      <header className="fixed top-5 left-1/2 z-50 mx-auto w-full max-w-[350px] -translate-x-1/2 px-2 transition-all duration-500 ease-in-out max-[400px]:max-w-[350px] min-[425px]:max-w-[375px] min-[500px]:max-w-[450px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1240px]">
+        <div className="dark:bg-background-7 flex items-center justify-between rounded-full bg-white/70 px-2.5 py-2.5 backdrop-blur-[25px] xl:py-0">
         <Link href={withLocalePath('/', locale)} aria-label="Schedulaa home" className="shrink-0">
           <figure className="hidden lg:block lg:max-w-[198px]">
             <Image src={navbarLogo} alt="Schedulaa" className="h-auto w-full" priority />
@@ -194,18 +223,21 @@ const Navbar = () => {
             </a>
           ))}
 
-          <a
-            href={bookDemoHref}
+          <button
+            type="button"
             className="btn btn-primary btn-md-v2 border-0"
             onClick={() =>
-              trackMetaPixel('Lead', {
-                content_name: 'Navbar Book Demo',
-                page_path: pathname,
-              })
+              {
+                trackMetaPixel('Lead', {
+                  content_name: 'Navbar Book Demo',
+                  page_path: pathname,
+                });
+                setDemoOpen(true);
+              }
             }
           >
             {bookDemoLabel}
-          </a>
+          </button>
 
           <label className="sr-only" htmlFor="marketing-language">
             {t('language')}
@@ -297,8 +329,8 @@ const Navbar = () => {
                 {t(item.labelKey)}
               </a>
             ))}
-            <a
-              href={bookDemoHref}
+            <button
+              type="button"
               className="col-span-2 rounded-lg bg-primary px-3 py-2 text-center text-sm font-medium text-white"
               onClick={() => {
                 trackMetaPixel('Lead', {
@@ -306,10 +338,11 @@ const Navbar = () => {
                   page_path: pathname,
                 });
                 setOpen(false);
+                setDemoOpen(true);
               }}
             >
               {bookDemoLabel}
-            </a>
+            </button>
           </div>
 
           {MOBILE_NAV_LINKS.map((item) => (
@@ -325,7 +358,66 @@ const Navbar = () => {
 
         </nav>
       </div>
-    </header>
+      </header>
+
+      <div
+        className={cn(
+          'fixed inset-0 z-[90] transition-all duration-300',
+          demoOpen ? 'pointer-events-auto bg-slate-950/30' : 'pointer-events-none bg-transparent',
+        )}
+        aria-hidden={!demoOpen}
+      >
+        <button
+          type="button"
+          className={cn('absolute inset-0 h-full w-full', demoOpen ? 'block' : 'hidden')}
+          onClick={() => setDemoOpen(false)}
+          aria-label="Close demo booking drawer"
+        />
+        <aside
+          className={cn(
+            'absolute right-0 top-0 flex h-full w-full max-w-[860px] flex-col bg-white shadow-2xl transition-transform duration-300 dark:bg-background-8',
+            demoOpen ? 'translate-x-0' : 'translate-x-full',
+          )}
+          role="dialog"
+          aria-modal="true"
+          aria-label={bookDemoLabel}
+        >
+          <div className="flex items-center justify-between border-b border-stroke-2 px-4 py-3 dark:border-stroke-7 sm:px-6">
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-secondary dark:text-accent">{bookDemoLabel}</p>
+              <p className="text-xs text-secondary/65 dark:text-accent/65">Book directly without leaving the marketing site.</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <a
+                href={bookDemoHref}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-stroke-2 px-3 py-1.5 text-xs font-medium text-secondary transition hover:bg-background-3 dark:border-stroke-7 dark:text-accent dark:hover:bg-background-7"
+              >
+                Open full page
+              </a>
+              <button
+                type="button"
+                onClick={() => setDemoOpen(false)}
+                className="rounded-full border border-stroke-2 px-3 py-1.5 text-sm font-medium text-secondary transition hover:bg-background-3 dark:border-stroke-7 dark:text-accent dark:hover:bg-background-7"
+                aria-label="Close"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+          <div className="flex-1 bg-slate-50 dark:bg-background-9">
+            <iframe
+              src={bookDemoEmbedHref}
+              title={bookDemoLabel}
+              className="h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
+        </aside>
+      </div>
+    </>
   );
 };
 
