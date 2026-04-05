@@ -20,10 +20,10 @@ const STARTER_CHIPS = [
 ];
 
 const HELP_ARTICLES = [
-  'How do I login?',
-  "My email isn't working, what do I do?",
-  'Permissions by User Roles',
-  'How does Reopen work / How does a dispute become Reopened?',
+  'Scheduling & time tracking',
+  'Payroll & QuickBooks/Xero',
+  'Pricing & plans',
+  'Compare Schedulaa with QuickBooks',
 ];
 
 const INITIAL_MESSAGE =
@@ -157,6 +157,10 @@ export default function SchedulaaAssistant() {
     }
   };
 
+  const stopWheelPropagation = (event: React.WheelEvent<HTMLDivElement>) => {
+    event.stopPropagation();
+  };
+
   if (hidden) {
     return null;
   }
@@ -177,7 +181,10 @@ export default function SchedulaaAssistant() {
           Ask Schedulaa
         </button>
       ) : (
-        <div className="fixed right-3 bottom-3 z-[130] flex h-[min(80vh,680px)] w-[min(420px,calc(100vw-24px))] flex-col overflow-hidden rounded-[28px] border border-cyan-200/20 bg-[linear-gradient(180deg,#0d2236_0%,#0b1e31_100%)] shadow-[0_32px_80px_rgba(4,10,24,0.56)] backdrop-blur-xl">
+        <div
+          className="fixed right-3 bottom-3 z-[130] flex h-[min(80vh,680px)] w-[min(420px,calc(100vw-24px))] flex-col overflow-hidden rounded-[28px] border border-cyan-200/20 bg-[linear-gradient(180deg,#0d2236_0%,#0b1e31_100%)] shadow-[0_32px_80px_rgba(4,10,24,0.56)] backdrop-blur-xl"
+          onWheelCapture={stopWheelPropagation}
+        >
           <div className="bg-[linear-gradient(135deg,#0f2b44_0%,#144668_55%,#0d6893_100%)] px-5 py-5">
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center gap-3">
@@ -229,7 +236,7 @@ export default function SchedulaaAssistant() {
 
           <div className="flex-1 overflow-hidden bg-[#f8fafc]">
             {activeTab === 'home' && (
-              <div className="h-full overflow-y-auto overscroll-contain px-4 py-4">
+              <div className="h-full overflow-y-auto overscroll-contain px-4 py-4" onWheelCapture={stopWheelPropagation}>
                 <div className="rounded-[16px] bg-white p-3 shadow-[0_10px_28px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/70">
                   <div className="flex items-center justify-between rounded-[12px] bg-slate-50 px-3 py-3">
                     <span className="text-base font-semibold text-slate-900">Search for help</span>
@@ -259,7 +266,10 @@ export default function SchedulaaAssistant() {
                     Messages
                   </div>
                 </div>
-                <div className="h-[calc(100%-72px)] overflow-y-auto overscroll-contain bg-[linear-gradient(180deg,#10263a_0%,#0d2133_100%)] px-4 py-4">
+                <div
+                  className="h-[calc(100%-72px)] overflow-y-auto overscroll-contain bg-[linear-gradient(180deg,#10263a_0%,#0d2133_100%)] px-4 py-4"
+                  onWheelCapture={stopWheelPropagation}
+                >
                   <div className="space-y-3">
                     {messages.map((msg, idx) => (
                       <div key={`${msg.role}-${idx}`} className={msg.role === 'user' ? 'text-right' : 'text-left'}>
@@ -302,7 +312,7 @@ export default function SchedulaaAssistant() {
             )}
 
             {activeTab === 'help' && (
-              <div className="h-full overflow-y-auto overscroll-contain px-4 py-4">
+              <div className="h-full overflow-y-auto overscroll-contain px-4 py-4" onWheelCapture={stopWheelPropagation}>
                 <div className="rounded-[16px] bg-white p-3 shadow-[0_10px_28px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/70">
                   <div className="rounded-[12px] bg-slate-50 px-3 py-2">
                     <input
