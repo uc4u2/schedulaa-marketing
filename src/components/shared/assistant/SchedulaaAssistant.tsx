@@ -17,8 +17,6 @@ const STARTER_CHIPS = [
   'Payroll & QuickBooks/Xero',
   'Pricing & plans',
   'Compare Schedulaa with QuickBooks',
-  'Chatbot Guide (Schedulaa Assistant)',
-  'Onboarding checklist & rollout',
 ];
 
 const HELP_ARTICLES = [
@@ -108,6 +106,23 @@ export default function SchedulaaAssistant() {
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+    };
   }, [open]);
 
   const sendMessage = async (input: string) => {
@@ -214,7 +229,7 @@ export default function SchedulaaAssistant() {
 
           <div className="flex-1 overflow-hidden bg-[#f8fafc]">
             {activeTab === 'home' && (
-              <div className="h-full overflow-y-auto px-4 py-4">
+              <div className="h-full overflow-y-auto overscroll-contain px-4 py-4">
                 <div className="rounded-[16px] bg-white p-3 shadow-[0_10px_28px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/70">
                   <div className="flex items-center justify-between rounded-[12px] bg-slate-50 px-3 py-3">
                     <span className="text-base font-semibold text-slate-900">Search for help</span>
@@ -244,7 +259,7 @@ export default function SchedulaaAssistant() {
                     Messages
                   </div>
                 </div>
-                <div className="h-[calc(100%-72px)] overflow-y-auto bg-[linear-gradient(180deg,#10263a_0%,#0d2133_100%)] px-4 py-4">
+                <div className="h-[calc(100%-72px)] overflow-y-auto overscroll-contain bg-[linear-gradient(180deg,#10263a_0%,#0d2133_100%)] px-4 py-4">
                   <div className="space-y-3">
                     {messages.map((msg, idx) => (
                       <div key={`${msg.role}-${idx}`} className={msg.role === 'user' ? 'text-right' : 'text-left'}>
@@ -287,7 +302,7 @@ export default function SchedulaaAssistant() {
             )}
 
             {activeTab === 'help' && (
-              <div className="h-full overflow-y-auto px-4 py-4">
+              <div className="h-full overflow-y-auto overscroll-contain px-4 py-4">
                 <div className="rounded-[16px] bg-white p-3 shadow-[0_10px_28px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/70">
                   <div className="rounded-[12px] bg-slate-50 px-3 py-2">
                     <input
