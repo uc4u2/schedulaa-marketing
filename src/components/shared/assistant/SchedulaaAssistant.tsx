@@ -87,7 +87,7 @@ export default function SchedulaaAssistant() {
           aria-label="Open Schedulaa Assistant"
         >
           <span className="inline-block h-2.5 w-2.5 rounded-full bg-lime-300 shadow-[0_0_14px_rgba(163,230,53,0.8)]" />
-          Schedulaa Assistant
+          <span className="text-lime-300">Ask Schedulaa</span>
         </button>
       ) : (
         <div className="fixed right-3 bottom-3 z-[130] flex h-[min(78vh,620px)] w-[min(408px,calc(100vw-24px))] flex-col overflow-hidden rounded-[28px] border border-cyan-200/20 bg-[linear-gradient(180deg,#0d2236_0%,#0b1e31_100%)] shadow-[0_32px_80px_rgba(4,10,24,0.56)] backdrop-blur-xl">
@@ -100,11 +100,10 @@ export default function SchedulaaAssistant() {
                 </div>
                 <div>
                   <p className="text-[1.02rem] font-semibold text-white">Schedulaa Assistant</p>
-                  <p className="text-xs text-cyan-100/80">Product guide, booking help, and setup answers</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <span className="rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-cyan-50/90">
+                <span className="rounded-full border border-lime-300/30 bg-lime-300/10 px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-lime-200">
                   Online
                 </span>
               </div>
