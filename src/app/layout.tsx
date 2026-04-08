@@ -10,6 +10,7 @@ import { defaultMetadata } from '@/utils/generateMetaData';
 import { getServerLocale } from '@/utils/serverLocale';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
+import Script from 'next/script';
 import { ReactNode, Suspense } from 'react';
 import './globals.css';
 import '@/vendor-forex/src/app/globals.css';
@@ -57,6 +58,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
       <body className={`${interTight.variable} antialiased`}>
+        <Script
+          id="hs-script-loader"
+          src="https://js-na3.hs-scripts.com/343169654.js"
+          strategy="afterInteractive"
+        />
         <LocaleProvider>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
             <Suspense>
