@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main className="section-padding-x pb-24 pt-20">
+    <main className="section-padding-x pb-24 pt-32 md:pt-36">
       <div className="mx-auto max-w-4xl space-y-8">
         <header className="space-y-4">
           <h1 className="text-4xl font-semibold text-secondary dark:text-white">Privacy Policy</h1>
