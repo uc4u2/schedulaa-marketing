@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <header className="space-y-4">
           <h1 className="text-4xl font-semibold text-secondary dark:text-white">Privacy Policy</h1>
           <p className="text-secondary/80 dark:text-accent/75">
-            Last updated: March 1, 2026. This policy describes how Schedulaa collects, uses, stores, and shares personal
+            Last updated: April 10, 2026. This policy describes how Schedulaa collects, uses, stores, and shares personal
             data when you use our website, applications, and connected billing services.
           </p>
         </header>
@@ -27,6 +27,7 @@ export default function PrivacyPage() {
             <li>Operational product data such as bookings, schedules, and service activity.</li>
             <li>Billing and payment metadata from payment providers (for example Stripe IDs, invoice state, and card attributes).</li>
             <li>Security and anti-fraud signals such as IP address, request timestamps, user agent, and risk events.</li>
+            <li>Punch-location evidence, if enabled by a company, such as employee/device location captured when an employee taps Clock In or Clock Out.</li>
           </ul>
         </section>
 
@@ -36,8 +37,25 @@ export default function PrivacyPage() {
             <li>Provide and secure Schedulaa services.</li>
             <li>Process subscriptions, invoices, and payments.</li>
             <li>Detect abuse, prevent fraud, and investigate suspicious billing behavior.</li>
+            <li>Support attendance verification, manager review, operational security, and timekeeping review.</li>
             <li>Respond to payment disputes and legal/regulatory requests.</li>
           </ul>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-2xl font-semibold text-secondary dark:text-white">Punch location evidence</h2>
+          <p className="text-secondary/80 dark:text-accent/75">
+            If a company enables punch-location evidence, Schedulaa may collect employee/device location only when an
+            employee taps Clock In or Clock Out. This evidence is used for attendance verification, manager review,
+            operational security, and timekeeping review. Location data is collected only when the employee initiates a
+            clock-in or clock-out action.
+          </p>
+          <p className="text-secondary/80 dark:text-accent/75">
+            Schedulaa does not use this feature for background location tracking or continuous location monitoring. If
+            location is unavailable, denied, unsupported, or times out, employees may still be able to clock in or out
+            depending on the product flow. Punch-location evidence is advisory for manager review and is not continuous
+            surveillance.
+          </p>
         </section>
 
         <section className="space-y-3">
