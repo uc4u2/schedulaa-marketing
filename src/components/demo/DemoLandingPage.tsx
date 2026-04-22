@@ -273,14 +273,6 @@ export default function DemoLandingPage() {
             <Link href={contactHref} className="btn btn-white btn-md dark:btn-white-dark">
               {copy.talk}
             </Link>
-            <a
-              href={ANDROID_APK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-white btn-md dark:btn-white-dark"
-            >
-              {copy.downloadApk || 'Download Android APK'}
-            </a>
           </div>
           <div className="mx-auto mt-6 flex max-w-[560px] flex-col items-center justify-center gap-3 sm:flex-row">
             <a
