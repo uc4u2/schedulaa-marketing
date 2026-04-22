@@ -11,12 +11,30 @@ import Services from '@/vendor-forex/src/components/home/Services';
 import Steps from '@/vendor-forex/src/components/home/Steps';
 import { getLandingSource } from '@/legacy-content/features/getLandingSource';
 import { AppLocale } from '@/utils/locale';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import TrackedLink from '@/components/shared/TrackedLink';
 import gradient28Img from '@public/images/ns-img-516.png';
+import androidLaunchImg from '@public/images/marketing/android-launch.png';
 import Image from 'next/image';
 
 type Props = {
   locale: AppLocale;
+};
+
+const MOBILE_APP_SECTION_COPY = {
+  eyebrow: 'MOBILE APP',
+  title: 'Run daily operations from anywhere',
+  body:
+    'Schedulaa brings scheduling, time tracking, shift changes, approvals, and team updates into one mobile workflow. Managers stay in control and employees can handle day-to-day actions without needing to be at a desk.',
+  bullets: [
+    'Review time-off requests, shift swaps, and approvals in seconds',
+    'Let employees clock in, check schedules, and stay updated on the go',
+    'Keep attendance notices, tasks, and team communication in one place',
+    'Extend your operations workflow from desktop to mobile with the same Schedulaa system',
+  ],
+  support: 'Built to support fast-moving service teams across daily operations.',
+  primaryCta: 'Book a demo',
+  secondaryCta: 'Start free',
 };
 
 const LABOR_VISIBILITY_COPY: Record<
@@ -186,10 +204,84 @@ export default function HomeForexLayout({ locale }: Props) {
   const bookDemoHref =
     process.env.NEXT_PUBLIC_BOOK_DEMO_URL ||
     'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
+  const returnTo = marketingReturnTo(locale, '/');
   return (
     <main>
       <Hero source={source} locale={locale} />
       <Clients locale={locale} />
+      <section className="py-12 md:py-16">
+        <div className="main-container">
+          <article className="overflow-hidden rounded-[28px] border border-stroke-2 bg-white shadow-[0_20px_65px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
+            <div className="grid items-center gap-8 p-6 md:p-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12 lg:p-10">
+              <div className="space-y-5">
+                <span className="badge badge-cyan">{MOBILE_APP_SECTION_COPY.eyebrow}</span>
+                <div className="space-y-4">
+                  <h2 className="max-w-[560px] text-heading-4 text-secondary md:text-heading-3 dark:text-white">
+                    {MOBILE_APP_SECTION_COPY.title}
+                  </h2>
+                  <p className="max-w-[620px] text-[15px] leading-7 text-secondary/75 dark:text-accent/70">
+                    {MOBILE_APP_SECTION_COPY.body}
+                  </p>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {MOBILE_APP_SECTION_COPY.bullets.map((item, index) => (
+                    <div
+                      key={item}
+                      className="flex items-start gap-3 rounded-2xl border border-stroke-2 bg-background-12/55 px-4 py-3 dark:border-stroke-7 dark:bg-background-7/55"
+                    >
+                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secondary text-xs font-semibold text-white">
+                        {index + 1}
+                      </span>
+                      <p className="text-sm leading-6 text-secondary/82 dark:text-accent/82">{item}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-sm font-medium text-secondary/60 dark:text-accent/60">
+                  {MOBILE_APP_SECTION_COPY.support}
+                </p>
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <TrackedLink
+                    href={bookDemoHref}
+                    className="btn btn-secondary-v2 btn-md min-w-[170px]"
+                    eventName="Lead"
+                    eventParams={{
+                      content_name: 'Homepage Mobile App Book Demo',
+                      page_path: '/',
+                    }}
+                  >
+                    {MOBILE_APP_SECTION_COPY.primaryCta}
+                  </TrackedLink>
+                  <TrackedLink
+                    href={buildAppUrl('/register', { returnTo })}
+                    className="btn btn-white btn-md min-w-[170px] dark:btn-transparent"
+                    eventName="CompleteRegistration"
+                    eventParams={{
+                      content_name: 'Homepage Mobile App Start Free',
+                      page_path: '/',
+                    }}
+                  >
+                    {MOBILE_APP_SECTION_COPY.secondaryCta}
+                  </TrackedLink>
+                </div>
+              </div>
+              <div className="relative mx-auto w-full max-w-[560px]">
+                <div className="absolute inset-x-[8%] -top-8 h-24 rounded-full bg-secondary/12 blur-3xl dark:bg-primary/20" />
+                <div className="absolute -bottom-10 left-1/2 h-24 w-[72%] -translate-x-1/2 rounded-full bg-[#1f7ae0]/12 blur-3xl dark:bg-[#1f7ae0]/20" />
+                <div className="relative overflow-hidden rounded-[28px] border border-stroke-2 bg-gradient-to-br from-[#f8fbff] via-white to-[#eef5ff] p-4 shadow-[0_26px_65px_rgba(30,64,175,0.12)] dark:border-stroke-7 dark:from-background-7 dark:via-background-8 dark:to-background-7 md:p-5">
+                  <div className="rounded-[22px] border border-white/70 bg-white/90 p-3 shadow-inner dark:border-white/5 dark:bg-background-8/95">
+                    <Image
+                      src={androidLaunchImg}
+                      alt="Schedulaa Android mobile app interface preview"
+                      className="h-auto w-full rounded-[18px] object-contain"
+                      priority={false}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
       <section className="py-12 md:py-16">
         <div className="main-container">
           <article className="group relative overflow-hidden rounded-[28px] bg-secondary p-6 shadow-[0_24px_80px_rgba(0,0,0,0.18)] md:p-8 lg:p-10">
