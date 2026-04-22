@@ -38,6 +38,9 @@ const DEMO_YOUTUBE_EMBED_SRC =
 const DEMO_BOOKING_URL =
   process.env.NEXT_PUBLIC_BOOK_DEMO_URL ||
   'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
+const ANDROID_APK_URL =
+  process.env.NEXT_PUBLIC_ANDROID_APK_URL ||
+  'https://pub-6cbed1dd8177417b96763fc4eb930d09.r2.dev/assets/apk/schedulaa-staff-latest.apk';
 
 const demoVideos = [
   {
@@ -177,6 +180,7 @@ export default function DemoLandingPage() {
       'Book a live walkthrough first, then use the demo dashboard to explore scheduling, time tracking, payroll, compliance, and exports on your own.',
     login: 'Try the demo dashboard',
     talk: 'Talk to our rollout team',
+    downloadApk: 'Download Android APK',
     bookDemo: 'Book a live demo',
     credentials: 'Demo credentials',
     quickStart: '4-step quick start',
@@ -248,6 +252,14 @@ export default function DemoLandingPage() {
             <Link href={contactHref} className="btn btn-white btn-md dark:btn-white-dark">
               {copy.talk}
             </Link>
+            <a
+              href={ANDROID_APK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-white btn-md dark:btn-white-dark"
+            >
+              {copy.downloadApk || 'Download Android APK'}
+            </a>
           </div>
         </div>
 
@@ -290,6 +302,20 @@ export default function DemoLandingPage() {
                 <p className="text-tagline-2">{copy.step4d}</p>
               </li>
             </ul>
+            <div className="mt-6 rounded-2xl border border-stroke-2 px-4 py-4 dark:border-stroke-7">
+              <p className="mb-2 font-semibold">Install the Android app directly</p>
+              <p className="mb-4 text-tagline-2">
+                Download the latest signed Schedulaa Android APK directly from our public Cloudflare R2 asset host.
+              </p>
+              <a
+                href={ANDROID_APK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-md"
+              >
+                {copy.downloadApk || 'Download Android APK'}
+              </a>
+            </div>
           </article>
         </div>
 
