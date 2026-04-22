@@ -321,12 +321,19 @@ export default function HomeForexLayout({ locale }: Props) {
                 {laborCopy.bullets.map((item, index) => (
                   <div
                     key={item}
-                    className="flex items-start gap-3 rounded-2xl border border-white/12 bg-black/18 px-4 py-3 text-white backdrop-blur-sm"
+                    className="group/item relative overflow-hidden rounded-2xl border border-white/12 bg-black/18 px-4 py-3 text-white shadow-[0_10px_24px_rgba(3,8,20,0.12)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/22 hover:bg-white/[0.08] hover:shadow-[0_18px_42px_rgba(8,20,45,0.2)]"
                   >
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#3f6a5e] text-[11px] text-white">
+                    <span className="pointer-events-none absolute inset-y-0 left-0 w-0.5 bg-gradient-to-b from-[#7fe36c] via-[#79d1ff] to-transparent opacity-0 transition-opacity duration-300 group-hover/item:opacity-100" />
+                    <span className="pointer-events-none absolute inset-y-0 right-0 w-28 bg-gradient-to-l from-[#4cc2ff]/14 via-[#8df5c5]/10 to-transparent opacity-0 transition-opacity duration-300 group-hover/item:opacity-100" />
+                    <span className="relative mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#3f6a5e] text-[11px] text-white transition-all duration-300 group-hover/item:scale-110 group-hover/item:bg-[#7bbd77] group-hover/item:shadow-[0_0_0_6px_rgba(127,227,108,0.10)]">
                       {index + 1}
                     </span>
-                    <p className="text-sm leading-6 text-white/90 md:text-[15px]">{item}</p>
+                    <p className="relative flex-1 text-sm leading-6 text-white/90 transition-colors duration-300 group-hover/item:text-white md:text-[15px]">
+                      {item}
+                    </p>
+                    <span className="relative mt-0.5 hidden h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-sm text-white/60 transition-all duration-300 group-hover/item:border-white/20 group-hover/item:bg-white/[0.12] group-hover/item:text-white md:flex">
+                      ↗
+                    </span>
                   </div>
                 ))}
               </div>
