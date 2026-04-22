@@ -200,39 +200,29 @@ export default function HomeAiApplicationLayout({ locale }: Props) {
                   </a>
                 </li>
               </ul>
-              <div className="mx-auto mt-6 max-w-[760px] rounded-[28px] border border-stroke-2 bg-white/90 p-4 shadow-md backdrop-blur dark:border-stroke-7 dark:bg-background-8/90">
-                <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
-                  <div className="text-left">
-                    <p className="text-heading-6">Download the mobile app</p>
-                    <p className="mt-1 max-w-[460px] text-tagline-2 text-secondary/70 dark:text-accent/70">
-                      Install the signed Android app directly today. iPhone delivery is planned in the iOS rollout.
-                    </p>
-                  </div>
-                  <div className="flex flex-col gap-3 sm:flex-row">
-                    <a
-                      href={ANDROID_APK_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex min-w-[220px] items-center gap-3 rounded-[18px] border border-stroke-2 bg-background-12 px-4 py-3 text-left transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary hover:shadow-lg dark:border-stroke-7 dark:bg-background-7"
-                    >
-                      <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-secondary shadow-sm dark:bg-background-8">
-                        <GooglePlayBadge />
-                      </span>
-                      <span className="block">
-                        <span className="block text-[11px] uppercase tracking-[0.18em] text-secondary/55 dark:text-accent/55">Android app</span>
-                        <span className="block text-base font-semibold text-secondary dark:text-white">Download APK</span>
-                      </span>
-                    </a>
-                    <div className="flex min-w-[220px] items-center gap-3 rounded-[18px] border border-dashed border-stroke-2 bg-white px-4 py-3 text-left opacity-85 dark:border-stroke-7 dark:bg-background-8">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-background-12 text-secondary shadow-sm dark:bg-background-7 dark:text-white">
-                        <AppleBadge />
-                      </span>
-                      <span className="block">
-                        <span className="block text-[11px] uppercase tracking-[0.18em] text-secondary/55 dark:text-accent/55">iPhone app</span>
-                        <span className="block text-base font-semibold text-secondary dark:text-white">Coming soon</span>
-                      </span>
-                    </div>
-                  </div>
+              <div className="mx-auto mt-6 flex max-w-[560px] flex-col items-center justify-center gap-3 sm:flex-row">
+                <a
+                  href={ANDROID_APK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex min-w-[188px] items-center gap-3 rounded-[18px] border border-stroke-2 bg-white/92 px-4 py-3 text-left shadow-md backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary hover:shadow-lg dark:border-stroke-7 dark:bg-background-8/92"
+                >
+                  <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-background-12 text-secondary shadow-sm dark:bg-background-7">
+                    <GooglePlayBadge />
+                  </span>
+                  <span className="block">
+                    <span className="block text-[11px] uppercase tracking-[0.18em] text-secondary/55 dark:text-accent/55">Android app</span>
+                    <span className="block text-base font-semibold text-secondary dark:text-white">Download APK</span>
+                  </span>
+                </a>
+                <div className="flex min-w-[188px] items-center gap-3 rounded-[18px] border border-dashed border-stroke-2 bg-white/88 px-4 py-3 text-left opacity-90 shadow-sm backdrop-blur dark:border-stroke-7 dark:bg-background-8/88">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-background-12 text-secondary shadow-sm dark:bg-background-7 dark:text-white">
+                    <AppleBadge />
+                  </span>
+                  <span className="block">
+                    <span className="block text-[11px] uppercase tracking-[0.18em] text-secondary/55 dark:text-accent/55">iPhone app</span>
+                    <span className="block text-base font-semibold text-secondary dark:text-white">Coming soon</span>
+                  </span>
                 </div>
               </div>
               <p className="mt-5 text-tagline-2 text-secondary/65">{source.hero.primaryCta.supporting}</p>
