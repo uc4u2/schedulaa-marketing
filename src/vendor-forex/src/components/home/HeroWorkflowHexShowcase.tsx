@@ -44,7 +44,7 @@ const workflowNodesEn: WorkflowNode[] = [
     label: 'Payroll',
     image: payrollImg,
     alt: 'Payroll workflow preview',
-    imageClassName: 'object-contain object-center scale-[1.08] p-2',
+    imageClassName: 'object-contain object-center scale-[1.12] p-1',
   },
   {
     id: 'reports',
@@ -133,10 +133,10 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
 
   return (
     <div className="mt-6 lg:mt-2" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-      <div className="relative mx-auto max-w-[680px] lg:max-w-[760px] xl:max-w-[860px]" style={{ transform: 'perspective(1400px) rotateX(1.2deg)' }}>
+      <div className="relative mx-auto max-w-[680px] lg:max-w-[760px] xl:max-w-[920px]" style={{ transform: 'perspective(1400px) rotateX(1.2deg)' }}>
         <div className="relative overflow-hidden rounded-[15px] border border-white/10 bg-[#09121f]/58 shadow-[0_18px_44px_rgba(0,0,0,0.28)] backdrop-blur-md before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-white/14">
-          <div className="relative overflow-hidden border-b border-white/8 bg-[#0a1220]/62 px-3 py-2.5 sm:px-4">
-            <div className="no-scrollbar flex min-w-full items-center justify-start gap-2 overflow-x-auto snap-x snap-mandatory xl:justify-between xl:overflow-visible">
+          <div className="relative overflow-hidden border-b border-white/8 bg-[#0a1220]/62 px-4 py-2.5 sm:px-5">
+            <div className="no-scrollbar flex min-w-full items-center justify-start gap-2.5 overflow-x-auto snap-x snap-mandatory xl:justify-between xl:overflow-visible">
               {workflowNodes.map((node, index) => {
                 const isActive = index === activeIndex;
                 return (
@@ -144,7 +144,7 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
                     <button
                       type="button"
                       onClick={() => setActiveIndex(index)}
-                      className={`group relative flex min-w-[124px] shrink-0 items-center gap-2 rounded-[9px] border px-3 py-2 text-left transition-all duration-300 lg:min-w-[136px] ${
+                      className={`group relative flex min-w-[112px] shrink-0 items-center gap-2 rounded-[9px] border px-2.5 py-2 text-left transition-all duration-300 lg:min-w-[124px] ${
                         isActive
                           ? 'border-cyan-200/30 bg-white/[0.05] shadow-[0_4px_12px_rgba(60,186,255,0.08)]'
                           : 'border-white/8 bg-white/[0.02] opacity-90 hover:border-white/18 hover:bg-white/[0.035] hover:opacity-100'
@@ -173,7 +173,7 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
           </div>
 
           <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.985)_0%,rgba(248,251,255,0.995)_58%,rgba(237,244,255,0.98)_100%)]">
-            <div className="relative aspect-[16/8.8] w-full overflow-hidden lg:aspect-[16/8.4]">
+            <div className="relative aspect-[16/9.6] w-full overflow-hidden lg:aspect-[16/9.1] xl:aspect-[16/9.25]">
               {workflowNodes.map((node, index) => {
                 const isActive = index === activeIndex;
                 return (
