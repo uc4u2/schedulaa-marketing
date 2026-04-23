@@ -14,13 +14,14 @@ type WorkflowNode = {
   label: string;
   image: StaticImageData;
   alt: string;
+  imageClassName?: string;
 };
 
 const workflowNodesEn: WorkflowNode[] = [
-  { id: 'booking', label: 'Booking', image: bookingImg, alt: 'Booking workflow preview' },
-  { id: 'scheduling', label: 'Scheduling', image: schedulingImg, alt: 'Scheduling workflow preview' },
-  { id: 'time-tracking', label: 'Time Tracking', image: timeTrackingImg, alt: 'Time tracking workflow preview' },
-  { id: 'payroll', label: 'Payroll', image: payrollImg, alt: 'Payroll workflow preview' },
+  { id: 'booking', label: 'Booking', image: bookingImg, alt: 'Booking workflow preview', imageClassName: 'scale-[1.12]' },
+  { id: 'scheduling', label: 'Scheduling', image: schedulingImg, alt: 'Scheduling workflow preview', imageClassName: 'scale-[1.08]' },
+  { id: 'time-tracking', label: 'Time Tracking', image: timeTrackingImg, alt: 'Time tracking workflow preview', imageClassName: 'scale-[1.08]' },
+  { id: 'payroll', label: 'Payroll', image: payrollImg, alt: 'Payroll workflow preview', imageClassName: 'scale-[1.07]' },
   { id: 'reports', label: 'Reports', image: reportsImg, alt: 'Reports workflow preview' },
 ];
 
@@ -171,7 +172,7 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
                   <Image
                     src={node.image}
                     alt={node.alt}
-                    className="h-full w-full rounded-[18px] object-contain object-center"
+                    className={`h-full w-full rounded-[18px] object-contain object-center ${node.imageClassName || ''}`}
                     priority={index === 0}
                   />
                 </div>
