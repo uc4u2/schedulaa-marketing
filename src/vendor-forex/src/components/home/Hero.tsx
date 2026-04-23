@@ -156,48 +156,11 @@ const featureItemsByLocale: Record<string, HeroFeatureItem[]> = {
   ],
 };
 
-const chipItemsByLocale: Record<string, string[]> = {
-  en: ['Role-based access', 'Audit-ready reports', 'QuickBooks/Xero exports', 'Stripe billing'],
-  fa: ['\u062f\u0633\u062a\u0631\u0633\u06cc \u0628\u0631 \u0627\u0633\u0627\u0633 \u0646\u0642\u0634', '\u06af\u0632\u0627\u0631\u0634\u200c\u0647\u0627\u06cc \u0622\u0645\u0627\u062f\u0647 \u0645\u0645\u06cc\u0632\u06cc', '\u062e\u0631\u0648\u062c\u06cc QuickBooks/Xero', '\u0635\u0648\u0631\u062a\u062d\u0633\u0627\u0628 Stripe'],
-  ru: ['\u0414\u043e\u0441\u0442\u0443\u043f \u043f\u043e \u0440\u043e\u043b\u044f\u043c', '\u041e\u0442\u0447\u0435\u0442\u044b \u0434\u043b\u044f \u0430\u0443\u0434\u0438\u0442\u0430', '\u042d\u043a\u0441\u043f\u043e\u0440\u0442\u044b QuickBooks/Xero', '\u0411\u0438\u043b\u043b\u0438\u043d\u0433 Stripe'],
-  zh: ['\u57fa\u4e8e\u89d2\u8272\u7684\u6743\u9650\u63a7\u5236', '\u53ef\u5ba1\u8ba1\u62a5\u8868', 'QuickBooks/Xero \u5bfc\u51fa', 'Stripe \u8ba1\u8d39'],
-  es: ['Acceso por roles', 'Reportes listos para auditoria', 'Exportaciones QuickBooks/Xero', 'Facturacion Stripe'],
-  fr: ['Acces par roles', 'Rapports prets pour audit', 'Exports QuickBooks/Xero', 'Facturation Stripe'],
-  de: ['Rollenbasierter Zugriff', 'Audit-fahige Berichte', 'QuickBooks/Xero-Exporte', 'Stripe-Abrechnung'],
-  ar: ['صلاحيات حسب الدور', 'تقارير جاهزة للتدقيق', 'تصدير QuickBooks/Xero', 'فوترة Stripe'],
-  pt: ['Acesso por funcao', 'Relatorios prontos para auditoria', 'Exportacoes QuickBooks/Xero', 'Cobranca Stripe'],
-};
-
-const bottomLineByLocale: Record<string, string> = {
-  en: 'Built for payroll integrity across US + Canada.',
-  fa: '\u0628\u0631\u0627\u06cc \u06cc\u06a9\u067e\u0627\u0631\u0686\u06af\u06cc \u062d\u0642\u0648\u0642 \u062f\u0631 \u0627\u06cc\u0627\u0644\u0627\u062a \u0645\u062a\u062d\u062f\u0647 \u0648 \u06a9\u0627\u0646\u0627\u062f\u0627 \u0633\u0627\u062e\u062a\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a.',
-  ru: '\u0421\u043e\u0437\u0434\u0430\u043d\u043e \u0434\u043b\u044f \u043d\u0430\u0434\u0435\u0436\u043d\u044b\u0445 payroll-\u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u0432 \u0421\u0428\u0410 \u0438 \u041a\u0430\u043d\u0430\u0434\u0435.',
-  zh: '\u4e3a\u7f8e\u56fd\u4e0e\u52a0\u62ff\u5927\u7684\u85aa\u8d44\u5408\u89c4\u6d41\u7a0b\u800c\u8bbe\u8ba1\u3002',
-  es: 'Disenado para la integridad de nomina en EE. UU. y Canada.',
-  fr: 'Concu pour une paie fiable aux Etats-Unis et au Canada.',
-  de: 'Entwickelt fur sichere Payroll-Prozesse in den USA und Kanada.',
-  ar: 'مصمم لسلامة عمليات الرواتب في الولايات المتحدة وكندا.',
-  pt: 'Feito para integridade da folha nos EUA e no Canada.',
-};
-
-const noCardByLocale: Record<string, string> = {
-  en: 'No credit card required \u00b7 Cancel anytime',
-  fa: '\u0628\u062f\u0648\u0646 \u0646\u06cc\u0627\u0632 \u0628\u0647 \u06a9\u0627\u0631\u062a \u0628\u0627\u0646\u06a9\u06cc \u00b7 \u0627\u0646\u0644\u063a\u0627 \u062f\u0631 \u0647\u0631 \u0632\u0645\u0627\u0646',
-  ru: '\u0411\u0435\u0437 \u0431\u0430\u043d\u043a\u043e\u0432\u0441\u043a\u043e\u0439 \u043a\u0430\u0440\u0442\u044b \u00b7 \u041e\u0442\u043c\u0435\u043d\u0430 \u0432 \u043b\u044e\u0431\u043e\u0439 \u043c\u043e\u043c\u0435\u043d\u0442',
-  zh: '\u65e0\u9700\u4fe1\u7528\u5361 \u00b7 \u53ef\u968f\u65f6\u53d6\u6d88',
-  es: 'Sin tarjeta de credito · Cancela cuando quieras',
-  fr: 'Sans carte bancaire · Annulez a tout moment',
-  de: 'Keine Kreditkarte erforderlich · Jederzeit kundbar',
-  ar: 'بدون بطاقة ائتمان · يمكنك الالغاء في اي وقت',
-  pt: 'Sem cartao de credito · Cancele a qualquer momento',
-};
-
 const Hero = ({ source, locale = 'en' }: HeroProps) => {
   const returnTo = marketingReturnTo(locale, '/');
   const hero = source?.hero || {};
   const heroCopy = heroCopyByLocale[locale] || heroCopyByLocale.en;
   const featureItems = featureItemsByLocale[locale] || featureItemsByLocale.en;
-  const chips = chipItemsByLocale[locale] || chipItemsByLocale.en;
 
   return (
     <section className="relative z-20 overflow-hidden bg-[url('/images/ns-img-295.jpg')] bg-cover bg-top bg-no-repeat pt-[170px] pb-[110px] md:pt-[206px] md:pb-[150px]">
@@ -207,16 +170,16 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
         </figure>
       </div>
       <div className="main-container">
-        <div className="grid items-start gap-12 xl:grid-cols-[0.84fr_1.16fr] xl:gap-10">
-          <div className="space-y-5 md:space-y-4 md:text-center xl:space-y-6 xl:pt-8 xl:text-left">
+        <div className="grid items-center gap-10 xl:grid-cols-[0.96fr_1.04fr] xl:gap-8">
+          <div className="space-y-5 md:space-y-4 md:text-center xl:space-y-5 xl:pt-2 xl:text-left">
             <RevealAnimation delay={0.1}>
-              <h1 className="mx-auto max-w-[380px] leading-[1.08] tracking-[-0.02em] sm:max-w-[500px] md:max-w-[600px] xl:mx-0 xl:max-w-[640px]">
+              <h1 className="mx-auto max-w-[380px] leading-[1.08] tracking-[-0.02em] sm:max-w-[500px] md:max-w-[600px] xl:mx-0 xl:max-w-[520px]">
                 <span className="block text-white">{heroCopy.line1 || hero.title?.line1 || heroCopyByLocale.en.line1}</span>
                 <span className="hero-text-gradient hero-text-color-2 block pt-1 md:pt-1.5">{heroCopy.line2 || hero.title?.line2 || heroCopyByLocale.en.line2}</span>
               </h1>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>
-              <p className="text-accent/60 mx-auto max-w-[380px] sm:max-w-[500px] md:max-w-[600px] xl:mx-0 xl:max-w-[560px]">
+              <p className="text-accent/60 mx-auto max-w-[380px] sm:max-w-[500px] md:max-w-[600px] xl:mx-0 xl:max-w-[500px]">
                 {heroCopy.subtitle || hero.subtitle || heroCopyByLocale.en.subtitle}
               </p>
             </RevealAnimation>
@@ -279,20 +242,9 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
                 </span>
               </div>
             </div>
-            <p className="mt-4 text-center text-xs text-white/68 xl:text-left">{noCardByLocale[locale] || noCardByLocale.en}</p>
-            <div className="mt-4 space-y-2.5">
-              <p className="text-center text-sm text-white/80 xl:text-left">{bottomLineByLocale[locale] || bottomLineByLocale.en}</p>
-              <ul className="flex flex-wrap items-center justify-center gap-2 xl:justify-start">
-                {chips.map((item) => (
-                  <li key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/82">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
           <RevealAnimation delay={0.8} instant>
-            <div className="xl:pt-2">
+            <div className="xl:pt-0">
               <HeroWorkflowHexShowcase locale={locale} />
             </div>
           </RevealAnimation>
