@@ -156,19 +156,24 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
         <div className="pointer-events-none absolute -inset-4 rounded-[28px] bg-linear-[145deg,rgba(0,194,255,0.22)_0%,rgba(157,255,0,0.08)_45%,rgba(0,0,0,0.12)_100%] blur-xl" />
         <div className="pointer-events-none absolute -inset-x-10 -bottom-8 h-16 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,180,255,0.38)_0%,rgba(0,0,0,0)_72%)]" />
         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0b1220]/40 p-1.5 shadow-[0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-white/20 lg:p-1">
-          <div className="relative aspect-[16/9.1] w-full overflow-hidden rounded-xl lg:aspect-[16/8.5]">
+          <div className="relative aspect-[16/9.1] w-full overflow-hidden rounded-xl bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.96)_0%,rgba(248,251,255,0.98)_58%,rgba(237,244,255,0.96)_100%)] lg:aspect-[16/8.5]">
             {workflowNodes.map((node, index) => {
               const isActive = index === activeIndex;
               return (
                 <div
                   key={node.id}
-                  className="absolute inset-0 transition-all duration-700 ease-in-out"
+                  className="absolute inset-0 flex items-center justify-center p-3 transition-all duration-700 ease-in-out lg:p-4"
                   style={{
                     opacity: isActive ? 1 : 0,
                     transform: isActive ? 'scale(1.03) rotate(0.2deg)' : 'scale(1.01) rotate(-0.1deg)',
                     zIndex: isActive ? 2 : 1,
                   }}>
-                  <Image src={node.image} alt={node.alt} className="h-full w-full object-cover object-top" priority={index === 0} />
+                  <Image
+                    src={node.image}
+                    alt={node.alt}
+                    className="h-full w-full rounded-[18px] object-contain object-center"
+                    priority={index === 0}
+                  />
                 </div>
               );
             })}
