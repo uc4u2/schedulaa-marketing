@@ -2,7 +2,7 @@
 
 import bookingImg from '@public/images/marketing/showcase/clients-pick2.png';
 import schedulingImg from '@public/images/marketing/shift-pre.png';
-import timeTrackingImg from '@public/images/marketing/showcase/time-tracking.png';
+import timeTrackingImg from '@public/images/marketing/hero/module-3-mobile.png';
 import payrollImg from '@public/images/marketing/payroll-manage.png';
 import reportsImg from '@public/images/marketing/hero/module-5-mobile.png';
 import Image, { StaticImageData } from 'next/image';
@@ -14,14 +14,13 @@ type WorkflowNode = {
   label: string;
   image: StaticImageData;
   alt: string;
-  imageClassName?: string;
 };
 
 const workflowNodesEn: WorkflowNode[] = [
-  { id: 'booking', label: 'Booking', image: bookingImg, alt: 'Booking workflow preview', imageClassName: 'scale-[1.12]' },
-  { id: 'scheduling', label: 'Scheduling', image: schedulingImg, alt: 'Scheduling workflow preview', imageClassName: 'scale-[1.08]' },
-  { id: 'time-tracking', label: 'Time Tracking', image: timeTrackingImg, alt: 'Time tracking workflow preview', imageClassName: 'scale-[1.08]' },
-  { id: 'payroll', label: 'Payroll', image: payrollImg, alt: 'Payroll workflow preview', imageClassName: 'scale-[1.07]' },
+  { id: 'time-tracking', label: 'Time Tracking', image: timeTrackingImg, alt: 'Time tracking workflow preview' },
+  { id: 'scheduling', label: 'Scheduling', image: schedulingImg, alt: 'Scheduling workflow preview' },
+  { id: 'booking', label: 'Booking', image: bookingImg, alt: 'Booking workflow preview' },
+  { id: 'payroll', label: 'Payroll', image: payrollImg, alt: 'Payroll workflow preview' },
   { id: 'reports', label: 'Reports', image: reportsImg, alt: 'Reports workflow preview' },
 ];
 
@@ -172,7 +171,7 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
                   <Image
                     src={node.image}
                     alt={node.alt}
-                    className={`h-full w-full rounded-[18px] object-contain object-center ${node.imageClassName || ''}`}
+                    className="h-full w-full rounded-[18px] object-contain object-center"
                     priority={index === 0}
                   />
                 </div>
