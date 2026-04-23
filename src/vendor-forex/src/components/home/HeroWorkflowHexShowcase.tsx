@@ -91,7 +91,6 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
   const workflowNodes = mapNodesByLocale(locale);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const activeNode = workflowNodes[activeIndex];
 
   useEffect(() => {
     if (isPaused) return;
@@ -99,12 +98,12 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
       setActiveIndex((prev) => (prev + 1) % workflowNodes.length);
     }, 4600);
     return () => window.clearInterval(timer);
-  }, [isPaused]);
+    }, [isPaused]);
 
   return (
     <div className="mt-8 lg:mt-3" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
       <div className="mx-auto max-w-[680px] lg:max-w-[760px] xl:max-w-[860px]">
-        <div className="relative mb-4 overflow-hidden rounded-[22px] border border-white/10 bg-[#09111e]/78 px-2 py-2 shadow-[0_18px_44px_rgba(0,0,0,0.32)] backdrop-blur-md lg:mb-5 lg:px-3">
+        <div className="relative mb-2 overflow-hidden rounded-[16px] border border-white/8 bg-[#09111e]/72 px-2 py-2 shadow-[0_16px_36px_rgba(0,0,0,0.24)] backdrop-blur-md lg:mb-3">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/24 to-transparent" />
           <div className="no-scrollbar flex items-center gap-2 overflow-x-auto snap-x snap-mandatory md:justify-center md:overflow-visible">
             {workflowNodes.map((node, index) => {
@@ -114,9 +113,9 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
                   <button
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    className={`group relative flex min-w-[132px] shrink-0 items-center gap-2 rounded-[16px] border px-3 py-2 text-left transition-all duration-300 lg:min-w-[148px] ${
+                    className={`group relative flex min-w-[132px] shrink-0 items-center gap-2 rounded-[12px] border px-3 py-2 text-left transition-all duration-300 lg:min-w-[148px] ${
                       isActive
-                        ? 'border-cyan-200/55 bg-gradient-to-r from-cyan-300/14 via-sky-300/10 to-lime-300/8 shadow-[0_8px_22px_rgba(60,186,255,0.18)]'
+                        ? 'border-cyan-200/45 bg-gradient-to-r from-cyan-300/12 via-sky-300/08 to-lime-300/6 shadow-[0_6px_18px_rgba(60,186,255,0.12)]'
                         : 'border-white/12 bg-white/[0.03] opacity-90 hover:border-white/28 hover:bg-white/[0.05] hover:opacity-100'
                     }`}
                     aria-pressed={isActive}
@@ -140,25 +139,20 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
               );
             })}
           </div>
-          <div className="mt-2 flex items-center justify-center text-[11px] uppercase tracking-[0.16em] text-white/42">
-            <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1">
-              {activeNode.label}
-            </span>
-          </div>
         </div>
       </div>
 
       <div className="relative mx-auto max-w-[680px] lg:max-w-[760px] xl:max-w-[860px]" style={{ transform: 'perspective(1400px) rotateX(2.2deg)' }}>
-        <div className="pointer-events-none absolute -inset-4 rounded-[28px] bg-linear-[145deg,rgba(0,194,255,0.16)_0%,rgba(157,255,0,0.05)_45%,rgba(0,0,0,0.12)_100%] blur-xl" />
+        <div className="pointer-events-none absolute -inset-4 rounded-[22px] bg-linear-[145deg,rgba(0,194,255,0.14)_0%,rgba(157,255,0,0.04)_45%,rgba(0,0,0,0.1)_100%] blur-xl" />
         <div className="pointer-events-none absolute -inset-x-8 -bottom-8 h-16 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,180,255,0.26)_0%,rgba(0,0,0,0)_72%)]" />
-        <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-[#0a1220]/42 p-1.5 shadow-[0_24px_80px_rgba(0,0,0,0.44)] backdrop-blur before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-white/18 lg:p-1.5">
-          <div className="relative aspect-[16/9.8] w-full overflow-hidden rounded-[20px] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.98)_0%,rgba(248,251,255,0.99)_58%,rgba(237,244,255,0.97)_100%)] lg:aspect-[16/9.3]">
+        <div className="relative overflow-hidden rounded-[18px] border border-white/10 bg-[#0a1220]/42 p-1 shadow-[0_22px_64px_rgba(0,0,0,0.4)] backdrop-blur before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-white/18 lg:p-1">
+          <div className="relative aspect-[16/9.5] w-full overflow-hidden rounded-[15px] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.98)_0%,rgba(248,251,255,0.99)_58%,rgba(237,244,255,0.97)_100%)] lg:aspect-[16/9]">
             {workflowNodes.map((node, index) => {
               const isActive = index === activeIndex;
               return (
                 <div
                   key={node.id}
-                  className="absolute inset-0 flex items-center justify-center p-5 transition-all duration-700 ease-in-out lg:p-6"
+                  className="absolute inset-0 flex items-center justify-center p-2 transition-all duration-700 ease-in-out lg:p-3"
                   style={{
                     opacity: isActive ? 1 : 0,
                     transform: isActive ? 'scale(1.01) translateY(0)' : 'scale(0.995) translateY(4px)',
@@ -167,7 +161,7 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
                   <Image
                     src={node.image}
                     alt={node.alt}
-                    className="h-[92%] w-[92%] rounded-[18px] object-contain object-center"
+                    className="h-[98%] w-[98%] rounded-[14px] object-contain object-center"
                     priority={index === 0}
                   />
                 </div>
