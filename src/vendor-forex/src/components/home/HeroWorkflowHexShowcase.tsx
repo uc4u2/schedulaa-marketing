@@ -132,11 +132,11 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
   }, [isPaused, workflowNodes.length]);
 
   return (
-    <div className="mt-6 lg:mt-2" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-      <div className="relative mx-auto max-w-[680px] lg:max-w-[760px] xl:max-w-[920px]" style={{ transform: 'perspective(1400px) rotateX(1.2deg)' }}>
+    <div className="mt-3 sm:mt-4 lg:mt-2" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+      <div className="relative mx-auto max-w-[94vw] sm:max-w-[680px] lg:max-w-[760px] xl:max-w-[920px]" style={{ transform: 'perspective(1400px) rotateX(1.2deg)' }}>
         <div className="relative overflow-hidden rounded-[15px] border border-white/10 bg-[#09121f]/58 shadow-[0_18px_44px_rgba(0,0,0,0.28)] backdrop-blur-md before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-white/14">
-          <div className="relative overflow-hidden border-b border-white/8 bg-[#0a1220]/62 px-4 py-2.5 sm:px-5">
-            <div className="no-scrollbar flex min-w-full items-center justify-start gap-2.5 overflow-x-auto snap-x snap-mandatory xl:justify-between xl:overflow-visible">
+          <div className="relative overflow-hidden border-b border-white/8 bg-[#0a1220]/62 px-3 py-2 sm:px-4 sm:py-2.5 md:px-5">
+            <div className="no-scrollbar flex min-w-full items-center justify-start gap-2 overflow-x-auto px-1 snap-x snap-mandatory sm:gap-2.5 xl:justify-between xl:overflow-visible xl:px-0">
               {workflowNodes.map((node, index) => {
                 const isActive = index === activeIndex;
                 return (
@@ -144,7 +144,7 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
                     <button
                       type="button"
                       onClick={() => setActiveIndex(index)}
-                      className={`group relative flex min-w-[112px] shrink-0 items-center gap-2 rounded-[9px] border px-2.5 py-2 text-left transition-all duration-300 lg:min-w-[124px] ${
+                      className={`group relative flex min-w-[108px] shrink-0 items-center gap-1.5 rounded-[9px] border px-2.5 py-1.5 text-left transition-all duration-300 sm:min-w-[112px] sm:gap-2 sm:py-2 lg:min-w-[124px] ${
                         isActive
                           ? 'border-cyan-200/30 bg-white/[0.05] shadow-[0_4px_12px_rgba(60,186,255,0.08)]'
                           : 'border-white/8 bg-white/[0.02] opacity-90 hover:border-white/18 hover:bg-white/[0.035] hover:opacity-100'
@@ -154,11 +154,11 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
                     >
                       <span className={`inline-flex size-2 rounded-full ${isActive ? 'bg-cyan-200 shadow-[0_0_8px_rgba(125,211,252,0.55)]' : 'bg-white/34'}`} />
                       <span className="grid min-w-0 gap-0.5">
-                        <span className={`whitespace-nowrap text-[10px] tracking-[0.12em] uppercase ${isActive ? 'text-cyan-100/80' : 'text-white/42'}`}>
+                        <span className={`whitespace-nowrap text-[9px] tracking-[0.12em] uppercase sm:text-[10px] ${isActive ? 'text-cyan-100/80' : 'text-white/42'}`}>
                           Module {index + 1}
                         </span>
                         <span
-                          className={`whitespace-nowrap text-[13px] font-semibold leading-[1.08] tracking-[-0.02em] ${
+                          className={`whitespace-nowrap text-[12px] font-semibold leading-[1.08] tracking-[-0.02em] sm:text-[13px] ${
                             isActive ? 'hero-text-gradient hero-text-color-2 inline-block' : 'text-white/85'
                           }`}
                         >
@@ -173,13 +173,13 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
           </div>
 
           <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.985)_0%,rgba(248,251,255,0.995)_58%,rgba(237,244,255,0.98)_100%)]">
-            <div className="relative aspect-[16/9.6] w-full overflow-hidden lg:aspect-[16/9.1] xl:aspect-[16/9.25]">
+            <div className="relative aspect-[16/10.6] w-full overflow-hidden sm:aspect-[16/9.8] lg:aspect-[16/9.1] xl:aspect-[16/9.25]">
               {workflowNodes.map((node, index) => {
                 const isActive = index === activeIndex;
                 return (
                   <div
                     key={node.id}
-                    className="absolute inset-0 flex items-center justify-center p-2 sm:p-3 transition-all duration-700 ease-in-out"
+                    className="absolute inset-0 flex items-center justify-center p-2 transition-all duration-700 ease-in-out sm:p-3"
                     style={{
                       opacity: isActive ? 1 : 0,
                       transform: isActive ? 'scale(1.002) translateY(0)' : 'scale(0.998) translateY(3px)',
