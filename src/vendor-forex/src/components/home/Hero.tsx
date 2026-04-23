@@ -207,92 +207,96 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
         </figure>
       </div>
       <div className="main-container">
-        <div className="space-y-5 md:space-y-4 md:text-center">
-          <RevealAnimation delay={0.1}>
-            <h1 className="mx-auto max-w-[380px] leading-[1.08] tracking-[-0.02em] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[776px]">
-              <span className="block text-white">{heroCopy.line1 || hero.title?.line1 || heroCopyByLocale.en.line1}</span>
-              <span className="hero-text-gradient hero-text-color-2 block pt-1 md:pt-1.5">{heroCopy.line2 || hero.title?.line2 || heroCopyByLocale.en.line2}</span>
-            </h1>
-          </RevealAnimation>
-          <RevealAnimation delay={0.2}>
-            <p className="text-accent/60 mx-auto max-w-[380px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px]">
-              {heroCopy.subtitle || hero.subtitle || heroCopyByLocale.en.subtitle}
-            </p>
-          </RevealAnimation>
-          <ul className="flex flex-wrap items-center gap-5 sm:justify-center md:gap-9">
-            {featureItems.map((item, index) => (
-              <RevealAnimation key={item.id} delay={0.3 + index * 0.1}>
-                <li className="flex items-center gap-1.5">
-                  <span className="bg-accent/20 inline-flex size-[18px] items-center justify-center rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" width={11} height={8} viewBox="0 0 11 8" fill="none" className="shrink-0">
-                      <path d="M4.81661 7.25605L10.2491 1.92144C10.5836 1.5959 10.5836 1.0697 10.2491 0.744158C9.91446 0.418614 9.37363 0.418614 9.03904 0.744158L4.2116 5.49012L1.96096 3.28807C1.62636 2.96253 1.08554 2.96253 0.750945 3.28807C0.416352 3.61362 0.416352 4.13982 0.750945 4.46536L3.6066 7.25605C3.77347 7.41841 3.99253 7.5 4.2116 7.5C4.43067 7.5 4.64974 7.41841 4.81661 7.25605Z" fill="white" />
-                    </svg>
-                  </span>
-                  <span className="text-accent/60 text-tagline-2">{item.text}</span>
+        <div className="grid items-start gap-12 xl:grid-cols-[0.84fr_1.16fr] xl:gap-10">
+          <div className="space-y-5 md:space-y-4 md:text-center xl:space-y-6 xl:pt-8 xl:text-left">
+            <RevealAnimation delay={0.1}>
+              <h1 className="mx-auto max-w-[380px] leading-[1.08] tracking-[-0.02em] sm:max-w-[500px] md:max-w-[600px] xl:mx-0 xl:max-w-[640px]">
+                <span className="block text-white">{heroCopy.line1 || hero.title?.line1 || heroCopyByLocale.en.line1}</span>
+                <span className="hero-text-gradient hero-text-color-2 block pt-1 md:pt-1.5">{heroCopy.line2 || hero.title?.line2 || heroCopyByLocale.en.line2}</span>
+              </h1>
+            </RevealAnimation>
+            <RevealAnimation delay={0.2}>
+              <p className="text-accent/60 mx-auto max-w-[380px] sm:max-w-[500px] md:max-w-[600px] xl:mx-0 xl:max-w-[560px]">
+                {heroCopy.subtitle || hero.subtitle || heroCopyByLocale.en.subtitle}
+              </p>
+            </RevealAnimation>
+            <ul className="flex flex-wrap items-center gap-5 sm:justify-center md:gap-9 xl:justify-start xl:gap-5">
+              {featureItems.map((item, index) => (
+                <RevealAnimation key={item.id} delay={0.3 + index * 0.1}>
+                  <li className="flex items-center gap-1.5">
+                    <span className="bg-accent/20 inline-flex size-[18px] items-center justify-center rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" width={11} height={8} viewBox="0 0 11 8" fill="none" className="shrink-0">
+                        <path d="M4.81661 7.25605L10.2491 1.92144C10.5836 1.5959 10.5836 1.0697 10.2491 0.744158C9.91446 0.418614 9.37363 0.418614 9.03904 0.744158L4.2116 5.49012L1.96096 3.28807C1.62636 2.96253 1.08554 2.96253 0.750945 3.28807C0.416352 3.61362 0.416352 4.13982 0.750945 4.46536L3.6066 7.25605C3.77347 7.41841 3.99253 7.5 4.2116 7.5C4.43067 7.5 4.64974 7.41841 4.81661 7.25605Z" fill="white" />
+                      </svg>
+                    </span>
+                    <span className="text-accent/60 text-tagline-2">{item.text}</span>
+                  </li>
+                </RevealAnimation>
+              ))}
+            </ul>
+            <ul className="pt-4 flex flex-col items-center justify-center gap-4 md:flex-row xl:justify-start">
+              <RevealAnimation delay={0.6} direction="left" offset={50}>
+                <li className="w-full text-center sm:w-auto sm:text-left">
+                  <LinkButton
+                    href={buildAppUrl('/register', { returnTo })}
+                    className="btn hover:btn-secondary dark:hover:btn-accent btn-green btn-xl w-[90%] border-0 text-center md:w-auto">
+                    {heroCopy.primaryCta || hero.primaryCta?.label || heroCopyByLocale.en.primaryCta}
+                  </LinkButton>
                 </li>
               </RevealAnimation>
-            ))}
-          </ul>
-        </div>
-        <ul className="mt-14 flex flex-col items-center justify-center gap-4 md:flex-row">
-          <RevealAnimation delay={0.6} direction="left" offset={50}>
-            <li className="w-full text-center sm:w-auto sm:text-left">
-              <LinkButton
-                href={buildAppUrl('/register', { returnTo })}
-                className="btn hover:btn-secondary dark:hover:btn-accent btn-green btn-xl w-[90%] border-0 text-center md:w-auto">
-                {heroCopy.primaryCta || hero.primaryCta?.label || heroCopyByLocale.en.primaryCta}
-              </LinkButton>
-            </li>
-          </RevealAnimation>
-          <RevealAnimation delay={0.7} direction="left" offset={50}>
-            <li className="w-full text-center sm:w-auto sm:text-left">
-              <LinkButton
-                href="/pricing"
-                className="btn btn-dark hover:btn-green bg-accent/22 btn-xl w-[90%] text-center text-white hover:border-0 md:w-auto">
-                {heroCopy.secondaryCta || hero.secondaryCta?.label || heroCopyByLocale.en.secondaryCta}
-              </LinkButton>
-            </li>
-          </RevealAnimation>
-        </ul>
-        <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <a
-            href={ANDROID_APK_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex min-w-[188px] items-center gap-3 rounded-[18px] border border-white/14 bg-white/10 px-4 py-3 text-left shadow-[0_10px_32px_rgba(3,8,20,0.22)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#7fe36c]/45 hover:bg-white/14 hover:shadow-[0_14px_38px_rgba(8,20,45,0.28)]"
-          >
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/92 text-secondary shadow-sm">
-              <GooglePlayBadge />
-            </span>
-            <span className="block">
-              <span className="block text-[11px] uppercase tracking-[0.18em] text-white/56">Android app</span>
-              <span className="block text-base font-semibold text-white">Download APK</span>
-            </span>
-          </a>
-          <div className="flex min-w-[188px] items-center gap-3 rounded-[18px] border border-dashed border-white/16 bg-white/6 px-4 py-3 text-left opacity-90 shadow-[0_8px_24px_rgba(3,8,20,0.16)] backdrop-blur-md">
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/16 text-white shadow-sm">
-              <AppleBadge />
-            </span>
-            <span className="block">
-              <span className="block text-[11px] uppercase tracking-[0.18em] text-white/50">iPhone app</span>
-              <span className="block text-base font-semibold text-white">Coming soon</span>
-            </span>
+              <RevealAnimation delay={0.7} direction="left" offset={50}>
+                <li className="w-full text-center sm:w-auto sm:text-left">
+                  <LinkButton
+                    href="/pricing"
+                    className="btn btn-dark hover:btn-green bg-accent/22 btn-xl w-[90%] text-center text-white hover:border-0 md:w-auto">
+                    {heroCopy.secondaryCta || hero.secondaryCta?.label || heroCopyByLocale.en.secondaryCta}
+                  </LinkButton>
+                </li>
+              </RevealAnimation>
+            </ul>
+            <div className="mt-1 flex flex-col items-center justify-center gap-3 sm:flex-row xl:justify-start">
+              <a
+                href={ANDROID_APK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex min-w-[188px] items-center gap-3 rounded-[18px] border border-white/14 bg-white/10 px-4 py-3 text-left shadow-[0_10px_32px_rgba(3,8,20,0.22)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#7fe36c]/45 hover:bg-white/14 hover:shadow-[0_14px_38px_rgba(8,20,45,0.28)]"
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/92 text-secondary shadow-sm">
+                  <GooglePlayBadge />
+                </span>
+                <span className="block">
+                  <span className="block text-[11px] uppercase tracking-[0.18em] text-white/56">Android app</span>
+                  <span className="block text-base font-semibold text-white">Download APK</span>
+                </span>
+              </a>
+              <div className="flex min-w-[188px] items-center gap-3 rounded-[18px] border border-dashed border-white/16 bg-white/6 px-4 py-3 text-left opacity-90 shadow-[0_8px_24px_rgba(3,8,20,0.16)] backdrop-blur-md">
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/16 text-white shadow-sm">
+                  <AppleBadge />
+                </span>
+                <span className="block">
+                  <span className="block text-[11px] uppercase tracking-[0.18em] text-white/50">iPhone app</span>
+                  <span className="block text-base font-semibold text-white">Coming soon</span>
+                </span>
+              </div>
+            </div>
+            <p className="mt-4 text-center text-xs text-white/68 xl:text-left">{noCardByLocale[locale] || noCardByLocale.en}</p>
+            <div className="mt-4 space-y-2.5">
+              <p className="text-center text-sm text-white/80 xl:text-left">{bottomLineByLocale[locale] || bottomLineByLocale.en}</p>
+              <ul className="flex flex-wrap items-center justify-center gap-2 xl:justify-start">
+                {chips.map((item) => (
+                  <li key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/82">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+          <RevealAnimation delay={0.8} instant>
+            <div className="xl:pt-2">
+              <HeroWorkflowHexShowcase locale={locale} />
+            </div>
+          </RevealAnimation>
         </div>
-        <p className="mt-4 text-center text-xs text-white/68">{noCardByLocale[locale] || noCardByLocale.en}</p>
-        <div className="mt-4 space-y-2.5">
-          <p className="text-center text-sm text-white/80">{bottomLineByLocale[locale] || bottomLineByLocale.en}</p>
-          <ul className="flex flex-wrap items-center justify-center gap-2">
-            {chips.map((item) => (
-              <li key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/82">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <RevealAnimation delay={0.8} instant>
-          <HeroWorkflowHexShowcase locale={locale} />
-        </RevealAnimation>
       </div>
     </section>
   );
