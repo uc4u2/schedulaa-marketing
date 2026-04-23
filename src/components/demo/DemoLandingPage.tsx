@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { AndroidPlatformIcon, ApplePlatformIcon } from '@/components/shared/AppPlatformIcons';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import { trackMetaPixel } from '@/utils/metaPixel';
@@ -41,24 +42,6 @@ const DEMO_BOOKING_URL =
 const ANDROID_APK_URL =
   process.env.NEXT_PUBLIC_ANDROID_APK_URL ||
   'https://pub-6cbed1dd8177417b96763fc4eb930d09.r2.dev/assets/apk/schedulaa-staff-latest.apk';
-
-const AppleBadge = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path
-      d="M16.84 12.12c.02 2.36 2.08 3.15 2.1 3.16-.02.05-.33 1.16-1.08 2.29-.65.98-1.33 1.96-2.39 1.98-1.04.02-1.37-.62-2.56-.62-1.18 0-1.55.6-2.52.64-1.01.04-1.78-1.02-2.44-1.99-1.34-1.96-2.37-5.55-.99-7.96.69-1.2 1.93-1.96 3.27-1.98 1.02-.02 1.98.68 2.56.68.58 0 1.68-.84 2.83-.72.48.02 1.81.2 2.67 1.45-.07.04-1.6.93-1.58 3.07ZM15.06 4.2c.54-.66.9-1.58.8-2.5-.77.03-1.69.51-2.24 1.17-.5.58-.94 1.52-.82 2.42.86.07 1.72-.44 2.26-1.09Z"
-      fill="currentColor"
-    />
-  </svg>
-);
-
-const GooglePlayBadge = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M4.8 3.44 14.9 13.55 4.87 20.56c-.35-.18-.57-.54-.57-1V4.45c0-.46.19-.82.5-1.01Z" fill="#00C853" />
-    <path d="M18.16 10.82 15.6 9.38 12.98 12l2.63 2.63 2.55-1.44c1.09-.61 1.09-1.77 0-2.37Z" fill="#FFAB00" />
-    <path d="M4.87 3.44c.1-.06.22-.1.35-.12l10.38 8.68-2.62 2.62L4.87 3.44Z" fill="#00B8D4" />
-    <path d="m5.22 20.68 10.38-8.68 2.56 1.44c1.09.61 1.09 1.77 0 2.37L8.2 21.44c-1.02.57-2.19-.02-2.98-.76Z" fill="#FF5252" />
-  </svg>
-);
 
 const demoVideos = [
   {
@@ -282,7 +265,7 @@ export default function DemoLandingPage() {
               className="group flex min-w-[188px] items-center gap-3 rounded-[18px] border border-stroke-2 bg-white/92 px-4 py-3 text-left shadow-md backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary hover:shadow-lg dark:border-stroke-7 dark:bg-background-8/92"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-background-12 text-secondary shadow-sm dark:bg-background-7">
-                <GooglePlayBadge />
+                <AndroidPlatformIcon className="size-[22px]" />
               </span>
               <span className="block">
                 <span className="block text-[11px] uppercase tracking-[0.18em] text-secondary/55 dark:text-accent/55">Android app</span>
@@ -291,7 +274,7 @@ export default function DemoLandingPage() {
             </a>
             <div className="flex min-w-[188px] items-center gap-3 rounded-[18px] border border-dashed border-stroke-2 bg-white/88 px-4 py-3 text-left opacity-90 shadow-sm backdrop-blur dark:border-stroke-7 dark:bg-background-8/88">
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-background-12 text-secondary shadow-sm dark:bg-background-7 dark:text-white">
-                <AppleBadge />
+                <ApplePlatformIcon className="size-[22px]" />
               </span>
               <span className="block">
                 <span className="block text-[11px] uppercase tracking-[0.18em] text-secondary/55 dark:text-accent/55">iPhone app</span>
@@ -351,7 +334,7 @@ export default function DemoLandingPage() {
                   className="group flex min-w-[220px] items-center gap-3 rounded-[18px] border border-stroke-2 bg-white px-4 py-3 text-left transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary hover:shadow-lg dark:border-stroke-7 dark:bg-background-8"
                 >
                   <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-background-12 text-secondary shadow-sm dark:bg-background-7">
-                    <GooglePlayBadge />
+                    <AndroidPlatformIcon className="size-[22px]" />
                   </span>
                   <span className="block">
                     <span className="block text-[11px] uppercase tracking-[0.18em] text-secondary/55 dark:text-accent/55">Android app</span>
@@ -360,7 +343,7 @@ export default function DemoLandingPage() {
                 </a>
                 <div className="flex min-w-[220px] items-center gap-3 rounded-[18px] border border-dashed border-stroke-2 bg-white px-4 py-3 text-left opacity-85 dark:border-stroke-7 dark:bg-background-8">
                   <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-background-12 text-secondary shadow-sm dark:bg-background-7 dark:text-white">
-                    <AppleBadge />
+                    <ApplePlatformIcon className="size-[22px]" />
                   </span>
                   <span className="block">
                     <span className="block text-[11px] uppercase tracking-[0.18em] text-secondary/55 dark:text-accent/55">iPhone app</span>

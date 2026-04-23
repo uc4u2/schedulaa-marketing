@@ -1,6 +1,7 @@
 'use client';
 
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
+import { AndroidPlatformIcon, ApplePlatformIcon } from '@/components/shared/AppPlatformIcons';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath } from '@/utils/locale';
 import attendanceSummaryImg from '@public/images/marketing/mobile-app/attendance-summary.png';
@@ -90,16 +91,9 @@ function DownloadCard({
         } shadow-sm`}
       >
         {active ? (
-          <svg viewBox="0 0 24 24" className="size-6" aria-hidden="true">
-            <path fill="#34A853" d="M3.9 3.5 13.8 13.4l-9.8 9.8A2.2 2.2 0 0 1 3 21.3V5.7c0-.8.4-1.6.9-2.2Z" />
-            <path fill="#4285F4" d="m16.8 10.5-2.9 2.9 2.9 2.9 3.8-2.2c1.3-.8 1.3-2.6 0-3.4l-3.8-2.2Z" />
-            <path fill="#FBBC04" d="m3.9 3.5 12.9 7-2.9 2.9L3.9 3.5Z" />
-            <path fill="#EA4335" d="m3.9 23.2 10-9.8 2.9 2.9-12.9 7c-.6-.6-.9-1.4-.9-2.1Z" />
-          </svg>
+          <AndroidPlatformIcon className="size-6" />
         ) : (
-          <svg viewBox="0 0 24 24" className="size-6" fill="currentColor" aria-hidden="true">
-            <path d="M16.365 1.43c0 1.14-.465 2.24-1.237 3.036-.816.84-2.147 1.487-3.3 1.392-.145-1.123.42-2.328 1.207-3.138.817-.847 2.222-1.466 3.33-1.29Zm4.144 16.33c-.452 1.036-.993 1.99-1.664 2.915-.917 1.25-1.67 2.516-3.13 2.516-1.462 0-1.84-.84-3.507-.84-1.667 0-2.09.867-3.534.867-1.445 0-2.448-1.143-3.366-2.392C3.66 18.567 2.4 14.494 4.09 11.515c1.194-2.114 3.28-3.443 5.551-3.443 1.46 0 2.835.9 3.507.9.671 0 2.35-1.112 3.96-.948.674.03 2.567.272 3.784 2.003-3.328 1.82-2.807 6.438.617 7.734Z" />
-          </svg>
+          <ApplePlatformIcon className="size-6" />
         )}
       </span>
       <span className="min-w-0">
