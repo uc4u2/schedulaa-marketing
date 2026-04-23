@@ -60,7 +60,7 @@ const LABOR_VISIBILITY_COPY: Record<
     bullets: [
       'Today Labor Cost: know what staffing cost looks like before payroll day.',
       'Overtime Risk: spot employees approaching overtime before it compounds.',
-      'Payroll Ready Hours: review approved hours, leave, and exceptions in one place.',
+      'Payroll Ready Hours: review approved hours, leave, and exceptions together.',
       'Daily and weekly labor visibility for managers, operators, and accountants.',
       'Replace scattered spreadsheets and manual rollups with one operating view.',
     ],
