@@ -4,7 +4,7 @@ import bookingImg from '@public/images/marketing/showcase/clients-pick2.png';
 import schedulingImg from '@public/images/marketing/shift-pre.png';
 import timeTrackingImg from '@public/images/marketing/showcase/time-tracking.png';
 import payrollImg from '@public/images/marketing/payroll-manage.png';
-import reportsImg from '@public/images/marketing/showcase/manager-dashboards1.png';
+import reportsImg from '@public/images/marketing/hero/module-5-mobile.png';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
 import { AppLocale } from '@/utils/locale';
