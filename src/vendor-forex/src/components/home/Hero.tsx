@@ -152,10 +152,10 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
         </figure>
       </div>
       <div className="main-container">
-        <div className="grid items-center gap-8 xl:grid-cols-[1.06fr_.94fr] xl:gap-12">
+        <div className="grid items-center gap-8 xl:grid-cols-[1.07fr_.93fr] xl:gap-14">
           <div className="space-y-5 md:space-y-4 md:text-center xl:space-y-4 xl:pt-1 xl:text-left">
             <RevealAnimation delay={0.1}>
-              <h1 className="mx-auto max-w-[400px] leading-[1.02] tracking-[-0.035em] sm:max-w-[520px] md:max-w-[620px] xl:mx-0 xl:max-w-[535px]">
+              <h1 className="mx-auto max-w-[400px] leading-[1.02] tracking-[-0.035em] sm:max-w-[520px] md:max-w-[620px] xl:mx-0 xl:max-w-[510px]">
                 <span className="block text-white">{heroCopy.line1 || hero.title?.line1 || heroCopyByLocale.en.line1}</span>
                 <span className="hero-text-gradient hero-text-color-2 block pt-1 whitespace-nowrap md:pt-1.5">
                   {heroCopy.line2 || hero.title?.line2 || heroCopyByLocale.en.line2}

@@ -133,7 +133,7 @@ const HeroWorkflowHexShowcase = ({ locale = 'en' }: { locale?: AppLocale }) => {
 
   return (
     <div className="mt-6 lg:mt-2" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-      <div className="relative mx-auto max-w-[680px] lg:max-w-[760px] xl:max-w-[770px]" style={{ transform: 'perspective(1400px) rotateX(1.2deg)' }}>
+      <div className="relative mx-auto max-w-[680px] lg:max-w-[760px] xl:max-w-[740px]" style={{ transform: 'perspective(1400px) rotateX(1.2deg)' }}>
         <div className="relative overflow-hidden rounded-[15px] border border-white/10 bg-[#09121f]/58 shadow-[0_18px_44px_rgba(0,0,0,0.28)] backdrop-blur-md before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-white/14">
           <div className="relative overflow-hidden border-b border-white/8 bg-[#0a1220]/62 px-2 py-2.5">
             <div className="no-scrollbar flex items-center gap-2 overflow-x-auto snap-x snap-mandatory md:justify-center md:overflow-visible">
