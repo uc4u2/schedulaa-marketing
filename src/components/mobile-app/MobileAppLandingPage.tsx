@@ -1,16 +1,23 @@
 'use client';
 
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
-import StaggerGrid from '@/components/shared/motion/StaggerGrid';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath } from '@/utils/locale';
 import attendanceSummaryImg from '@public/images/marketing/mobile-app/attendance-summary.png';
 import employeeDayImg from '@public/images/marketing/mobile-app/employee-day.png';
 import managerHubImg from '@public/images/marketing/mobile-app/manager-hub.png';
 import operationsOverviewImg from '@public/images/marketing/mobile-app/operations-overview.png';
+import gradient9Img from '@public/images/ns-img-501.png';
+import gradient32Img from '@public/images/ns-img-520.png';
+import gradient33Img from '@public/images/ns-img-521.png';
+import gradient34Img from '@public/images/ns-img-522.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import RevealAnimation from '@/vendor-forex/src/components/animation/RevealAnimation';
+import LinkButton from '@/vendor-forex/src/components/ui/button/LinkButton';
+import StackCardItem from '@/vendor-forex/src/components/ui/stack-card/StackCardItem';
+import StackCardWrapper from '@/vendor-forex/src/components/ui/stack-card/StackCardWrapper';
 
 const ANDROID_APK_URL =
   process.env.NEXT_PUBLIC_ANDROID_APK_URL ||
@@ -26,23 +33,42 @@ const heroPoints = [
   'Keep managers and teams on the same Schedulaa system across desktop and mobile.',
 ];
 
-const managerFeatures = [
-  'Pending approvals, shift swaps, and punch reviews in one manager hub',
-  'Labor visibility with attendance risk, missing breaks, and payroll-ready status',
-  'Fast team notifications, exceptions, and daily oversight without spreadsheets',
-];
-
-const employeeFeatures = [
-  'Clock in, review the next shift, and track upcoming time off in seconds',
-  'See schedule changes, open shifts, announcements, and assigned tasks from one view',
-  'Stay aligned with operations even when the team is distributed across locations',
-];
-
 const proofChips = [
   'Android APK available now',
   'Manager and employee workflows',
   'Built on the same live Schedulaa system',
   'iPhone release planned next',
+];
+
+const mobileWorkflowCards = [
+  {
+    id: 1,
+    title: 'Manager approvals stay live',
+    description: 'Review time-off requests, shift swaps, punch approvals, and attendance alerts from one manager hub.',
+    gradientSrc: gradient32Img,
+    imageSrc: managerHubImg,
+  },
+  {
+    id: 2,
+    title: 'Employees run the day from one screen',
+    description: 'Clock in, review upcoming shifts, request time off, and stay aligned with tasks and announcements.',
+    gradientSrc: gradient33Img,
+    imageSrc: employeeDayImg,
+  },
+  {
+    id: 3,
+    title: 'Attendance and payroll stay connected',
+    description: 'Track scheduled vs worked hours, overtime risk, payroll-ready totals, and exceptions in the same flow.',
+    gradientSrc: gradient34Img,
+    imageSrc: attendanceSummaryImg,
+  },
+  {
+    id: 4,
+    title: 'One mobile operating system for service teams',
+    description: 'Managers and employees stay on the same live Schedulaa data instead of switching between disconnected apps.',
+    gradientSrc: gradient9Img,
+    imageSrc: operationsOverviewImg,
+  },
 ];
 
 function DownloadCard({
@@ -157,21 +183,11 @@ export default function MobileAppLandingPage() {
               </div>
             </AnimatedSection>
             <AnimatedSection>
-              <div className="relative mx-auto w-full max-w-[780px]">
+              <div className="relative mx-auto w-full max-w-[620px]">
                 <div className="absolute inset-x-[10%] top-[12%] h-[62%] rounded-full bg-[#2b93ff]/18 blur-[90px]" />
-                <div className="grid gap-4 md:grid-cols-[0.78fr_0.22fr]">
-                  <article className="rounded-[28px] border border-white/10 bg-white/[0.07] p-3 shadow-[0_28px_65px_rgba(0,0,0,0.28)] backdrop-blur-md">
-                    <Image src={operationsOverviewImg} alt="Schedulaa mobile operations overview" className="h-auto w-full rounded-[22px] object-contain" priority />
-                  </article>
-                  <div className="grid gap-4 md:grid-rows-2">
-                    <article className="rounded-[24px] border border-white/10 bg-white/[0.07] p-2.5 shadow-[0_20px_45px_rgba(0,0,0,0.22)] backdrop-blur-md">
-                      <Image src={managerHubImg} alt="Schedulaa manager mobile approvals dashboard" className="h-full w-full rounded-[18px] object-cover" />
-                    </article>
-                    <article className="rounded-[24px] border border-white/10 bg-white/[0.07] p-2.5 shadow-[0_20px_45px_rgba(0,0,0,0.22)] backdrop-blur-md">
-                      <Image src={employeeDayImg} alt="Schedulaa employee mobile daily workflow" className="h-full w-full rounded-[18px] object-cover" />
-                    </article>
-                  </div>
-                </div>
+                <article className="rounded-[28px] border border-white/10 bg-white/[0.07] p-3 shadow-[0_28px_65px_rgba(0,0,0,0.28)] backdrop-blur-md">
+                  <Image src={operationsOverviewImg} alt="Schedulaa mobile operations overview" className="h-auto w-full rounded-[22px] object-contain" priority />
+                </article>
               </div>
             </AnimatedSection>
           </div>
@@ -180,70 +196,65 @@ export default function MobileAppLandingPage() {
 
       <section className="py-14 md:py-18">
         <div className="main-container">
-          <AnimatedSection>
-            <div className="mx-auto max-w-[760px] text-center">
-              <span className="badge badge-yellow-v2">Built for real operations</span>
-              <h2 className="mt-4 text-heading-3 text-secondary dark:text-white">
-                Mobile workflows for the people running shifts and the people managing them.
-              </h2>
-              <p className="mt-4 text-[16px] leading-7 text-secondary/72 dark:text-accent/70">
-                This is not a disconnected companion app. It extends the same Schedulaa operating system managers use on
-                desktop, with live scheduling, approvals, attendance, and payroll-ready visibility.
-              </p>
+          <RevealAnimation delay={0.1}>
+            <div className="grid grid-cols-12 items-start justify-items-center gap-y-14 bg-transparent xl:gap-[60px]">
+              <div className="col-span-12 lg:sticky lg:top-28 lg:col-span-6">
+                <div className="space-y-10 text-center md:space-y-14 lg:text-left">
+                  <div className="space-y-4">
+                    <span className="badge badge-yellow-v2">Built for real operations</span>
+                    <h2 className="mx-auto w-full max-w-[760px] text-heading-3 text-secondary dark:text-white xl:mx-0 xl:max-w-[560px]">
+                      Mobile workflows for the people running shifts and the people managing them.
+                    </h2>
+                    <p className="mx-auto w-full max-w-[720px] text-[16px] leading-7 text-secondary/72 dark:text-accent/70 xl:mx-0 xl:max-w-[560px]">
+                      This is not a disconnected companion app. It extends the same Schedulaa operating system managers use on
+                      desktop, with live scheduling, approvals, attendance, and payroll-ready visibility.
+                    </p>
+                  </div>
+                  <div>
+                    <LinkButton
+                      href="/features"
+                      className="btn btn-secondary btn-md hover:btn-green mx-auto w-[90%] md:mx-0 md:w-auto dark:btn-transparent"
+                    >
+                      Explore all features
+                    </LinkButton>
+                  </div>
+                </div>
+              </div>
+              <div className="col-span-12 lg:col-span-6">
+                <StackCardWrapper
+                  topOffset="11vh"
+                  gap="24px"
+                  initDelay={100}
+                  className="order-2 w-full flex-none bg-transparent sm:order-1 sm:flex-1"
+                >
+                  {mobileWorkflowCards.map((card, index) => (
+                    <RevealAnimation key={card.id} delay={0.25 + index * 0.08}>
+                      <StackCardItem>
+                        <div className="relative z-20 mx-auto flex w-full max-w-full items-center justify-center overflow-hidden rounded-[20px] p-2 sm:mx-0 sm:max-w-[483px]">
+                          <figure className="pointer-events-none absolute -top-[99%] -left-[88%] -z-10 size-[1000px] rotate-[307deg] opacity-50 select-none">
+                            <Image src={card.gradientSrc} alt="mobile-step-gradient" />
+                          </figure>
+                          <div className="group relative z-10 w-full max-w-full space-y-6 rounded-[14px] bg-white p-8 sm:max-w-[467px] dark:bg-black">
+                            <div className="space-y-1">
+                              <p className="text-heading-5 text-secondary dark:text-accent">{card.title}</p>
+                              <p className="max-w-[290px] w-full">{card.description}</p>
+                            </div>
+                            <figure className="w-full max-w-[385px] overflow-hidden rounded-2xl">
+                              <Image
+                                src={card.imageSrc}
+                                alt={card.title}
+                                className="transition-transform duration-500 ease-out group-hover:scale-110 md:max-h-[300px] md:min-h-[300px]"
+                              />
+                            </figure>
+                          </div>
+                        </div>
+                      </StackCardItem>
+                    </RevealAnimation>
+                  ))}
+                </StackCardWrapper>
+              </div>
             </div>
-          </AnimatedSection>
-          <StaggerGrid className="mt-10 grid gap-5 lg:grid-cols-2">
-            <article className="rounded-[28px] border border-stroke-2 bg-white p-6 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
-              <div className="flex items-center gap-3">
-                <span className="flex size-11 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 dark:bg-blue-500/12 dark:text-blue-300">
-                  <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                    <path d="M7 5h10v14H7z" />
-                    <path d="M10 8h4M9 18h6" />
-                  </svg>
-                </span>
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary/45 dark:text-accent/45">For managers</p>
-                  <h3 className="text-heading-6 text-secondary dark:text-white">Approvals, labor visibility, and live response</h3>
-                </div>
-              </div>
-              <ul className="mt-5 space-y-3 text-[15px] leading-7 text-secondary/78 dark:text-accent/72">
-                {managerFeatures.map((item) => (
-                  <li key={item} className="flex gap-3">
-                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 rounded-[24px] border border-stroke-2 bg-background-3 p-3 dark:border-stroke-7 dark:bg-background-7">
-                <Image src={managerHubImg} alt="Manager approvals and mobile alerts" className="h-auto w-full rounded-[18px] object-contain" />
-              </div>
-            </article>
-            <article className="rounded-[28px] border border-stroke-2 bg-white p-6 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
-              <div className="flex items-center gap-3">
-                <span className="flex size-11 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 dark:bg-emerald-500/12 dark:text-emerald-300">
-                  <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                    <path d="M4 6h16v12H4z" />
-                    <path d="M8 10h8M8 14h5" />
-                  </svg>
-                </span>
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary/45 dark:text-accent/45">For employees</p>
-                  <h3 className="text-heading-6 text-secondary dark:text-white">Schedules, clock-in, and day-to-day execution</h3>
-                </div>
-              </div>
-              <ul className="mt-5 space-y-3 text-[15px] leading-7 text-secondary/78 dark:text-accent/72">
-                {employeeFeatures.map((item) => (
-                  <li key={item} className="flex gap-3">
-                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#14b8a6]" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 rounded-[24px] border border-stroke-2 bg-background-3 p-3 dark:border-stroke-7 dark:bg-background-7">
-                <Image src={employeeDayImg} alt="Employee mobile schedule and clock-in workflow" className="h-auto w-full rounded-[18px] object-contain" />
-              </div>
-            </article>
-          </StaggerGrid>
+          </RevealAnimation>
         </div>
       </section>
 
