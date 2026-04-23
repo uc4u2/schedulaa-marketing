@@ -4,7 +4,7 @@ import bookingImg from '@public/images/marketing/showcase/workflow-01.png';
 import schedulingImg from '@public/images/marketing/showcase/workflow-02.png';
 import timeTrackingImg from '@public/images/marketing/showcase/workflow-03.png';
 import payrollImg from '@public/images/marketing/showcase/workflow-04.png';
-import reportsImg from '@public/images/marketing/showcase/workflow-05.png';
+import reportsImg from '@public/images/marketing/hero/module-5-mobile.png';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 
