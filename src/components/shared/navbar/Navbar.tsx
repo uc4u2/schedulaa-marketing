@@ -113,6 +113,16 @@ const PRODUCT_MENU_META: Record<string, MegaMenuMeta> = {
       </svg>
     ),
   },
+  'mobile-app': {
+    description: 'Download the Android app and see manager and employee workflows built for daily operations.',
+    iconClassName: 'bg-violet-50 text-violet-600',
+    icon: (
+      <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+        <rect x="7" y="3" width="10" height="18" rx="3" />
+        <path d="M10 6h4M10 17h4" />
+      </svg>
+    ),
+  },
 };
 
 const RESOURCES_MENU_META: Record<string, MegaMenuMeta> = {

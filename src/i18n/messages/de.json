@@ -27,10 +27,11 @@
     "payslips": "Gehaltsabrechnungen",
     "zapier": "Zapier-Automatisierung",
     "quickbooks": "QuickBooks-Einrichtung",
-    "xero": "Xero-Einrichtung"
+    "xero": "Xero-Einrichtung",
+    "mobileApp": "Mobile App"
   },
   "footer": {
-    "blurb": "Schedulaa ist das Betriebssystem f\u00fcr Dienstleistungsunternehmen: Planung, Lohnabrechnung und Website-Buchung auf einer Plattform.",
+    "blurb": "Schedulaa ist das Betriebssystem für Dienstleistungsunternehmen: Planung, Lohnabrechnung und Website-Buchung auf einer Plattform.",
     "company": "Unternehmen",
     "product": "Produkt",
     "resources": "Ressourcen",
@@ -65,12 +66,12 @@
     "terms": "Bedingungen",
     "login": "Anmelden",
     "getStarted": "Loslegen",
-    "copyright": "\u00a9 {year} Schedulaa. Alle Rechte vorbehalten."
+    "copyright": "© {year} Schedulaa. Alle Rechte vorbehalten."
   },
   "hero": {
     "badge": "Vereinheitlichte Betriebsplattform",
-    "title": "Planung, Lohnabrechnung und Website-Buchung f\u00fcr moderne Serviceteams.",
-    "subtitle": "Schedulaa vereint Teamplanung, Lohnabrechnungsprozesse und \u00f6ffentliche Website-Buchungen in einem System, damit Sie schneller mit weniger Tools arbeiten.",
+    "title": "Planung, Lohnabrechnung und Website-Buchung für moderne Serviceteams.",
+    "subtitle": "Schedulaa vereint Teamplanung, Lohnabrechnungsprozesse und öffentliche Website-Buchungen in einem System, damit Sie schneller mit weniger Tools arbeiten.",
     "point1": "Intelligente Planungs-Workflows",
     "point2": "Lohnabrechnungsfertige Zeiterfassung",
     "point3": "Website-Builder mit Buchung",
@@ -79,9 +80,9 @@
   },
   "pricing": {
     "badge": "Unsere Preise",
-    "title": "W\u00e4hlen Sie den Tarifplan, der am besten zu Ihren Anforderungen passt.",
+    "title": "Wählen Sie den Tarifplan, der am besten zu Ihren Anforderungen passt.",
     "monthly": "Monatlich",
-    "yearly": "J\u00e4hrlich",
+    "yearly": "Jährlich",
     "save": "40% sparen",
     "perYear": "Pro Jahr",
     "perMonth": "Pro Monat",

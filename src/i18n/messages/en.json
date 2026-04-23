@@ -27,7 +27,8 @@
     "payslips": "Payslips",
     "zapier": "Zapier automation",
     "quickbooks": "QuickBooks onboarding",
-    "xero": "Xero onboarding"
+    "xero": "Xero onboarding",
+    "mobileApp": "Mobile App"
   },
   "footer": {
     "blurb": "Schedulaa is the operating system for service businesses: scheduling, payroll, and website booking in one platform.",
@@ -65,7 +66,7 @@
     "terms": "Terms",
     "login": "Log in",
     "getStarted": "Get started",
-    "copyright": "\u00a9 {year} Schedulaa. All rights reserved."
+    "copyright": "© {year} Schedulaa. All rights reserved."
   },
   "hero": {
     "badge": "Workforce scheduling + labor cost intelligence",
