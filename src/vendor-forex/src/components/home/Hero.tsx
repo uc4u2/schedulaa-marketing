@@ -24,24 +24,6 @@ const ANDROID_APK_URL =
   process.env.NEXT_PUBLIC_ANDROID_APK_URL ||
   'https://pub-6cbed1dd8177417b96763fc4eb930d09.r2.dev/assets/apk/schedulaa-staff-latest.apk';
 
-const AppleBadge = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path
-      d="M16.84 12.12c.02 2.36 2.08 3.15 2.1 3.16-.02.05-.33 1.16-1.08 2.29-.65.98-1.33 1.96-2.39 1.98-1.04.02-1.37-.62-2.56-.62-1.18 0-1.55.6-2.52.64-1.01.04-1.78-1.02-2.44-1.99-1.34-1.96-2.37-5.55-.99-7.96.69-1.2 1.93-1.96 3.27-1.98 1.02-.02 1.98.68 2.56.68.58 0 1.68-.84 2.83-.72.48.02 1.81.2 2.67 1.45-.07.04-1.6.93-1.58 3.07ZM15.06 4.2c.54-.66.9-1.58.8-2.5-.77.03-1.69.51-2.24 1.17-.5.58-.94 1.52-.82 2.42.86.07 1.72-.44 2.26-1.09Z"
-      fill="currentColor"
-    />
-  </svg>
-);
-
-const GooglePlayBadge = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M4.8 3.44 14.9 13.55 4.87 20.56c-.35-.18-.57-.54-.57-1V4.45c0-.46.19-.82.5-1.01Z" fill="#00C853" />
-    <path d="M18.16 10.82 15.6 9.38 12.98 12l2.63 2.63 2.55-1.44c1.09-.61 1.09-1.77 0-2.37Z" fill="#FFAB00" />
-    <path d="M4.87 3.44c.1-.06.22-.1.35-.12l10.38 8.68-2.62 2.62L4.87 3.44Z" fill="#00B8D4" />
-    <path d="m5.22 20.68 10.38-8.68 2.56 1.44c1.09.61 1.09 1.77 0 2.37L8.2 21.44c-1.02.57-2.19-.02-2.98-.76Z" fill="#FF5252" />
-  </svg>
-);
-
 const heroCopyByLocale: Record<string, HeroCopy> = {
   en: {
     line1: 'The Operations OS for',
@@ -163,19 +145,21 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
   const featureItems = featureItemsByLocale[locale] || featureItemsByLocale.en;
 
   return (
-    <section className="relative z-20 overflow-hidden bg-[url('/images/ns-img-295.jpg')] bg-cover bg-top bg-no-repeat pt-[170px] pb-[110px] md:pt-[206px] md:pb-[150px]">
+    <section className="relative z-20 overflow-hidden bg-[url('/images/ns-img-295.jpg')] bg-cover bg-top bg-no-repeat pt-[170px] pb-[88px] md:pt-[206px] md:pb-[112px]">
       <div className="absolute top-[10%] left-1/2 -z-10 mx-auto max-w-[1365px] -translate-x-1/2">
         <figure>
           <Image src={heroVectorImg} alt="hero" />
         </figure>
       </div>
       <div className="main-container">
-        <div className="grid items-center gap-10 xl:grid-cols-[0.96fr_1.04fr] xl:gap-8">
-          <div className="space-y-5 md:space-y-4 md:text-center xl:space-y-5 xl:pt-2 xl:text-left">
+        <div className="grid items-center gap-8 xl:grid-cols-[1.04fr_.96fr] xl:gap-6">
+          <div className="space-y-5 md:space-y-4 md:text-center xl:space-y-4 xl:pt-1 xl:text-left">
             <RevealAnimation delay={0.1}>
-              <h1 className="mx-auto max-w-[380px] leading-[1.08] tracking-[-0.02em] sm:max-w-[500px] md:max-w-[600px] xl:mx-0 xl:max-w-[520px]">
+              <h1 className="mx-auto max-w-[400px] leading-[1.02] tracking-[-0.035em] sm:max-w-[520px] md:max-w-[620px] xl:mx-0 xl:max-w-[610px]">
                 <span className="block text-white">{heroCopy.line1 || hero.title?.line1 || heroCopyByLocale.en.line1}</span>
-                <span className="hero-text-gradient hero-text-color-2 block pt-1 md:pt-1.5">{heroCopy.line2 || hero.title?.line2 || heroCopyByLocale.en.line2}</span>
+                <span className="hero-text-gradient hero-text-color-2 block pt-1 whitespace-nowrap md:pt-1.5">
+                  {heroCopy.line2 || hero.title?.line2 || heroCopyByLocale.en.line2}
+                </span>
               </h1>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>
@@ -217,34 +201,16 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
                 </li>
               </RevealAnimation>
             </ul>
-            <div className="mt-1 flex flex-col items-center justify-center gap-3 sm:flex-row xl:justify-start">
-              <a
-                href={ANDROID_APK_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex min-w-[188px] items-center gap-3 rounded-[18px] border border-white/14 bg-white/10 px-4 py-3 text-left shadow-[0_10px_32px_rgba(3,8,20,0.22)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#7fe36c]/45 hover:bg-white/14 hover:shadow-[0_14px_38px_rgba(8,20,45,0.28)]"
-              >
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/92 text-secondary shadow-sm">
-                  <GooglePlayBadge />
-                </span>
-                <span className="block">
-                  <span className="block text-[11px] uppercase tracking-[0.18em] text-white/56">Android app</span>
-                  <span className="block text-base font-semibold text-white">Download APK</span>
-                </span>
+            <p className="text-sm text-white/58 md:text-center xl:text-left">
+              <a href={ANDROID_APK_URL} target="_blank" rel="noopener noreferrer" className="font-medium text-white/78 transition-colors hover:text-[#d9ff6a]">
+                Android app available now
               </a>
-              <div className="flex min-w-[188px] items-center gap-3 rounded-[18px] border border-dashed border-white/16 bg-white/6 px-4 py-3 text-left opacity-90 shadow-[0_8px_24px_rgba(3,8,20,0.16)] backdrop-blur-md">
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/16 text-white shadow-sm">
-                  <AppleBadge />
-                </span>
-                <span className="block">
-                  <span className="block text-[11px] uppercase tracking-[0.18em] text-white/50">iPhone app</span>
-                  <span className="block text-base font-semibold text-white">Coming soon</span>
-                </span>
-              </div>
-            </div>
+              <span className="px-2 text-white/28">·</span>
+              <span>iPhone coming soon</span>
+            </p>
           </div>
           <RevealAnimation delay={0.8} instant>
-            <div className="xl:pt-0">
+            <div className="xl:pt-0 xl:-ml-2">
               <HeroWorkflowHexShowcase locale={locale} />
             </div>
           </RevealAnimation>
