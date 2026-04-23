@@ -30,7 +30,7 @@ const workflowNodesEn: WorkflowNode[] = [
     label: 'Scheduling',
     image: schedulingImg,
     alt: 'Scheduling workflow preview',
-    imageClassName: 'object-cover object-center scale-[1.12]',
+    imageClassName: 'object-contain object-center scale-[0.96] p-3',
   },
   {
     id: 'booking',
