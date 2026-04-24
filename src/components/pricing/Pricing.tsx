@@ -427,8 +427,8 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
 
         <div className="rounded-3xl border border-stroke-2 bg-secondary p-8 text-accent dark:border-stroke-7 dark:bg-background-8">
           <span className="badge badge-cyan mb-3">{ctaBanner.eyebrow}</span>
-          <h2 className="mb-3">{ctaBanner.title}</h2>
-          <p className="mb-5 max-w-[860px]">{ctaBanner.description}</p>
+          <h2 className="mb-3 text-white">{ctaBanner.title}</h2>
+          <p className="mb-5 max-w-[860px] text-accent/80">{ctaBanner.description}</p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a href={buildAppUrl('/register', { returnTo })} className="btn btn-accent btn-md">
               {ctaBanner.primaryCta.label}
