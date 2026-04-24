@@ -85,6 +85,7 @@ export const FOOTER_SECTIONS: FooterSection[] = [
       { id: 'company-roadmap', href: '/roadmap', labelKey: 'roadmap' },
       { id: 'company-privacy', href: '/privacy', labelKey: 'privacy' },
       { id: 'company-terms', href: '/terms', labelKey: 'terms' },
+      { id: 'company-account-deletion', href: '/account-deletion', label: 'Account deletion' },
       { id: 'company-login', href: '/login', labelKey: 'login', externalAppLink: true },
       { id: 'company-get-started', href: '/register', labelKey: 'getStarted', externalAppLink: true },
     ],

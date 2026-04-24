@@ -56,6 +56,7 @@ export const INDUSTRY_BOOKING_ROUTES = [
 ] as const;
 
 export const LEGAL_ROUTES = [
+  '/account-deletion',
   '/privacy',
   '/terms',
   '/cookie',
