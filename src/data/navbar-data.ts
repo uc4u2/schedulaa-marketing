@@ -9,6 +9,7 @@ export type NavbarLabelKey =
   | 'commerce'
   | 'payroll'
   | 'websiteBuilder'
+  | 'businessFinance'
   | 'mobileApp'
   | 'industries'
   | 'status'
@@ -48,6 +49,7 @@ export const PRODUCT_MENU_LINKS: NavbarLinkItem[] = [
   { id: 'commerce', href: '/commerce', labelKey: 'commerce' },
   { id: 'payroll', href: '/payroll', labelKey: 'payroll' },
   { id: 'website-builder', href: '/website-builder', labelKey: 'websiteBuilder' },
+  { id: 'business-finance', href: '/business-finance', labelKey: 'businessFinance' },
   { id: 'mobile-app', href: '/mobile-app', labelKey: 'mobileApp' },
 ];
 

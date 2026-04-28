@@ -15,6 +15,8 @@ export type FooterTranslationKey =
   | 'commerce'
   | 'payroll'
   | 'websiteBuilder'
+  | 'businessFinance'
+  | 'mobileApp'
   | 'industries'
   | 'pricing'
   | 'blog'
@@ -102,6 +104,8 @@ export const FOOTER_SECTIONS: FooterSection[] = [
       { id: 'product-commerce', href: '/commerce', labelKey: 'commerce' },
       { id: 'product-payroll', href: '/payroll', labelKey: 'payroll' },
       { id: 'product-website-builder', href: '/website-builder', labelKey: 'websiteBuilder' },
+      { id: 'product-business-finance', href: '/business-finance', labelKey: 'businessFinance' },
+      { id: 'product-mobile-app', href: '/mobile-app', labelKey: 'mobileApp' },
       { id: 'product-pricing', href: '/pricing', labelKey: 'pricing' },
     ],
   },

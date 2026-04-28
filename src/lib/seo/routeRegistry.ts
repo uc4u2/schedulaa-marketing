@@ -27,6 +27,8 @@ export const STATIC_ROUTES = [
   '/payroll/tools/t4',
   '/payroll/tools/w2',
   '/website-builder',
+  '/business-finance',
+  '/mobile-app',
   '/industries',
   '/status',
   '/roadmap',

@@ -113,6 +113,16 @@ const PRODUCT_MENU_META: Record<string, MegaMenuMeta> = {
       </svg>
     ),
   },
+  'business-finance': {
+    description: 'Run quote-to-work execution with estimates, payment links, field reports, and month-end visibility.',
+    iconClassName: 'bg-emerald-50 text-emerald-600',
+    icon: (
+      <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+        <path d="M5 6.5h14M5 12h14M5 17.5h8" />
+        <path d="M17 4v16" />
+      </svg>
+    ),
+  },
   'mobile-app': {
     description: 'Download the Android app and see manager and employee workflows built for daily operations.',
     iconClassName: 'bg-violet-50 text-violet-600',
