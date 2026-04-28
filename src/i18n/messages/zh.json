@@ -28,7 +28,8 @@
     "zapier": "Zapier 自动化",
     "quickbooks": "QuickBooks 上线",
     "xero": "Xero 上线",
-    "mobileApp": "移动应用"
+    "mobileApp": "移动应用",
+    "businessFinance": "企业财务"
   },
   "footer": {
     "blurb": "Schedulaa 是服务型企业的一体化运营系统：排班、薪资与网站预约全部集中在同一平台。",
@@ -66,7 +67,9 @@
     "terms": "服务条款",
     "login": "登录",
     "getStarted": "开始使用",
-    "copyright": "© {year} Schedulaa。保留所有权利。"
+    "copyright": "© {year} Schedulaa。保留所有权利。",
+    "businessFinance": "企业财务",
+    "mobileApp": "移动应用"
   },
   "hero": {
     "badge": "Unified operations platform",

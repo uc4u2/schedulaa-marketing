@@ -28,7 +28,8 @@
     "zapier": "Автоматизация Zapier",
     "quickbooks": "Онбординг QuickBooks",
     "xero": "Онбординг Xero",
-    "mobileApp": "Мобильное приложение"
+    "mobileApp": "Мобильное приложение",
+    "businessFinance": "Финансы бизнеса"
   },
   "footer": {
     "blurb": "Schedulaa — операционная платформа для сервисного бизнеса: расписания, payroll и бронирование сайтов в одной системе.",
@@ -66,7 +67,9 @@
     "terms": "Условия",
     "login": "Войти",
     "getStarted": "Начать",
-    "copyright": "© {year} Schedulaa. Все права защищены."
+    "copyright": "© {year} Schedulaa. Все права защищены.",
+    "businessFinance": "Финансы бизнеса",
+    "mobileApp": "Мобильное приложение"
   },
   "hero": {
     "badge": "Unified operations platform",

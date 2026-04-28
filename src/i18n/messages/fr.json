@@ -28,7 +28,8 @@
     "zapier": "Automatisation Zapier",
     "quickbooks": "Intégration QuickBooks",
     "xero": "Intégration Xero",
-    "mobileApp": "Application mobile"
+    "mobileApp": "Application mobile",
+    "businessFinance": "Finance d'entreprise"
   },
   "footer": {
     "blurb": "Schedulaa est le système d'exploitation des entreprises de services : planification, paie et réservation web sur une seule plateforme.",
@@ -66,7 +67,9 @@
     "terms": "Conditions",
     "login": "Connexion",
     "getStarted": "Commencer",
-    "copyright": "© {year} Schedulaa. Tous droits réservés."
+    "copyright": "© {year} Schedulaa. Tous droits réservés.",
+    "businessFinance": "Finance d'entreprise",
+    "mobileApp": "Application mobile"
   },
   "hero": {
     "badge": "Plateforme d'opérations unifiée",

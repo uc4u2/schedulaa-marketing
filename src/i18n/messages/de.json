@@ -28,7 +28,8 @@
     "zapier": "Zapier-Automatisierung",
     "quickbooks": "QuickBooks-Einrichtung",
     "xero": "Xero-Einrichtung",
-    "mobileApp": "Mobile App"
+    "mobileApp": "Mobile App",
+    "businessFinance": "Geschäftsfinanzen"
   },
   "footer": {
     "blurb": "Schedulaa ist das Betriebssystem für Dienstleistungsunternehmen: Planung, Lohnabrechnung und Website-Buchung auf einer Plattform.",
@@ -66,7 +67,9 @@
     "terms": "Bedingungen",
     "login": "Anmelden",
     "getStarted": "Loslegen",
-    "copyright": "© {year} Schedulaa. Alle Rechte vorbehalten."
+    "copyright": "© {year} Schedulaa. Alle Rechte vorbehalten.",
+    "businessFinance": "Geschäftsfinanzen",
+    "mobileApp": "Mobile App"
   },
   "hero": {
     "badge": "Vereinheitlichte Betriebsplattform",

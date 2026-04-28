@@ -28,7 +28,8 @@
     "zapier": "أتمتة Zapier",
     "quickbooks": "إعداد QuickBooks",
     "xero": "إعداد Xero",
-    "mobileApp": "تطبيق الجوال"
+    "mobileApp": "تطبيق الجوال",
+    "businessFinance": "التمويل التجاري"
   },
   "footer": {
     "blurb": "Schedulaa هو نظام التشغيل لشركات الخدمات: الجدولة، الرواتب، والحجز عبر الموقع في منصة واحدة.",
@@ -66,7 +67,9 @@
     "terms": "الشروط",
     "login": "تسجيل الدخول",
     "getStarted": "ابدأ",
-    "copyright": "© {year} Schedulaa. جميع الحقوق محفوظة."
+    "copyright": "© {year} Schedulaa. جميع الحقوق محفوظة.",
+    "businessFinance": "التمويل التجاري",
+    "mobileApp": "تطبيق الجوال"
   },
   "hero": {
     "badge": "منصة عمليات موحدة",
