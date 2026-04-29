@@ -120,10 +120,12 @@ const bookingVsFinance = {
 
 function BulletList({ items, muted = false }: { items: string[]; muted?: boolean }) {
   return (
-    <ul className="space-y-3">
+    <ul className="space-y-3.5">
       {items.map((item) => (
-        <li key={item} className="flex items-start gap-3 text-sm leading-6 text-secondary/78 dark:text-accent/74">
-          <span className={`mt-2 size-2 rounded-full ${muted ? 'bg-secondary/30 dark:bg-accent/30' : 'bg-[#1f7ae0]'}`} />
+        <li key={item} className="flex items-start gap-3 text-[15px] leading-7 text-secondary/82 dark:text-accent/78">
+          <span
+            className={`mt-2.5 size-2 rounded-full ${muted ? 'bg-secondary/38 dark:bg-accent/34' : 'bg-[#1f7ae0] shadow-[0_0_0_5px_rgba(31,122,224,0.08)]'}`}
+          />
           <span>{item}</span>
         </li>
       ))}
@@ -194,7 +196,7 @@ export default function BusinessFinanceLandingPage() {
       <section className="py-14 md:py-18">
         <div className="main-container">
           <AnimatedSection>
-            <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+            <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center lg:gap-10">
               <div className="space-y-4">
                 <span className="badge badge-yellow-v2">The operational gap</span>
                 <h2 className="max-w-[700px] text-heading-3 text-secondary dark:text-white">
@@ -216,9 +218,9 @@ export default function BusinessFinanceLandingPage() {
       <section id="finance-workflow" className="py-14 md:py-18">
         <div className="main-container">
           <RevealAnimation delay={0.1}>
-            <div className="grid grid-cols-12 items-start gap-y-14 xl:gap-[60px]">
-              <div className="col-span-12 lg:sticky lg:top-28 lg:col-span-5">
-                <div className="space-y-4 text-center lg:text-left">
+            <div className="rounded-[34px] border border-stroke-2 bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(244,248,255,0.92))] p-6 shadow-[0_28px_70px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-[linear-gradient(180deg,rgba(13,18,30,0.96),rgba(18,24,37,0.94))] md:p-8 lg:p-10">
+              <div className="grid gap-9 lg:grid-cols-[0.86fr_1.14fr] lg:items-start lg:gap-10 xl:gap-12">
+                <div className="space-y-4 text-center lg:sticky lg:top-28 lg:text-left">
                   <span className="badge badge-cyan">End-to-end workflow</span>
                   <h2 className="mx-auto max-w-[760px] text-heading-3 text-secondary dark:text-white lg:mx-0 lg:max-w-[520px]">
                     One flow from request to completed job
@@ -226,17 +228,26 @@ export default function BusinessFinanceLandingPage() {
                   <p className="mx-auto max-w-[720px] text-[16px] leading-7 text-secondary/72 dark:text-accent/70 lg:mx-0 lg:max-w-[520px]">
                     Capture the request, price the work, collect approval, turn it into an invoice and work order, then review what becomes official before month-end.
                   </p>
+                  <div className="mx-auto max-w-[520px] rounded-[24px] border border-[#1f7ae0]/12 bg-[#1f7ae0]/[0.04] px-5 py-4 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] dark:border-white/10 dark:bg-white/[0.04] lg:mx-0">
+                    <p className="text-sm leading-7 text-secondary/70 dark:text-accent/72">
+                      Quotes, approvals, billing, execution, and month-end review belong in one operating flow. This page follows the actual Business Finance path inside Schedulaa.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-span-12 lg:col-span-7">
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                   {workflowSteps.map((step, index) => (
                     <AnimatedSection key={step}>
-                      <article className="rounded-[24px] border border-stroke-2 bg-white p-5 shadow-[0_20px_56px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
-                        <div className="mb-3 flex size-10 items-center justify-center rounded-2xl bg-[#1f7ae0]/10 text-sm font-semibold text-[#1f7ae0]">
-                          {index + 1}
+                      <article
+                        className={`h-full rounded-[24px] border border-stroke-2 bg-white/92 p-5 shadow-[0_18px_48px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 ${
+                          index === workflowSteps.length - 1 ? 'md:col-span-2 xl:col-span-1' : ''
+                        }`}
+                      >
+                        <div className="flex h-full flex-col gap-4">
+                          <div className="flex size-11 items-center justify-center rounded-[18px] bg-[#1f7ae0]/10 text-sm font-semibold text-[#1f7ae0]">
+                            {index + 1}
+                          </div>
+                          <p className="text-[15px] leading-7 text-secondary/84 dark:text-accent/78">{step}</p>
                         </div>
-                        <p className="text-[15px] leading-7 text-secondary/80 dark:text-accent/76">{step}</p>
                       </article>
                     </AnimatedSection>
                   ))}
@@ -252,20 +263,31 @@ export default function BusinessFinanceLandingPage() {
           <AnimatedSection>
             <div className="space-y-4 text-center">
               <span className="badge badge-yellow-v2">Core modules</span>
-              <h2 className="text-heading-3 text-secondary dark:text-white">Connected tools for quoting, execution, and finance handoff</h2>
+              <h2 className="mx-auto max-w-[820px] text-heading-3 text-secondary dark:text-white">
+                Connected tools for quoting, execution, and finance handoff
+              </h2>
             </div>
           </AnimatedSection>
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {featureCards.map((card) => (
               <AnimatedSection key={card.title}>
-                <article className="relative overflow-hidden rounded-[26px] border border-stroke-2 bg-white p-6 shadow-[0_20px_56px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
-                  <figure className="pointer-events-none absolute -top-[110%] -left-[90%] -z-10 size-[460px] rotate-[320deg] opacity-40 select-none">
+                <article className="relative h-full overflow-hidden rounded-[28px] border border-[#d7e5f8] bg-[linear-gradient(180deg,#ffffff,#f7fbff)] p-6 shadow-[0_20px_54px_rgba(15,23,42,0.09)] dark:border-stroke-7 dark:bg-[linear-gradient(180deg,rgba(18,24,37,0.96),rgba(13,19,30,0.98))]">
+                  <figure className="pointer-events-none absolute -top-[96%] -left-[84%] -z-10 size-[460px] rotate-[320deg] opacity-50 select-none">
                     <Image src={card.gradientSrc} alt="finance-feature-gradient" />
                   </figure>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5 text-secondary dark:text-white">{card.title}</h3>
-                    <p className="text-sm leading-7 text-secondary/74 dark:text-accent/72">{card.body}</p>
-                    {card.note ? <p className="text-xs leading-6 text-secondary/58 dark:text-accent/58">{card.note}</p> : null}
+                  <div className="flex h-full flex-col gap-4">
+                    <div className="inline-flex w-fit rounded-full border border-[#1f7ae0]/14 bg-[#1f7ae0]/[0.05] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1f7ae0] dark:border-white/10 dark:bg-white/[0.04] dark:text-white/72">
+                      Module
+                    </div>
+                    <div className="space-y-3">
+                      <h3 className="text-[21px] font-semibold leading-[1.25] text-secondary dark:text-white">{card.title}</h3>
+                      <p className="text-[15px] leading-7 text-secondary/80 dark:text-accent/74">{card.body}</p>
+                    </div>
+                    {card.note ? (
+                      <p className="mt-auto rounded-[18px] border border-[#1f7ae0]/12 bg-[#1f7ae0]/[0.04] px-4 py-3 text-[12px] leading-6 text-secondary/68 dark:border-white/10 dark:bg-white/[0.04] dark:text-accent/62">
+                        {card.note}
+                      </p>
+                    ) : null}
                   </div>
                 </article>
               </AnimatedSection>
@@ -277,22 +299,36 @@ export default function BusinessFinanceLandingPage() {
       <section className="py-14 md:py-18">
         <div className="main-container">
           <AnimatedSection>
-            <div className="grid gap-6 lg:grid-cols-3">
-              <div className="lg:col-span-1 space-y-4">
+            <div className="grid gap-7 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+              <div className="space-y-4">
                 <span className="badge badge-cyan">Privacy by role</span>
-                <h2 className="text-heading-3 text-secondary dark:text-white">Managers keep control. Employees see only what they need.</h2>
+                <h2 className="max-w-[540px] text-heading-3 text-secondary dark:text-white">
+                  Managers keep control. Employees see only what they need.
+                </h2>
+                <p className="max-w-[520px] text-[15px] leading-7 text-secondary/72 dark:text-accent/70">
+                  Business Finance keeps pricing, costs, and final approval decisions with managers while giving employees only the work context required to complete the job and report back.
+                </p>
               </div>
-              <div className="lg:col-span-2 grid gap-5 md:grid-cols-3">
-                <article className="rounded-[24px] border border-stroke-2 bg-white p-5 shadow-[0_20px_56px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
-                  <h3 className="mb-4 text-heading-5 text-secondary dark:text-white">Manager sees</h3>
+              <div className="grid gap-5 md:grid-cols-3">
+                <article className="rounded-[26px] border border-[#d9e4f5] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
+                  <div className="mb-5 space-y-2">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1f7ae0]">Manager view</span>
+                    <h3 className="text-heading-5 text-secondary dark:text-white">Manager sees</h3>
+                  </div>
                   <BulletList items={managerSees} />
                 </article>
-                <article className="rounded-[24px] border border-stroke-2 bg-white p-5 shadow-[0_20px_56px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
-                  <h3 className="mb-4 text-heading-5 text-secondary dark:text-white">Employee sees</h3>
+                <article className="rounded-[26px] border border-[#d9e4f5] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
+                  <div className="mb-5 space-y-2">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1f7ae0]">Employee view</span>
+                    <h3 className="text-heading-5 text-secondary dark:text-white">Employee sees</h3>
+                  </div>
                   <BulletList items={employeeSees} />
                 </article>
-                <article className="rounded-[24px] border border-stroke-2 bg-white p-5 shadow-[0_20px_56px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
-                  <h3 className="mb-4 text-heading-5 text-secondary dark:text-white">Employee does not see</h3>
+                <article className="rounded-[26px] border border-[#d9e4f5] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
+                  <div className="mb-5 space-y-2">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary/54 dark:text-accent/56">Restricted</span>
+                    <h3 className="text-heading-5 text-secondary dark:text-white">Employee does not see</h3>
+                  </div>
                   <BulletList items={employeeDoesNotSee} muted />
                 </article>
               </div>
@@ -304,20 +340,28 @@ export default function BusinessFinanceLandingPage() {
       <section className="py-14 md:py-18">
         <div className="main-container">
           <AnimatedSection>
-            <div className="rounded-[30px] border border-stroke-2 bg-gradient-to-br from-[#f8fbff] via-white to-[#eef5ff] p-7 shadow-[0_28px_70px_rgba(30,64,175,0.12)] dark:border-stroke-7 dark:from-background-7 dark:via-background-8 dark:to-background-7 md:p-8">
-              <div className="space-y-4">
-                <span className="badge badge-yellow-v2">Reporting</span>
-                <h2 className="text-heading-3 text-secondary dark:text-white">Know the job numbers before month-end</h2>
-                <p className="max-w-[860px] text-[15px] leading-7 text-secondary/74 dark:text-accent/72">
-                  Reports are operational readiness tools designed to help managers and accountants review the business faster. They are not a replacement for professional tax or accounting review.
-                </p>
+            <div className="rounded-[32px] border border-[#d9e6f7] bg-[linear-gradient(135deg,#f8fbff_0%,#ffffff_42%,#edf5ff_100%)] p-7 shadow-[0_30px_80px_rgba(30,64,175,0.12)] dark:border-stroke-7 dark:bg-[linear-gradient(135deg,rgba(12,18,29,0.98),rgba(19,26,41,0.98))] md:p-8 lg:p-10">
+              <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+                <div className="space-y-4">
+                  <span className="badge badge-yellow-v2">Reporting</span>
+                  <h2 className="max-w-[520px] text-heading-3 text-secondary dark:text-white">Know the job numbers before month-end</h2>
+                  <p className="max-w-[560px] text-[15px] leading-7 text-secondary/76 dark:text-accent/72">
+                    Reports are operational readiness tools designed to help managers and accountants review the business faster. They are not a replacement for professional tax or accounting review.
+                  </p>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                  {reportingCards.map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-[20px] border border-white/70 bg-white/90 px-4 py-4 text-sm font-semibold text-secondary shadow-[0_14px_30px_rgba(15,23,42,0.06)] backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.04] dark:text-accent"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                {reportingCards.map((item) => (
-                  <div key={item} className="rounded-[22px] border border-stroke-2 bg-white/90 px-4 py-4 text-sm font-medium text-secondary shadow-[0_16px_36px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 dark:text-accent">
-                    {item}
-                  </div>
-                ))}
+              <div className="mt-6 rounded-[20px] border border-[#1f7ae0]/10 bg-white/60 px-5 py-4 text-sm leading-7 text-secondary/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.55)] dark:border-white/10 dark:bg-white/[0.04] dark:text-accent/68">
+                Business Finance reporting is designed to help operating teams move faster with cleaner month-end reviews. Use it to prepare records, not to replace professional accounting signoff.
               </div>
             </div>
           </AnimatedSection>
@@ -327,11 +371,13 @@ export default function BusinessFinanceLandingPage() {
       <section className="py-14 md:py-18">
         <div className="main-container">
           <AnimatedSection>
-            <div className="grid gap-6 lg:grid-cols-2">
-              <article className="rounded-[28px] border border-stroke-2 bg-white p-6 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
+            <div className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr] lg:items-stretch">
+              <article className="flex h-full flex-col rounded-[30px] border border-[#d9e4f5] bg-white p-6 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-7 lg:p-8">
                 <span className="badge badge-cyan">Workflow fit</span>
-                <h2 className="mt-4 text-heading-3 text-secondary dark:text-white">Use Booking for known services. Use Business Finance for custom jobs.</h2>
-                <div className="mt-6 grid gap-5 md:grid-cols-2">
+                <h2 className="mt-4 max-w-[620px] text-heading-3 text-secondary dark:text-white">
+                  Use Booking for known services. Use Business Finance for custom jobs.
+                </h2>
+                <div className="mt-7 grid flex-1 gap-5 md:grid-cols-2">
                   <div>
                     <h3 className="mb-3 text-heading-5 text-secondary dark:text-white">Booking</h3>
                     <BulletList items={bookingVsFinance.booking} />
@@ -342,18 +388,21 @@ export default function BusinessFinanceLandingPage() {
                   </div>
                 </div>
               </article>
-              <article className="rounded-[28px] bg-secondary px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10">
-                <div className="space-y-5">
+              <article className="relative flex h-full overflow-hidden rounded-[30px] bg-secondary px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-9 lg:py-11">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(31,122,224,0.22),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(127,227,108,0.14),transparent_34%)]" />
+                <div className="relative flex h-full flex-col justify-between space-y-7">
                   <span className="badge badge-yellow-v2 !bg-[#d7efb2] !text-secondary">Get started</span>
-                  <h2 className="text-heading-3 text-white">Run quotes, jobs, and finance handoff in one place</h2>
-                  <p className="text-[15px] leading-7 text-white/78">
-                    Bring quote requests, approvals, payment collection, work execution, and reporting into one operating system instead of stitching them together later.
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    <Link href={buildAppUrl('/register', { returnTo })} className="btn btn-white btn-md min-w-[190px] dark:btn-transparent">
+                  <div className="space-y-5">
+                    <h2 className="max-w-[480px] text-heading-3 text-white">Run quotes, jobs, and finance handoff in one place</h2>
+                    <p className="max-w-[520px] text-[15px] leading-7 text-white/78">
+                      Bring quote requests, approvals, payment collection, work execution, and reporting into one operating system instead of stitching them together later.
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-3 pt-1">
+                    <Link href={buildAppUrl('/register', { returnTo })} className="btn btn-white btn-lg min-w-[210px] dark:btn-transparent">
                       Start with Schedulaa
                     </Link>
-                    <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[150px]">
+                    <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-lg min-w-[170px]">
                       Book a demo
                     </a>
                   </div>
