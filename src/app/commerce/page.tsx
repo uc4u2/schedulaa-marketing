@@ -1,26 +1,30 @@
 import { Metadata } from 'next';
 
+import { getCommerceMeta } from '@/components/commerce/localeCopy';
 import CommercePlatformPage from '@/components/commerce/CommercePlatformPage';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { getServerLocale } from '@/utils/serverLocale';
 
-export const metadata: Metadata = {
-  ...defaultMetadata,
-  title: 'Commerce, Shipping, and Digital Goods | Schedulaa',
-  description:
-    'Sell physical products, digital goods, and service add-ons with shipping automation, product categories, client order history, and mixed checkout flows in Schedulaa.',
-  openGraph: {
-    title: 'Schedulaa Commerce, Shipping, and Digital Goods',
-    description:
-      'Schedulaa unifies product sales, digital access, EasyPost shipping, and client order follow-up in one operational platform.',
-    url: 'https://www.schedulaa.com/en/commerce',
-  },
-  twitter: {
-    title: 'Schedulaa Commerce, Shipping, and Digital Goods',
-    description:
-      'Sell products and services together with EasyPost shipping, digital delivery, and client order history.',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale();
+  const meta = getCommerceMeta(locale);
+  return {
+    ...defaultMetadata,
+    title: meta.title,
+    description: meta.description,
+    openGraph: {
+      ...defaultMetadata.openGraph,
+      title: meta.openGraphTitle,
+      description: meta.openGraphDescription,
+      url: 'https://www.schedulaa.com/en/commerce',
+    },
+    twitter: {
+      ...defaultMetadata.twitter,
+      title: meta.twitterTitle,
+      description: meta.twitterDescription,
+    },
+  };
+}
 
 export default async function CommercePage() {
   const locale = await getServerLocale();
