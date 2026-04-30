@@ -1,5 +1,6 @@
 'use client';
 
+import { getMobileAppCopy } from '@/components/mobile-app/localeCopy';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import { AndroidPlatformIcon, ApplePlatformIcon } from '@/components/shared/AppPlatformIcons';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
@@ -27,50 +28,6 @@ const ANDROID_APK_URL =
 const BOOK_DEMO_URL =
   process.env.NEXT_PUBLIC_BOOK_DEMO_URL ||
   'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
-
-const heroPoints = [
-  'Approve time-off requests, shift swaps, and attendance issues without leaving the floor.',
-  'Give employees schedules, clock-in, announcements, and task visibility in the same app.',
-  'Keep managers and teams on the same Schedulaa system across desktop and mobile.',
-];
-
-const proofChips = [
-  'Android APK available now',
-  'Manager and employee workflows',
-  'Built on the same live Schedulaa system',
-  'iPhone release planned next',
-];
-
-const mobileWorkflowCards = [
-  {
-    id: 1,
-    title: 'Manager approvals stay live',
-    description: 'Review time-off requests, shift swaps, punch approvals, and attendance alerts from one manager hub.',
-    gradientSrc: gradient32Img,
-    imageSrc: managerHubImg,
-  },
-  {
-    id: 2,
-    title: 'Employees run the day from one screen',
-    description: 'Clock in, review upcoming shifts, request time off, and stay aligned with tasks and announcements.',
-    gradientSrc: gradient33Img,
-    imageSrc: employeeDayImg,
-  },
-  {
-    id: 3,
-    title: 'Attendance and payroll stay connected',
-    description: 'Track scheduled vs worked hours, overtime risk, payroll-ready totals, and exceptions in the same flow.',
-    gradientSrc: gradient34Img,
-    imageSrc: attendanceSummaryImg,
-  },
-  {
-    id: 4,
-    title: 'One mobile operating system for service teams',
-    description: 'Managers and employees stay on the same live Schedulaa data instead of switching between disconnected apps.',
-    gradientSrc: gradient9Img,
-    imageSrc: operationsOverviewImg,
-  },
-];
 
 function DownloadCard({
   active,
@@ -124,6 +81,13 @@ export default function MobileAppLandingPage() {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
   const returnTo = marketingReturnTo(locale, '/mobile-app');
+  const copy = getMobileAppCopy(locale);
+  const mobileWorkflowCards = copy.workflow.cards.map((card, index) => ({
+    id: index + 1,
+    ...card,
+    gradientSrc: [gradient32Img, gradient33Img, gradient34Img, gradient9Img][index % 4],
+    imageSrc: [managerHubImg, employeeDayImg, attendanceSummaryImg, operationsOverviewImg][index % 4],
+  }));
 
   return (
     <main className="bg-background-3 dark:bg-background-7">
@@ -134,19 +98,17 @@ export default function MobileAppLandingPage() {
           <div className="relative grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
             <AnimatedSection>
               <div className="space-y-6">
-                <span className="badge badge-cyan !bg-white/10 !text-white/88">Mobile App</span>
+                <span className="badge badge-cyan !bg-white/10 !text-white/88">{copy.hero.badge}</span>
                 <div className="space-y-4">
                   <h1 className="max-w-[680px] text-heading-2 text-white md:text-[56px] md:leading-[1.05]">
-                    Keep managers and employees running on the same operating system.
+                    {copy.hero.title}
                   </h1>
                   <p className="max-w-[620px] text-[17px] leading-8 text-white/72">
-                    Schedulaa mobile brings scheduling, clock-in, approvals, shift changes, time-off, tasks, and live
-                    team updates into one secure workflow. Managers stay in control, and employees stay aligned away
-                    from the desk.
+                    {copy.hero.description}
                   </p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  {heroPoints.map((point) => (
+                  {copy.hero.points.map((point) => (
                     <div
                       key={point}
                       className="rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm leading-6 text-white/82 backdrop-blur-sm"
@@ -157,18 +119,18 @@ export default function MobileAppLandingPage() {
                 </div>
                 <div className="flex flex-wrap gap-3 pt-1">
                   <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[170px]">
-                    Book a demo
+                    {copy.hero.bookDemo}
                   </a>
                   <Link href={buildAppUrl('/register', { returnTo })} className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
-                    Start free
+                    {copy.hero.startFree}
                   </Link>
                 </div>
                 <div className="flex flex-col items-start gap-3 pt-1 sm:flex-row sm:flex-wrap">
-                  <DownloadCard active label="Android app" title="Download APK" href={ANDROID_APK_URL} />
-                  <DownloadCard label="iPhone app" title="Coming soon" />
+                  <DownloadCard active label={copy.hero.androidLabel} title={copy.hero.androidTitle} href={ANDROID_APK_URL} />
+                  <DownloadCard label={copy.hero.iosLabel} title={copy.hero.iosTitle} />
                 </div>
                 <div className="flex flex-wrap gap-2 pt-2">
-                  {proofChips.map((chip) => (
+                  {copy.hero.chips.map((chip) => (
                     <span key={chip} className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-xs font-medium tracking-[0.01em] text-white/68">
                       {chip}
                     </span>
@@ -195,13 +157,12 @@ export default function MobileAppLandingPage() {
               <div className="col-span-12 lg:sticky lg:top-28 lg:col-span-6">
                 <div className="space-y-10 text-center md:space-y-14 lg:text-left">
                   <div className="space-y-4">
-                    <span className="badge badge-yellow-v2">Built for real operations</span>
+                    <span className="badge badge-yellow-v2">{copy.workflow.badge}</span>
                     <h2 className="mx-auto w-full max-w-[760px] text-heading-3 text-secondary dark:text-white xl:mx-0 xl:max-w-[560px]">
-                      Mobile workflows for the people running shifts and the people managing them.
+                      {copy.workflow.title}
                     </h2>
                     <p className="mx-auto w-full max-w-[720px] text-[16px] leading-7 text-secondary/72 dark:text-accent/70 xl:mx-0 xl:max-w-[560px]">
-                      This is not a disconnected companion app. It extends the same Schedulaa operating system managers use on
-                      desktop, with live scheduling, approvals, attendance, and payroll-ready visibility.
+                      {copy.workflow.description}
                     </p>
                   </div>
                   <div>
@@ -209,7 +170,7 @@ export default function MobileAppLandingPage() {
                       href="/features"
                       className="btn btn-secondary btn-md hover:btn-green mx-auto w-[90%] md:mx-0 md:w-auto dark:btn-transparent"
                     >
-                      Explore all features
+                      {copy.workflow.exploreFeatures}
                     </LinkButton>
                   </div>
                 </div>
@@ -257,21 +218,15 @@ export default function MobileAppLandingPage() {
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <AnimatedSection>
               <div className="rounded-[28px] border border-stroke-2 bg-white p-6 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
-                <span className="badge badge-cyan">Attendance + payroll readiness</span>
+                <span className="badge badge-cyan">{copy.attendance.badge}</span>
                 <h2 className="mt-4 text-heading-4 text-secondary dark:text-white">
-                  Keep attendance signals and payroll readiness in the same mobile loop.
+                  {copy.attendance.title}
                 </h2>
                 <p className="mt-4 text-[15px] leading-7 text-secondary/75 dark:text-accent/70">
-                  Managers can review scheduled vs worked hours, catch overtime risk, monitor exceptions, and move
-                  faster on payroll review without waiting for end-of-week rollups.
+                  {copy.attendance.description}
                 </p>
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {[
-                    'Scheduled vs worked hours at a glance',
-                    'Overtime risk and missing-break visibility',
-                    'Payroll-ready percentages and exception queues',
-                    'Faster daily decisions before payroll closes',
-                  ].map((item) => (
+                  {copy.attendance.bullets.map((item) => (
                     <div key={item} className="rounded-2xl border border-stroke-2 bg-background-3 px-4 py-3 text-sm leading-6 text-secondary/78 dark:border-stroke-7 dark:bg-background-7 dark:text-accent/74">
                       {item}
                     </div>
@@ -294,18 +249,17 @@ export default function MobileAppLandingPage() {
             <article className="overflow-hidden rounded-[32px] bg-secondary px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
               <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
                 <div className="space-y-4">
-                  <span className="badge badge-yellow-v2 !bg-[#d7efb2] !text-secondary">Direct download</span>
+                  <span className="badge badge-yellow-v2 !bg-[#d7efb2] !text-secondary">{copy.download.badge}</span>
                   <h2 className="max-w-[760px] text-heading-4 text-white md:text-heading-3">
-                    Roll out Schedulaa mobile without waiting for a separate store launch.
+                    {copy.download.title}
                   </h2>
                   <p className="max-w-[720px] text-[15px] leading-7 text-white/78">
-                    Download the signed Android APK directly today. iPhone delivery is planned next, with the same
-                    operating workflows and team controls carried forward.
+                    {copy.download.description}
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-                  <DownloadCard active label="Android app" title="Download APK" href={ANDROID_APK_URL} />
-                  <DownloadCard label="iPhone app" title="Coming soon" />
+                  <DownloadCard active label={copy.hero.androidLabel} title={copy.hero.androidTitle} href={ANDROID_APK_URL} />
+                  <DownloadCard label={copy.hero.iosLabel} title={copy.hero.iosTitle} />
                 </div>
               </div>
             </article>
