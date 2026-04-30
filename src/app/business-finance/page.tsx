@@ -7,12 +7,12 @@ const businessFinanceMeta: Record<string, { title: string; description: string }
   en: {
     title: 'Business Finance for Service Teams | Schedulaa',
     description:
-      'Manage quote requests, estimates, client approvals, invoices, payment links, work orders, field reports, materials, and month-end readiness in one workflow.',
+      'Manage quote requests, estimates, client approvals, invoices, hosted payment links, refunds, work orders, field reports, materials, gross/net reporting, tax summaries, and month-end readiness in one workflow.',
   },
   fa: {
     title: 'مدیریت مالی کسب‌وکارهای خدماتی | Schedulaa',
     description:
-      'در Schedulaa درخواست قیمت، برآورد، تأیید مشتری، فاکتور، لینک پرداخت، دستور کار، گزارش کارمند، مواد مصرفی و آمادگی پایان ماه را در یک جریان مدیریت کنید.',
+      'در Schedulaa درخواست قیمت، برآورد، تأیید مشتری، فاکتور، لینک پرداخت، بازپرداخت، دستور کار، گزارش کارمند، مواد مصرفی، گزارش ناخالص/خالص، خلاصه مالیات و آمادگی پایان ماه را در یک جریان مدیریت کنید.',
   },
 };
 

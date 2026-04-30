@@ -19,7 +19,7 @@ const BOOK_DEMO_URL =
 const painPoints = [
   'Quote requests come from calls, website forms, emails, or DMs.',
   'Estimates get lost in manual follow-ups.',
-  'Invoices and payment links are disconnected from job execution.',
+  'Invoices, payment links, and refunds are disconnected from job execution.',
   'Employees report work after the job, but managers still need to approve materials.',
   'Month-end reporting takes too long because the data is scattered.',
 ];
@@ -33,7 +33,7 @@ const workflowSteps = [
   'Create the work order and assign the team',
   'Employee submits a field report',
   'Manager reviews materials and closes the job',
-  'Track profitability, tax summary, and month-end readiness',
+  'Track gross and net reporting, tax summary, refunds, and month-end readiness',
 ];
 
 const featureCards = [
@@ -50,7 +50,7 @@ const featureCards = [
   },
   {
     title: 'Invoices and Payment Links',
-    body: 'Convert accepted estimates into invoices and create hosted payment links.',
+    body: 'Convert accepted estimates into invoices, create hosted payment links, and keep payment status connected to the finance invoice.',
     gradientSrc: gradient34Img,
   },
   {
@@ -75,18 +75,39 @@ const featureCards = [
   },
   {
     title: 'Reporting and Month-End',
-    body: 'See tax summary, profitability, missing receipts, low stock, and month-end readiness.',
+    body: 'See gross invoice totals, refunds, net collected amounts, tax summary, profitability, missing receipts, low stock, and month-end readiness.',
     gradientSrc: gradient9Img,
   },
 ];
 
+const paymentsRefundCards = [
+  {
+    title: 'Hosted payment links',
+    body: 'Create or reuse hosted invoice payment links from the finance invoice workflow and keep the local invoice total aligned with what the customer pays.',
+  },
+  {
+    title: 'Paid status reconciliation',
+    body: 'When a hosted invoice is paid, Business Finance shows the invoice as paid and keeps the payment state visible inside the invoice detail and Payments & Refunds view.',
+  },
+  {
+    title: 'Invoice refunds',
+    body: 'Issue full or partial refunds from the finance invoice detail while preserving the original estimate, invoice line items, work order, and job history.',
+  },
+  {
+    title: 'Gross and net reporting',
+    body: 'Keep original invoice totals for history, then review refunds, net collected amount, tax refunded, and month-end refund activity separately.',
+  },
+];
+
 const reportingCards = [
+  'Gross invoice total',
+  'Refunds',
+  'Net invoice total',
   'Estimated margin',
-  'Planned labor cost',
   'Approved material cost',
-  'Tax summary',
+  'Tax refunded',
+  'Net tax collected',
   'Missing receipts',
-  'Low stock',
   'Pending reviews',
 ];
 
@@ -115,7 +136,7 @@ const employeeDoesNotSee = [
 
 const bookingVsFinance = {
   booking: ['Known service', 'Known price', 'Known employee/time', 'Customer books directly'],
-  finance: ['Custom pricing', 'Quote approval needed', 'Work order execution', 'Material review', 'Profitability tracking'],
+  finance: ['Custom pricing', 'Quote approval needed', 'Invoice payment links', 'Work order execution', 'Material review', 'Refund and net reporting'],
 };
 
 function BulletList({ items, muted = false }: { items: string[]; muted?: boolean }) {
@@ -153,8 +174,7 @@ export default function BusinessFinanceLandingPage() {
                     Business Finance for Service Teams
                   </h1>
                   <p className="max-w-[720px] text-[17px] leading-8 text-white/72">
-                    From quote request to approved estimate, invoice, payment link, work order, field report, and
-                    month-end readiness - all in one workflow.
+                    From quote request to approved estimate, invoice, hosted payment link, work order, field report, refunds when needed, and month-end readiness - all in one workflow.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3 pt-1">
@@ -166,7 +186,7 @@ export default function BusinessFinanceLandingPage() {
                   </a>
                 </div>
                 <p className="max-w-[760px] text-sm leading-7 text-white/64">
-                  Built for service businesses that need more than booking: quotes, crews, materials, approvals, and job profitability.
+                  Built for service businesses that need more than booking: quotes, crews, materials, approvals, payments, refunds, and job profitability.
                 </p>
               </div>
             </AnimatedSection>
@@ -297,6 +317,37 @@ export default function BusinessFinanceLandingPage() {
       </section>
 
       <section className="py-14 md:py-18">
+        <div className="main-container space-y-8">
+          <AnimatedSection>
+            <div className="space-y-4 text-center">
+              <span className="badge badge-cyan">Payments and refunds</span>
+              <h2 className="mx-auto max-w-[760px] text-heading-3 text-secondary dark:text-white">
+                Payment, refund, and reporting stay connected
+              </h2>
+              <p className="mx-auto max-w-[840px] text-[15px] leading-7 text-secondary/74 dark:text-accent/70">
+                Create hosted invoice payment links, see paid status after payment reconciliation, issue full or partial invoice refunds when needed, and keep gross, refund, and net reporting visible for month-end review.
+              </p>
+            </div>
+          </AnimatedSection>
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {paymentsRefundCards.map((card) => (
+              <AnimatedSection key={card.title}>
+                <article className="h-full rounded-[26px] border border-[#d9e4f5] bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
+                  <div className="space-y-3">
+                    <div className="inline-flex w-fit rounded-full border border-[#1f7ae0]/14 bg-[#1f7ae0]/[0.05] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1f7ae0] dark:border-white/10 dark:bg-white/[0.04] dark:text-white/72">
+                      Connected flow
+                    </div>
+                    <h3 className="text-[21px] font-semibold leading-[1.25] text-secondary dark:text-white">{card.title}</h3>
+                    <p className="text-[15px] leading-7 text-secondary/80 dark:text-accent/74">{card.body}</p>
+                  </div>
+                </article>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 md:py-18">
         <div className="main-container">
           <AnimatedSection>
             <div className="grid gap-7 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
@@ -346,7 +397,7 @@ export default function BusinessFinanceLandingPage() {
                   <span className="badge badge-yellow-v2">Reporting</span>
                   <h2 className="max-w-[520px] text-heading-3 text-secondary dark:text-white">Know the job numbers before month-end</h2>
                   <p className="max-w-[560px] text-[15px] leading-7 text-secondary/76 dark:text-accent/72">
-                    Reports are operational readiness tools designed to help managers and accountants review the business faster. They are not a replacement for professional tax or accounting review.
+                    Reports are operational readiness tools designed to help managers and accountants review the business faster. Gross totals, refunds, net collected amounts, and tax summaries help prepare records for review; they are not a replacement for professional tax or accounting signoff.
                   </p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -361,7 +412,7 @@ export default function BusinessFinanceLandingPage() {
                 </div>
               </div>
               <div className="mt-6 rounded-[20px] border border-[#1f7ae0]/10 bg-white/60 px-5 py-4 text-sm leading-7 text-secondary/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.55)] dark:border-white/10 dark:bg-white/[0.04] dark:text-accent/68">
-                Business Finance reporting is designed to help operating teams move faster with cleaner month-end reviews. Use it to prepare records, not to replace professional accounting signoff.
+                Business Finance reporting helps operating teams prepare cleaner month-end handoffs. Use it to review records, refunds, and net activity before professional accounting signoff.
               </div>
             </div>
           </AnimatedSection>
@@ -395,7 +446,7 @@ export default function BusinessFinanceLandingPage() {
                   <div className="space-y-5">
                     <h2 className="max-w-[480px] text-heading-3 text-white">Run quotes, jobs, and finance handoff in one place</h2>
                     <p className="max-w-[520px] text-[15px] leading-7 text-white/78">
-                      Bring quote requests, approvals, payment collection, work execution, and reporting into one operating system instead of stitching them together later.
+                      Bring quote requests, approvals, payment collection, refunds, work execution, and reporting into one operating system instead of stitching them together later.
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-3 pt-1">
