@@ -423,5 +423,1019 @@
     "includes": "شامل: طراحی + بازبینی + انتشار. خرید دامنه شامل نیست (در اتصال دامنه کمک می‌کنیم).",
     "cta": "خرید طراحی وبسایت",
     "loadingCta": "شروع پرداخت..."
+  },
+  "pricingExperience": {
+    "subscriptionPlans": [
+      {
+        "key": "starter",
+        "name": "Starter",
+        "price": "$19.99/mo",
+        "description": "راه‌اندازی وب‌سایت و دریافت رزرو و پرداخت برای حرفه‌ای‌های تک‌نفره.",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          {
+            "type": "heading",
+            "text": "پلتفرم اصلی"
+          },
+          "یکپارچه‌سازی رزرو، وب‌سایت و پرداخت.",
+          "پورتال امن مشتری و کارکنان.",
+          "سایت‌ساز با صفحات برند و قالب‌ها.",
+          "رزرو آنلاین، تأییدیه‌ها و پورتال مشتری.",
+          "لینک عمومی «رزرو با من».",
+          "Stripe Checkout با انطباق خودکار مالیات.",
+          {
+            "type": "heading",
+            "text": "عملیات پایه"
+          },
+          "اعلان‌ها و یادآورهای رزرو.",
+          "ویجت‌های رزرو قابل‌جاسازی.",
+          "استردادهای Stripe و تاریخچه پرداخت.",
+          "دسترسی مبتنی بر نقش پایه.",
+          {
+            "type": "heading",
+            "text": "زمان و گزارش"
+          },
+          "ردیابی زمان پایه مرتبط با رزرو و شیفت‌ها.",
+          "خروجی CSV/PDF برای ساعات کار و درآمد.",
+          {
+            "type": "heading",
+            "text": "ظرفیت"
+          },
+          "۱ صندلی کارمند و ۱ موقعیت (دپارتمان) شامل است.",
+          "دامنه اختصاصی + SSL خودکار شامل است.",
+          "ارتقا برای گردش‌کارهای آنبوردینگ."
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "positioning": "وب‌سایت ساده، رزرو و فروش پایه."
+      },
+      {
+        "key": "pro",
+        "name": "Pro",
+        "price": "$49.99/mo",
+        "positioning": "عملیات روزانه را از یک سیستم مدیریت کنید.",
+        "description": "برای تیم‌های کوچک که به زمان‌بندی، اتوماسیون و تحلیل نیاز دارند.",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          "همه امکانات Starter.",
+          {
+            "type": "heading",
+            "text": "زمان و نیروی کار"
+          },
+          "ورود و خروج شیفتی.",
+          "اجرای استراحت و کسر خودکار.",
+          "پرچم‌های اضافه‌کاری و ناهنجاری.",
+          {
+            "type": "heading",
+            "text": "حقوق و دستمزد"
+          },
+          "اجرای کامل حقوق بدون هزینه هر اجرا.",
+          "تأییدها و مسیرهای ممیزی آماده حقوق.",
+          "خروجی حقوق به QuickBooks و Xero.",
+          "پرداخت حقوق با پورتال فیش حقوقی (PDF خودکار).",
+          {
+            "type": "heading",
+            "text": "دسترسی و کنترل"
+          },
+          "دسترسی مبتنی بر نقش برای مدیران و کارکنان.",
+          "کنترل‌های دسترسی و نمایش کارکنان.",
+          "تقویم‌های مشترک و زمان‌بندی دپارتمان‌ها.",
+          "جابجایی شیفت، تأییدها و برنامه‌های زنده.",
+          {
+            "type": "heading",
+            "text": "تحلیل و بازاریابی"
+          },
+          "کمپین‌های ایمیلی: Broadcast، Win-Back، VIP، No-Show، Anniversary.",
+          "تحلیل پیشرفته (رزروها، درآمد، سگمنت مشتریان).",
+          {
+            "type": "heading",
+            "text": "ظرفیت"
+          },
+          "تا ۵ صندلی کارمند و ۱ موقعیت (دپارتمان) شامل است.",
+          "محاسبه خودکار تعطیلات رسمی کانادا و ذخیره‌ها.",
+          "پشتیبانی اولویت‌دار (ساعات کاری)."
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "highlight": true,
+        "badge": "محبوب‌ترین"
+      },
+      {
+        "key": "business",
+        "name": "Business",
+        "price": "$119.99/mo",
+        "description": "برای کسب‌وکارهای خدماتی که quote، work order، invoice، هزینه، موجودی و گزارش‌گیری را مدیریت می‌کنند.",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          "همه امکانات Pro.",
+          {
+            "type": "heading",
+            "text": "عملیات مالی"
+          },
+          "درخواست‌های قیمت و ثبت پروژه‌های قیمت‌متغیر",
+          "برآورد قیمت و مسیر تأیید مشتری",
+          "دستور کار و تخصیص کارها",
+          "گزارش‌های میدانی با بازبینی مدیر",
+          "فاکتورها، هزینه‌ها و خریدها",
+          "مواد، موجودی و رهگیری تأمین‌کننده",
+          "سودآوری، خلاصه مالیات و جمع‌بندی پایان ماه",
+          {
+            "type": "heading",
+            "text": "زمان و نیروی کار"
+          },
+          "ورود و خروج شیفتی با اجرای استراحت.",
+          "پرچم‌های اضافه‌کاری، ناهنجاری و سوابق ممیزی.",
+          {
+            "type": "heading",
+            "text": "حقوق و دستمزد"
+          },
+          "اجرای کامل حقوق بدون هزینه هر اجرا.",
+          {
+            "type": "heading",
+            "text": "حاکمیت و انطباق"
+          },
+          "سوابق ممیزی حقوق و انطباق آماده.",
+          "خروجی مالیاتی آماده انطباق (W-2، T4، ROE).",
+          "حقوق و گزارش‌گیری چند موقعیتی (دپارتمان).",
+          {
+            "type": "heading",
+            "text": "کنترل پیشرفته"
+          },
+          "مجوزهای سطح شعبه.",
+          "کنترل‌های زمان‌بندی گروهی (بستن/باز نگه داشتن بازه‌ها).",
+          "عملیات آماده ممیزی با کاهش ریسک انطباق.",
+          {
+            "type": "heading",
+            "text": "ظرفیت"
+          },
+          "۱۰ صندلی کارمند و تا ۵ موقعیت (دپارتمان) شامل است.",
+          "افزودن صندلی با ۹ دلار/ماه برای هر صندلی.",
+          "وب‌سایت برند رایگان با Payroll + Scheduling."
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "positioning": "مناسب برای عملیات quote-to-invoice و گردش‌کارهای آماده گزارش مالی."
+      }
+    ],
+    "websiteSetupServices": {
+      "title": "خدمات اختیاری Website Setup",
+      "subtitle": "در همه پلن‌های Schedulaa سایت‌ساز وجود دارد. می‌توانید خودتان سایت را بسازید یا از تیم ما برای راه‌اندازی استفاده کنید.",
+      "note": "نیازمند اشتراک فعال Schedulaa است. خرید دامنه شامل نمی‌شود. در اتصال دامنه کمک می‌کنیم.",
+      "items": [
+        {
+          "key": "basic",
+          "name": "Basic Website Setup",
+          "price": "$500 USD",
+          "priceNote": "راه‌اندازی یک‌باره اختیاری",
+          "bestFor": "مناسب برای وب‌سایت‌های ساده تا ۵ صفحه.",
+          "description": "راه‌اندازی سریع و برندشده برای کسب‌وکارهایی که می‌خواهند تیم ما سایت را آماده کند.",
+          "includes": [
+            "تنظیم قالب",
+            "اعمال لوگو، رنگ و برند",
+            "تا ۵ صفحه",
+            "تنظیم فرم رزرو، تماس یا quote",
+            "پشتیبانی انتشار",
+            "۱ دور بازبینی"
+          ],
+          "ctaLabel": "خرید Basic Website Setup",
+          "ctaMode": "checkout"
+        },
+        {
+          "key": "growth",
+          "name": "Growth Website Setup",
+          "price": "$1,500 USD",
+          "priceNote": "راه‌اندازی یک‌باره اختیاری",
+          "bestFor": "مناسب برای کسب‌وکارهای خدماتی که به سایت کامل‌تر با خدمات، گالری، نظرات، محصولات یا صفحات quote نیاز دارند.",
+          "description": "پیشنهاد اصلی ما برای کسب‌وکارهایی که سایت فروش قوی‌تر، محتوای بیشتر و جذب لید بهتر می‌خواهند.",
+          "includes": [
+            "راه‌اندازی برندشده سایت",
+            "تا ۱۰ صفحه",
+            "تنظیم خدمات و محصولات",
+            "گالری، پروژه‌ها، نظرات و صفحات تماس",
+            "جریان درخواست quote یا جذب لید",
+            "SEO پایه و تنظیم اشتراک‌گذاری اجتماعی",
+            "پشتیبانی اتصال دامنه",
+            "۲ دور بازبینی"
+          ],
+          "ctaLabel": "تماس با فروش برای Growth Setup",
+          "ctaMode": "contact"
+        },
+        {
+          "key": "premium",
+          "name": "Premium Website Setup",
+          "price": "From $2,500 USD",
+          "priceNote": "راه‌اندازی یک‌باره با تعیین دامنه کار",
+          "bestFor": "مناسب برای سایت‌های بزرگ‌تر، انتقال محتوا و شخصی‌سازی بیشتر.",
+          "description": "برای کسب‌وکارهایی با محتوای زیاد، صفحات بیشتر و نیاز به راه‌اندازی سنگین‌تر.",
+          "includes": [
+            "همه موارد Growth",
+            "انتقال محتوای بیشتر",
+            "صفحات فرود اضافی",
+            "شخصی‌سازی بیشتر لایه‌بندی",
+            "پشتیبانی بهبود متن",
+            "۳ دور بازبینی"
+          ],
+          "ctaLabel": "تماس با فروش برای Premium Setup",
+          "ctaMode": "contact"
+        }
+      ]
+    },
+    "quoteToInvoiceSection": {
+      "badge": "عملیات مالی",
+      "title": "مناسب برای عملیات Quote-to-Invoice",
+      "subtitle": "Schedulaa Business به کسب‌وکارهای خدماتی کمک می‌کند کارهای قیمت‌متغیر را از درخواست اولیه تا estimate، work order، field report، invoice و گزارش پایان ماه مدیریت کنند.",
+      "bullets": [
+        "دریافت درخواست quote برای کارهای قیمت‌متغیر",
+        "تبدیل درخواست‌ها به estimate و invoice",
+        "ایجاد work order و تخصیص کارها",
+        "بازبینی field report پیش از نهایی‌شدن مواد یا صورتحساب",
+        "رهگیری هزینه‌ها، خریدها، موجودی و تأمین‌کنندگان",
+        "آماده‌سازی گزارش سودآوری، خلاصه مالیات و پایان ماه"
+      ],
+      "primaryCtaLabel": "مشاهده پلن Business",
+      "secondaryCtaLabel": "تماس با فروش"
+    },
+    "comparison": {
+      "title": "مقایسه قابلیت‌های Schedulaa",
+      "subtitle": "طرح‌ها را در یک نگاه مقایسه کنید.",
+      "headers": {
+        "feature": "ویژگی",
+        "starter": "Starter",
+        "pro": "Pro",
+        "business": "Business"
+      },
+      "rows": {
+        "price": {
+          "label": "قیمت",
+          "starter": "$19.99/mo",
+          "pro": "$49.99/mo",
+          "business": "$119.99/mo"
+        },
+        "bestFor": {
+          "label": "مناسب برای",
+          "starter": "وب‌سایت ساده، رزرو و کاتالوگ خدمات",
+          "pro": "تیم‌هایی که به زمان‌بندی و گردش‌کار کارکنان نیاز دارند",
+          "business": "عملیات quote-to-invoice و گزارش‌گیری آماده مالی"
+        }
+      },
+      "sections": [
+        {
+          "section": "وب‌سایت و حضور آنلاین",
+          "items": [
+            {
+              "label": "سازنده وب‌سایت برندشده و قالب‌ها",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "دامنه اختصاصی + SSL خودکار",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "صفحات رزرو عمومی",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "ویجت‌های رزرو قابل嵌入",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "برندسازی در سطح شرکت",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            }
+          ]
+        },
+        {
+          "section": "رزرو و زمان‌بندی",
+          "items": [
+            {
+              "label": "رزرو آنلاین و تأییدیه‌ها",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "تغییر زمان توسط مشتری",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "رزرو چندخدمتی و افزودنی‌ها",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "زمان‌بندی کارکنان و مدیریت شیفت",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "تعویض شیفت و تأیید مرخصی",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "کنترل‌های زمان‌بندی انبوه",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            }
+          ]
+        },
+        {
+          "section": "ردیابی زمان",
+          "items": [
+            {
+              "label": "ورود/خروج شیفتی",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "اجرای سیاست‌های استراحت",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "استراحت‌های پله‌ای و زمان‌بندی‌شده",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "نکات ممیزی IP/دستگاه",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "پرچم‌های اضافه‌کاری و ناهنجاری",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            }
+          ]
+        },
+        {
+          "section": "حقوق و دستمزد",
+          "items": [
+            {
+              "label": "پردازش حقوق (آمریکا و کانادا)",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "محاسبه تعطیلات و مرخصی‌های تجمیعی",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "پرتال فیش حقوقی کارکنان (PDF)",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "خروجی‌های پیشرفته حقوق و ممیزی",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "صدور فاکتور مرتبط با حقوق",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            }
+          ]
+        },
+        {
+          "section": "عملیات مالی",
+          "items": [
+            {
+              "label": "درخواست quote",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "Estimate",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "Work order",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "Field report",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "تأیید بازبینی مدیر",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "هزینه‌ها و خریدها",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "موجودی / مواد",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "تأمین‌کنندگان",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "گزارش سودآوری",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "خلاصه مالیات",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "جمع‌بندی پایان ماه",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            }
+          ]
+        },
+        {
+          "section": "انطباق",
+          "items": [
+            {
+              "label": "گزارش‌های درآمد و نوبت‌ها",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "خروجی‌های CSV / PDF",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "صدور W-2 (آمریکا)",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "T4 و ROE (کانادا)",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            },
+            {
+              "label": "ردیابی ممیزی آماده انطباق",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            }
+          ]
+        },
+        {
+          "section": "تحلیل‌ها",
+          "items": [
+            {
+              "label": "داشبوردهای درآمد و رزرو",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "تحلیل بهره‌وری و استفاده",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "تفکیک مشتری و روندها",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "تحلیل چندمکانی (دپارتمان)",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            }
+          ]
+        },
+        {
+          "section": "اتوماسیون",
+          "items": [
+            {
+              "label": "اعلان‌ها و یادآوری‌های ایمیلی",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "کمپین‌های ایمیلی (VIP، بازگشت، عدم حضور)",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "اتوماسیون Zapier",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "اتوماسیون گردش‌کار",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            }
+          ]
+        },
+        {
+          "section": "استخدام",
+          "items": [
+            {
+              "label": "آگهی‌های شغلی و لینک ثبت‌نام عمومی",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "آپلود رزومه و پیگیری",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "فرآیند آنبوردینگ",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "انتقال استخدام به حقوق",
+              "starter": "—",
+              "pro": "بله",
+              "business": "بله"
+            }
+          ]
+        },
+        {
+          "section": "مقیاس‌پذیری",
+          "items": [
+            {
+              "label": "تعداد صندلی‌های کارکنان",
+              "starter": "۱",
+              "pro": "تا ۵",
+              "business": "۱۰"
+            },
+            {
+              "label": "صندلی‌های اضافی کارکنان",
+              "starter": "—",
+              "pro": "$۹ / صندلی",
+              "business": "$۹ / صندلی"
+            },
+            {
+              "label": "پشتیبانی چندمکانی (دپارتمان به‌عنوان مکان)",
+              "starter": "۱",
+              "pro": "۱",
+              "business": "تا ۲"
+            },
+            {
+              "label": "دسترسی و مجوزهای مبتنی بر نقش",
+              "starter": "پایه",
+              "pro": "پیشرفته",
+              "business": "پیشرفته"
+            },
+            {
+              "label": "مجوزهای سطح شعبه",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            }
+          ]
+        },
+        {
+          "section": "پشتیبانی",
+          "items": [
+            {
+              "label": "پشتیبانی استاندارد",
+              "starter": "بله",
+              "pro": "بله",
+              "business": "بله"
+            },
+            {
+              "label": "پشتیبانی اولویت‌دار",
+              "starter": "—",
+              "pro": "ساعات کاری",
+              "business": "۲۴ / ۷"
+            },
+            {
+              "label": "پشتیبانی ممیزی و انطباق",
+              "starter": "—",
+              "pro": "—",
+              "business": "بله"
+            }
+          ]
+        }
+      ]
+    },
+    "planFinder": {
+      "badge": "پیشنهاد هدایت‌شده",
+      "title": "پلن مناسب را پیدا کنید",
+      "subtitle": "اگر مطمئن نیستید کدام پلن مناسب است، بر اساس نحوه کار کسب‌وکارتان انتخاب کنید، نه فقط صنعت.",
+      "intro": "به چند سؤال کوتاه پاسخ دهید تا پلن مناسب Schedulaa و Website Setup اختیاری را پیشنهاد دهیم.",
+      "startCta": "شروع Plan Finder",
+      "compareCta": "مقایسه دستی پلن‌ها",
+      "close": "بستن",
+      "back": "بازگشت",
+      "next": "بعدی",
+      "done": "تمام",
+      "stepLabel": "مرحله",
+      "ofLabel": "از",
+      "questions": {
+        "businessType": {
+          "label": "چه نوع کسب‌وکاری دارید؟",
+          "helper": "این فقط برای درک بهتر است. پیشنهاد نهایی همچنان بر اساس workflow و اندازه تیم انجام می‌شود.",
+          "options": [
+            {
+              "key": "appointment",
+              "label": "کسب‌وکار خدماتی نوبت‌محور"
+            },
+            {
+              "key": "project",
+              "label": "کسب‌وکار خدماتی پروژه‌محور"
+            },
+            {
+              "key": "field",
+              "label": "کسب‌وکار خدمات میدانی"
+            },
+            {
+              "key": "home",
+              "label": "کسب‌وکار خدمات خانگی"
+            },
+            {
+              "key": "install",
+              "label": "کسب‌وکار نصب / تعمیر"
+            },
+            {
+              "key": "professional",
+              "label": "خدمات حرفه‌ای"
+            },
+            {
+              "key": "health",
+              "label": "کسب‌وکار سلامت / تندرستی"
+            },
+            {
+              "key": "education",
+              "label": "کسب‌وکار آموزش / دوره"
+            },
+            {
+              "key": "events",
+              "label": "کسب‌وکار رویداد / staffing"
+            },
+            {
+              "key": "cabinet",
+              "label": "Cabinet / Millwork"
+            },
+            {
+              "key": "renovation",
+              "label": "بازسازی"
+            },
+            {
+              "key": "medspa",
+              "label": "Medspa"
+            },
+            {
+              "key": "tattoo",
+              "label": "Tattoo / PMU Studio"
+            },
+            {
+              "key": "cleaning",
+              "label": "شرکت نظافتی"
+            },
+            {
+              "key": "hvac",
+              "label": "HVAC / Plumbing / Electrical"
+            },
+            {
+              "key": "other",
+              "label": "سایر کسب‌وکارهای خدماتی"
+            }
+          ]
+        },
+        "teamSize": {
+          "label": "چند نفر در تیم شما هستند؟",
+          "helper": "اندازه تیم به ما کمک می‌کند بین پلن تک‌نفره، تیم کوچک و عملیات سنگین‌تر تفاوت بگذاریم.",
+          "options": [
+            {
+              "key": "just_me",
+              "label": "فقط خودم"
+            },
+            {
+              "key": "2_5",
+              "label": "۲ تا ۵ نفر"
+            },
+            {
+              "key": "6_15",
+              "label": "۶ تا ۱۵ نفر"
+            },
+            {
+              "key": "16_40",
+              "label": "۱۶ تا ۴۰ نفر"
+            },
+            {
+              "key": "40_plus",
+              "label": "بیش از ۴۰ نفر"
+            }
+          ]
+        },
+        "needs": {
+          "label": "چه چیزهایی را باید مدیریت کنید؟",
+          "helper": "گردش‌کارهایی را انتخاب کنید که می‌خواهید Schedulaa پوشش دهد.",
+          "websiteOnlyHint": "گزینه Website only یک نیاز ساده است. اگر گزینه دیگری انتخاب کنید، Website only خودکار حذف می‌شود.",
+          "sections": [
+            {
+              "title": "وب‌سایت و لید",
+              "options": [
+                {
+                  "key": "Website only",
+                  "label": "Website only"
+                },
+                {
+                  "key": "Online booking",
+                  "label": "Online booking"
+                },
+                {
+                  "key": "Contact / lead forms",
+                  "label": "Contact / lead forms"
+                },
+                {
+                  "key": "Services",
+                  "label": "Services"
+                },
+                {
+                  "key": "Products",
+                  "label": "Products"
+                }
+              ]
+            },
+            {
+              "title": "عملیات تیم",
+              "options": [
+                {
+                  "key": "Staff scheduling",
+                  "label": "Staff scheduling"
+                },
+                {
+                  "key": "Employee portal",
+                  "label": "Employee portal"
+                },
+                {
+                  "key": "Payroll-ready reports",
+                  "label": "Payroll-ready reports"
+                }
+              ]
+            },
+            {
+              "title": "عملیات Quote-to-Invoice",
+              "options": [
+                {
+                  "key": "Quote requests",
+                  "label": "Quote requests"
+                },
+                {
+                  "key": "Estimates",
+                  "label": "Estimates"
+                },
+                {
+                  "key": "Work orders",
+                  "label": "Work orders"
+                },
+                {
+                  "key": "Field reports",
+                  "label": "Field reports"
+                },
+                {
+                  "key": "Invoices",
+                  "label": "Invoices"
+                }
+              ]
+            },
+            {
+              "title": "مالی و گزارش",
+              "options": [
+                {
+                  "key": "Expenses / purchases",
+                  "label": "Expenses / purchases"
+                },
+                {
+                  "key": "Inventory / materials",
+                  "label": "Inventory / materials"
+                },
+                {
+                  "key": "Vendors",
+                  "label": "Vendors"
+                },
+                {
+                  "key": "Profitability",
+                  "label": "Profitability"
+                },
+                {
+                  "key": "Tax summary",
+                  "label": "Tax summary"
+                },
+                {
+                  "key": "Month-end review",
+                  "label": "Month-end review"
+                }
+              ]
+            }
+          ]
+        },
+        "websiteNeed": {
+          "label": "آیا به وب‌سایت نیاز دارید؟",
+          "helper": "این مشخص می‌کند آیا باید خدمات setup هم پیشنهاد دهیم یا نه.",
+          "options": [
+            {
+              "key": "new_website",
+              "label": "بله، به وب‌سایت جدید نیاز دارم"
+            },
+            {
+              "key": "improve_website",
+              "label": "بله، می‌خواهم سایت فعلی را بهتر کنم یا منتقل کنم"
+            },
+            {
+              "key": "internal_only",
+              "label": "خیر، فقط عملیات داخلی می‌خواهم"
+            },
+            {
+              "key": "not_sure",
+              "label": "مطمئن نیستم"
+            }
+          ]
+        },
+        "setupPreference": {
+          "label": "می‌خواهید خودتان سایت را بسازید یا Schedulaa آن را راه‌اندازی کند؟",
+          "helper": "این فقط روی پیشنهاد Website Setup اثر می‌گذارد.",
+          "options": [
+            {
+              "key": "diy",
+              "label": "خودم می‌سازم"
+            },
+            {
+              "key": "done_for_you",
+              "label": "می‌خواهم Schedulaa آن را راه‌اندازی کند"
+            },
+            {
+              "key": "not_sure",
+              "label": "فعلاً مطمئن نیستم"
+            }
+          ]
+        },
+        "pageCount": {
+          "label": "به چند صفحه وب‌سایت نیاز دارید؟",
+          "helper": "این به ما کمک می‌کند Basic، Growth یا Premium را پیشنهاد دهیم.",
+          "options": [
+            {
+              "key": "1_5",
+              "label": "۱ تا ۵ صفحه",
+              "description": "سایت ساده: Home، Services، Contact، Booking/Quote، About یا Gallery."
+            },
+            {
+              "key": "6_10",
+              "label": "۶ تا ۱۰ صفحه",
+              "description": "سایت فروش کامل‌تر: services، products، gallery، reviews، صفحات quote/contact."
+            },
+            {
+              "key": "11_15",
+              "label": "۱۱ تا ۱۵ صفحه",
+              "description": "سایت بزرگ‌تر: چند صفحه خدمات، پروژه، location یا محتوای غنی‌تر."
+            },
+            {
+              "key": "15_plus",
+              "label": "بیش از ۱۵ صفحه",
+              "description": "معمولاً نیازمند scope سفارشی است و بهتر است با Premium یا بررسی فروش انجام شود."
+            },
+            {
+              "key": "unknown",
+              "label": "نمی‌دانم",
+              "description": "معمولاً Growth پیشنهاد می‌دهیم و قبل از شروع، scope را تأیید می‌کنیم."
+            }
+          ]
+        },
+        "contentComplexity": {
+          "label": "آیا به انتقال محتوا یا گالری، پروژه یا محصول زیاد نیاز دارید؟",
+          "helper": "این بخش setup ساده را از انتقال یا بارگذاری سنگین محتوا جدا می‌کند.",
+          "options": [
+            {
+              "key": "simple",
+              "label": "خیر، محتوای ساده",
+              "description": "لوگو، اطلاعات تماس، متن پایه، چند تصویر و چند ورودی عادی خدمات/محصول."
+            },
+            {
+              "key": "many_assets",
+              "label": "بله، تصاویر/پروژه‌ها/محصولات زیادی دارم",
+              "description": "گالری بزرگ، نمونه‌کارهای زیاد، خدمات/محصولات زیاد یا بارگذاری دستی سنگین. معمولاً Premium."
+            },
+            {
+              "key": "migration",
+              "label": "بله، باید محتوا از سایت قبلی منتقل شود",
+              "description": "انتقال از وب‌سایت فعلی. میزان کار به حجم محتوای قابل انتقال بستگی دارد. معمولاً Premium."
+            },
+            {
+              "key": "not_sure",
+              "label": "مطمئن نیستم",
+              "description": "بر اساس تعداد صفحات پیشنهاد می‌دهیم و قبل از شروع، دامنه کار را تأیید می‌کنیم."
+            }
+          ]
+        }
+      },
+      "setupScopeHint": "Website setup شامل ساختار صفحات، جای‌گذاری محتوای پایه و پشتیبانی راه‌اندازی است. کتابخانه محتوای بزرگ، copywriting سفارشی، صفحات SEO پیشرفته یا بارگذاری دستی سنگین ممکن است به Premium یا quote سفارشی نیاز داشته باشد.",
+      "final": {
+        "title": "پکیج پیشنهادی شما",
+        "subtitle": "شما فقط به یک پلن ماهانه Schedulaa نیاز دارید. Website setup اختیاری و یک‌باره است اگر بخواهید تیم ما سایت را برایتان آماده کند.",
+        "monthlyPlanLabel": "پلن ماهانه پیشنهادی",
+        "monthlySubscriptionLabel": "اشتراک ماهانه",
+        "optionalSetupLabel": "Website setup یک‌باره اختیاری",
+        "startTrialTemplate": "Start 14-day free trial with {{plan}}",
+        "noSetupTitle": "نیازی به setup نیست",
+        "noSetupPrice": "$0",
+        "includedWithPlan": "در پلن ماهانه شما شامل است",
+        "whyLabel": "دلیل:",
+        "startTrialNote": "این دکمه پلن ماهانه Schedulaa را شروع می‌کند. در صورت نیاز، Website setup را جداگانه می‌توان اضافه کرد.",
+        "viewPlanTemplate": "مشاهده پلن {{plan}}",
+        "talkToSales": "تماس با فروش",
+        "summaryTitle": "پیشنهاد شما:",
+        "summaryMonthlyTemplate": "پلن ماهانه: {{plan}} - {{price}}",
+        "summaryOptionalSetupTemplate": "Website setup یک‌باره اختیاری: {{setup}} - {{price}}",
+        "summaryNoSetup": "Website setup: نیاز نیست. می‌توانید خودتان آن را بسازید.",
+        "recurringNote": "پلن ماهانه recurring است. Website setup اختیاری و یک‌باره است.",
+        "addLaterNote": "اگر نیاز داشتید، بعداً هم می‌توانید Website setup را اضافه کنید.",
+        "reassurance": "می‌توانید ابتدا با پلن ماهانه شروع کنید و بعداً Website setup را اضافه کنید.",
+        "activeSubscriptionNote": "نیازمند اشتراک فعال Schedulaa است. خرید دامنه شامل نمی‌شود.",
+        "scopeConfirmedNote": "دامنه نهایی setup پیش از شروع کار تأیید می‌شود. صفحات اضافه، انتقال محتوای زیاد، copywriting سفارشی، صفحات SEO پیشرفته یا بارگذاری سنگین گالری/محصول ممکن است جداگانه قیمت‌گذاری شوند.",
+        "recommendationTitle": "پیشنهاد نهایی شما",
+        "noSetupDescription": "با سایت‌ساز موجود خودتان آن را بسازید. اگر بعداً لازم شد، می‌توانید setup help اضافه کنید.",
+        "loadingTrial": "Starting your free trial...",
+        "reasons": {
+          "starter": "Starter پیشنهاد می‌شود چون شما بیشتر به وب‌سایت، رزرو آنلاین، فرم‌های تماس، خدمات و محصولات نیاز دارید و هنوز workflow تیمی یا مالی ندارید.",
+          "starterFallback": "Starter پیشنهاد می‌شود چون نیازهای شما هنوز در قالب یک workflow ساده برای وب‌سایت، رزرو و جذب لید قرار می‌گیرد.",
+          "proScheduling": "Pro پیشنهاد می‌شود چون workflow زمان‌بندی کارکنان و دید تیمی را انتخاب کرده‌اید.",
+          "proEmployeePortal": "Pro پیشنهاد می‌شود چون Employee portal و workflow تیمی را انتخاب کرده‌اید.",
+          "proTeamService": "Pro پیشنهاد می‌شود چون تیم دارید و نیازهای service-business مانند online booking، contact forms، services یا products را انتخاب کرده‌اید. اگر فقط یک نفر همه چیز را مدیریت می‌کند و workflow تیمی نیاز ندارید، Starter هم می‌تواند کافی باشد.",
+          "proFallback": "Pro پیشنهاد می‌شود چون تیم دارید و احتمالاً از workflow‌های کارمندمحور سود می‌برید، حتی اگر امروز یک نفر بتواند پایه‌ها را مدیریت کند.",
+          "business": "Business پیشنهاد می‌شود چون workflowهای quote-to-invoice یا گزارش‌گیری مالی مانند quotes، work orders، invoices، inventory، reporting یا month-end review را انتخاب کرده‌اید.",
+          "setupNone": "می‌توانید از سایت‌ساز موجود استفاده کنید و در صورت نیاز بعداً setup help اضافه کنید.",
+          "setupBasic": "Basic پیشنهاد می‌شود چون سایت شما شبیه یک setup ساده ۱ تا ۵ صفحه‌ای با محتوای مستقیم است.",
+          "setupGrowth": "Growth پیشنهاد می‌شود چون سایت شما به ساختار کامل‌تر با services، content و lead capture نیاز دارد.",
+          "setupPremiumLarge": "Premium پیشنهاد می‌شود چون تعداد صفحات شما نشان‌دهنده سایتی بزرگ‌تر با ساختار و setup سنگین‌تر است.",
+          "setupPremiumAssets": "Premium پیشنهاد می‌شود چون انتقال محتوا یا بارگذاری حجیم معمولاً به بررسی دامنه کار نیاز دارد."
+        },
+        "guidance": {
+          "starter": "اگر به Staff scheduling، employee logins یا team visibility نیاز دارید، Pro گزینه بهتری است.",
+          "pro": "اگر به quotes، estimates، work orders، invoices، inventory یا month-end reporting نیاز دارید، Business گزینه بهتری است.",
+          "business": "بهترین گزینه برای عملیات quote-to-invoice، رهگیری کارها، گزارش‌گیری آماده مالی و کنترل عملیاتی بیشتر."
+        }
+      }
+    }
   }
 }

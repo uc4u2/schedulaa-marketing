@@ -1,37 +1,37 @@
 {
   "meta": {
-    "title": "Schedulaa \u5b9a\u4ef7 | \u5728\u81ea\u6709\u57df\u540d\u4e0a\u542f\u7528\u81ea\u52a8 SSL",
-    "description": "\u6bd4\u8f83 Starter\u3001Pro \u4e0e Business \u65b9\u6848\u3002\u6240\u6709\u65b9\u6848\u90fd\u5305\u542b\u81ea\u6709\u57df\u540d\u4e0e\u81ea\u52a8 SSL\uff0c\u4ee5\u53ca\u7f51\u7ad9\u4e0e\u9884\u7ea6\u6838\u5fc3\u529f\u80fd\uff1b\u6392\u73ed\u3001\u85aa\u8d44\u4e0e\u81ea\u52a8\u5316\u5728 Pro \u548c Business \u63d0\u4f9b\u3002",
+    "title": "Schedulaa 定价 | 在自有域名上启用自动 SSL",
+    "description": "比较 Starter、Pro 与 Business 方案。所有方案都包含自有域名与自动 SSL，以及网站与预约核心功能；排班、薪资与自动化在 Pro 和 Business 提供。",
     "canonical": "https://www.schedulaa.com/pricing",
-    "keywords": "Schedulaa \u5b9a\u4ef7, \u9884\u7ea6\u8f6f\u4ef6\u4ef7\u683c, \u85aa\u8d44 SaaS \u4ef7\u683c, \u7f51\u7ad9\u6784\u5efa\u65b9\u6848",
+    "keywords": "Schedulaa 定价, 预约软件价格, 薪资 SaaS 价格, 网站构建方案",
     "og": {
-      "title": "Schedulaa \u5b9a\u4ef7",
-      "description": "\u9002\u7528\u4e8e\u6bcf\u4e2a\u9636\u6bb5\u7684\u65b9\u6848\u3002\u6240\u6709\u65b9\u6848\u5747\u5305\u542b\u81ea\u6709\u57df\u540d\u4e0e\u81ea\u52a8 SSL\u3002",
+      "title": "Schedulaa 定价",
+      "description": "适用于每个阶段的方案。所有方案均包含自有域名与自动 SSL。",
       "image": "https://www.schedulaa.com/og/pricing.jpg"
     }
   },
   "hero": {
-    "eyebrow": "\u53ef\u6269\u5c55\u7684\u5b9a\u4ef7",
+    "eyebrow": "可扩展的定价",
     "title": [
-      "\u968f\u4e1a\u52a1\u6210\u957f\u7684\u5b9a\u4ef7\u3002",
-      "\u5728\u81ea\u6709\u57df\u540d\u4e0a\u81ea\u52a8\u542f\u7528 SSL\u3002"
+      "随业务成长的定价。",
+      "在自有域名上自动启用 SSL。"
     ],
-    "subtitle": "\u81ea\u6709\u57df\u540d\uff08TXT/CNAME\uff09\u4e0e\u81ea\u52a8 SSL \u5df2\u5305\u542b\u5728\u6240\u6709\u65b9\u6848\u4e2d\u3002Starter \u63d0\u4f9b\u7f51\u7ad9\u4e0e\u9884\u7ea6\u57fa\u7840\uff0cPro \u4e0e Business \u589e\u52a0\u5458\u5de5\u6392\u73ed\u3001\u85aa\u8d44\u4e0e\u81ea\u52a8\u5316\u3002",
+    "subtitle": "自有域名（TXT/CNAME）与自动 SSL 已包含在所有方案中。Starter 提供网站与预约基础，Pro 与 Business 增加员工排班、薪资与自动化。",
     "primaryCta": {
-      "label": "\u5f00\u59cb\u514d\u8d39\u8bd5\u7528"
+      "label": "开始免费试用"
     },
     "secondaryCta": {
-      "label": "\u5bf9\u6bd4\u65b9\u6848"
+      "label": "对比方案"
     },
     "badge": {
-      "overline": "\u5168\u65b0\u80fd\u529b",
-      "title": "\u81ea\u6709\u57df\u540d + \u81ea\u52a8 SSL"
+      "overline": "全新能力",
+      "title": "自有域名 + 自动 SSL"
     },
-    "mediaAlt": "Schedulaa \u5b9a\u4ef7\u4e0e\u5e73\u53f0\u6982\u89c8"
+    "mediaAlt": "Schedulaa 定价与平台概览"
   },
   "promo": {
-    "starterBadge": "5\u6298\u4f18\u60e0",
-    "starterNote": "${{discounted}} / \u6708\uff0c\u524d {{months}} \u4e2a\u6708\u3002\u4e4b\u540e ${{base}} / \u6708"
+    "starterBadge": "5折优惠",
+    "starterNote": "${{discounted}} / 月，前 {{months}} 个月。之后 ${{base}} / 月"
   },
   "plans": {
     "table": {
@@ -39,389 +39,1403 @@
         {
           "key": "starter",
           "name": "Starter",
-          "price": "$19.99/\u6bcf\u6708",
-          "description": "\u4e3a\u4e2a\u4eba\u4e13\u4e1a\u4eba\u58eb\u542f\u52a8\u7f51\u7ad9\u5e76\u63a5\u53d7\u9884\u7ea6\u4e0e\u652f\u4ed8\u3002",
-          "trialNote": "14 \u5929\u514d\u8d39\u8bd5\u7528 \u2022 \u968f\u65f6\u53d6\u6d88",
+          "price": "$19.99/每月",
+          "description": "为个人专业人士启动网站并接受预约与支付。",
+          "trialNote": "14 天免费试用 • 随时取消",
           "features": [
             {
               "type": "heading",
-              "text": "\u6838\u5fc3\u5e73\u53f0"
+              "text": "核心平台"
             },
-            "\u9884\u7ea6\u3001\u7f51\u7ad9\u4e0e\u652f\u4ed8\u4e00\u4f53\u5316\u3002",
-            "\u5b89\u5168\u7684\u5ba2\u6237\u4e0e\u5458\u5de5\u95e8\u6237\u3002",
-            "\u7f51\u7ad9\u6784\u5efa\u5668\uff0c\u5e26\u54c1\u724c\u9875\u9762\u4e0e\u6a21\u677f\u3002",
-            "\u5728\u7ebf\u9884\u7ea6\u3001\u786e\u8ba4\u90ae\u4ef6\u4e0e\u5ba2\u6237\u95e8\u6237\u3002",
-            "\u516c\u5f00\u201c\u4e0e\u6211\u9884\u7ea6\u201d\u94fe\u63a5\u3002",
-            "Stripe Checkout \u81ea\u52a8\u7a0e\u52a1\u5408\u89c4\u3002",
+            "预约、网站与支付一体化。",
+            "安全的客户与员工门户。",
+            "网站构建器，带品牌页面与模板。",
+            "在线预约、确认邮件与客户门户。",
+            "公开“与我预约”链接。",
+            "Stripe Checkout 自动税务合规。",
             {
               "type": "heading",
-              "text": "\u8fd0\u8425\u57fa\u7840"
+              "text": "运营基础"
             },
-            "\u9884\u7ea6\u901a\u77e5\u4e0e\u63d0\u9192\u3002",
-            "\u53ef\u5d4c\u5165\u7684\u9884\u7ea6\u7ec4\u4ef6\u3002",
-            "Stripe \u9000\u6b3e\u4e0e\u652f\u4ed8\u8bb0\u5f55\u3002",
-            "\u57fa\u7840\u89d2\u8272\u6743\u9650\u3002",
+            "预约通知与提醒。",
+            "可嵌入的预约组件。",
+            "Stripe 退款与支付记录。",
+            "基础角色权限。",
             {
               "type": "heading",
-              "text": "\u65f6\u95f4\u4e0e\u62a5\u8868"
+              "text": "时间与报表"
             },
-            "\u4e0e\u9884\u7ea6/\u73ed\u6b21\u5173\u8054\u7684\u57fa\u7840\u5de5\u65f6\u8bb0\u5f55\u3002",
-            "\u5bfc\u51fa\u5de5\u65f6\u4e0e\u8425\u6536 CSV/PDF\u3002",
+            "与预约/班次关联的基础工时记录。",
+            "导出工时与营收 CSV/PDF。",
             {
               "type": "heading",
-              "text": "\u5bb9\u91cf"
+              "text": "容量"
             },
-            "\u5305\u542b 1 \u4e2a\u5458\u5de5\u5e2d\u4f4d\u548c 1 \u4e2a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u3002",
-            "\u81ea\u6709\u57df\u540d + \u81ea\u52a8 SSL \u5df2\u5305\u542b\u3002",
-            "\u53ef\u5347\u7ea7\u81f3\u5458\u5de5\u5165\u804c\u6d41\u7a0b\u3002"
+            "包含 1 个员工席位和 1 个地点（部门）。",
+            "自有域名 + 自动 SSL 已包含。",
+            "可升级至员工入职流程。"
           ],
-          "ctaLabel": "\u5f00\u59cb 14 \u5929\u514d\u8d39\u8bd5\u7528",
+          "ctaLabel": "开始 14 天免费试用",
           "ctaTo": "/register"
         },
         {
           "key": "pro",
           "name": "Pro",
-          "price": "$49.99/\u6bcf\u6708",
-          "positioning": "\u7528\u4e00\u4e2a\u7cfb\u7edf\u7ba1\u7406\u65e5\u5e38\u8fd0\u8425\u3002",
-          "description": "\u9002\u5408\u9700\u8981\u6392\u73ed\u3001\u81ea\u52a8\u5316\u4e0e\u5206\u6790\u7684\u6210\u957f\u56e2\u961f\u3002",
-          "trialNote": "14 \u5929\u514d\u8d39\u8bd5\u7528 \u2022 \u968f\u65f6\u53d6\u6d88",
+          "price": "$49.99/每月",
+          "positioning": "用一个系统管理日常运营。",
+          "description": "适合需要排班、自动化与分析的成长团队。",
+          "trialNote": "14 天免费试用 • 随时取消",
           "features": [
-            "\u5305\u542b Starter \u6240\u6709\u529f\u80fd\u3002",
+            "包含 Starter 所有功能。",
             {
               "type": "heading",
-              "text": "\u65f6\u95f4\u4e0e\u52b3\u52a8\u529b"
+              "text": "时间与劳动力"
             },
-            "\u6309\u73ed\u6b21\u6253\u5361\u4e0a\u4e0b\u73ed\u3002",
-            "\u4f11\u606f\u65f6\u95f4\u89c4\u5219\u4e0e\u81ea\u52a8\u6263\u9664\u3002",
-            "\u52a0\u73ed\u4e0e\u5f02\u5e38\u63d0\u9192\u3002",
+            "按班次打卡上下班。",
+            "休息时间规则与自动扣除。",
+            "加班与异常提醒。",
             {
               "type": "heading",
-              "text": "\u85aa\u8d44"
+              "text": "薪资"
             },
-            "\u5b8c\u6574\u85aa\u8d44\u8fd0\u884c\uff08\u65e0\u5355\u6b21\u8d39\u7528\uff09\u3002",
-            "\u85aa\u8d44\u5ba1\u6279\u4e0e\u5ba1\u8ba1\u8bb0\u5f55\u3002",
-            "\u5bfc\u51fa\u5230 QuickBooks \u4e0e Xero\u3002",
-            "\u85aa\u8d44\u53d1\u653e\u4e0e\u5458\u5de5\u5de5\u8d44\u5355\u95e8\u6237\uff08\u81ea\u52a9 PDF\uff09\u3002",
+            "完整薪资运行（无单次费用）。",
+            "薪资审批与审计记录。",
+            "导出到 QuickBooks 与 Xero。",
+            "薪资发放与员工工资单门户（自助 PDF）。",
             {
               "type": "heading",
-              "text": "\u8bbf\u95ee\u4e0e\u63a7\u5236"
+              "text": "访问与控制"
             },
-            "\u7ecf\u7406\u4e0e\u5458\u5de5\u7684\u89d2\u8272\u6743\u9650\u3002",
-            "\u5458\u5de5\u6743\u9650\u4e0e\u53ef\u89c1\u6027\u63a7\u5236\u3002",
-            "\u90e8\u95e8\u6392\u73ed\u4e0e\u5171\u4eab\u65e5\u5386\u3002",
-            "\u6362\u73ed\u3001\u5ba1\u6279\u4e0e\u5b9e\u65f6\u6392\u73ed\u8868\u3002",
+            "经理与员工的角色权限。",
+            "员工权限与可见性控制。",
+            "部门排班与共享日历。",
+            "换班、审批与实时排班表。",
             {
               "type": "heading",
-              "text": "\u5206\u6790\u4e0e\u8425\u9500"
+              "text": "分析与营销"
             },
-            "\u90ae\u4ef6\u6d3b\u52a8\uff1a\u7fa4\u53d1\u3001\u53ec\u56de\u3001VIP\u3001\u723d\u7ea6\u3001\u5468\u5e74\u3002",
-            "\u9ad8\u7ea7\u5206\u6790\uff08\u9884\u7ea6\u3001\u8425\u6536\u3001\u5ba2\u6237\u5206\u7fa4\uff09\u3002",
+            "邮件活动：群发、召回、VIP、爽约、周年。",
+            "高级分析（预约、营收、客户分群）。",
             {
               "type": "heading",
-              "text": "\u5bb9\u91cf"
+              "text": "容量"
             },
-            "\u5305\u542b\u6700\u591a 5 \u4e2a\u5458\u5de5\u5e2d\u4f4d\u4e0e 1 \u4e2a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u3002",
-            "\u52a0\u62ff\u5927\u6cd5\u5b9a\u5047\u65e5\u5de5\u8d44\u4e0e\u7d2f\u79ef\u81ea\u52a8\u5316\u3002",
-            "\u4f18\u5148\u652f\u6301\uff08\u5de5\u4f5c\u65f6\u95f4\uff09\u3002"
+            "包含最多 5 个员工席位与 1 个地点（部门）。",
+            "加拿大法定假日工资与累积自动化。",
+            "优先支持（工作时间）。"
           ],
-          "ctaLabel": "\u5f00\u59cb 14 \u5929\u514d\u8d39\u8bd5\u7528",
+          "ctaLabel": "开始 14 天免费试用",
           "ctaTo": "/register",
           "highlight": true,
-          "badge": "\u6700\u53d7\u6b22\u8fce"
+          "badge": "最受欢迎"
         },
         {
           "key": "business",
           "name": "Business",
-          "price": "$119.99/\u6bcf\u6708",
-          "description": "\u9002\u7528\u4e8e\u5408\u89c4\u3001\u5ba1\u8ba1\u53ca\u591a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u8fd0\u8425\u3002",
-          "trialNote": "14 \u5929\u514d\u8d39\u8bd5\u7528 \u2022 \u968f\u65f6\u53d6\u6d88",
+          "price": "$119.99/每月",
+          "description": "适用于合规、审计及多地点（部门）运营。",
+          "trialNote": "14 天免费试用 • 随时取消",
           "features": [
-            "\u5305\u542b Pro \u6240\u6709\u529f\u80fd\u3002",
+            "包含 Pro 所有功能。",
             {
               "type": "heading",
-              "text": "\u65f6\u95f4\u4e0e\u52b3\u52a8\u529b"
+              "text": "时间与劳动力"
             },
-            "\u6309\u73ed\u6b21\u6253\u5361\u4e0a\u4e0b\u73ed\u5e76\u5f3a\u5236\u4f11\u606f\u3002",
-            "\u52a0\u73ed\u3001\u5f02\u5e38\u4e0e\u5ba1\u8ba1\u7ea7\u5de5\u65f6\u8bb0\u5f55\u3002",
+            "按班次打卡上下班并强制休息。",
+            "加班、异常与审计级工时记录。",
             {
               "type": "heading",
-              "text": "\u85aa\u8d44"
+              "text": "薪资"
             },
-            "\u5b8c\u6574\u85aa\u8d44\u8fd0\u884c\uff08\u65e0\u5355\u6b21\u8d39\u7528\uff09\u3002",
+            "完整薪资运行（无单次费用）。",
             {
               "type": "heading",
-              "text": "\u6cbb\u7406\u4e0e\u5408\u89c4"
+              "text": "治理与合规"
             },
-            "\u5ba1\u8ba1\u5c31\u7eea\u7684\u85aa\u8d44\u4e0e\u5408\u89c4\u8bb0\u5f55\u3002",
-            "\u7a0e\u52a1\u5408\u89c4\u5bfc\u51fa\uff08W-2\u3001T4\u3001ROE\uff09\u3002",
-            "\u591a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u7684\u85aa\u8d44\u4e0e\u62a5\u8868\u3002",
+            "审计就绪的薪资与合规记录。",
+            "税务合规导出（W-2、T4、ROE）。",
+            "多地点（部门）的薪资与报表。",
             {
               "type": "heading",
-              "text": "\u9ad8\u7ea7\u63a7\u5236"
+              "text": "高级控制"
             },
-            "\u5206\u652f\u7ea7\u6743\u9650\u3002",
-            "\u6279\u91cf\u6392\u73ed\u63a7\u5236\uff08\u5173\u95ed/\u4fdd\u7559\u65f6\u95f4\u7a97\uff09\u3002",
-            "\u964d\u4f4e\u5408\u89c4\u98ce\u9669\u7684\u53ef\u5ba1\u8ba1\u8fd0\u8425\u3002",
+            "分支级权限。",
+            "批量排班控制（关闭/保留时间窗）。",
+            "降低合规风险的可审计运营。",
             {
               "type": "heading",
-              "text": "\u5bb9\u91cf"
+              "text": "容量"
             },
-            "\u5305\u542b 10 \u4e2a\u5458\u5de5\u5e2d\u4f4d\u4e0e\u6700\u591a 5 \u4e2a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u3002",
-            "\u6bcf\u65b0\u589e\u5e2d\u4f4d $9/\u6708\u3002",
-            "\u4f7f\u7528\u85aa\u8d44 + \u6392\u73ed\u53ef\u514d\u8d39\u83b7\u5f97\u54c1\u724c\u7f51\u7ad9\u3002"
+            "包含 10 个员工席位与最多 5 个地点（部门）。",
+            "每新增席位 $9/月。",
+            "使用薪资 + 排班可免费获得品牌网站。"
           ],
-          "ctaLabel": "\u5f00\u59cb 14 \u5929\u514d\u8d39\u8bd5\u7528",
+          "ctaLabel": "开始 14 天免费试用",
           "ctaTo": "/register"
         }
       ],
       "addons": {
-        "title": "\u70ed\u95e8\u9644\u52a0\u529f\u80fd",
+        "title": "热门附加功能",
         "headers": {
-          "addon": "\u9644\u52a0\u9879",
-          "price": "\u4ef7\u683c"
+          "addon": "附加项",
+          "price": "价格"
         },
         "items": [
           {
             "key": "extraSeat",
-            "name": "\u989d\u5916\u5458\u5de5\u5e2d\u4f4d",
-            "price": "$9/\u6bcf\u6708/\u5e2d\u4f4d\uff08\u6309\u6bd4\u4f8b\uff09"
+            "name": "额外员工席位",
+            "price": "$9/每月/席位（按比例）"
           }
         ]
       }
     }
   },
   "assurances": {
-    "eyebrow": "\u6240\u9700\u4e00\u5e94\u4ff1\u5168",
-    "title": "\u900f\u660e\u5b9a\u4ef7\uff0c\u4f01\u4e1a\u7ea7\u5e73\u53f0",
-    "subtitle": "\u5b89\u5168\u3001\u53ef\u6269\u5c55\u4e14\u9ad8\u901f\uff1a\u5728\u4e00\u4e2a\u540e\u53f0\u5b8c\u6210\u54c1\u724c\u7f51\u7ad9\u3001\u652f\u4ed8\u4e0e\u85aa\u8d44\u81ea\u52a8\u5316\u3002",
+    "eyebrow": "所需一应俱全",
+    "title": "透明定价，企业级平台",
+    "subtitle": "安全、可扩展且高速：在一个后台完成品牌网站、支付与薪资自动化。",
     "items": [
       {
         "key": "noHiddenFees",
-        "title": "\u65e0\u9690\u85cf\u8d39\u7528",
-        "description": "\u57fa\u4e8e Stripe \u7684\u7b80\u6d01\u8d39\u7387\u7ed3\u6784\u3002"
+        "title": "无隐藏费用",
+        "description": "基于 Stripe 的简洁费率结构。"
       },
       {
         "key": "switchPlans",
-        "title": "\u968f\u65f6\u5207\u6362\u65b9\u6848",
-        "description": "\u968f\u7740\u56e2\u961f\u6210\u957f\u81ea\u7531\u5347\u7ea7\u6216\u964d\u7ea7\uff0c\u81ea\u6709\u57df\u540d\u7acb\u5373\u751f\u6548\u3002"
+        "title": "随时切换方案",
+        "description": "随着团队成长自由升级或降级，自有域名立即生效。"
       },
       {
         "key": "professionReady",
-        "title": "\u54c1\u724c\u7f51\u7ad9",
-        "description": "\u6240\u6709\u65b9\u6848\u90fd\u5305\u542b TXT/CNAME \u9a8c\u8bc1\u7684\u81ea\u6709\u57df\u540d\u4e0e\u81ea\u52a8 SSL\u3002"
+        "title": "品牌网站",
+        "description": "所有方案都包含 TXT/CNAME 验证的自有域名与自动 SSL。"
       },
       {
         "key": "enterpriseOnboarding",
-        "title": "\u4f01\u4e1a\u7ea7\u4e0a\u7ebf",
-        "description": "\u591a\u95e8\u5e97\u4e0a\u7ebf\u6307\u5bfc\uff0c\u5305\u542b\u7a0e\u52a1\u4e0e\u85aa\u8d44\u6620\u5c04\u3002"
+        "title": "企业级上线",
+        "description": "多门店上线指导，包含税务与薪资映射。"
       },
       {
         "key": "roleAccess",
-        "title": "\u57fa\u4e8e\u89d2\u8272\u7684\u6743\u9650",
-        "description": "\u7ecf\u7406\u3001\u5458\u5de5\u4e0e\u8d22\u52a1\u89d2\u8272\u9ed8\u8ba4\u4fdd\u62a4\u6392\u73ed\u4e0e\u85aa\u8d44\u6570\u636e\u3002"
+        "title": "基于角色的权限",
+        "description": "经理、员工与财务角色默认保护排班与薪资数据。"
       },
       {
         "key": "globalPayments",
-        "title": "\u652f\u6301\u5168\u7403\u652f\u4ed8",
-        "description": "Stripe Checkout \u652f\u6301\u9000\u6b3e\u3001\u4fdd\u5b58\u5361\u7247\u4e0e\u8de8\u5883\u7ed3\u7b97\u3002"
+        "title": "支持全球支付",
+        "description": "Stripe Checkout 支持退款、保存卡片与跨境结算。"
       }
     ]
   },
   "ribbon": {
-    "message": "<strong>\u5168\u65b0\u4e0a\u7ebf\uff1a</strong> \u81ea\u6709\u57df\u540d\uff08TXT/CNAME\uff09\u4e0e\u81ea\u52a8 SSL \u5df2\u5305\u542b\u5728\u6240\u6709\u65b9\u6848\u4e2d\u3002",
-    "buttonLabel": "\u8fde\u63a5\u57df\u540d",
+    "message": "<strong>全新上线：</strong> 自有域名（TXT/CNAME）与自动 SSL 已包含在所有方案中。",
+    "buttonLabel": "连接域名",
     "buttonTo": "/manager/dashboard"
   },
   "footnote": {
-    "message": "<strong>\u81ea\u6709\u57df\u540d + \u81ea\u52a8 SSL\uff1a</strong> \u5df2\u5305\u542b\u5728<strong>\u6240\u6709\u65b9\u6848</strong>\u4e2d\u3002"
+    "message": "<strong>自有域名 + 自动 SSL：</strong> 已包含在<strong>所有方案</strong>中。"
   },
   "ctaBanner": {
-    "eyebrow": "\u7acb\u5373\u542f\u7528",
-    "title": "\u7acb\u5373\u5f00\u59cb\u514d\u8d39\u8bd5\u7528 - \u65e0\u9700\u4fe1\u7528\u5361",
-    "description": "\u5c06\u6392\u73ed\u3001\u652f\u4ed8\u4e0e\u85aa\u8d44\u96c6\u4e2d\u5728\u4e00\u4e2a\u540e\u53f0\uff0c\u5728\u81ea\u6709\u57df\u540d\u4e0a\u81ea\u52a8\u542f\u7528 SSL\u3002",
+    "eyebrow": "立即启用",
+    "title": "立即开始免费试用 - 无需信用卡",
+    "description": "将排班、支付与薪资集中在一个后台，在自有域名上自动启用 SSL。",
     "primaryCta": {
-      "label": "\u5f00\u59cb\u514d\u8d39\u8bd5\u7528"
+      "label": "开始免费试用"
     },
     "secondaryCta": {
-      "label": "\u8054\u7cfb\u9500\u552e\u56e2\u961f"
+      "label": "联系销售团队"
     }
   },
   "included": {
-    "title": "\u6240\u6709\u8ba1\u5212\u5747\u5305\u542b",
+    "title": "所有计划均包含",
     "items": [
-      "\u81ea\u5b9a\u4e49\u57df\u540d\u4e0e\u81ea\u52a8 SSL\u3002",
-      "\u57fa\u4e8e\u89d2\u8272\u7684\u8bbf\u95ee\u4e0e\u5458\u5de5\u6743\u9650\u3002",
-      "\u90ae\u4ef6\u4e0e\u9884\u7ea6\u901a\u77e5\u3002",
-      "\u5b89\u5168\u7684 Stripe \u652f\u4ed8\u4e0e\u9000\u6b3e\u3002",
-      "\u6301\u7eed\u529f\u80fd\u66f4\u65b0\u3002"
+      "自定义域名与自动 SSL。",
+      "基于角色的访问与员工权限。",
+      "邮件与预约通知。",
+      "安全的 Stripe 支付与退款。",
+      "持续功能更新。"
     ]
   },
   "comparison": {
-    "title": "Schedulaa \u529f\u80fd\u5bf9\u6bd4",
-    "subtitle": "\u4e00\u76ee\u4e86\u7136\u5bf9\u6bd4\u5404\u8ba1\u5212\u3002",
+    "title": "Schedulaa 功能对比",
+    "subtitle": "一目了然对比各计划。",
     "headers": {
-      "feature": "\u529f\u80fd",
+      "feature": "功能",
       "starter": "Starter",
       "pro": "Pro",
       "business": "Business"
     },
     "values": {
-      "yes": "\u662f",
-      "dash": "\u2014",
-      "businessHours": "\u5de5\u4f5c\u65f6\u95f4",
+      "yes": "是",
+      "dash": "—",
+      "businessHours": "工作时间",
       "always": "24 / 7"
     },
     "rows": {
       "price": {
-        "label": "\u4ef7\u683c",
-        "starter": "$19.99 / \u6708",
-        "pro": "$49.99 / \u6708",
-        "business": "$119.99 / \u6708"
+        "label": "价格",
+        "starter": "$19.99 / 月",
+        "pro": "$49.99 / 月",
+        "business": "$119.99 / 月"
       },
       "bestFor": {
-        "label": "\u9002\u5408\u5bf9\u8c61",
-        "starter": "\u4e2a\u4eba\u4ece\u4e1a\u8005",
-        "pro": "\u6210\u957f\u578b\u56e2\u961f",
-        "business": "\u5408\u89c4\u4e0e\u591a\u5730\u70b9\u56e2\u961f"
+        "label": "适合对象",
+        "starter": "个人从业者",
+        "pro": "成长型团队",
+        "business": "合规与多地点团队"
       },
       "website": {
-        "section": "\u7f51\u7ad9\u4e0e\u5728\u7ebf\u5f62\u8c61",
-        "builder": "\u54c1\u724c\u7f51\u7ad9\u6784\u5efa\u4e0e\u6a21\u677f",
-        "customDomain": "\u81ea\u5b9a\u4e49\u57df\u540d + \u81ea\u52a8 SSL",
-        "publicBooking": "\u516c\u5f00\u9884\u7ea6\u9875\u9762",
-        "embedded": "\u53ef\u5d4c\u5165\u9884\u7ea6\u7ec4\u4ef6",
-        "branding": "\u516c\u53f8\u7ea7\u54c1\u724c"
+        "section": "网站与在线形象",
+        "builder": "品牌网站构建与模板",
+        "customDomain": "自定义域名 + 自动 SSL",
+        "publicBooking": "公开预约页面",
+        "embedded": "可嵌入预约组件",
+        "branding": "公司级品牌"
       },
       "booking": {
-        "section": "\u9884\u7ea6\u4e0e\u6392\u7a0b",
-        "online": "\u5728\u7ebf\u9884\u7ea6\u4e0e\u786e\u8ba4",
-        "reschedule": "\u5ba2\u6237\u81ea\u52a9\u6539\u671f",
-        "multi": "\u591a\u670d\u52a1\u4e0e\u52a0\u8d2d",
-        "staffScheduling": "\u5458\u5de5\u6392\u73ed\u4e0e\u73ed\u6b21\u7ba1\u7406",
-        "shiftSwaps": "\u73ed\u6b21\u4e92\u6362\u4e0e\u8bf7\u5047\u5ba1\u6279",
-        "bulk": "\u6279\u91cf\u6392\u73ed\u63a7\u5236"
+        "section": "预约与排程",
+        "online": "在线预约与确认",
+        "reschedule": "客户自助改期",
+        "multi": "多服务与加购",
+        "staffScheduling": "员工排班与班次管理",
+        "shiftSwaps": "班次互换与请假审批",
+        "bulk": "批量排班控制"
       },
       "time": {
-        "section": "\u5de5\u65f6\u8ffd\u8e2a",
-        "clock": "\u57fa\u4e8e\u73ed\u6b21\u7684\u6253\u5361",
-        "breakPolicy": "\u4f11\u606f\u653f\u7b56\u6267\u884c",
-        "staggered": "\u9519\u5cf0\u4e0e\u7a97\u53e3\u5316\u4f11\u606f",
-        "ipHints": "IP/\u8bbe\u5907\u5ba1\u8ba1\u63d0\u793a",
-        "overtime": "\u52a0\u73ed\u4e0e\u5f02\u5e38\u6807\u8bb0"
+        "section": "工时追踪",
+        "clock": "基于班次的打卡",
+        "breakPolicy": "休息政策执行",
+        "staggered": "错峰与窗口化休息",
+        "ipHints": "IP/设备审计提示",
+        "overtime": "加班与异常标记"
       },
       "payroll": {
-        "section": "\u85aa\u8d44",
-        "processing": "\u85aa\u8d44\u5904\u7406\uff08\u7f8e\u56fd\u4e0e\u52a0\u62ff\u5927\uff09",
-        "holiday": "\u6cd5\u5b9a\u8282\u5047\u65e5\u4e0e\u7d2f\u79ef\u8ba1\u63d0",
-        "payslip": "\u5458\u5de5\u5de5\u8d44\u5355\u95e8\u6237\uff08PDF\uff09",
-        "exports": "\u9ad8\u7ea7\u85aa\u8d44\u5bfc\u51fa\u4e0e\u5ba1\u8ba1",
-        "invoicing": "\u4e0e\u85aa\u8d44\u5173\u8054\u7684\u5f00\u7968"
+        "section": "薪资",
+        "processing": "薪资处理（美国与加拿大）",
+        "holiday": "法定节假日与累积计提",
+        "payslip": "员工工资单门户（PDF）",
+        "exports": "高级薪资导出与审计",
+        "invoicing": "与薪资关联的开票"
       },
       "compliance": {
-        "section": "\u5408\u89c4",
-        "revenueReports": "\u6536\u5165\u4e0e\u9884\u7ea6\u62a5\u544a",
-        "exports": "CSV / PDF \u5bfc\u51fa",
-        "w2": "W\u20112\uff08\u7f8e\u56fd\uff09",
-        "t4": "T4 \u4e0e ROE\uff08\u52a0\u62ff\u5927\uff09",
-        "audit": "\u5408\u89c4\u5ba1\u8ba1\u8ddf\u8e2a"
+        "section": "合规",
+        "revenueReports": "收入与预约报告",
+        "exports": "CSV / PDF 导出",
+        "w2": "W‑2（美国）",
+        "t4": "T4 与 ROE（加拿大）",
+        "audit": "合规审计跟踪"
       },
       "analytics": {
-        "section": "\u5206\u6790",
-        "revenueDash": "\u6536\u5165\u4e0e\u9884\u7ea6\u4eea\u8868\u76d8",
-        "utilization": "\u5229\u7528\u7387\u4e0e\u6548\u7387\u5206\u6790",
-        "segmentation": "\u5ba2\u6237\u7ec6\u5206\u4e0e\u8d8b\u52bf",
-        "multiLocation": "\u591a\u5730\u70b9\uff08\u90e8\u95e8\uff09\u5206\u6790"
+        "section": "分析",
+        "revenueDash": "收入与预约仪表盘",
+        "utilization": "利用率与效率分析",
+        "segmentation": "客户细分与趋势",
+        "multiLocation": "多地点（部门）分析"
       },
       "automation": {
-        "section": "\u81ea\u52a8\u5316",
-        "notifications": "\u90ae\u4ef6\u901a\u77e5\u4e0e\u63d0\u9192",
-        "campaigns": "\u90ae\u4ef6\u8425\u9500\uff08VIP/\u5524\u56de/\u7f3a\u5e2d\uff09",
-        "zapier": "Zapier \u81ea\u52a8\u5316",
-        "workflows": "\u6d41\u7a0b\u81ea\u52a8\u5316"
+        "section": "自动化",
+        "notifications": "邮件通知与提醒",
+        "campaigns": "邮件营销（VIP/唤回/缺席）",
+        "zapier": "Zapier 自动化",
+        "workflows": "流程自动化"
       },
       "hiring": {
-        "section": "\u62db\u8058",
-        "jobs": "\u804c\u4f4d\u53d1\u5e03\u4e0e\u516c\u5f00\u7533\u8bf7",
-        "resume": "\u7b80\u5386\u4e0a\u4f20\u4e0e\u8ddf\u8e2a",
-        "onboarding": "\u5165\u804c\u6d41\u7a0b",
-        "handoff": "\u62db\u8058\u5230\u85aa\u8d44\u4ea4\u63a5"
+        "section": "招聘",
+        "jobs": "职位发布与公开申请",
+        "resume": "简历上传与跟踪",
+        "onboarding": "入职流程",
+        "handoff": "招聘到薪资交接"
       },
       "scale": {
-        "section": "\u89c4\u6a21",
-        "seatsIncluded": "\u5305\u542b\u5458\u5de5\u5e2d\u4f4d",
+        "section": "规模",
+        "seatsIncluded": "包含员工席位",
         "starterSeats": "1",
-        "proSeats": "\u6700\u591a 5",
+        "proSeats": "最多 5",
         "businessSeats": "10",
-        "additionalSeats": "\u989d\u5916\u5458\u5de5\u5e2d\u4f4d",
-        "seatPrice": "$9 / \u4f4d",
-        "multiLocation": "\u591a\u5730\u70b9\u652f\u6301\uff08\u90e8\u95e8\uff09",
+        "additionalSeats": "额外员工席位",
+        "seatPrice": "$9 / 位",
+        "multiLocation": "多地点支持（部门）",
         "starterLocations": "1",
         "proLocations": "1",
-        "businessLocations": "\u6700\u591a 2",
-        "roleAccess": "\u89d2\u8272\u6743\u9650",
-        "starterAccess": "\u57fa\u7840",
-        "proAccess": "\u9ad8\u7ea7",
-        "businessAccess": "\u9ad8\u7ea7",
-        "branchPermissions": "\u5206\u652f\u7ea7\u6743\u9650"
+        "businessLocations": "最多 2",
+        "roleAccess": "角色权限",
+        "starterAccess": "基础",
+        "proAccess": "高级",
+        "businessAccess": "高级",
+        "branchPermissions": "分支级权限"
       },
       "support": {
-        "section": "\u652f\u6301",
-        "standard": "\u6807\u51c6\u652f\u6301",
-        "priority": "\u4f18\u5148\u652f\u6301",
-        "audit": "\u5ba1\u8ba1\u4e0e\u5408\u89c4\u652f\u6301"
+        "section": "支持",
+        "standard": "标准支持",
+        "priority": "优先支持",
+        "audit": "审计与合规支持"
       }
     },
     "rowValues": {
       "price": [
-        "$19.99 / \u6708",
-        "$49.99 / \u6708",
-        "$119.99 / \u6708"
+        "$19.99 / 月",
+        "$49.99 / 月",
+        "$119.99 / 月"
       ],
       "bestFor": [
-        "\u4e2a\u4eba\u4ece\u4e1a\u8005",
-        "\u6210\u957f\u578b\u56e2\u961f",
-        "\u5408\u89c4\u4e0e\u591a\u5730\u70b9\u56e2\u961f"
+        "个人从业者",
+        "成长型团队",
+        "合规与多地点团队"
       ],
       "seatsIncluded": [
         "1",
-        "\u6700\u591a 5",
+        "最多 5",
         "10"
       ],
       "additionalSeats": [
-        "\u2014",
-        "$9 / \u4f4d",
-        "$9 / \u4f4d"
+        "—",
+        "$9 / 位",
+        "$9 / 位"
       ],
       "multiLocationSupport": [
         "1",
         "1",
-        "\u6700\u591a 2"
+        "最多 2"
       ],
       "roleAccess": [
-        "\u57fa\u7840",
-        "\u9ad8\u7ea7",
-        "\u9ad8\u7ea7"
+        "基础",
+        "高级",
+        "高级"
       ],
       "prioritySupport": [
-        "\u2014",
-        "\u5de5\u4f5c\u65f6\u95f4",
+        "—",
+        "工作时间",
         "24 / 7"
       ]
     }
   },
   "whyTeams": {
-    "title": "\u4e3a\u4ec0\u4e48\u56e2\u961f\u9009\u62e9 Schedulaa",
+    "title": "为什么团队选择 Schedulaa",
     "items": [
-      "\u9884\u7ea6\u3001\u85aa\u8d44\u3001\u5de5\u65f6\u4e0e\u7f51\u7ad9\u5171\u4eab\u540c\u4e00\u6570\u636e\u6a21\u578b\u3002",
-      "\u907f\u514d\u73ed\u6b21\u3001\u5de5\u65f6\u4e0e\u652f\u4ed8\u4e4b\u95f4\u7684\u540c\u6b65\u9519\u8bef\u3002",
-      "\u51cf\u5c11\u56e0\u5de5\u5177\u5272\u88c2\u9020\u6210\u7684\u5408\u89c4\u7f3a\u53e3\u3002"
+      "预约、薪资、工时与网站共享同一数据模型。",
+      "避免班次、工时与支付之间的同步错误。",
+      "减少因工具割裂造成的合规缺口。"
     ]
   },
   "websiteDesignService": {
-    "title": "\u7f51\u7ad9\u8bbe\u8ba1\u670d\u52a1",
-    "description": "\u6211\u4eec\u56e2\u961f\u63d0\u4f9b\u4e00\u6b21\u6027\u5b9a\u5236\u7f51\u7ad9\u8bbe\u8ba1\u3002\u8d2d\u4e70\u540e\uff0c\u6211\u4eec\u4f1a\u5f00\u7acb\u8bbe\u8ba1\u5de5\u5355\uff0c\u6536\u96c6\u9700\u6c42\uff0c\u8bbe\u8ba1\u7f51\u7ad9\u5e76\u4e3a\u60a8\u53d1\u5e03\u3002",
-    "includes": "\u5305\u542b\uff1a\u8bbe\u8ba1 + \u4fee\u8ba2 + \u53d1\u5e03\u3002\u4e0d\u5305\u542b\u57df\u540d\u8d2d\u4e70\uff08\u6211\u4eec\u53ef\u534f\u52a9\u60a8\u8fde\u63a5\u57df\u540d\uff09\u3002",
-    "cta": "\u8d2d\u4e70\u7f51\u7ad9\u8bbe\u8ba1",
-    "loadingCta": "\u6b63\u5728\u542f\u52a8\u652f\u4ed8..."
+    "title": "网站设计服务",
+    "description": "我们团队提供一次性定制网站设计。购买后，我们会开立设计工单，收集需求，设计网站并为您发布。",
+    "includes": "包含：设计 + 修订 + 发布。不包含域名购买（我们可协助您连接域名）。",
+    "cta": "购买网站设计",
+    "loadingCta": "正在启动支付..."
+  },
+  "pricingExperience": {
+    "subscriptionPlans": [
+      {
+        "key": "starter",
+        "name": "Starter",
+        "price": "$19.99/mo",
+        "description": "为个人专业人士启动网站并接受预约与支付。",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          {
+            "type": "heading",
+            "text": "核心平台"
+          },
+          "预约、网站与支付一体化。",
+          "安全的客户与员工门户。",
+          "网站构建器，带品牌页面与模板。",
+          "在线预约、确认邮件与客户门户。",
+          "公开“与我预约”链接。",
+          "Stripe Checkout 自动税务合规。",
+          {
+            "type": "heading",
+            "text": "运营基础"
+          },
+          "预约通知与提醒。",
+          "可嵌入的预约组件。",
+          "Stripe 退款与支付记录。",
+          "基础角色权限。",
+          {
+            "type": "heading",
+            "text": "时间与报表"
+          },
+          "与预约/班次关联的基础工时记录。",
+          "导出工时与营收 CSV/PDF。",
+          {
+            "type": "heading",
+            "text": "容量"
+          },
+          "包含 1 个员工席位和 1 个地点（部门）。",
+          "自有域名 + 自动 SSL 已包含。",
+          "可升级至员工入职流程。"
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "positioning": "简单网站、预约与基础销售。"
+      },
+      {
+        "key": "pro",
+        "name": "Pro",
+        "price": "$49.99/mo",
+        "positioning": "用一个系统管理日常运营。",
+        "description": "适合需要排班、自动化与分析的成长团队。",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          "包含 Starter 所有功能。",
+          {
+            "type": "heading",
+            "text": "时间与劳动力"
+          },
+          "按班次打卡上下班。",
+          "休息时间规则与自动扣除。",
+          "加班与异常提醒。",
+          {
+            "type": "heading",
+            "text": "薪资"
+          },
+          "完整薪资运行（无单次费用）。",
+          "薪资审批与审计记录。",
+          "导出到 QuickBooks 与 Xero。",
+          "薪资发放与员工工资单门户（自助 PDF）。",
+          {
+            "type": "heading",
+            "text": "访问与控制"
+          },
+          "经理与员工的角色权限。",
+          "员工权限与可见性控制。",
+          "部门排班与共享日历。",
+          "换班、审批与实时排班表。",
+          {
+            "type": "heading",
+            "text": "分析与营销"
+          },
+          "邮件活动：群发、召回、VIP、爽约、周年。",
+          "高级分析（预约、营收、客户分群）。",
+          {
+            "type": "heading",
+            "text": "容量"
+          },
+          "包含最多 5 个员工席位与 1 个地点（部门）。",
+          "加拿大法定假日工资与累积自动化。",
+          "优先支持（工作时间）。"
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "highlight": true,
+        "badge": "最受欢迎"
+      },
+      {
+        "key": "business",
+        "name": "Business",
+        "price": "$119.99/mo",
+        "description": "适合需要 quotes、work orders、invoices、费用、库存和报表的服务型企业。",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          "包含 Pro 所有功能。",
+          {
+            "type": "heading",
+            "text": "业务财务"
+          },
+          "Quote requests 与浮动报价项目录入",
+          "Estimates 与客户确认流程",
+          "Work orders 与任务分配",
+          "Field reports 与经理审核",
+          "Invoices、费用与采购",
+          "材料、库存与供应商跟踪",
+          "盈利、税务汇总与月末复盘",
+          {
+            "type": "heading",
+            "text": "时间与劳动力"
+          },
+          "按班次打卡上下班并强制休息。",
+          "加班、异常与审计级工时记录。",
+          {
+            "type": "heading",
+            "text": "薪资"
+          },
+          "完整薪资运行（无单次费用）。",
+          {
+            "type": "heading",
+            "text": "治理与合规"
+          },
+          "审计就绪的薪资与合规记录。",
+          "税务合规导出（W-2、T4、ROE）。",
+          "多地点（部门）的薪资与报表。",
+          {
+            "type": "heading",
+            "text": "高级控制"
+          },
+          "分支级权限。",
+          "批量排班控制（关闭/保留时间窗）。",
+          "降低合规风险的可审计运营。",
+          {
+            "type": "heading",
+            "text": "容量"
+          },
+          "包含 10 个员工席位与最多 5 个地点（部门）。",
+          "每新增席位 $9/月。",
+          "使用薪资 + 排班可免费获得品牌网站。"
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "positioning": "适合 quote-to-invoice 流程和财务交接型工作流。"
+      }
+    ],
+    "websiteSetupServices": {
+      "title": "可选 Website Setup 服务",
+      "subtitle": "每个 Schedulaa 方案都包含网站构建器。你可以自己搭建，也可以让我们的团队为你设置。",
+      "note": "需要有效的 Schedulaa 订阅。不包含域名购买。我们可以协助连接域名。",
+      "items": [
+        {
+          "key": "basic",
+          "name": "Basic Website Setup",
+          "price": "$500 USD",
+          "priceNote": "可选一次性设置",
+          "bestFor": "适合最多 5 页的简单网站。",
+          "description": "适合希望由我们团队快速完成品牌化网站准备的企业。",
+          "includes": [
+            "模板设置",
+            "应用 logo、颜色和品牌",
+            "最多 5 页",
+            "预约、联系或 quote 表单设置",
+            "发布支持",
+            "1 轮修改"
+          ],
+          "ctaLabel": "购买 Basic Website Setup",
+          "ctaMode": "checkout"
+        },
+        {
+          "key": "growth",
+          "name": "Growth Website Setup",
+          "price": "$1,500 USD",
+          "priceNote": "可选一次性设置",
+          "bestFor": "适合需要更完整网站结构的服务型企业，例如 services、gallery、reviews、products 或 quote 页面。",
+          "description": "适合希望获得更强销售网站、更丰富内容和更好线索获取能力的企业。",
+          "includes": [
+            "品牌化网站设置",
+            "最多 10 页",
+            "services 和 products 设置",
+            "gallery、projects、reviews 和 contact 页面",
+            "quote request 或 lead capture 流程",
+            "基础 SEO 与社交分享设置",
+            "域名连接支持",
+            "2 轮修改"
+          ],
+          "ctaLabel": "联系销售了解 Growth Setup",
+          "ctaMode": "contact"
+        },
+        {
+          "key": "premium",
+          "name": "Premium Website Setup",
+          "price": "From $2,500 USD",
+          "priceNote": "按范围确定的一次性设置",
+          "bestFor": "适合更大的网站、内容迁移和更深度的定制。",
+          "description": "适合内容库更大、页面更多、需要更重度设置支持的企业。",
+          "includes": [
+            "包含 Growth 的全部内容",
+            "更大规模的内容迁移",
+            "额外 landing pages",
+            "更多布局定制",
+            "文案优化支持",
+            "3 轮修改"
+          ],
+          "ctaLabel": "联系销售了解 Premium Setup",
+          "ctaMode": "contact"
+        }
+      ]
+    },
+    "quoteToInvoiceSection": {
+      "badge": "业务财务",
+      "title": "适合 Quote-to-Invoice 流程",
+      "subtitle": "Schedulaa Business 帮助服务型企业把自定义报价工作从首次请求一路管理到 estimate、work order、field report、invoice 和月末报表。",
+      "bullets": [
+        "接收自定义报价项目的 quote requests",
+        "把请求转换为 estimates 和 invoices",
+        "创建 work orders 并分配任务",
+        "在材料或账单最终确认前审核 field reports",
+        "跟踪费用、采购、库存和供应商",
+        "准备盈利、税务汇总和月末报表"
+      ],
+      "primaryCtaLabel": "查看 Business 方案",
+      "secondaryCtaLabel": "联系销售"
+    },
+    "comparison": {
+      "title": "Schedulaa 功能对比",
+      "subtitle": "一目了然对比各计划。",
+      "headers": {
+        "feature": "功能",
+        "starter": "Starter",
+        "pro": "Pro",
+        "business": "Business"
+      },
+      "rows": {
+        "price": {
+          "label": "价格",
+          "starter": "$19.99/mo",
+          "pro": "$49.99/mo",
+          "business": "$119.99/mo"
+        },
+        "bestFor": {
+          "label": "适合",
+          "starter": "简单网站、预约和服务目录",
+          "pro": "需要排班和员工工作流的团队",
+          "business": "Quote-to-invoice 流程和财务交接型报表"
+        }
+      },
+      "sections": [
+        {
+          "section": "网站与在线形象",
+          "items": [
+            {
+              "label": "品牌网站构建与模板",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "自定义域名 + 自动 SSL",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "公开预约页面",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "可嵌入预约组件",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "公司级品牌",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            }
+          ]
+        },
+        {
+          "section": "预约与排程",
+          "items": [
+            {
+              "label": "在线预约与确认",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "客户自助改期",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "多服务与加购",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "员工排班与班次管理",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "班次互换与请假审批",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "批量排班控制",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            }
+          ]
+        },
+        {
+          "section": "工时追踪",
+          "items": [
+            {
+              "label": "基于班次的打卡",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "休息政策执行",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "错峰与窗口化休息",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "IP/设备审计提示",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "加班与异常标记",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            }
+          ]
+        },
+        {
+          "section": "薪资",
+          "items": [
+            {
+              "label": "薪资处理（美国与加拿大）",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "法定节假日与累积计提",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "员工工资单门户（PDF）",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "高级薪资导出与审计",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "与薪资关联的开票",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            }
+          ]
+        },
+        {
+          "section": "业务财务",
+          "items": [
+            {
+              "label": "Quote requests",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "Estimates",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "Work orders",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "Field reports",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "经理审核批准",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "费用与采购",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "库存 / 材料",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "供应商",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "盈利报表",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "税务汇总",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "月末复盘",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            }
+          ]
+        },
+        {
+          "section": "合规",
+          "items": [
+            {
+              "label": "收入与预约报告",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "CSV / PDF 导出",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "W‑2（美国）",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "T4 与 ROE（加拿大）",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            },
+            {
+              "label": "合规审计跟踪",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            }
+          ]
+        },
+        {
+          "section": "分析",
+          "items": [
+            {
+              "label": "收入与预约仪表盘",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "利用率与效率分析",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "客户细分与趋势",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "多地点（部门）分析",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            }
+          ]
+        },
+        {
+          "section": "自动化",
+          "items": [
+            {
+              "label": "邮件通知与提醒",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "邮件营销（VIP/唤回/缺席）",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "Zapier 自动化",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "流程自动化",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            }
+          ]
+        },
+        {
+          "section": "招聘",
+          "items": [
+            {
+              "label": "职位发布与公开申请",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "简历上传与跟踪",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "入职流程",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "招聘到薪资交接",
+              "starter": "—",
+              "pro": "是",
+              "business": "是"
+            }
+          ]
+        },
+        {
+          "section": "规模",
+          "items": [
+            {
+              "label": "包含员工席位",
+              "starter": "1",
+              "pro": "最多 5",
+              "business": "10"
+            },
+            {
+              "label": "额外员工席位",
+              "starter": "—",
+              "pro": "$9 / 位",
+              "business": "$9 / 位"
+            },
+            {
+              "label": "多地点支持（部门）",
+              "starter": "1",
+              "pro": "1",
+              "business": "最多 2"
+            },
+            {
+              "label": "角色权限",
+              "starter": "基础",
+              "pro": "高级",
+              "business": "高级"
+            },
+            {
+              "label": "分支级权限",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            }
+          ]
+        },
+        {
+          "section": "支持",
+          "items": [
+            {
+              "label": "标准支持",
+              "starter": "是",
+              "pro": "是",
+              "business": "是"
+            },
+            {
+              "label": "优先支持",
+              "starter": "—",
+              "pro": "工作时间",
+              "business": "24 / 7"
+            },
+            {
+              "label": "审计与合规支持",
+              "starter": "—",
+              "pro": "—",
+              "business": "是"
+            }
+          ]
+        }
+      ]
+    },
+    "planFinder": {
+      "badge": "引导式推荐",
+      "title": "找到合适的方案",
+      "subtitle": "如果你不确定该选哪个方案，请根据业务实际运作方式来选择，而不是只看行业。",
+      "intro": "回答几个简短问题，我们会推荐合适的 Schedulaa 方案和可选 Website Setup。",
+      "startCta": "开始 Plan Finder",
+      "compareCta": "手动比较方案",
+      "close": "关闭",
+      "back": "上一步",
+      "next": "下一步",
+      "done": "完成",
+      "stepLabel": "步骤",
+      "ofLabel": "/",
+      "questions": {
+        "businessType": {
+          "label": "你经营哪种类型的业务？",
+          "helper": "这只是提供背景。推荐结果仍然主要由工作流和团队规模决定。",
+          "options": [
+            {
+              "key": "appointment",
+              "label": "预约型服务业务"
+            },
+            {
+              "key": "project",
+              "label": "项目型服务业务"
+            },
+            {
+              "key": "field",
+              "label": "现场服务业务"
+            },
+            {
+              "key": "home",
+              "label": "家庭服务业务"
+            },
+            {
+              "key": "install",
+              "label": "安装 / 维修业务"
+            },
+            {
+              "key": "professional",
+              "label": "专业服务"
+            },
+            {
+              "key": "health",
+              "label": "健康 / wellness 业务"
+            },
+            {
+              "key": "education",
+              "label": "教育 / 培训业务"
+            },
+            {
+              "key": "events",
+              "label": "活动 / staffing 业务"
+            },
+            {
+              "key": "cabinet",
+              "label": "Cabinet / Millwork"
+            },
+            {
+              "key": "renovation",
+              "label": "Renovation"
+            },
+            {
+              "key": "medspa",
+              "label": "Medspa"
+            },
+            {
+              "key": "tattoo",
+              "label": "Tattoo / PMU Studio"
+            },
+            {
+              "key": "cleaning",
+              "label": "Cleaning Company"
+            },
+            {
+              "key": "hvac",
+              "label": "HVAC / Plumbing / Electrical"
+            },
+            {
+              "key": "other",
+              "label": "其他服务型业务"
+            }
+          ]
+        },
+        "teamSize": {
+          "label": "你的团队有多少人？",
+          "helper": "团队规模有助于区分单人、成长型团队和更复杂的运营场景。",
+          "options": [
+            {
+              "key": "just_me",
+              "label": "只有我自己"
+            },
+            {
+              "key": "2_5",
+              "label": "2-5 人"
+            },
+            {
+              "key": "6_15",
+              "label": "6-15 人"
+            },
+            {
+              "key": "16_40",
+              "label": "16-40 人"
+            },
+            {
+              "key": "40_plus",
+              "label": "40+ 人"
+            }
+          ]
+        },
+        "needs": {
+          "label": "你需要管理什么？",
+          "helper": "请选择希望由 Schedulaa 覆盖的工作流。",
+          "websiteOnlyHint": "Website only 是简单意图选项。如果选择其他工作流，Website only 会自动移除。",
+          "sections": [
+            {
+              "title": "网站与线索",
+              "options": [
+                {
+                  "key": "Website only",
+                  "label": "Website only"
+                },
+                {
+                  "key": "Online booking",
+                  "label": "Online booking"
+                },
+                {
+                  "key": "Contact / lead forms",
+                  "label": "Contact / lead forms"
+                },
+                {
+                  "key": "Services",
+                  "label": "Services"
+                },
+                {
+                  "key": "Products",
+                  "label": "Products"
+                }
+              ]
+            },
+            {
+              "title": "团队运营",
+              "options": [
+                {
+                  "key": "Staff scheduling",
+                  "label": "Staff scheduling"
+                },
+                {
+                  "key": "Employee portal",
+                  "label": "Employee portal"
+                },
+                {
+                  "key": "Payroll-ready reports",
+                  "label": "Payroll-ready reports"
+                }
+              ]
+            },
+            {
+              "title": "Quote-to-Invoice 流程",
+              "options": [
+                {
+                  "key": "Quote requests",
+                  "label": "Quote requests"
+                },
+                {
+                  "key": "Estimates",
+                  "label": "Estimates"
+                },
+                {
+                  "key": "Work orders",
+                  "label": "Work orders"
+                },
+                {
+                  "key": "Field reports",
+                  "label": "Field reports"
+                },
+                {
+                  "key": "Invoices",
+                  "label": "Invoices"
+                }
+              ]
+            },
+            {
+              "title": "财务与报表",
+              "options": [
+                {
+                  "key": "Expenses / purchases",
+                  "label": "Expenses / purchases"
+                },
+                {
+                  "key": "Inventory / materials",
+                  "label": "Inventory / materials"
+                },
+                {
+                  "key": "Vendors",
+                  "label": "Vendors"
+                },
+                {
+                  "key": "Profitability",
+                  "label": "Profitability"
+                },
+                {
+                  "key": "Tax summary",
+                  "label": "Tax summary"
+                },
+                {
+                  "key": "Month-end review",
+                  "label": "Month-end review"
+                }
+              ]
+            }
+          ]
+        },
+        "websiteNeed": {
+          "label": "你需要网站吗？",
+          "helper": "这决定我们是否同时推荐 setup 服务。",
+          "options": [
+            {
+              "key": "new_website",
+              "label": "是，我需要一个新网站"
+            },
+            {
+              "key": "improve_website",
+              "label": "是，我想改进或迁移现有网站"
+            },
+            {
+              "key": "internal_only",
+              "label": "不，我只需要内部运营"
+            },
+            {
+              "key": "not_sure",
+              "label": "还不确定"
+            }
+          ]
+        },
+        "setupPreference": {
+          "label": "你想自己搭建网站，还是让 Schedulaa 帮你设置？",
+          "helper": "这只影响可选的 Website Setup 推荐。",
+          "options": [
+            {
+              "key": "diy",
+              "label": "我自己搭建"
+            },
+            {
+              "key": "done_for_you",
+              "label": "我希望 Schedulaa 帮我设置"
+            },
+            {
+              "key": "not_sure",
+              "label": "还不确定"
+            }
+          ]
+        },
+        "pageCount": {
+          "label": "你需要多少个网站页面？",
+          "helper": "这有助于判断适合 Basic、Growth 还是 Premium。",
+          "options": [
+            {
+              "key": "1_5",
+              "label": "1-5 页",
+              "description": "简单网站：Home、Services、Contact、Booking/Quote、About 或 Gallery。"
+            },
+            {
+              "key": "6_10",
+              "label": "6-10 页",
+              "description": "更完整的销售型网站：services、products、gallery、reviews、quote/contact 页面。"
+            },
+            {
+              "key": "11_15",
+              "label": "11-15 页",
+              "description": "更大型网站：多个 service pages、project pages、location pages 或更丰富的内容。"
+            },
+            {
+              "key": "15_plus",
+              "label": "15+ 页",
+              "description": "通常属于自定义范围，更适合通过 Premium 或销售评估处理。"
+            },
+            {
+              "key": "unknown",
+              "label": "我不确定",
+              "description": "通常我们会先推荐 Growth，并在项目开始前确认范围。"
+            }
+          ]
+        },
+        "contentComplexity": {
+          "label": "你是否需要内容迁移，或有大量 gallery、projects、products？",
+          "helper": "这有助于区分简单 setup 与重度迁移或大量手工上传工作。",
+          "options": [
+            {
+              "key": "simple",
+              "label": "不，内容很简单",
+              "description": "Logo、联系方式、基础文案、少量图片，以及常规 services/products 条目。"
+            },
+            {
+              "key": "many_assets",
+              "label": "是，我有很多图片/项目/产品",
+              "description": "大型 gallery、大量 portfolio items、大量 services/products，或较重的手工上传工作。通常属于 Premium。"
+            },
+            {
+              "key": "migration",
+              "label": "是，我需要从旧网站迁移内容",
+              "description": "从现有网站迁移内容。范围取决于需要迁移的内容量。通常属于 Premium。"
+            },
+            {
+              "key": "not_sure",
+              "label": "还不确定",
+              "description": "我们会根据页面数量给出建议，并在开始前确认 setup 范围。"
+            }
+          ]
+        }
+      },
+      "setupScopeHint": "Website setup 包含页面结构、基础内容摆放和上线支持。大型内容库、自定义文案、进阶 SEO 页面或大量手工上传，可能需要 Premium 或单独报价。",
+      "final": {
+        "title": "你的推荐方案",
+        "subtitle": "你只需要一个 Schedulaa 月度方案。如果希望我们团队代建网站，Website setup 是可选的一次性服务。",
+        "monthlyPlanLabel": "推荐月度方案",
+        "monthlySubscriptionLabel": "月度订阅",
+        "optionalSetupLabel": "可选一次性 Website Setup",
+        "startTrialTemplate": "Start 14-day free trial with {{plan}}",
+        "noSetupTitle": "无需 setup",
+        "noSetupPrice": "$0",
+        "includedWithPlan": "已包含在你的月度方案中",
+        "whyLabel": "原因：",
+        "startTrialNote": "这个按钮会启动 Schedulaa 月度方案。Website setup 可在之后单独添加。",
+        "viewPlanTemplate": "查看 {{plan}} 方案",
+        "talkToSales": "联系销售",
+        "summaryTitle": "你的推荐：",
+        "summaryMonthlyTemplate": "月度方案：{{plan}} - {{price}}",
+        "summaryOptionalSetupTemplate": "可选一次性 setup：{{setup}} - {{price}}",
+        "summaryNoSetup": "Website setup：不需要。你可以自己搭建。",
+        "recurringNote": "月度方案是 recurring。Website setup 是可选的一次性服务。",
+        "addLaterNote": "如果需要，之后也可以再添加 Website setup。",
+        "reassurance": "你可以先从月度方案开始，之后再添加 Website setup。",
+        "activeSubscriptionNote": "需要有效的 Schedulaa 订阅。不包含域名购买。",
+        "scopeConfirmedNote": "最终 setup 范围会在开始前确认。额外页面、大规模内容迁移、自定义文案、advanced SEO 页面或大量 gallery/product 上传，可能需要单独报价。",
+        "recommendationTitle": "你的推荐结果",
+        "noSetupDescription": "使用内置 website builder 自己搭建即可。如果之后需要，也可以再添加 setup 帮助。",
+        "loadingTrial": "Starting your free trial...",
+        "reasons": {
+          "starter": "之所以推荐 Starter，是因为你主要需要网站、Online booking、Contact forms、Services 和 Products，而不需要 staff scheduling 或财务工作流。",
+          "starterFallback": "之所以推荐 Starter，是因为你的需求仍然适合简单的网站、预约和获客工作流。",
+          "proScheduling": "之所以推荐 Pro，是因为你选择了 staff scheduling 和团队可见性工作流。",
+          "proEmployeePortal": "之所以推荐 Pro，是因为你选择了 employee portal 和团队工作流。",
+          "proTeamService": "之所以推荐 Pro，是因为你有团队，并选择了 online booking、contact forms、services 或 products 等 service-business 需求。如果仍由一个人管理全部工作且不需要员工工作流，Starter 也可能足够。",
+          "proFallback": "之所以推荐 Pro，是因为你有团队，即使目前基础工作还能由一个人管理，员工侧工作流也可能带来帮助。",
+          "business": "之所以推荐 Business，是因为你选择了 quote-to-invoice 或财务交接型工作流，例如 quotes、work orders、invoices、inventory、reporting 或 month-end review。",
+          "setupNone": "你可以使用内置 website builder，之后如有需要再添加 setup 帮助。",
+          "setupBasic": "推荐 Basic，因为你的网站看起来是一个 1-5 页、内容较直接的简单 setup。",
+          "setupGrowth": "推荐 Growth，因为你的网站需要更完整的结构、内容和 lead capture。",
+          "setupPremiumLarge": "推荐 Premium，因为页面数量表明你的网站规模更大，结构和 setup 工作也更重。",
+          "setupPremiumAssets": "推荐 Premium，因为内容迁移或大量上传通常需要先做范围评估。"
+        },
+        "guidance": {
+          "starter": "如果你需要 staff scheduling、employee logins 或 team visibility，Pro 可能更合适。",
+          "pro": "如果你需要 quotes、estimates、work orders、invoices、inventory 或 month-end reporting，Business 可能更合适。",
+          "business": "最适合 quote-to-invoice 流程、任务跟踪、财务交接型报表和更强的运营控制。"
+        }
+      }
+    }
   }
 }

@@ -386,5 +386,1019 @@
     "includes": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
     "cta": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
     "loadingCta": "Mas informacion"
+  },
+  "pricingExperience": {
+    "subscriptionPlans": [
+      {
+        "key": "starter",
+        "name": "Starter",
+        "price": "$19.99/mo",
+        "description": "Mas informacion",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          {
+            "type": "heading",
+            "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          },
+          "Mas informacion",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Mas informacion",
+          "Mas informacion",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          {
+            "type": "heading",
+            "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Mas informacion",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          {
+            "type": "heading",
+            "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          },
+          "Mas informacion",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          {
+            "type": "heading",
+            "text": "Capacity"
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "positioning": "Sitio simple, reservas y ventas básicas."
+      },
+      {
+        "key": "pro",
+        "name": "Pro",
+        "price": "$49.99/mo",
+        "positioning": "Gestiona las operaciones diarias desde un solo sistema.",
+        "description": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          "Mas informacion",
+          {
+            "type": "heading",
+            "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          {
+            "type": "heading",
+            "text": "Payroll"
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Mas informacion",
+          "Mas informacion",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          {
+            "type": "heading",
+            "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          {
+            "type": "heading",
+            "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Mas informacion",
+          {
+            "type": "heading",
+            "text": "Capacity"
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "highlight": true,
+        "badge": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+      },
+      {
+        "key": "business",
+        "name": "Business",
+        "price": "$119.99/mo",
+        "description": "Para negocios de servicios que gestionan presupuestos, órdenes de trabajo, facturas, gastos, inventario y reportes.",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          {
+            "type": "heading",
+            "text": "Finanzas operativas"
+          },
+          "Solicitudes de presupuesto y captura de trabajos con precio variable",
+          "Presupuestos y flujo de aprobación del cliente",
+          "Órdenes de trabajo y asignación de trabajos",
+          "Reportes de campo con revisión del gerente",
+          "Facturas, gastos y compras",
+          "Materiales, inventario y seguimiento de proveedores",
+          "Rentabilidad, resumen fiscal y cierre de fin de mes",
+          {
+            "type": "heading",
+            "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Mas informacion",
+          {
+            "type": "heading",
+            "text": "Payroll"
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          {
+            "type": "heading",
+            "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          },
+          "Mas informacion",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          {
+            "type": "heading",
+            "text": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Mas informacion",
+          {
+            "type": "heading",
+            "text": "Capacity"
+          },
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "Add seats for $9/mo each.",
+          "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "positioning": "Pensado para operaciones de presupuesto a cobro y flujos listos para finanzas."
+      }
+    ],
+    "websiteSetupServices": {
+      "title": "Servicios opcionales de configuración web",
+      "subtitle": "Todos los planes de Schedulaa incluyen el constructor de sitios. Puedes hacerlo tú mismo o dejar que nuestro equipo lo configure por ti.",
+      "note": "Requiere una suscripción activa de Schedulaa. La compra del dominio no está incluida. Podemos ayudarte a conectarlo.",
+      "items": [
+        {
+          "key": "basic",
+          "name": "Basic Website Setup",
+          "price": "$500 USD",
+          "priceNote": "Setup opcional de una sola vez",
+          "bestFor": "Ideal para sitios simples de hasta 5 páginas.",
+          "description": "Una configuración rápida y con branding para negocios que prefieren que nuestro equipo prepare el sitio.",
+          "includes": [
+            "Configuración de plantilla",
+            "Aplicación de logo, colores y branding",
+            "Hasta 5 páginas",
+            "Configuración de formulario de reserva, contacto o presupuesto",
+            "Soporte de publicación",
+            "1 ronda de revisión"
+          ],
+          "ctaLabel": "Comprar Basic Website Setup",
+          "ctaMode": "checkout"
+        },
+        {
+          "key": "growth",
+          "name": "Growth Website Setup",
+          "price": "$1,500 USD",
+          "priceNote": "Setup opcional de una sola vez",
+          "bestFor": "Ideal para negocios de servicios que necesitan un sitio más completo con servicios, galería, reseñas, productos o páginas de presupuesto.",
+          "description": "Nuestra recomendación principal para negocios que quieren un sitio más sólido, más contenido y mejor captación de leads.",
+          "includes": [
+            "Configuración de sitio con branding",
+            "Hasta 10 páginas",
+            "Configuración de servicios y productos",
+            "Galería, proyectos, reseñas y páginas de contacto",
+            "Flujo de solicitud de presupuesto o captación de leads",
+            "SEO básico y configuración de compartición social",
+            "Soporte para conexión de dominio",
+            "2 rondas de revisión"
+          ],
+          "ctaLabel": "Hablar con ventas sobre Growth Setup",
+          "ctaMode": "contact"
+        },
+        {
+          "key": "premium",
+          "name": "Premium Website Setup",
+          "price": "From $2,500 USD",
+          "priceNote": "Setup de una sola vez con alcance definido",
+          "bestFor": "Ideal para sitios más grandes, migración de contenido y mayor personalización.",
+          "description": "Para negocios con más contenido, más páginas y una necesidad de configuración más intensiva.",
+          "includes": [
+            "Todo lo de Growth",
+            "Migración de contenido más amplia",
+            "Páginas de aterrizaje adicionales",
+            "Más personalización de diseño",
+            "Soporte para mejorar textos",
+            "3 rondas de revisión"
+          ],
+          "ctaLabel": "Hablar con ventas sobre Premium Setup",
+          "ctaMode": "contact"
+        }
+      ]
+    },
+    "quoteToInvoiceSection": {
+      "badge": "Finanzas operativas",
+      "title": "Pensado para operaciones de presupuesto a cobro",
+      "subtitle": "Schedulaa Business ayuda a negocios de servicios a gestionar trabajos de precio variable desde la primera solicitud hasta el presupuesto, la orden de trabajo, el reporte de campo, la factura y el reporting de fin de mes.",
+      "bullets": [
+        "Captura solicitudes de presupuesto para trabajos con precio variable",
+        "Convierte solicitudes en presupuestos y facturas",
+        "Crea órdenes de trabajo y asigna trabajos",
+        "Revisa reportes de campo antes de cerrar materiales o facturación",
+        "Controla gastos, compras, inventario y proveedores",
+        "Prepara reportes de rentabilidad, resumen fiscal y fin de mes"
+      ],
+      "primaryCtaLabel": "Ver plan Business",
+      "secondaryCtaLabel": "Hablar con ventas"
+    },
+    "comparison": {
+      "title": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "subtitle": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+      "headers": {
+        "feature": "Función",
+        "starter": "Starter",
+        "pro": "Pro",
+        "business": "Business"
+      },
+      "rows": {
+        "price": {
+          "label": "Price",
+          "starter": "$19.99/mo",
+          "pro": "$49.99/mo",
+          "business": "$119.99/mo"
+        },
+        "bestFor": {
+          "label": "Ideal para",
+          "starter": "Sitio simple, booking y catálogos de servicios",
+          "pro": "Equipos que necesitan scheduling y flujos para empleados",
+          "business": "Operaciones de presupuesto a cobro y reporting listo para finanzas"
+        }
+      },
+      "sections": [
+        {
+          "section": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "items": [
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Mas informacion",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "items": [
+            {
+              "label": "Mas informacion",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Mas informacion",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+          "items": [
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Payroll",
+          "items": [
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Finanzas operativas",
+          "items": [
+            {
+              "label": "Solicitudes de presupuesto",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Presupuestos",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Órdenes de trabajo",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Reportes de campo",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Aprobaciones de revisión del gerente",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Gastos y compras",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Inventario / materiales",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Proveedores",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Reportes de rentabilidad",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Resumen fiscal",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Cierre de fin de mes",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Cumplimiento",
+          "items": [
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Mas informacion",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Analytics",
+          "items": [
+            {
+              "label": "Mas informacion",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Automation",
+          "items": [
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Hiring",
+          "items": [
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Scale",
+          "items": [
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "1",
+              "pro": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "business": "10"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "$9 / seat",
+              "business": "$9 / seat"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "1",
+              "pro": "1",
+              "business": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa."
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "Basic",
+              "pro": "Advanced",
+              "business": "Advanced"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Support",
+          "items": [
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "business": "24 / 7"
+            },
+            {
+              "label": "Esta seccion explica claramente la funcionalidad dentro de Schedulaa.",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        }
+      ]
+    },
+    "planFinder": {
+      "badge": "Recomendación guiada",
+      "title": "Encuentra el plan adecuado",
+      "subtitle": "Si no tienes claro qué plan encaja, elige según cómo funciona tu negocio, no solo por tu industria.",
+      "intro": "Responde unas pocas preguntas y te recomendaremos el plan de Schedulaa y el Website Setup opcional que mejor encajan.",
+      "startCta": "Iniciar Plan Finder",
+      "compareCta": "Comparar planes manualmente",
+      "close": "Cerrar",
+      "back": "Atrás",
+      "next": "Siguiente",
+      "done": "Listo",
+      "stepLabel": "Paso",
+      "ofLabel": "de",
+      "questions": {
+        "businessType": {
+          "label": "¿Qué tipo de negocio manejas?",
+          "helper": "Esto nos da contexto. La recomendación sigue basándose principalmente en tu flujo operativo y el tamaño del equipo.",
+          "options": [
+            {
+              "key": "appointment",
+              "label": "Negocio de servicios con citas"
+            },
+            {
+              "key": "project",
+              "label": "Negocio de servicios por proyectos"
+            },
+            {
+              "key": "field",
+              "label": "Negocio de servicios de campo"
+            },
+            {
+              "key": "home",
+              "label": "Negocio de servicios para el hogar"
+            },
+            {
+              "key": "install",
+              "label": "Negocio de instalación / reparación"
+            },
+            {
+              "key": "professional",
+              "label": "Servicios profesionales"
+            },
+            {
+              "key": "health",
+              "label": "Negocio de salud / bienestar"
+            },
+            {
+              "key": "education",
+              "label": "Negocio de educación / formación"
+            },
+            {
+              "key": "events",
+              "label": "Negocio de eventos / staffing"
+            },
+            {
+              "key": "cabinet",
+              "label": "Cabinet / Millwork"
+            },
+            {
+              "key": "renovation",
+              "label": "Renovation"
+            },
+            {
+              "key": "medspa",
+              "label": "Medspa"
+            },
+            {
+              "key": "tattoo",
+              "label": "Tattoo / PMU Studio"
+            },
+            {
+              "key": "cleaning",
+              "label": "Cleaning Company"
+            },
+            {
+              "key": "hvac",
+              "label": "HVAC / Plumbing / Electrical"
+            },
+            {
+              "key": "other",
+              "label": "Otro negocio de servicios"
+            }
+          ]
+        },
+        "teamSize": {
+          "label": "¿Cuántas personas hay en tu equipo?",
+          "helper": "El tamaño del equipo nos ayuda a distinguir entre operación individual, equipo pequeño y operación más compleja.",
+          "options": [
+            {
+              "key": "just_me",
+              "label": "Solo yo"
+            },
+            {
+              "key": "2_5",
+              "label": "2-5 personas"
+            },
+            {
+              "key": "6_15",
+              "label": "6-15 personas"
+            },
+            {
+              "key": "16_40",
+              "label": "16-40 personas"
+            },
+            {
+              "key": "40_plus",
+              "label": "40+ personas"
+            }
+          ]
+        },
+        "needs": {
+          "label": "¿Qué necesitas gestionar?",
+          "helper": "Elige los flujos que quieres que cubra Schedulaa.",
+          "websiteOnlyHint": "Solo sitio web es una opción de intención simple. Si eliges otro flujo, se quitará automáticamente.",
+          "sections": [
+            {
+              "title": "Sitio web y leads",
+              "options": [
+                {
+                  "key": "Website only",
+                  "label": "Solo sitio web"
+                },
+                {
+                  "key": "Online booking",
+                  "label": "Reservas en línea"
+                },
+                {
+                  "key": "Contact / lead forms",
+                  "label": "Formularios de contacto / leads"
+                },
+                {
+                  "key": "Services",
+                  "label": "Servicios"
+                },
+                {
+                  "key": "Products",
+                  "label": "Productos"
+                }
+              ]
+            },
+            {
+              "title": "Operaciones del equipo",
+              "options": [
+                {
+                  "key": "Staff scheduling",
+                  "label": "Programación del personal"
+                },
+                {
+                  "key": "Employee portal",
+                  "label": "Portal del empleado"
+                },
+                {
+                  "key": "Payroll-ready reports",
+                  "label": "Reportes listos para nómina"
+                }
+              ]
+            },
+            {
+              "title": "Operaciones Quote-to-Invoice",
+              "options": [
+                {
+                  "key": "Quote requests",
+                  "label": "Solicitudes de presupuesto"
+                },
+                {
+                  "key": "Estimates",
+                  "label": "Presupuestos"
+                },
+                {
+                  "key": "Work orders",
+                  "label": "Órdenes de trabajo"
+                },
+                {
+                  "key": "Field reports",
+                  "label": "Reportes de campo"
+                },
+                {
+                  "key": "Invoices",
+                  "label": "Facturas"
+                }
+              ]
+            },
+            {
+              "title": "Finanzas y reportes",
+              "options": [
+                {
+                  "key": "Expenses / purchases",
+                  "label": "Gastos / compras"
+                },
+                {
+                  "key": "Inventory / materials",
+                  "label": "Inventario / materiales"
+                },
+                {
+                  "key": "Vendors",
+                  "label": "Proveedores"
+                },
+                {
+                  "key": "Profitability",
+                  "label": "Rentabilidad"
+                },
+                {
+                  "key": "Tax summary",
+                  "label": "Resumen fiscal"
+                },
+                {
+                  "key": "Month-end review",
+                  "label": "Cierre de fin de mes"
+                }
+              ]
+            }
+          ]
+        },
+        "websiteNeed": {
+          "label": "¿Necesitas un sitio web?",
+          "helper": "Esto define si también debemos recomendar ayuda de setup.",
+          "options": [
+            {
+              "key": "new_website",
+              "label": "Sí, necesito un sitio web nuevo"
+            },
+            {
+              "key": "improve_website",
+              "label": "Sí, quiero mejorar o migrar mi sitio actual"
+            },
+            {
+              "key": "internal_only",
+              "label": "No, solo necesito operaciones internas"
+            },
+            {
+              "key": "not_sure",
+              "label": "No estoy seguro"
+            }
+          ]
+        },
+        "setupPreference": {
+          "label": "¿Quieres construirlo tú mismo o que Schedulaa lo configure por ti?",
+          "helper": "Esto solo afecta la recomendación del Website Setup opcional.",
+          "options": [
+            {
+              "key": "diy",
+              "label": "Lo construiré yo mismo"
+            },
+            {
+              "key": "done_for_you",
+              "label": "Quiero que Schedulaa lo configure por mí"
+            },
+            {
+              "key": "not_sure",
+              "label": "Todavía no estoy seguro"
+            }
+          ]
+        },
+        "pageCount": {
+          "label": "¿Cuántas páginas web necesitas?",
+          "helper": "Esto nos ayuda a estimar si tu setup encaja mejor en Basic, Growth o Premium.",
+          "options": [
+            {
+              "key": "1_5",
+              "label": "1-5 páginas",
+              "description": "Sitio simple: Home, Services, Contact, Booking/Quote, About o Gallery."
+            },
+            {
+              "key": "6_10",
+              "label": "6-10 páginas",
+              "description": "Sitio comercial más completo: services, products, gallery, reviews y páginas de quote/contact."
+            },
+            {
+              "key": "11_15",
+              "label": "11-15 páginas",
+              "description": "Sitio más grande: varias páginas de servicios, proyectos, ubicaciones o contenido más rico."
+            },
+            {
+              "key": "15_plus",
+              "label": "15+ páginas",
+              "description": "Normalmente requiere un alcance personalizado y se maneja mejor con Premium o revisión comercial."
+            },
+            {
+              "key": "unknown",
+              "label": "No lo sé",
+              "description": "Normalmente recomendaremos Growth y confirmaremos el alcance antes de empezar."
+            }
+          ]
+        },
+        "contentComplexity": {
+          "label": "¿Necesitas migración de contenido o muchas galerías, proyectos o productos?",
+          "helper": "Esto ayuda a separar un setup simple de una migración o carga manual más pesada.",
+          "options": [
+            {
+              "key": "simple",
+              "label": "No, contenido simple",
+              "description": "Logo, datos de contacto, texto básico, algunas imágenes y entradas normales de servicios/productos."
+            },
+            {
+              "key": "many_assets",
+              "label": "Sí, tengo muchas imágenes/proyectos/productos",
+              "description": "Galería grande, muchos elementos de portafolio, muchos services/products o mucha carga manual. Normalmente Premium."
+            },
+            {
+              "key": "migration",
+              "label": "Sí, necesito mover contenido desde mi sitio anterior",
+              "description": "Migración desde un sitio existente. El alcance depende de cuánto contenido haya que mover. Normalmente Premium."
+            },
+            {
+              "key": "not_sure",
+              "label": "No estoy seguro",
+              "description": "Recomendaremos según el número de páginas y confirmaremos el alcance antes de comenzar."
+            }
+          ]
+        }
+      },
+      "setupScopeHint": "El Website Setup incluye la estructura de páginas, la colocación básica de contenido y el soporte de lanzamiento. Bibliotecas de contenido grandes, redacción personalizada, páginas SEO avanzadas o cargas manuales pesadas pueden requerir Premium o una cotización personalizada.",
+      "final": {
+        "title": "Tu paquete recomendado",
+        "subtitle": "Solo necesitas un plan mensual de Schedulaa. El Website Setup es opcional y de una sola vez si quieres que nuestro equipo construya el sitio por ti.",
+        "monthlyPlanLabel": "Plan mensual recomendado",
+        "monthlySubscriptionLabel": "Suscripción mensual",
+        "optionalSetupLabel": "Website setup opcional de una sola vez",
+        "startTrialTemplate": "Iniciar 14-day free trial con {{plan}}",
+        "noSetupTitle": "No se necesita setup",
+        "noSetupPrice": "$0",
+        "includedWithPlan": "Incluido con tu plan mensual",
+        "whyLabel": "Por qué:",
+        "startTrialNote": "Esto inicia el plan mensual de Schedulaa. Website setup se puede añadir por separado si hace falta.",
+        "viewPlanTemplate": "Ver plan {{plan}}",
+        "talkToSales": "Hablar con ventas",
+        "summaryTitle": "Tu recomendación:",
+        "summaryMonthlyTemplate": "Plan mensual: {{plan}} - {{price}}",
+        "summaryOptionalSetupTemplate": "Setup opcional de una sola vez: {{setup}} - {{price}}",
+        "summaryNoSetup": "Website setup: no es necesario. Puedes construirlo tú mismo.",
+        "recurringNote": "El plan mensual es recurrente. Website setup es opcional y de una sola vez.",
+        "addLaterNote": "Puedes añadir Website setup más adelante si lo necesitas.",
+        "reassurance": "Puedes empezar con el plan mensual y añadir Website setup después.",
+        "activeSubscriptionNote": "Requiere una suscripción activa de Schedulaa. La compra del dominio no está incluida.",
+        "scopeConfirmedNote": "El alcance final del setup se confirma antes de empezar. Páginas extra, migración grande de contenido, copywriting personalizado, páginas SEO avanzadas o cargas pesadas de galerías/productos pueden cotizarse por separado.",
+        "recommendationTitle": "Tu configuración recomendada",
+        "noSetupDescription": "Constrúyelo tú mismo con el constructor de sitios incluido. Puedes añadir ayuda de setup más adelante si lo necesitas.",
+        "loadingTrial": "Abriendo tu período de prueba...",
+        "reasons": {
+          "starter": "Starter se recomienda porque principalmente necesitas un sitio web, reservas en línea, formularios de contacto, servicios y productos sin programación del personal ni flujos financieros.",
+          "starterFallback": "Starter se recomienda porque tus necesidades todavía encajan en un flujo simple de sitio web, reservas y captación de leads.",
+          "proScheduling": "Pro se recomienda porque seleccionaste programación del personal y flujos de visibilidad del equipo.",
+          "proEmployeePortal": "Pro se recomienda porque seleccionaste portal del empleado y flujos de equipo.",
+          "proTeamService": "Pro se recomienda porque tienes un equipo y seleccionaste necesidades de negocio de servicios como reservas en línea, formularios de contacto, servicios o productos. Starter puede ser suficiente si una sola persona gestiona todo y no necesitas flujos de equipo.",
+          "proFallback": "Pro se recomienda porque tienes un equipo y probablemente te beneficies de flujos para el personal, incluso si hoy una sola persona puede gestionar lo básico.",
+          "business": "Business se recomienda porque seleccionaste flujos quote-to-invoice o listos para finanzas como presupuestos, órdenes de trabajo, facturas, inventario, reportes o cierre de fin de mes.",
+          "setupNone": "Puedes usar el constructor de sitios incluido y añadir ayuda de setup más adelante si lo necesitas.",
+          "setupBasic": "Basic se recomienda porque tu sitio parece un setup simple de 1-5 páginas con contenido directo.",
+          "setupGrowth": "Growth se recomienda porque tu sitio necesita una estructura más completa con servicios, contenido y captación de leads.",
+          "setupPremiumLarge": "Premium se recomienda porque tu cantidad de páginas sugiere un sitio más grande con más estructura y trabajo de setup.",
+          "setupPremiumAssets": "Premium se recomienda porque la migración o las cargas pesadas de contenido suelen necesitar una revisión de alcance."
+        },
+        "guidance": {
+          "starter": "¿Necesitas programación del personal, accesos para empleados o visibilidad del equipo? Pro puede ser una mejor opción.",
+          "pro": "¿Necesitas presupuestos, órdenes de trabajo, facturas, inventario o cierre de fin de mes? Business puede ser una mejor opción.",
+          "business": "La mejor opción para operaciones quote-to-invoice, seguimiento de trabajos, reportes listos para finanzas y mayor control operativo."
+        }
+      }
+    }
   }
 }

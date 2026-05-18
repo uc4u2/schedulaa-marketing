@@ -386,5 +386,1019 @@
     "includes": "Includes: design + revisions + publish. Domain purchase not included (we can help you connect your domain).",
     "cta": "Buy Website Design",
     "loadingCta": "Starting checkout..."
+  },
+  "pricingExperience": {
+    "subscriptionPlans": [
+      {
+        "key": "starter",
+        "name": "Starter",
+        "price": "$19.99/mo",
+        "description": "Launch your website and take bookings and payments for solo professionals.",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          {
+            "type": "heading",
+            "text": "Core platform"
+          },
+          "Unified booking, website, and payments.",
+          "Secure client and staff portals.",
+          "Website builder with branded pages and templates.",
+          "Online booking, confirmations, and client portal.",
+          "Public “Book with me” link.",
+          "Stripe Checkout with automatic tax compliance.",
+          {
+            "type": "heading",
+            "text": "Operational basics"
+          },
+          "Booking notifications and reminders.",
+          "Embeddable booking widgets.",
+          "Stripe refunds and payment history.",
+          "Basic role-based access.",
+          {
+            "type": "heading",
+            "text": "Time & reporting"
+          },
+          "Basic time tracking tied to bookings and shifts.",
+          "CSV/PDF exports for worked hours and revenue.",
+          {
+            "type": "heading",
+            "text": "Capacity"
+          },
+          "1 staff seat and 1 location (department) included.",
+          "Custom domain + automatic SSL included.",
+          "Upgrade for onboarding workflows."
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "positioning": "Simple website, booking, and sales basics."
+      },
+      {
+        "key": "pro",
+        "name": "Pro",
+        "price": "$49.99/mo",
+        "positioning": "Run daily operations from one system.",
+        "description": "For small teams that need scheduling, automation, and analytics.",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          "Everything in Starter.",
+          {
+            "type": "heading",
+            "text": "Time & Labor"
+          },
+          "Shift-based clock-in and clock-out.",
+          "Break enforcement and auto-deductions.",
+          "Overtime and anomaly flags.",
+          {
+            "type": "heading",
+            "text": "Payroll"
+          },
+          "Full payroll runs included (no per-run fees).",
+          "Payroll-ready approvals and audit trails.",
+          "Payroll exports to QuickBooks & Xero.",
+          "Payroll processing with Employee Payslip Portal (self-serve PDFs).",
+          {
+            "type": "heading",
+            "text": "Access & control"
+          },
+          "Role-based access for managers and staff.",
+          "Staff permissions and visibility controls.",
+          "Department scheduling and shared calendars.",
+          "Shift swaps, approvals, and live rosters.",
+          {
+            "type": "heading",
+            "text": "Analytics & marketing"
+          },
+          "Email campaigns: Broadcast, Win-Back, VIP, No-Show, Anniversary.",
+          "Advanced Analytics (bookings, revenue, client segments).",
+          {
+            "type": "heading",
+            "text": "Capacity"
+          },
+          "Up to 5 staff seats and 1 location (department) included.",
+          "Automated Canadian stat holiday pay and accruals.",
+          "Priority support (business hours)."
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "highlight": true,
+        "badge": "Most popular"
+      },
+      {
+        "key": "business",
+        "name": "Business",
+        "price": "$119.99/mo",
+        "description": "For service businesses that manage quotes, work orders, invoices, expenses, inventory, and reporting.",
+        "trialNote": "14-day free trial • Cancel anytime",
+        "features": [
+          "Everything in Pro.",
+          {
+            "type": "heading",
+            "text": "Finanzas operativas"
+          },
+          "Quote requests and custom-price intake",
+          "Estimates and client approval workflow",
+          "Work orders and job assignments",
+          "Field reports with manager review",
+          "Invoices, expenses, and purchases",
+          "Materials, inventory, and vendor tracking",
+          "Profitability, tax summary, and month-end review",
+          {
+            "type": "heading",
+            "text": "Time & Labor"
+          },
+          "Shift-based clock-in and clock-out with break enforcement.",
+          "Overtime, anomaly flags, and audit-ready time records.",
+          {
+            "type": "heading",
+            "text": "Payroll"
+          },
+          "Full payroll runs included (no per-run fees).",
+          {
+            "type": "heading",
+            "text": "Governance & compliance"
+          },
+          "Audit-ready payroll and compliance records.",
+          "Compliance-ready tax exports (W-2, T4, ROE).",
+          "Multi-location (department) payroll and reporting.",
+          {
+            "type": "heading",
+            "text": "Advanced control"
+          },
+          "Branch-level permissions.",
+          "Bulk scheduling controls (close / keep windows).",
+          "Audit-ready operations with reduced compliance risk.",
+          {
+            "type": "heading",
+            "text": "Capacity"
+          },
+          "10 staff seats and up to 5 locations (departments) included.",
+          "Add seats for $9/mo each.",
+          "Free branded website included when using Payroll + Scheduling."
+        ],
+        "ctaLabel": "Start 14-day free trial",
+        "ctaTo": "/register",
+        "positioning": "Built for quote-to-invoice operations and finance-ready workflows."
+      }
+    ],
+    "websiteSetupServices": {
+      "title": "Optional Website Setup Services",
+      "subtitle": "Every Schedulaa plan includes the website builder. Build it yourself, or let our team set up your site for you.",
+      "note": "Requires an active Schedulaa subscription. Domain purchase is not included. We can help connect your domain.",
+      "items": [
+        {
+          "key": "basic",
+          "name": "Basic Website Setup",
+          "price": "$500 USD",
+          "priceNote": "Optional one-time setup",
+          "bestFor": "Best for simple websites with up to 5 pages.",
+          "description": "A fast branded setup for businesses that want our team to prepare the site instead of building it themselves.",
+          "includes": [
+            "Template setup",
+            "Logo, colors, and branding applied",
+            "Up to 5 pages",
+            "Booking, contact, or quote form setup",
+            "Publish support",
+            "1 revision round"
+          ],
+          "ctaLabel": "Comprar Basic Website Setup",
+          "ctaMode": "checkout"
+        },
+        {
+          "key": "growth",
+          "name": "Growth Website Setup",
+          "price": "$1,500 USD",
+          "priceNote": "Optional one-time setup",
+          "bestFor": "Best for service businesses that need a fuller website with services, gallery, reviews, products, or quote pages.",
+          "description": "Our recommended setup for businesses that want a stronger sales website, richer content, and better lead capture.",
+          "includes": [
+            "Branded website setup",
+            "Up to 10 pages",
+            "Services and products setup",
+            "Gallery, projects, reviews, and contact pages",
+            "Quote request or lead capture flow",
+            "Basic SEO and social sharing setup",
+            "Domain connection support",
+            "2 revision rounds"
+          ],
+          "ctaLabel": "Hablar con ventas sobre Growth Setup",
+          "ctaMode": "contact"
+        },
+        {
+          "key": "premium",
+          "name": "Premium Website Setup",
+          "price": "From $2,500 USD",
+          "priceNote": "Scoped one-time setup",
+          "bestFor": "Best for larger websites, content migration, and custom refinement.",
+          "description": "For businesses with larger content libraries, more pages, and more hands-on setup needs.",
+          "includes": [
+            "Everything in Growth",
+            "Larger content migration",
+            "Additional landing pages",
+            "More layout customization",
+            "Copy refinement support",
+            "3 revision rounds"
+          ],
+          "ctaLabel": "Hablar con ventas sobre Premium Setup",
+          "ctaMode": "contact"
+        }
+      ]
+    },
+    "quoteToInvoiceSection": {
+      "badge": "Business Finance",
+      "title": "Built for Quote-to-Invoice Operations",
+      "subtitle": "Schedulaa Business helps service businesses manage custom-price work from first request to estimate, work order, field report, invoice, and month-end reporting.",
+      "bullets": [
+        "Capture quote requests for custom-price jobs",
+        "Turn requests into estimates and invoices",
+        "Create work orders and assign jobs",
+        "Review field reports before materials or billing become final",
+        "Track expenses, purchases, inventory, and vendors",
+        "Prepare profitability, tax summary, and month-end reports"
+      ],
+      "primaryCtaLabel": "See Business plan",
+      "secondaryCtaLabel": "Talk to sales"
+    },
+    "comparison": {
+      "title": "Schedulaa Feature Comparison",
+      "subtitle": "Compare plans at a glance.",
+      "headers": {
+        "feature": "Feature",
+        "starter": "Starter",
+        "pro": "Pro",
+        "business": "Business"
+      },
+      "rows": {
+        "price": {
+          "label": "Price",
+          "starter": "$19.99/mo",
+          "pro": "$49.99/mo",
+          "business": "$119.99/mo"
+        },
+        "bestFor": {
+          "label": "Best for",
+          "starter": "Simple website, booking, and service catalogs",
+          "pro": "Teams that need scheduling and employee workflows",
+          "business": "Quote-to-invoice operations and finance-ready reporting"
+        }
+      },
+      "sections": [
+        {
+          "section": "Website & Online Presence",
+          "items": [
+            {
+              "label": "Branded website builder & templates",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Custom domain + automatic SSL",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Public booking pages",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Embedded booking widgets",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Company-level branding",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Booking & Scheduling",
+          "items": [
+            {
+              "label": "Online booking & confirmations",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Client self-serve rescheduling",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Multi-service & add-on bookings",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Staff scheduling & shift management",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Shift swaps & leave approvals",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Bulk scheduling controls",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Time Tracking",
+          "items": [
+            {
+              "label": "Shift-based clock-in / clock-out",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Break policy enforcement",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Staggered & windowed breaks",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "IP / device audit hints",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Overtime & anomaly flags",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Payroll",
+          "items": [
+            {
+              "label": "Payroll processing (US & Canada)",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Automated stat holiday pay & accruals",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Employee payslip portal (PDF)",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Advanced payroll exports & audits",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Payroll-linked invoicing",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Business Finance",
+          "items": [
+            {
+              "label": "Quote requests",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Estimates",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Work orders",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Field reports",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Manager review approvals",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Expenses & purchases",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Inventory / materials",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Vendors",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Profitability reports",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Tax summary",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Month-end review",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Compliance",
+          "items": [
+            {
+              "label": "Revenue & appointment reports",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "CSV / PDF exports",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "W-2 (US) generation",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "T4 & ROE (Canada)",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
+              "label": "Compliance-ready audit trails",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Analytics",
+          "items": [
+            {
+              "label": "Revenue & booking dashboards",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Utilization & productivity analytics",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Client segmentation & trends",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Multi-location (department) analytics",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Automation",
+          "items": [
+            {
+              "label": "Email notifications & reminders",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Email campaigns (VIP, Win-back, No-show)",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Zapier automation",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Workflow automations",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Hiring",
+          "items": [
+            {
+              "label": "Job postings & public apply links",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Resume uploads & tracking",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Onboarding workflows",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Hiring → payroll handoff",
+              "starter": "—",
+              "pro": "Yes",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Scale",
+          "items": [
+            {
+              "label": "Staff seats included",
+              "starter": "1",
+              "pro": "Up to 5",
+              "business": "10"
+            },
+            {
+              "label": "Additional staff seats",
+              "starter": "—",
+              "pro": "$9 / seat",
+              "business": "$9 / seat"
+            },
+            {
+              "label": "Multi-location support (use departments as locations)",
+              "starter": "1",
+              "pro": "1",
+              "business": "Up to 2"
+            },
+            {
+              "label": "Role-based access & permissions",
+              "starter": "Basic",
+              "pro": "Advanced",
+              "business": "Advanced"
+            },
+            {
+              "label": "Branch-level permissions",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        },
+        {
+          "section": "Support",
+          "items": [
+            {
+              "label": "Standard support",
+              "starter": "Yes",
+              "pro": "Yes",
+              "business": "Yes"
+            },
+            {
+              "label": "Priority support",
+              "starter": "—",
+              "pro": "Business hours",
+              "business": "24 / 7"
+            },
+            {
+              "label": "Audit & compliance support",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            }
+          ]
+        }
+      ]
+    },
+    "planFinder": {
+      "badge": "Guided recommendation",
+      "title": "Find the Right Plan",
+      "subtitle": "Not sure which plan fits? Choose based on how your business runs, not just your industry.",
+      "intro": "Answer a few quick questions and we’ll recommend the right Schedulaa plan and optional website setup.",
+      "startCta": "Start Plan Finder",
+      "compareCta": "Compare plans manually",
+      "close": "Close",
+      "back": "Back",
+      "next": "Next",
+      "done": "Done",
+      "stepLabel": "Step",
+      "ofLabel": "of",
+      "questions": {
+        "businessType": {
+          "label": "What type of business do you run?",
+          "helper": "This gives us context. The recommendation is still driven by workflow and team size.",
+          "options": [
+            {
+              "key": "appointment",
+              "label": "Appointment-based service business"
+            },
+            {
+              "key": "project",
+              "label": "Project-based service business"
+            },
+            {
+              "key": "field",
+              "label": "Field service business"
+            },
+            {
+              "key": "home",
+              "label": "Home service business"
+            },
+            {
+              "key": "install",
+              "label": "Installation / repair business"
+            },
+            {
+              "key": "professional",
+              "label": "Professional services"
+            },
+            {
+              "key": "health",
+              "label": "Health / wellness business"
+            },
+            {
+              "key": "education",
+              "label": "Education / training business"
+            },
+            {
+              "key": "events",
+              "label": "Events / staffing business"
+            },
+            {
+              "key": "cabinet",
+              "label": "Cabinet / Millwork"
+            },
+            {
+              "key": "renovation",
+              "label": "Renovation"
+            },
+            {
+              "key": "medspa",
+              "label": "Medspa"
+            },
+            {
+              "key": "tattoo",
+              "label": "Tattoo / PMU Studio"
+            },
+            {
+              "key": "cleaning",
+              "label": "Cleaning Company"
+            },
+            {
+              "key": "hvac",
+              "label": "HVAC / Plumbing / Electrical"
+            },
+            {
+              "key": "other",
+              "label": "Other service business"
+            }
+          ]
+        },
+        "teamSize": {
+          "label": "How many people are on your team?",
+          "helper": "Team size helps separate solo, small-team, and operationally heavier workflows.",
+          "options": [
+            {
+              "key": "just_me",
+              "label": "Just me"
+            },
+            {
+              "key": "2_5",
+              "label": "2-5 people"
+            },
+            {
+              "key": "6_15",
+              "label": "6-15 people"
+            },
+            {
+              "key": "16_40",
+              "label": "16-40 people"
+            },
+            {
+              "key": "40_plus",
+              "label": "40+ people"
+            }
+          ]
+        },
+        "needs": {
+          "label": "What do you need to manage?",
+          "helper": "Pick the workflows you want Schedulaa to cover.",
+          "websiteOnlyHint": "Website only is a simple-intent option. If you choose another workflow, Website only is removed automatically.",
+          "sections": [
+            {
+              "title": "Website & Leads",
+              "options": [
+                {
+                  "key": "Website only",
+                  "label": "Website only"
+                },
+                {
+                  "key": "Online booking",
+                  "label": "Online booking"
+                },
+                {
+                  "key": "Contact / lead forms",
+                  "label": "Contact / lead forms"
+                },
+                {
+                  "key": "Services",
+                  "label": "Services"
+                },
+                {
+                  "key": "Products",
+                  "label": "Products"
+                }
+              ]
+            },
+            {
+              "title": "Team Operations",
+              "options": [
+                {
+                  "key": "Staff scheduling",
+                  "label": "Staff scheduling"
+                },
+                {
+                  "key": "Employee portal",
+                  "label": "Employee portal"
+                },
+                {
+                  "key": "Payroll-ready reports",
+                  "label": "Payroll-ready reports"
+                }
+              ]
+            },
+            {
+              "title": "Quote-to-Invoice Operations",
+              "options": [
+                {
+                  "key": "Quote requests",
+                  "label": "Quote requests"
+                },
+                {
+                  "key": "Estimates",
+                  "label": "Estimates"
+                },
+                {
+                  "key": "Work orders",
+                  "label": "Work orders"
+                },
+                {
+                  "key": "Field reports",
+                  "label": "Field reports"
+                },
+                {
+                  "key": "Invoices",
+                  "label": "Invoices"
+                }
+              ]
+            },
+            {
+              "title": "Finance & Reporting",
+              "options": [
+                {
+                  "key": "Expenses / purchases",
+                  "label": "Expenses / purchases"
+                },
+                {
+                  "key": "Inventory / materials",
+                  "label": "Inventory / materials"
+                },
+                {
+                  "key": "Vendors",
+                  "label": "Vendors"
+                },
+                {
+                  "key": "Profitability",
+                  "label": "Profitability"
+                },
+                {
+                  "key": "Tax summary",
+                  "label": "Tax summary"
+                },
+                {
+                  "key": "Month-end review",
+                  "label": "Month-end review"
+                }
+              ]
+            }
+          ]
+        },
+        "websiteNeed": {
+          "label": "Do you need a website?",
+          "helper": "This determines whether we also recommend setup help.",
+          "options": [
+            {
+              "key": "new_website",
+              "label": "Yes, I need a new website"
+            },
+            {
+              "key": "improve_website",
+              "label": "Yes, I want to improve or move my current website"
+            },
+            {
+              "key": "internal_only",
+              "label": "No, I only need internal operations"
+            },
+            {
+              "key": "not_sure",
+              "label": "Not sure"
+            }
+          ]
+        },
+        "setupPreference": {
+          "label": "Do you want to build it yourself or have Schedulaa set it up?",
+          "helper": "This only affects the optional website setup recommendation.",
+          "options": [
+            {
+              "key": "diy",
+              "label": "I will build it myself"
+            },
+            {
+              "key": "done_for_you",
+              "label": "I want Schedulaa to set it up"
+            },
+            {
+              "key": "not_sure",
+              "label": "Not sure yet"
+            }
+          ]
+        },
+        "pageCount": {
+          "label": "How many website pages do you need?",
+          "helper": "This helps us estimate whether your setup fits Basic, Growth, or Premium.",
+          "options": [
+            {
+              "key": "1_5",
+              "label": "1-5 pages",
+              "description": "Simple website: Home, Services, Contact, Booking/Quote, About or Gallery."
+            },
+            {
+              "key": "6_10",
+              "label": "6-10 pages",
+              "description": "Fuller sales site: services, products, gallery, reviews, quote/contact pages."
+            },
+            {
+              "key": "11_15",
+              "label": "11-15 pages",
+              "description": "Larger site: multiple service pages, project pages, location pages, or richer content."
+            },
+            {
+              "key": "15_plus",
+              "label": "15+ pages",
+              "description": "Usually custom scope. Best handled through Premium or sales review."
+            },
+            {
+              "key": "unknown",
+              "label": "I don’t know",
+              "description": "We’ll usually recommend Growth, then confirm the scope before setup starts."
+            }
+          ]
+        },
+        "contentComplexity": {
+          "label": "Do you need content migration or lots of galleries, projects, or products?",
+          "helper": "This helps separate simple setups from heavier migration or upload work.",
+          "options": [
+            {
+              "key": "simple",
+              "label": "No, simple content",
+              "description": "Logo, contact info, basic text, a few images, and normal service/product entries."
+            },
+            {
+              "key": "many_assets",
+              "label": "Yes, I have many images/projects/products",
+              "description": "Large gallery, many portfolio items, many services/products, or heavy manual uploads. Usually Premium."
+            },
+            {
+              "key": "migration",
+              "label": "Yes, I need content moved from my old website",
+              "description": "Migration from an existing website. Scope depends on how much content must be moved. Usually Premium."
+            },
+            {
+              "key": "not_sure",
+              "label": "Not sure",
+              "description": "We’ll recommend based on page count and confirm the setup scope before work begins."
+            }
+          ]
+        }
+      },
+      "setupScopeHint": "Website setup includes page structure, basic content placement, and launch support. Large content libraries, custom copywriting, advanced SEO pages, or heavy manual uploads may require Premium or a custom quote.",
+      "final": {
+        "title": "Your recommended package",
+        "subtitle": "You only need one monthly Schedulaa plan. Website setup is optional and one-time if you want our team to build the site for you.",
+        "monthlyPlanLabel": "Recommended monthly plan",
+        "monthlySubscriptionLabel": "Monthly subscription",
+        "optionalSetupLabel": "Optional one-time website setup",
+        "startTrialTemplate": "Start 14-day free trial with {{plan}}",
+        "noSetupTitle": "No setup required",
+        "noSetupPrice": "$0",
+        "includedWithPlan": "Included with your monthly plan",
+        "whyLabel": "Why:",
+        "startTrialNote": "This starts the monthly Schedulaa plan. Website setup can be added separately if needed.",
+        "viewPlanTemplate": "View {{plan}} plan",
+        "talkToSales": "Talk to sales",
+        "summaryTitle": "Your recommendation:",
+        "summaryMonthlyTemplate": "Monthly plan: {{plan}} - {{price}}",
+        "summaryOptionalSetupTemplate": "Optional one-time setup: {{setup}} - {{price}}",
+        "summaryNoSetup": "Website setup: Not needed. You can build it yourself.",
+        "recurringNote": "The monthly plan is recurring. Website setup is optional and one-time.",
+        "addLaterNote": "You can add website setup later if needed.",
+        "reassurance": "You can start with the monthly plan first and add website setup later.",
+        "activeSubscriptionNote": "Requires an active Schedulaa subscription. Domain purchase is not included.",
+        "scopeConfirmedNote": "Final setup scope is confirmed before work begins. Extra pages, large content migration, custom copywriting, advanced SEO pages, or heavy gallery/product uploads may be quoted separately.",
+        "recommendationTitle": "Your recommended setup",
+        "noSetupDescription": "Build it yourself with the included website builder. You can add setup help later if needed.",
+        "loadingTrial": "Starting your free trial...",
+        "reasons": {
+          "starter": "Starter is recommended because you mainly need a website, online booking, contact forms, services, and products without staff scheduling or finance workflows.",
+          "starterFallback": "Starter is recommended because your needs still fit a simple website, booking, and lead-capture workflow.",
+          "proScheduling": "Pro is recommended because you selected staff scheduling and team visibility workflows.",
+          "proEmployeePortal": "Pro is recommended because you selected employee portal and team workflows.",
+          "proTeamService": "Pro is recommended because you have a team and selected service-business needs like online booking, contact forms, services, or products. Starter may be enough if one person manages everything and you do not need staff workflows.",
+          "proFallback": "Pro is recommended because you have a team and may benefit from staff-facing workflows even if one person can still manage the basics today.",
+          "business": "Business is recommended because you selected quote-to-invoice or finance-ready workflows such as quotes, work orders, invoices, inventory, reporting, or month-end review.",
+          "setupNone": "You can use the included website builder and add setup help later if needed.",
+          "setupBasic": "Basic is recommended because your site looks like a simple 1-5 page setup with straightforward content.",
+          "setupGrowth": "Growth is recommended because your site needs a fuller structure with services, content, and lead capture.",
+          "setupPremiumLarge": "Premium is recommended because your page count suggests a larger site with more structure and setup work.",
+          "setupPremiumAssets": "Premium is recommended because migration or heavy content uploads usually need a scoped setup review."
+        },
+        "guidance": {
+          "starter": "Need staff scheduling, employee logins, or team visibility? Pro may be a better fit.",
+          "pro": "Need quotes, estimates, work orders, invoices, inventory, or month-end reporting? Business may be a better fit.",
+          "business": "Best fit for quote-to-invoice operations, job tracking, finance-ready reporting, and more operational control."
+        }
+      }
+    }
   }
 }
