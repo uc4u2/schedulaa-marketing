@@ -9,160 +9,64 @@ import { buildAppUrl, buildUpgradeUrl, marketingReturnTo } from '@/utils/appLink
 import { AppLocale, detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import { trackMetaPixel } from '@/utils/metaPixel';
 
-type PlanFeature = string | { type?: string; text?: string };
-type Plan = {
-  key: string;
-  name: string;
-  price: string;
-  description: string;
-  trialNote?: string;
-  features?: PlanFeature[];
-  ctaLabel?: string;
-  ctaTo?: string;
-  highlight?: boolean;
-  badge?: string;
-};
+import PlanFinderModal from './PlanFinderModal';
+import { getPricingExperience, type PlanFeature, type PricingSource } from './pricingCatalog';
+
+const BOOK_DEMO_FALLBACK =
+  'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
+
+const renderPlanFeatures = (planKey: string, features: PlanFeature[] = []) => (
+  <ul className="space-y-2">
+    {features.map((feature, index) => {
+      if (typeof feature === 'string') {
+        return (
+          <li key={`${planKey}-f-${index}`} className="list-inside list-disc text-tagline-2">
+            {feature}
+          </li>
+        );
+      }
+      if (feature?.type === 'heading') {
+        return (
+          <li key={`${planKey}-h-${index}`} className="pt-2 text-tagline-1 font-semibold">
+            {feature.text}
+          </li>
+        );
+      }
+      return null;
+    })}
+  </ul>
+);
 
 const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
   const pathname = usePathname() || '/';
   const locale = pageLocale ?? (detectLocaleFromPath(pathname) as AppLocale);
   const returnTo = marketingReturnTo(locale, '/pricing');
-  const pricingSource = getPricingSource(locale);
-  const rows = pricingSource.comparison.rows;
-  const values = pricingSource.comparison.values;
-  const yes = values.yes || 'Yes';
-  const dash = values.dash || '—';
-  const comparisonSections = [
-    {
-      section: rows.website.section,
-      items: [
-        { label: rows.website.builder, starter: yes, pro: yes, business: yes },
-        { label: rows.website.customDomain, starter: yes, pro: yes, business: yes },
-        { label: rows.website.publicBooking, starter: yes, pro: yes, business: yes },
-        { label: rows.website.embedded, starter: yes, pro: yes, business: yes },
-        { label: rows.website.branding, starter: dash, pro: dash, business: yes },
-      ],
-    },
-    {
-      section: rows.booking.section,
-      items: [
-        { label: rows.booking.online, starter: yes, pro: yes, business: yes },
-        { label: rows.booking.reschedule, starter: yes, pro: yes, business: yes },
-        { label: rows.booking.multi, starter: yes, pro: yes, business: yes },
-        { label: rows.booking.staffScheduling, starter: dash, pro: yes, business: yes },
-        { label: rows.booking.shiftSwaps, starter: dash, pro: yes, business: yes },
-        { label: rows.booking.bulk, starter: dash, pro: dash, business: yes },
-      ],
-    },
-    {
-      section: rows.time.section,
-      items: [
-        { label: rows.time.clock, starter: dash, pro: yes, business: yes },
-        { label: rows.time.breakPolicy, starter: dash, pro: yes, business: yes },
-        { label: rows.time.staggered, starter: dash, pro: yes, business: yes },
-        { label: rows.time.ipHints, starter: dash, pro: yes, business: yes },
-        { label: rows.time.overtime, starter: dash, pro: yes, business: yes },
-      ],
-    },
-    {
-      section: rows.payroll.section,
-      items: [
-        { label: rows.payroll.processing, starter: dash, pro: yes, business: yes },
-        { label: rows.payroll.holiday, starter: dash, pro: yes, business: yes },
-        { label: rows.payroll.payslip, starter: dash, pro: yes, business: yes },
-        { label: rows.payroll.exports, starter: dash, pro: dash, business: yes },
-        { label: rows.payroll.invoicing, starter: dash, pro: yes, business: yes },
-      ],
-    },
-    {
-      section: rows.compliance.section,
-      items: [
-        { label: rows.compliance.revenueReports, starter: yes, pro: yes, business: yes },
-        { label: rows.compliance.exports, starter: yes, pro: yes, business: yes },
-        { label: rows.compliance.w2, starter: dash, pro: dash, business: yes },
-        { label: rows.compliance.t4, starter: dash, pro: dash, business: yes },
-        { label: rows.compliance.audit, starter: dash, pro: dash, business: yes },
-      ],
-    },
-    {
-      section: rows.analytics.section,
-      items: [
-        { label: rows.analytics.revenueDash, starter: yes, pro: yes, business: yes },
-        { label: rows.analytics.utilization, starter: dash, pro: yes, business: yes },
-        { label: rows.analytics.segmentation, starter: dash, pro: yes, business: yes },
-        { label: rows.analytics.multiLocation, starter: dash, pro: dash, business: yes },
-      ],
-    },
-    {
-      section: rows.automation.section,
-      items: [
-        { label: rows.automation.notifications, starter: yes, pro: yes, business: yes },
-        { label: rows.automation.campaigns, starter: dash, pro: yes, business: yes },
-        { label: rows.automation.zapier, starter: dash, pro: yes, business: yes },
-        { label: rows.automation.workflows, starter: dash, pro: yes, business: yes },
-      ],
-    },
-    {
-      section: rows.hiring.section,
-      items: [
-        { label: rows.hiring.jobs, starter: dash, pro: yes, business: yes },
-        { label: rows.hiring.resume, starter: dash, pro: yes, business: yes },
-        { label: rows.hiring.onboarding, starter: dash, pro: yes, business: yes },
-        { label: rows.hiring.handoff, starter: dash, pro: yes, business: yes },
-      ],
-    },
-    {
-      section: rows.scale.section,
-      items: [
-        {
-          label: rows.scale.seatsIncluded,
-          starter: rows.scale.starterSeats,
-          pro: rows.scale.proSeats,
-          business: rows.scale.businessSeats,
-        },
-        { label: rows.scale.additionalSeats, starter: dash, pro: rows.scale.seatPrice, business: rows.scale.seatPrice },
-        {
-          label: rows.scale.multiLocation,
-          starter: rows.scale.starterLocations,
-          pro: rows.scale.proLocations,
-          business: rows.scale.businessLocations,
-        },
-        {
-          label: rows.scale.roleAccess,
-          starter: rows.scale.starterAccess,
-          pro: rows.scale.proAccess,
-          business: rows.scale.businessAccess,
-        },
-        { label: rows.scale.branchPermissions, starter: dash, pro: dash, business: yes },
-      ],
-    },
-    {
-      section: rows.support.section,
-      items: [
-        { label: rows.support.standard, starter: yes, pro: yes, business: yes },
-        { label: rows.support.priority, starter: dash, pro: values.businessHours, business: values.always },
-        { label: rows.support.audit, starter: dash, pro: dash, business: yes },
-      ],
-    },
-  ];
-
-  const plans = pricingSource.plans.table.list as Plan[];
+  const pricingSource = getPricingSource(locale) as PricingSource;
+  const experience = getPricingExperience(locale, pricingSource);
   const hero = pricingSource.hero;
-  const comparison = pricingSource.comparison;
   const included = pricingSource.included;
   const assurances = pricingSource.assurances;
   const whyTeams = pricingSource.whyTeams;
   const ctaBanner = pricingSource.ctaBanner;
-  const addOns = pricingSource.plans.table.addons;
-  const websiteDesignService = pricingSource.websiteDesignService;
-  const bookDemoHref =
-    process.env.NEXT_PUBLIC_BOOK_DEMO_URL ||
-    'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
+  const bookDemoHref = process.env.NEXT_PUBLIC_BOOK_DEMO_URL || BOOK_DEMO_FALLBACK;
+
+  const basicSetupHref = buildAppUrl('/upgrade', {
+    returnTo,
+    params: { addon: 'website_design' },
+  });
+  const growthSetupHref = `${withLocalePath('/contact', locale)}?topic=website-setup-growth`;
+  const premiumSetupHref = `${withLocalePath('/contact', locale)}?topic=website-setup-premium`;
+  const planHrefFor = (planKey: string) =>
+    buildUpgradeUrl({
+      plan: planKey,
+      interval: 'monthly',
+      returnTo,
+    });
 
   return (
     <section className="relative pt-[110px] pb-18 md:pt-[150px] md:pb-24">
       <div className="main-container space-y-14">
-        <div className="mx-auto max-w-[960px] text-center">
+        <div className="mx-auto max-w-[980px] text-center">
           <span className="badge badge-yellow-v2 mb-4">{hero.eyebrow}</span>
           <h1 className="mb-4">
             {hero.title[0]}
@@ -201,37 +105,26 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
-          <div className="grid gap-5 lg:grid-cols-[1.2fr_1fr] lg:items-center">
-            <div className="space-y-2">
-              <h2 className="text-heading-5 md:text-heading-4">Choose a plan based on labor visibility and payroll readiness.</h2>
-              <p className="text-secondary/70 dark:text-accent/70">
-                Start free if you want to test the workflow. Book a live demo if you want to see scheduling, labor
-                cost tracking, and payroll-ready reporting mapped to your team.
-              </p>
-            </div>
-            <div className="grid gap-3 sm:grid-cols-3">
-              {[
-                ['Starter', 'Book online and run the basics'],
-                ['Pro', 'Unlock advanced analytics and workforce controls'],
-                ['Business', 'Scale reporting, exports, and multi-location ops'],
-              ].map(([title, body]) => (
-                <div key={title} className="rounded-2xl border border-stroke-2 p-4 text-sm dark:border-stroke-7">
-                  <p className="font-semibold">{title}</p>
-                  <p className="mt-1 text-secondary/70 dark:text-accent/70">{body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <PlanFinderModal
+          locale={locale}
+          comparePlansHref="#plans"
+          content={experience.planFinder}
+          plans={experience.subscriptionPlans}
+          setupServices={experience.websiteSetupServices}
+          planHrefFor={planHrefFor}
+          basicSetupHref={basicSetupHref}
+          growthSetupHref={growthSetupHref}
+          premiumSetupHref={premiumSetupHref}
+        />
 
         <div className="rounded-2xl border border-stroke-2 bg-white p-4 text-sm dark:border-stroke-7 dark:bg-background-8">
           <span dangerouslySetInnerHTML={{ __html: pricingSource.ribbon.message }} />
         </div>
 
         <div id="plans" className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {plans.map((plan, index) => (
+          {experience.subscriptionPlans.map((plan, index) => (
             <article
+              id={`plan-${plan.key}`}
               key={plan.key}
               className={`rounded-2xl border p-6 ${
                 plan.highlight
@@ -244,18 +137,16 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
                   '--card-rotate-end': index === 1 ? '0deg' : index % 2 === 0 ? '-1deg' : '1deg',
                   animation: `heroCardDrop 920ms cubic-bezier(0.23,1,0.32,1) ${120 + index * 220}ms both, heroCardDrift ${7.4 + index * 0.35}s ease-in-out ${1.2 + index * 0.25}s infinite`,
                 } as CSSProperties
-              }>
+              }
+            >
               {plan.badge ? <span className="badge badge-cyan mb-3">{plan.badge}</span> : null}
               <h2 className="text-heading-4 mb-2">{plan.name}</h2>
-              <p className="mb-3 text-tagline-2">{plan.price}</p>
+              <p className="mb-2 text-heading-5">{plan.price}</p>
+              <p className="mb-3 text-sm font-semibold text-secondary/70 dark:text-accent/70">{plan.positioning}</p>
               <p className="mb-3">{plan.description}</p>
-              {plan.trialNote ? <p className="mb-5 text-tagline-2 text-secondary/70 dark:text-accent/70">{plan.trialNote}</p> : null}
+              <p className="mb-5 text-tagline-2 text-secondary/70 dark:text-accent/70">{plan.trialNote}</p>
               <a
-                href={buildUpgradeUrl({
-                  plan: plan.key,
-                  interval: 'monthly',
-                  returnTo,
-                })}
+                href={planHrefFor(plan.key)}
                 className="btn btn-md btn-secondary mb-5 block w-full text-center"
                 onClick={() =>
                   trackMetaPixel('CompleteRegistration', {
@@ -263,8 +154,9 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
                     page_path: '/pricing',
                     plan_name: plan.name,
                   })
-                }>
-                {plan.ctaLabel || 'Start free trial'}
+                }
+              >
+                {plan.ctaLabel}
               </a>
               <a
                 href={bookDemoHref}
@@ -277,74 +169,111 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
                   })
                 }
               >
-                Book a live demo
+                Book a demo
               </a>
-              <ul className="space-y-2">
-                {(plan.features || []).map((feature, index) => {
-                  if (typeof feature === 'string') {
-                    return (
-                      <li key={`${plan.key}-f-${index}`} className="list-inside list-disc text-tagline-2">
-                        {feature}
-                      </li>
-                    );
-                  }
-                  if (feature?.type === 'heading') {
-                    return (
-                      <li key={`${plan.key}-h-${index}`} className="pt-2 text-tagline-1 font-semibold">
-                        {feature.text}
-                      </li>
-                    );
-                  }
-                  return null;
-                })}
-              </ul>
+              {renderPlanFeatures(plan.key, plan.features)}
             </article>
           ))}
         </div>
 
-        <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
-          <h3 className="mb-2">{websiteDesignService.title}</h3>
-          <p className="mb-2">{websiteDesignService.description}</p>
-          <p className="mb-4 text-tagline-2 text-secondary/70 dark:text-accent/70">{websiteDesignService.includes}</p>
-          <a
-            href={buildAppUrl('/upgrade', {
-              returnTo,
-              params: { addon: 'website_design' },
-            })}
-            className="btn btn-secondary btn-md"
-          >
-            {websiteDesignService.cta}
-          </a>
+        <div className="rounded-3xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+            <div>
+              <span className="badge badge-cyan mb-4">{experience.quoteToInvoiceSection.badge}</span>
+              <h2 className="text-heading-3">{experience.quoteToInvoiceSection.title}</h2>
+              <p className="mt-3 max-w-[760px] text-secondary/75 dark:text-accent/75">
+                {experience.quoteToInvoiceSection.subtitle}
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <a href="#plan-business" className="btn btn-secondary btn-md">
+                  {experience.quoteToInvoiceSection.primaryCtaLabel}
+                </a>
+                <Link href={withLocalePath('/contact', locale)} className="btn btn-white dark:btn-white-dark btn-md text-center">
+                  {experience.quoteToInvoiceSection.secondaryCtaLabel}
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-2xl border border-stroke-2 p-5 dark:border-stroke-7">
+              <ul className="space-y-3">
+                {experience.quoteToInvoiceSection.bullets.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm leading-6 text-secondary/80 dark:text-accent/80">
+                    <span className="mt-1 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-primary/12 text-xs font-bold text-primary">
+                      ✓
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
-          <h2 className="mb-2">{comparison.title}</h2>
-          <p className="mb-6">{comparison.subtitle}</p>
+        <div className="rounded-3xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+          <div className="max-w-[860px]">
+            <h2 className="text-heading-3">{experience.websiteSetupServices.title}</h2>
+            <p className="mt-3 text-secondary/75 dark:text-accent/75">{experience.websiteSetupServices.subtitle}</p>
+            <p className="mt-3 text-sm leading-6 text-secondary/70 dark:text-accent/70">{experience.websiteSetupServices.note}</p>
+          </div>
+          <div className="mt-6 grid gap-6 lg:grid-cols-3">
+            {experience.websiteSetupServices.items.map((service) => (
+              <article key={service.key} className="rounded-2xl border border-stroke-2 p-6 dark:border-stroke-7">
+                <h3 className="text-heading-5">{service.name}</h3>
+                <p className="mt-2 text-heading-6">{service.price}</p>
+                <p className="mt-1 text-sm font-medium text-secondary/70 dark:text-accent/70">{service.priceNote}</p>
+                <p className="mt-4 text-sm leading-6 text-secondary/75 dark:text-accent/75">{service.bestFor}</p>
+                <p className="mt-4 text-sm leading-6 text-secondary/75 dark:text-accent/75">{service.description}</p>
+                <ul className="mt-5 space-y-2">
+                  {service.includes.map((item) => (
+                    <li key={item} className="list-inside list-disc text-tagline-2">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                {service.key === 'basic' ? (
+                  <a href={basicSetupHref} className="btn btn-primary btn-md mt-6 block w-full text-center">
+                    {service.ctaLabel}
+                  </a>
+                ) : service.key === 'growth' ? (
+                  <Link href={growthSetupHref} className="btn btn-primary btn-md mt-6 block w-full text-center">
+                    {service.ctaLabel}
+                  </Link>
+                ) : (
+                  <Link href={premiumSetupHref} className="btn btn-primary btn-md mt-6 block w-full text-center">
+                    {service.ctaLabel}
+                  </Link>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-3xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+          <h2 className="mb-2 text-heading-3">{experience.comparison.title}</h2>
+          <p className="mb-6 text-secondary/75 dark:text-accent/75">{experience.comparison.subtitle}</p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[780px] border-collapse text-left text-sm">
               <thead>
                 <tr className="border-b border-stroke-2 dark:border-stroke-7">
-                  <th className="px-3 py-3">{comparison.headers.feature}</th>
-                  <th className="px-3 py-3">{comparison.headers.starter}</th>
-                  <th className="px-3 py-3">{comparison.headers.pro}</th>
-                  <th className="px-3 py-3">{comparison.headers.business}</th>
+                  <th className="px-3 py-3">{experience.comparison.headers.feature}</th>
+                  <th className="px-3 py-3">{experience.comparison.headers.starter}</th>
+                  <th className="px-3 py-3">{experience.comparison.headers.pro}</th>
+                  <th className="px-3 py-3">{experience.comparison.headers.business}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-stroke-2 dark:border-stroke-7">
-                  <td className="px-3 py-3">{comparison.rows.price.label}</td>
-                  <td className="px-3 py-3">{comparison.rows.price.starter}</td>
-                  <td className="px-3 py-3">{comparison.rows.price.pro}</td>
-                  <td className="px-3 py-3">{comparison.rows.price.business}</td>
+                  <td className="px-3 py-3">{experience.comparison.rows.price.label}</td>
+                  <td className="px-3 py-3">{experience.comparison.rows.price.starter}</td>
+                  <td className="px-3 py-3">{experience.comparison.rows.price.pro}</td>
+                  <td className="px-3 py-3">{experience.comparison.rows.price.business}</td>
                 </tr>
                 <tr className="border-b border-stroke-2 dark:border-stroke-7">
-                  <td className="px-3 py-3">{comparison.rows.bestFor.label}</td>
-                  <td className="px-3 py-3">{comparison.rows.bestFor.starter}</td>
-                  <td className="px-3 py-3">{comparison.rows.bestFor.pro}</td>
-                  <td className="px-3 py-3">{comparison.rows.bestFor.business}</td>
+                  <td className="px-3 py-3">{experience.comparison.rows.bestFor.label}</td>
+                  <td className="px-3 py-3">{experience.comparison.rows.bestFor.starter}</td>
+                  <td className="px-3 py-3">{experience.comparison.rows.bestFor.pro}</td>
+                  <td className="px-3 py-3">{experience.comparison.rows.bestFor.business}</td>
                 </tr>
-
-                {comparisonSections.flatMap((group) => [
+                {experience.comparison.sections.flatMap((group) => [
                   <tr
                     key={`${group.section}-title`}
                     className="border-b border-stroke-2 bg-background-3 dark:border-stroke-7 dark:bg-background-5"
@@ -371,7 +300,7 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
           <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
             <h3 className="mb-3">{included.title}</h3>
             <ul className="space-y-2">
-              {included.items.map((item) => (
+              {included.items.map((item: string) => (
                 <li key={item} className="list-inside list-disc text-tagline-2">
                   {item}
                 </li>
@@ -381,7 +310,7 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
           <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
             <h3 className="mb-3">{whyTeams.title}</h3>
             <ul className="space-y-2">
-              {whyTeams.items.map((item) => (
+              {whyTeams.items.map((item: string) => (
                 <li key={item} className="list-inside list-disc text-tagline-2">
                   {item}
                 </li>
@@ -394,34 +323,12 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
           <h3 className="mb-2">{assurances.title}</h3>
           <p className="mb-5">{assurances.subtitle}</p>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {assurances.items.map((item) => (
+            {assurances.items.map((item: { key: string; title: string; description: string }) => (
               <article key={item.key} className="rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
                 <h4 className="mb-1 text-heading-6">{item.title}</h4>
                 <p className="text-tagline-2">{item.description}</p>
               </article>
             ))}
-          </div>
-        </div>
-
-        <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
-          <h3 className="mb-3">{addOns.title}</h3>
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[420px] border-collapse text-left text-sm">
-              <thead>
-                <tr className="border-b border-stroke-2 dark:border-stroke-7">
-                  <th className="px-3 py-3">{addOns.headers.addon}</th>
-                  <th className="px-3 py-3">{addOns.headers.price}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {addOns.items.map((item) => (
-                  <tr key={item.key} className="border-b border-stroke-2 dark:border-stroke-7">
-                    <td className="px-3 py-3">{item.name}</td>
-                    <td className="px-3 py-3">{item.price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         </div>
 
