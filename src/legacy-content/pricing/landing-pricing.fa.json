@@ -1159,8 +1159,69 @@
             {
               "key": "other",
               "label": "سایر کسب‌وکارهای خدماتی"
+            },
+            {
+              "key": "beauty_salon",
+              "label": "سالن زیبایی"
+            },
+            {
+              "key": "hair_salon",
+              "label": "آرایشگاه مو"
+            },
+            {
+              "key": "barbershop",
+              "label": "آرایشگاه مردانه"
+            },
+            {
+              "key": "nail_salon",
+              "label": "سالن ناخن"
+            },
+            {
+              "key": "spa",
+              "label": "اسپا / مرکز تندرستی"
+            },
+            {
+              "key": "massage_clinic",
+              "label": "کلینیک ماساژ"
+            },
+            {
+              "key": "dental_clinic",
+              "label": "کلینیک دندانپزشکی"
+            },
+            {
+              "key": "physio_clinic",
+              "label": "کلینیک فیزیوتراپی"
+            },
+            {
+              "key": "chiro_clinic",
+              "label": "کلینیک کایروپراکتیک"
+            },
+            {
+              "key": "pet_grooming",
+              "label": "خدمات گرومینگ حیوانات خانگی"
+            },
+            {
+              "key": "tutoring_center",
+              "label": "مرکز تدریس خصوصی"
+            },
+            {
+              "key": "consulting_firm",
+              "label": "شرکت مشاوره"
+            },
+            {
+              "key": "real_estate",
+              "label": "بنگاه املاک"
+            },
+            {
+              "key": "event_venue",
+              "label": "محل برگزاری رویداد"
+            },
+            {
+              "key": "fitness_studio",
+              "label": "استودیوی تناسب اندام"
             }
-          ]
+          ],
+          "noResults": "نوع کسب‌وکار مطابقی پیدا نشد."
         },
         "teamSize": {
           "label": "چند نفر در تیم شما هستند؟",

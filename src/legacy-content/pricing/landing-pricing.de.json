@@ -1122,8 +1122,69 @@
             {
               "key": "other",
               "label": "Anderes Serviceunternehmen"
+            },
+            {
+              "key": "beauty_salon",
+              "label": "Kosmetikstudio"
+            },
+            {
+              "key": "hair_salon",
+              "label": "Friseursalon"
+            },
+            {
+              "key": "barbershop",
+              "label": "Barbershop"
+            },
+            {
+              "key": "nail_salon",
+              "label": "Nagelstudio"
+            },
+            {
+              "key": "spa",
+              "label": "Spa / Wellnesszentrum"
+            },
+            {
+              "key": "massage_clinic",
+              "label": "Massagepraxis"
+            },
+            {
+              "key": "dental_clinic",
+              "label": "Zahnarztpraxis"
+            },
+            {
+              "key": "physio_clinic",
+              "label": "Physiotherapiepraxis"
+            },
+            {
+              "key": "chiro_clinic",
+              "label": "Chiropraktik-Praxis"
+            },
+            {
+              "key": "pet_grooming",
+              "label": "Tierpflegesalon"
+            },
+            {
+              "key": "tutoring_center",
+              "label": "Nachhilfezentrum"
+            },
+            {
+              "key": "consulting_firm",
+              "label": "Beratungsunternehmen"
+            },
+            {
+              "key": "real_estate",
+              "label": "Immobilienagentur"
+            },
+            {
+              "key": "event_venue",
+              "label": "Eventlocation"
+            },
+            {
+              "key": "fitness_studio",
+              "label": "Fitnessstudio"
             }
-          ]
+          ],
+          "noResults": "Keine passenden Geschäftsarten gefunden."
         },
         "teamSize": {
           "label": "Wie viele Personen gehören zu Ihrem Team?",

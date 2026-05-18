@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type WheelEvent } from 'react';
 
 import { AppLocale, withLocalePath } from '@/utils/locale';
 
@@ -71,6 +71,9 @@ export default function PlanFinderModal({
   const [open, setOpen] = useState(false);
   const [stepIndex, setStepIndex] = useState(0);
   const [answers, setAnswers] = useState<PlanFinderAnswers>(DEFAULT_ANSWERS);
+  const [businessTypeQuery, setBusinessTypeQuery] = useState('');
+  const dialogRef = useRef<HTMLDivElement | null>(null);
+  const contentScrollRef = useRef<HTMLDivElement | null>(null);
 
   const needsWebsiteSetupQuestions =
     !!answers.websiteNeed &&
@@ -139,10 +142,55 @@ export default function PlanFinderModal({
   const resetAndOpen = () => {
     setAnswers(DEFAULT_ANSWERS);
     setStepIndex(0);
+    setBusinessTypeQuery('');
     setOpen(true);
   };
 
   const close = () => setOpen(false);
+
+  const handleContainedWheel = (event: WheelEvent<HTMLElement>) => {
+    const target = event.target as HTMLElement | null;
+    const boundary = dialogRef.current;
+    if (!target || !boundary) {
+      return;
+    }
+
+    const scrollables: HTMLElement[] = [];
+    let node: HTMLElement | null = target;
+
+    while (node && node !== boundary) {
+      if (node.dataset.planfinderScrollable === 'true') {
+        scrollables.push(node);
+      }
+      node = node.parentElement;
+    }
+
+    if (contentScrollRef.current && !scrollables.includes(contentScrollRef.current)) {
+      scrollables.push(contentScrollRef.current);
+    }
+
+    const canScroll = (element: HTMLElement) => {
+      if (element.scrollHeight <= element.clientHeight) {
+        return false;
+      }
+      if (event.deltaY < 0) {
+        return element.scrollTop > 0;
+      }
+      if (event.deltaY > 0) {
+        return element.scrollTop + element.clientHeight < element.scrollHeight - 1;
+      }
+      return false;
+    };
+
+    const activeScrollable = scrollables.find(canScroll) ?? scrollables[0];
+    if (!activeScrollable) {
+      return;
+    }
+
+    activeScrollable.scrollTop += event.deltaY;
+    event.preventDefault();
+    event.stopPropagation();
+  };
 
   const setAnswer = (field: keyof PlanFinderAnswers, value: string) => {
     setAnswers((prev) => {
@@ -244,6 +292,81 @@ export default function PlanFinderModal({
     </div>
   );
 
+  const filteredBusinessTypeOptions = useMemo(() => {
+    const query = businessTypeQuery.trim().toLowerCase();
+    if (!query) {
+      return content.questions.businessType.options;
+    }
+    return content.questions.businessType.options.filter((option) => {
+      const label = getOptionLabel(option).toLowerCase();
+      const description = getOptionDescription(option).toLowerCase();
+      return label.includes(query) || description.includes(query);
+    });
+  }, [businessTypeQuery, content.questions.businessType.options]);
+
+  const renderBusinessTypeSelector = () => (
+    <div className="space-y-5">
+      <div>
+        <h3 className="text-heading-4">{content.questions.businessType.label}</h3>
+        <p className="mt-2 text-sm leading-6 text-secondary/70 dark:text-accent/70">
+          {content.questions.businessType.helper}
+        </p>
+      </div>
+      <div className="rounded-2xl border border-stroke-2 bg-background-1 p-4 dark:border-stroke-7 dark:bg-background-7/60">
+        <div className="flex items-center gap-3 rounded-2xl border border-stroke-2 bg-white px-4 py-3 dark:border-stroke-7 dark:bg-background-8">
+          <svg viewBox="0 0 24 24" className="h-5 w-5 flex-none text-secondary/50 dark:text-accent/50" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-4.35-4.35" />
+            <circle cx="11" cy="11" r="6" />
+          </svg>
+          <input
+            type="text"
+            value={businessTypeQuery}
+            onChange={(event) => setBusinessTypeQuery(event.target.value)}
+            placeholder={content.questions.businessType.helper}
+            className="w-full bg-transparent text-sm text-secondary outline-none placeholder:text-secondary/45 dark:text-accent dark:placeholder:text-accent/45"
+          />
+        </div>
+        <div
+          data-planfinder-scrollable="true"
+          onWheelCapture={handleContainedWheel}
+          className="mt-4 max-h-[420px] overflow-y-auto overscroll-contain pr-1"
+        >
+          <div className="space-y-2">
+            {filteredBusinessTypeOptions.map((option) => {
+              const optionValue = getOptionValue(option);
+              const optionLabel = getOptionLabel(option);
+              const selected = answers.businessType === optionValue;
+              return (
+                <button
+                  key={optionValue}
+                  type="button"
+                  onClick={() => setAnswer('businessType', optionValue)}
+                  className={`flex w-full items-center justify-between rounded-2xl border px-4 py-3 text-left transition ${
+                    selected
+                      ? 'border-primary bg-primary/10 shadow-[0_12px_28px_rgba(21,101,216,0.12)]'
+                      : 'border-stroke-2 bg-white hover:border-primary/60 hover:shadow-[0_12px_28px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8'
+                  }`}
+                >
+                  <span className="font-medium text-secondary dark:text-white">{optionLabel}</span>
+                  {selected ? (
+                    <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
+                      ✓
+                    </span>
+                  ) : null}
+                </button>
+              );
+            })}
+            {filteredBusinessTypeOptions.length === 0 ? (
+              <div className="rounded-2xl border border-dashed border-stroke-2 px-4 py-6 text-sm text-secondary/65 dark:border-stroke-7 dark:text-accent/65">
+                {content.questions.businessType.noResults}
+              </div>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
   const setupScopeHint = (
     <div className="rounded-2xl border border-primary/15 bg-primary/5 p-4 text-sm leading-6 text-secondary/75 dark:text-accent/75">
       {content.setupScopeHint}
@@ -253,23 +376,7 @@ export default function PlanFinderModal({
   const renderStep = () => {
     switch (currentStep?.key) {
       case 'businessType':
-        return (
-          <div className="space-y-5">
-            <div>
-              <h3 className="text-heading-4">{content.questions.businessType.label}</h3>
-              <p className="mt-2 text-sm leading-6 text-secondary/70 dark:text-accent/70">
-                {content.questions.businessType.helper}
-              </p>
-            </div>
-            <div className="max-h-[420px] overflow-y-auto pr-1">
-              {renderCards({
-                options: content.questions.businessType.options,
-                value: answers.businessType,
-                onSelect: (value) => setAnswer('businessType', value),
-              })}
-            </div>
-          </div>
-        );
+        return renderBusinessTypeSelector();
       case 'teamSize':
         return (
           <div className="space-y-5">
@@ -523,10 +630,12 @@ export default function PlanFinderModal({
       </div>
 
       {open ? (
-        <div className="fixed inset-0 z-[110] bg-slate-950/45" aria-hidden={!open}>
+        <div className="fixed inset-0 z-[110] overflow-hidden bg-slate-950/45" aria-hidden={!open}>
           <div className="absolute inset-0" onClick={close} />
           <div
-            className="absolute inset-x-0 bottom-0 top-0 z-10 mx-auto flex w-full max-w-[920px] flex-col bg-white shadow-2xl dark:bg-background-8 md:top-8 md:bottom-8 md:rounded-3xl"
+            ref={dialogRef}
+            onWheelCapture={handleContainedWheel}
+            className="absolute inset-x-0 bottom-0 top-0 z-10 mx-auto flex w-full max-w-[920px] flex-col overflow-hidden bg-white shadow-2xl dark:bg-background-8 md:top-8 md:bottom-8 md:rounded-3xl"
             role="dialog"
             aria-modal="true"
             aria-label={content.title}
@@ -552,7 +661,13 @@ export default function PlanFinderModal({
               </div>
             </div>
 
-            <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6 sm:py-7">{renderStep()}</div>
+            <div
+              ref={contentScrollRef}
+              data-planfinder-scrollable="true"
+              className="flex-1 overflow-y-auto overscroll-contain px-4 py-6 sm:px-6 sm:py-7"
+            >
+              {renderStep()}
+            </div>
 
             <div className="sticky bottom-0 border-t border-stroke-2 bg-white px-4 py-4 dark:border-stroke-7 dark:bg-background-8 sm:px-6">
               <div className="flex items-center justify-between gap-3">

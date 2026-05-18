@@ -1159,8 +1159,69 @@
             {
               "key": "other",
               "label": "Другой сервисный бизнес"
+            },
+            {
+              "key": "beauty_salon",
+              "label": "Салон красоты"
+            },
+            {
+              "key": "hair_salon",
+              "label": "Парикмахерская"
+            },
+            {
+              "key": "barbershop",
+              "label": "Барбершоп"
+            },
+            {
+              "key": "nail_salon",
+              "label": "Ногтевая студия"
+            },
+            {
+              "key": "spa",
+              "label": "Спа-центр / велнес"
+            },
+            {
+              "key": "massage_clinic",
+              "label": "Массажная клиника"
+            },
+            {
+              "key": "dental_clinic",
+              "label": "Стоматологическая клиника"
+            },
+            {
+              "key": "physio_clinic",
+              "label": "Физиотерапевтическая клиника"
+            },
+            {
+              "key": "chiro_clinic",
+              "label": "Хиропрактическая клиника"
+            },
+            {
+              "key": "pet_grooming",
+              "label": "Груминг-салон для животных"
+            },
+            {
+              "key": "tutoring_center",
+              "label": "Центр репетиторства"
+            },
+            {
+              "key": "consulting_firm",
+              "label": "Консалтинговая компания"
+            },
+            {
+              "key": "real_estate",
+              "label": "Агентство недвижимости"
+            },
+            {
+              "key": "event_venue",
+              "label": "Площадка для мероприятий"
+            },
+            {
+              "key": "fitness_studio",
+              "label": "Фитнес-студия"
             }
-          ]
+          ],
+          "noResults": "Подходящие типы бизнеса не найдены."
         },
         "teamSize": {
           "label": "Сколько людей в вашей команде?",

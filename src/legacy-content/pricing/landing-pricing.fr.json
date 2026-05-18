@@ -1122,8 +1122,69 @@
             {
               "key": "other",
               "label": "Autre entreprise de services"
+            },
+            {
+              "key": "beauty_salon",
+              "label": "Salon de beauté"
+            },
+            {
+              "key": "hair_salon",
+              "label": "Salon de coiffure"
+            },
+            {
+              "key": "barbershop",
+              "label": "Barbier"
+            },
+            {
+              "key": "nail_salon",
+              "label": "Salon de manucure"
+            },
+            {
+              "key": "spa",
+              "label": "Spa / centre bien-être"
+            },
+            {
+              "key": "massage_clinic",
+              "label": "Clinique de massage"
+            },
+            {
+              "key": "dental_clinic",
+              "label": "Clinique dentaire"
+            },
+            {
+              "key": "physio_clinic",
+              "label": "Clinique de physiothérapie"
+            },
+            {
+              "key": "chiro_clinic",
+              "label": "Clinique chiropratique"
+            },
+            {
+              "key": "pet_grooming",
+              "label": "Toilettage pour animaux"
+            },
+            {
+              "key": "tutoring_center",
+              "label": "Centre de tutorat"
+            },
+            {
+              "key": "consulting_firm",
+              "label": "Cabinet de conseil"
+            },
+            {
+              "key": "real_estate",
+              "label": "Agence immobilière"
+            },
+            {
+              "key": "event_venue",
+              "label": "Lieu événementiel"
+            },
+            {
+              "key": "fitness_studio",
+              "label": "Studio de fitness"
             }
-          ]
+          ],
+          "noResults": "Aucun type d'entreprise correspondant n'a été trouvé."
         },
         "teamSize": {
           "label": "Combien de personnes composent votre équipe ?",

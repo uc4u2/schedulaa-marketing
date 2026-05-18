@@ -1122,8 +1122,69 @@
             {
               "key": "other",
               "label": "Outro negócio de serviços"
+            },
+            {
+              "key": "beauty_salon",
+              "label": "Salão de beleza"
+            },
+            {
+              "key": "hair_salon",
+              "label": "Salão de cabeleireiro"
+            },
+            {
+              "key": "barbershop",
+              "label": "Barbearia"
+            },
+            {
+              "key": "nail_salon",
+              "label": "Salão de unhas"
+            },
+            {
+              "key": "spa",
+              "label": "Spa / centro de bem-estar"
+            },
+            {
+              "key": "massage_clinic",
+              "label": "Clínica de massagem"
+            },
+            {
+              "key": "dental_clinic",
+              "label": "Clínica dentária"
+            },
+            {
+              "key": "physio_clinic",
+              "label": "Clínica de fisioterapia"
+            },
+            {
+              "key": "chiro_clinic",
+              "label": "Clínica de quiropraxia"
+            },
+            {
+              "key": "pet_grooming",
+              "label": "Negócio de grooming para animais"
+            },
+            {
+              "key": "tutoring_center",
+              "label": "Centro de tutoria"
+            },
+            {
+              "key": "consulting_firm",
+              "label": "Empresa de consultoria"
+            },
+            {
+              "key": "real_estate",
+              "label": "Agência imobiliária"
+            },
+            {
+              "key": "event_venue",
+              "label": "Espaço para eventos"
+            },
+            {
+              "key": "fitness_studio",
+              "label": "Estúdio de fitness"
             }
-          ]
+          ],
+          "noResults": "Nenhum tipo de negócio correspondente foi encontrado."
         },
         "teamSize": {
           "label": "Quantas pessoas fazem parte da sua equipe?",

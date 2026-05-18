@@ -1122,8 +1122,69 @@
             {
               "key": "other",
               "label": "Otro negocio de servicios"
+            },
+            {
+              "key": "beauty_salon",
+              "label": "Salón de belleza"
+            },
+            {
+              "key": "hair_salon",
+              "label": "Salón de peluquería"
+            },
+            {
+              "key": "barbershop",
+              "label": "Barbería"
+            },
+            {
+              "key": "nail_salon",
+              "label": "Salón de uñas"
+            },
+            {
+              "key": "spa",
+              "label": "Spa / centro de bienestar"
+            },
+            {
+              "key": "massage_clinic",
+              "label": "Clínica de masajes"
+            },
+            {
+              "key": "dental_clinic",
+              "label": "Clínica dental"
+            },
+            {
+              "key": "physio_clinic",
+              "label": "Clínica de fisioterapia"
+            },
+            {
+              "key": "chiro_clinic",
+              "label": "Clínica quiropráctica"
+            },
+            {
+              "key": "pet_grooming",
+              "label": "Negocio de peluquería para mascotas"
+            },
+            {
+              "key": "tutoring_center",
+              "label": "Centro de tutorías"
+            },
+            {
+              "key": "consulting_firm",
+              "label": "Firma de consultoría"
+            },
+            {
+              "key": "real_estate",
+              "label": "Agencia inmobiliaria"
+            },
+            {
+              "key": "event_venue",
+              "label": "Espacio para eventos"
+            },
+            {
+              "key": "fitness_studio",
+              "label": "Estudio de fitness"
             }
-          ]
+          ],
+          "noResults": "No se encontraron tipos de negocio coincidentes."
         },
         "teamSize": {
           "label": "¿Cuántas personas hay en tu equipo?",

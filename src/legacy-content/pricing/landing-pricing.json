@@ -1122,8 +1122,69 @@
             {
               "key": "other",
               "label": "Other service business"
+            },
+            {
+              "key": "beauty_salon",
+              "label": "Beauty salon"
+            },
+            {
+              "key": "hair_salon",
+              "label": "Hair salon"
+            },
+            {
+              "key": "barbershop",
+              "label": "Barbershop"
+            },
+            {
+              "key": "nail_salon",
+              "label": "Nail salon"
+            },
+            {
+              "key": "spa",
+              "label": "Spa / wellness center"
+            },
+            {
+              "key": "massage_clinic",
+              "label": "Massage clinic"
+            },
+            {
+              "key": "dental_clinic",
+              "label": "Dental clinic"
+            },
+            {
+              "key": "physio_clinic",
+              "label": "Physiotherapy clinic"
+            },
+            {
+              "key": "chiro_clinic",
+              "label": "Chiropractic clinic"
+            },
+            {
+              "key": "pet_grooming",
+              "label": "Pet grooming business"
+            },
+            {
+              "key": "tutoring_center",
+              "label": "Tutoring center"
+            },
+            {
+              "key": "consulting_firm",
+              "label": "Consulting firm"
+            },
+            {
+              "key": "real_estate",
+              "label": "Real estate agency"
+            },
+            {
+              "key": "event_venue",
+              "label": "Event venue"
+            },
+            {
+              "key": "fitness_studio",
+              "label": "Fitness studio"
             }
-          ]
+          ],
+          "noResults": "No matching business types found."
         },
         "teamSize": {
           "label": "How many people are on your team?",

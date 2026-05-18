@@ -114,6 +114,7 @@ export type PricingExperienceContent = {
       businessType: {
         label: string;
         helper: string;
+        noResults: string;
         options: SelectOption[];
       };
       teamSize: {

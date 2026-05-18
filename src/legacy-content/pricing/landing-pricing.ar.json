@@ -1122,8 +1122,69 @@
             {
               "key": "other",
               "label": "نشاط خدمات آخر"
+            },
+            {
+              "key": "beauty_salon",
+              "label": "صالون تجميل"
+            },
+            {
+              "key": "hair_salon",
+              "label": "صالون شعر"
+            },
+            {
+              "key": "barbershop",
+              "label": "محل حلاقة رجالية"
+            },
+            {
+              "key": "nail_salon",
+              "label": "صالون أظافر"
+            },
+            {
+              "key": "spa",
+              "label": "سبا / مركز رفاهية"
+            },
+            {
+              "key": "massage_clinic",
+              "label": "عيادة تدليك"
+            },
+            {
+              "key": "dental_clinic",
+              "label": "عيادة أسنان"
+            },
+            {
+              "key": "physio_clinic",
+              "label": "عيادة علاج طبيعي"
+            },
+            {
+              "key": "chiro_clinic",
+              "label": "عيادة تقويم العمود الفقري"
+            },
+            {
+              "key": "pet_grooming",
+              "label": "خدمات العناية بالحيوانات الأليفة"
+            },
+            {
+              "key": "tutoring_center",
+              "label": "مركز دروس خصوصية"
+            },
+            {
+              "key": "consulting_firm",
+              "label": "شركة استشارات"
+            },
+            {
+              "key": "real_estate",
+              "label": "وكالة عقارية"
+            },
+            {
+              "key": "event_venue",
+              "label": "مكان فعاليات"
+            },
+            {
+              "key": "fitness_studio",
+              "label": "استوديو لياقة بدنية"
             }
-          ]
+          ],
+          "noResults": "لم يتم العثور على أنواع أنشطة مطابقة."
         },
         "teamSize": {
           "label": "كم عدد الأشخاص في فريقك؟",

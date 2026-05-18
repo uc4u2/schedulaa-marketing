@@ -99,9 +99,6 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
             >
               Book a demo
             </a>
-            <a href="#plans" className="btn btn-white dark:btn-white-dark btn-md">
-              {hero.secondaryCta.label}
-            </a>
           </div>
         </div>
 

@@ -1159,8 +1159,69 @@
             {
               "key": "other",
               "label": "其他服务型业务"
+            },
+            {
+              "key": "beauty_salon",
+              "label": "美容院"
+            },
+            {
+              "key": "hair_salon",
+              "label": "美发沙龙"
+            },
+            {
+              "key": "barbershop",
+              "label": "男士理发店"
+            },
+            {
+              "key": "nail_salon",
+              "label": "美甲沙龙"
+            },
+            {
+              "key": "spa",
+              "label": "水疗 / 健康中心"
+            },
+            {
+              "key": "massage_clinic",
+              "label": "按摩诊所"
+            },
+            {
+              "key": "dental_clinic",
+              "label": "牙科诊所"
+            },
+            {
+              "key": "physio_clinic",
+              "label": "物理治疗诊所"
+            },
+            {
+              "key": "chiro_clinic",
+              "label": "脊椎理疗诊所"
+            },
+            {
+              "key": "pet_grooming",
+              "label": "宠物美容店"
+            },
+            {
+              "key": "tutoring_center",
+              "label": "辅导中心"
+            },
+            {
+              "key": "consulting_firm",
+              "label": "咨询公司"
+            },
+            {
+              "key": "real_estate",
+              "label": "房地产中介"
+            },
+            {
+              "key": "event_venue",
+              "label": "活动场地"
+            },
+            {
+              "key": "fitness_studio",
+              "label": "健身工作室"
             }
-          ]
+          ],
+          "noResults": "未找到匹配的业务类型。"
         },
         "teamSize": {
           "label": "你的团队有多少人？",
