@@ -137,6 +137,13 @@ export const websiteBuilderPage = {
     primaryCta: { label: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.', href: '/register' },
     secondaryCta: { label: 'الحجوزات', href: '/booking' },
   },
+  videoSection: {
+    overline: 'جولة المنتج',
+    title: 'شاهد Website Builder أثناء العمل',
+    description:
+      'شاهد كيف يجمع Schedulaa الخدمات والمنتجات والحجوزات والصفحات ذات العلامة التجارية في workflow واحد جاهز للنشر.',
+    youtubeEmbed: 'https://www.youtube.com/embed/tP5s1niy59o',
+  },
   sections: [
     {
       overline: 'يوضح هذا القسم تفاصيل الميزة داخل المنصة.',

@@ -76,6 +76,13 @@ export const websiteBuilderPage = {
     primaryCta: { ...websiteBuilderPageEn.hero.primaryCta, label: '免费创建网站' },
     secondaryCta: { ...websiteBuilderPageEn.hero.secondaryCta, label: '查看预约功能' },
   },
+  videoSection: {
+    overline: '功能演示',
+    title: '看看 Website Builder 如何实际运作',
+    description:
+      '观看 Schedulaa 如何把服务、商品、预约和品牌页面整合成一套可直接发布的网站工作流。',
+    youtubeEmbed: 'https://www.youtube.com/embed/tP5s1niy59o',
+  },
   sections: [
     { overline: '核心能力', title: '在一个工作流中完成搭建、发布与变现', items: featureCards },
     { overline: '资源支持', title: '文档、SEO 与上线支持', items: resourceHighlights },

@@ -77,6 +77,13 @@ export const websiteBuilderPage = {
     primaryCta: { ...websiteBuilderPageEn.hero.primaryCta, label: 'Запустить сайт бесплатно' },
     secondaryCta: { ...websiteBuilderPageEn.hero.secondaryCta, label: 'Смотреть бронирование' },
   },
+  videoSection: {
+    overline: 'Видео-обзор',
+    title: 'Посмотрите Website Builder в работе',
+    description:
+      'Показываем, как Schedulaa объединяет услуги, товары, онлайн-запись и брендированные страницы в один publish-ready workflow.',
+    youtubeEmbed: 'https://www.youtube.com/embed/tP5s1niy59o',
+  },
   sections: [
     { overline: 'Ключевые возможности', title: 'Создание, публикация и монетизация в одном потоке', items: featureCards },
     { overline: 'Ресурсы', title: 'Гайды, SEO и поддержка запуска', items: resourceHighlights },

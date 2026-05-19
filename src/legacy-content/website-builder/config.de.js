@@ -137,6 +137,13 @@ export const websiteBuilderPage = {
     primaryCta: { label: 'Mehr erfahren', href: '/register' },
     secondaryCta: { label: 'Dieser Abschnitt erklaert die Funktion klar innerhalb von Schedulaa.', href: '/booking' },
   },
+  videoSection: {
+    overline: 'Produkt-Rundgang',
+    title: 'Sehen Sie den Website Builder in Aktion',
+    description:
+      'Erleben Sie, wie Schedulaa Services, Produkte, Buchung und gebrandete Seiten in einem publish-ready Workflow zusammenfuehrt.',
+    youtubeEmbed: 'https://www.youtube.com/embed/tP5s1niy59o',
+  },
   sections: [
     {
       overline: 'Kernfunktionen',

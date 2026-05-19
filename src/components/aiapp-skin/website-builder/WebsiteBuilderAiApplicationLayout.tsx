@@ -15,6 +15,12 @@ type BuilderPage = {
     primaryCta: { label: string; href: string };
     secondaryCta: { label: string; href: string };
   };
+  videoSection?: {
+    overline?: string;
+    title: string;
+    description?: string;
+    youtubeEmbed?: string;
+  };
   sections: Array<{
     overline: string;
     title: string;
@@ -33,11 +39,20 @@ type BuilderPage = {
   };
 };
 
+const WEBSITE_BUILDER_YOUTUBE_EMBED =
+  process.env.NEXT_PUBLIC_WEBSITE_BUILDER_YOUTUBE_EMBED || 'https://www.youtube.com/embed/tP5s1niy59o';
+
 const mapHref = (href: string, locale: ReturnType<typeof detectLocaleFromPath>) => {
   const returnTo = marketingReturnTo(locale, '/website-builder');
-  if (href === '/register') return buildAppUrl('/register', { returnTo });
-  if (href === '/login') return buildAppUrl('/login', { returnTo });
-  if (!href.startsWith('/')) return href;
+  if (href === '/register') {
+    return buildAppUrl('/register', { returnTo });
+  }
+  if (href === '/login') {
+    return buildAppUrl('/login', { returnTo });
+  }
+  if (!href.startsWith('/')) {
+    return href;
+  }
   return withLocalePath(href, locale);
 };
 
@@ -67,6 +82,30 @@ export default function WebsiteBuilderAiApplicationLayout({ page }: { page: Buil
               </Link>
             </div>
           </AnimatedSection>
+
+          {page.videoSection ? (
+            <AnimatedSection>
+              <article className="mx-auto max-w-[1040px] rounded-[28px] border border-stroke-2 bg-white p-5 shadow-1 dark:border-stroke-7 dark:bg-background-8 md:p-7">
+                <div className="space-y-3">
+                  {page.videoSection.overline ? <span className="badge badge-cyan-v2">{page.videoSection.overline}</span> : null}
+                  <div className="space-y-3 text-center">
+                    <h3 className="mx-auto max-w-[760px]">{page.videoSection.title}</h3>
+                    {page.videoSection.description ? <p className="mx-auto max-w-[760px]">{page.videoSection.description}</p> : null}
+                  </div>
+                  <div className="relative w-full overflow-hidden rounded-2xl border border-stroke-2 pb-[56.25%] dark:border-stroke-7">
+                    <iframe
+                      className="absolute top-0 left-0 h-full w-full"
+                      src={page.videoSection.youtubeEmbed || WEBSITE_BUILDER_YOUTUBE_EMBED}
+                      title={page.videoSection.title}
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+              </article>
+            </AnimatedSection>
+          ) : null}
 
           <StaggerGrid className="grid grid-cols-12 gap-5" childSelector="[data-stagger-item]">
             {page.sections[0]?.items?.map((item) => (

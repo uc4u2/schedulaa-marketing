@@ -131,6 +131,13 @@ export const websiteBuilderPage = {
     primaryCta: { ...websiteBuilderPageEn.hero.primaryCta, label: 'شروع سایت رایگان' },
     secondaryCta: { ...websiteBuilderPageEn.hero.secondaryCta, label: 'مشاهده رزرو' },
   },
+  videoSection: {
+    overline: 'نمایش سایت‌ساز',
+    title: 'سایت‌ساز را در عمل ببینید',
+    description:
+      'ببینید Schedulaa چگونه خدمات، محصولات، رزرو و صفحات برندشده را در یک جریان آماده انتشار کنار هم قرار می‌دهد.',
+    youtubeEmbed: 'https://www.youtube.com/embed/tP5s1niy59o',
+  },
   sections: [
     {
       overline: 'قابلیت‌های اصلی',

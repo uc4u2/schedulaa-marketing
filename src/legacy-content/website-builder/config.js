@@ -137,6 +137,13 @@ export const websiteBuilderPage = {
     primaryCta: { label: 'Start your free website', href: '/register' },
     secondaryCta: { label: 'Explore booking', href: '/booking' },
   },
+  videoSection: {
+    overline: 'Website walkthrough',
+    title: 'See how your website can turn visitors into bookings, quotes, and contacts',
+    description:
+      'Watch how Schedulaa helps service businesses launch a professional website with booking, contact forms, quote requests, payments, and mobile-friendly pages.',
+    youtubeEmbed: 'https://www.youtube.com/embed/tP5s1niy59o',
+  },
   sections: [
     {
       overline: 'Core capabilities',
