@@ -3,7 +3,7 @@
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import { getBusinessFinanceCopy } from '@/components/business-finance/localeCopy';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
-import { detectLocaleFromPath } from '@/utils/locale';
+import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import gradient32Img from '@public/images/ns-img-520.png';
 import gradient33Img from '@public/images/ns-img-521.png';
 import gradient34Img from '@public/images/ns-img-522.png';
@@ -36,6 +36,7 @@ export default function BusinessFinanceLandingPage() {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
   const returnTo = marketingReturnTo(locale, '/business-finance');
+  const invoicesPageHref = withLocalePath('/business-finance/invoices', locale);
   const copy = getBusinessFinanceCopy(locale);
   const featureCards = copy.modules.cards.map((card, index) => ({
     ...card,
@@ -67,6 +68,9 @@ export default function BusinessFinanceLandingPage() {
                   <a href="#finance-workflow" className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
                     {copy.hero.howItWorks}
                   </a>
+                  <Link href={invoicesPageHref} className="btn btn-white btn-md min-w-[210px] dark:btn-transparent">
+                    Invoices & payment links
+                  </Link>
                 </div>
                 <p className="max-w-[760px] text-sm leading-7 text-white/64">
                   {copy.hero.helper}
@@ -226,6 +230,13 @@ export default function BusinessFinanceLandingPage() {
               </AnimatedSection>
             ))}
           </div>
+          <AnimatedSection>
+            <div className="flex justify-center">
+              <Link href={invoicesPageHref} className="btn btn-primary btn-md min-w-[240px]">
+                Explore invoice workflow
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

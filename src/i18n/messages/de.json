@@ -29,7 +29,8 @@
     "quickbooks": "QuickBooks-Einrichtung",
     "xero": "Xero-Einrichtung",
     "mobileApp": "Mobile App",
-    "businessFinance": "Geschäftsfinanzen"
+    "businessFinance": "Geschäftsfinanzen",
+    "invoicesEstimates": "Rechnungen und Angebote"
   },
   "footer": {
     "blurb": "Schedulaa ist das Betriebssystem für Dienstleistungsunternehmen: Planung, Lohnabrechnung und Website-Buchung auf einer Plattform.",

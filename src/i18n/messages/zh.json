@@ -29,7 +29,8 @@
     "quickbooks": "QuickBooks 上线",
     "xero": "Xero 上线",
     "mobileApp": "移动应用",
-    "businessFinance": "企业财务"
+    "businessFinance": "企业财务",
+    "invoicesEstimates": "发票与报价"
   },
   "footer": {
     "blurb": "Schedulaa 是服务型企业的一体化运营系统：排班、薪资与网站预约全部集中在同一平台。",

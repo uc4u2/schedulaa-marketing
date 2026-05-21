@@ -29,7 +29,8 @@
     "quickbooks": "Онбординг QuickBooks",
     "xero": "Онбординг Xero",
     "mobileApp": "Мобильное приложение",
-    "businessFinance": "Финансы бизнеса"
+    "businessFinance": "Финансы бизнеса",
+    "invoicesEstimates": "Счета и сметы"
   },
   "footer": {
     "blurb": "Schedulaa — операционная платформа для сервисного бизнеса: расписания, payroll и бронирование сайтов в одной системе.",

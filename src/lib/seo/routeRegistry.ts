@@ -28,6 +28,7 @@ export const STATIC_ROUTES = [
   '/payroll/tools/w2',
   '/website-builder',
   '/business-finance',
+  '/business-finance/invoices',
   '/mobile-app',
   '/industries',
   '/status',

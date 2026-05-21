@@ -29,7 +29,8 @@
     "quickbooks": "Integração QuickBooks",
     "xero": "Integração Xero",
     "mobileApp": "App móvel",
-    "businessFinance": "Finanças empresariais"
+    "businessFinance": "Finanças empresariais",
+    "invoicesEstimates": "Faturas e orçamentos"
   },
   "footer": {
     "blurb": "Schedulaa é o sistema operacional para empresas de serviços: agendamento, folha de pagamento e reservas no site em uma única plataforma.",

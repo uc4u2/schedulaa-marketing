@@ -10,6 +10,7 @@ export type NavbarLabelKey =
   | 'payroll'
   | 'websiteBuilder'
   | 'businessFinance'
+  | 'invoicesEstimates'
   | 'mobileApp'
   | 'industries'
   | 'status'
@@ -50,6 +51,7 @@ export const PRODUCT_MENU_LINKS: NavbarLinkItem[] = [
   { id: 'payroll', href: '/payroll', labelKey: 'payroll' },
   { id: 'website-builder', href: '/website-builder', labelKey: 'websiteBuilder' },
   { id: 'business-finance', href: '/business-finance', labelKey: 'businessFinance' },
+  { id: 'business-finance-invoices', href: '/business-finance/invoices', labelKey: 'invoicesEstimates' },
   { id: 'mobile-app', href: '/mobile-app', labelKey: 'mobileApp' },
 ];
 

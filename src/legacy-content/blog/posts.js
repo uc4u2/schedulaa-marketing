@@ -290,6 +290,7 @@ const blogPosts = [
           "Schedulaa is built for enterprise service teams, not just finance departments. Whether you manage a salon group, staffing agency, recruiter network, creative studio, or distributed service business, your invoices should understand how your business actually runs.",
           "What is coming next includes deeper accounting exports, automated invoice workflows, tighter payroll reporting, and expanded enterprise controls.",
           "Invoicing is no longer an afterthought. It is part of the operations workflow.",
+          "If you want the service-business version of this workflow, see Schedulaa's estimates, invoices, and payment links page at /business-finance/invoices.",
         ],
       },
     ],

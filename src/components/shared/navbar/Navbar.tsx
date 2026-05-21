@@ -123,6 +123,17 @@ const PRODUCT_MENU_META: Record<string, MegaMenuMeta> = {
       </svg>
     ),
   },
+  'business-finance-invoices': {
+    description: 'Create estimates, convert them to invoices, send payment links, and track cash, e-transfer, or card payments.',
+    iconClassName: 'bg-amber-50 text-amber-600',
+    icon: (
+      <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+        <path d="M7 4h8l4 4v12H7z" />
+        <path d="M15 4v4h4" />
+        <path d="M9 12h6M9 16h4" />
+      </svg>
+    ),
+  },
   'mobile-app': {
     description: 'Download the Android app and see manager and employee workflows built for daily operations.',
     iconClassName: 'bg-violet-50 text-violet-600',
