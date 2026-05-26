@@ -2,6 +2,8 @@
 
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import { getBusinessFinanceCopy } from '@/components/business-finance/localeCopy';
+import ProductTutorialPanel from '@/components/tutorials/ProductTutorialPanel';
+import { getTutorialModule } from '@/data/tutorials/tutorialCatalog';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import gradient32Img from '@public/images/ns-img-520.png';
@@ -38,6 +40,7 @@ export default function BusinessFinanceLandingPage() {
   const returnTo = marketingReturnTo(locale, '/business-finance');
   const invoicesPageHref = withLocalePath('/business-finance/invoices', locale);
   const copy = getBusinessFinanceCopy(locale);
+  const tutorialModule = getTutorialModule('business_finance');
   const featureCards = copy.modules.cards.map((card, index) => ({
     ...card,
     gradientSrc: [gradient32Img, gradient33Img, gradient34Img, gradient9Img][index % 4],
@@ -239,6 +242,16 @@ export default function BusinessFinanceLandingPage() {
           </AnimatedSection>
         </div>
       </section>
+
+      {tutorialModule ? (
+        <section className="py-14 md:py-18">
+          <div className="main-container">
+            <AnimatedSection>
+              <ProductTutorialPanel module={tutorialModule} locale={locale} />
+            </AnimatedSection>
+          </div>
+        </section>
+      ) : null}
 
       <section className="py-14 md:py-18">
         <div className="main-container">
