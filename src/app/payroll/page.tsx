@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
+import ProductTutorialPanel from '@/components/tutorials/ProductTutorialPanel';
+import { getTutorialModule } from '@/data/tutorials/tutorialCatalog';
 import { getPayrollSource } from '@/legacy-content/payroll/getPayrollSource';
 import { getServerLocale } from '@/utils/serverLocale';
 
@@ -30,5 +32,20 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function PayrollPage() {
   const locale = await getServerLocale();
   const payrollPages = getPayrollSource(locale);
-  return <FeatureStyleContentPage config={payrollPages.overview as any} routePath="/payroll" />;
+  const tutorialModule = getTutorialModule('payroll');
+  return (
+    <FeatureStyleContentPage
+      config={payrollPages.overview as any}
+      routePath="/payroll"
+      afterHero={
+        tutorialModule ? (
+          <section className="pb-16 md:pb-20">
+            <div className="main-container">
+              <ProductTutorialPanel module={tutorialModule} locale={locale} />
+            </div>
+          </section>
+        ) : null
+      }
+    />
+  );
 }

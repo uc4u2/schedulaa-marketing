@@ -4,8 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import StaggerGrid from '@/components/shared/motion/StaggerGrid';
+import ProductTutorialPanel from '@/components/tutorials/ProductTutorialPanel';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
+import type { TutorialModule } from '@/data/tutorials/tutorialCatalog';
 
 type BuilderPage = {
   hero: {
@@ -56,7 +58,13 @@ const mapHref = (href: string, locale: ReturnType<typeof detectLocaleFromPath>) 
   return withLocalePath(href, locale);
 };
 
-export default function WebsiteBuilderAiApplicationLayout({ page }: { page: BuilderPage }) {
+export default function WebsiteBuilderAiApplicationLayout({
+  page,
+  tutorialModule,
+}: {
+  page: BuilderPage;
+  tutorialModule?: TutorialModule | null;
+}) {
   const pathname = usePathname();
   const locale = detectLocaleFromPath(pathname);
 
@@ -104,6 +112,14 @@ export default function WebsiteBuilderAiApplicationLayout({ page }: { page: Buil
                   </div>
                 </div>
               </article>
+            </AnimatedSection>
+          ) : null}
+
+          {tutorialModule ? (
+            <AnimatedSection>
+              <div className="mx-auto max-w-[1040px]">
+                <ProductTutorialPanel module={tutorialModule} locale={locale} />
+              </div>
             </AnimatedSection>
           ) : null}
 

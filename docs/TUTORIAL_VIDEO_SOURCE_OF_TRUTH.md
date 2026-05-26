@@ -32,8 +32,11 @@ Data catalog:
 Reusable UI:
 - `src/components/tutorials/ProductTutorialPanel.tsx`
 
-Current live placement:
+Current live placements:
 - `src/components/business-finance/BusinessFinanceLandingPage.tsx`
+- `src/app/payroll/page.tsx`
+- `src/app/workforce/page.tsx`
+- `src/app/website-builder/page.tsx`
 
 ## Data shape
 Each module entry in `tutorialCatalog.ts` should define:
@@ -105,13 +108,11 @@ We are building:
 ## Current rollout plan
 Phase 1:
 - Business Finance tutorial panel
+- Payroll tutorial panel
+- Workforce tutorial panel
+- Website Builder tutorial panel
 - one live YouTube tutorial
 - several placeholder topics for future videos
 
 Phase 2:
-- add Payroll tutorial panel
-- add Workforce tutorial panel
-- add Website Builder tutorial panel
-
-Phase 3:
 - if tutorial volume grows, add a dedicated tutorial hub or grouped index page

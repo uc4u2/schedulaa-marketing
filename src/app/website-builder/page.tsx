@@ -1,4 +1,5 @@
 import WebsiteBuilderAiApplicationLayout from '@/components/aiapp-skin/website-builder/WebsiteBuilderAiApplicationLayout';
+import { getTutorialModule } from '@/data/tutorials/tutorialCatalog';
 import { getWebsiteBuilderSource } from '@/legacy-content/website-builder/getWebsiteBuilderSource';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { getServerLocale } from '@/utils/serverLocale';
@@ -17,5 +18,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function WebsiteBuilderPage() {
   const locale = await getServerLocale();
   const websiteBuilderPage = getWebsiteBuilderSource(locale);
-  return <WebsiteBuilderAiApplicationLayout page={websiteBuilderPage as any} />;
+  const tutorialModule = getTutorialModule('website_builder');
+  return <WebsiteBuilderAiApplicationLayout page={websiteBuilderPage as any} tutorialModule={tutorialModule} />;
 }

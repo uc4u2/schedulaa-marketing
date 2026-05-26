@@ -1,4 +1,6 @@
 import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
+import ProductTutorialPanel from '@/components/tutorials/ProductTutorialPanel';
+import { getTutorialModule } from '@/data/tutorials/tutorialCatalog';
 import { getBatch2Source } from '@/legacy-content/batch2/getBatch2Source';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { getServerLocale } from '@/utils/serverLocale';
@@ -17,5 +19,20 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function WorkforcePage() {
   const locale = await getServerLocale();
   const { workforcePage } = getBatch2Source(locale);
-  return <FeatureStyleContentPage config={workforcePage as any} routePath="/workforce" />;
+  const tutorialModule = getTutorialModule('workforce');
+  return (
+    <FeatureStyleContentPage
+      config={workforcePage as any}
+      routePath="/workforce"
+      afterHero={
+        tutorialModule ? (
+          <section className="pb-16 md:pb-20">
+            <div className="main-container">
+              <ProductTutorialPanel module={tutorialModule} locale={locale} />
+            </div>
+          </section>
+        ) : null
+      }
+    />
+  );
 }
