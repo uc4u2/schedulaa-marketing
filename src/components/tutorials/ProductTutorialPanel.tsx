@@ -4,101 +4,121 @@ import { useMemo, useState } from 'react';
 import type { TutorialModule } from '@/data/tutorials/tutorialCatalog';
 
 type CopyShape = {
-  watchNow: string;
-  watchOnYouTube: string;
+  openVideo: string;
   moreTutorials: string;
   fewerTutorials: string;
   comingSoon: string;
   noVideoYet: string;
   availableNow: string;
+  featuredVideo: string;
 };
 
 const copyByLocale: Record<string, CopyShape> = {
   fa: {
-    watchNow: 'مشاهده آموزش',
-    watchOnYouTube: 'تماشا در يوتيوب',
+    openVideo: 'باز کردن ويديو',
     moreTutorials: 'آموزش هاي بيشتر',
     fewerTutorials: 'بستن ليست آموزش ها',
     comingSoon: 'به زودي',
     noVideoYet: 'ويديو بعدا اضافه مي شود.',
     availableNow: 'همين حالا در دسترس',
+    featuredVideo: 'ويديو راهنما',
   },
   ru: {
-    watchNow: 'Смотреть инструкцию',
-    watchOnYouTube: 'Открыть на YouTube',
+    openVideo: 'Открыть видео',
     moreTutorials: 'Другие инструкции',
     fewerTutorials: 'Скрыть список',
     comingSoon: 'Скоро',
     noVideoYet: 'Видео будет добавлено позже.',
     availableNow: 'Доступно сейчас',
+    featuredVideo: 'Видео инструкции',
   },
   zh: {
-    watchNow: '观看教程',
-    watchOnYouTube: '在 YouTube 打开',
+    openVideo: '打开视频',
     moreTutorials: '更多教程',
     fewerTutorials: '收起教程列表',
     comingSoon: '即将推出',
     noVideoYet: '视频稍后添加。',
     availableNow: '现已可用',
+    featuredVideo: '教程视频',
   },
   es: {
-    watchNow: 'Ver tutorial',
-    watchOnYouTube: 'Abrir en YouTube',
+    openVideo: 'Abrir video',
     moreTutorials: 'Mas tutoriales',
     fewerTutorials: 'Ocultar lista',
     comingSoon: 'Proximamente',
     noVideoYet: 'El video se agregara despues.',
     availableNow: 'Disponible ahora',
+    featuredVideo: 'Video principal',
   },
   fr: {
-    watchNow: 'Voir le tutoriel',
-    watchOnYouTube: 'Ouvrir sur YouTube',
+    openVideo: 'Ouvrir la video',
     moreTutorials: 'Autres tutoriels',
     fewerTutorials: 'Masquer la liste',
     comingSoon: 'Bientot disponible',
     noVideoYet: 'La video sera ajoutee plus tard.',
     availableNow: 'Disponible maintenant',
+    featuredVideo: 'Video principale',
   },
   de: {
-    watchNow: 'Tutorial ansehen',
-    watchOnYouTube: 'Auf YouTube offnen',
+    openVideo: 'Video offnen',
     moreTutorials: 'Weitere Tutorials',
     fewerTutorials: 'Liste schliessen',
     comingSoon: 'Demnachst',
     noVideoYet: 'Video wird spaeter hinzugefugt.',
     availableNow: 'Jetzt verfugbar',
+    featuredVideo: 'Hauptvideo',
   },
   ar: {
-    watchNow: 'شاهد الشرح',
-    watchOnYouTube: 'افتح على يوتيوب',
+    openVideo: 'افتح الفيديو',
     moreTutorials: 'شروحات اضافية',
     fewerTutorials: 'اخفاء القائمة',
     comingSoon: 'قريبا',
     noVideoYet: 'سيتم اضافة الفيديو لاحقا.',
     availableNow: 'متاح الان',
+    featuredVideo: 'الفيديو الرئيسي',
   },
   pt: {
-    watchNow: 'Ver tutorial',
-    watchOnYouTube: 'Abrir no YouTube',
+    openVideo: 'Abrir video',
     moreTutorials: 'Mais tutoriais',
     fewerTutorials: 'Ocultar lista',
     comingSoon: 'Em breve',
     noVideoYet: 'O video sera adicionado depois.',
     availableNow: 'Disponivel agora',
+    featuredVideo: 'Video principal',
   },
   en: {
-    watchNow: 'Watch tutorial',
-    watchOnYouTube: 'Open on YouTube',
+    openVideo: 'Open video',
     moreTutorials: 'More tutorials',
     fewerTutorials: 'Hide tutorial list',
     comingSoon: 'Coming soon',
     noVideoYet: 'Video link will be added later.',
     availableNow: 'Available now',
+    featuredVideo: 'Featured tutorial',
   },
 };
 
 function getLocaleCopy(locale?: string) {
   return copyByLocale[locale || 'en'] || copyByLocale.en;
+}
+
+function getYouTubeId(url?: string | null) {
+  if (!url) return '';
+  try {
+    const parsed = new URL(url);
+    const host = parsed.hostname.toLowerCase();
+    if (host.includes('youtu.be')) {
+      return parsed.pathname.split('/').filter(Boolean)[0] || '';
+    }
+    if (host.includes('youtube.com')) {
+      if (parsed.pathname.includes('/embed/')) {
+        return parsed.pathname.split('/embed/')[1]?.split('/')[0] || '';
+      }
+      return parsed.searchParams.get('v') || '';
+    }
+  } catch {
+    return '';
+  }
+  return '';
 }
 
 export default function ProductTutorialPanel({
@@ -120,12 +140,16 @@ export default function ProductTutorialPanel({
     () => module.items.filter((item) => item.key !== featured?.key),
     [module.items, featured],
   );
+  const featuredYouTubeId = getYouTubeId(featured?.youtubeUrl);
+  const featuredEmbedSrc = featuredYouTubeId
+    ? `https://www.youtube-nocookie.com/embed/${featuredYouTubeId}`
+    : '';
 
   if (!featured) return null;
 
   return (
     <article className="rounded-[28px] border border-[#dbe6f6] bg-white/95 p-6 shadow-[0_22px_60px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-7 lg:p-8">
-      <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+      <div className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
         <div className="space-y-4">
           <span className="badge badge-cyan">{module.badge}</span>
           <div className="space-y-3">
@@ -135,44 +159,59 @@ export default function ProductTutorialPanel({
         </div>
 
         <div className="rounded-[24px] border border-[#1f7ae0]/12 bg-[#f8fbff] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] dark:border-white/10 dark:bg-white/[0.04] md:p-6">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1f7ae0] dark:text-white/68">{featured.youtubeUrl ? ui.availableNow : ui.comingSoon}</p>
-              <h3 className="mt-2 text-[20px] font-semibold leading-[1.3] text-secondary dark:text-white">{featured.title}</h3>
+          {featuredEmbedSrc ? (
+            <div className="grid gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)] lg:items-start">
+              <div className="overflow-hidden rounded-[20px] border border-[#dbe6f6] bg-white shadow-[0_12px_32px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-7">
+                <div className="border-b border-[#e6eefb] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1f7ae0] dark:border-stroke-7 dark:text-white/66">
+                  {ui.featuredVideo}
+                </div>
+                <div className="relative w-full overflow-hidden pb-[56.25%]">
+                  <iframe
+                    className="absolute left-0 top-0 h-full w-full"
+                    src={featuredEmbedSrc}
+                    title={featured.title}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1f7ae0] dark:text-white/68">{ui.availableNow}</p>
+                    <h3 className="mt-2 text-[20px] font-semibold leading-[1.3] text-secondary dark:text-white">{featured.title}</h3>
+                  </div>
+                  {featured.durationLabel ? (
+                    <span className="rounded-full border border-[#1f7ae0]/14 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#1f7ae0] dark:border-white/10 dark:bg-white/[0.06] dark:text-white/72">
+                      {featured.durationLabel}
+                    </span>
+                  ) : null}
+                </div>
+                <p className="mt-4 text-[15px] leading-7 text-secondary/78 dark:text-accent/74">{featured.purpose}</p>
+              </div>
             </div>
-            {featured.durationLabel ? (
-              <span className="rounded-full border border-[#1f7ae0]/14 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#1f7ae0] dark:border-white/10 dark:bg-white/[0.06] dark:text-white/72">
-                {featured.durationLabel}
-              </span>
-            ) : null}
-          </div>
-          <p className="mt-4 text-[15px] leading-7 text-secondary/78 dark:text-accent/74">{featured.purpose}</p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            {featured.youtubeUrl ? (
-              <a
-                href={featured.youtubeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary btn-sm min-w-[190px]"
-              >
-                {ui.watchNow}
-              </a>
-            ) : (
-              <span className="inline-flex min-h-[44px] min-w-[190px] items-center justify-center rounded-full border border-dashed border-stroke-2 px-5 text-sm font-medium text-secondary/58 dark:border-stroke-7 dark:text-accent/60">
-                {ui.noVideoYet}
-              </span>
-            )}
-            {featured.youtubeUrl ? (
-              <a
-                href={featured.youtubeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-white btn-sm min-w-[190px] dark:btn-transparent dark:hover:btn-accent"
-              >
-                {ui.watchOnYouTube}
-              </a>
-            ) : null}
-          </div>
+          ) : (
+            <>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1f7ae0] dark:text-white/68">{ui.comingSoon}</p>
+                  <h3 className="mt-2 text-[20px] font-semibold leading-[1.3] text-secondary dark:text-white">{featured.title}</h3>
+                </div>
+                {featured.durationLabel ? (
+                  <span className="rounded-full border border-[#1f7ae0]/14 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#1f7ae0] dark:border-white/10 dark:bg-white/[0.06] dark:text-white/72">
+                    {featured.durationLabel}
+                  </span>
+                ) : null}
+              </div>
+              <p className="mt-4 text-[15px] leading-7 text-secondary/78 dark:text-accent/74">{featured.purpose}</p>
+              <div className="mt-5">
+                <span className="inline-flex min-h-[44px] min-w-[190px] items-center justify-center rounded-full border border-dashed border-stroke-2 px-5 text-sm font-medium text-secondary/58 dark:border-stroke-7 dark:text-accent/60">
+                  {ui.noVideoYet}
+                </span>
+              </div>
+            </>
+          )}
         </div>
       </div>
 
@@ -201,7 +240,7 @@ export default function ProductTutorialPanel({
                   <div className="mt-4">
                     {item.youtubeUrl ? (
                       <a href={item.youtubeUrl} target="_blank" rel="noopener noreferrer" className="footer-link-v2 w-fit">
-                        {ui.watchOnYouTube}
+                        {ui.openVideo}
                       </a>
                     ) : (
                       <span className="text-sm text-secondary/54 dark:text-accent/56">{ui.noVideoYet}</span>

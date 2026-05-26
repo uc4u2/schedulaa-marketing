@@ -60,55 +60,55 @@ export const tutorialModules: Record<string, TutorialModule> = {
   },
   workforce: {
     key: 'workforce',
-    badge: 'Tutorial queue',
-    title: 'Workforce tutorials planned',
+    badge: 'Quick walkthroughs',
+    title: 'See the workforce workflow in short steps',
     summary:
-      'This module will later cover shift planning, attendance exceptions, break rules, and manager approval checkpoints.',
-    featuredKey: null,
+      'Use short manager-facing tutorials to show how shift planning, attendance review, leave coordination, and staffing decisions stay connected in one operational flow.',
+    featuredKey: 'build_shift_plan',
     items: [
       {
         key: 'build_shift_plan',
-        title: 'How to Build a Shift Plan and Spot Exceptions',
+        title: 'How to Build a Shift Plan and Spot Exceptions in Schedulaa',
         purpose:
-          'Planned topic for showing scheduling, overtime flags, and staffing visibility before payroll review.',
-        youtubeUrl: null,
-        durationLabel: null,
+          'Show how managers review staffing coverage, generate shift plans, and spot exceptions before payroll review starts.',
+        youtubeUrl: 'https://youtu.be/OPw9ntgACxg',
+        durationLabel: 'Short tutorial',
       },
     ],
   },
   payroll: {
     key: 'payroll',
-    badge: 'Tutorial queue',
-    title: 'Payroll tutorials planned',
+    badge: 'Quick walkthroughs',
+    title: 'See the payroll workflow in short steps',
     summary:
-      'This module will later cover payroll preview, finalized runs, payslip PDFs, and payroll-ready handoff exports.',
-    featuredKey: null,
+      'Use short manager-facing tutorials to show how payroll preview, finalized runs, payslip PDFs, and payroll-ready handoff files connect inside Schedulaa.',
+    featuredKey: 'payroll_handoff',
     items: [
       {
         key: 'payroll_handoff',
         title: 'How Payroll-Ready Handoff Works in Schedulaa',
         purpose:
-          'Planned topic for showing finalized payroll outputs, review controls, and export-ready handoff files.',
-        youtubeUrl: null,
-        durationLabel: null,
+          'Show how managers move from approved time and payroll preview into payslips, finalized records, and export-ready handoff files.',
+        youtubeUrl: 'https://youtu.be/OPw9ntgACxg',
+        durationLabel: 'Short tutorial',
       },
     ],
   },
   website_builder: {
     key: 'website_builder',
-    badge: 'Tutorial queue',
-    title: 'Website Builder tutorials planned',
+    badge: 'Quick walkthroughs',
+    title: 'See the Website Builder workflow in short steps',
     summary:
-      'This module will later cover branded pages, booking widgets, custom domains, and publishing workflows.',
-    featuredKey: null,
+      'Use short manager-facing tutorials to show how branded pages, booking widgets, custom domains, and publishing workflows come together in one builder.',
+    featuredKey: 'publish_booking_site',
     items: [
       {
         key: 'publish_booking_site',
         title: 'How to Publish Your Branded Booking Site',
         purpose:
-          'Planned topic for showing page setup, booking widgets, and domain publishing in one short walkthrough.',
-        youtubeUrl: null,
-        durationLabel: null,
+          'Show how managers edit pages, review layout changes, and publish a branded booking site without leaving the builder workflow.',
+        youtubeUrl: 'https://youtu.be/OPw9ntgACxg',
+        durationLabel: 'Short tutorial',
       },
     ],
   },

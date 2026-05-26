@@ -103,6 +103,16 @@ export default function BusinessFinanceLandingPage() {
         </div>
       </section>
 
+      {tutorialModule ? (
+        <section className="py-12 md:py-14">
+          <div className="main-container">
+            <AnimatedSection>
+              <ProductTutorialPanel module={tutorialModule} locale={locale} />
+            </AnimatedSection>
+          </div>
+        </section>
+      ) : null}
+
       <section className="py-14 md:py-18">
         <div className="main-container">
           <AnimatedSection>
@@ -242,16 +252,6 @@ export default function BusinessFinanceLandingPage() {
           </AnimatedSection>
         </div>
       </section>
-
-      {tutorialModule ? (
-        <section className="py-14 md:py-18">
-          <div className="main-container">
-            <AnimatedSection>
-              <ProductTutorialPanel module={tutorialModule} locale={locale} />
-            </AnimatedSection>
-          </div>
-        </section>
-      ) : null}
 
       <section className="py-14 md:py-18">
         <div className="main-container">

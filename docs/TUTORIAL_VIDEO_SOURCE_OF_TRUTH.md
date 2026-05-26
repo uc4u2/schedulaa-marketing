@@ -10,7 +10,7 @@ Use it to:
 - avoid page clutter from large always-visible embeds
 
 ## Current design
-The tutorial system is intentionally lightweight.
+The tutorial system is intentionally lightweight, but the featured tutorial is visible immediately.
 
 It uses:
 - one catalog file for tutorial data
@@ -18,12 +18,12 @@ It uses:
 - optional placement on any marketing page
 
 The default UX is:
-- one featured tutorial with a primary button
+- one featured tutorial embedded inline near the top of the page
+- a compact layout that does not dominate the page
 - an optional collapsible list for additional tutorials
-- external YouTube open in a new tab
-- no large inline player by default
+- additional tutorials open on YouTube until their own embedded rollout is needed
 
-This keeps the pages clean while still making tutorial content easy to find.
+This keeps the pages clean while still making tutorial content easy to find and easy to watch without leaving the page.
 
 ## Source of truth files
 Data catalog:
@@ -61,9 +61,10 @@ Each tutorial item should define:
    - clear title
    - clear purpose
    - YouTube URL if available
-4. If the new video should be primary, update `featuredKey`
+4. If the new video should be the visible embedded one, update `featuredKey`
 5. If the tutorial should appear on a new page, import and render `ProductTutorialPanel` on that page
-6. Run build before push
+6. If the page already has an older hero/video block, prefer the tutorial panel and avoid duplicate large video sections
+7. Run build before push
 
 ## Placement guidance
 Add tutorial panels only to high-intent product pages.
@@ -75,7 +76,7 @@ Good placements:
 - Website Builder
 
 Do not place tutorial panels on every block.
-Use one compact panel per major product page or major workflow section.
+Use one compact panel per major product page or major workflow section, normally right after the hero.
 
 ## Content rules
 Tutorial titles should be action-oriented.
@@ -97,13 +98,13 @@ This system is designed to support growth without making the marketing pages mes
 
 We are not building:
 - a large academy page on every feature route
-- giant embedded players across the site
+- multiple duplicate video sections on the same page
 - a separate content system for tutorials
 
 We are building:
 - one reusable tutorial pattern
 - one easy place to add or update links
-- one clean way to expand later when more videos exist
+- one clean visible way to expand later when more videos exist
 
 ## Current rollout plan
 Phase 1:
@@ -111,8 +112,8 @@ Phase 1:
 - Payroll tutorial panel
 - Workforce tutorial panel
 - Website Builder tutorial panel
-- one live YouTube tutorial
-- several placeholder topics for future videos
+- one live YouTube tutorial reused as placeholder where needed
+- several additional topics ready to swap to real links later
 
 Phase 2:
 - if tutorial volume grows, add a dedicated tutorial hub or grouped index page

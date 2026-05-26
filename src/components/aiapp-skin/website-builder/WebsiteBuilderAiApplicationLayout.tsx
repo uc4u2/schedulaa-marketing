@@ -91,7 +91,7 @@ export default function WebsiteBuilderAiApplicationLayout({
             </div>
           </AnimatedSection>
 
-          {page.videoSection ? (
+          {page.videoSection && !tutorialModule ? (
             <AnimatedSection>
               <article className="mx-auto max-w-[1040px] rounded-[28px] border border-stroke-2 bg-white p-5 shadow-1 dark:border-stroke-7 dark:bg-background-8 md:p-7">
                 <div className="space-y-3">
