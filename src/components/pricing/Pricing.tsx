@@ -23,9 +23,9 @@ const PUBLIC_BILLING_DISPLAY = {
     business: { card: '$119.99/mo', compare: '$119.99 / mo', note: 'Billed monthly' },
   },
   annual: {
-    starter: { card: '$199.90/yr', compare: '$199.90 / yr', note: 'Billed yearly • 2 months free' },
-    pro: { card: '$499.90/yr', compare: '$499.90 / yr', note: 'Billed yearly • 2 months free' },
-    business: { card: '$1,199.90/yr', compare: '$1,199.90 / yr', note: 'Billed yearly • 2 months free' },
+    starter: { card: '$199.90/yr', compare: '$199.90 / yr', note: 'Billed yearly · Save 2 months' },
+    pro: { card: '$499.90/yr', compare: '$499.90 / yr', note: 'Billed yearly · Save 2 months' },
+    business: { card: '$1,199.90/yr', compare: '$1,199.90 / yr', note: 'Billed yearly · Save 2 months' },
   },
 } as const;
 
@@ -64,6 +64,7 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
   const assurances = pricingSource.assurances;
   const whyTeams = pricingSource.whyTeams;
   const ctaBanner = pricingSource.ctaBanner;
+  const faqSection = experience.faqSection;
   const bookDemoHref = process.env.NEXT_PUBLIC_BOOK_DEMO_URL || BOOK_DEMO_FALLBACK;
 
   const basicSetupHref = buildAppUrl('/upgrade', {
@@ -204,32 +205,65 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
               <p className="mb-3 text-sm font-semibold text-secondary/70 dark:text-accent/70">{plan.positioning}</p>
               <p className="mb-3">{plan.description}</p>
               <p className="mb-5 text-tagline-2 text-secondary/70 dark:text-accent/70">{plan.trialNote}</p>
-              <a
-                href={planHrefFor(plan.key)}
-                className="btn btn-md btn-secondary mb-5 block w-full text-center"
-                onClick={() =>
-                  trackMetaPixel('CompleteRegistration', {
-                    content_name: `Pricing Plan Start Free Trial - ${plan.name}`,
-                    page_path: '/pricing',
-                    plan_name: plan.name,
-                  })
-                }
-              >
-                {plan.ctaLabel}
-              </a>
-              <a
-                href={bookDemoHref}
-                className="mb-5 block text-center text-sm font-medium text-primary underline-offset-4 hover:underline"
-                onClick={() =>
-                  trackMetaPixel('Lead', {
-                    content_name: `Pricing Plan Book Demo - ${plan.name}`,
-                    page_path: '/pricing',
-                    plan_name: plan.name,
-                  })
-                }
-              >
-                Book a demo
-              </a>
+              {plan.key === 'business' ? (
+                <>
+                  <a
+                    href={bookDemoHref}
+                    className="btn btn-md btn-secondary mb-5 block w-full text-center"
+                    onClick={() =>
+                      trackMetaPixel('Lead', {
+                        content_name: `Pricing Plan Book Demo - ${plan.name}`,
+                        page_path: '/pricing',
+                        plan_name: plan.name,
+                      })
+                    }
+                  >
+                    {plan.ctaLabel}
+                  </a>
+                  <a
+                    href={planHrefFor(plan.key)}
+                    className="mb-5 block text-center text-sm font-medium text-primary underline-offset-4 hover:underline"
+                    onClick={() =>
+                      trackMetaPixel('CompleteRegistration', {
+                        content_name: `Pricing Plan Start Free Trial - ${plan.name}`,
+                        page_path: '/pricing',
+                        plan_name: plan.name,
+                      })
+                    }
+                  >
+                    {plan.secondaryCtaLabel || 'Start 14-day free trial'}
+                  </a>
+                </>
+              ) : (
+                <>
+                  <a
+                    href={planHrefFor(plan.key)}
+                    className="btn btn-md btn-secondary mb-5 block w-full text-center"
+                    onClick={() =>
+                      trackMetaPixel('CompleteRegistration', {
+                        content_name: `Pricing Plan Start Free Trial - ${plan.name}`,
+                        page_path: '/pricing',
+                        plan_name: plan.name,
+                      })
+                    }
+                  >
+                    {plan.ctaLabel}
+                  </a>
+                  <a
+                    href={bookDemoHref}
+                    className="mb-5 block text-center text-sm font-medium text-primary underline-offset-4 hover:underline"
+                    onClick={() =>
+                      trackMetaPixel('Lead', {
+                        content_name: `Pricing Plan Book Demo - ${plan.name}`,
+                        page_path: '/pricing',
+                        plan_name: plan.name,
+                      })
+                    }
+                  >
+                    Book a demo
+                  </a>
+                </>
+              )}
               {renderPlanFeatures(plan.key, plan.features)}
             </article>
           ))}
@@ -390,6 +424,20 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
             ))}
           </div>
         </div>
+
+        {faqSection?.items?.length ? (
+          <div className="rounded-3xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+            <h2 className="text-heading-3">{faqSection.title}</h2>
+            <div className="mt-6 space-y-4">
+              {faqSection.items.map((item) => (
+                <article key={item.question} className="rounded-2xl border border-stroke-2 p-5 dark:border-stroke-7">
+                  <h3 className="text-heading-6">{item.question}</h3>
+                  <p className="mt-2 text-sm leading-6 text-secondary/75 dark:text-accent/75">{item.answer}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div className="rounded-3xl border border-stroke-2 bg-secondary p-8 text-accent dark:border-stroke-7 dark:bg-background-8">
           <span className="badge badge-cyan mb-3">{ctaBanner.eyebrow}</span>

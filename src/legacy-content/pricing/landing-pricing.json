@@ -40,89 +40,36 @@
           "key": "starter",
           "name": "Starter",
           "price": "$19.99/mo",
-          "description": "Launch your website and take bookings and payments for solo professionals.",
+          "description": "Launch your branded website, take bookings, and manage client payments in one place.",
           "trialNote": "14-day free trial • Cancel anytime",
           "features": [
-            {
-              "type": "heading",
-              "text": "Core platform"
-            },
-            "Unified booking, website, and payments.",
-            "Secure client and staff portals.",
             "Website builder with branded pages and templates.",
-            "Online booking, confirmations, and client portal.",
-            "Public “Book with me” link.",
-            "Stripe Checkout with automatic tax compliance.",
-            {
-              "type": "heading",
-              "text": "Operational basics"
-            },
-            "Booking notifications and reminders.",
-            "Embeddable booking widgets.",
-            "Stripe refunds and payment history.",
-            "Basic role-based access.",
-            {
-              "type": "heading",
-              "text": "Time & reporting"
-            },
-            "Basic time tracking tied to bookings and shifts.",
-            "CSV/PDF exports for worked hours and revenue.",
-            {
-              "type": "heading",
-              "text": "Capacity"
-            },
-            "1 staff seat and 1 location (department) included.",
-            "Custom domain + automatic SSL included.",
-            "Upgrade for onboarding workflows."
+            "Online booking and client portal.",
+            "Stripe payments, refunds, and payment history.",
+            "Public booking link and embeddable widgets.",
+            "Basic reports and CSV/PDF exports.",
+            "1 staff seat and 1 location included.",
+            "Custom domain and automatic SSL included."
           ],
           "ctaLabel": "Start 14-day free trial",
-          "ctaTo": "/register"
+          "ctaTo": "/register",
+          "positioning": "For solo professionals who need website, booking, payments, and basic client flow."
         },
         {
           "key": "pro",
           "name": "Pro",
           "price": "$49.99/mo",
-          "positioning": "Run daily operations from one system.",
-          "description": "For small teams that need scheduling, automation, and analytics.",
+          "positioning": "For small teams that need scheduling, time tracking, staff workflows, and payroll-ready reports.",
+          "description": "Run day-to-day scheduling, time tracking, and team workflows from one system.",
           "trialNote": "14-day free trial • Cancel anytime",
           "features": [
             "Everything in Starter.",
-            {
-              "type": "heading",
-              "text": "Time & Labor"
-            },
-            "Shift-based clock-in and clock-out.",
-            "Break enforcement and auto-deductions.",
+            "Staff scheduling and shared calendars.",
+            "Clock-in, clock-out, and break rules.",
             "Overtime and anomaly flags.",
-            {
-              "type": "heading",
-              "text": "Payroll & compliance"
-            },
-            "Full payroll runs included (no per-run fees).",
-            "Payroll-ready approvals and audit trails.",
-            "Payroll exports to QuickBooks & Xero.",
-            "Payroll runs with an employee payslip portal (self-serve PDFs).",
-            {
-              "type": "heading",
-              "text": "Access & control"
-            },
+            "Payroll-ready reports and approval trails.",
             "Role-based access for managers and staff.",
-            "Staff permissions and visibility controls.",
-            "Department scheduling and shared calendars.",
-            "Shift swaps, approvals, and live rosters.",
-            {
-              "type": "heading",
-              "text": "Analytics & marketing"
-            },
-            "Email campaigns: Broadcast, Win-Back, VIP, No-Show, Anniversary.",
-            "Advanced Analytics (bookings, revenue, client segments).",
-            {
-              "type": "heading",
-              "text": "Capacity"
-            },
-            "Up to 5 staff seats and 1 location (department) included.",
-            "Automated Canadian stat holiday pay and accruals.",
-            "Priority support (business hours)."
+            "Up to 5 staff seats and 1 location included."
           ],
           "ctaLabel": "Start 14-day free trial",
           "ctaTo": "/register",
@@ -133,45 +80,21 @@
           "key": "business",
           "name": "Business",
           "price": "$119.99/mo",
-          "description": "Built for compliance, audits, and multi-location (department) operations.",
+          "description": "Connect client approvals, job execution, billing, costs, and reporting in one workflow.",
           "trialNote": "14-day free trial • Cancel anytime",
           "features": [
             "Everything in Pro.",
-            {
-              "type": "heading",
-              "text": "Time & Labor"
-            },
-            "Shift-based clock-in and clock-out with break enforcement.",
-            "Overtime, anomaly flags, and audit-ready time records.",
-            {
-              "type": "heading",
-              "text": "Payroll & compliance"
-            },
-            "Full payroll runs included (no per-run fees).",
-            {
-              "type": "heading",
-              "text": "Governance & compliance"
-            },
-            "Audit-ready payroll and compliance records.",
-            "US W-2 forms and Canadian T4/ROE exports.",
-            "Multi-location (department) payroll and reporting.",
-            {
-              "type": "heading",
-              "text": "Advanced control"
-            },
-            "Branch-level permissions.",
-            "Bulk scheduling controls (close / keep windows).",
-            "Audit-ready operations with reduced compliance risk.",
-            {
-              "type": "heading",
-              "text": "Capacity"
-            },
-            "10 staff seats and 2 locations (departments) included.",
-            "Add seats for $9/mo each.",
-            "Free branded website included when Payroll + Scheduling are active."
+            "Estimates and client approval workflow.",
+            "Invoices and payment links.",
+            "Work orders and job assignments.",
+            "Field reports with manager review.",
+            "Expenses, purchases, materials, inventory, and vendors.",
+            "Profitability, tax summary, and month-end review."
           ],
-          "ctaLabel": "Start 14-day free trial",
-          "ctaTo": "/register"
+          "ctaLabel": "Book a demo",
+          "ctaTo": "/register",
+          "positioning": "For service businesses that need estimates, invoices, work orders, field reports, expenses, inventory, and month-end reporting.",
+          "secondaryCtaLabel": "Start 14-day free trial"
         }
       ],
       "addons": {
@@ -311,19 +234,16 @@
       },
       "payroll": {
         "section": "Payroll & compliance",
-        "processing": "Payroll runs (US & Canada)",
-        "holiday": "Automated holiday pay & accruals",
-        "payslip": "Employee payslip portal (PDF)",
-        "exports": "Payroll audit exports",
+        "processing": "Payroll-ready workflows",
+        "holiday": "Automated holiday pay and accrual support",
+        "payslip": "Payslip PDFs and payroll handoff files",
+        "exports": "Export-ready payroll records",
         "invoicing": "Payroll-backed billing support"
       },
       "compliance": {
         "section": "Tax forms & exports",
-        "revenueReports": "Revenue & appointment reports",
-        "exports": "CSV / PDF exports",
-        "w2": "US W-2 forms",
-        "t4": "Canadian T4 and ROE exports",
-        "audit": "Compliance-ready audit trails"
+        "w2": "US W-2 support files",
+        "t4": "Canadian T4 and ROE export support"
       },
       "analytics": {
         "section": "Analytics",
@@ -393,90 +313,36 @@
         "key": "starter",
         "name": "Starter",
         "price": "$19.99/mo",
-        "description": "Launch your website and take bookings and payments for solo professionals.",
+        "description": "Launch your branded website, take bookings, and manage client payments in one place.",
         "trialNote": "14-day free trial • Cancel anytime",
         "features": [
-          {
-            "type": "heading",
-            "text": "Core platform"
-          },
-          "Unified booking, website, and payments.",
-          "Secure client and staff portals.",
           "Website builder with branded pages and templates.",
-          "Online booking, confirmations, and client portal.",
-          "Public “Book with me” link.",
-          "Stripe Checkout with automatic tax compliance.",
-          {
-            "type": "heading",
-            "text": "Operational basics"
-          },
-          "Booking notifications and reminders.",
-          "Embeddable booking widgets.",
-          "Stripe refunds and payment history.",
-          "Basic role-based access.",
-          {
-            "type": "heading",
-            "text": "Time & reporting"
-          },
-          "Basic time tracking tied to bookings and shifts.",
-          "CSV/PDF exports for worked hours and revenue.",
-          {
-            "type": "heading",
-            "text": "Capacity"
-          },
-          "1 staff seat and 1 location (department) included.",
-          "Custom domain + automatic SSL included.",
-          "Upgrade for onboarding workflows."
+          "Online booking and client portal.",
+          "Stripe payments, refunds, and payment history.",
+          "Public booking link and embeddable widgets.",
+          "Basic reports and CSV/PDF exports.",
+          "1 staff seat and 1 location included.",
+          "Custom domain and automatic SSL included."
         ],
         "ctaLabel": "Start 14-day free trial",
         "ctaTo": "/register",
-        "positioning": "Simple website, booking, and sales basics."
+        "positioning": "For solo professionals who need website, booking, payments, and basic client flow."
       },
       {
         "key": "pro",
         "name": "Pro",
         "price": "$49.99/mo",
-        "positioning": "Run daily operations from one system.",
-        "description": "For small teams that need scheduling, automation, and analytics.",
+        "positioning": "For small teams that need scheduling, time tracking, staff workflows, and payroll-ready reports.",
+        "description": "Run day-to-day scheduling, time tracking, and team workflows from one system.",
         "trialNote": "14-day free trial • Cancel anytime",
         "features": [
           "Everything in Starter.",
-          {
-            "type": "heading",
-            "text": "Time & Labor"
-          },
-          "Shift-based clock-in and clock-out.",
-          "Break enforcement and auto-deductions.",
+          "Staff scheduling and shared calendars.",
+          "Clock-in, clock-out, and break rules.",
           "Overtime and anomaly flags.",
-          {
-            "type": "heading",
-            "text": "Payroll & compliance"
-          },
-          "Full payroll runs included (no per-run fees).",
-          "Payroll-ready approvals and audit trails.",
-          "Payroll exports to QuickBooks & Xero.",
-          "Payroll runs with an employee payslip portal (self-serve PDFs).",
-          {
-            "type": "heading",
-            "text": "Access & control"
-          },
+          "Payroll-ready reports and approval trails.",
           "Role-based access for managers and staff.",
-          "Staff permissions and visibility controls.",
-          "Department scheduling and shared calendars.",
-          "Shift swaps, approvals, and live rosters.",
-          {
-            "type": "heading",
-            "text": "Analytics & marketing"
-          },
-          "Email campaigns: Broadcast, Win-Back, VIP, No-Show, Anniversary.",
-          "Advanced Analytics (bookings, revenue, client segments).",
-          {
-            "type": "heading",
-            "text": "Capacity"
-          },
-          "Up to 5 staff seats and 1 location (department) included.",
-          "Automated Canadian stat holiday pay and accruals.",
-          "Priority support (business hours)."
+          "Up to 5 staff seats and 1 location included."
         ],
         "ctaLabel": "Start 14-day free trial",
         "ctaTo": "/register",
@@ -487,63 +353,27 @@
         "key": "business",
         "name": "Business",
         "price": "$119.99/mo",
-        "description": "For service businesses that manage quotes, work orders, invoices, expenses, inventory, and reporting.",
+        "description": "Connect client approvals, job execution, billing, costs, and reporting in one workflow.",
         "trialNote": "14-day free trial • Cancel anytime",
         "features": [
           "Everything in Pro.",
-          {
-            "type": "heading",
-            "text": "Finanzas operativas"
-          },
-          "Quote requests and custom-price intake",
-          "Estimates and client approval workflow",
-          "Work orders and job assignments",
-          "Field reports with manager review",
-          "Invoices, expenses, and purchases",
-          "Materials, inventory, and vendor tracking",
-          "Profitability, tax summary, and month-end review",
-          {
-            "type": "heading",
-            "text": "Time & Labor"
-          },
-          "Shift-based clock-in and clock-out with break enforcement.",
-          "Overtime, anomaly flags, and audit-ready time records.",
-          {
-            "type": "heading",
-            "text": "Payroll & compliance"
-          },
-          "Full payroll runs included (no per-run fees).",
-          {
-            "type": "heading",
-            "text": "Governance & compliance"
-          },
-          "Audit-ready payroll and compliance records.",
-          "US W-2 forms and Canadian T4/ROE exports.",
-          "Multi-location (department) payroll and reporting.",
-          {
-            "type": "heading",
-            "text": "Advanced control"
-          },
-          "Branch-level permissions.",
-          "Bulk scheduling controls (close / keep windows).",
-          "Audit-ready operations with reduced compliance risk.",
-          {
-            "type": "heading",
-            "text": "Capacity"
-          },
-          "10 staff seats and 2 locations (departments) included.",
-          "Add seats for $9/mo each.",
-          "Free branded website included when Payroll + Scheduling are active."
+          "Estimates and client approval workflow.",
+          "Invoices and payment links.",
+          "Work orders and job assignments.",
+          "Field reports with manager review.",
+          "Expenses, purchases, materials, inventory, and vendors.",
+          "Profitability, tax summary, and month-end review."
         ],
-        "ctaLabel": "Start 14-day free trial",
+        "ctaLabel": "Book a demo",
         "ctaTo": "/register",
-        "positioning": "Built for quote-to-invoice operations and finance-ready workflows."
+        "positioning": "For service businesses that need estimates, invoices, work orders, field reports, expenses, inventory, and month-end reporting.",
+        "secondaryCtaLabel": "Start 14-day free trial"
       }
     ],
     "websiteSetupServices": {
-      "title": "Optional Website Setup Services",
-      "subtitle": "Every Schedulaa plan includes the website builder. Build it yourself, or let our team set up your site for you.",
-      "note": "Requires an active Schedulaa subscription. Domain purchase is not included. We can help connect your domain.",
+      "title": "Optional Done-for-You Website Setup",
+      "subtitle": "Every Schedulaa plan includes the website builder. These setup services are optional if you want our team to build or prepare the site for you.",
+      "note": "Schedulaa is the subscription product. Website setup is an optional one-time service for businesses that want launch help.",
       "items": [
         {
           "key": "basic",
@@ -757,25 +587,25 @@
           "section": "Payroll & compliance",
           "items": [
             {
-              "label": "Payroll runs (US & Canada)",
+              "label": "Payroll-ready workflows",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Automated holiday pay & accruals",
+              "label": "Automated holiday pay and accrual support",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Employee payslip portal (PDF)",
+              "label": "Payslip PDFs and payroll handoff files",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Payroll audit exports",
+              "label": "Export-ready payroll records",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
@@ -875,13 +705,13 @@
               "business": "Yes"
             },
             {
-              "label": "US W-2 forms",
+              "label": "US W-2 support files",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
             },
             {
-              "label": "Canadian T4 and ROE exports",
+              "label": "Canadian T4 and ROE export support",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
@@ -1460,6 +1290,39 @@
           "business": "Best fit for quote-to-invoice operations, job tracking, finance-ready reporting, and more operational control."
         }
       }
+    },
+    "faqSection": {
+      "title": "Pricing FAQ",
+      "items": [
+        {
+          "question": "Is there a free trial?",
+          "answer": "Yes. Schedulaa offers a 14-day free trial so you can test the platform before continuing with a paid plan."
+        },
+        {
+          "question": "Do I need a credit card to start?",
+          "answer": "No. The current trial flow does not require a credit card to create your account and start exploring the platform."
+        },
+        {
+          "question": "Can I cancel anytime?",
+          "answer": "Yes. You can cancel future billing according to your account billing settings or by contacting support."
+        },
+        {
+          "question": "Can I switch plans later?",
+          "answer": "Yes. You can upgrade or downgrade as your business changes."
+        },
+        {
+          "question": "Are website setup services included?",
+          "answer": "The website builder is included with every plan. Done-for-you setup services are optional one-time services."
+        },
+        {
+          "question": "Does Schedulaa process payroll?",
+          "answer": "Schedulaa helps teams prepare payroll-ready records, approvals, payslip PDFs, and export files. It does not replace a licensed payroll provider, accountant, or tax filing service unless a supported provider integration is used."
+        },
+        {
+          "question": "What is included with annual billing?",
+          "answer": "Annual billing gives you the same plan features prepaid yearly, with about two months free compared with monthly billing."
+        }
+      ]
     }
   }
 }

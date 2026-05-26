@@ -11,6 +11,7 @@ export type SubscriptionPlan = {
   trialNote: string;
   features: PlanFeature[];
   ctaLabel: string;
+  secondaryCtaLabel?: string;
   highlight?: boolean;
   badge?: string;
 };
@@ -96,6 +97,13 @@ export type PricingExperienceContent = {
       };
     };
     sections: ComparisonSection[];
+  };
+  faqSection?: {
+    title: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
   };
   planFinder: {
     badge: string;
@@ -236,6 +244,7 @@ export type PricingSource = {
         trialNote: string;
         features: PlanFeature[];
         ctaLabel: string;
+        secondaryCtaLabel?: string;
         highlight?: boolean;
         badge?: string;
       }>;
