@@ -29,6 +29,10 @@ export default function RefundPolicyContent() {
             Schedulaa does not accept product returns because the service provides digital software access and no physical
             goods are delivered.
           </p>
+          <p className="text-secondary/80 dark:text-accent/75">
+            Since Schedulaa is digital software access, there is no physical return shipping, return label, or return
+            shipping fee.
+          </p>
         </section>
 
         <section className="space-y-3">
@@ -50,8 +54,13 @@ export default function RefundPolicyContent() {
         <section className="space-y-3">
           <h2 className="text-2xl font-semibold text-secondary dark:text-white">Cancellations</h2>
           <p className="text-secondary/80 dark:text-accent/75">
-            Customers may cancel their subscription according to the billing settings available in their account or by
-            contacting Schedulaa support.
+            Customers may cancel their subscription through their account billing settings when available, or by
+            contacting{' '}
+            <a className="underline decoration-secondary/30 underline-offset-4" href="mailto:admin@schedulaa.com">
+              admin@schedulaa.com
+            </a>
+            . Cancellation stops future billing but does not automatically refund charges already processed for the
+            current billing period.
           </p>
         </section>
 
