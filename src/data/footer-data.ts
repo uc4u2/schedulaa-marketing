@@ -29,6 +29,7 @@ export type FooterTranslationKey =
   | 'compareHub'
   | 'alternativesHub'
   | 'privacy'
+  | 'refundPolicy'
   | 'terms'
   | 'login'
   | 'getStarted';
@@ -86,6 +87,7 @@ export const FOOTER_SECTIONS: FooterSection[] = [
       { id: 'company-status', href: '/status', labelKey: 'status' },
       { id: 'company-roadmap', href: '/roadmap', labelKey: 'roadmap' },
       { id: 'company-privacy', href: '/privacy', labelKey: 'privacy' },
+      { id: 'company-refund-policy', href: '/refund-policy', labelKey: 'refundPolicy' },
       { id: 'company-terms', href: '/terms', labelKey: 'terms' },
       { id: 'company-account-deletion', href: '/account-deletion', label: 'Account deletion' },
       { id: 'company-login', href: '/login', labelKey: 'login', externalAppLink: true },

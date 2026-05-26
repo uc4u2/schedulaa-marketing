@@ -61,6 +61,7 @@ export const INDUSTRY_BOOKING_ROUTES = [
 export const LEGAL_ROUTES = [
   '/account-deletion',
   '/privacy',
+  '/refund-policy',
   '/terms',
   '/cookie',
   '/acceptable-use',
@@ -71,6 +72,7 @@ export const LEGAL_ROUTES = [
 
 export const LEGAL_ALIASES = {
   '/legal/support-access-consent': '/terms',
+  '/return-policy': '/refund-policy',
 } as const;
 
 export const RESERVED_NON_INDEXABLE = [

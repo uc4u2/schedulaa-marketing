@@ -8,6 +8,7 @@ const LEGACY_REDIRECTS: Record<string, string> = {
   '/payroll/adp': '/compare/adp',
   '/payroll/gusto': '/compare/gusto',
   '/legal/support-access-consent': '/terms',
+  '/return-policy': '/refund-policy',
 };
 
 const normalizePath = (pathname: string) => {
