@@ -96,12 +96,12 @@
             "Overtime and anomaly flags.",
             {
               "type": "heading",
-              "text": "Payroll"
+              "text": "Payroll & compliance"
             },
             "Full payroll runs included (no per-run fees).",
             "Payroll-ready approvals and audit trails.",
             "Payroll exports to QuickBooks & Xero.",
-            "Payroll processing with Employee Payslip Portal (self-serve PDFs).",
+            "Payroll runs with an employee payslip portal (self-serve PDFs).",
             {
               "type": "heading",
               "text": "Access & control"
@@ -145,7 +145,7 @@
             "Overtime, anomaly flags, and audit-ready time records.",
             {
               "type": "heading",
-              "text": "Payroll"
+              "text": "Payroll & compliance"
             },
             "Full payroll runs included (no per-run fees).",
             {
@@ -153,7 +153,7 @@
               "text": "Governance & compliance"
             },
             "Audit-ready payroll and compliance records.",
-            "Compliance-ready tax exports (W-2, T4, ROE).",
+            "US W-2 forms and Canadian T4/ROE exports.",
             "Multi-location (department) payroll and reporting.",
             {
               "type": "heading",
@@ -166,9 +166,9 @@
               "type": "heading",
               "text": "Capacity"
             },
-            "10 staff seats and up to 5 locations (departments) included.",
+            "10 staff seats and 2 locations (departments) included.",
             "Add seats for $9/mo each.",
-            "Free branded website included when using Payroll + Scheduling."
+            "Free branded website included when Payroll + Scheduling are active."
           ],
           "ctaLabel": "Start 14-day free trial",
           "ctaTo": "/register"
@@ -310,19 +310,19 @@
         "overtime": "Overtime & anomaly flags"
       },
       "payroll": {
-        "section": "Payroll",
-        "processing": "Payroll processing (US & Canada)",
-        "holiday": "Automated stat holiday pay & accruals",
+        "section": "Payroll & compliance",
+        "processing": "Payroll runs (US & Canada)",
+        "holiday": "Automated holiday pay & accruals",
         "payslip": "Employee payslip portal (PDF)",
-        "exports": "Advanced payroll exports & audits",
-        "invoicing": "Payroll-linked invoicing"
+        "exports": "Payroll audit exports",
+        "invoicing": "Payroll-backed billing support"
       },
       "compliance": {
-        "section": "Compliance",
+        "section": "Tax forms & exports",
         "revenueReports": "Revenue & appointment reports",
         "exports": "CSV / PDF exports",
-        "w2": "W-2 (US) generation",
-        "t4": "T4 & ROE (Canada)",
+        "w2": "US W-2 forms",
+        "t4": "Canadian T4 and ROE exports",
         "audit": "Compliance-ready audit trails"
       },
       "analytics": {
@@ -450,12 +450,12 @@
           "Overtime and anomaly flags.",
           {
             "type": "heading",
-            "text": "Payroll"
+            "text": "Payroll & compliance"
           },
           "Full payroll runs included (no per-run fees).",
           "Payroll-ready approvals and audit trails.",
           "Payroll exports to QuickBooks & Xero.",
-          "Payroll processing with Employee Payslip Portal (self-serve PDFs).",
+          "Payroll runs with an employee payslip portal (self-serve PDFs).",
           {
             "type": "heading",
             "text": "Access & control"
@@ -510,7 +510,7 @@
           "Overtime, anomaly flags, and audit-ready time records.",
           {
             "type": "heading",
-            "text": "Payroll"
+            "text": "Payroll & compliance"
           },
           "Full payroll runs included (no per-run fees).",
           {
@@ -518,7 +518,7 @@
             "text": "Governance & compliance"
           },
           "Audit-ready payroll and compliance records.",
-          "Compliance-ready tax exports (W-2, T4, ROE).",
+          "US W-2 forms and Canadian T4/ROE exports.",
           "Multi-location (department) payroll and reporting.",
           {
             "type": "heading",
@@ -531,9 +531,9 @@
             "type": "heading",
             "text": "Capacity"
           },
-          "10 staff seats and up to 5 locations (departments) included.",
+          "10 staff seats and 2 locations (departments) included.",
           "Add seats for $9/mo each.",
-          "Free branded website included when using Payroll + Scheduling."
+          "Free branded website included when Payroll + Scheduling are active."
         ],
         "ctaLabel": "Start 14-day free trial",
         "ctaTo": "/register",
@@ -754,16 +754,16 @@
           ]
         },
         {
-          "section": "Payroll",
+          "section": "Payroll & compliance",
           "items": [
             {
-              "label": "Payroll processing (US & Canada)",
+              "label": "Payroll runs (US & Canada)",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Automated stat holiday pay & accruals",
+              "label": "Automated holiday pay & accruals",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
@@ -775,13 +775,13 @@
               "business": "Yes"
             },
             {
-              "label": "Advanced payroll exports & audits",
+              "label": "Payroll audit exports",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
             },
             {
-              "label": "Payroll-linked invoicing",
+              "label": "Payroll-backed billing support",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
@@ -860,7 +860,7 @@
           ]
         },
         {
-          "section": "Compliance",
+          "section": "Tax forms & exports",
           "items": [
             {
               "label": "Revenue & appointment reports",
@@ -875,13 +875,13 @@
               "business": "Yes"
             },
             {
-              "label": "W-2 (US) generation",
+              "label": "US W-2 forms",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
             },
             {
-              "label": "T4 & ROE (Canada)",
+              "label": "Canadian T4 and ROE exports",
               "starter": "—",
               "pro": "—",
               "business": "Yes"

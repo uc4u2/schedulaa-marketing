@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import type { CSSProperties } from 'react';
+import { useMemo, useState, type CSSProperties } from 'react';
+import { useTranslations } from 'next-intl';
 
 import { getPricingSource } from '@/legacy-content/pricing/getPricingSource';
 import { buildAppUrl, buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
@@ -14,6 +15,19 @@ import { getPricingExperience, type PlanFeature, type PricingSource } from './pr
 
 const BOOK_DEMO_FALLBACK =
   'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
+
+const PUBLIC_BILLING_DISPLAY = {
+  monthly: {
+    starter: { card: '$19.99/mo', compare: '$19.99 / mo', note: 'Billed monthly' },
+    pro: { card: '$49.99/mo', compare: '$49.99 / mo', note: 'Billed monthly' },
+    business: { card: '$119.99/mo', compare: '$119.99 / mo', note: 'Billed monthly' },
+  },
+  annual: {
+    starter: { card: '$199.90/yr', compare: '$199.90 / yr', note: 'Billed yearly • 2 months free' },
+    pro: { card: '$499.90/yr', compare: '$499.90 / yr', note: 'Billed yearly • 2 months free' },
+    business: { card: '$1,199.90/yr', compare: '$1,199.90 / yr', note: 'Billed yearly • 2 months free' },
+  },
+} as const;
 
 const renderPlanFeatures = (planKey: string, features: PlanFeature[] = []) => (
   <ul className="space-y-2">
@@ -38,8 +52,10 @@ const renderPlanFeatures = (planKey: string, features: PlanFeature[] = []) => (
 );
 
 const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
+  const tPricing = useTranslations('pricing');
   const pathname = usePathname() || '/';
   const locale = pageLocale ?? (detectLocaleFromPath(pathname) as AppLocale);
+  const [billingInterval, setBillingInterval] = useState<'monthly' | 'annual'>('monthly');
   const returnTo = marketingReturnTo(locale, '/pricing');
   const pricingSource = getPricingSource(locale) as PricingSource;
   const experience = getPricingExperience(locale, pricingSource);
@@ -59,9 +75,31 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
   const planHrefFor = (planKey: string) =>
     buildUpgradeUrl({
       plan: planKey,
-      interval: 'monthly',
+      interval: billingInterval,
       returnTo,
     });
+  const displayPlans = useMemo(
+    () =>
+      experience.subscriptionPlans.map((plan) => {
+        const intervalPricing =
+          PUBLIC_BILLING_DISPLAY[billingInterval][plan.key as keyof typeof PUBLIC_BILLING_DISPLAY.monthly];
+        if (!intervalPricing) return plan;
+        return {
+          ...plan,
+          price: intervalPricing.card,
+        };
+      }),
+    [billingInterval, experience.subscriptionPlans],
+  );
+  const comparisonPriceRow = useMemo(
+    () => ({
+      ...experience.comparison.rows.price,
+      starter: PUBLIC_BILLING_DISPLAY[billingInterval].starter.compare,
+      pro: PUBLIC_BILLING_DISPLAY[billingInterval].pro.compare,
+      business: PUBLIC_BILLING_DISPLAY[billingInterval].business.compare,
+    }),
+    [billingInterval, experience.comparison.rows.price],
+  );
 
   return (
     <section className="relative pt-[110px] pb-18 md:pt-[150px] md:pb-24">
@@ -106,7 +144,7 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
           locale={locale}
           comparePlansHref="#plans"
           content={experience.planFinder}
-          plans={experience.subscriptionPlans}
+          plans={displayPlans}
           setupServices={experience.websiteSetupServices}
           planHrefFor={planHrefFor}
           basicSetupHref={basicSetupHref}
@@ -118,8 +156,29 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
           <span dangerouslySetInnerHTML={{ __html: pricingSource.ribbon.message }} />
         </div>
 
+        <div className="flex justify-center">
+          <label className="inline-flex items-center gap-3 rounded-full border border-stroke-2 bg-white px-5 py-3 text-sm font-medium dark:border-stroke-7 dark:bg-background-8">
+            <span className={billingInterval === 'monthly' ? 'text-secondary dark:text-white' : 'text-secondary/60 dark:text-accent/60'}>
+              {tPricing('monthly')}
+            </span>
+            <input
+              type="checkbox"
+              checked={billingInterval === 'annual'}
+              onChange={(event) => setBillingInterval(event.target.checked ? 'annual' : 'monthly')}
+              className="peer sr-only"
+              aria-label="Toggle between monthly and annual pricing"
+            />
+            <span className="relative h-7 w-14 rounded-full bg-secondary/20 transition peer-checked:bg-primary/25 dark:bg-accent/20">
+              <span className={`absolute top-0.5 h-6 w-6 rounded-full bg-primary transition ${billingInterval === 'annual' ? 'left-7' : 'left-0.5'}`} />
+            </span>
+            <span className={billingInterval === 'annual' ? 'text-secondary dark:text-white' : 'text-secondary/60 dark:text-accent/60'}>
+              {tPricing('yearly')}
+            </span>
+          </label>
+        </div>
+
         <div id="plans" className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {experience.subscriptionPlans.map((plan, index) => (
+          {displayPlans.map((plan, index) => (
             <article
               id={`plan-${plan.key}`}
               key={plan.key}
@@ -139,6 +198,9 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
               {plan.badge ? <span className="badge badge-cyan mb-3">{plan.badge}</span> : null}
               <h2 className="text-heading-4 mb-2">{plan.name}</h2>
               <p className="mb-2 text-heading-5">{plan.price}</p>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-secondary/60 dark:text-accent/60">
+                {PUBLIC_BILLING_DISPLAY[billingInterval][plan.key as keyof typeof PUBLIC_BILLING_DISPLAY.monthly]?.note || ''}
+              </p>
               <p className="mb-3 text-sm font-semibold text-secondary/70 dark:text-accent/70">{plan.positioning}</p>
               <p className="mb-3">{plan.description}</p>
               <p className="mb-5 text-tagline-2 text-secondary/70 dark:text-accent/70">{plan.trialNote}</p>
@@ -260,9 +322,9 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
               <tbody>
                 <tr className="border-b border-stroke-2 dark:border-stroke-7">
                   <td className="px-3 py-3">{experience.comparison.rows.price.label}</td>
-                  <td className="px-3 py-3">{experience.comparison.rows.price.starter}</td>
-                  <td className="px-3 py-3">{experience.comparison.rows.price.pro}</td>
-                  <td className="px-3 py-3">{experience.comparison.rows.price.business}</td>
+                  <td className="px-3 py-3">{comparisonPriceRow.starter}</td>
+                  <td className="px-3 py-3">{comparisonPriceRow.pro}</td>
+                  <td className="px-3 py-3">{comparisonPriceRow.business}</td>
                 </tr>
                 <tr className="border-b border-stroke-2 dark:border-stroke-7">
                   <td className="px-3 py-3">{experience.comparison.rows.bestFor.label}</td>
