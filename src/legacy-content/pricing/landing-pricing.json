@@ -274,10 +274,10 @@
         "businessSeats": "10",
         "additionalSeats": "Additional staff seats",
         "seatPrice": "$9 / seat",
-        "multiLocation": "Multi-location support (use departments as locations)",
+        "multiLocation": "Multi-location support (operational locations managed through departments)",
         "starterLocations": "1",
         "proLocations": "1",
-        "businessLocations": "Up to 2",
+        "businessLocations": "Up to 5",
         "roleAccess": "Role-based access & permissions",
         "starterAccess": "Basic",
         "proAccess": "Advanced",
@@ -827,10 +827,10 @@
               "business": "$9 / seat"
             },
             {
-              "label": "Multi-location support (use departments as locations)",
+              "label": "Multi-location support (operational locations managed through departments)",
               "starter": "1",
               "pro": "1",
-              "business": "Up to 2"
+              "business": "Up to 5"
             },
             {
               "label": "Role-based access & permissions",
