@@ -106,7 +106,7 @@ export default function PredictionChallengeGuidePopup({
   if (!visible) return null;
 
   return (
-    <div className="pointer-events-none fixed right-4 bottom-4 z-[90] w-[calc(100%-2rem)] max-w-[390px] md:right-6 md:bottom-6">
+    <div className="pointer-events-none fixed left-4 bottom-4 z-[90] w-[calc(100%-2rem)] max-w-[390px] md:left-6 md:bottom-6">
       <aside className="pointer-events-auto overflow-hidden rounded-[24px] border border-white/14 bg-[#081120]/92 shadow-[0_24px_80px_rgba(2,6,23,0.45)] backdrop-blur-xl">
         <div className="border-b border-white/10 px-5 py-4">
           <div className="flex items-start justify-between gap-3">
