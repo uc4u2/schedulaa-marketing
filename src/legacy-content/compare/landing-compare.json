@@ -1,13 +1,13 @@
 {
   "vagaro": {
     "competitor": "Vagaro",
-    "metaTitle": "Schedulaa vs Vagaro | Booking, Payroll, and Operations Comparison",
-    "metaDescription": "See how Schedulaa compares to Vagaro for booking, payroll, and analytics. Learn which platform fits growing service businesses best.",
+    "metaTitle": "Schedulaa vs Vagaro | Booking, Websites, Payments, and Operations Comparison",
+    "metaDescription": "See how Schedulaa compares to Vagaro for client booking, websites, payments, scheduling, and service operations. Learn which platform fits growing service businesses best.",
     "heroTitle": "Schedulaa vs Vagaro — Which Platform Is Right for Your Business?",
-    "heroSubtitle": "Vagaro focuses on salons and spas. Schedulaa unifies booking, staff scheduling, payroll, e-commerce, and analytics for service brands of any size.",
+    "heroSubtitle": "Vagaro focuses on salons and spas. Schedulaa unifies client booking, websites, invoices, payments, staff scheduling, commerce, and analytics for service brands of any size.",
     "intro": [
       "Both Schedulaa and Vagaro help service-based businesses manage clients and appointments, but their focus is different.",
-      "Vagaro is built primarily for salons and spas, while Schedulaa is designed as an all-in-one operations platform that unifies booking, staff scheduling, payroll, e-commerce, and analytics — from beauty studios to creative agencies."
+      "Vagaro is built primarily for salons and spas, while Schedulaa is designed as an all-in-one operations platform that unifies client booking, staff scheduling, websites, invoices, payments, commerce, and analytics — from beauty studios to creative agencies."
     ],
     "executiveOverview": {
       "headers": [
@@ -18,7 +18,7 @@
       "rows": [
         {
           "label": "Core Purpose",
-          "schedulaa": "All-in-one operations platform: booking, scheduling, payroll, analytics, and commerce.",
+          "schedulaa": "All-in-one operations platform: booking, scheduling, websites, invoices, payments, analytics, and commerce.",
           "competitor": "Appointment software for salons, spas, and fitness studios."
         },
         {
@@ -84,8 +84,8 @@
         "body": "Schedulaa lets you operate under your own domain, logo, and booking experience — ideal for premium or multi-brand businesses. Vagaro’s shared marketplace keeps the Vagaro brand front-and-center for every client interaction."
       },
       {
-        "title": "Integrated payroll and compliance",
-        "body": "Schedulaa includes payroll and compliance tooling for Canada and the United States, reducing add-ons and manual reconciliation. Vagaro relies on external services when businesses scale beyond a few employees."
+        "title": "Booking, billing, and brand control in one platform",
+        "body": "Schedulaa keeps branded booking, invoices, payment collection, commerce, and team scheduling connected in one place. Vagaro relies more heavily on its marketplace and shared platform experience."
       },
       {
         "title": "Custom domains and automation",
@@ -93,7 +93,7 @@
       },
       {
         "title": "Broader industry fit",
-        "body": "Schedulaa is industry-agnostic: salons, photographers, tutors, clinics, and agencies can run booking, payroll, and analytics in one ecosystem. Vagaro stays focused on beauty and wellness."
+        "body": "Schedulaa is industry-agnostic: salons, photographers, tutors, clinics, and agencies can run client bookings, staff scheduling, billing, and analytics in one ecosystem. Vagaro stays focused on beauty and wellness."
       },
       {
         "title": "Simplicity and cost control",
@@ -129,7 +129,7 @@
         },
         {
           "label": "Analytics & Insights",
-          "schedulaa": "Unified dashboard for bookings, shifts, payroll.",
+          "schedulaa": "Unified dashboard for bookings, shifts, invoices, payments, and team activity.",
           "competitor": "Focused on client visits and sales."
         },
         {
@@ -145,7 +145,7 @@
         "recommendation": "Vagaro"
       },
       {
-        "scenario": "A growing brand or multi-service business that needs automation, payroll, and full control.",
+        "scenario": "A growing brand or multi-service business that needs automation, payments, websites, and full control.",
         "recommendation": "Schedulaa"
       },
       {
@@ -154,7 +154,7 @@
       }
     ],
     "testimonial": {
-      "quote": "Schedulaa replaced multiple tools for our salon. Bookings, shift tracking, and payroll now happen in one dashboard — clients never leave our domain.",
+      "quote": "Schedulaa replaced multiple tools for our salon. Bookings, shift tracking, invoices, and payments now happen in one dashboard — clients never leave our domain.",
       "attribution": "BeautyBar Collective, Toronto"
     },
     "conclusion": "Vagaro centralizes the beauty marketplace experience. Schedulaa centralizes your operations under your own brand. If your goal is growth, automation, and independence, Schedulaa provides the structure to scale across teams, services, and countries."
@@ -164,7 +164,7 @@
     "metaTitle": "Schedulaa vs QuickBooks | Operations Platform vs Accounting Suite",
     "metaDescription": "Compare Schedulaa and QuickBooks. Learn when to use an all-in-one operations platform instead of an accounting-first tool.",
     "heroTitle": "Schedulaa vs QuickBooks — All-in-One Operations vs Accounting-First Platforms",
-    "heroSubtitle": "QuickBooks focuses on accounting and bookkeeping. Schedulaa unifies booking, scheduling, payroll, and analytics for service-driven teams.",
+    "heroSubtitle": "QuickBooks focuses on accounting and bookkeeping. Schedulaa unifies client booking, scheduling, invoices, payments, websites, and analytics for service-driven teams.",
     "intro": [
       "Both Schedulaa and QuickBooks are essential tools for modern businesses, but they serve different purposes.",
       "QuickBooks manages financial data, while Schedulaa runs the operational workflow that happens before revenue hits the ledger."
@@ -178,7 +178,7 @@
       "rows": [
         {
           "label": "Core Purpose",
-          "schedulaa": "All-in-one platform combining booking, scheduling, payroll, and analytics.",
+          "schedulaa": "All-in-one platform combining client booking, scheduling, invoices, payments, websites, and analytics.",
           "competitor": "Accounting and financial management software with optional payroll."
         },
         {
@@ -213,12 +213,12 @@
         },
         {
           "label": "Automation",
-          "schedulaa": "Confirmations, cancellations, reminders, meeting links, and payroll handoffs.",
+          "schedulaa": "Confirmations, cancellations, reminders, meeting links, invoice flows, and payment handoffs.",
           "competitor": "Automation focused on billing and reporting."
         },
         {
           "label": "Analytics Dashboard",
-          "schedulaa": "Unified operational metrics (sales, shifts, payroll).",
+          "schedulaa": "Unified operational metrics (sales, shifts, invoices, payments, and client activity).",
           "competitor": "Financial and accounting insights."
         },
         {
@@ -236,7 +236,7 @@
     "differentiators": [
       {
         "title": "Operational scope",
-        "body": "Schedulaa covers the client journey from booking to payroll. QuickBooks manages financial records after transactions occur."
+        "body": "Schedulaa covers the client journey from booking to invoice and payment. QuickBooks manages financial records after transactions occur."
       },
       {
         "title": "Integrated payroll across borders",
@@ -296,7 +296,7 @@
     },
     "fitMatrix": [
       {
-        "scenario": "Beauty, wellness, creative, or professional services needing bookings and payroll.",
+        "scenario": "Beauty, wellness, creative, or professional services needing bookings, invoices, and payments in one place.",
         "recommendation": "Schedulaa"
       },
       {
@@ -309,10 +309,10 @@
       }
     ],
     "testimonial": {
-      "quote": "Schedulaa unified everything we used to manage separately — bookings, payroll, and analytics — without adding extra licenses.",
+      "quote": "Schedulaa unified everything we used to manage separately — bookings, invoices, payments, and analytics — without adding extra licenses.",
       "attribution": "Photo Artisto Studios, Toronto"
     },
-    "conclusion": "QuickBooks remains the standard for accounting. Schedulaa extends beyond finance — turning scheduling, team management, and payroll into a single workflow. For service-oriented businesses, this integration saves time, reduces tool overlap, and strengthens brand consistency."
+    "conclusion": "QuickBooks remains the standard for accounting. Schedulaa extends beyond finance — turning bookings, billing, team management, and client operations into a single workflow. For service-oriented businesses, this integration saves time, reduces tool overlap, and strengthens brand consistency."
   },
   "gusto": {
     "competitor": "Gusto",
@@ -1581,13 +1581,13 @@
   },
   "homebase": {
     "competitor": "Homebase",
-    "metaTitle": "Schedulaa vs Homebase | Workforce Ops, Job Lifecycle, and Payroll Handoff vs Shift Scheduling",
-    "metaDescription": "Compare Schedulaa and Homebase. See why service operators choose Schedulaa for hiring, scheduling, field operations, invoicing, and payroll handoff instead of a shift-only scheduler.",
+    "metaTitle": "Schedulaa vs Homebase | Workforce Ops, Job Lifecycle, and Client Billing vs Shift Scheduling",
+    "metaDescription": "Compare Schedulaa and Homebase. See why service operators choose Schedulaa for client bookings, scheduling, field operations, invoicing, payments, and approved-hour handoff instead of a shift-only scheduler.",
     "heroTitle": "Schedulaa vs Homebase — Which Operations Platform Fits Your Service Team?",
-    "heroSubtitle": "Homebase is built for storefront shift scheduling. Schedulaa runs the workforce, hiring, client work, and quote-to-invoice operations behind service teams.",
+    "heroSubtitle": "Homebase is built for storefront shift scheduling. Schedulaa runs client bookings, workforce scheduling, hiring, client work, and quote-to-invoice operations for service teams.",
     "intro": [
-      "Homebase is a popular scheduling and time-clock tool for retail and restaurant teams. Schedulaa now goes far beyond scheduling for service operators that need workforce control, hiring, client workflows, and financial follow-through in one system.",
-      "If you need one database for bookings, quote requests, estimates, work orders, field follow-up, invoicing, payroll-ready hours, and multi-location oversight, Schedulaa covers operational ground that Homebase does not."
+      "Homebase is a popular scheduling and time-clock tool for retail and restaurant teams. Schedulaa goes beyond scheduling for service operators that need client bookings, workforce control, hiring, client workflows, and financial follow-through in one system.",
+      "If you need one database for bookings, quote requests, estimates, work orders, field follow-up, invoicing, payments, approved hours, and multi-location oversight, Schedulaa covers operational ground that Homebase does not."
     ],
     "executiveOverview": {
       "headers": [
@@ -1691,7 +1691,7 @@
       },
       {
         "title": "Service-first workflows",
-        "body": "Schedulaa links client bookings to staff availability, break rules, field execution, and payroll outputs. Homebase doesn’t handle client booking or service delivery workflows."
+        "body": "Schedulaa links client bookings to staff availability, break rules, field execution, invoices, payments, and approved-hour handoff. Homebase doesn’t handle client booking or service delivery workflows."
       },
       {
         "title": "Break compliance",
@@ -1720,7 +1720,7 @@
         "recommendation": "Homebase"
       },
       {
-        "scenario": "Service team needing booking + scheduling + payroll in one flow.",
+        "scenario": "Service team needing client booking + scheduling + billing in one flow.",
         "recommendation": "Schedulaa"
       },
       {
@@ -1732,7 +1732,7 @@
         "recommendation": "Schedulaa"
       },
       {
-        "scenario": "A growing field service, trade, or mobile beauty team that needs to quote custom jobs, track field inventory, manage worker shifts, and run payroll in one system.",
+        "scenario": "A growing field service, trade, or mobile beauty team that needs to quote custom jobs, track field inventory, manage worker shifts, and handle billing in one system.",
         "recommendation": "Schedulaa"
       }
     ],
@@ -1863,13 +1863,13 @@
   },
   "when-i-work": {
     "competitor": "When I Work",
-    "metaTitle": "Schedulaa vs When I Work | Workforce Ops, Job Lifecycle, and Payroll Handoff vs Shift Scheduling",
-    "metaDescription": "Compare Schedulaa and When I Work. See why service operators choose Schedulaa for hiring, scheduling, client workflows, invoicing, and payroll handoff instead of a shift-only tool.",
+    "metaTitle": "Schedulaa vs When I Work | Workforce Ops, Job Lifecycle, and Client Billing vs Shift Scheduling",
+    "metaDescription": "Compare Schedulaa and When I Work. See why service operators choose Schedulaa for hiring, scheduling, client workflows, invoicing, payments, and approved-hour handoff instead of a shift-only tool.",
     "heroTitle": "Schedulaa vs When I Work — The Right Choice for Modern Service Teams",
-    "heroSubtitle": "When I Work excels at scheduling shift workers. Schedulaa unifies client workflows, quote-to-invoice execution, smart break compliance, and US/CA payroll within branded service operations.",
+    "heroSubtitle": "When I Work excels at scheduling shift workers. Schedulaa unifies client workflows, quote-to-invoice execution, client billing, and staff scheduling within branded service operations.",
     "intro": [
-      "When I Work is a respected shift-scheduling and hourly time-tracking app. Schedulaa is a complete business operations platform for teams that also manage clients, custom quotes, operational work orders, and payroll handoff.",
-      "If you need client-facing pipelines, job lifecycle enforcement, and payroll-ready workflows, Schedulaa connects pieces that When I Work ignores."
+      "When I Work is a respected shift-scheduling and hourly time-tracking app. Schedulaa is a complete business operations platform for teams that also manage clients, custom quotes, operational work orders, and billing handoff.",
+      "If you need client-facing pipelines, job lifecycle enforcement, and booking-and-billing workflows, Schedulaa connects pieces that When I Work ignores."
     ],
     "executiveOverview": {
       "headers": [
@@ -1949,7 +1949,7 @@
         "recommendation": "When I Work"
       },
       {
-        "scenario": "Service team running custom jobs, field assignments, client invoices, and payroll together.",
+        "scenario": "Service team running custom jobs, field assignments, client invoices, and payments together.",
         "recommendation": "Schedulaa"
       },
       {
@@ -1957,17 +1957,17 @@
         "recommendation": "Schedulaa"
       }
     ],
-    "conclusion": "When I Work is solid for standard shift scheduling. Schedulaa is the stronger fit for service teams that need booking, smart breaks, attendance, job lifecycle finance, and regional payroll linked to one operational workflow."
+    "conclusion": "When I Work is solid for standard shift scheduling. Schedulaa is the stronger fit for service teams that need booking, smart breaks, attendance, job lifecycle finance, and approved-hour handoff linked to one operational workflow."
   },
   "schedulaa-vs-acuity-scheduling": {
     "competitor": "Acuity Scheduling",
     "metaTitle": "Schedulaa vs Acuity Scheduling | Operations OS vs Booking-Only",
-    "metaDescription": "Compare Schedulaa and Acuity. Acuity is a polished booking tool; Schedulaa runs booking, scheduling, breaks, payroll (US/CA), websites, and analytics in one platform.",
+    "metaDescription": "Compare Schedulaa and Acuity. Acuity is a polished booking tool; Schedulaa runs booking, scheduling, client billing, websites, commerce, and analytics in one platform.",
     "heroTitle": "Schedulaa vs Acuity Scheduling — Which Platform Fits Your Service Team?",
-    "heroSubtitle": "Acuity delivers beautiful booking. Schedulaa unifies booking, scheduling, break compliance, time tracking, payroll, websites, commerce, and analytics for multi-staff teams.",
+    "heroSubtitle": "Acuity delivers beautiful booking. Schedulaa unifies booking, scheduling, websites, client billing, commerce, and analytics for multi-staff teams.",
     "intro": [
       "Acuity Scheduling is a clean, modern booking system for solo providers and small studios.",
-      "Schedulaa is an Operations OS for service teams that need booking plus staff scheduling, break enforcement, time tracking, PTO, payroll, websites, and analytics."
+      "Schedulaa is an operations platform for service teams that need booking plus staff scheduling, websites, invoices, payments, commerce, and analytics."
     ],
     "executiveOverview": {
       "headers": [
@@ -1978,7 +1978,7 @@
       "rows": [
         {
           "label": "Core Purpose",
-          "schedulaa": "Operations OS: booking, scheduling, breaks, time, leave, payroll, websites, commerce, analytics.",
+          "schedulaa": "Operations platform: booking, scheduling, breaks, time, leave, websites, invoices, payments, commerce, and analytics.",
           "competitor": "Client booking system with payments and reminders."
         },
         {
@@ -2036,15 +2036,15 @@
     "differentiators": [
       {
         "title": "Booking vs operations",
-        "body": "Acuity schedules clients. Schedulaa runs booking, staffing, breaks, time, and payroll in one workflow."
+        "body": "Acuity schedules clients. Schedulaa runs booking, staffing, breaks, time, invoices, payments, and commerce in one workflow."
       },
       {
         "title": "Staff scheduling + breaks",
         "body": "Schedulaa offers shift templates, swaps, PTO, and break enforcement. Acuity does not handle internal staffing."
       },
       {
-        "title": "Payroll and compliance",
-        "body": "US + Canada payroll, W-2/T4/ROE, and accounting exports are built in. Acuity has no payroll or compliance."
+        "title": "Billing and back-office handoff",
+        "body": "Schedulaa keeps invoices, payment collection, commerce, and accounting exports connected. Payroll remains available as a secondary handoff when teams need it. Acuity has no payroll or compliance layer."
       },
       {
         "title": "Commerce depth",
@@ -2145,7 +2145,7 @@
         "recommendation": "Acuity Scheduling"
       },
       {
-        "scenario": "You have 3–100 staff and need booking, scheduling, breaks, and payroll together.",
+        "scenario": "You have 3–100 staff and need booking, scheduling, billing, and client operations together.",
         "recommendation": "Schedulaa"
       },
       {
@@ -2153,17 +2153,17 @@
         "recommendation": "Schedulaa"
       }
     ],
-    "conclusion": "Acuity Scheduling is exceptional for simple, elegant client booking. Schedulaa is the better long-term choice for teams that need booking plus staffing, break compliance, time tracking, payroll, websites, and analytics in one platform."
+    "conclusion": "Acuity Scheduling is exceptional for simple, elegant client booking. Schedulaa is the better long-term choice for teams that need booking plus staffing, billing, websites, commerce, and analytics in one platform."
   },
   "deputy": {
     "competitor": "Deputy",
     "metaTitle": "Schedulaa vs Deputy | Business Operations OS vs Workforce Scheduling",
-    "metaDescription": "See how Schedulaa stacks up against Deputy. Schedulaa unifies booking, job execution, invoicing, payroll, and analytics, while Deputy focuses on scheduling and time attendance.",
+    "metaDescription": "See how Schedulaa stacks up against Deputy. Schedulaa unifies client bookings, job execution, invoicing, payments, and analytics, while Deputy focuses on scheduling and time attendance.",
     "heroTitle": "Schedulaa vs Deputy — Run Your Entire Business, Not Just Shifts",
-    "heroSubtitle": "Deputy is a strong workforce scheduling app. Schedulaa is the operating system that connects client workflows, job execution, quote-to-invoice operations, and payroll to workforce command.",
+    "heroSubtitle": "Deputy is a strong workforce scheduling app. Schedulaa is the operating system that connects client workflows, client bookings, quote-to-invoice operations, and workforce command.",
     "intro": [
-      "Deputy shines at hourly employee scheduling, time clocks, and siloed labor compliance. Schedulaa adds a broad workforce layer plus client booking, quote-to-invoice operations, hiring pipelines, and payroll handoff.",
-      "If you outgrow a pure timeclock tool, Schedulaa becomes the single platform to run every customer, job record, and staff workflow end to end."
+      "Deputy shines at hourly employee scheduling, time clocks, and siloed labor compliance. Schedulaa adds a broad workforce layer plus client booking, quote-to-invoice operations, hiring pipelines, and approved-hour handoff.",
+      "If you outgrow a pure timeclock tool, Schedulaa becomes the single platform to run every customer, job record, booking, billing, and staff workflow end to end."
     ],
     "executiveOverview": {
       "headers": [
@@ -2371,7 +2371,7 @@
       },
       {
         "title": "All-in-one vs Timeclock",
-        "body": "Schedulaa replaces booking, payroll, website builder, eCommerce, business finance tools, and scheduling. Deputy delivers scheduling and time attendance only."
+        "body": "Schedulaa replaces booking, website builder, eCommerce, invoices, payments, business finance tools, and scheduling. Deputy delivers scheduling and time attendance only."
       },
       {
         "title": "My Time + compliance signals",
@@ -2384,18 +2384,18 @@
         "recommendation": "Deputy"
       },
       {
-        "scenario": "Service team needing booking, job tracking, business finance, and payroll in one place.",
+        "scenario": "Service team needing booking, job tracking, business finance, and payments in one place.",
         "recommendation": "Schedulaa"
       },
       {
-        "scenario": "A growing field service, trade, or mobile operation that needs to assign work orders, check field reports, capture punch locations, and run payroll.",
+        "scenario": "A growing field service, trade, or mobile operation that needs to assign work orders, check field reports, capture punch locations, and handle billing handoff.",
         "recommendation": "Schedulaa"
       }
     ],
     "testimonial": {
-      "quote": "Deputy helped us schedule shifts, but Schedulaa became the full command center: bookings, websites, payroll, and analytics all tie together.",
+      "quote": "Deputy helped us schedule shifts, but Schedulaa became the full command center: bookings, websites, billing, and analytics all tie together.",
       "attribution": "Hybrid salon + studio operator, Canada"
     },
-    "conclusion": "Deputy is a great choice when shift scheduling and time clocks are your solitary requirements. Schedulaa is the complete operational engine when service businesses want to run bookings, websites, field jobs, billing, compliance-ready time tracking, and integrated payroll workflows under a single log-in."
+    "conclusion": "Deputy is a great choice when shift scheduling and time clocks are your solitary requirements. Schedulaa is the complete operational engine when service businesses want to run bookings, websites, field jobs, billing, compliance-ready time tracking, and payroll handoff under a single log-in."
   }
 }

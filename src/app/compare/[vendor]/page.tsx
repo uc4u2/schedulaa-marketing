@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 function getContextCta(entry: any) {
+  const competitor = String(entry?.competitor || '').toLowerCase();
   const haystack = [
     entry?.competitor,
     entry?.heroTitle,
@@ -18,8 +19,30 @@ function getContextCta(entry: any) {
     .join(' ')
     .toLowerCase();
 
-  if (/(payroll|payslip|w-2|t4|hris|payroll software|payroll platform)/.test(haystack)) {
+  if (/(vagaro|acuity|square appointments|hubspot meetings|calendly|booksy|setmore|simplybook)/.test(competitor)) {
+    return { href: '/booking', label: 'Explore booking' };
+  }
+  if (/(quickbooks|xero|freshbooks|wave|zoho books|stripe billing)/.test(competitor)) {
+    return { href: '/business-finance/invoices', label: 'Explore invoices & payments' };
+  }
+  if (/(deputy|homebase|when i work|7shifts|sling)/.test(competitor)) {
+    return { href: '/workforce', label: 'Explore staff scheduling' };
+  }
+  if (/(shopify|woocommerce|bigcommerce|lightspeed)/.test(competitor)) {
+    return { href: '/commerce', label: 'Explore commerce' };
+  }
+  if (/(wix|squarespace|webflow|wordpress)/.test(competitor)) {
+    return { href: '/website-builder', label: 'Explore website builder' };
+  }
+  if (/(gusto|adp|paychex|rippling|humi|ceridian|dayforce)/.test(competitor)) {
     return { href: '/payroll', label: 'See payroll coverage' };
+  }
+
+  if (/(website|domain|site builder|storefront builder|online presence|seo)/.test(haystack)) {
+    return { href: '/website-builder', label: 'Explore website builder' };
+  }
+  if (/(booking|appointment|salon|spa|clinic|tutor|calendar)/.test(haystack)) {
+    return { href: '/booking', label: 'Explore booking' };
   }
   if (/(invoice|estimate|quote|payment|deposit|billing|accounts receivable)/.test(haystack)) {
     return { href: '/business-finance/invoices', label: 'Explore invoices & payments' };
@@ -27,14 +50,11 @@ function getContextCta(entry: any) {
   if (/(commerce|checkout|store|storefront|product|catalog|shipping|easypost|ecommerce|e-commerce)/.test(haystack)) {
     return { href: '/commerce', label: 'Explore commerce' };
   }
-  if (/(website|domain|site builder|storefront builder|online presence|seo)/.test(haystack)) {
-    return { href: '/website-builder', label: 'Explore website builder' };
-  }
   if (/(staff|shift|schedule|scheduling|coverage|overtime|workforce|rota)/.test(haystack)) {
     return { href: '/workforce', label: 'Explore staff scheduling' };
   }
-  if (/(booking|appointment|salon|spa|clinic|tutor|calendar)/.test(haystack)) {
-    return { href: '/booking', label: 'Explore booking' };
+  if (/(payroll|payslip|w-2|t4|hris|payroll software|payroll platform)/.test(haystack)) {
+    return { href: '/payroll', label: 'See payroll coverage' };
   }
   return { href: '/booking', label: 'Explore booking' };
 }

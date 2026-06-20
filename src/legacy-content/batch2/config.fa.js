@@ -82,14 +82,14 @@ export const industriesPage = {
     ...industriesPageEn.meta,
     title: 'دایرکتوری صنایع | نمونه وب‌سایت‌های Schedulaa بر اساس حوزه',
     description:
-      'نمونه جریان‌های کاری Schedulaa را بر اساس صنعت ببینید: سالن‌ها، کلینیک‌ها، استودیوهای ورزشی، خدمات حقوقی و موارد بیشتر با زمان‌بندی، حقوق و تجارت یکپارچه.',
+      'نمونه جریان‌های کاری Schedulaa را بر اساس صنعت ببینید: سالن‌ها، کلینیک‌ها، استودیوهای ورزشی، خدمات حقوقی و موارد بیشتر با رزرو مشتری، عملیات مشتری، فاکتور، پرداخت، وب‌سایت و تجارت یکپارچه.',
   },
   hero: {
     ...industriesPageEn.hero,
     badge: 'صنایع',
     title: 'مرور بر اساس صنعت',
     subtitle:
-      'صنعت خود را انتخاب کنید تا ببینید کسب‌وکارها چگونه از Schedulaa برای رزرو، حقوق، عملیات نیروی کار، وب‌سایت و فروش استفاده می‌کنند.',
+      'صنعت خود را انتخاب کنید تا ببینید کسب‌وکارها چگونه از Schedulaa برای رزرو مشتری، سوابق قرارها، عملیات مشتری، زمان‌بندی کارکنان، وب‌سایت، فاکتور، پرداخت و فروش استفاده می‌کنند.',
     primaryCta: { ...industriesPageEn.hero.primaryCta, label: 'مشاهده رزرو' },
     secondaryCta: { ...industriesPageEn.hero.secondaryCta, label: 'تماس با تیم' },
   },
@@ -100,9 +100,9 @@ export const industriesPage = {
         { title: 'سالن‌ها و اسپاها', body: 'رزرو لحظه‌ای آرایشگر، مدیریت انعام و کمپین‌های وفاداری.' },
         { title: 'کلینیک‌های سلامت', body: 'زمان‌بندی، یادآوری و جریان‌های کاری سازگار با مستندات.' },
         { title: 'مدرس‌ها و آموزش‌دهندگان', body: 'رزرو جلسه، برنامه‌های تکرارشونده و مسیر حضور.' },
-        { title: 'استودیوهای خلاق', body: 'اتوماسیون مسیر مشتری از رزرو تا حقوق.' },
-        { title: 'خدمات حقوقی و حرفه‌ای', body: 'فرم‌پذیرش ساخت‌یافته، زمان‌بندی و سوابق امن.' },
-        { title: 'تیم‌های چندشعبه‌ای', body: 'کنترل‌های شعبه‌محور برای نیرو، حقوق و تحلیل.' },
+        { title: 'استودیوهای خلاق', body: 'اتوماسیون مسیر مشتری از رزرو تا فاکتور و پرداخت.' },
+        { title: 'خدمات حقوقی و حرفه‌ای', body: 'فرم‌پذیرش ساخت‌یافته، تاریخچه قرارها، زمان‌بندی و سوابق امن.' },
+        { title: 'تیم‌های چندشعبه‌ای', body: 'کنترل‌های شعبه‌محور برای رزرو مشتری، نیرو، صورتحساب و تحلیل.' },
       ],
     },
   ],
@@ -129,16 +129,16 @@ export const zapierPage = {
   ...zapierPageEn,
   meta: {
     ...zapierPageEn.meta,
-    title: 'Zapier برای Schedulaa — اتوماسیون رزرو، زمان بندی، انطباق استراحت و حقوق',
+    title: 'Zapier برای Schedulaa — اتوماسیون رزرو مشتری، زمان‌بندی، صورتحساب و تحویل‌های بک‌آفیس',
     description:
-      'Schedulaa را با Zapier به بیش از ۶۰۰۰ اپ متصل کنید. داده های رزرو، شیفت، timeclock، استراحت، PTO، onboarding و حقوق را ارسال کنید.',
+      'Schedulaa را با Zapier به بیش از ۶۰۰۰ اپ متصل کنید. رویدادهای رزرو مشتری، شیفت، timeclock، تحویل فاکتور و پرداخت، PTO، onboarding و رخدادهای بک‌آفیس را ارسال کنید.',
   },
   hero: {
     ...zapierPageEn.hero,
     badge: 'اتوماسیون Zapier',
-    title: 'هر لحظه رزرو، شیفت، استراحت و حقوق را با Zapier خودکار کنید',
+    title: 'رزرو مشتری، زمان‌بندی کارکنان، تحویل‌های صورتحساب و عملیات روزانه را با Zapier خودکار کنید',
     subtitle:
-      'Schedulaa رویدادهای رزرو، زمان بندی، timeclock، انطباق استراحت، PTO، onboarding و جزئیات حقوق را به Zapier می فرستد و اکشن ها می توانند رزرو، کارمند و شیفت بسازند.',
+      'Schedulaa رویدادهای رزرو مشتری، زمان‌بندی کارکنان، timeclock، onboarding و رخدادهای تحویل بک‌آفیس را به Zapier می‌فرستد و اکشن‌ها می‌توانند رزرو، کارمند و شیفت بسازند.',
     primaryCta: { ...zapierPageEn.hero.primaryCta, label: 'باز کردن تنظیمات Zapier' },
     secondaryCta: { ...zapierPageEn.hero.secondaryCta, label: 'مشاهده دمو' },
   },
@@ -146,11 +146,11 @@ export const zapierPage = {
     {
       title: 'گروه تریگرهای زنده',
       items: [
-        { title: 'رویدادهای رزرو', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
+        { title: 'رویدادهای رزرو مشتری', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
         { title: 'زمان بندی و شیفت ها', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
-        { title: 'timeclock و انطباق استراحت', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
+        { title: 'timeclock و کنترل استراحت', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
         { title: 'مرخصی، onboarding و اسناد', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },
-        { title: 'رویدادهای حقوق', body: 'payroll.ready, payroll.finalized, payroll.details' },
+        { title: 'رویدادهای تحویل بک‌آفیس', body: 'payroll.ready, payroll.finalized, payroll.details' },
       ],
     },
     {

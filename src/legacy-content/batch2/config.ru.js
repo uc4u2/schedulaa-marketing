@@ -82,14 +82,14 @@ export const industriesPage = {
     ...industriesPageEn.meta,
     title: 'Отраслевой каталог | Сайты Schedulaa по направлениям',
     description:
-      'Смотрите рабочие сценарии Schedulaa по отраслям: салоны, клиники, фитнес-студии, юридические сервисы и другие с едиными расписанием, payroll и коммерцией.',
+      'Смотрите рабочие сценарии Schedulaa по отраслям: салоны, клиники, фитнес-студии, юридические сервисы и другие с клиентским бронированием, операциями по клиентам, счетами, оплатами, сайтами и коммерцией.',
   },
   hero: {
     ...industriesPageEn.hero,
     badge: 'Отрасли',
     title: 'Обзор по отраслям',
     subtitle:
-      'Выберите отрасль и посмотрите, как компании используют Schedulaa для бронирования, payroll, операций с персоналом, сайтов и продаж.',
+      'Выберите отрасль и посмотрите, как компании используют Schedulaa для клиентских бронирований, истории записей, операций по клиентам, расписания персонала, сайтов, счетов, оплат и продаж.',
     primaryCta: { ...industriesPageEn.hero.primaryCta, label: 'Открыть бронирование' },
     secondaryCta: { ...industriesPageEn.hero.secondaryCta, label: 'Связаться с командой' },
   },
@@ -100,9 +100,9 @@ export const industriesPage = {
         { title: 'Салоны и спа', body: 'Бронирование мастеров в реальном времени, чаевые и кампании удержания.' },
         { title: 'Медицинские клиники', body: 'Расписание, напоминания и процессы с учетом документации.' },
         { title: 'Репетиторы и образование', body: 'Запись на сессии, регулярные графики и контроль посещаемости.' },
-        { title: 'Креативные студии', body: 'Автоматизация пути клиента от бронирования до payroll.' },
-        { title: 'Юридические и профсервисы', body: 'Структурированный intake, расписание и защищенные записи.' },
-        { title: 'Команды с филиалами', body: 'Контроль по филиалам для staffing, payroll и аналитики.' },
+        { title: 'Креативные студии', body: 'Автоматизация пути клиента от бронирования до счета и оплаты.' },
+        { title: 'Юридические и профсервисы', body: 'Структурированный intake, история записей, расписание и защищенные записи.' },
+        { title: 'Команды с филиалами', body: 'Контроль по филиалам для клиентских бронирований, staffing, биллинга и аналитики.' },
       ],
     },
   ],
@@ -129,16 +129,16 @@ export const zapierPage = {
   ...zapierPageEn,
   meta: {
     ...zapierPageEn.meta,
-    title: 'Zapier для Schedulaa — автоматизация бронирований, расписания, пауз и payroll',
+    title: 'Zapier для Schedulaa — автоматизация клиентских бронирований, расписания, биллинга и back-office handoff',
     description:
-      'Подключите Schedulaa к 6 000+ приложениям через Zapier. Передавайте данные бронирований, смен, timeclock, перерывов, PTO, onboarding и payroll.',
+      'Подключите Schedulaa к 6 000+ приложениям через Zapier. Передавайте данные клиентских бронирований, смен, timeclock, PTO, onboarding, биллинга и back-office handoff.',
   },
   hero: {
     ...zapierPageEn.hero,
     badge: 'Автоматизация Zapier',
-    title: 'Автоматизируйте каждое бронирование, смену, паузу и шаг payroll с Zapier',
+    title: 'Автоматизируйте клиентские бронирования, расписание команды, биллинг и ежедневные операции с Zapier',
     subtitle:
-      'Schedulaa отправляет в Zapier события бронирований, расписания, timeclock, пауз, PTO, onboarding и payroll-деталей; действия также могут создавать бронирования, сотрудников и смены.',
+      'Schedulaa отправляет в Zapier события клиентских бронирований, расписания команды, timeclock, onboarding и back-office handoff; действия также могут создавать бронирования, сотрудников и смены.',
     primaryCta: { ...zapierPageEn.hero.primaryCta, label: 'Открыть настройки Zapier' },
     secondaryCta: { ...zapierPageEn.hero.secondaryCta, label: 'Смотреть демо' },
   },
@@ -146,11 +146,11 @@ export const zapierPage = {
     {
       title: 'Группы live-триггеров',
       items: [
-        { title: 'События бронирований', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
+        { title: 'События клиентских бронирований', body: 'booking.created, booking.updated, booking.cancelled, booking.no_show, public_booking.created' },
         { title: 'Расписание и смены', body: 'shift.published, shift.updated, swap.requested, swap.approved, swap.rejected' },
         { title: 'Timeclock и контроль перерывов', body: 'timeclock.clock_in, timeclock.clock_out, break.started, break.ended, break.missed' },
         { title: 'Отпуска, onboarding, документы', body: 'leave.requested, leave.approved, leave.denied, onboarding.started, onboarding.document_signed' },
-        { title: 'События payroll', body: 'payroll.ready, payroll.finalized, payroll.details' },
+        { title: 'События back-office handoff', body: 'payroll.ready, payroll.finalized, payroll.details' },
       ],
     },
     {
