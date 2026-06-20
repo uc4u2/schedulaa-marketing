@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { cn } from '@/utils/cn';
-import { AppLocale, DEFAULT_LOCALE, detectLocaleFromPath, isSupportedLocale, stripLocalePrefix, withLocalePath } from '@/utils/locale';
+import { AppLocale, detectLocaleFromPath, isSupportedLocale, stripLocalePrefix, withLocalePath } from '@/utils/locale';
 import {
   AUTH_LINKS,
   DASHBOARD_LINKS,
@@ -41,7 +41,7 @@ type LocaleMeta = {
 
 const PRODUCT_MENU_META: Record<string, MegaMenuMeta> = {
   features: {
-    description: 'See the full operating system for bookings, workforce, payroll, websites, and payments.',
+    description: 'See the full platform for websites, bookings, invoices, payments, staffing, and service operations.',
     iconClassName: 'bg-blue-50 text-blue-600',
     icon: (
       <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -94,7 +94,7 @@ const PRODUCT_MENU_META: Record<string, MegaMenuMeta> = {
     ),
   },
   payroll: {
-    description: 'Preview, finalize, export, and audit payroll without leaving operations.',
+    description: 'Review payroll as a supporting back-office workflow connected to service operations.',
     iconClassName: 'bg-orange-50 text-orange-600',
     icon: (
       <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -157,7 +157,7 @@ const RESOURCES_MENU_META: Record<string, MegaMenuMeta> = {
     ),
   },
   demo: {
-    description: 'Walk through the product with scheduling, workforce, and payroll in one view.',
+    description: 'Walk through websites, bookings, invoices, payments, and scheduling in one product view.',
     iconClassName: 'bg-violet-50 text-violet-600',
     icon: (
       <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -197,7 +197,7 @@ const RESOURCES_MENU_META: Record<string, MegaMenuMeta> = {
     ),
   },
   zapier: {
-    description: 'Connect booking and payroll events to the rest of your workflow stack.',
+    description: 'Connect booking, scheduling, invoice, and payment events to the rest of your workflow stack.',
     iconClassName: 'bg-orange-50 text-orange-600',
     icon: (
       <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">

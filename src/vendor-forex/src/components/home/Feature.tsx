@@ -16,8 +16,8 @@ const defaultShowcaseByIcon: Record<string, ShowcaseItem> = {
   },
   '02': {
     icon: '02',
-    title: 'Powerful Payroll & HR',
-    description: 'Canada + 45 U.S. states supported (EI, CPP, automated stat holiday pay, W-2, T4, ROE).',
+    title: 'Estimates, Invoices & Payment Links',
+    description: 'Send estimates, collect approvals, share payment links, and keep billing connected to service work.',
   },
   '03': {
     icon: '03',
@@ -67,7 +67,7 @@ const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }
     description: feature.description,
   }));
 
-  const preferredIcons = ['01', '02', '03', '04'];
+  const preferredIcons = ['03', '01', '02', '04'];
   const dataSource: ShowcaseItem[] = showcaseData.length ? showcaseData : fallbackData;
   const byIcon = (arr: ShowcaseItem[], icon: string) =>
     arr.find((item) => String(item.icon || '').padStart(2, '0') === icon);

@@ -5,6 +5,7 @@ import Reviews from '@/vendor-forex/src/components/features/Reviews';
 import WhyChooseUs from '@/vendor-forex/src/components/features/WhyChooseUs';
 import { getLandingSource } from '@/legacy-content/features/getLandingSource';
 import { AppLocale } from '@/utils/locale';
+import Link from 'next/link';
 
 type Props = {
   locale: AppLocale;
@@ -22,12 +23,33 @@ export default function FeaturesForexLayout({ locale }: Props) {
       <CTA
         className="bg-white dark:bg-background-6"
         badgeClass="hidden"
-        ctaHeading="Build a complete website using the"
-        spanText="assistance"
-        description="Start your free trial today and see your ideas come to life easily and creatively."
+        ctaHeading="Run websites, bookings, invoices, and scheduling from one"
+        spanText="platform"
+        description="Explore the product pages that drive the core service-business workflow: website builder, booking, invoices, payments, and staff scheduling."
         btnClass="hover:btn-secondary dark:hover:btn-accent"
-        ctaBtnText="Get started"
+        ctaBtnText="Start free"
       />
+      <section className="bg-white pb-20 dark:bg-background-6">
+        <div className="main-container">
+          <div className="flex flex-wrap justify-center gap-3 text-sm">
+            <Link href="/website-builder" className="text-primary-500 underline">
+              Website Builder
+            </Link>
+            <Link href="/booking" className="text-primary-500 underline">
+              Booking
+            </Link>
+            <Link href="/business-finance/invoices" className="text-primary-500 underline">
+              Invoices & Payments
+            </Link>
+            <Link href="/workforce" className="text-primary-500 underline">
+              Staff Scheduling
+            </Link>
+            <Link href="/commerce" className="text-primary-500 underline">
+              Commerce
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

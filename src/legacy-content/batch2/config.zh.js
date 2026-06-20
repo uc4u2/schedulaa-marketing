@@ -13,19 +13,19 @@ export const workforcePage = {
   ...workforcePageEn,
   meta: {
     ...workforcePageEn.meta,
-    title: '员工运营指挥中心 | 工时、排班与薪资',
+    title: '服务型企业员工排班与班次管理 | Schedulaa',
     description:
-      '在 Schedulaa 中闭环员工运营：打卡规则、审批、可用性与薪资就绪导出统一在一个面板。',
+      '在一个员工运营面板中管理排班、审批、可用性、覆盖情况与加班风险。',
   },
   hero: {
     ...workforcePageEn.hero,
     badge: '员工管理',
-    title: '一体化员工运营中心',
+    title: '服务型企业员工排班与班次管理',
     subtitle:
-      'Schedulaa 已将排班、薪资与网站统一。现在工时、模板、策略审计与薪资审批也集中在同一工作台。',
+      '在一个工作台中管理团队可用性、班次调整、审批、覆盖情况与加班风险，无需依赖分散表格和独立日历。',
     imageAlt: 'Schedulaa 工时工作区',
     images: [
-      { ...workforcePageEn.hero.images[0], alt: '薪资管理' },
+      { ...workforcePageEn.hero.images[0], alt: '员工运营面板' },
       { ...workforcePageEn.hero.images[1], alt: '班次管理' },
       { ...workforcePageEn.hero.images[2], alt: 'T4 生成' },
       { ...workforcePageEn.hero.images[3], alt: 'W-2 生成' },
@@ -59,7 +59,7 @@ export const workforcePage = {
       ],
     },
     {
-      title: '薪资就绪导出',
+      title: '已批准工时可随时交接',
       points: [
         '已审批记录包含完整元数据（审批人、时间、策略引用、位置提示）。',
         '导出更干净、审计更简单，可直接用于财务处理。',
@@ -68,9 +68,9 @@ export const workforcePage = {
   ],
   cta: {
     ...workforcePageEn.cta,
-    overline: '员工管理 + 薪资一体化',
-    title: '预约、排班、薪资、网站与策略化工时管理在同一平台完成。',
-    body: '无需表格，无需复制粘贴，避免合规风险。',
+    overline: '员工运营',
+    title: '预约、排班、已批准工时与团队可视化在同一平台完成。',
+    body: '无需表格，无需复制粘贴，也无需让排班脱离日常运营。',
     primary: { ...workforcePageEn.cta.primary, label: '查看工时工作区' },
     secondary: { ...workforcePageEn.cta.secondary, label: '联系销售' },
   },
@@ -160,4 +160,4 @@ export const zapierPage = {
   ],
 };
 
-export { industriesPage, statusPage, roadmapPage, demoPage, supportPage, zapierPage };
+export { statusPage, roadmapPage, demoPage, supportPage };

@@ -1,63 +1,63 @@
 export const workforcePage = {
   meta: {
-    title: 'Workforce Command Center | Time Tracking, Scheduling & Payroll',
+    title: 'Staff Scheduling & Shift Management for Service Businesses | Schedulaa',
     description:
-      'Close the loop with Schedulaa’s workforce command center—clock-in/out policies, approvals, availability, and payroll-ready exports in one dashboard.',
+      'Manage staff scheduling, shift approvals, availability, coverage, overtime risk, and approved hours for service businesses in one Schedulaa workforce dashboard.',
   },
   hero: {
     badge: 'Workforce',
-    title: 'All-in-one workforce command center',
+    title: 'Staff scheduling and shift management for service businesses',
     subtitle:
-      'Schedulaa already unified online scheduling, payroll, and website pages. Now we’ve closed the loop on time tracking so hours, templates, policy audits, and payroll-ready approvals live in one dashboard—with IP/device hints captured automatically for every punch.',
+      'Manage team availability, shift swaps, approvals, coverage, and overtime risk from one workforce dashboard so service businesses can keep daily operations moving without juggling chats, spreadsheets, and disconnected calendars.',
     image: '/images/marketing/showcase/time-tracking.png',
-    imageAlt: 'Schedulaa time tracking workspace',
+    imageAlt: 'Schedulaa staff scheduling and workforce workspace',
     images: [
-      { src: '/images/marketing/payroll-manage.png', alt: 'Payroll management' },
+      { src: '/images/marketing/payroll-manage.png', alt: 'Workforce dashboard' },
       { src: '/images/marketing/shift-pre.png', alt: 'Shift management' },
-      { src: '/images/marketing/showcase/t4.png', alt: 'T4 generation' },
-      { src: '/images/marketing/showcase/w2-4d.png', alt: 'W-2 generation' },
+      { src: '/images/marketing/showcase/t4.png', alt: 'Approved hours and summaries' },
+      { src: '/images/marketing/showcase/w2-4d.png', alt: 'Workforce reporting' },
     ],
     primaryCta: { label: 'Start free', href: '/register' },
     secondaryCta: { label: 'Request a walkthrough', href: '/contact' },
   },
   sections: [
     {
-      title: 'Real-time clocking with policy enforcement',
+      title: 'Availability, hours, and shift timing in one live view',
       points: [
-        'Employees clock in/out from the streamlined My Time workspace with a live timer that subtracts break minutes, shows hours worked, and visualizes the shift timeline.',
-        'Break controls respect company policy—managers define default windows inside shift templates and the employee UI enforces them for payroll, flagging missed or overdue breaks instantly.',
-        'Personal weekly insights (for example “32h worked • 2h overtime • 3 breaks taken”) keep the process transparent.',
+        'Employees clock in/out from the My Time workspace with a live timer that shows hours worked and keeps the shift timeline visible for both staff and managers.',
+        'Break controls follow company policy so teams can protect shift flow, catch missed breaks, and reduce end-of-week cleanup before it becomes an operational problem.',
+        'Personal weekly insights keep schedules, hours, and overtime visibility transparent for the team.',
       ],
     },
     {
-      title: 'Manager-grade oversight',
+      title: 'Manager approvals with overtime and coverage visibility',
       points: [
         'Every time entry flows into the approvals page where supervisors filter by department, employee, or status before approving or rejecting—even mid-shift if something looks off.',
-        'IP/device hints expose unusual punch locations while compliance chips surface shifts missing breaks or trending toward overtime.',
-        'Need to correct multiple entries? Apply a break or shift template across selected rows and update everything at once.',
+        'IP/device hints expose unusual punch locations while alert chips surface shifts missing breaks or trending toward overtime.',
+        'Need to correct multiple entries? Apply a break or shift template across selected rows and update everything at once so schedules and approvals stay aligned.',
       ],
     },
     {
-      title: 'Shift templates with compliance baked in',
+      title: 'Shift templates and scheduling rules built for service teams',
       points: [
         'Templates capture break start/end times, duration, paid/unpaid flags, and availability links.',
         'Applying a template pushes those rules into every shift assignment and the employee clock UI automatically—no manual edits.',
-        'Force clock-out and annotate overdue shifts so approvals stay clean for payroll.',
+        'Force clock-out and annotate overdue shifts so approvals stay clean for payroll or accounting handoff later.',
       ],
     },
     {
-      title: 'Payroll-ready exports',
+      title: 'Approved hours ready for handoff',
       points: [
-        'Approved entries carry metadata for both supervisors and payroll teams (who approved, when, policy references, and punch location hints).',
-        'Exports stay clean, audits stay simple, and payroll files ingest directly into accounting.',
+        'Approved entries carry metadata for supervisors and back-office teams, including who approved, when, policy references, and punch location hints.',
+        'Exports stay clean, audits stay simple, and approved-hour totals are ready for payroll or accounting when needed.',
       ],
     },
   ],
   cta: {
-    overline: 'Workforce + payroll together',
+    overline: 'Workforce operations',
     title:
-      'Booking, scheduling, payroll, websites, and policy-aware time tracking in the same platform.',
-    body: 'No spreadsheets, no copy/paste, and no compliance surprises.',
+      'Booking, scheduling, approved hours, and workforce visibility in the same platform.',
+    body: 'No spreadsheets, no copy/paste, and no disconnected scheduling workflow.',
     primary: { label: 'See the time tracking workspace', href: '/register' },
     secondary: { label: 'Talk to sales', href: '/contact' },
   },

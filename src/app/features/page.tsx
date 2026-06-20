@@ -5,17 +5,17 @@ import { getServerLocale } from '@/utils/serverLocale';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Schedulaa Platform Features | Scheduling, Payroll, and Online Sales Unified',
+  title: 'Schedulaa Platform Features | Websites, Booking, Invoices, Scheduling and Payments',
   description:
-    'Schedulaa unifies scheduling, payroll, hiring, website building, and eCommerce for teams. Sell services or products, automate payments, and manage multi-branch operations in one platform.',
+    'Explore Schedulaa platform features for service businesses, including website builder tools, online booking, estimates and invoices, payments, staff scheduling, and customer operations.',
   openGraph: {
     title: 'Schedulaa Platform Features',
-    description: 'Book clients, sell products, pay your team - all from one platform.',
+    description: 'Launch websites, accept bookings, send invoices, collect payments, and manage service operations from one platform.',
     url: 'https://www.schedulaa.com/en/features',
   },
   twitter: {
     title: 'Schedulaa Platform Features',
-    description: 'Book clients, sell products, pay your team - all from one platform.',
+    description: 'Launch websites, accept bookings, send invoices, collect payments, and manage service operations from one platform.',
   },
 };
 

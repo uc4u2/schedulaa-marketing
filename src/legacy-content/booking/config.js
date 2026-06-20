@@ -4,7 +4,7 @@ const CONTACT_URL = "/contact";
 const LIVE_SERVICE_DEMO = "/demo";
 
 const sharedCta = {
-  overline: "Booking, payroll, and websites together",
+  overline: "Booking, websites, invoices, and scheduling together",
   title: "Start booking clients the same day you sign up",
   body: "Launch online booking, publish availability, and connect Stripe without installing plugins or stitching tools together.",
   primary: { label: "Start free", href: REGISTER_URL },
@@ -13,7 +13,7 @@ const sharedCta = {
 
 const sharedSecondaryLinks = [
   { label: "Website builder", href: "/website-builder" },
-  { label: "Marketing automation", href: "/marketing" },
+  { label: "Invoices & payments", href: "/business-finance/invoices" },
   { label: "Salon booking", href: "/booking/salon" },
   { label: "Tutor scheduling", href: "/booking/tutor" },
   { label: "Medical booking", href: "/booking/doctor" },

@@ -13,19 +13,19 @@ export const workforcePage = {
   ...workforcePageEn,
   meta: {
     ...workforcePageEn.meta,
-    title: 'Центр управления персоналом | Учет времени, расписание и payroll',
+    title: 'Планирование персонала и управление сменами для сервисного бизнеса | Schedulaa',
     description:
-      'Замкните операционный цикл в Schedulaa: правила clock-in/out, согласования, доступность и экспорт для payroll в одном дашборде.',
+      'Управляйте расписанием персонала, согласованием смен, доступностью, покрытием и риском переработок в одном рабочем дашборде.',
   },
   hero: {
     ...workforcePageEn.hero,
     badge: 'Персонал',
-    title: 'Единый центр управления персоналом',
+    title: 'Планирование персонала и управление сменами для сервисного бизнеса',
     subtitle:
-      'Schedulaa уже объединила онлайн-расписание, payroll и сайт. Теперь в одном месте доступны учет часов, шаблоны, аудиты политик и payroll-ready согласования.',
+      'Управляйте доступностью команды, сменами, согласованиями, покрытием и риском переработок из одного рабочего пространства без разрозненных таблиц и отдельных календарей.',
     imageAlt: 'Рабочая область учета времени Schedulaa',
     images: [
-      { ...workforcePageEn.hero.images[0], alt: 'Управление payroll' },
+      { ...workforcePageEn.hero.images[0], alt: 'Дашборд персонала' },
       { ...workforcePageEn.hero.images[1], alt: 'Управление сменами' },
       { ...workforcePageEn.hero.images[2], alt: 'Формирование T4' },
       { ...workforcePageEn.hero.images[3], alt: 'Формирование W-2' },
@@ -59,7 +59,7 @@ export const workforcePage = {
       ],
     },
     {
-      title: 'Экспорт, готовый для payroll',
+      title: 'Подтвержденные часы готовы к передаче',
       points: [
         'Подтвержденные записи содержат метаданные для руководителей и команды payroll.',
         'Экспорты остаются чистыми, аудит упрощается, файлы сразу пригодны для бухгалтерии.',
@@ -68,9 +68,9 @@ export const workforcePage = {
   ],
   cta: {
     ...workforcePageEn.cta,
-    overline: 'Персонал + payroll вместе',
-    title: 'Бронирование, расписание, payroll, сайты и учет времени в одной платформе.',
-    body: 'Без таблиц, без копипаста, без рисков комплаенса.',
+    overline: 'Операции с персоналом',
+    title: 'Бронирование, расписание, подтвержденные часы и видимость по команде в одной платформе.',
+    body: 'Без таблиц, без копипаста и без разрыва между расписанием и ежедневными операциями.',
     primary: { ...workforcePageEn.cta.primary, label: 'Открыть рабочую область учета времени' },
     secondary: { ...workforcePageEn.cta.secondary, label: 'Связаться с отделом продаж' },
   },
@@ -160,4 +160,4 @@ export const zapierPage = {
   ],
 };
 
-export { industriesPage, statusPage, roadmapPage, demoPage, supportPage, zapierPage };
+export { statusPage, roadmapPage, demoPage, supportPage };

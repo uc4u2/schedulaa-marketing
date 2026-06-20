@@ -2,31 +2,31 @@ import { FooterData } from '@/interface';
 
 export const footerLinks: FooterData[] = [
   {
-    title: 'Company',
+    title: 'Platform',
     links: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Career', href: '/career' },
-      { label: 'Case Studies', href: '/case-study' },
-      { label: 'Contact Us', href: '/contact-us' },
+      { label: 'Website Builder', href: '/website-builder' },
+      { label: 'Online Booking', href: '/booking' },
+      { label: 'Invoices & Estimates', href: '/business-finance/invoices' },
+      { label: 'Shift Scheduling', href: '/workforce' },
     ],
   },
   {
-    title: 'Support',
+    title: 'Products',
+    links: [
+      { label: 'Payments & Commerce', href: '/commerce' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Contact', href: '/contact' },
+      { label: 'Docs', href: '/docs' },
+    ],
+  },
+  {
+    title: 'Support & Legal',
     links: [
       { label: 'FAQ', href: '/faq' },
-      { label: 'Documentation', href: '/documentation' },
-      { label: 'Tutorial', href: '/tutorial' },
-      { label: 'Support', href: '/support' },
-    ],
-  },
-  {
-    title: 'Legal Policies',
-    links: [
+      { label: 'Domain Help', href: '/help/domains' },
       { label: 'Terms & Conditions', href: '/terms' },
       { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Refund Policy', href: '/terms' },
-      { label: 'GDPR Compliance', href: '/gdpr' },
-      { label: 'Affiliate Policy', href: '/affiliate-policy' },
+      { label: 'Refund Policy', href: '/refund-policy' },
     ],
   },
 ];

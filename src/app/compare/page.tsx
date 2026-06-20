@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   ...defaultMetadata,
   title: 'Schedulaa comparisons | Compare competitors',
-  description: 'Compare Schedulaa with leading booking, scheduling, and payroll platforms for service teams.',
+  description: 'Compare Schedulaa with leading website builder, booking, invoicing, payment, and scheduling platforms for service businesses.',
 };
 
 export default function CompareHubPage() {
@@ -20,10 +20,17 @@ export default function CompareHubPage() {
             Side-by-side comparison guides for teams evaluating Schedulaa against other platforms.
           </p>
           <p className="mt-4 text-secondary/70 dark:text-accent/70">
-            Most comparison pages focus on feature checklists. That is not why Schedulaa was built. Service teams do
-            not struggle with payroll in isolation. They struggle with everything that happens before payroll,
-            including shift changes, break compliance, and late approvals.
+            Most comparison pages focus on simple feature checklists. Schedulaa is built for service businesses that
+            need websites, bookings, estimates, payments, and staff scheduling to stay connected instead of breaking
+            across multiple tools.
           </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/website-builder" className="text-primary-500 underline">Website builder</Link>
+            <Link href="/booking" className="text-primary-500 underline">Booking</Link>
+            <Link href="/business-finance/invoices" className="text-primary-500 underline">Invoices & payments</Link>
+            <Link href="/workforce" className="text-primary-500 underline">Staff scheduling</Link>
+            <Link href="/commerce" className="text-primary-500 underline">Commerce</Link>
+          </div>
         </div>
 
         <div className="mt-8 grid gap-4 md:grid-cols-2">

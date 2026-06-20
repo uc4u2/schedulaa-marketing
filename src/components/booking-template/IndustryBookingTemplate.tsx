@@ -41,8 +41,8 @@ export default function IndustryBookingTemplate({
           badge: overline,
           title,
           subtitle: intro,
-          primaryCta: { label: 'View pricing', href: '/pricing' },
-          secondaryCta: { label: 'Explore features', href: '/features' },
+          primaryCta: { label: 'Explore online booking', href: '/booking' },
+          secondaryCta: { label: 'See website builder', href: '/website-builder' },
         }}
         featuresTitle="Operational sections"
         features={sections.map((section) => ({

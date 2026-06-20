@@ -231,6 +231,33 @@ export default function BusinessFinanceInvoicesPage() {
         </div>
       </section>
 
+      <section className="pb-16 md:pb-20">
+        <div className="main-container">
+          <AnimatedSection>
+            <div className="rounded-[28px] border border-[#dbe5f3] bg-white/94 p-6 shadow-[0_18px_48px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
+              <div className="space-y-3 text-center">
+                <SurfaceLabel>Connected workflows</SurfaceLabel>
+                <h2 className="text-heading-4 text-secondary dark:text-white">Keep billing connected to checkout, websites, and booking</h2>
+                <p className="mx-auto max-w-[860px] text-[15px] leading-7 text-secondary/72 dark:text-accent/70">
+                  Estimates and invoices work best when they stay tied to the rest of the client journey instead of living in a separate finance tool.
+                </p>
+              </div>
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <Link href={withLocalePath('/commerce', locale)} className="text-primary-500 underline">
+                  Explore commerce and payment collection
+                </Link>
+                <Link href={withLocalePath('/booking', locale)} className="text-primary-500 underline">
+                  See booking plus payments
+                </Link>
+                <Link href={withLocalePath('/website-builder', locale)} className="text-primary-500 underline">
+                  Launch branded website flows
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       <section className="py-16 md:py-20">
         <div className="main-container">
           <AnimatedSection>

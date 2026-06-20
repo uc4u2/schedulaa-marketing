@@ -23,9 +23,9 @@ const cardImages = [
 const Features = ({ source }: { source?: any }) => {
   const content = source || sourceEn;
   const cards = [
-    content.highlightCards?.scheduling,
-    content.highlightCards?.payroll,
     content.highlightCards?.commerce,
+    content.highlightCards?.scheduling,
+    (content.featureShowcase?.features || [])[2],
     (content.featureShowcase?.features || [])[0],
     (content.featureShowcase?.features || [])[1],
   ].filter(Boolean) as Array<{ title: string; description?: string; points?: string[] }>;

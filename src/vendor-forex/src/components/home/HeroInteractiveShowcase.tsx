@@ -16,11 +16,11 @@ type WorkflowItem = {
 };
 
 const workflowItems: WorkflowItem[] = [
+  { id: 'website', label: 'Website Builder', alt: 'Website builder and branded pages preview', image: payrollImg },
   { id: 'booking', label: 'Booking', alt: 'Client slot selection preview', image: bookingImg },
-  { id: 'scheduling', label: 'Scheduling', alt: 'Shift management preview', image: schedulingImg },
-  { id: 'time', label: 'Time Tracking', alt: 'Employee management preview', image: timeTrackingImg },
-  { id: 'payroll', label: 'Payroll', alt: 'Payroll management preview', image: payrollImg },
-  { id: 'reports', label: 'Reports', alt: 'Time tracking report preview', image: reportsImg },
+  { id: 'invoices', label: 'Invoices & Payments', alt: 'Invoices and payment links preview', image: timeTrackingImg },
+  { id: 'scheduling', label: 'Staff Scheduling', alt: 'Shift management preview', image: schedulingImg },
+  { id: 'reports', label: 'Client Operations', alt: 'Client operations and reporting preview', image: reportsImg },
 ];
 
 const AUTO_ROTATE_MS = 4500;
@@ -59,11 +59,6 @@ const HeroInteractiveShowcase = () => {
                   }}
                   aria-pressed={isActive}
                   aria-label={`Show ${item.label} preview`}>
-                  {item.id === 'payroll' ? (
-                    <span className="absolute top-2 right-2 z-10 inline-flex items-center rounded-full border border-lime-200/30 bg-lime-300/95 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-slate-900 shadow-[0_8px_20px_rgba(157,255,0,0.28)]">
-                      Popular
-                    </span>
-                  ) : null}
                   <Image
                     src={item.image}
                     alt={item.alt}

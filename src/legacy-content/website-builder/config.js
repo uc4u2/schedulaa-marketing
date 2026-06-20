@@ -117,21 +117,21 @@ const resourceHighlights = [
 
 export const websiteBuilderPage = {
   meta: {
-    title: 'Website Builder for Small Business - Free Domain & Hosting | Schedulaa',
+    title: 'Website Builder for Service Businesses - Free Domain & Hosting | Schedulaa',
     description:
-      'Build your business website with Schedulaa\'s free website builder. Get a free site on a Schedulaa URL, connect your domain, or use our Website Design Service for done-for-you design.',
+      'Build a service-business website with Schedulaa’s website builder. Launch on a Schedulaa URL, connect your own domain, and turn visitors into bookings, quotes, and payments.',
     canonical: PAGE_URL,
     og: {
-      title: 'Website Builder for Small Business - Schedulaa',
+      title: 'Website Builder for Service Businesses - Schedulaa',
       description:
-        'Build and host your business website with booking, Stripe, and analytics. Launch free or choose our Website Design Service for a done-for-you site.',
+        'Build and host a service-business website with booking, Stripe, and analytics. Launch free or choose our Website Design Service for a done-for-you site.',
       image: 'https://www.schedulaa.com/images/website-builder-preview.png',
       url: PAGE_URL,
     },
   },
   hero: {
-    badge: 'Free Website Builder for Small Business',
-    title: 'Website Builder for Small Businesses - Free Hosting Included',
+    badge: 'Website Builder for Service Businesses',
+    title: 'Website Builder for Service Businesses - Free Hosting Included',
     subtitle:
       'Build a responsive website with booking, Stripe payments, and analytics in one platform. Every account includes a free website at www.schedulaa.com/your-company-slug (even before you subscribe).',
     primaryCta: { label: 'Start your free website', href: '/register' },

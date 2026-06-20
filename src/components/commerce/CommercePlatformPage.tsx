@@ -128,6 +128,11 @@ export default function CommercePlatformPage({ locale }: CommercePlatformPagePro
                 href={withLocalePath(item.href, locale)}
               />
             ))}
+            <MiniLinkCard
+              title="Invoices + payment links"
+              description="Connect product sales, follow-up billing, and manual or hosted payment collection in one operational flow."
+              href={withLocalePath('/business-finance/invoices', locale)}
+            />
           </div>
         </section>
       </AnimatedSection>

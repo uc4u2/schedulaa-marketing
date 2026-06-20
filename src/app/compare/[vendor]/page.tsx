@@ -4,6 +4,41 @@ import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData'
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+function getContextCta(entry: any) {
+  const haystack = [
+    entry?.competitor,
+    entry?.heroTitle,
+    entry?.heroSubtitle,
+    entry?.metaTitle,
+    entry?.metaDescription,
+    ...(entry?.intro || []),
+    ...(entry?.contextBlock?.paragraphs || []),
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+
+  if (/(payroll|payslip|w-2|t4|hris|payroll software|payroll platform)/.test(haystack)) {
+    return { href: '/payroll', label: 'See payroll coverage' };
+  }
+  if (/(invoice|estimate|quote|payment|deposit|billing|accounts receivable)/.test(haystack)) {
+    return { href: '/business-finance/invoices', label: 'Explore invoices & payments' };
+  }
+  if (/(commerce|checkout|store|storefront|product|catalog|shipping|easypost|ecommerce|e-commerce)/.test(haystack)) {
+    return { href: '/commerce', label: 'Explore commerce' };
+  }
+  if (/(website|domain|site builder|storefront builder|online presence|seo)/.test(haystack)) {
+    return { href: '/website-builder', label: 'Explore website builder' };
+  }
+  if (/(staff|shift|schedule|scheduling|coverage|overtime|workforce|rota)/.test(haystack)) {
+    return { href: '/workforce', label: 'Explore staff scheduling' };
+  }
+  if (/(booking|appointment|salon|spa|clinic|tutor|calendar)/.test(haystack)) {
+    return { href: '/booking', label: 'Explore booking' };
+  }
+  return { href: '/booking', label: 'Explore booking' };
+}
+
 function getValueTone(rawValue: string, label: string) {
   const value = String(rawValue || '').toLowerCase();
   const isSchedulaa = String(label || '').toLowerCase().includes('schedulaa');
@@ -39,9 +74,13 @@ function getValueTone(rawValue: string, label: string) {
     return 'positive';
   }
 
-  if (value.includes('partial') || value.includes('limited') || value.includes('basic')) return 'neutral';
+  if (value.includes('partial') || value.includes('limited') || value.includes('basic')) {
+    return 'neutral';
+  }
 
-  if (isSchedulaa) return 'positive';
+  if (isSchedulaa) {
+    return 'positive';
+  }
   return 'neutral';
 }
 
@@ -86,7 +125,9 @@ export async function generateMetadata({ params }: { params: Promise<{ vendor: s
 export default async function CompareVendorPage({ params }: { params: Promise<{ vendor: string }> }) {
   const { vendor } = await params;
   const entry = getCompareEntry(vendor, 'compare');
-  if (!entry) return notFound();
+  if (!entry) {
+    return notFound();
+  }
 
   const rows = entry.executiveOverview?.rows || [];
   const summaryRows = entry.summaryTable?.rows || [];
@@ -95,6 +136,7 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
   const contextParagraphs = entry.contextBlock?.paragraphs || [];
   const testimonialQuote = entry.testimonial?.quote;
   const testimonialAttribution = entry.testimonial?.attribution;
+  const contextCta = getContextCta(entry);
 
   return (
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
@@ -214,7 +256,7 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
 
         <div className="mt-8 flex flex-wrap gap-4">
           <Link href="/pricing" className="btn btn-primary btn-md">View pricing plans</Link>
-          <Link href="/payroll" className="btn btn-secondary btn-md">See payroll coverage</Link>
+          <Link href={contextCta.href} className="btn btn-secondary btn-md">{contextCta.label}</Link>
           <Link href="/compare" className="text-primary-500 underline">Back to compare hub</Link>
           <Link href={`/alternatives/${entry.altSlug}`} className="text-primary-500 underline">View alternatives</Link>
         </div>

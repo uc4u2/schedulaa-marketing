@@ -31,8 +31,8 @@ const Footer = ({ className }: { className?: string }) => {
                   <Image src={darkLogo} alt="NextSass Logo" />
                 </figure>
                 <p className="text-accent/60 text-tagline-1 mt-4 mb-7 font-normal">
-                  Build better products with flexible tools, helpful documentation, and a team that champions your
-                  growth.
+                  Schedulaa helps service businesses launch websites, accept bookings, send invoices, collect
+                  payments, and manage daily operations from one platform.
                 </p>
                 <div className="flex items-center gap-3">
                   <Link target="_blank" href="https://www.facebook.com">
@@ -93,7 +93,8 @@ const Footer = ({ className }: { className?: string }) => {
           <FooterDivider className="bg-accent/10 dark:bg-stroke-6" />
           <RevealAnimation delay={0.7} offset={10} start="top 105%">
             <p className="text-tagline-1 text-primary-50 font-normal">
-              Copyright ©Pixels71. NextSaaS – smart application for modern business
+              Copyright ©Schedulaa. Website builder, booking, invoices, payments, and scheduling for service
+              businesses.
             </p>
           </RevealAnimation>
         </div>

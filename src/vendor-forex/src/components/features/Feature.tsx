@@ -4,6 +4,7 @@ import Image from 'next/image';
 import sourceEn from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
+import Link from 'next/link';
 
 const Feature = ({ source }: { source?: any }) => {
   const content = source || sourceEn;
@@ -21,11 +22,19 @@ const Feature = ({ source }: { source?: any }) => {
                 <span className="badge badge-green mb-5">Platform Map</span>
                 <h2 className="text-accent sm:text-heading-5 text-heading-6 mb-6">{content.platformMap.title}</h2>
                 <p className="mb-8 text-accent/70">{content.platformMap.subtitle}</p>
-                <LinkButton
-                  href="/booking"
-                  className="btn btn-primary btn-accent dark:btn-dark hover:btn-primary btn-md btn border-0">
-                  {content.platformMap.primaryCta.label}
-                </LinkButton>
+                <div className="flex flex-wrap gap-3">
+                  <LinkButton
+                    href="/website-builder"
+                    className="btn btn-primary btn-accent dark:btn-dark hover:btn-primary btn-md btn border-0">
+                    {content.platformMap.primaryCta.label}
+                  </LinkButton>
+                  <Link
+                    href="/workforce"
+                    className="btn btn-outline btn-md border-white/20 text-white hover:border-white/40 hover:bg-white/10"
+                  >
+                    Staff scheduling
+                  </Link>
+                </div>
               </div>
               <div>
                 <ul className="space-y-4">

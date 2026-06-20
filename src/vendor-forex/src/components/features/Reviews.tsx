@@ -21,7 +21,7 @@ const Reviews = ({ source }: { source?: any }) => {
 
             <RevealAnimation delay={0.3}>
               <p>
-                Real teams use Schedulaa to unify scheduling, payroll, websites, and client operations across locations.
+                Real teams use Schedulaa to unify websites, bookings, invoices, payments, staff scheduling, and client operations across locations.
               </p>
             </RevealAnimation>
           </div>
