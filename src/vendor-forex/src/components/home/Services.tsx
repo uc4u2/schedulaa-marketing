@@ -15,33 +15,39 @@ interface ServiceCard {
 export const serviceCards: ServiceCard[] = [
   {
     id: 1,
-    label: 'Platform coverage',
-    value: 'US + CA',
-    description: 'Payroll and compliance workflows supported',
+    label: 'Website builder',
+    value: 'Custom domain',
+    description: 'Launch branded service pages, product pages, and contact flows quickly.',
   },
   {
     id: 2,
-    label: 'Core modules',
-    value: '5+',
-    description: 'Booking, payroll, websites, eCommerce, analytics',
+    label: 'Online bookings',
+    value: '24/7',
+    description: 'Let clients book services online while staff availability stays current.',
   },
   {
     id: 3,
-    label: 'Operational speed',
-    value: '< 1 min',
-    description: 'From booking confirmation to staff visibility',
+    label: 'Estimates & invoices',
+    value: 'One flow',
+    description: 'Move from approved pricing to invoice and follow-up without extra tools.',
   },
   {
     id: 4,
-    label: 'Integrations',
-    value: 'API + Zapier',
-    description: 'Automations for accounting and re-engagement',
+    label: 'Payments',
+    value: 'Stripe-ready',
+    description: 'Collect deposits, invoices, and checkout payments from the same platform.',
   },
   {
     id: 5,
-    label: 'Scale model',
-    value: 'Multi-branch',
-    description: 'Department and role-based management out of the box',
+    label: 'Shift scheduling',
+    value: 'Live availability',
+    description: 'Keep staff calendars, changes, and service coverage visible in one place.',
+  },
+  {
+    id: 6,
+    label: 'Customer management',
+    value: 'Shared history',
+    description: 'Keep booking context, billing, and follow-ups tied to the same client record.',
   },
 ];
 
@@ -70,8 +76,7 @@ const serviceCardsZh: ServiceCard[] = [
 ];
 
 const Services = ({ locale = 'en' }: { locale?: AppLocale }) => {
-  const localizedCards =
-    locale === 'fa' ? serviceCardsFa : locale === 'ru' ? serviceCardsRu : locale === 'zh' ? serviceCardsZh : serviceCards;
+  const localizedCards = serviceCards;
   return (
     <RevealAnimation delay={0.1}>
       <section className="bg-white py-24 md:py-[100px] xl:py-[200px] dark:bg-black">

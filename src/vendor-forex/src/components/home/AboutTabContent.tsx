@@ -2,6 +2,7 @@ import aboutScheduling from '@public/images/marketing/employee-dashboard.png';
 import aboutPayroll from '@public/images/marketing/payroll-dashboard.png';
 import aboutCommerce from '@public/images/marketing/website-builder.png';
 import aboutAutomation from '@public/images/marketing/my-shift.png';
+import aboutPayments from '@public/images/marketing/showcase/stripe.png';
 import { AppLocale } from '@/utils/locale';
 import Image from 'next/image';
 import LinkButton from '../ui/button/LinkButton';
@@ -9,98 +10,98 @@ import TabContent from '../ui/tab/TabContent';
 
 const aboutTabsDataEn = [
   {
-    id: 'blockchain',
+    id: 'website-booking',
     badge: 'About',
-    title: 'Payroll and compliance are built for',
+    title: 'Launch your website and take',
     titleBreak: false,
-    highlightedText: ' service teams.',
+    highlightedText: ' bookings from one system.',
     description:
-      'Run payroll with overtime, tips, and holiday logic, then export W-2, T4, and ROE records with audit-ready reporting.',
-    image: aboutPayroll,
-    imageAlt: 'Schedulaa payroll and compliance dashboard',
-    buttonText: 'Explore payroll',
-    buttonHref: '/payroll',
-    features: [
-      {
-        icon: 'ns-shape-6',
-        title: 'Region-aware rules',
-        description: 'US + Canada payroll scenarios supported.',
-      },
-      {
-        icon: 'ns-shape-46',
-        title: 'Audit-ready exports',
-        description: 'Generate compliance artifacts with confidence.',
-      },
-      {
-        icon: 'ns-shape-47',
-        title: 'Employee self-service',
-        description: 'Payslips and payroll transparency for staff.',
-      },
-    ],
-  },
-  {
-    id: 'decentralization',
-    badge: 'About',
-    title: 'Booking and scheduling become',
-    titleBreak: true,
-    titleContinue: 'one connected',
-    highlightedText: ' workflow.',
-    description:
-      'Publish services, availability, and provider slots once. Clients self-book, staff calendars update in real time, and operations stop duplicating data.',
-    image: aboutScheduling,
-    imageAlt: 'Schedulaa booking and availability dashboard',
-    buttonText: 'Explore booking',
-    buttonHref: '/booking',
-    features: [
-      {
-        icon: 'ns-shape-6',
-        title: 'Real-time availability',
-        description: 'Staff and client views stay synchronized.',
-      },
-      {
-        icon: 'ns-shape-46',
-        title: 'Provider assignment',
-        description: 'Control services, rooms, and calendars by role.',
-      },
-      {
-        icon: 'ns-shape-47',
-        title: 'Self-serve rescheduling',
-        description: 'Reduce manual changes and admin overhead.',
-      },
-    ],
-  },
-  {
-    id: 'privacy',
-    badge: 'About',
-    title: 'Sell services and products from',
-    titleBreak: false,
-    highlightedText: ' one checkout.',
-    description:
-      'Combine bookings, add-ons, products, deposits, and tips in one cart with Stripe checkout and automated receipts.',
+      'Publish services, products, staff availability, and branded pages in one place so clients can discover you and book without back-and-forth.',
     image: aboutCommerce,
-    imageAlt: 'Schedulaa commerce and checkout analytics',
-    buttonText: 'Explore features',
-    buttonHref: '/features',
+    imageAlt: 'Schedulaa website builder and booking dashboard',
+    buttonText: 'Explore website builder',
+    buttonHref: '/website-builder',
     features: [
       {
         icon: 'ns-shape-6',
-        title: 'Unified cart',
-        description: 'Products and services in one purchase flow.',
+        title: 'Custom pages and domains',
+        description: 'Launch branded service pages and connect your own domain.',
       },
       {
         icon: 'ns-shape-46',
-        title: 'Refund and tax support',
-        description: 'Secure checkout with operational guardrails.',
+        title: 'Live booking flow',
+        description: 'Clients can book services, staff, and time slots online.',
       },
       {
         icon: 'ns-shape-47',
-        title: 'Revenue analytics',
-        description: 'Track utilization, churn, and top performers.',
+        title: 'Faster updates',
+        description: 'Change content, services, and offers without rebuilding your site.',
       },
     ],
   },
   {
-    id: 'exchanges',
+    id: 'estimates-invoices',
+    badge: 'About',
+    title: 'Send estimates, invoices, and collect',
+    titleBreak: true,
+    titleContinue: 'payments in',
+    highlightedText: ' one connected flow.',
+    description:
+      'Move from approved pricing to invoice, payment link, and confirmed work without stitching together extra finance tools for everyday jobs.',
+    image: aboutPayments,
+    imageAlt: 'Schedulaa estimates, invoices, and payments workflow',
+    buttonText: 'Explore invoices',
+    buttonHref: '/business-finance/invoices',
+    features: [
+      {
+        icon: 'ns-shape-6',
+        title: 'Estimates and approvals',
+        description: 'Share pricing clearly and move approved work forward faster.',
+      },
+      {
+        icon: 'ns-shape-46',
+        title: 'Invoices and payment links',
+        description: 'Bill clients from the same workflow and get paid sooner.',
+      },
+      {
+        icon: 'ns-shape-47',
+        title: 'Less admin handoff',
+        description: 'Keep estimates, invoices, and payments tied to the same client record.',
+      },
+    ],
+  },
+  {
+    id: 'scheduling',
+    badge: 'About',
+    title: 'Scheduling and shift management stay',
+    titleBreak: false,
+    highlightedText: ' visible for the whole team.',
+    description:
+      'Manage staff availability, assigned services, shift changes, and day-to-day coverage from one place instead of chasing updates across chats and spreadsheets.',
+    image: aboutScheduling,
+    imageAlt: 'Schedulaa staff scheduling and availability dashboard',
+    buttonText: 'Explore scheduling',
+    buttonHref: '/workforce',
+    features: [
+      {
+        icon: 'ns-shape-6',
+        title: 'Live availability',
+        description: 'See who is available, where they are assigned, and what is changing.',
+      },
+      {
+        icon: 'ns-shape-46',
+        title: 'Shift changes and approvals',
+        description: 'Handle swaps, time off, and updates without manual follow-up.',
+      },
+      {
+        icon: 'ns-shape-47',
+        title: 'Service-aware scheduling',
+        description: 'Match people, rooms, and services in one planning view.',
+      },
+    ],
+  },
+  {
+    id: 'automations',
     badge: 'About',
     title: 'Integrations and automations drive',
     titleBreak: false,
@@ -120,12 +121,42 @@ const aboutTabsDataEn = [
       {
         icon: 'ns-shape-46',
         title: 'Accounting sync',
-        description: 'Connect payroll and invoicing data to finance tools.',
+        description: 'Connect invoice, payment, and sales data to finance tools.',
       },
       {
         icon: 'ns-shape-47',
         title: 'Campaign automation',
         description: 'Re-engage no-shows, VIP clients, and churn risks.',
+      },
+    ],
+  },
+  {
+    id: 'payroll-handoff',
+    badge: 'About',
+    title: 'Payroll-ready handoff stays available as a',
+    titleBreak: false,
+    highlightedText: ' supporting workflow.',
+    description:
+      'When you need it, Schedulaa can still help you review approved hours, totals, and back-office payroll handoff steps without making payroll the center of your sales story.',
+    image: aboutPayroll,
+    imageAlt: 'Schedulaa payroll-ready handoff dashboard',
+    buttonText: 'Explore payroll',
+    buttonHref: '/payroll',
+    features: [
+      {
+        icon: 'ns-shape-6',
+        title: 'Approved-hour review',
+        description: 'Check finalized time and staffing totals before handoff.',
+      },
+      {
+        icon: 'ns-shape-46',
+        title: 'Export support',
+        description: 'Keep payroll-ready reporting available when teams need it.',
+      },
+      {
+        icon: 'ns-shape-47',
+        title: 'Secondary back-office workflow',
+        description: 'Useful for operations teams without leading the homepage message.',
       },
     ],
   },
@@ -408,14 +439,7 @@ const aboutTabsDataZh = [
 ];
 
 const AboutTabContent = ({ locale = 'en' }: { locale?: AppLocale }) => {
-  const aboutTabsData =
-    locale === 'fa'
-      ? aboutTabsDataFa
-      : locale === 'ru'
-        ? aboutTabsDataRu
-        : locale === 'zh'
-          ? aboutTabsDataZh
-          : aboutTabsDataEn;
+  const aboutTabsData = aboutTabsDataEn;
 
   return (
     <>

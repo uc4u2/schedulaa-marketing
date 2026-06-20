@@ -50,19 +50,19 @@ const LABOR_VISIBILITY_COPY: Record<
   }
 > = {
   en: {
-    badge: 'Labor cost visibility',
-    title: 'Schedule your team and see labor cost pressure before payroll closes.',
+    badge: 'Shift visibility',
+    title: 'Schedule your team, track coverage, and spot staffing pressure before the week gets messy.',
     body:
-      'Schedulaa gives service managers one place to track worked hours, overtime risk, payroll-ready totals, and staffing pressure without waiting for spreadsheets or end-of-week rollups.',
+      'Schedulaa gives service managers one place to track scheduled hours, overtime risk, open coverage, approved time, and payroll-ready totals without waiting for spreadsheets or end-of-week rollups.',
     primaryCta: 'Book a demo',
     secondaryCta: 'See pricing',
     videoTitle: 'One Platform. One Source of Truth',
     bullets: [
-      'Today Labor Cost: know what staffing cost looks like before payroll day.',
-      'Overtime Risk: spot employees approaching overtime before it compounds.',
-      'Payroll Ready Hours: review approved hours, leave, and exceptions together.',
-      'Daily and weekly labor visibility for managers, operators, and accountants.',
-      'Replace scattered spreadsheets and manual rollups with one operating view.',
+      'Today staffing view: see scheduled hours, open gaps, and service coverage in one place.',
+      'Overtime risk: spot employees approaching overtime before it compounds.',
+      'Approved time and exceptions: review hours, leave, and changes together.',
+      'Daily and weekly visibility for managers, operators, and finance leads.',
+      'Keep payroll-ready totals available as a back-office handoff when needed.',
     ],
   },
   fa: {

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const DEFAULT_URL = 'https://www.schedulaa.com/';
-export const DEFAULT_TITLE = 'Schedulaa | Scheduling, Payroll, and Website Builder';
+export const DEFAULT_TITLE = 'Schedulaa | Website Builder, Booking, Invoices and Scheduling for Service Businesses';
 export const DEFAULT_DESCRIPTION =
-  'Schedulaa helps service businesses run scheduling, payroll, and website booking from one modern operating platform.';
+  'Schedulaa helps service businesses launch websites, accept bookings, send estimates and invoices, manage shifts, and collect payments in one platform.';
 export const DEFAULT_IMAGE_URL = 'https://www.schedulaa.com/og/logo.png';
 
 const defaultMetadata: Metadata = {

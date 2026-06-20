@@ -43,15 +43,15 @@ export type NavbarLocaleOption = {
 };
 
 export const PRODUCT_MENU_LINKS: NavbarLinkItem[] = [
-  { id: 'features', href: '/features', labelKey: 'features' },
-  { id: 'workforce', href: '/workforce', labelKey: 'workforce' },
-  { id: 'booking', href: '/booking', labelKey: 'booking' },
-  { id: 'marketing', href: '/marketing', labelKey: 'marketing' },
-  { id: 'commerce', href: '/commerce', labelKey: 'commerce' },
-  { id: 'payroll', href: '/payroll', labelKey: 'payroll' },
   { id: 'website-builder', href: '/website-builder', labelKey: 'websiteBuilder' },
-  { id: 'business-finance', href: '/business-finance', labelKey: 'businessFinance' },
+  { id: 'booking', href: '/booking', labelKey: 'booking' },
   { id: 'business-finance-invoices', href: '/business-finance/invoices', labelKey: 'invoicesEstimates' },
+  { id: 'workforce', href: '/workforce', labelKey: 'workforce' },
+  { id: 'commerce', href: '/commerce', labelKey: 'commerce' },
+  { id: 'features', href: '/features', labelKey: 'features' },
+  { id: 'marketing', href: '/marketing', labelKey: 'marketing' },
+  { id: 'business-finance', href: '/business-finance', labelKey: 'businessFinance' },
+  { id: 'payroll', href: '/payroll', labelKey: 'payroll' },
   { id: 'mobile-app', href: '/mobile-app', labelKey: 'mobileApp' },
 ];
 

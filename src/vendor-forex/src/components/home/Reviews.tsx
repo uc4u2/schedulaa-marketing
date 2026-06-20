@@ -9,8 +9,6 @@ import myShiftImg from '@public/images/marketing/showcase/my-shift.png';
 import qbImg from '@public/images/marketing/showcase/qb.png';
 import roeImg from '@public/images/marketing/showcase/roe.png';
 import stripeImg from '@public/images/marketing/showcase/stripe.png';
-import t4Img from '@public/images/marketing/showcase/t4.png';
-import w2Img from '@public/images/marketing/showcase/w2.png';
 import websiteBuilderImg from '@public/images/marketing/showcase/website-builder.png';
 import xeroImg from '@public/images/marketing/showcase/xero.png';
 import Image, { StaticImageData } from 'next/image';
@@ -25,17 +23,22 @@ type ShowcaseItem = {
   image: StaticImageData;
 };
 
+const reviewsCopyEn = {
+  badge: 'Customer Success',
+  title: 'Real apps. Real results.',
+  subtitle: 'Explore live product visuals across websites, bookings, scheduling, invoices, payments, and service operations.',
+  cta: 'Explore platform visuals',
+};
+
 const showcaseItems: ShowcaseItem[] = [
   { id: 'dashboard', title: 'Manager dashboard', subtitle: 'Operations overview', image: dashboardImg },
   { id: 'employee-dashboard', title: 'Employee dashboard', subtitle: 'Time and shifts', image: employeeDashboardImg },
   { id: 'my-shift', title: 'Shift timeline', subtitle: 'Live schedule updates', image: myShiftImg },
-  { id: 'qb', title: 'QuickBooks sync', subtitle: 'Accounting workflow', image: qbImg },
-  { id: 'roe', title: 'ROE workflow', subtitle: 'Compliance records', image: roeImg },
-  { id: 'stripe', title: 'Stripe status', subtitle: 'Payments and subscriptions', image: stripeImg },
-  { id: 't4', title: 'T4 generation', subtitle: 'Canada payroll exports', image: t4Img },
-  { id: 'w2', title: 'W-2 forms', subtitle: 'US payroll exports', image: w2Img },
+  { id: 'qb', title: 'Estimate to invoice', subtitle: 'Approved work to billing', image: qbImg },
+  { id: 'roe', title: 'Client records', subtitle: 'History and operations context', image: roeImg },
+  { id: 'stripe', title: 'Payment status', subtitle: 'Checkout and collections', image: stripeImg },
   { id: 'website-builder', title: 'Website builder', subtitle: 'Launch pages quickly', image: websiteBuilderImg },
-  { id: 'xero', title: 'Xero integration', subtitle: 'Finance handoff', image: xeroImg },
+  { id: 'xero', title: 'Finance handoff', subtitle: 'Invoices and reporting sync', image: xeroImg },
 ];
 
 const mapShowcaseLocale = (items: ShowcaseItem[], locale: AppLocale) => {
@@ -88,29 +91,15 @@ const mapShowcaseLocale = (items: ShowcaseItem[], locale: AppLocale) => {
 };
 
 const copyByLocale: Record<string, { badge: string; title: string; subtitle: string; cta: string }> = {
-  en: {
-    badge: 'Customer Success',
-    title: 'Real apps. Real results.',
-    subtitle: 'Explore live product visuals across scheduling, payroll, websites, and accounting integrations.',
-    cta: 'Explore platform visuals',
-  },
+  en: reviewsCopyEn,
   fa: {
-    badge: '\u0645\u0648\u0641\u0642\u06cc\u062a \u0645\u0634\u062a\u0631\u06cc\u0627\u0646',
-    title: '\u0645\u062d\u0635\u0648\u0644 \u0648\u0627\u0642\u0639\u06cc\u060c \u0646\u062a\u0627\u06cc\u062c \u0648\u0627\u0642\u0639\u06cc.',
-    subtitle: '\u0646\u0645\u0627\u06cc \u0632\u0646\u062f\u0647 \u0627\u0632 \u0645\u062d\u0635\u0648\u0644 Schedulaa \u0631\u0627 \u062f\u0631 \u062d\u0648\u0632\u0647 \u0628\u0631\u0646\u0627\u0645\u0647\u200c\u0631\u06cc\u0632\u06cc\u060c \u062d\u0642\u0648\u0642\u060c \u0648\u0628\u200c\u0633\u0627\u06cc\u062a \u0648 \u06cc\u06a9\u067e\u0627\u0631\u0686\u06af\u06cc \u0628\u0627 \u0633\u06cc\u0633\u062a\u0645\u200c\u0647\u0627\u06cc \u0645\u0627\u0644\u06cc \u0628\u0628\u06cc\u0646\u06cc\u062f.',
-    cta: '\u0645\u0634\u0627\u0647\u062f\u0647 \u0646\u0645\u0627\u06cc \u067e\u0644\u062a\u0641\u0631\u0645',
+    ...reviewsCopyEn,
   },
   ru: {
-    badge: '\u0418\u0441\u0442\u043e\u0440\u0438\u0438 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432',
-    title: '\u0420\u0435\u0430\u043b\u044c\u043d\u044b\u0435 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u044b. \u0420\u0435\u0430\u043b\u044c\u043d\u044b\u0435 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b.',
-    subtitle: '\u0421\u043c\u043e\u0442\u0440\u0438\u0442\u0435 \u0436\u0438\u0432\u044b\u0435 \u044d\u043a\u0440\u0430\u043d\u044b Schedulaa: \u0440\u0430\u0441\u043f\u0438\u0441\u0430\u043d\u0438\u044f, payroll, \u0441\u0430\u0439\u0442\u044b \u0438 \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u0438 \u0441 \u0443\u0447\u0451\u0442\u043d\u044b\u043c\u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u043c\u0438.',
-    cta: '\u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0432\u0438\u0437\u0443\u0430\u043b\u044b \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u044b',
+    ...reviewsCopyEn,
   },
   zh: {
-    badge: '\u5ba2\u6237\u6210\u529f',
-    title: '\u771f\u5b9e\u4ea7\u54c1\uff0c\u771f\u5b9e\u6210\u679c\u3002',
-    subtitle: '\u67e5\u770b\u8986\u76d6\u9884\u7ea6\u3001\u85aa\u8d44\u3001\u7f51\u7ad9\u4e0e\u8d22\u52a1\u96c6\u6210\u7684\u771f\u5b9e\u4ea7\u54c1\u753b\u9762\u3002',
-    cta: '\u67e5\u770b\u5e73\u53f0\u5c55\u793a',
+    ...reviewsCopyEn,
   },
 };
 

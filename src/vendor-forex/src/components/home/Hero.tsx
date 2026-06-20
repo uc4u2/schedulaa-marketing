@@ -16,126 +16,86 @@ type HeroFeatureItem = { id: number; text: string };
 type HeroCopy = {
   line1: string;
   line2: string;
+  line3?: string;
   subtitle: string;
   primaryCta: string;
   secondaryCta: string;
 };
+
+const heroCopyEn: HeroCopy = {
+  line1: 'Websites, booking,',
+  line2: 'invoices, and scheduling',
+  line3: 'for service businesses',
+  subtitle:
+    'Launch your website, take bookings, send estimates and invoices, manage shifts, and collect payments from one system.',
+  primaryCta: 'Start free trial',
+  secondaryCta: 'Compare plans',
+};
+
+const featureItemsEn: HeroFeatureItem[] = [
+  { id: 1, text: 'Website builder with custom domain support.' },
+  { id: 2, text: 'Online booking and staff scheduling in one place.' },
+  { id: 3, text: 'Estimates, invoices, and payments without extra tools.' },
+  { id: 4, text: 'Live staff shifts and availability for daily operations.' },
+];
 
 const ANDROID_APK_URL =
   process.env.NEXT_PUBLIC_ANDROID_APK_URL ||
   'https://pub-6cbed1dd8177417b96763fc4eb930d09.r2.dev/assets/apk/schedulaa-staff-latest.apk';
 
 const heroCopyByLocale: Record<string, HeroCopy> = {
-  en: {
-    line1: 'The Operations OS',
-    line2: 'for',
-    subtitle: 'Booking, scheduling, time tracking, and payroll unified in one workflow.',
-    primaryCta: 'Start free trial',
-    secondaryCta: 'Compare plans',
-  },
+  en: heroCopyEn,
   fa: {
-    line1: 'سیستم‌عامل عملیات برای',
-    line2: 'تیم‌های خدمات‌محور',
-    subtitle: 'رزرو، زمان‌بندی، ردیابی زمان و حقوق در یک گردش‌کار یکپارچه قرار می‌گیرند.',
-    primaryCta: 'شروع آزمایشی رایگان',
-    secondaryCta: 'مقایسه پلن‌ها',
+    ...heroCopyEn,
   },
   ru: {
-    line1: 'Операционная ОС для',
-    line2: 'сервисных команд',
-    subtitle: 'Бронирование, планирование, учет времени и payroll объединены в одном процессе.',
-    primaryCta: 'Начать бесплатно',
-    secondaryCta: 'Сравнить тарифы',
+    ...heroCopyEn,
   },
   zh: {
-    line1: '面向服务型团队的',
-    line2: '运营系统',
-    subtitle: '预约、排班、工时追踪与薪资管理在一个工作流中统一完成。',
-    primaryCta: '开始免费试用',
-    secondaryCta: '比较方案',
+    ...heroCopyEn,
   },
   es: {
-    line1: 'El sistema operativo de operaciones para',
-    line2: 'equipos de servicios',
-    subtitle: 'Reservas, planificacion, control horario y nomina unificados en un solo flujo.',
-    primaryCta: 'Iniciar prueba gratis',
-    secondaryCta: 'Comparar planes',
+    ...heroCopyEn,
   },
   fr: {
-    line1: "Le systeme d'operations pour",
-    line2: 'les equipes de services',
-    subtitle: 'Reservation, planification, suivi du temps et paie unifies dans un seul flux.',
-    primaryCta: "Demarrer l'essai gratuit",
-    secondaryCta: 'Comparer les offres',
+    ...heroCopyEn,
   },
   de: {
-    line1: 'Das Operations-OS fur',
-    line2: 'servicebasierte Teams',
-    subtitle: 'Buchung, Einsatzplanung, Zeiterfassung und Payroll in einem einheitlichen Workflow.',
-    primaryCta: 'Kostenlos starten',
-    secondaryCta: 'Plane vergleichen',
+    ...heroCopyEn,
   },
   ar: {
-    line1: 'نظام التشغيل التشغيلي لـ',
-    line2: 'الفرق الخدمية',
-    subtitle: 'الحجز والجدولة وتتبع الوقت والرواتب موحدة في سير عمل واحد.',
-    primaryCta: 'ابدأ الفترة المجانية',
-    secondaryCta: 'قارن الخطط',
+    ...heroCopyEn,
   },
   pt: {
-    line1: 'O sistema operacional de operacoes para',
-    line2: 'equipes de servicos',
-    subtitle: 'Reservas, agendamento, controle de tempo e folha unificados em um unico fluxo.',
-    primaryCta: 'Iniciar teste gratis',
-    secondaryCta: 'Comparar planos',
+    ...heroCopyEn,
   },
 };
 
 const featureItemsByLocale: Record<string, HeroFeatureItem[]> = {
-  en: [
-    { id: 1, text: 'Real-time booking and provider availability.' },
-    { id: 2, text: 'Payroll-ready exports for US + Canada.' },
-    { id: 3, text: 'Websites, checkout, and automation in one OS.' },
-  ],
+  en: featureItemsEn,
   fa: [
-    { id: 1, text: '\u0631\u0632\u0631\u0648 \u0644\u062d\u0638\u0647\u200c\u0627\u06cc \u0648 \u0638\u0631\u0641\u06cc\u062a \u0628\u0647\u200c\u0631\u0648\u0632 \u0627\u0631\u0627\u0626\u0647\u200c\u062f\u0647\u0646\u062f\u06af\u0627\u0646.' },
-    { id: 2, text: '\u062e\u0631\u0648\u062c\u06cc\u200c\u0647\u0627\u06cc \u062d\u0642\u0648\u0642 \u0622\u0645\u0627\u062f\u0647 \u0628\u0631\u0627\u06cc \u0627\u06cc\u0627\u0644\u0627\u062a \u0645\u062a\u062d\u062f\u0647 \u0648 \u06a9\u0627\u0646\u0627\u062f\u0627.' },
-    { id: 3, text: '\u0648\u0628\u200c\u0633\u0627\u06cc\u062a\u060c \u067e\u0631\u062f\u0627\u062e\u062a \u0648 \u0627\u062a\u0648\u0645\u0627\u0633\u06cc\u0648\u0646 \u062f\u0631 \u06cc\u06a9 \u0633\u06cc\u0633\u062a\u0645.' },
+    ...featureItemsEn,
   ],
   ru: [
-    { id: 1, text: '\u0411\u0440\u043e\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u0438 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0441\u0442\u044c \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0441\u0442\u043e\u0432.' },
-    { id: 2, text: '\u0413\u043e\u0442\u043e\u0432\u044b\u0435 \u0432\u044b\u0433\u0440\u0443\u0437\u043a\u0438 payroll \u0434\u043b\u044f \u0421\u0428\u0410 \u0438 \u041a\u0430\u043d\u0430\u0434\u044b.' },
-    { id: 3, text: '\u0421\u0430\u0439\u0442\u044b, \u0447\u0435\u043a\u0430\u0443\u0442 \u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044f \u0432 \u043e\u0434\u043d\u043e\u0439 \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u0435.' },
+    ...featureItemsEn,
   ],
   zh: [
-    { id: 1, text: '\u5b9e\u65f6\u9884\u7ea6\u4e0e\u670d\u52a1\u4eba\u5458\u53ef\u7528\u6027\u540c\u6b65\u3002' },
-    { id: 2, text: '\u652f\u6301\u7f8e\u56fd\u4e0e\u52a0\u62ff\u5927\u7684\u85aa\u8d44\u5bfc\u51fa\u6d41\u7a0b\u3002' },
-    { id: 3, text: '\u7f51\u7ad9\u3001\u7ed3\u8d26\u4e0e\u81ea\u52a8\u5316\u5728\u4e00\u4e2a\u7cfb\u7edf\u4e2d\u5b8c\u6210\u3002' },
+    ...featureItemsEn,
   ],
   es: [
-    { id: 1, text: 'Reservas en tiempo real y disponibilidad de proveedores.' },
-    { id: 2, text: 'Exportaciones de nomina listas para EE. UU. y Canada.' },
-    { id: 3, text: 'Sitios web, checkout y automatizacion en un solo sistema.' },
+    ...featureItemsEn,
   ],
   fr: [
-    { id: 1, text: 'Reservation en temps reel et disponibilite des intervenants.' },
-    { id: 2, text: 'Exports de paie prets pour les Etats-Unis et le Canada.' },
-    { id: 3, text: 'Sites, checkout et automatisation dans un seul systeme.' },
+    ...featureItemsEn,
   ],
   de: [
-    { id: 1, text: 'Echtzeit-Buchung und Verfugbarkeit der Anbieter.' },
-    { id: 2, text: 'Payroll-Exporte fur die USA und Kanada.' },
-    { id: 3, text: 'Websites, Checkout und Automatisierung in einem System.' },
+    ...featureItemsEn,
   ],
   ar: [
-    { id: 1, text: 'حجوزات فورية وتوفر مزودي الخدمة بشكل لحظي.' },
-    { id: 2, text: 'تصدير رواتب جاهز للولايات المتحدة وكندا.' },
-    { id: 3, text: 'الموقع والدفع والاتمتة في نظام واحد.' },
+    ...featureItemsEn,
   ],
   pt: [
-    { id: 1, text: 'Reservas em tempo real e disponibilidade de profissionais.' },
-    { id: 2, text: 'Exportacoes de folha prontas para EUA e Canada.' },
-    { id: 3, text: 'Sites, checkout e automacao em um unico sistema.' },
+    ...featureItemsEn,
   ],
 };
 
@@ -160,10 +120,10 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
               <h1 className="mx-auto max-w-[320px] text-center text-[clamp(30px,8.7vw,42px)] leading-[1.02] tracking-[-0.04em] sm:max-w-[420px] sm:text-[clamp(36px,7.2vw,50px)] md:max-w-[620px] md:text-[clamp(42px,6vw,56px)] xl:mx-0 xl:max-w-[560px] xl:text-[clamp(48px,3.7vw,60px)]">
                 {isEnglishHero ? (
                   <>
-                    <span className="block whitespace-nowrap text-white">The Operations OS</span>
-                    <span className="block pt-1 text-white md:pt-1.5">for</span>
+                    <span className="block whitespace-nowrap text-white">Websites, booking,</span>
+                    <span className="block pt-1 whitespace-nowrap text-white md:pt-1.5">invoices, and scheduling</span>
                     <span className="hero-text-gradient hero-text-color-2 block pt-1 whitespace-nowrap md:pt-1.5">
-                      Service-Based Teams
+                      for service businesses
                     </span>
                   </>
                 ) : (

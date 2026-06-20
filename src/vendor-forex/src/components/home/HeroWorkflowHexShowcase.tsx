@@ -3,8 +3,9 @@
 import bookingImg from '@public/images/marketing/hero/module-3-booking.png';
 import schedulingImg from '@public/images/marketing/hero/module-2-schedule.png';
 import timeTrackingImg from '@public/images/marketing/hero/module-3-mobile.png';
-import payrollImg from '@public/images/marketing/payroll-manage.png';
+import websiteBuilderImg from '@public/images/marketing/showcase/website-builder.png';
 import reportsImg from '@public/images/marketing/hero/module-5-mobile.png';
+import stripeImg from '@public/images/marketing/showcase/stripe.png';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import { AppLocale } from '@/utils/locale';
@@ -19,10 +20,10 @@ type WorkflowNode = {
 
 const workflowNodesEn: WorkflowNode[] = [
   {
-    id: 'time-tracking',
-    label: 'Time Tracking',
-    image: timeTrackingImg,
-    alt: 'Time tracking workflow preview',
+    id: 'website-builder',
+    label: 'Website Builder',
+    image: websiteBuilderImg,
+    alt: 'Website builder preview',
     imageClassName: 'object-contain object-center scale-[1.04] p-2',
   },
   {
@@ -40,18 +41,18 @@ const workflowNodesEn: WorkflowNode[] = [
     imageClassName: 'object-contain object-center scale-[1.04] p-2',
   },
   {
-    id: 'payroll',
-    label: 'Payroll',
-    image: payrollImg,
-    alt: 'Payroll workflow preview',
-    imageClassName: 'object-contain object-center scale-[1.12] p-1',
+    id: 'invoices',
+    label: 'Invoices',
+    image: stripeImg,
+    alt: 'Invoice and payments preview',
+    imageClassName: 'object-contain object-center scale-[1.08] p-2',
   },
   {
-    id: 'reports',
-    label: 'Reports',
-    image: reportsImg,
-    alt: 'Reports workflow preview',
-    imageClassName: 'object-contain object-center scale-[1.12] p-1',
+    id: 'availability',
+    label: 'Availability',
+    image: timeTrackingImg,
+    alt: 'Staff availability preview',
+    imageClassName: 'object-contain object-center scale-[1.08] p-2',
   },
 ];
 
@@ -60,58 +61,58 @@ const mapNodesByLocale = (locale: AppLocale): WorkflowNode[] => {
     fa: {
       booking: { label: 'رزرو', alt: 'پیش‌نمایش فرآیند رزرو' },
       scheduling: { label: 'زمان‌بندی', alt: 'پیش‌نمایش فرآیند زمان‌بندی' },
-      'time-tracking': { label: 'ردیابی زمان', alt: 'پیش‌نمایش ردیابی زمان' },
-      payroll: { label: 'حقوق', alt: 'پیش‌نمایش فرآیند حقوق' },
-      reports: { label: 'گزارش‌ها', alt: 'پیش‌نمایش گزارش‌ها' },
+      'website-builder': { label: 'وب‌سایت', alt: 'پیش‌نمایش سازنده وب‌سایت' },
+      invoices: { label: 'صورتحساب', alt: 'پیش‌نمایش صورتحساب و پرداخت' },
+      availability: { label: 'ظرفیت', alt: 'پیش‌نمایش ظرفیت کارکنان' },
     },
     ru: {
       booking: { label: 'Бронирование', alt: 'Предпросмотр процесса бронирования' },
       scheduling: { label: 'Планирование', alt: 'Предпросмотр процесса планирования' },
-      'time-tracking': { label: 'Учет времени', alt: 'Предпросмотр учета времени' },
-      payroll: { label: 'Зарплата', alt: 'Предпросмотр процесса зарплаты' },
-      reports: { label: 'Отчеты', alt: 'Предпросмотр отчетов' },
+      'website-builder': { label: 'Сайты', alt: 'Предпросмотр конструктора сайтов' },
+      invoices: { label: 'Счета', alt: 'Предпросмотр счетов и оплат' },
+      availability: { label: 'Доступность', alt: 'Предпросмотр доступности команды' },
     },
     zh: {
       booking: { label: '预约', alt: '预约流程预览' },
       scheduling: { label: '排班', alt: '排班流程预览' },
-      'time-tracking': { label: '工时追踪', alt: '工时追踪预览' },
-      payroll: { label: '薪资', alt: '薪资流程预览' },
-      reports: { label: '报表', alt: '报表预览' },
+      'website-builder': { label: '网站', alt: '网站构建器预览' },
+      invoices: { label: '发票', alt: '发票与支付预览' },
+      availability: { label: '排班可用性', alt: '员工可用性预览' },
     },
     es: {
       booking: { label: 'Reservas', alt: 'Vista previa del flujo de reservas' },
       scheduling: { label: 'Planificacion', alt: 'Vista previa del flujo de planificacion' },
-      'time-tracking': { label: 'Control horario', alt: 'Vista previa del control horario' },
-      payroll: { label: 'Nomina', alt: 'Vista previa del flujo de nomina' },
-      reports: { label: 'Reportes', alt: 'Vista previa de reportes' },
+      'website-builder': { label: 'Sitios web', alt: 'Vista previa del creador de sitios' },
+      invoices: { label: 'Facturas', alt: 'Vista previa de facturas y pagos' },
+      availability: { label: 'Disponibilidad', alt: 'Vista previa de disponibilidad del equipo' },
     },
     fr: {
       booking: { label: 'Reservation', alt: 'Apercu du flux de reservation' },
       scheduling: { label: 'Planification', alt: 'Apercu du flux de planification' },
-      'time-tracking': { label: 'Suivi du temps', alt: 'Apercu du suivi du temps' },
-      payroll: { label: 'Paie', alt: 'Apercu du flux de paie' },
-      reports: { label: 'Rapports', alt: 'Apercu des rapports' },
+      'website-builder': { label: 'Sites web', alt: 'Apercu du createur de site' },
+      invoices: { label: 'Factures', alt: 'Apercu des factures et paiements' },
+      availability: { label: 'Disponibilite', alt: 'Apercu de la disponibilite de l equipe' },
     },
     de: {
       booking: { label: 'Buchung', alt: 'Vorschau des Buchungsablaufs' },
       scheduling: { label: 'Planung', alt: 'Vorschau des Planungsablaufs' },
-      'time-tracking': { label: 'Zeiterfassung', alt: 'Vorschau der Zeiterfassung' },
-      payroll: { label: 'Payroll', alt: 'Vorschau des Payroll-Ablaufs' },
-      reports: { label: 'Berichte', alt: 'Vorschau der Berichte' },
+      'website-builder': { label: 'Website Builder', alt: 'Vorschau des Website-Builders' },
+      invoices: { label: 'Rechnungen', alt: 'Vorschau von Rechnungen und Zahlungen' },
+      availability: { label: 'Verfugbarkeit', alt: 'Vorschau der Team-Verfugbarkeit' },
     },
     ar: {
       booking: { label: 'الحجوزات', alt: 'معاينة سير الحجوزات' },
       scheduling: { label: 'الجدولة', alt: 'معاينة سير الجدولة' },
-      'time-tracking': { label: 'تتبع الوقت', alt: 'معاينة تتبع الوقت' },
-      payroll: { label: 'الرواتب', alt: 'معاينة سير الرواتب' },
-      reports: { label: 'التقارير', alt: 'معاينة التقارير' },
+      'website-builder': { label: 'الموقع', alt: 'معاينة منشئ الموقع' },
+      invoices: { label: 'الفواتير', alt: 'معاينة الفواتير والمدفوعات' },
+      availability: { label: 'التوفر', alt: 'معاينة توفر الفريق' },
     },
     pt: {
       booking: { label: 'Reservas', alt: 'Previa do fluxo de reservas' },
       scheduling: { label: 'Agendamento', alt: 'Previa do fluxo de agendamento' },
-      'time-tracking': { label: 'Controle de tempo', alt: 'Previa do controle de tempo' },
-      payroll: { label: 'Folha', alt: 'Previa do fluxo de folha' },
-      reports: { label: 'Relatorios', alt: 'Previa de relatorios' },
+      'website-builder': { label: 'Site', alt: 'Previa do construtor de sites' },
+      invoices: { label: 'Faturas', alt: 'Previa de faturas e pagamentos' },
+      availability: { label: 'Disponibilidade', alt: 'Previa da disponibilidade da equipe' },
     },
   };
   const labels = labelsByLocale[locale] || {};
