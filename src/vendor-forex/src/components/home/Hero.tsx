@@ -5,7 +5,6 @@ import LinkButton from '../ui/button/LinkButton';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { AppLocale } from '@/utils/locale';
 import HeroWorkflowHexShowcase from './HeroWorkflowHexShowcase';
-import PredictionChallengeGuidePopup from '@/components/home/PredictionChallengeGuidePopup';
 
 type HeroProps = {
   source?: any;
@@ -190,7 +189,6 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
           </RevealAnimation>
         </div>
       </div>
-      <PredictionChallengeGuidePopup locale={locale} />
     </section>
   );
 };
