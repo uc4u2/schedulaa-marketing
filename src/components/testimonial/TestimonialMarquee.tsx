@@ -47,13 +47,14 @@ const TestimonialMarquee = () => {
                         {/* avatar  */}
                         <div className="flex items-center gap-3">
                           <figure className="size-12 overflow-hidden rounded-full bg-(image:--color-gradient-6)">
-                            <Image
-                              width={48}
-                              height={48}
-                              src={testimonial.avatar}
-                              alt={`${testimonial.name} avatar`}
-                              className="size-full object-cover"
-                            />
+                            <div className="flex size-full items-center justify-center text-sm font-semibold text-secondary">
+                              {testimonial.name
+                                .split(' ')
+                                .map((part) => part[0])
+                                .join('')
+                                .slice(0, 2)
+                                .toUpperCase()}
+                            </div>
                           </figure>
                           <div>
                             <p className="text-secondary dark:text-accent">{testimonial.name}</p>
@@ -81,13 +82,14 @@ const TestimonialMarquee = () => {
                         {/* avatar  */}
                         <div className="flex items-center gap-3">
                           <figure className="size-12 overflow-hidden rounded-full bg-(image:--color-gradient-6)">
-                            <Image
-                              width={48}
-                              height={48}
-                              src={testimonial.avatar}
-                              alt={`${testimonial.name} avatar`}
-                              className="size-full object-cover"
-                            />
+                            <div className="flex size-full items-center justify-center text-sm font-semibold text-secondary">
+                              {testimonial.name
+                                .split(' ')
+                                .map((part) => part[0])
+                                .join('')
+                                .slice(0, 2)
+                                .toUpperCase()}
+                            </div>
                           </figure>
                           <div>
                             <p className="text-secondary dark:text-accent">{testimonial.name}</p>
@@ -115,13 +117,14 @@ const TestimonialMarquee = () => {
                         {/* avatar  */}
                         <div className="flex items-center gap-3">
                           <figure className="size-12 overflow-hidden rounded-full bg-(image:--color-gradient-6)">
-                            <Image
-                              width={48}
-                              height={48}
-                              src={testimonial.avatar}
-                              alt={`${testimonial.name} avatar`}
-                              className="size-full object-cover"
-                            />
+                            <div className="flex size-full items-center justify-center text-sm font-semibold text-secondary">
+                              {testimonial.name
+                                .split(' ')
+                                .map((part) => part[0])
+                                .join('')
+                                .slice(0, 2)
+                                .toUpperCase()}
+                            </div>
                           </figure>
                           <div>
                             <p className="text-secondary dark:text-accent">{testimonial.name}</p>

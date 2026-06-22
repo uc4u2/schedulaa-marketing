@@ -40,14 +40,14 @@ const Testimonial = () => {
                     </p>
                     <div className="border-stroke-4 dark:border-stroke-5 border-t" />
                     <figure className="flex items-center gap-3">
-                      <Image
-                        src={testimonial.avatar}
-                        className="size-11 rounded-full bg-linear-[156deg,#FFF_32.92%,#A585FF_91%] object-cover object-center"
-                        alt={`${testimonial.name}'s avatar`}
-                        width={44}
-                        height={44}
-                        loading="lazy"
-                      />
+                      <div className="flex size-11 items-center justify-center rounded-full bg-linear-[156deg,#FFF_32.92%,#A585FF_91%] text-sm font-semibold text-secondary">
+                        {testimonial.name
+                          .split(' ')
+                          .map((part) => part[0])
+                          .join('')
+                          .slice(0, 2)
+                          .toUpperCase()}
+                      </div>
                       <figcaption>
                         <h3 className="text-tagline-1 dark:text-accent font-medium">{testimonial.name}</h3>
                         <p className="text-tagline-2 dark:text-accent/60">{testimonial.position}</p>
