@@ -390,7 +390,7 @@
             "Publish support",
             "1 revision round"
           ],
-          "ctaLabel": "Comprar Basic Website Setup",
+          "ctaLabel": "Buy Basic Website Setup",
           "ctaMode": "checkout"
         },
         {
@@ -410,7 +410,7 @@
             "Domain connection support",
             "2 revision rounds"
           ],
-          "ctaLabel": "Hablar con ventas sobre Growth Setup",
+          "ctaLabel": "Talk to Sales About Growth Setup",
           "ctaMode": "contact"
         },
         {
@@ -428,7 +428,7 @@
             "Copy refinement support",
             "3 revision rounds"
           ],
-          "ctaLabel": "Hablar con ventas sobre Premium Setup",
+          "ctaLabel": "Talk to Sales About Premium Setup",
           "ctaMode": "contact"
         }
       ]
