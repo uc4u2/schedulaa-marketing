@@ -57,14 +57,14 @@ const Reviews = () => {
                         />
                       </div>
                       <figure className="dark:ring-background-5 relative inline-block size-14 overflow-hidden rounded-full bg-linear-[156deg,_#FFF_32.92%,_#83E7EE_91%] ring-4 ring-white">
-                        <Image
-                          src={review.avatar}
-                          height={100}
-                          width={100}
-                          quality={100}
-                          alt="avatar"
-                          className="max-w-full"
-                        />
+                        <div className="flex h-full w-full items-center justify-center text-sm font-semibold text-secondary">
+                          {review.name
+                            .split(' ')
+                            .map((part) => part[0])
+                            .join('')
+                            .slice(0, 2)
+                            .toUpperCase()}
+                        </div>
                       </figure>
                       <p className="text-secondary/60 dark:text-accent/60 review-text line-clamp-2">{review.quote}</p>
                       <div>
