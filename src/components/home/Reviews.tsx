@@ -14,16 +14,16 @@ const Reviews = () => {
       <div className="main-container flex flex-col gap-[70px] max-[426px]:gap-10">
         <div className="flex flex-col items-center text-center">
           <RevealAnimation delay={0.1}>
-            <span className="badge badge-green-v2 mb-5">Customer Success</span>
+            <span className="badge badge-green-v2 mb-5">Sample workflow reviews</span>
           </RevealAnimation>
 
           <RevealAnimation delay={0.2}>
-            <h2 className="mx-auto mb-4 max-w-[750px] max-[426px]:mb-3">Real apps. Real results.</h2>
+            <h2 className="mx-auto mb-4 max-w-[750px] max-[426px]:mb-3">Example feedback for real daily service work</h2>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
             <p className="max-[426px]:text-tagline-2 max-w-[490px] max-[426px]:max-w-[320px]">
-              &quot;Real apps. Real results. &quot;Nextsaas delivered our entire platform ahead of schedule—flawless
-              execution and real partnership.&quot;
+              These draft review cards highlight the kinds of booking, billing, scheduling, and client-operation
+              outcomes service businesses usually care about most.
             </p>
           </RevealAnimation>
         </div>
@@ -87,7 +87,7 @@ const Reviews = () => {
             <LinkButton
               href="/testimonial"
               className="btn btn-secondary btn-lg md:btn-xl dark:btn-transparent hover:btn-green mx-auto block w-[90%] md:inline-block md:w-auto">
-              View all reviews
+              View sample reviews
             </LinkButton>
           </div>
         </RevealAnimation>

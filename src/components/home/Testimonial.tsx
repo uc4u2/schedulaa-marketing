@@ -11,14 +11,14 @@ const Testimonial = () => {
         {/* Header Section */}
         <div className="mb-14 text-center lg:mb-[70px]">
           <RevealAnimation delay={0.1}>
-            <span className="badge badge-cyan mb-5"> Reviews </span>
+            <span className="badge badge-cyan mb-5"> Sample workflow reviews </span>
           </RevealAnimation>
 
           <RevealAnimation delay={0.2}>
             <h2 className="mb-3">
-              Hear from our customers about their
+              Service teams often want
               <br className="hidden md:block" />
-              <span className="text-primary-500 inline-block"> experiences with us</span>
+              <span className="text-primary-500 inline-block"> connected daily operations</span>
             </h2>
           </RevealAnimation>
         </div>

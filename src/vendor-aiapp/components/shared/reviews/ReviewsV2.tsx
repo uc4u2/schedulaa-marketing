@@ -9,18 +9,18 @@ const ReviewsV2 = () => {
       <div className="main-container">
         <div className="mx-auto max-w-[804px] space-y-5 text-center">
           <RevealAnimation delay={0.1}>
-            <span className="badge badge-cyan">Reviews</span>
+            <span className="badge badge-cyan">Sample workflow reviews</span>
           </RevealAnimation>
 
           <div className="space-y-3">
             <RevealAnimation delay={0.2}>
-              <h2>Hear from our customers about their experiences with us</h2>
+              <h2>Example reviews for service-business workflows</h2>
             </RevealAnimation>
 
             <RevealAnimation delay={0.3}>
               <p>
-                Hear from our customers about their experiences with us and discover the impact we&apos;ve made through
-                their own words. From seamless onboarding to exceptional support and tangible results
+                These sample review cards show how teams talk about bookings, scheduling, client records, estimates,
+                invoices, payments, and follow-up work when those workflows stay connected.
               </p>
             </RevealAnimation>
           </div>
@@ -43,13 +43,14 @@ const ReviewsV2 = () => {
                   <div>
                     <div className="flex items-center gap-3">
                       <figure className="size-12 overflow-hidden rounded-full">
-                        <Image
-                          src={testimonial.avatar}
-                          alt="avatar"
-                          className="h-full w-full bg-linear-[156deg,#83E7EE_2.92%,#C6F56F_91%]"
-                          width={48}
-                          height={48}
-                        />
+                        <div className="flex h-full w-full items-center justify-center bg-linear-[156deg,#83E7EE_2.92%,#C6F56F_91%] text-sm font-semibold text-secondary">
+                          {testimonial.name
+                            .split(' ')
+                            .map((part) => part[0])
+                            .join('')
+                            .slice(0, 2)
+                            .toUpperCase()}
+                        </div>
                       </figure>
                       <div>
                         <h3 className="text-tagline-1 text-secondary dark:text-accent font-medium">

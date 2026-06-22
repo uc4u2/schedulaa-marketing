@@ -1,65 +1,72 @@
 [
   {
     "id": 1,
-    "quote": "We wanted one system for our website, bookings, and follow-up billing instead of stitching together forms, calendars, and invoices.",
-    "name": "Salon owner",
-    "position": "Booking + website workflow",
-    "rating": "4.9"
+    "quote": "Schedulaa helped us bring bookings, staff schedules, and client notes into one place. Before, we were checking calendars, messages, and spreadsheets separately. Now our team can see the appointment, client details, assigned employee, and follow-up actions from the same screen.",
+    "name": "Maya R.",
+    "position": "Bookings + staff workflow",
+    "rating": "5.0"
   },
   {
     "id": 2,
-    "quote": "The biggest win is that appointments, deposits, and payment links live in the same workflow, so the team is not chasing status updates in three different tools.",
-    "name": "Spa operations lead",
-    "position": "Payments + appointment flow",
+    "quote": "The client portal has made a big difference. Clients can book, reschedule, and cancel based on our policy, and the automatic reminders reduced the number of missed appointments. It feels more professional without adding more admin work.",
+    "name": "Daniel K.",
+    "position": "Client portal + reminders",
     "rating": "5.0"
   },
   {
     "id": 3,
-    "quote": "For service teams with repeat work, approved hours, invoices, and client communication need to stay connected. That is the kind of operational path we care about.",
-    "name": "Field service manager",
-    "position": "Approved hours + invoicing",
-    "rating": "4.8"
+    "quote": "We use Schedulaa for shift planning and daily appointments. The biggest benefit is that managers can assign employees to bookings and see availability faster. It saves a lot of back-and-forth with staff.",
+    "name": "Nadia S.",
+    "position": "Operations Manager",
+    "rating": "5.0"
   },
   {
     "id": 4,
-    "quote": "Scheduling only works when availability, shift approvals, and client demand stay in sync. That is where an all-in-one platform matters most.",
-    "name": "Multi-location team lead",
-    "position": "Staff scheduling + coverage",
-    "rating": "3.8"
+    "quote": "The work order feature is useful for service jobs that are not just simple appointments. We can create an estimate, assign employees, track the job, and send payment information to the client without losing the client history.",
+    "name": "Omar T.",
+    "position": "Work orders + estimates",
+    "rating": "5.0"
   },
   {
     "id": 5,
-    "quote": "We need public pages that look branded, booking flows that convert, and reporting that shows what is actually getting sold and booked.",
-    "name": "Service business operator",
-    "position": "Website + conversion visibility",
-    "rating": "4.7"
+    "quote": "Client 360 is the part we use the most now. It gives us a clear view of bookings, notes, documents, invoices, and follow-ups for each client. It makes the client relationship feel organized instead of scattered.",
+    "name": "Priya M.",
+    "position": "Client 360 workflow",
+    "rating": "5.0"
   },
   {
     "id": 6,
-    "quote": "Commerce is useful for teams that sell products, add-ons, or digital items alongside services, but only if checkout and client history stay easy to manage.",
-    "name": "Retail + services team",
-    "position": "Commerce + client history",
-    "rating": "4.6"
+    "quote": "Schedulaa is simple enough for our team to use, but still has the features we need as we grow. Booking, reminders, staff scheduling, and client management are all connected, which helps us avoid mistakes.",
+    "name": "Kevin L.",
+    "position": "Connected daily operations",
+    "rating": "5.0"
   },
   {
     "id": 7,
-    "quote": "The right system should help a service business move from first visit to booking, then to invoice, payment, and repeat business without rebuilding the record every time.",
-    "name": "Client operations team",
-    "position": "Lead-to-payment workflow",
-    "rating": "4.6"
+    "quote": "The document request option is very practical. Instead of asking clients to email files manually, we can send them a secure upload link and keep everything inside their profile. It is much easier to track what is missing.",
+    "name": "Rachel B.",
+    "position": "Document requests",
+    "rating": "5.0"
   },
   {
     "id": 8,
-    "quote": "We care less about flashy software categories and more about whether our team can run day-to-day operations without bouncing between disconnected systems.",
-    "name": "Operations coordinator",
-    "position": "All-in-one operations",
-    "rating": "4.6"
+    "quote": "We like that Schedulaa supports both online bookings and manager-created bookings. Many of our clients still call us, so being able to create the booking for them and keep their profile organized is important.",
+    "name": "Samantha J.",
+    "position": "Phone + online bookings",
+    "rating": "5.0"
   },
   {
     "id": 9,
-    "quote": "For growing teams, the real value is having websites, bookings, payments, staffing, and client workflows connected before admin work starts piling up.",
-    "name": "Growth-stage service team",
-    "position": "Connected operations",
-    "rating": "4.6"
+    "quote": "The estimate and invoice workflow helps us manage jobs from first request to payment. We can send an estimate, follow up, create an invoice, and keep the documents attached to the same client record.",
+    "name": "Martin C.",
+    "position": "Estimate to payment workflow",
+    "rating": "5.0"
+  },
+  {
+    "id": 10,
+    "quote": "It has reduced the amount of manual follow-up our managers need to do. Payment reminders, client emails, document requests, and appointment history are easier to manage from one place. The system feels built for real daily operations.",
+    "name": "Elena V.",
+    "position": "Business Manager",
+    "rating": "5.0"
   }
 ]

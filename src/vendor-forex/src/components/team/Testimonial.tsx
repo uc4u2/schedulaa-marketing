@@ -11,11 +11,11 @@ const Testimonial = () => {
         {/* Header Section */}
         <div className="mb-14 text-center lg:mb-[70px]">
           <RevealAnimation delay={0.1}>
-            <span className="badge badge-green-v2 mb-5"> What our users say </span>
+            <span className="badge badge-green-v2 mb-5"> Sample workflow reviews </span>
           </RevealAnimation>
 
           <RevealAnimation delay={0.2}>
-            <h2 className="mx-auto mb-3 max-w-[750px]">Hear from our customers about their experiences with us</h2>
+            <h2 className="mx-auto mb-3 max-w-[750px]">Example service-team feedback for connected operations</h2>
           </RevealAnimation>
         </div>
       </div>

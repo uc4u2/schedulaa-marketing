@@ -11,16 +11,16 @@ const TestimonialMarquee = () => {
           {/* heading  */}
           <div className="mx-auto max-w-[804px] space-y-5 text-center md:w-full">
             <RevealAnimation delay={0.1}>
-              <span className="badge badge-cyan"> Reviews </span>
+              <span className="badge badge-cyan"> Sample workflow reviews </span>
             </RevealAnimation>
             <div className="space-y-3">
               <RevealAnimation delay={0.2}>
-                <h2>Hear from our customers about their experiences with us</h2>
+                <h2>Example reviews for service-business workflows</h2>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
                 <p className="mx-auto max-w-[600px]">
-                  Hear from our customers about their experiences with us and discover the impact we&apos;ve made
-                  through their own words. From seamless onboarding to exceptional support and tangible results
+                  These sample review cards show how teams talk about bookings, scheduling, client records,
+                  estimates, invoices, payments, and follow-up work when those workflows stay connected.
                 </p>
               </RevealAnimation>
             </div>
