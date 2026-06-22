@@ -205,65 +205,34 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
               <p className="mb-3 text-sm font-semibold text-secondary/70 dark:text-accent/70">{plan.positioning}</p>
               <p className="mb-3">{plan.description}</p>
               <p className="mb-5 text-tagline-2 text-secondary/70 dark:text-accent/70">{plan.trialNote}</p>
-              {plan.key === 'business' ? (
-                <>
-                  <a
-                    href={bookDemoHref}
-                    className="btn btn-md btn-secondary mb-5 block w-full text-center"
-                    onClick={() =>
-                      trackMetaPixel('Lead', {
-                        content_name: `Pricing Plan Book Demo - ${plan.name}`,
-                        page_path: '/pricing',
-                        plan_name: plan.name,
-                      })
-                    }
-                  >
-                    {plan.ctaLabel}
-                  </a>
-                  <a
-                    href={planHrefFor(plan.key)}
-                    className="mb-5 block text-center text-sm font-medium text-primary underline-offset-4 hover:underline"
-                    onClick={() =>
-                      trackMetaPixel('CompleteRegistration', {
-                        content_name: `Pricing Plan Start Free Trial - ${plan.name}`,
-                        page_path: '/pricing',
-                        plan_name: plan.name,
-                      })
-                    }
-                  >
-                    {plan.secondaryCtaLabel || 'Start 14-day free trial'}
-                  </a>
-                </>
-              ) : (
-                <>
-                  <a
-                    href={planHrefFor(plan.key)}
-                    className="btn btn-md btn-secondary mb-5 block w-full text-center"
-                    onClick={() =>
-                      trackMetaPixel('CompleteRegistration', {
-                        content_name: `Pricing Plan Start Free Trial - ${plan.name}`,
-                        page_path: '/pricing',
-                        plan_name: plan.name,
-                      })
-                    }
-                  >
-                    {plan.ctaLabel}
-                  </a>
-                  <a
-                    href={bookDemoHref}
-                    className="mb-5 block text-center text-sm font-medium text-primary underline-offset-4 hover:underline"
-                    onClick={() =>
-                      trackMetaPixel('Lead', {
-                        content_name: `Pricing Plan Book Demo - ${plan.name}`,
-                        page_path: '/pricing',
-                        plan_name: plan.name,
-                      })
-                    }
-                  >
-                    Book a demo
-                  </a>
-                </>
-              )}
+              <>
+                <a
+                  href={planHrefFor(plan.key)}
+                  className="btn btn-md btn-secondary mb-5 block w-full text-center"
+                  onClick={() =>
+                    trackMetaPixel('CompleteRegistration', {
+                      content_name: `Pricing Plan Start Free Trial - ${plan.name}`,
+                      page_path: '/pricing',
+                      plan_name: plan.name,
+                    })
+                  }
+                >
+                  {plan.secondaryCtaLabel || plan.ctaLabel || 'Start 14-day free trial'}
+                </a>
+                <a
+                  href={bookDemoHref}
+                  className="mb-5 block text-center text-sm font-medium text-primary underline-offset-4 hover:underline"
+                  onClick={() =>
+                    trackMetaPixel('Lead', {
+                      content_name: `Pricing Plan Book Demo - ${plan.name}`,
+                      page_path: '/pricing',
+                      plan_name: plan.name,
+                    })
+                  }
+                >
+                  {plan.ctaLabel === 'Book a demo' ? plan.ctaLabel : 'Book a demo'}
+                </a>
+              </>
               {renderPlanFeatures(plan.key, plan.features)}
             </article>
           ))}
