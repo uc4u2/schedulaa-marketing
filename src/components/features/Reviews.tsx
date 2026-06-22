@@ -1,26 +1,27 @@
 import testimonials from '@/data/json/testimonials/testimonials.json';
-import Image from 'next/image';
+import sourceEn from '@/legacy-content/features/landing-features.json';
 import Marquee from 'react-fast-marquee';
 import RevealAnimation from '../animation/RevealAnimation';
 
-const Reviews = () => {
+const Reviews = ({ source }: { source?: any }) => {
+  const content = source || sourceEn;
   return (
     <section className="bg-background-3 dark:bg-background-8 space-y-[70px] pt-[100px] pb-[200px]">
       <div className="main-container">
         <div className="mx-auto max-w-[804px] space-y-5 text-center">
           <RevealAnimation delay={0.1}>
-            <span className="badge !badge-cyan">Reviews</span>
+            <span className="badge !badge-cyan">Service team perspectives</span>
           </RevealAnimation>
 
           <div className="space-y-3">
             <RevealAnimation delay={0.2}>
-              <h2>Hear from our customers about their experiences with us</h2>
+              <h2>{content.testimonials.title}</h2>
             </RevealAnimation>
 
             <RevealAnimation delay={0.3}>
               <p>
-                Hear from our customers about their experiences with us and discover the impact we&apos;ve made through
-                their own words. From seamless onboarding to exceptional support and tangible results
+                These cards highlight the workflows service businesses usually want to keep in one system: websites,
+                bookings, invoices, payments, staff scheduling, and client operations.
               </p>
             </RevealAnimation>
           </div>
@@ -43,13 +44,14 @@ const Reviews = () => {
                   <div>
                     <div className="flex items-center gap-3">
                       <figure className="size-12 overflow-hidden rounded-full">
-                        <Image
-                          src={testimonial.avatar}
-                          alt="avatar"
-                          className="h-full w-full bg-linear-[156deg,#83E7EE_2.92%,#C6F56F_91%]"
-                          width={48}
-                          height={48}
-                        />
+                        <div className="flex h-full w-full items-center justify-center bg-linear-[156deg,#83E7EE_2.92%,#C6F56F_91%] text-sm font-semibold text-secondary">
+                          {testimonial.name
+                            .split(' ')
+                            .map((part) => part[0])
+                            .join('')
+                            .slice(0, 2)
+                            .toUpperCase()}
+                        </div>
                       </figure>
                       <div>
                         <h3 className="text-tagline-1 text-secondary dark:text-accent font-medium">
