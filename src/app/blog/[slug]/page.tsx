@@ -133,6 +133,35 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {(post.sections || []).map((section: any, idx: number) => (
             <div key={`${post.slug}-section-${idx}`} className="rounded-xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
               {section.heading ? <h2 className="text-xl font-semibold">{section.heading}</h2> : null}
+              {section.video?.youtubeEmbed ? (
+                <div className="mt-4 overflow-hidden rounded-2xl border border-stroke-2 bg-background-3 p-4 dark:border-stroke-7 dark:bg-background-7">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div className="max-w-3xl">
+                      {section.video.badge ? <p className="badge badge-yellow-v2">{section.video.badge}</p> : null}
+                      {section.video.title ? <h3 className="mt-3 text-lg font-semibold">{section.video.title}</h3> : null}
+                      {section.video.summary ? (
+                        <p className="mt-2 text-secondary/70 dark:text-accent/70">{section.video.summary}</p>
+                      ) : null}
+                    </div>
+                    {section.video.note ? (
+                      <p className="max-w-sm text-sm text-secondary/60 dark:text-accent/60">{section.video.note}</p>
+                    ) : null}
+                  </div>
+                  <div className="mt-4 overflow-hidden rounded-xl border border-stroke-2 bg-black shadow-2 dark:border-stroke-7">
+                    <div className="aspect-video w-full">
+                      <iframe
+                        src={section.video.youtubeEmbed}
+                        title={section.video.title || section.heading || copy.blog}
+                        className="h-full w-full"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                </div>
+              ) : null}
               {section.image?.src ? (
                 <Image
                   src={section.image.src}
