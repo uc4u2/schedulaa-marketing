@@ -545,9 +545,8 @@ const blogPosts = [
           badge: "Video walkthrough",
           title: "See how one connected workflow reduces admin and billing delays",
           summary:
-            "Use this short walkthrough as a placeholder for now. Later you can swap in a newer HVAC-specific video without changing the article structure.",
+            "Watch how scheduling, estimates, invoices, and payment follow-up can stay connected in one operational workflow for service teams.",
           youtubeEmbed: "https://www.youtube.com/embed/OPw9ntgACxg",
-          note: "This top video section is intentionally reusable for later SEO updates and HVAC-specific demos.",
         },
         paragraphs: [
           "Most HVAC companies do not lose money because demand is low. They lose money because the work between the phone call, the schedule, the technician, and the invoice is fragmented.",
