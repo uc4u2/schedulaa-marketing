@@ -562,8 +562,8 @@ const blogPosts = [
           "Multiply that by a week of peak summer or winter demand, and the real cost becomes obvious: less capacity, more stress, slower invoices, and lower margins.",
         ],
         image: {
-          src: "https://images.unsplash.com/photo-1581092160607-ee22731d8e4f?q=80&w=1200&auto=format&fit=crop",
-          alt: "HVAC service technician reviewing work order details",
+          src: "/images/marketing/showcase/service-management.png",
+          alt: "Schedulaa service management workflow for field teams",
         },
       },
       {
@@ -594,8 +594,8 @@ const blogPosts = [
           "Instead of treating dispatch, admin, and finance as separate departments with separate tools, Schedulaa keeps them in one operational flow.",
         ],
         image: {
-          src: "https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=1200&auto=format&fit=crop",
-          alt: "Operations team coordinating field service scheduling and customer follow-up",
+          src: "/images/marketing/showcase/manage-bookings.png",
+          alt: "Schedulaa booking and scheduling workflow for service operations",
         },
       },
       {
