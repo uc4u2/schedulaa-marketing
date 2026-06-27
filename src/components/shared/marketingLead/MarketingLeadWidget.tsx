@@ -41,6 +41,32 @@ const STEPS = [
   'Consent',
 ];
 
+const BUSINESS_OPTIONS = [
+  'HVAC',
+  'Cleaning',
+  'Plumbing',
+  'Roofing',
+  'Electrical',
+  'Landscaping',
+  'General contracting',
+  'Handyman',
+  'Pest control',
+  'Moving',
+  'Appliance repair',
+  'Auto detailing',
+  'Pool service',
+  'Pet grooming',
+  'Salon',
+  'Barbershop',
+  'Spa',
+  'Med spa',
+  'Dental clinic',
+  'Medical clinic',
+  'Fitness studio',
+  'Tutoring',
+  'General service business',
+];
+
 export default function MarketingLeadWidget() {
   const pathname = usePathname() || '/';
   const [open, setOpen] = useState(false);
@@ -115,37 +141,37 @@ export default function MarketingLeadWidget() {
             setStep(0);
             setError('');
           }}
-          className="fixed bottom-20 left-3 z-[118] inline-flex items-center gap-2 rounded-full border border-orange-200/70 bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition hover:-translate-y-0.5 sm:bottom-5 sm:left-5"
-          aria-label="Open marketing lead assistant"
+          className="fixed bottom-20 left-3 z-[118] inline-flex items-center gap-2 rounded-full border border-sky-900/20 bg-[#123b5d] px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,23,42,0.22)] transition hover:-translate-y-0.5 hover:bg-[#17486f] sm:bottom-5 sm:left-5"
+          aria-label="Open business advisor"
         >
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[linear-gradient(135deg,#f97316_0%,#facc15_100%)] text-sm font-bold text-white">
-            ?
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm font-bold text-[#123b5d]">
+            S
           </span>
           <span className="sm:hidden">Find your setup</span>
-          <span className="hidden sm:inline">Find the right Schedulaa setup</span>
+          <span className="hidden sm:inline">Get your Schedulaa business setup</span>
         </button>
       ) : (
-        <div className="fixed bottom-2 left-2 z-[125] flex h-[min(82vh,720px)] w-[min(420px,calc(100vw-16px))] flex-col overflow-hidden rounded-[28px] border border-orange-100 bg-white shadow-[0_32px_80px_rgba(15,23,42,0.22)] sm:bottom-3 sm:left-3 sm:w-[min(420px,calc(100vw-24px))]">
-          <div className="bg-[linear-gradient(135deg,#fff7ed_0%,#ffedd5_100%)] px-5 py-5">
+        <div className="fixed bottom-2 left-2 z-[125] flex h-[min(82vh,720px)] w-[min(420px,calc(100vw-16px))] flex-col overflow-hidden rounded-[28px] border border-sky-950/10 bg-white shadow-[0_32px_80px_rgba(15,23,42,0.22)] sm:bottom-3 sm:left-3 sm:w-[min(420px,calc(100vw-24px))]">
+          <div className="bg-[linear-gradient(180deg,#123b5d_0%,#1b4f78_100%)] px-5 py-5 text-white">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="text-[1.05rem] font-semibold text-slate-900">Schedulaa Lead Assistant</p>
-                <p className="mt-1 text-sm text-slate-600">Answer a few quick questions and we’ll send you a practical example.</p>
+                <p className="text-[1.05rem] font-semibold text-white">Schedulaa Business Advisor</p>
+                <p className="mt-1 text-sm text-sky-100">Answer a few quick questions and we’ll send you a practical example for your business setup.</p>
               </div>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-lg text-slate-500 transition hover:bg-white"
-                aria-label="Close lead assistant"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-lg text-white/80 transition hover:bg-white/10"
+                aria-label="Close business advisor"
               >
                 ×
               </button>
             </div>
             <div className="mt-4">
-              <div className="h-2 overflow-hidden rounded-full bg-white/80">
-                <div className="h-full rounded-full bg-[linear-gradient(90deg,#f97316_0%,#fb7185_100%)]" style={{ width: `${progress}%` }} />
+              <div className="h-2 overflow-hidden rounded-full bg-white/15">
+                <div className="h-full rounded-full bg-[linear-gradient(90deg,#84cc16_0%,#22c55e_100%)]" style={{ width: `${progress}%` }} />
               </div>
-              <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-slate-500">
+              <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-sky-100/85">
                 Step {step + 1} of {STEPS.length}: {stepLabel}
               </p>
             </div>
@@ -165,7 +191,7 @@ export default function MarketingLeadWidget() {
                   type="button"
                   onClick={() => setOpen(false)}
                   className="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white"
-                  aria-label="Close marketing lead assistant"
+                  aria-label="Close business advisor"
                 >
                   Close
                 </button>
@@ -181,7 +207,7 @@ export default function MarketingLeadWidget() {
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     >
                       <option value="">Select one</option>
-                      {['HVAC', 'Cleaning', 'Plumbing', 'Roofing', 'Salon', 'Tutoring', 'General service business'].map((option) => (
+                      {BUSINESS_OPTIONS.map((option) => (
                         <option key={option} value={option}>{option}</option>
                       ))}
                     </select>
@@ -320,7 +346,7 @@ export default function MarketingLeadWidget() {
                     type="button"
                     onClick={submitLead}
                     disabled={!canSubmit || submitting}
-                    className="rounded-full bg-[linear-gradient(135deg,#f97316_0%,#ef4444_100%)] px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-50"
+                    className="rounded-full bg-[#123b5d] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#17486f] disabled:opacity-50"
                     aria-label="Submit marketing lead request"
                   >
                     {submitting ? 'Sending…' : 'Send request'}
