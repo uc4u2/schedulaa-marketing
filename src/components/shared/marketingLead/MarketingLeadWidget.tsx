@@ -105,10 +105,13 @@ export default function MarketingLeadWidget() {
     }
     setSubmitting(true);
     setError('');
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 20000);
     try {
       const response = await fetch('/api/marketing-leads/chatbot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
         body: JSON.stringify({
           ...form,
           page_url: typeof window !== 'undefined' ? window.location.href : '',
@@ -123,9 +126,14 @@ export default function MarketingLeadWidget() {
         return;
       }
       setSubmitted(true);
-    } catch {
-      setError('Connection issue. Please try again in a moment.');
+    } catch (fetchError) {
+      if (fetchError instanceof Error && fetchError.name === 'AbortError') {
+        setError('Still trying to reach the server took too long. Please try again in a moment.');
+      } else {
+        setError('Connection issue. Please try again in a moment.');
+      }
     } finally {
+      window.clearTimeout(timeout);
       setSubmitting(false);
     }
   };
@@ -198,6 +206,79 @@ export default function MarketingLeadWidget() {
               </div>
             ) : (
               <div className="space-y-5">
+                {submitting ? (
+                  <div className="rounded-3xl border border-sky-200 bg-sky-50/80 px-4 py-4">
+                    <div className="flex items-center gap-3">
+                      <span
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-sky-200 bg-white text-[#123b5d]"
+                        aria-hidden="true"
+                      >
+                        <svg
+                          className="h-5 w-5 animate-spin"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 3V6"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M18.364 5.636L16.243 7.757"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M21 12H18"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M18.364 18.364L16.243 16.243"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M12 21V18"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M7.757 16.243L5.636 18.364"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M6 12H3"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M7.757 7.757L5.636 5.636"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            opacity="0.45"
+                          />
+                        </svg>
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold text-slate-900">Sending your request…</p>
+                        <p className="text-xs leading-6 text-slate-600">
+                          We are saving your answers and sending them into the Sales CRM now.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
                 {step === 0 && (
                   <div className="space-y-3">
                     <label className="text-sm font-semibold text-slate-900">What type of business do you run?</label>
@@ -346,10 +427,26 @@ export default function MarketingLeadWidget() {
                     type="button"
                     onClick={submitLead}
                     disabled={!canSubmit || submitting}
-                    className="rounded-full bg-[#123b5d] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#17486f] disabled:opacity-50"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#123b5d] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#17486f] disabled:opacity-50"
                     aria-label="Submit marketing lead request"
                   >
-                    {submitting ? 'Sending…' : 'Send request'}
+                    {submitting ? (
+                      <>
+                        <svg
+                          className="h-4 w-4 animate-spin"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                        >
+                          <path d="M12 4V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                          <path d="M18 12H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                          <path d="M12 20V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
+                          <path d="M4 12H7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
+                        </svg>
+                        Sending…
+                      </>
+                    ) : 'Send request'}
                   </button>
                 )}
               </div>
