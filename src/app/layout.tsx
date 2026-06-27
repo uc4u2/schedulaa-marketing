@@ -1,6 +1,7 @@
 import LocaleProvider from '@/components/shared/LocaleProvider';
 import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import Footer from '@/components/shared/footer/Footer';
+import MarketingLeadWidget from '@/components/shared/marketingLead/MarketingLeadWidget';
 import MetaPixel from '@/components/shared/MetaPixel';
 import Navbar from '@/components/shared/navbar/Navbar';
 import SchedulaaAssistant from '@/components/shared/assistant/SchedulaaAssistant';
@@ -65,6 +66,7 @@ export default async function RootLayout({
                 <Navbar />
                 {children}
                 <Footer />
+                <MarketingLeadWidget />
                 <SchedulaaAssistant />
               </MotionProvider>
             </Suspense>

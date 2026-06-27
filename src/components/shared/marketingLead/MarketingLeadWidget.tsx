@@ -1,0 +1,336 @@
+'use client';
+
+import { useEffect, useMemo, useState } from 'react';
+import { usePathname } from 'next/navigation';
+
+type LeadState = {
+  business_type: string;
+  employees_count: string;
+  current_crm: string;
+  needs_booking: boolean;
+  needs_estimates: boolean;
+  needs_invoices: boolean;
+  city: string;
+  name: string;
+  email: string;
+  phone: string;
+  consent_to_contact: boolean;
+};
+
+const INITIAL_STATE: LeadState = {
+  business_type: '',
+  employees_count: '',
+  current_crm: '',
+  needs_booking: true,
+  needs_estimates: true,
+  needs_invoices: true,
+  city: '',
+  name: '',
+  email: '',
+  phone: '',
+  consent_to_contact: false,
+};
+
+const STEPS = [
+  'Business',
+  'Team',
+  'Current tools',
+  'Needs',
+  'Location',
+  'Contact',
+  'Consent',
+];
+
+export default function MarketingLeadWidget() {
+  const pathname = usePathname() || '/';
+  const [open, setOpen] = useState(false);
+  const [step, setStep] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const [form, setForm] = useState<LeadState>(INITIAL_STATE);
+
+  const hidden = pathname.includes('/login') || pathname.includes('/signup');
+  const progress = ((step + 1) / STEPS.length) * 100;
+  const canSubmit = form.name.trim() && form.email.trim() && form.consent_to_contact;
+
+  const stepLabel = useMemo(() => STEPS[step] || STEPS[0], [step]);
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [open]);
+
+  if (hidden) {
+    return null;
+  }
+
+  const submitLead = async () => {
+    if (!canSubmit || submitting) {
+      return;
+    }
+    setSubmitting(true);
+    setError('');
+    try {
+      const response = await fetch('/api/marketing-leads/chatbot', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...form,
+          page_url: typeof window !== 'undefined' ? window.location.href : '',
+          utm_source: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_source') || '' : '',
+          utm_campaign: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_campaign') || '' : '',
+          utm_medium: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_medium') || '' : '',
+        }),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        setError(data?.error || 'Unable to send your request right now.');
+        return;
+      }
+      setSubmitted(true);
+    } catch {
+      setError('Connection issue. Please try again in a moment.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <>
+      {!open ? (
+        <button
+          type="button"
+          onClick={() => {
+            setOpen(true);
+            setSubmitted(false);
+            setStep(0);
+            setError('');
+          }}
+          className="fixed bottom-20 left-3 z-[118] inline-flex items-center gap-2 rounded-full border border-orange-200/70 bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition hover:-translate-y-0.5 sm:bottom-5 sm:left-5"
+          aria-label="Open marketing lead assistant"
+        >
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[linear-gradient(135deg,#f97316_0%,#facc15_100%)] text-sm font-bold text-white">
+            ?
+          </span>
+          <span className="sm:hidden">Find your setup</span>
+          <span className="hidden sm:inline">Find the right Schedulaa setup</span>
+        </button>
+      ) : (
+        <div className="fixed bottom-2 left-2 z-[125] flex h-[min(82vh,720px)] w-[min(420px,calc(100vw-16px))] flex-col overflow-hidden rounded-[28px] border border-orange-100 bg-white shadow-[0_32px_80px_rgba(15,23,42,0.22)] sm:bottom-3 sm:left-3 sm:w-[min(420px,calc(100vw-24px))]">
+          <div className="bg-[linear-gradient(135deg,#fff7ed_0%,#ffedd5_100%)] px-5 py-5">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-[1.05rem] font-semibold text-slate-900">Schedulaa Lead Assistant</p>
+                <p className="mt-1 text-sm text-slate-600">Answer a few quick questions and we’ll send you a practical example.</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-lg text-slate-500 transition hover:bg-white"
+                aria-label="Close lead assistant"
+              >
+                ×
+              </button>
+            </div>
+            <div className="mt-4">
+              <div className="h-2 overflow-hidden rounded-full bg-white/80">
+                <div className="h-full rounded-full bg-[linear-gradient(90deg,#f97316_0%,#fb7185_100%)]" style={{ width: `${progress}%` }} />
+              </div>
+              <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-slate-500">
+                Step {step + 1} of {STEPS.length}: {stepLabel}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex-1 overflow-y-auto bg-[#fffdf9] px-5 py-5">
+            {submitted ? (
+              <div className="space-y-4">
+                <div className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-700">
+                  Received
+                </div>
+                <h3 className="text-2xl font-semibold text-slate-900">Thanks — we’ll send you a quick example.</h3>
+                <p className="text-sm leading-7 text-slate-600">
+                  A lead was added to our Sales CRM and the team can route it into Email SDR, hot leads, and follow-up from there.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  className="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white"
+                  aria-label="Close marketing lead assistant"
+                >
+                  Close
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-5">
+                {step === 0 && (
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-slate-900">What type of business do you run?</label>
+                    <select
+                      value={form.business_type}
+                      onChange={(event) => setForm((prev) => ({ ...prev, business_type: event.target.value }))}
+                      className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+                    >
+                      <option value="">Select one</option>
+                      {['HVAC', 'Cleaning', 'Plumbing', 'Roofing', 'Salon', 'Tutoring', 'General service business'].map((option) => (
+                        <option key={option} value={option}>{option}</option>
+                      ))}
+                    </select>
+                  </div>
+                )}
+
+                {step === 1 && (
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-slate-900">How many staff do you have?</label>
+                    <input
+                      value={form.employees_count}
+                      onChange={(event) => setForm((prev) => ({ ...prev, employees_count: event.target.value }))}
+                      placeholder="Example: 5"
+                      className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+                    />
+                  </div>
+                )}
+
+                {step === 2 && (
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-slate-900">Are you using any booking or CRM tool now?</label>
+                    <input
+                      value={form.current_crm}
+                      onChange={(event) => setForm((prev) => ({ ...prev, current_crm: event.target.value }))}
+                      placeholder="Example: Jobber, Housecall Pro, spreadsheets, none"
+                      className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+                    />
+                  </div>
+                )}
+
+                {step === 3 && (
+                  <div className="space-y-4">
+                    {[
+                      ['needs_booking', 'Do you need online booking?'],
+                      ['needs_estimates', 'Do you send estimates?'],
+                      ['needs_invoices', 'Do you send invoices?'],
+                    ].map(([field, label]) => (
+                      <label key={field} className="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900">
+                        <span>{label}</span>
+                        <input
+                          type="checkbox"
+                          checked={Boolean(form[field as keyof LeadState])}
+                          onChange={(event) => setForm((prev) => ({ ...prev, [field]: event.target.checked }))}
+                          className="h-4 w-4"
+                        />
+                      </label>
+                    ))}
+                  </div>
+                )}
+
+                {step === 4 && (
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-slate-900">What city are you in?</label>
+                    <input
+                      value={form.city}
+                      onChange={(event) => setForm((prev) => ({ ...prev, city: event.target.value }))}
+                      placeholder="Toronto, Newmarket, Bradford..."
+                      className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+                    />
+                  </div>
+                )}
+
+                {step === 5 && (
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-slate-900">What name and email should we use?</label>
+                    <input
+                      value={form.name}
+                      onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
+                      placeholder="Your name"
+                      className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+                    />
+                    <input
+                      value={form.email}
+                      onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))}
+                      placeholder="Email"
+                      type="email"
+                      className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+                    />
+                    <input
+                      value={form.phone}
+                      onChange={(event) => setForm((prev) => ({ ...prev, phone: event.target.value }))}
+                      placeholder="Phone (optional)"
+                      className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+                    />
+                  </div>
+                )}
+
+                {step === 6 && (
+                  <div className="space-y-4">
+                    <label className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-4 text-sm text-slate-900">
+                      <input
+                        type="checkbox"
+                        checked={form.consent_to_contact}
+                        onChange={(event) => setForm((prev) => ({ ...prev, consent_to_contact: event.target.checked }))}
+                        className="mt-1 h-4 w-4"
+                      />
+                      <span>
+                        I agree to receive follow-up from Schedulaa about booking, CRM, estimates, invoices, and related workflow setup.
+                      </span>
+                    </label>
+                    <p className="text-xs leading-6 text-slate-500">
+                      We use this consent to decide whether the lead is eligible for Email SDR outreach. Without it, we can still store the lead for manual review.
+                    </p>
+                  </div>
+                )}
+
+                {error ? <p className="text-sm text-rose-600">{error}</p> : null}
+              </div>
+            )}
+          </div>
+
+          {!submitted && (
+            <div className="border-t border-slate-200 bg-white px-5 py-4">
+              <div className="flex items-center justify-between gap-3">
+                <button
+                  type="button"
+                  onClick={() => setStep((prev) => Math.max(0, prev - 1))}
+                  disabled={step === 0 || submitting}
+                  className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 disabled:opacity-40"
+                  aria-label="Go back one step"
+                >
+                  Back
+                </button>
+                {step < STEPS.length - 1 ? (
+                  <button
+                    type="button"
+                    onClick={() => setStep((prev) => Math.min(STEPS.length - 1, prev + 1))}
+                    disabled={submitting}
+                    className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white"
+                    aria-label="Continue to next step"
+                  >
+                    Continue
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={submitLead}
+                    disabled={!canSubmit || submitting}
+                    className="rounded-full bg-[linear-gradient(135deg,#f97316_0%,#ef4444_100%)] px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-50"
+                    aria-label="Submit marketing lead request"
+                  >
+                    {submitting ? 'Sending…' : 'Send request'}
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </>
+  );
+}
