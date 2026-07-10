@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <header className="space-y-4">
           <h1 className="text-4xl font-semibold text-secondary dark:text-white">Privacy Policy</h1>
           <p className="text-secondary/80 dark:text-accent/75">
-            Last updated: April 10, 2026. This policy describes how Schedulaa collects, uses, stores, and shares personal
+            Last updated: July 10, 2026. This policy describes how Schedulaa collects, uses, stores, and shares personal
             data when you use our website, applications, and connected billing services.
           </p>
         </header>
@@ -28,6 +28,7 @@ export default function PrivacyPage() {
             <li>Billing and payment metadata from payment providers (for example Stripe IDs, invoice state, and card attributes).</li>
             <li>Security and anti-fraud signals such as IP address, request timestamps, user agent, and risk events.</li>
             <li>Punch-location evidence, if enabled by a company, such as employee/device location captured when an employee taps Clock In or Clock Out.</li>
+            <li>Trip-tracking data, if enabled by a company, such as employee/device location captured when an employee taps On my way or Arrived for an assigned job.</li>
           </ul>
         </section>
 
@@ -38,6 +39,7 @@ export default function PrivacyPage() {
             <li>Process subscriptions, invoices, and payments.</li>
             <li>Detect abuse, prevent fraud, and investigate suspicious billing behavior.</li>
             <li>Support attendance verification, manager review, operational security, and timekeeping review.</li>
+            <li>Support active-trip dispatch visibility, client visit coordination, and temporary client tracking links when a company enables trip tracking.</li>
             <li>Respond to payment disputes and legal/regulatory requests.</li>
           </ul>
         </section>
@@ -59,6 +61,26 @@ export default function PrivacyPage() {
         </section>
 
         <section className="space-y-3">
+          <h2 className="text-2xl font-semibold text-secondary dark:text-white">On my way trip tracking</h2>
+          <p className="text-secondary/80 dark:text-accent/75">
+            If a company enables dispatch trip tracking, Schedulaa may collect employee/device location when an employee
+            taps <span className="font-medium text-secondary dark:text-white">On my way</span> for an assigned job and
+            again when the employee taps <span className="font-medium text-secondary dark:text-white">Arrived</span>.
+            This data is used for manager dispatch visibility, job coordination, operational review, and temporary
+            client-facing tracking links when the company enables client sharing for that trip.
+          </p>
+          <p className="text-secondary/80 dark:text-accent/75">
+            Schedulaa does not use this feature for all-day surveillance, background location collection outside an
+            active trip, or continuous off-duty monitoring. Trip tracking is intended for active job travel only and may
+            stop automatically when the employee marks the trip as arrived, depending on the company&apos;s settings.
+          </p>
+          <p className="text-secondary/80 dark:text-accent/75">
+            Client tracking links are temporary and company-controlled. A company may create, send, revoke, or
+            automatically expire these links based on its dispatch settings.
+          </p>
+        </section>
+
+        <section className="space-y-3">
           <h2 className="text-2xl font-semibold text-secondary dark:text-white">Fraud prevention controls</h2>
           <p className="text-secondary/80 dark:text-accent/75">
             To reduce card abuse and account takeover risk, Schedulaa may apply risk-based controls including attempt limits,
@@ -75,6 +97,19 @@ export default function PrivacyPage() {
           <p className="text-secondary/80 dark:text-accent/75">
             We share data with trusted subprocessors only as needed to operate the platform (for example payments, infrastructure,
             email delivery, and security tooling). Payment data is handled by PCI-compliant payment providers.
+          </p>
+          <p className="text-secondary/80 dark:text-accent/75">
+            If a company enables trip-tracking links for a client visit, Schedulaa may share limited dispatch-trip data
+            with the intended client through a temporary secure link for that active visit.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-2xl font-semibold text-secondary dark:text-white">Retention and controls</h2>
+          <p className="text-secondary/80 dark:text-accent/75">
+            Companies may configure certain dispatch retention and link-expiry settings in the product. Schedulaa
+            applies access controls, audit records, and revocation controls to support limited operational use of punch
+            and trip-location data.
           </p>
         </section>
 
