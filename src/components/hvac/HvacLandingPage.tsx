@@ -5,8 +5,10 @@ import { getHvacCopy } from '@/components/hvac/localeCopy';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath } from '@/utils/locale';
 import dashboardImg from '@public/images/marketing/showcase/dashboard.png';
-import employeeManagementImg from '@public/images/marketing/showcase/employee-management.png';
+import paymentCollectionImg from '@public/images/marketing/showcase/payment-collection.png';
 import serviceManagementImg from '@public/images/marketing/showcase/service-management.png';
+import timeTrackingImg from '@public/images/marketing/showcase/time-tracking.png';
+import hvacHeroImg from '@public/images/marketing/hvac-hero.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -21,13 +23,50 @@ const HVAC_YOUTUBE_EMBED =
   'https://www.youtube.com/embed/y7kygIhnZm8';
 
 const journeyTags = ['Office', 'Estimate', 'Dispatch', 'Client ETA', 'Field', 'Payment'];
-const platformTags = ['Dispatch', 'Work orders', 'Billing', 'Employees', 'Client comms', 'Website'];
 
 export default function HvacLandingPage() {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
   const returnTo = marketingReturnTo(locale, '/industries/hvac');
   const copy = getHvacCopy(locale);
+  const storySections = [
+    {
+      eyebrow: 'Dispatch visibility',
+      title: 'See the route, technician status, and customer ETA from one dispatch board.',
+      body:
+        'Dispatchers should not jump between texts, maps, and work-order notes to figure out who is on the way. Schedulaa keeps route context, stale trip alerts, customer tracking links, and work-order actions in one live board.',
+      bullets: ['Road-aware route preview', 'Customer ETA links', 'Trip status and stale alerts'],
+      image: dashboardImg,
+      imageAlt: 'Schedulaa dispatch board for HVAC jobs',
+    },
+    {
+      eyebrow: 'Work orders',
+      title: 'Keep the real job tied to the customer, location, instructions, and field proof.',
+      body:
+        'The job should not split into separate systems after it is approved. Work orders keep the location, assignments, planned materials, photos, technician notes, and status updates connected to the same record the office manages.',
+      bullets: ['Assignments by day and technician', 'Photos and field updates', 'One source of truth for office and field'],
+      image: serviceManagementImg,
+      imageAlt: 'Schedulaa work order and service management workspace',
+    },
+    {
+      eyebrow: 'Time tracking',
+      title: 'Track technician hours without creating another process for payroll.',
+      body:
+        'Field-service owners need hours, trips, and employee activity to stay connected. Schedulaa gives technicians route preview, job context, and time tracking from the same employee workspace used for real work.',
+      bullets: ['Employee route preview', 'Job-linked time tracking', 'Cleaner payroll handoff'],
+      image: timeTrackingImg,
+      imageAlt: 'Schedulaa employee time tracking screen',
+    },
+    {
+      eyebrow: 'Billing flow',
+      title: 'Move from approved estimate to invoice and payment without rekeying the job.',
+      body:
+        'Office teams should not recreate the same customer and work details in a separate billing tool. Schedulaa keeps estimates, invoices, reminders, and online payments tied to the same operational flow.',
+      bullets: ['Estimate follow-up templates', 'Invoice and payment handoff', 'Customer-ready communication'],
+      image: paymentCollectionImg,
+      imageAlt: 'Schedulaa invoice and payment collection view',
+    },
+  ];
 
   return (
     <main className="bg-background-3 dark:bg-background-7">
@@ -65,7 +104,7 @@ export default function HvacLandingPage() {
               <article className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.06] p-3 shadow-[0_28px_65px_rgba(0,0,0,0.22)] backdrop-blur-md">
                 <div className="rounded-[22px] border border-white/8 bg-[#091120] p-3">
                   <Image
-                    src={serviceManagementImg}
+                    src={hvacHeroImg}
                     alt="Schedulaa HVAC operations interface"
                     className="h-auto w-full rounded-[18px] object-contain"
                     priority
@@ -144,15 +183,13 @@ export default function HvacLandingPage() {
                 <div className="bg-secondary p-5 text-white md:p-6">
                   <div className="space-y-4">
                     <div className="rounded-[22px] border border-white/10 bg-white/[0.06] p-3">
-                      <Image src={dashboardImg} alt="HVAC operations dashboard" className="h-auto w-full rounded-[16px] object-contain" />
+                      <Image src={hvacHeroImg} alt="HVAC service workflow powered by Schedulaa" className="h-auto w-full rounded-[16px] object-contain" />
                     </div>
-                    <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
-                      {copy.hero.stats.map((stat) => (
-                        <div key={stat.label} className="rounded-[18px] border border-white/10 bg-white/[0.06] px-4 py-4">
-                          <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">{stat.label}</div>
-                          <div className="mt-2 text-base font-semibold text-white">{stat.value}</div>
-                        </div>
-                      ))}
+                    <div className="rounded-[20px] border border-white/10 bg-white/[0.06] px-5 py-5">
+                      <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">Why this matters</div>
+                      <p className="mt-3 text-base leading-7 text-white/84">
+                        Office, technician, customer, and payment flow stay connected instead of getting rebuilt across CRM, dispatch, payroll, and billing tools.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -185,7 +222,7 @@ export default function HvacLandingPage() {
         </div>
       </section>
 
-      <section className="pb-18 md:pb-24">
+      <section className="pb-6 md:pb-10">
         <div className="main-container space-y-8">
           <AnimatedSection>
             <div className="space-y-4 text-center">
@@ -198,42 +235,78 @@ export default function HvacLandingPage() {
               </p>
             </div>
           </AnimatedSection>
-          <div className="overflow-hidden rounded-[32px] bg-secondary px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
-            <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
-              <AnimatedSection>
-                <div className="space-y-5">
-                  <div className="rounded-[24px] border border-white/10 bg-white/[0.06] p-4">
-                    <Image src={employeeManagementImg} alt="Schedulaa employee operations" className="h-auto w-full rounded-[18px] object-contain" />
-                  </div>
-                  <div className="space-y-3">
-                    {copy.platform.cards.slice(0, 3).map((card) => (
-                      <div key={card.title} className="rounded-[18px] border border-white/10 bg-white/[0.05] px-4 py-3">
-                        <div className="text-sm font-semibold text-white">{card.title}</div>
+        </div>
+      </section>
+
+      <section className="pb-18 md:pb-24">
+        <div className="main-container space-y-6 md:space-y-8">
+          {storySections.map((section, index) => {
+            const reverse = index % 2 === 1;
+
+            return (
+              <AnimatedSection key={section.title}>
+                <article className="overflow-hidden rounded-[30px] border border-stroke-2 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
+                  <div className={`grid items-center gap-0 lg:grid-cols-2 ${reverse ? 'lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1' : ''}`}>
+                    <div className="p-6 md:p-8 lg:p-10">
+                      <span className="badge badge-yellow-v2">{section.eyebrow}</span>
+                      <h3 className="mt-5 max-w-[560px] text-heading-4 text-secondary dark:text-white">{section.title}</h3>
+                      <p className="mt-4 max-w-[560px] text-[16px] leading-8 text-secondary/74 dark:text-accent/70">{section.body}</p>
+                      <div className="mt-6 space-y-3">
+                        {section.bullets.map((bullet) => (
+                          <div key={bullet} className="flex items-start gap-3 text-[15px] leading-7 text-secondary dark:text-white">
+                            <span className="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-[#1f7ae0]" />
+                            <span>{bullet}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
+                    <div className="bg-[#f4f7fb] p-5 dark:bg-background-7 md:p-7 lg:p-8">
+                      <div className="rounded-[24px] bg-white p-4 shadow-[0_22px_44px_rgba(15,23,42,0.08)] dark:bg-background-8">
+                        <Image src={section.image} alt={section.imageAlt} className="h-auto w-full rounded-[18px] object-contain" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </AnimatedSection>
+            );
+          })}
+
+          <AnimatedSection>
+            <article className="overflow-hidden rounded-[32px] bg-secondary px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
+              <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+                <div className="space-y-5">
+                  <span className="badge badge-yellow-v2 !bg-[#d7efb2] !text-secondary">Service-team proof</span>
+                  <blockquote className="max-w-[620px] text-[24px] font-semibold leading-[1.45] text-white md:text-[30px]">
+                    “Dispatch, work orders, ETA updates, photos, and billing only help if the office and the field are working from the same job.”
+                  </blockquote>
+                  <div className="text-[15px] leading-7 text-white/72">
+                    Schedulaa is strongest when the same customer request can move from estimate to dispatch to payment without the team rebuilding context in separate apps.
                   </div>
                 </div>
-              </AnimatedSection>
-              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {copy.platform.cards.map((card, index) => (
-                  <AnimatedSection key={card.title}>
-                    <article className="h-full rounded-[24px] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm">
-                      <div className="mb-4 flex items-center justify-between gap-3">
-                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-sm font-semibold text-white">
-                          {index + 1}
-                        </span>
-                        <span className="rounded-full border border-white/10 bg-white/[0.08] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/72">
-                          {platformTags[index] || 'Ops'}
-                        </span>
-                      </div>
-                      <h3 className="text-heading-6 text-white">{card.title}</h3>
-                      <p className="mt-3 text-[15px] leading-7 text-white/72">{card.body}</p>
-                    </article>
-                  </AnimatedSection>
-                ))}
+                <div className="rounded-[24px] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm">
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-[20px] border border-white/10 bg-white/[0.05] p-4">
+                      <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">What replaces the stack</div>
+                      <div className="mt-3 text-base font-semibold text-white">Dispatch + work orders + billing + employee ops</div>
+                    </div>
+                    <div className="rounded-[20px] border border-white/10 bg-white/[0.05] p-4">
+                      <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">What the owner gets</div>
+                      <div className="mt-3 text-base font-semibold text-white">Fewer tool switches, faster answers, cleaner follow-through</div>
+                    </div>
+                  </div>
+                  <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                    <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[190px]">
+                      {copy.closing.primaryCta}
+                    </a>
+                    <Link href="/pricing" className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
+                      {copy.closing.secondaryCta}
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </article>
+          </AnimatedSection>
+
           <AnimatedSection>
             <article className="overflow-hidden rounded-[32px] bg-secondary px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
               <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
