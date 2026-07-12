@@ -67,6 +67,7 @@ Core routes:
 - `/payroll/tools/roe`
 - `/website-builder`
 - `/industries`
+- `/industries/hvac`
 - `/status`
 - `/roadmap`
 - `/pricing`
