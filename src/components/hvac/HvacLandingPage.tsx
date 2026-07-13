@@ -166,8 +166,8 @@ export default function HvacLandingPage() {
       <section className="pb-14 md:pb-18">
         <div className={pageShell}>
           <div className="grid grid-cols-12 items-start gap-y-12 lg:gap-x-10">
-            <AnimatedSection>
-              <div className="col-span-12 space-y-4 text-center lg:sticky lg:top-28 lg:col-span-5 lg:px-4 lg:text-left">
+            <AnimatedSection className="col-span-12 lg:col-span-5">
+              <div className="space-y-4 text-center lg:sticky lg:top-28 lg:px-4 lg:text-left">
                 <div className="space-y-4">
                   <span className="badge badge-yellow-v2">{copy.journey.badge}</span>
                   <h2 className="mt-4 text-heading-4 text-secondary dark:text-white">{copy.journey.title}</h2>
