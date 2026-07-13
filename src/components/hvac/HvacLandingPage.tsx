@@ -9,9 +9,9 @@ import paymentCollectionImg from '@public/images/marketing/showcase/payment-coll
 import serviceManagementImg from '@public/images/marketing/showcase/service-management.png';
 import hvacHeroImg from '@public/images/marketing/hvac-hero-2.png';
 import hvacContractorSmileImg from '@public/images/marketing/hvac-contractor-smile.png';
-import hvacOps2Img from '@public/images/marketing/hvac-ops-2.png';
-import hvacOps3Img from '@public/images/marketing/hvac-ops-3.png';
 import hvacOps4Img from '@public/images/marketing/hvac-ops-4.png';
+import hvac333Img from '@public/images/marketing/hvac-333.png';
+import hvacHeroOneImg from '@public/images/marketing/hvac-hero-one.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -57,7 +57,7 @@ export default function HvacLandingPage() {
         'Estimate follow-up, invoice handoff, and online payment',
         'Cleaner payroll and billing follow-through',
       ],
-      image: hvacOps2Img,
+      image: hvac333Img,
       imageAlt: 'Schedulaa HVAC billing and payment workflow',
     },
   ];
@@ -140,16 +140,7 @@ export default function HvacLandingPage() {
         <div className={pageShell}>
           <AnimatedSection>
             <article className="mx-auto max-w-[1280px] rounded-[28px] border border-stroke-2 bg-white p-5 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
-              <div className="space-y-3 text-center">
-                <span className="badge badge-cyan-v2">{copy.video.badge}</span>
-                <h2 className="mx-auto max-w-[760px] text-heading-4 text-secondary dark:text-white">
-                  {copy.video.title}
-                </h2>
-                <p className="mx-auto max-w-[760px] text-[15px] leading-7 text-secondary/72 dark:text-accent/70">
-                  {copy.video.description}
-                </p>
-              </div>
-              <div className="relative mt-6 w-full overflow-hidden rounded-2xl border border-stroke-2 pb-[56.25%] dark:border-stroke-7">
+              <div className="relative w-full overflow-hidden rounded-2xl border border-stroke-2 pb-[56.25%] dark:border-stroke-7">
                 <iframe
                   className="absolute left-0 top-0 h-full w-full"
                   src={HVAC_YOUTUBE_EMBED}
@@ -174,16 +165,8 @@ export default function HvacLandingPage() {
                   <h2 className="mt-4 text-heading-4 text-secondary dark:text-white">{copy.journey.title}</h2>
                   <p className="mt-4 text-[15px] leading-7 text-secondary/74 dark:text-accent/70">{copy.journey.description}</p>
                 </div>
-                <div className="rounded-[28px] bg-secondary p-6 text-white shadow-[0_24px_70px_rgba(0,0,0,0.16)]">
-                  <div className="space-y-4">
-                    <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">Built for real operations</div>
-                    <p className="text-[18px] leading-8 text-white/84">
-                      The office, technician, customer, and payment flow stay connected instead of getting rebuilt across CRM, dispatch, payroll, and billing tools.
-                    </p>
-                    <div className="rounded-[20px] border border-white/10 bg-white/[0.06] p-3">
-                      <Image src={hvacOps3Img} alt="HVAC payment and technician workflow" className="h-auto w-full rounded-[16px] object-cover" />
-                    </div>
-                  </div>
+                <div className="rounded-[28px] border border-stroke-2 bg-white p-4 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
+                  <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[20px] object-cover" />
                 </div>
               </div>
             </AnimatedSection>
