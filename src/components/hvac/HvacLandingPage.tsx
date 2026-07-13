@@ -9,6 +9,7 @@ import paymentCollectionImg from '@public/images/marketing/showcase/payment-coll
 import serviceManagementImg from '@public/images/marketing/showcase/service-management.png';
 import timeTrackingImg from '@public/images/marketing/showcase/time-tracking.png';
 import hvacHeroImg from '@public/images/marketing/hvac-hero.png';
+import hvacOps2Img from '@public/images/marketing/hvac-ops-2.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -58,8 +59,8 @@ export default function HvacLandingPage() {
       ],
       image: timeTrackingImg,
       imageAlt: 'Schedulaa employee time tracking screen',
-      secondaryImage: paymentCollectionImg,
-      secondaryImageAlt: 'Schedulaa invoice and payment collection view',
+      secondaryImage: hvacOps2Img,
+      secondaryImageAlt: 'Schedulaa HVAC billing and payment workflow',
     },
   ];
 
