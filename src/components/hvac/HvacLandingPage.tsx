@@ -23,6 +23,7 @@ const HVAC_YOUTUBE_EMBED =
   'https://www.youtube.com/embed/y7kygIhnZm8';
 
 const journeyTags = ['Office', 'Estimate', 'Dispatch', 'Client ETA', 'Field', 'Payment'];
+const pageShell = 'mx-auto w-full max-w-[1520px] px-5 md:px-7 xl:px-10';
 
 export default function HvacLandingPage() {
   const pathname = usePathname() || '/';
@@ -31,47 +32,41 @@ export default function HvacLandingPage() {
   const copy = getHvacCopy(locale);
   const storySections = [
     {
-      eyebrow: 'Dispatch visibility',
-      title: 'See the route, technician status, and customer ETA from one dispatch board.',
+      eyebrow: 'Dispatch + work orders',
+      title: 'Run dispatch, ETA, assignments, and field proof from the same live job record.',
       body:
-        'Dispatchers should not jump between texts, maps, and work-order notes to figure out who is on the way. Schedulaa keeps route context, stale trip alerts, customer tracking links, and work-order actions in one live board.',
-      bullets: ['Road-aware route preview', 'Customer ETA links', 'Trip status and stale alerts'],
+        'Dispatchers should not jump between texts, maps, and work-order notes to figure out who is on the way. Schedulaa keeps route context, customer ETA links, assignments, instructions, photos, and work-order actions connected to one source of truth.',
+      bullets: [
+        'Road-aware route preview and customer ETA links',
+        'Assignments by day and technician',
+        'Photos, notes, and work-order status in one place',
+      ],
       image: dashboardImg,
       imageAlt: 'Schedulaa dispatch board for HVAC jobs',
+      secondaryImage: serviceManagementImg,
+      secondaryImageAlt: 'Schedulaa work order and service management workspace',
     },
     {
-      eyebrow: 'Work orders',
-      title: 'Keep the real job tied to the customer, location, instructions, and field proof.',
+      eyebrow: 'Time tracking + billing',
+      title: 'Track technician time and move from approved estimate to payment without rebuilding the job.',
       body:
-        'The job should not split into separate systems after it is approved. Work orders keep the location, assignments, planned materials, photos, technician notes, and status updates connected to the same record the office manages.',
-      bullets: ['Assignments by day and technician', 'Photos and field updates', 'One source of truth for office and field'],
-      image: serviceManagementImg,
-      imageAlt: 'Schedulaa work order and service management workspace',
-    },
-    {
-      eyebrow: 'Time tracking',
-      title: 'Track technician hours without creating another process for payroll.',
-      body:
-        'Field-service owners need hours, trips, and employee activity to stay connected. Schedulaa gives technicians route preview, job context, and time tracking from the same employee workspace used for real work.',
-      bullets: ['Employee route preview', 'Job-linked time tracking', 'Cleaner payroll handoff'],
+        'Field-service owners need hours, trips, estimates, invoices, and payments to stay connected. Schedulaa gives technicians route preview and time tracking from the employee workspace while the office keeps billing attached to the same operational flow.',
+      bullets: [
+        'Employee route preview and job-linked time tracking',
+        'Estimate follow-up, invoice handoff, and online payment',
+        'Cleaner payroll and billing follow-through',
+      ],
       image: timeTrackingImg,
       imageAlt: 'Schedulaa employee time tracking screen',
-    },
-    {
-      eyebrow: 'Billing flow',
-      title: 'Move from approved estimate to invoice and payment without rekeying the job.',
-      body:
-        'Office teams should not recreate the same customer and work details in a separate billing tool. Schedulaa keeps estimates, invoices, reminders, and online payments tied to the same operational flow.',
-      bullets: ['Estimate follow-up templates', 'Invoice and payment handoff', 'Customer-ready communication'],
-      image: paymentCollectionImg,
-      imageAlt: 'Schedulaa invoice and payment collection view',
+      secondaryImage: paymentCollectionImg,
+      secondaryImageAlt: 'Schedulaa invoice and payment collection view',
     },
   ];
 
   return (
     <main className="bg-background-3 dark:bg-background-7">
       <section className="overflow-hidden bg-[#07101f] pb-18 pt-[116px] text-white md:pb-24 md:pt-[144px]">
-        <div className="main-container relative">
+        <div className={`${pageShell} relative`}>
           <div className="pointer-events-none absolute left-[8%] top-10 h-[320px] w-[320px] rounded-full bg-[#1f7ae0]/20 blur-[120px]" />
           <div className="pointer-events-none absolute right-[4%] top-1/3 h-[380px] w-[380px] rounded-full bg-[#7fe36c]/10 blur-[140px]" />
           <div className="relative grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
@@ -117,7 +112,7 @@ export default function HvacLandingPage() {
       </section>
 
       <section className="py-14 md:py-18">
-        <div className="main-container space-y-8">
+        <div className={`${pageShell} space-y-8`}>
           <AnimatedSection>
             <div className="space-y-4 text-center">
               <span className="badge badge-yellow-v2">{copy.pain.badge}</span>
@@ -143,9 +138,9 @@ export default function HvacLandingPage() {
       </section>
 
       <section className="pb-14 md:pb-18">
-        <div className="main-container">
+        <div className={pageShell}>
           <AnimatedSection>
-            <article className="mx-auto max-w-[1120px] rounded-[28px] border border-stroke-2 bg-white p-5 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
+            <article className="mx-auto max-w-[1280px] rounded-[28px] border border-stroke-2 bg-white p-5 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
               <div className="space-y-3 text-center">
                 <span className="badge badge-cyan-v2">{copy.video.badge}</span>
                 <h2 className="mx-auto max-w-[760px] text-heading-4 text-secondary dark:text-white">
@@ -171,7 +166,7 @@ export default function HvacLandingPage() {
       </section>
 
       <section className="pb-14 md:pb-18">
-        <div className="main-container">
+        <div className={pageShell}>
           <div className="grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
             <AnimatedSection>
               <div className="overflow-hidden rounded-[28px] border border-stroke-2 bg-white shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
@@ -223,7 +218,7 @@ export default function HvacLandingPage() {
       </section>
 
       <section className="pb-6 md:pb-10">
-        <div className="main-container space-y-8">
+        <div className={`${pageShell} space-y-8`}>
           <AnimatedSection>
             <div className="space-y-4 text-center">
               <span className="badge badge-cyan-v2">{copy.platform.badge}</span>
@@ -239,7 +234,7 @@ export default function HvacLandingPage() {
       </section>
 
       <section className="pb-18 md:pb-24">
-        <div className="main-container space-y-6 md:space-y-8">
+        <div className={`${pageShell} space-y-6 md:space-y-8`}>
           {storySections.map((section, index) => {
             const reverse = index % 2 === 1;
 
@@ -251,9 +246,9 @@ export default function HvacLandingPage() {
                       <span className="badge badge-yellow-v2">{section.eyebrow}</span>
                       <h3 className="mt-5 max-w-[560px] text-heading-4 text-secondary dark:text-white">{section.title}</h3>
                       <p className="mt-4 max-w-[560px] text-[16px] leading-8 text-secondary/74 dark:text-accent/70">{section.body}</p>
-                      <div className="mt-6 space-y-3">
+                      <div className="mt-6 grid gap-3 md:grid-cols-1">
                         {section.bullets.map((bullet) => (
-                          <div key={bullet} className="flex items-start gap-3 text-[15px] leading-7 text-secondary dark:text-white">
+                          <div key={bullet} className="flex items-start gap-3 rounded-[18px] bg-[#f4f7fb] px-4 py-3 text-[15px] leading-7 text-secondary dark:bg-background-7 dark:text-white">
                             <span className="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-[#1f7ae0]" />
                             <span>{bullet}</span>
                           </div>
@@ -261,8 +256,19 @@ export default function HvacLandingPage() {
                       </div>
                     </div>
                     <div className="bg-[#f4f7fb] p-5 dark:bg-background-7 md:p-7 lg:p-8">
-                      <div className="rounded-[24px] bg-white p-4 shadow-[0_22px_44px_rgba(15,23,42,0.08)] dark:bg-background-8">
-                        <Image src={section.image} alt={section.imageAlt} className="h-auto w-full rounded-[18px] object-contain" />
+                      <div className="grid gap-4 xl:grid-cols-[1.08fr_0.92fr]">
+                        <div className="rounded-[24px] bg-white p-4 shadow-[0_22px_44px_rgba(15,23,42,0.08)] dark:bg-background-8">
+                          <Image src={section.image} alt={section.imageAlt} className="h-auto w-full rounded-[18px] object-contain" />
+                        </div>
+                        {section.secondaryImage ? (
+                          <div className="rounded-[24px] bg-white p-4 shadow-[0_22px_44px_rgba(15,23,42,0.08)] dark:bg-background-8">
+                            <Image
+                              src={section.secondaryImage}
+                              alt={section.secondaryImageAlt || section.imageAlt}
+                              className="h-auto w-full rounded-[18px] object-contain"
+                            />
+                          </div>
+                        ) : null}
                       </div>
                     </div>
                   </div>
