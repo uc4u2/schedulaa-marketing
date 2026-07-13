@@ -7,9 +7,10 @@ import { detectLocaleFromPath } from '@/utils/locale';
 import dashboardImg from '@public/images/marketing/showcase/dashboard.png';
 import paymentCollectionImg from '@public/images/marketing/showcase/payment-collection.png';
 import serviceManagementImg from '@public/images/marketing/showcase/service-management.png';
-import timeTrackingImg from '@public/images/marketing/showcase/time-tracking.png';
 import hvacHeroImg from '@public/images/marketing/hvac-hero.png';
 import hvacOps2Img from '@public/images/marketing/hvac-ops-2.png';
+import hvacOps3Img from '@public/images/marketing/hvac-ops-3.png';
+import hvacOps4Img from '@public/images/marketing/hvac-ops-4.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -24,7 +25,7 @@ const HVAC_YOUTUBE_EMBED =
   'https://www.youtube.com/embed/y7kygIhnZm8';
 
 const journeyTags = ['Office', 'Estimate', 'Dispatch', 'Client ETA', 'Field', 'Payment'];
-const pageShell = 'mx-auto w-full max-w-[1520px] px-5 md:px-7 xl:px-10';
+const pageShell = 'mx-auto w-full max-w-[1640px] px-5 md:px-7 xl:px-10';
 
 export default function HvacLandingPage() {
   const pathname = usePathname() || '/';
@@ -42,10 +43,8 @@ export default function HvacLandingPage() {
         'Assignments by day and technician',
         'Photos, notes, and work-order status in one place',
       ],
-      image: dashboardImg,
-      imageAlt: 'Schedulaa dispatch board for HVAC jobs',
-      secondaryImage: serviceManagementImg,
-      secondaryImageAlt: 'Schedulaa work order and service management workspace',
+      image: serviceManagementImg,
+      imageAlt: 'Schedulaa dispatch and work order management for HVAC jobs',
     },
     {
       eyebrow: 'Time tracking + billing',
@@ -57,10 +56,8 @@ export default function HvacLandingPage() {
         'Estimate follow-up, invoice handoff, and online payment',
         'Cleaner payroll and billing follow-through',
       ],
-      image: timeTrackingImg,
-      imageAlt: 'Schedulaa employee time tracking screen',
-      secondaryImage: hvacOps2Img,
-      secondaryImageAlt: 'Schedulaa HVAC billing and payment workflow',
+      image: hvacOps2Img,
+      imageAlt: 'Schedulaa HVAC billing and payment workflow',
     },
   ];
 
@@ -168,30 +165,28 @@ export default function HvacLandingPage() {
 
       <section className="pb-14 md:pb-18">
         <div className={pageShell}>
-          <div className="grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+          <div className="grid grid-cols-12 items-start gap-y-12 lg:gap-x-10">
             <AnimatedSection>
-              <div className="overflow-hidden rounded-[28px] border border-stroke-2 bg-white shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
-                <div className="border-b border-stroke-2 p-6 dark:border-stroke-7 md:p-7">
+              <div className="col-span-12 space-y-4 text-center lg:sticky lg:top-28 lg:col-span-5 lg:px-4 lg:text-left">
+                <div className="space-y-4">
                   <span className="badge badge-yellow-v2">{copy.journey.badge}</span>
                   <h2 className="mt-4 text-heading-4 text-secondary dark:text-white">{copy.journey.title}</h2>
                   <p className="mt-4 text-[15px] leading-7 text-secondary/74 dark:text-accent/70">{copy.journey.description}</p>
                 </div>
-                <div className="bg-secondary p-5 text-white md:p-6">
+                <div className="rounded-[28px] bg-secondary p-6 text-white shadow-[0_24px_70px_rgba(0,0,0,0.16)]">
                   <div className="space-y-4">
-                    <div className="rounded-[22px] border border-white/10 bg-white/[0.06] p-3">
-                      <Image src={hvacHeroImg} alt="HVAC service workflow powered by Schedulaa" className="h-auto w-full rounded-[16px] object-contain" />
-                    </div>
-                    <div className="rounded-[20px] border border-white/10 bg-white/[0.06] px-5 py-5">
-                      <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">Why this matters</div>
-                      <p className="mt-3 text-base leading-7 text-white/84">
-                        Office, technician, customer, and payment flow stay connected instead of getting rebuilt across CRM, dispatch, payroll, and billing tools.
-                      </p>
+                    <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">Built for real operations</div>
+                    <p className="text-[18px] leading-8 text-white/84">
+                      The office, technician, customer, and payment flow stay connected instead of getting rebuilt across CRM, dispatch, payroll, and billing tools.
+                    </p>
+                    <div className="rounded-[20px] border border-white/10 bg-white/[0.06] p-3">
+                      <Image src={hvacOps3Img} alt="HVAC payment and technician workflow" className="h-auto w-full rounded-[16px] object-cover" />
                     </div>
                   </div>
                 </div>
               </div>
             </AnimatedSection>
-            <div className="relative grid gap-4">
+            <div className="relative col-span-12 grid gap-4 lg:col-span-7">
               <div className="pointer-events-none absolute left-5 top-10 hidden h-[calc(100%-5rem)] w-px bg-gradient-to-b from-[#bed8ff] via-[#d9e8ff] to-transparent lg:block" />
               {copy.journey.steps.map((step, index) => (
                 <AnimatedSection key={step.title}>
@@ -222,13 +217,10 @@ export default function HvacLandingPage() {
         <div className={`${pageShell} space-y-8`}>
           <AnimatedSection>
             <div className="space-y-4 text-center">
-              <span className="badge badge-cyan-v2">{copy.platform.badge}</span>
+              <span className="badge badge-cyan-v2">Connected operations</span>
               <h2 className="mx-auto max-w-[860px] text-heading-3 text-secondary dark:text-white">
-                {copy.platform.title}
+                Run the office and the field from one connected system.
               </h2>
-              <p className="mx-auto max-w-[840px] text-[16px] leading-7 text-secondary/74 dark:text-accent/70">
-                {copy.platform.description}
-              </p>
             </div>
           </AnimatedSection>
         </div>
@@ -257,19 +249,8 @@ export default function HvacLandingPage() {
                       </div>
                     </div>
                     <div className="bg-[#f4f7fb] p-5 dark:bg-background-7 md:p-7 lg:p-8">
-                      <div className="grid gap-4 xl:grid-cols-[1.08fr_0.92fr]">
-                        <div className="rounded-[24px] bg-white p-4 shadow-[0_22px_44px_rgba(15,23,42,0.08)] dark:bg-background-8">
-                          <Image src={section.image} alt={section.imageAlt} className="h-auto w-full rounded-[18px] object-contain" />
-                        </div>
-                        {section.secondaryImage ? (
-                          <div className="rounded-[24px] bg-white p-4 shadow-[0_22px_44px_rgba(15,23,42,0.08)] dark:bg-background-8">
-                            <Image
-                              src={section.secondaryImage}
-                              alt={section.secondaryImageAlt || section.imageAlt}
-                              className="h-auto w-full rounded-[18px] object-contain"
-                            />
-                          </div>
-                        ) : null}
+                      <div className="rounded-[24px] bg-white p-4 shadow-[0_22px_44px_rgba(15,23,42,0.08)] dark:bg-background-8">
+                        <Image src={section.image} alt={section.imageAlt} className="h-auto w-full rounded-[18px] object-contain" />
                       </div>
                     </div>
                   </div>
@@ -291,15 +272,8 @@ export default function HvacLandingPage() {
                   </div>
                 </div>
                 <div className="rounded-[24px] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm">
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <div className="rounded-[20px] border border-white/10 bg-white/[0.05] p-4">
-                      <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">What replaces the stack</div>
-                      <div className="mt-3 text-base font-semibold text-white">Dispatch + work orders + billing + employee ops</div>
-                    </div>
-                    <div className="rounded-[20px] border border-white/10 bg-white/[0.05] p-4">
-                      <div className="text-[11px] uppercase tracking-[0.18em] text-white/45">What the owner gets</div>
-                      <div className="mt-3 text-base font-semibold text-white">Fewer tool switches, faster answers, cleaner follow-through</div>
-                    </div>
+                  <div className="rounded-[20px] border border-white/10 bg-[#07101f] p-3">
+                    <Image src={hvacOps4Img} alt="Schedulaa invoice detail and payment workflow" className="h-auto w-full rounded-[14px] object-contain" />
                   </div>
                   <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                     <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[190px]">
