@@ -7,7 +7,8 @@ import { detectLocaleFromPath } from '@/utils/locale';
 import dashboardImg from '@public/images/marketing/showcase/dashboard.png';
 import paymentCollectionImg from '@public/images/marketing/showcase/payment-collection.png';
 import serviceManagementImg from '@public/images/marketing/showcase/service-management.png';
-import hvacHeroImg from '@public/images/marketing/hvac-hero.png';
+import hvacHeroImg from '@public/images/marketing/hvac-hero-2.png';
+import hvacContractorSmileImg from '@public/images/marketing/hvac-contractor-smile.png';
 import hvacOps2Img from '@public/images/marketing/hvac-ops-2.png';
 import hvacOps3Img from '@public/images/marketing/hvac-ops-3.png';
 import hvacOps4Img from '@public/images/marketing/hvac-ops-4.png';
@@ -273,7 +274,7 @@ export default function HvacLandingPage() {
                 </div>
                 <div className="rounded-[24px] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm">
                   <div className="rounded-[20px] border border-white/10 bg-[#07101f] p-3">
-                    <Image src={hvacOps4Img} alt="Schedulaa invoice detail and payment workflow" className="h-auto w-full rounded-[14px] object-contain" />
+                    <Image src={hvacContractorSmileImg} alt="HVAC contractor standing in front of service van" className="h-auto w-full rounded-[14px] object-cover" />
                   </div>
                   <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                     <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[190px]">
@@ -283,26 +284,6 @@ export default function HvacLandingPage() {
                       {copy.closing.secondaryCta}
                     </Link>
                   </div>
-                </div>
-              </div>
-            </article>
-          </AnimatedSection>
-
-          <AnimatedSection>
-            <article className="overflow-hidden rounded-[32px] bg-secondary px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
-              <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-                <div className="space-y-4">
-                  <span className="badge badge-yellow-v2 !bg-[#d7efb2] !text-secondary">{copy.closing.badge}</span>
-                  <h2 className="max-w-[760px] text-heading-4 text-white md:text-heading-3">{copy.closing.title}</h2>
-                  <p className="max-w-[760px] text-[15px] leading-7 text-white/78">{copy.closing.description}</p>
-                </div>
-                <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-                  <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[190px]">
-                    {copy.closing.primaryCta}
-                  </a>
-                  <Link href="/pricing" className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
-                    {copy.closing.secondaryCta}
-                  </Link>
                 </div>
               </div>
             </article>
