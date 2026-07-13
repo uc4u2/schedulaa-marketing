@@ -244,28 +244,21 @@ export default function HvacLandingPage() {
           })}
 
           <AnimatedSection>
-            <article className="overflow-hidden rounded-[32px] bg-secondary px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
-              <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-                <div className="space-y-5">
-                  <span className="badge badge-yellow-v2 !bg-[#d7efb2] !text-secondary">Service-team proof</span>
-                  <blockquote className="max-w-[620px] text-[24px] font-semibold leading-[1.45] text-white md:text-[30px]">
-                    “Dispatch, work orders, ETA updates, photos, and billing only help if the office and the field are working from the same job.”
-                  </blockquote>
-                  <div className="text-[15px] leading-7 text-white/72">
-                    Schedulaa is strongest when the same customer request can move from estimate to dispatch to payment without the team rebuilding context in separate apps.
+            <article className="overflow-hidden rounded-[32px] bg-[#213748] px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
+              <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+                <div className="flex h-full min-h-[180px] items-end">
+                  <div className="space-y-3">
+                    <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/78">
+                      Service-team proof
+                    </span>
+                    <p className="max-w-[280px] text-[17px] leading-8 text-white/84">
+                      Built for HVAC teams working from one live job record.
+                    </p>
                   </div>
                 </div>
                 <div className="rounded-[24px] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm">
-                  <div className="rounded-[20px] border border-white/10 bg-[#07101f] p-3">
+                  <div className="rounded-[20px] border border-white/10 bg-[#102132] p-3">
                     <Image src={hvacContractorSmileImg} alt="HVAC contractor standing in front of service van" className="h-auto w-full rounded-[14px] object-cover" />
-                  </div>
-                  <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                    <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[190px]">
-                      {copy.closing.primaryCta}
-                    </a>
-                    <Link href="/pricing" className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
-                      {copy.closing.secondaryCta}
-                    </Link>
                   </div>
                 </div>
               </div>
