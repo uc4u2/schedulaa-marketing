@@ -161,16 +161,21 @@ export default function HvacLandingPage() {
       <section className="pb-14 md:pb-18">
         <div className={pageShell}>
           <AnimatedSection>
-            <article className="overflow-hidden rounded-[28px] bg-[#213748] p-6 text-white shadow-[0_20px_48px_rgba(15,23,42,0.12)] md:p-8">
-              <div className="mx-auto max-w-[1180px] space-y-5">
-                <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/72">
-                  {copy.journey.badge}
-                </span>
-                <p className="max-w-[520px] text-[18px] leading-8 text-white/78">
-                  One connected HVAC workflow from service request to payment.
-                </p>
-                <div className="rounded-[20px] border border-white/10 bg-white/[0.05] p-3 md:p-4">
-                  <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[18px] object-cover" />
+            <article className="mx-auto max-w-[1320px] rounded-[24px] border border-stroke-2 bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-8 lg:p-10">
+              <div className="grid items-center gap-8 lg:grid-cols-[0.42fr_0.58fr] lg:gap-12">
+                <div className="space-y-5">
+                  <span className="inline-flex rounded-full border border-[#d8ddc8] bg-[#f7f5de] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/72 dark:border-white/10 dark:bg-white/6 dark:text-white/72">
+                    {copy.journey.badge}
+                  </span>
+                  <h2 className="max-w-[420px] text-heading-3 text-secondary dark:text-white">
+                    One connected HVAC workflow from service request to payment.
+                  </h2>
+                  <p className="max-w-[460px] text-[16px] leading-8 text-secondary/70 dark:text-accent/70">
+                    The office, technician, customer, and payment flow stay tied to the same live job instead of getting rebuilt across separate tools.
+                  </p>
+                </div>
+                <div className="rounded-[20px] border border-stroke-2 bg-[#f7f9fc] p-3 dark:border-stroke-7 dark:bg-background-7 md:p-4">
+                  <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[16px] object-cover" />
                 </div>
               </div>
             </article>
