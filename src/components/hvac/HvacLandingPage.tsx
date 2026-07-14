@@ -67,19 +67,21 @@ export default function HvacLandingPage() {
         <div className={`${pageShell} relative`}>
           <div className="pointer-events-none absolute left-[8%] top-10 h-[320px] w-[320px] rounded-full bg-[#1f7ae0]/20 blur-[120px]" />
           <div className="pointer-events-none absolute right-[4%] top-1/3 h-[380px] w-[380px] rounded-full bg-[#7fe36c]/10 blur-[140px]" />
-          <div className="relative grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
+          <div className="relative grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
             <AnimatedSection>
-              <div className="space-y-6">
-                <span className="badge badge-cyan !bg-white/10 !text-white/88">{copy.hero.badge}</span>
-                <div className="space-y-4">
-                  <h1 className="max-w-[760px] text-heading-2 text-white md:text-[58px] md:leading-[1.03]">
+              <div className="space-y-7">
+                <span className="inline-flex rounded-full border border-white/12 bg-white/6 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/74">
+                  {copy.hero.badge}
+                </span>
+                <div className="space-y-5">
+                  <h1 className="max-w-[760px] text-heading-2 text-white md:text-[60px] md:leading-[1.02]">
                     {copy.hero.title}
                   </h1>
-                  <p className="max-w-[720px] text-[17px] leading-8 text-white/72">
+                  <p className="max-w-[720px] text-[17px] leading-8 text-white/68">
                     {copy.hero.description}
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-3 pt-1">
+                <div className="flex flex-wrap gap-3 pt-2">
                   <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[190px]">
                     {copy.hero.primaryCta}
                   </a>
@@ -94,8 +96,8 @@ export default function HvacLandingPage() {
             </AnimatedSection>
 
             <AnimatedSection>
-              <article className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.06] p-3 shadow-[0_28px_65px_rgba(0,0,0,0.22)] backdrop-blur-md">
-                <div className="rounded-[22px] border border-white/8 bg-[#091120] p-3">
+              <article className="overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.04] p-3 shadow-[0_24px_52px_rgba(0,0,0,0.18)] backdrop-blur-md">
+                <div className="rounded-[20px] border border-white/8 bg-[#091120] p-3">
                   <Image
                     src={hvacHeroImg}
                     alt="Schedulaa HVAC operations interface"
@@ -113,7 +115,9 @@ export default function HvacLandingPage() {
         <div className={`${pageShell} space-y-8`}>
           <AnimatedSection>
             <div className="space-y-4 text-center">
-              <span className="badge badge-yellow-v2">{copy.pain.badge}</span>
+              <span className="inline-flex rounded-full border border-[#d8ddc8] bg-[#f7f5de] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/72 dark:border-white/10 dark:bg-white/6 dark:text-white/72">
+                {copy.pain.badge}
+              </span>
               <h2 className="mx-auto max-w-[860px] text-heading-3 text-secondary dark:text-white">
                 {copy.pain.title}
               </h2>
@@ -125,7 +129,7 @@ export default function HvacLandingPage() {
           <div className="grid gap-5 lg:grid-cols-3">
             {copy.pain.cards.map((card) => (
               <AnimatedSection key={card.title}>
-                <article className="h-full rounded-[24px] border border-stroke-2 bg-white p-6 shadow-1 dark:border-stroke-7 dark:bg-background-8">
+                <article className="h-full rounded-[22px] border border-stroke-2 bg-white p-6 shadow-[0_16px_36px_rgba(15,23,42,0.05)] dark:border-stroke-7 dark:bg-background-8">
                   <h3 className="text-heading-5 text-secondary dark:text-white">{card.title}</h3>
                   <p className="mt-3 text-[15px] leading-7 text-secondary/72 dark:text-accent/70">{card.body}</p>
                 </article>
@@ -138,7 +142,7 @@ export default function HvacLandingPage() {
       <section className="pb-14 md:pb-18">
         <div className={pageShell}>
           <AnimatedSection>
-            <article className="mx-auto max-w-[1280px] rounded-[28px] border border-stroke-2 bg-white p-5 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
+            <article className="mx-auto max-w-[1320px] rounded-[24px] border border-stroke-2 bg-white p-5 shadow-[0_18px_42px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
               <div className="relative w-full overflow-hidden rounded-2xl border border-stroke-2 pb-[56.25%] dark:border-stroke-7">
                 <iframe
                   className="absolute left-0 top-0 h-full w-full"
@@ -157,15 +161,15 @@ export default function HvacLandingPage() {
       <section className="pb-14 md:pb-18">
         <div className={pageShell}>
           <AnimatedSection>
-            <article className="overflow-hidden rounded-[32px] bg-[#203544] p-6 text-white shadow-[0_24px_64px_rgba(15,23,42,0.14)] md:p-8">
+            <article className="overflow-hidden rounded-[28px] bg-[#213748] p-6 text-white shadow-[0_20px_48px_rgba(15,23,42,0.12)] md:p-8">
               <div className="mx-auto max-w-[1180px] space-y-5">
-                <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/82">
+                <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/72">
                   {copy.journey.badge}
                 </span>
-                <p className="max-w-[520px] text-[18px] leading-8 text-white/84">
+                <p className="max-w-[520px] text-[18px] leading-8 text-white/78">
                   One connected HVAC workflow from service request to payment.
                 </p>
-                <div className="rounded-[24px] border border-white/10 bg-white/[0.06] p-3 md:p-4">
+                <div className="rounded-[20px] border border-white/10 bg-white/[0.05] p-3 md:p-4">
                   <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[18px] object-cover" />
                 </div>
               </div>
@@ -178,8 +182,10 @@ export default function HvacLandingPage() {
         <div className={`${pageShell} space-y-8`}>
           <AnimatedSection>
             <div className="space-y-4 text-center">
-              <span className="badge badge-cyan-v2">Connected operations</span>
-              <h2 className="mx-auto max-w-[860px] text-heading-3 text-secondary dark:text-white">
+              <span className="inline-flex rounded-full border border-[#cbe6e9] bg-[#e8f7f8] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/70 dark:border-white/10 dark:bg-white/6 dark:text-white/72">
+                Connected operations
+              </span>
+              <h2 className="mx-auto max-w-[860px] text-heading-3 text-secondary dark:text-white md:max-w-[920px]">
                 Run the office and the field from one connected system.
               </h2>
             </div>
@@ -194,23 +200,25 @@ export default function HvacLandingPage() {
 
             return (
               <AnimatedSection key={section.title}>
-                <article className="overflow-hidden rounded-[30px] border border-stroke-2 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8">
+                <article className="overflow-hidden rounded-[24px] border border-stroke-2 bg-white shadow-[0_18px_46px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8">
                   <div className={`grid items-center gap-0 lg:grid-cols-2 ${reverse ? 'lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1' : ''}`}>
                     <div className="p-6 md:p-8 lg:p-10">
-                      <span className="badge badge-yellow-v2">{section.eyebrow}</span>
+                      <span className="inline-flex rounded-full border border-[#d8ddc8] bg-[#f7f5de] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/72 dark:border-white/10 dark:bg-white/6 dark:text-white/72">
+                        {section.eyebrow}
+                      </span>
                       <h3 className="mt-5 max-w-[560px] text-heading-4 text-secondary dark:text-white">{section.title}</h3>
-                      <p className="mt-4 max-w-[560px] text-[16px] leading-8 text-secondary/74 dark:text-accent/70">{section.body}</p>
+                      <p className="mt-4 max-w-[560px] text-[16px] leading-8 text-secondary/72 dark:text-accent/70">{section.body}</p>
                       <div className="mt-6 grid gap-3 md:grid-cols-1">
                         {section.bullets.map((bullet) => (
-                          <div key={bullet} className="flex items-start gap-3 rounded-[18px] bg-[#f4f7fb] px-4 py-3 text-[15px] leading-7 text-secondary dark:bg-background-7 dark:text-white">
+                          <div key={bullet} className="flex items-start gap-3 rounded-[14px] border border-[#e6ebf3] bg-[#f7f9fc] px-4 py-3 text-[15px] leading-7 text-secondary dark:border-stroke-7 dark:bg-background-7 dark:text-white">
                             <span className="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-[#1f7ae0]" />
                             <span>{bullet}</span>
                           </div>
                         ))}
                       </div>
                     </div>
-                    <div className="bg-[#f4f7fb] p-5 dark:bg-background-7 md:p-7 lg:p-8">
-                      <div className="rounded-[24px] bg-white p-4 shadow-[0_22px_44px_rgba(15,23,42,0.08)] dark:bg-background-8">
+                    <div className="bg-[#f7f9fc] p-5 dark:bg-background-7 md:p-7 lg:p-8">
+                      <div className="rounded-[20px] bg-white p-4 shadow-[0_14px_34px_rgba(15,23,42,0.05)] dark:bg-background-8">
                         <Image src={section.image} alt={section.imageAlt} className="h-auto w-full rounded-[18px] object-contain" />
                       </div>
                     </div>
@@ -221,10 +229,12 @@ export default function HvacLandingPage() {
           })}
 
           <AnimatedSection>
-            <article className="overflow-hidden rounded-[32px] bg-secondary px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
+            <article className="overflow-hidden rounded-[28px] bg-secondary px-6 py-8 text-white shadow-[0_22px_58px_rgba(0,0,0,0.14)] md:px-8 md:py-10 lg:px-10">
               <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
                 <div className="space-y-5">
-                  <span className="badge badge-yellow-v2 !bg-[#d7efb2] !text-secondary">Service-team proof</span>
+                  <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/78">
+                    Service-team proof
+                  </span>
                   <blockquote className="max-w-[620px] text-[24px] font-semibold leading-[1.45] text-white md:text-[30px]">
                     “Dispatch, work orders, ETA updates, photos, and billing only help if the office and the field are working from the same job.”
                   </blockquote>
