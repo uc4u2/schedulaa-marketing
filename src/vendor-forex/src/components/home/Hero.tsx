@@ -32,7 +32,7 @@ const heroCopyEn: HeroCopy = {
 };
 
 const featureItemsEn: HeroFeatureItem[] = [
-  { id: 1, text: 'Website builder with custom domain support.' },
+  { id: 1, text: 'Connected HVAC workflow from request to payment.' },
   { id: 2, text: 'Online booking and staff scheduling in one place.' },
   { id: 3, text: 'Estimates, invoices, and payments without extra tools.' },
   { id: 4, text: 'Live staff shifts and availability for daily operations.' },

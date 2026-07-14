@@ -1,9 +1,9 @@
 'use client';
 
 import bookingImg from '@public/images/marketing/hero/module-3-booking.png';
+import hvacWorkflowImg from '@public/images/marketing/hvac-hero-one-safe.png';
 import schedulingImg from '@public/images/marketing/hero/module-2-schedule.png';
 import timeTrackingImg from '@public/images/marketing/hero/module-3-mobile.png';
-import websiteBuilderImg from '@public/images/marketing/showcase/website-builder.png';
 import reportsImg from '@public/images/marketing/hero/module-5-mobile.png';
 import stripeImg from '@public/images/marketing/showcase/stripe.png';
 import Image, { StaticImageData } from 'next/image';
@@ -21,10 +21,10 @@ type WorkflowNode = {
 const workflowNodesEn: WorkflowNode[] = [
   {
     id: 'website-builder',
-    label: 'Website Builder',
-    image: websiteBuilderImg,
-    alt: 'Website builder preview',
-    imageClassName: 'object-contain object-center scale-[1.04] p-2',
+    label: 'HVAC Workflow',
+    image: hvacWorkflowImg,
+    alt: 'Connected HVAC workflow from service request to payment',
+    imageClassName: 'object-contain object-center p-2 sm:p-3',
   },
   {
     id: 'scheduling',
