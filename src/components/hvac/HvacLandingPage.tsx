@@ -11,6 +11,7 @@ import hvacHeroImg from '@public/images/marketing/hvac-hero-2.png';
 import hvacContractorSmileImg from '@public/images/marketing/hvac-contractor-smile.png';
 import hvacOps4Img from '@public/images/marketing/hvac-ops-4.png';
 import hvac333Img from '@public/images/marketing/hvac-333.png';
+import hvac555Img from '@public/images/marketing/hvac-555.png';
 import hvacHeroOneImg from '@public/images/marketing/hvac-hero-one.png';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -43,7 +44,7 @@ export default function HvacLandingPage() {
         'Assignments by day and technician',
         'Photos, notes, and work-order status in one place',
       ],
-      image: serviceManagementImg,
+      image: hvac555Img,
       imageAlt: 'Schedulaa dispatch and work order management for HVAC jobs',
     },
     {
@@ -161,21 +162,21 @@ export default function HvacLandingPage() {
       <section className="pb-14 md:pb-18">
         <div className={pageShell}>
           <AnimatedSection>
-            <article className="mx-auto max-w-[1320px] rounded-[24px] border border-stroke-2 bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-8 lg:p-10">
-              <div className="grid items-center gap-8 lg:grid-cols-[0.42fr_0.58fr] lg:gap-12">
-                <div className="space-y-5">
+            <article className="mx-auto max-w-[1320px] rounded-[24px] border border-stroke-2 bg-white p-8 shadow-[0_18px_42px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-10 lg:p-12">
+              <div className="grid items-center gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:gap-14">
+                <div className="space-y-6 lg:pr-4">
                   <span className="inline-flex rounded-full border border-[#d8ddc8] bg-[#f7f5de] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/72 dark:border-white/10 dark:bg-white/6 dark:text-white/72">
                     {copy.journey.badge}
                   </span>
-                  <h2 className="max-w-[420px] text-heading-3 text-secondary dark:text-white">
+                  <h2 className="max-w-[460px] text-heading-3 text-secondary dark:text-white md:text-[52px] md:leading-[1.06]">
                     One connected HVAC workflow from service request to payment.
                   </h2>
-                  <p className="max-w-[460px] text-[16px] leading-8 text-secondary/70 dark:text-accent/70">
+                  <p className="max-w-[500px] text-[17px] leading-8 text-secondary/70 dark:text-accent/70">
                     The office, technician, customer, and payment flow stay tied to the same live job instead of getting rebuilt across separate tools.
                   </p>
                 </div>
-                <div className="rounded-[20px] border border-stroke-2 bg-[#f7f9fc] p-3 dark:border-stroke-7 dark:bg-background-7 md:p-4">
-                  <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[16px] object-cover" />
+                <div className="rounded-[20px] border border-stroke-2 bg-[#f7f9fc] p-4 dark:border-stroke-7 dark:bg-background-7 md:p-5">
+                  <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto min-h-[360px] w-full rounded-[16px] object-cover lg:min-h-[420px]" />
                 </div>
               </div>
             </article>
