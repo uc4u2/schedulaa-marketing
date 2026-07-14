@@ -12,7 +12,7 @@ import hvacContractorSmileImg from '@public/images/marketing/hvac-contractor-smi
 import hvacOps4Img from '@public/images/marketing/hvac-ops-4.png';
 import hvac333Img from '@public/images/marketing/hvac-333.png';
 import hvac555Img from '@public/images/marketing/hvac-555.png';
-import hvacHeroOneImg from '@public/images/marketing/hvac-hero-one.png';
+import hvacHeroOneImg from '@public/images/marketing/hvac-hero-one-safe.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -176,7 +176,7 @@ export default function HvacLandingPage() {
                   </p>
                 </div>
                 <div className="rounded-[20px] border border-stroke-2 bg-[#f7f9fc] p-4 dark:border-stroke-7 dark:bg-background-7 md:p-5">
-                  <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto min-h-[360px] w-full rounded-[16px] object-cover lg:min-h-[420px]" />
+                  <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[16px] object-contain" />
                 </div>
               </div>
             </article>
