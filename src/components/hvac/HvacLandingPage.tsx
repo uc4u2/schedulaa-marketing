@@ -112,6 +112,41 @@ export default function HvacLandingPage() {
         </div>
       </section>
 
+      <section className="pb-18 pt-14 md:pb-24 md:pt-18">
+        <div className={`${pageShell} space-y-6 md:space-y-8`}>
+          <AnimatedSection>
+            <article className="overflow-hidden rounded-[28px] bg-secondary px-6 py-8 text-white shadow-[0_22px_58px_rgba(0,0,0,0.14)] md:px-8 md:py-10 lg:px-10">
+              <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+                <div className="space-y-5">
+                  <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/78">
+                    Service-team proof
+                  </span>
+                  <blockquote className="max-w-[620px] text-[24px] font-semibold leading-[1.45] text-white md:text-[30px]">
+                    “Dispatch, work orders, ETA updates, photos, and billing only help if the office and the field are working from the same job.”
+                  </blockquote>
+                  <div className="text-[15px] leading-7 text-white/72">
+                    Schedulaa is strongest when the same customer request can move from estimate to dispatch to payment without the team rebuilding context in separate apps.
+                  </div>
+                </div>
+                <div className="rounded-[24px] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm">
+                  <div className="rounded-[20px] border border-white/10 bg-[#07101f] p-3">
+                    <Image src={hvacContractorSmileImg} alt="HVAC contractor standing in front of service van" className="h-auto w-full rounded-[14px] object-cover" />
+                  </div>
+                  <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                    <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[190px]">
+                      {copy.closing.primaryCta}
+                    </a>
+                    <Link href="/pricing" className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
+                      {copy.closing.secondaryCta}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </AnimatedSection>
+        </div>
+      </section>
+
       <section className="py-14 md:py-18">
         <div className={`${pageShell} space-y-8`}>
           <AnimatedSection>
@@ -153,31 +188,6 @@ export default function HvacLandingPage() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />
-              </div>
-            </article>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <section className="pb-14 md:pb-18">
-        <div className={pageShell}>
-          <AnimatedSection>
-            <article className="mx-auto max-w-[1320px] rounded-[24px] border border-stroke-2 bg-white p-8 shadow-[0_18px_42px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-10 lg:p-12">
-              <div className="grid items-center gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:gap-14">
-                <div className="space-y-6 lg:pr-4">
-                  <span className="inline-flex rounded-full border border-[#d8ddc8] bg-[#f7f5de] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/72 dark:border-white/10 dark:bg-white/6 dark:text-white/72">
-                    {copy.journey.badge}
-                  </span>
-                  <h2 className="max-w-[460px] text-heading-3 text-secondary dark:text-white md:text-[52px] md:leading-[1.06]">
-                    One connected HVAC workflow from service request to payment.
-                  </h2>
-                  <p className="max-w-[500px] text-[17px] leading-8 text-secondary/70 dark:text-accent/70">
-                    The office, technician, customer, and payment flow stay tied to the same live job instead of getting rebuilt across separate tools.
-                  </p>
-                </div>
-                <div className="rounded-[20px] border border-stroke-2 bg-[#f7f9fc] p-4 dark:border-stroke-7 dark:bg-background-7 md:p-5">
-                  <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[16px] object-contain" />
-                </div>
               </div>
             </article>
           </AnimatedSection>
@@ -233,33 +243,27 @@ export default function HvacLandingPage() {
               </AnimatedSection>
             );
           })}
+        </div>
+      </section>
 
+      <section className="pb-18 md:pb-24">
+        <div className={pageShell}>
           <AnimatedSection>
-            <article className="overflow-hidden rounded-[28px] bg-secondary px-6 py-8 text-white shadow-[0_22px_58px_rgba(0,0,0,0.14)] md:px-8 md:py-10 lg:px-10">
-              <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-                <div className="space-y-5">
-                  <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/78">
-                    Service-team proof
+            <article className="mx-auto max-w-[1320px] rounded-[24px] border border-stroke-2 bg-white p-8 shadow-[0_18px_42px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-10 lg:p-12">
+              <div className="grid items-center gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:gap-14">
+                <div className="space-y-6 lg:pr-4">
+                  <span className="inline-flex rounded-full border border-[#d8ddc8] bg-[#f7f5de] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/72 dark:border-white/10 dark:bg-white/6 dark:text-white/72">
+                    {copy.journey.badge}
                   </span>
-                  <blockquote className="max-w-[620px] text-[24px] font-semibold leading-[1.45] text-white md:text-[30px]">
-                    “Dispatch, work orders, ETA updates, photos, and billing only help if the office and the field are working from the same job.”
-                  </blockquote>
-                  <div className="text-[15px] leading-7 text-white/72">
-                    Schedulaa is strongest when the same customer request can move from estimate to dispatch to payment without the team rebuilding context in separate apps.
-                  </div>
+                  <h2 className="max-w-[460px] text-heading-3 text-secondary dark:text-white md:text-[52px] md:leading-[1.06]">
+                    One connected HVAC workflow from service request to payment.
+                  </h2>
+                  <p className="max-w-[500px] text-[17px] leading-8 text-secondary/70 dark:text-accent/70">
+                    The office, technician, customer, and payment flow stay tied to the same live job instead of getting rebuilt across separate tools.
+                  </p>
                 </div>
-                <div className="rounded-[24px] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm">
-                  <div className="rounded-[20px] border border-white/10 bg-[#07101f] p-3">
-                    <Image src={hvacContractorSmileImg} alt="HVAC contractor standing in front of service van" className="h-auto w-full rounded-[14px] object-cover" />
-                  </div>
-                  <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                    <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[190px]">
-                      {copy.closing.primaryCta}
-                    </a>
-                    <Link href="/pricing" className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
-                      {copy.closing.secondaryCta}
-                    </Link>
-                  </div>
+                <div className="rounded-[20px] border border-stroke-2 bg-[#f7f9fc] p-4 dark:border-stroke-7 dark:bg-background-7 md:p-5">
+                  <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[16px] object-contain" />
                 </div>
               </div>
             </article>
