@@ -25,7 +25,6 @@ const HVAC_YOUTUBE_EMBED =
   process.env.NEXT_PUBLIC_DEMO_YOUTUBE_EMBED ||
   'https://www.youtube.com/embed/y7kygIhnZm8';
 
-const journeyTags = ['Office', 'Estimate', 'Dispatch', 'Client ETA', 'Field', 'Payment'];
 const pageShell = 'mx-auto w-full max-w-[1640px] px-5 md:px-7 xl:px-10';
 
 export default function HvacLandingPage() {
@@ -157,48 +156,21 @@ export default function HvacLandingPage() {
 
       <section className="pb-14 md:pb-18">
         <div className={pageShell}>
-          <div className="grid grid-cols-12 items-start gap-y-12 lg:gap-x-10">
-            <AnimatedSection className="col-span-12 lg:col-span-5">
-              <div className="space-y-4 text-center lg:sticky lg:top-28 lg:px-4 lg:text-left">
-                <div className="rounded-[28px] bg-[#203544] p-5 text-white shadow-[0_24px_64px_rgba(15,23,42,0.14)] md:p-6">
-                  <div className="space-y-4">
-                    <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/82">
-                      {copy.journey.badge}
-                    </span>
-                    <p className="max-w-[320px] text-[17px] leading-8 text-white/84">
-                      One connected HVAC workflow from service request to payment.
-                    </p>
-                  </div>
-                  <div className="mt-5 rounded-[22px] border border-white/10 bg-white/[0.06] p-3">
-                    <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[16px] object-cover" />
-                  </div>
+          <AnimatedSection>
+            <article className="overflow-hidden rounded-[32px] bg-[#203544] p-6 text-white shadow-[0_24px_64px_rgba(15,23,42,0.14)] md:p-8">
+              <div className="mx-auto max-w-[1180px] space-y-5">
+                <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/82">
+                  {copy.journey.badge}
+                </span>
+                <p className="max-w-[520px] text-[18px] leading-8 text-white/84">
+                  One connected HVAC workflow from service request to payment.
+                </p>
+                <div className="rounded-[24px] border border-white/10 bg-white/[0.06] p-3 md:p-4">
+                  <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[18px] object-cover" />
                 </div>
               </div>
-            </AnimatedSection>
-            <div className="relative col-span-12 grid gap-4 lg:col-span-7">
-              <div className="pointer-events-none absolute left-5 top-10 hidden h-[calc(100%-5rem)] w-px bg-gradient-to-b from-[#bed8ff] via-[#d9e8ff] to-transparent lg:block" />
-              {copy.journey.steps.map((step, index) => (
-                <AnimatedSection key={step.title}>
-                  <article className="relative rounded-[24px] border border-stroke-2 bg-gradient-to-br from-[#f8fbff] via-white to-[#eef5ff] p-5 shadow-[0_20px_52px_rgba(30,64,175,0.1)] dark:border-stroke-7 dark:from-background-8 dark:via-background-8 dark:to-background-7 lg:ml-4">
-                    <div className="flex items-start gap-4">
-                      <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e7f1ff] text-sm font-semibold text-[#1f4ea3] ring-8 ring-white dark:bg-white/[0.08] dark:text-white dark:ring-background-8">
-                        {index + 1}
-                      </div>
-                      <div className="min-w-0">
-                        <div className="mb-2 flex flex-wrap items-center gap-2">
-                          <span className="rounded-full bg-[#dcebff] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#1f4ea3] dark:bg-white/[0.08] dark:text-accent">
-                            {journeyTags[index] || 'Workflow'}
-                          </span>
-                        </div>
-                        <h3 className="text-heading-6 text-secondary dark:text-white">{step.title}</h3>
-                        <p className="mt-2 text-[15px] leading-7 text-secondary/72 dark:text-accent/70">{step.body}</p>
-                      </div>
-                    </div>
-                  </article>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
+            </article>
+          </AnimatedSection>
         </div>
       </section>
 
