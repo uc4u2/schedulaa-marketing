@@ -135,11 +135,12 @@ export default function BusinessFinanceInvoicesPage() {
 
   const heroStats =
     locale === 'en'
-      ? ['Estimate to invoice', 'Payment links + manual payments', 'Repeat billing without rebuild']
-      : ['Estimate to invoice', 'Payment links + manual payments', 'Repeat billing without rebuild'];
+      ? ['Estimate to invoice', 'Repeat billing', 'Month-end review']
+      : ['Estimate to invoice', 'Repeat billing', 'Month-end review'];
   const painPoints = locale === 'en' ? copy.pain.points.slice(0, 3) : copy.pain.points;
-  const workflowSteps = locale === 'en' ? copy.workflow.steps.slice(0, 5) : copy.workflow.steps;
-  const featureItems = locale === 'en' ? copy.features.items.slice(0, 6) : copy.features.items;
+  const workflowSteps = locale === 'en' ? copy.workflow.steps.slice(0, 4) : copy.workflow.steps;
+  const featureItems = locale === 'en' ? copy.features.items.slice(0, 4) : copy.features.items;
+  const faqItems = locale === 'en' ? copy.faq.items.slice(0, 4) : copy.faq.items;
   const heroTitle =
     locale === 'en' ? 'Run estimates, invoices, and payment links from one finance workflow.' : copy.hero.title;
   const heroSubtitle =
@@ -218,7 +219,7 @@ export default function BusinessFinanceInvoicesPage() {
                 <div className="space-y-5">
                   <SurfaceLabel tone="white">{copy.workflow.badge}</SurfaceLabel>
                   <h2 className="max-w-[620px] text-heading-3 text-white">{copy.workflow.title}</h2>
-                  <p className="max-w-[620px] text-[15px] leading-7 text-white/72">{copy.workflow.intro}</p>
+                <p className="max-w-[520px] text-[15px] leading-7 text-white/72">{copy.workflow.intro}</p>
                   <div className="grid gap-3 sm:grid-cols-2">
                     {workflowSteps.map((step, index) => (
                       <div key={step} className="rounded-[18px] border border-white/10 bg-white/[0.05] px-4 py-3 text-[14px] text-white/76">
@@ -273,10 +274,10 @@ export default function BusinessFinanceInvoicesPage() {
         <div className="main-container">
           <div className="grid gap-8 lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
             <AnimatedSection>
-              <div className="sticky top-28 space-y-5">
+              <div className="sticky top-28 space-y-4">
                 <SurfaceLabel tone="amber">{copy.features.badge}</SurfaceLabel>
                 <h2 className="text-heading-3 text-secondary dark:text-white">{copy.features.title}</h2>
-                <p className="text-[15px] leading-8 text-secondary/72 dark:text-accent/70">{copy.features.intro}</p>
+                <p className="max-w-[280px] text-[15px] leading-7 text-secondary/72 dark:text-accent/70">{copy.features.intro}</p>
               </div>
             </AnimatedSection>
 
@@ -299,33 +300,16 @@ export default function BusinessFinanceInvoicesPage() {
       </section>
 
       <section className="py-16 md:py-20">
-        <div className="main-container">
-          <AnimatedSection>
-            <div className="grid gap-6 rounded-[34px] border border-[#dbe5f4] bg-[linear-gradient(135deg,#ffffff_0%,#f7fbff_44%,#eef7ff_100%)] p-7 shadow-[0_26px_68px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-9 lg:grid-cols-[0.98fr_0.9fr] lg:items-center">
-              <div className="space-y-5">
-                <SurfaceLabel>{copy.manualPayments.badge}</SurfaceLabel>
-                <h2 className="max-w-[760px] text-heading-3 text-secondary dark:text-white">{copy.manualPayments.title}</h2>
-                <p className="max-w-[760px] text-[16px] leading-8 text-secondary/72 dark:text-accent/70">{copy.manualPayments.body}</p>
-              </div>
-              <div className="rounded-[24px] border border-[#1f7ae0]/12 bg-white/88 p-6 shadow-[0_18px_44px_rgba(15,23,42,0.06)] dark:border-white/10 dark:bg-white/[0.04]">
-                <p className="text-[15px] leading-8 text-secondary/76 dark:text-accent/72">{copy.manualPayments.note}</p>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-20">
         <div className="main-container space-y-8">
           <AnimatedSection>
-            <div className="space-y-4 text-center">
+            <div className="space-y-3 text-center">
               <SurfaceLabel tone="amber">{copy.audience.badge}</SurfaceLabel>
               <h2 className="mx-auto max-w-[760px] text-heading-3 text-secondary dark:text-white">{copy.audience.title}</h2>
-              <p className="mx-auto max-w-[840px] text-[15px] leading-8 text-secondary/74 dark:text-accent/70">{copy.audience.intro}</p>
+              <p className="mx-auto max-w-[620px] text-[15px] leading-7 text-secondary/74 dark:text-accent/70">{copy.audience.intro}</p>
             </div>
           </AnimatedSection>
           <div className="mx-auto grid max-w-[1120px] auto-rows-fr gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {copy.audience.items.map((item, index) => (
+            {copy.audience.items.slice(0, 3).map((item, index) => (
               <AnimatedSection key={item.title}>
                 <SectionCard
                   overline={copy.labels.audienceCard}
@@ -342,19 +326,19 @@ export default function BusinessFinanceInvoicesPage() {
       <section className="pb-[120px] pt-[24px]">
         <div className="main-container flex flex-col gap-10">
           <AnimatedSection>
-            <div className="space-y-4 rounded-[30px] border border-white/8 bg-[linear-gradient(135deg,#11151f_0%,#171d2d_56%,#1b2a20_100%)] p-8 shadow-[0_28px_70px_rgba(5,8,14,0.30)] md:p-10">
+            <div className="space-y-3 rounded-[30px] border border-white/8 bg-[linear-gradient(135deg,#11151f_0%,#171d2d_56%,#1b2a20_100%)] p-8 shadow-[0_28px_70px_rgba(5,8,14,0.30)] md:p-10">
               <SurfaceLabel tone="white">{copy.faq.badge}</SurfaceLabel>
               <h2 className="max-w-[980px] text-[38px] font-medium leading-[1.06] text-white md:text-[54px]">
                 {copy.faq.title}
               </h2>
-              <p className="max-w-[840px] text-[15px] leading-8 text-white/68">{copy.faq.intro}</p>
+              <p className="max-w-[640px] text-[15px] leading-7 text-white/68">{copy.faq.intro}</p>
             </div>
           </AnimatedSection>
 
           <div className="grid auto-rows-fr gap-4 md:grid-cols-2">
-            {copy.faq.items.map((item, index) => (
+            {faqItems.map((item, index) => (
               <AnimatedSection key={item.question}>
-                <div className={isLastOdd(index, copy.faq.items) ? 'md:col-span-2' : ''}>
+                <div className={isLastOdd(index, faqItems) ? 'md:col-span-2' : ''}>
                   <FaqCard question={item.question} answer={item.answer} />
                 </div>
               </AnimatedSection>
@@ -366,7 +350,7 @@ export default function BusinessFinanceInvoicesPage() {
               <div className="space-y-5 text-center">
                 <SurfaceLabel tone="amber">{copy.cta.badge}</SurfaceLabel>
                 <h2 className="mx-auto max-w-[760px] text-heading-3 text-secondary dark:text-white">{copy.cta.title}</h2>
-                <p className="mx-auto max-w-[760px] text-[15px] leading-8 text-secondary/74 dark:text-accent/70">{copy.cta.body}</p>
+                <p className="mx-auto max-w-[620px] text-[15px] leading-7 text-secondary/74 dark:text-accent/70">{copy.cta.body}</p>
                 <div className="flex flex-wrap justify-center gap-3 pt-1">
                   <Link href={buildAppUrl('/register', { returnTo })} className="btn btn-primary btn-md min-w-[170px]">
                     {copy.cta.primaryCta}

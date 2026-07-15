@@ -112,7 +112,7 @@ const en: BusinessFinanceInvoicesCopy = {
     badge: 'Quote-to-invoice workflow',
     title: 'Move from estimate to paid invoice without breaking context',
     intro:
-      'The workflow is designed for service businesses that need approvals, invoices, payment links, offline payments, and month-end visibility in one operational path.',
+      'Keep approval, invoicing, collections, and review on one operating path.',
     steps: [
       'Quote request',
       'Estimate',
@@ -127,7 +127,7 @@ const en: BusinessFinanceInvoicesCopy = {
     badge: 'What the page covers',
     title: 'Billing tools tied to the real job',
     intro:
-      'Quoting, invoicing, payment tracking, and repeat billing stay on one finance record.',
+      'Quoting, invoicing, and billing follow-through stay on one record.',
     items: [
       {
         title: 'Estimate builder',
@@ -183,7 +183,7 @@ const en: BusinessFinanceInvoicesCopy = {
     badge: 'Who this is for',
     title: 'Built for service teams billing real work',
     intro:
-      'Best for teams that need faster quoting, cleaner repeat billing, and simpler payment follow-up.',
+      'Best for teams that need faster quoting and cleaner billing follow-through.',
     items: [
       {
         title: 'Home and field services',
@@ -207,7 +207,7 @@ const en: BusinessFinanceInvoicesCopy = {
     badge: 'Invoice FAQ',
     title: 'Common questions about invoice workflow',
     intro:
-      'Short answers for service teams evaluating estimate, invoice, and payment-link workflows.',
+      'Short answers for service teams evaluating estimate and invoice workflow.',
     items: [
       {
         question: 'Can I create estimates before invoices?',
@@ -245,7 +245,7 @@ const en: BusinessFinanceInvoicesCopy = {
     badge: 'Ready to clean up billing?',
     title: 'Turn estimates into paid invoices without the weekly admin mess.',
     body:
-      'Use one workflow for estimates, invoices, payment links, manual payments, and repeat billing.',
+      'Use one workflow for estimates, invoices, collections, and repeat billing.',
     primaryCta: 'Start free',
     secondaryCta: 'See Business Finance',
   },
