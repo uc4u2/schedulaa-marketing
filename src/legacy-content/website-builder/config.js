@@ -130,18 +130,18 @@ export const websiteBuilderPage = {
     },
   },
   hero: {
-    badge: 'Website Builder for Service Businesses',
-    title: 'Website Builder for Service Businesses - Free Hosting Included',
+    badge: 'Website builder',
+    title: 'Launch branded service pages, booking, and payments from one builder.',
     subtitle:
-      'Build a responsive website with booking, Stripe payments, and analytics in one platform. Every account includes a free website at www.schedulaa.com/your-company-slug (even before you subscribe).',
+      'Build the public site, booking flow, and payment-ready pages without stitching together separate tools.',
     primaryCta: { label: 'Start your free website', href: '/register' },
-    secondaryCta: { label: 'Explore booking', href: '/booking' },
+    secondaryCta: { label: 'See booking flow', href: '/booking' },
   },
   videoSection: {
-    overline: 'Website walkthrough',
-    title: 'See how your website can turn visitors into bookings, quotes, and contacts',
+    overline: 'Quick walkthrough',
+    title: 'See the website-builder workflow in one short video.',
     description:
-      'Watch how Schedulaa helps service businesses launch a professional website with booking, contact forms, quote requests, payments, and mobile-friendly pages.',
+      'Watch how branded pages, booking, quote capture, and payments come together without a long feature tour.',
     youtubeEmbed: 'https://www.youtube.com/embed/tP5s1niy59o',
   },
   sections: [

@@ -4,10 +4,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import StaggerGrid from '@/components/shared/motion/StaggerGrid';
-import ProductTutorialPanel from '@/components/tutorials/ProductTutorialPanel';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import type { TutorialModule } from '@/data/tutorials/tutorialCatalog';
+import Image from 'next/image';
+import websiteBuilderImg from '@public/images/marketing/website-builder-editor.png';
 
 type BuilderPage = {
   hero: {
@@ -60,7 +61,6 @@ const mapHref = (href: string, locale: ReturnType<typeof detectLocaleFromPath>) 
 
 export default function WebsiteBuilderAiApplicationLayout({
   page,
-  tutorialModule,
 }: {
   page: BuilderPage;
   tutorialModule?: TutorialModule | null;
@@ -70,56 +70,73 @@ export default function WebsiteBuilderAiApplicationLayout({
 
   return (
     <main className="bg-background-3 dark:bg-background-7">
-      <section className="pt-[100px] pb-[100px] md:pt-[160px]">
+      <section className="overflow-hidden bg-[#07101f] pb-16 pt-[116px] text-white md:pb-22 md:pt-[144px]">
         <div className="main-container space-y-[70px]">
           <AnimatedSection>
-            <div className="space-y-3 text-center">
-              <span className="badge badge-green">{page.hero.badge}</span>
-              <h2 className="mx-auto max-w-[960px]">{page.hero.title}</h2>
-              <p className="mx-auto max-w-[820px]">{page.hero.subtitle}</p>
+            <div className="relative grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
+              <div className="pointer-events-none absolute left-[8%] top-10 h-[320px] w-[320px] rounded-full bg-[#1f7ae0]/20 blur-[120px]" />
+              <div className="pointer-events-none absolute right-[4%] top-1/3 h-[380px] w-[380px] rounded-full bg-[#7fe36c]/10 blur-[140px]" />
+              <div className="relative space-y-7">
+                <span className="inline-flex rounded-full border border-white/12 bg-white/6 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/74">
+                  {page.hero.badge}
+                </span>
+                <div className="space-y-5">
+                  <h1 className="max-w-[760px] text-heading-2 text-white md:text-[60px] md:leading-[1.02]">
+                    {page.hero.title}
+                  </h1>
+                  <p className="max-w-[700px] text-[17px] leading-8 text-white/68">{page.hero.subtitle}</p>
+                </div>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <a href={mapHref(page.hero.primaryCta.href, locale)} className="btn btn-secondary-v2 btn-md min-w-[190px]">
+                    {page.hero.primaryCta.label}
+                  </a>
+                  <Link href={mapHref(page.hero.secondaryCta.href, locale)} className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
+                    {page.hero.secondaryCta.label}
+                  </Link>
+                </div>
+              </div>
+              <article className="relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.04] p-3 shadow-[0_24px_52px_rgba(0,0,0,0.18)] backdrop-blur-md">
+                <div className="rounded-[20px] border border-white/8 bg-[#091120] p-3">
+                  <Image
+                    src={websiteBuilderImg}
+                    alt="Schedulaa website builder editor with branded pages and booking blocks"
+                    className="h-auto w-full rounded-[18px] object-contain"
+                    priority
+                  />
+                </div>
+              </article>
             </div>
           </AnimatedSection>
 
-          <AnimatedSection>
-            <div className="flex flex-wrap justify-center gap-3">
-              <a href={mapHref(page.hero.primaryCta.href, locale)} className="btn btn-primary btn-md hover:btn-secondary dark:hover:btn-accent">
-                {page.hero.primaryCta.label}
-              </a>
-              <Link href={mapHref(page.hero.secondaryCta.href, locale)} className="btn btn-white btn-md hover:btn-secondary dark:btn-transparent dark:hover:btn-accent">
-                {page.hero.secondaryCta.label}
-              </Link>
-            </div>
-          </AnimatedSection>
-
-          {page.videoSection && !tutorialModule ? (
+          {page.videoSection ? (
             <AnimatedSection>
-              <article className="mx-auto max-w-[1040px] rounded-[28px] border border-stroke-2 bg-white p-5 shadow-1 dark:border-stroke-7 dark:bg-background-8 md:p-7">
-                <div className="space-y-3">
-                  {page.videoSection.overline ? <span className="badge badge-cyan-v2">{page.videoSection.overline}</span> : null}
+              <article className="mx-auto max-w-[1180px] overflow-hidden rounded-[32px] bg-[#213748] px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
+                <div className="space-y-7">
                   <div className="space-y-3 text-center">
-                    <h3 className="mx-auto max-w-[760px]">{page.videoSection.title}</h3>
-                    {page.videoSection.description ? <p className="mx-auto max-w-[760px]">{page.videoSection.description}</p> : null}
+                    {page.videoSection.overline ? (
+                      <span className="inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/72">
+                        {page.videoSection.overline}
+                      </span>
+                    ) : null}
+                    <h2 className="mx-auto max-w-[760px] text-heading-3 text-white">{page.videoSection.title}</h2>
+                    {page.videoSection.description ? (
+                      <p className="mx-auto max-w-[620px] text-[15px] leading-7 text-white/72">{page.videoSection.description}</p>
+                    ) : null}
                   </div>
-                  <div className="relative w-full overflow-hidden rounded-2xl border border-stroke-2 pb-[56.25%] dark:border-stroke-7">
-                    <iframe
-                      className="absolute top-0 left-0 h-full w-full"
-                      src={page.videoSection.youtubeEmbed || WEBSITE_BUILDER_YOUTUBE_EMBED}
-                      title={page.videoSection.title}
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
+                  <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] p-4 backdrop-blur-sm md:p-5">
+                    <div className="relative overflow-hidden rounded-[22px] border border-[#10284d] bg-[#071224] pb-[56.25%] shadow-[0_18px_50px_rgba(0,0,0,0.24)]">
+                      <iframe
+                        className="absolute top-0 left-0 h-full w-full"
+                        src={page.videoSection.youtubeEmbed || WEBSITE_BUILDER_YOUTUBE_EMBED}
+                        title={page.videoSection.title}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                    </div>
                   </div>
                 </div>
               </article>
-            </AnimatedSection>
-          ) : null}
-
-          {tutorialModule ? (
-            <AnimatedSection>
-              <div className="mx-auto max-w-[1040px]">
-                <ProductTutorialPanel module={tutorialModule} locale={locale} />
-              </div>
             </AnimatedSection>
           ) : null}
 
