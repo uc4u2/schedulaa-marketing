@@ -1,11 +1,11 @@
 'use client';
 
 import bookingImg from '@public/images/marketing/hero/module-3-booking.png';
+import hvacInvoiceImg from '@public/images/marketing/hvac-hero-2.png';
 import hvacWorkflowImg from '@public/images/marketing/hvac-hero-one-safe.png';
 import schedulingImg from '@public/images/marketing/hero/module-2-schedule.png';
 import timeTrackingImg from '@public/images/marketing/hero/module-3-mobile.png';
 import reportsImg from '@public/images/marketing/hero/module-5-mobile.png';
-import stripeImg from '@public/images/marketing/showcase/stripe.png';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import { AppLocale } from '@/utils/locale';
@@ -43,9 +43,9 @@ const workflowNodesEn: WorkflowNode[] = [
   {
     id: 'invoices',
     label: 'Invoices',
-    image: stripeImg,
+    image: hvacInvoiceImg,
     alt: 'Invoice and payments preview',
-    imageClassName: 'object-contain object-center scale-[1.08] p-2',
+    imageClassName: 'object-contain object-center p-2 sm:p-3',
   },
   {
     id: 'availability',
