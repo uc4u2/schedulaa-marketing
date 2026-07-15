@@ -1,5 +1,5 @@
 import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
-import ProductTutorialPanel from '@/components/tutorials/ProductTutorialPanel';
+import CenteredTutorialVideoSection from '@/components/tutorials/CenteredTutorialVideoSection';
 import { getTutorialModule } from '@/data/tutorials/tutorialCatalog';
 import { getBatch2Source } from '@/legacy-content/batch2/getBatch2Source';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -50,7 +50,11 @@ export default async function WorkforcePage() {
           {tutorialModule ? (
             <section className="pb-16 md:pb-20">
               <div className="main-container">
-                <ProductTutorialPanel module={tutorialModule} locale={locale} />
+                <CenteredTutorialVideoSection
+                  module={tutorialModule}
+                  titleOverride="See the workforce workflow in one short video."
+                  descriptionOverride="Watch how staffing coverage, shift planning, and exception review stay connected without reading a long feature list."
+                />
               </div>
             </section>
           ) : null}

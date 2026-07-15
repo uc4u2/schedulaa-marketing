@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
-import ProductTutorialPanel from '@/components/tutorials/ProductTutorialPanel';
+import CenteredTutorialVideoSection from '@/components/tutorials/CenteredTutorialVideoSection';
 import { getTutorialModule } from '@/data/tutorials/tutorialCatalog';
 import { getPayrollSource } from '@/legacy-content/payroll/getPayrollSource';
 import { getServerLocale } from '@/utils/serverLocale';
@@ -41,7 +41,11 @@ export default async function PayrollPage() {
         tutorialModule ? (
           <section className="pb-16 md:pb-20">
             <div className="main-container">
-              <ProductTutorialPanel module={tutorialModule} locale={locale} />
+              <CenteredTutorialVideoSection
+                module={tutorialModule}
+                titleOverride="See the payroll workflow in one short video."
+                descriptionOverride="Watch how approved time, payroll preview, payslips, and handoff-ready records stay connected without reading a long feature list."
+              />
             </div>
           </section>
         ) : null
