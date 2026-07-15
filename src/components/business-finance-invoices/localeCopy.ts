@@ -97,13 +97,13 @@ const en: BusinessFinanceInvoicesCopy = {
   },
   pain: {
     badge: 'The billing mess',
-    title: 'Too many service businesses still bill from text messages, memory, and copied PDFs',
+    title: 'Billing still breaks when the job and the invoice live in separate places.',
     intro:
-      'Schedulaa is built for teams that need a clean quote-to-invoice flow without rebuilding the same billing record every week.',
+      'Schedulaa keeps quoting, payment status, and recorded collections on one billing path.',
     points: [
-      'Prices get sent by text, WhatsApp, DM, or email, then someone recreates them later in an invoice.',
-      'Payment status lives in too many places, so managers do not know what is paid, pending, or disputed.',
-      'Cash, cheque, e-transfer, and external card terminal payments get accepted in real life, but never stay connected to the invoice record.',
+      'Quoted prices get recreated later in the invoice.',
+      'Managers lose track of what is paid, pending, or disputed.',
+      'Offline payments happen, but the invoice record falls behind.',
       'Repeat clients force teams to retype billing contacts, addresses, and job details again and again.',
       'Month-end review turns into a cleanup project because estimates, invoices, and payments are scattered.',
     ],
@@ -125,33 +125,33 @@ const en: BusinessFinanceInvoicesCopy = {
   },
   features: {
     badge: 'What the page covers',
-    title: 'Billing tools built for real service workflows',
+    title: 'Billing tools tied to the real job',
     intro:
-      'This page reflects the Business Finance billing workflow already available inside Schedulaa for estimates, invoices, payment tracking, and repeat billing operations.',
+      'Quoting, invoicing, payment tracking, and repeat billing stay on one finance record.',
     items: [
       {
         title: 'Estimate builder',
-        body: 'Create client-ready estimates before any invoice exists, then revise or resend them when scope changes.',
+        body: 'Create, revise, and resend client-ready estimates.',
       },
       {
         title: 'Convert estimate to invoice',
-        body: 'Turn approved work into an invoice without copying line items into a second document.',
+        body: 'Turn approved work into an invoice without copying it twice.',
       },
       {
         title: 'Professional invoice detail',
-        body: 'Keep invoice number, issue date, due date, notes, terms, tax totals, and line items in one structured record.',
+        body: 'Keep invoice totals, terms, notes, and tax in one record.',
       },
       {
         title: 'Payment instructions',
-        body: 'Add billing notes and payment instructions so the invoice explains how the client should pay.',
+        body: 'Add simple billing notes and payment instructions.',
       },
       {
         title: 'Hosted payment links',
-        body: 'Send invoice payment links when you want clients to pay online while keeping invoice status tied to that payment flow.',
+        body: 'Send online payment links with status tied to the invoice.',
       },
       {
         title: 'Offline payment recording',
-        body: 'Record cash, e-transfer, cheque, bank transfer, or external terminal payments without pretending every payment must happen inside the app.',
+        body: 'Record cash, e-transfer, cheque, bank transfer, or terminal payments.',
       },
       {
         title: 'Refund tracking',
@@ -175,69 +175,69 @@ const en: BusinessFinanceInvoicesCopy = {
     badge: 'Manual payments still belong in the record',
     title: 'Card payments are optional. Billing organization is not.',
     body:
-      'Schedulaa supports payment links when you want online collection, but it also respects how service businesses actually get paid in the field and at the counter.',
+      'Use payment links when needed, and still record how customers actually pay in the field or at the counter.',
     note:
-      'Businesses can still accept cash, cheque, e-transfer, bank transfer, or external card terminal payments and record them manually in Schedulaa.',
+      'Cash, cheque, e-transfer, bank transfer, and external terminal payments can still be recorded in Schedulaa.',
   },
   audience: {
     badge: 'Who this is for',
-    title: 'Made for service businesses that bill real work, not just generic line items',
+    title: 'Built for service teams billing real work',
     intro:
-      'The invoice and estimate workflow fits teams that need fast quoting, repeat billing, payment follow-up, and cleaner month-end handoffs.',
+      'Best for teams that need faster quoting, cleaner repeat billing, and simpler payment follow-up.',
     items: [
       {
         title: 'Home and field services',
-        body: 'Cleaning companies, repair services, installers, and mobile teams that quote custom jobs and need repeat billing.',
+        body: 'Cleaning, repair, installation, and mobile teams quoting custom jobs.',
       },
       {
         title: 'Beauty and appointment-led teams',
-        body: 'Studios, salons, mobile beauty teams, and wellness operators that need estimates, invoices, and payment instructions for custom work.',
+        body: 'Studios, salons, and wellness teams billing custom or approved work.',
       },
       {
         title: 'Contractors and local operators',
-        body: 'Contractors and local service providers that send proposals, invoice approved work, and collect payment across multiple methods.',
+        body: 'Contractors sending proposals, invoices, and collecting mixed payment types.',
       },
       {
         title: 'Small agencies and recurring service firms',
-        body: 'Creative agencies, local agencies, and recurring service businesses that reuse client billing details and issue repeat invoices often.',
+        body: 'Teams reusing client billing details and issuing repeat invoices often.',
       },
     ],
   },
   faq: {
     badge: 'Invoice FAQ',
-    title: 'Common questions about estimates, invoices, and payment links',
+    title: 'Common questions about invoice workflow',
     intro:
-      'These answers are written for service businesses that need a cleaner quote-to-invoice workflow without moving into accounting-heavy software too early.',
+      'Short answers for service teams evaluating estimate, invoice, and payment-link workflows.',
     items: [
       {
         question: 'Can I create estimates before invoices?',
         answer:
-          'Yes. Schedulaa supports estimates first, then invoices later. That lets you quote the work, wait for approval, and only create the invoice when the job is ready to bill.',
+          'Yes. Start with an estimate, wait for approval, then invoice when the job is ready.',
       },
       {
         question: 'Can I send a payment link with an invoice?',
         answer:
-          'Yes. You can attach hosted payment links to invoices so clients can pay online while keeping the payment state visible on the invoice record.',
+          'Yes. Payment links can be attached while keeping status visible on the invoice.',
       },
       {
         question: 'Can I record cash or e-transfer payments?',
         answer:
-          'Yes. Schedulaa is not limited to online card collection. You can record cash, cheque, e-transfer, bank transfer, and external terminal payments manually.',
+          'Yes. Cash, cheque, e-transfer, bank transfer, and terminal payments can be recorded manually.',
       },
       {
         question: 'Can I reuse client billing information?',
         answer:
-          'Yes. Existing client and billing details can be reused so repeat invoices start faster and stay more consistent.',
+          'Yes. Existing client and billing details can be reused for repeat invoices.',
       },
       {
         question: 'Can I create repeat invoices?',
         answer:
-          'Yes. You can create similar invoices from existing records so repeat service work does not require rebuilding the same billing structure from scratch.',
+          'Yes. Similar invoices can be created from existing records.',
       },
       {
         question: 'Does Schedulaa calculate tax on invoices?',
         answer:
-          'Schedulaa supports tax-aware invoice totals so service businesses can keep billing and reporting more organized. Final tax setup should still follow your accounting guidance.',
+          'Schedulaa supports tax-aware totals. Final tax setup should still follow your accounting guidance.',
       },
     ],
   },
@@ -245,7 +245,7 @@ const en: BusinessFinanceInvoicesCopy = {
     badge: 'Ready to clean up billing?',
     title: 'Turn estimates into paid invoices without the weekly admin mess.',
     body:
-      'Use one workflow for estimates, invoices, payment links, manual payments, and repeat billing instead of rebuilding the same client billing trail every week.',
+      'Use one workflow for estimates, invoices, payment links, manual payments, and repeat billing.',
     primaryCta: 'Start free',
     secondaryCta: 'See Business Finance',
   },
