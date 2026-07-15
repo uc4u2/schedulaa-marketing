@@ -4,9 +4,12 @@ import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import { getBusinessFinanceInvoicesCopy } from '@/components/business-finance-invoices/localeCopy';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
+import invoiceDetailImg from '@public/images/marketing/booking-checkout-invoice-detail.png';
+import paymentCollectionImg from '@public/images/marketing/showcase/payment-collection.png';
 import Link from 'next/link';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const SITE_URL = 'https://www.schedulaa.com';
 
@@ -130,11 +133,19 @@ export default function BusinessFinanceInvoicesPage() {
     featureList: copy.features.items.map((item) => item.title),
   };
 
-  const heroStats = [
-    'Estimate-first billing flow',
-    'Hosted and manual payments',
-    'Repeat invoice reuse',
-  ];
+  const heroStats =
+    locale === 'en'
+      ? ['Estimate to invoice', 'Payment links + manual payments', 'Repeat billing without rebuild']
+      : ['Estimate to invoice', 'Payment links + manual payments', 'Repeat billing without rebuild'];
+  const painPoints = locale === 'en' ? copy.pain.points.slice(0, 3) : copy.pain.points;
+  const workflowSteps = locale === 'en' ? copy.workflow.steps.slice(0, 5) : copy.workflow.steps;
+  const featureItems = locale === 'en' ? copy.features.items.slice(0, 6) : copy.features.items;
+  const heroTitle =
+    locale === 'en' ? 'Run estimates, invoices, and payment links from one finance workflow.' : copy.hero.title;
+  const heroSubtitle =
+    locale === 'en'
+      ? 'Move from approval to invoice, payment collection, and month-end review without rebuilding the same client record in separate tools.'
+      : copy.hero.subtitle;
 
   return (
     <main className="overflow-hidden bg-[linear-gradient(180deg,#f6f8fc_0%,#edf3fb_36%,#f9fbff_100%)] dark:bg-background-7">
@@ -154,14 +165,22 @@ export default function BusinessFinanceInvoicesPage() {
         <div className="pointer-events-none absolute right-[-80px] top-16 h-[420px] w-[420px] rounded-full bg-[#1f7ae0]/12 blur-[140px]" />
         <div className="main-container relative">
           <AnimatedSection>
-            <div className="mx-auto grid max-w-[1160px] gap-10 lg:grid-cols-[minmax(0,1.05fr)_380px] lg:items-end">
+            <div className="mx-auto grid max-w-[1220px] gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
               <div className="space-y-7">
                 <SurfaceLabel tone="white">{copy.hero.badge}</SurfaceLabel>
                 <div className="space-y-5">
                   <h1 className="max-w-[820px] text-[42px] font-medium leading-[1.02] text-white md:text-[58px] lg:text-[72px]">
-                    {copy.hero.title}
+                    {heroTitle}
                   </h1>
-                  <p className="max-w-[700px] text-[18px] leading-8 text-white/72">{copy.hero.subtitle}</p>
+                  <p className="max-w-[700px] text-[18px] leading-8 text-white/72">{heroSubtitle}</p>
+                </div>
+                <div className="space-y-3">
+                  {heroStats.map((item) => (
+                    <div key={item} className="flex items-center gap-3 text-[15px] leading-7 text-white/72">
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#7fe36c]" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <Link href={buildAppUrl('/register', { returnTo })} className="btn btn-secondary-v2 btn-md min-w-[190px]">
@@ -173,31 +192,17 @@ export default function BusinessFinanceInvoicesPage() {
                 </div>
               </div>
 
-              <div className="rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.10),rgba(255,255,255,0.04))] p-6 shadow-[0_24px_72px_rgba(0,0,0,0.22)] backdrop-blur-xl">
-                <div className="space-y-5">
-                  <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
-                    <div>
-                      <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-white/52">Workflow focus</p>
-                      <p className="mt-2 text-[20px] font-semibold text-white">Quote to payment</p>
-                    </div>
-                    <div className="flex h-12 w-12 items-center justify-center rounded-[18px] bg-white/10 text-[13px] font-semibold text-white">
-                      BF
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    {heroStats.map((item) => (
-                      <div
-                        key={item}
-                        className="flex items-center gap-3 rounded-[18px] border border-white/8 bg-white/[0.04] px-4 py-3 text-[14px] text-white/76"
-                      >
-                        <span className="h-2.5 w-2.5 rounded-full bg-[#7fe36c]" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="rounded-[20px] border border-[#1f7ae0]/20 bg-[#1f7ae0]/12 px-4 py-4 text-[14px] leading-7 text-white/74">
-                    Built for service businesses that need approvals, payment links, offline collection, and finance-ready month-end review in one record path.
-                  </div>
+              <div className="rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.10),rgba(255,255,255,0.04))] p-5 shadow-[0_24px_72px_rgba(0,0,0,0.22)] backdrop-blur-xl md:p-6">
+                <div className="rounded-[24px] border border-white/8 bg-[#091120] p-3">
+                  <Image
+                    src={invoiceDetailImg}
+                    alt="Schedulaa invoice detail and payment link workflow"
+                    className="h-auto w-full rounded-[18px] object-contain"
+                    priority
+                  />
+                </div>
+                <div className="mt-4 rounded-[18px] border border-[#1f7ae0]/18 bg-[#1f7ae0]/12 px-4 py-3 text-[14px] leading-7 text-white/72">
+                  Built for service teams that need approvals, payment links, offline collection, and cleaner month-end review in one record path.
                 </div>
               </div>
             </div>
@@ -208,25 +213,32 @@ export default function BusinessFinanceInvoicesPage() {
       <section className="py-16 md:py-20">
         <div className="main-container">
           <AnimatedSection>
-            <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-              <div className="space-y-5">
-                <SurfaceLabel tone="amber">{copy.pain.badge}</SurfaceLabel>
-                <h2 className="max-w-[720px] text-heading-3 text-secondary dark:text-white">{copy.pain.title}</h2>
-                <p className="max-w-[640px] text-[16px] leading-8 text-secondary/72 dark:text-accent/70">{copy.pain.intro}</p>
-              </div>
-              <div className="rounded-[28px] border border-[#dfe7f4] bg-white/94 p-4 shadow-[0_18px_48px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-5">
-                {copy.pain.points.map((point, index) => (
-                  <AnimatedSection key={point}>
-                    <article className="flex items-start gap-4 rounded-[22px] border border-[#edf2fb] bg-[linear-gradient(180deg,#ffffff,rgba(251,252,255,0.92))] px-4 py-4 shadow-[0_10px_28px_rgba(15,23,42,0.04)] not-last:mb-3 dark:border-stroke-7 dark:bg-background-8">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[16px] bg-[#d9781f]/10 text-sm font-semibold text-[#d9781f]">
-                        {index + 1}
+            <article className="overflow-hidden rounded-[32px] bg-[#213748] px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
+              <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                <div className="space-y-5">
+                  <SurfaceLabel tone="white">{copy.workflow.badge}</SurfaceLabel>
+                  <h2 className="max-w-[620px] text-heading-3 text-white">{copy.workflow.title}</h2>
+                  <p className="max-w-[620px] text-[15px] leading-7 text-white/72">{copy.workflow.intro}</p>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {workflowSteps.map((step, index) => (
+                      <div key={step} className="rounded-[18px] border border-white/10 bg-white/[0.05] px-4 py-3 text-[14px] text-white/76">
+                        <span className="mr-2 text-white/46">{index + 1}.</span>
+                        {step}
                       </div>
-                      <p className="pt-0.5 text-[15px] leading-7 text-secondary/80 dark:text-accent/76">{point}</p>
-                    </article>
-                  </AnimatedSection>
-                ))}
+                    ))}
+                  </div>
+                </div>
+                <div className="rounded-[24px] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm">
+                  <div className="rounded-[20px] border border-white/10 bg-[#0f1c30] p-3">
+                    <Image
+                      src={paymentCollectionImg}
+                      alt="Schedulaa payment collection workflow"
+                      className="h-auto w-full rounded-[14px] object-contain"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
+            </article>
           </AnimatedSection>
         </div>
       </section>
@@ -234,60 +246,21 @@ export default function BusinessFinanceInvoicesPage() {
       <section className="pb-16 md:pb-20">
         <div className="main-container">
           <AnimatedSection>
-            <div className="rounded-[28px] border border-[#dbe5f3] bg-white/94 p-6 shadow-[0_18px_48px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
-              <div className="space-y-3 text-center">
-                <SurfaceLabel>Connected workflows</SurfaceLabel>
-                <h2 className="text-heading-4 text-secondary dark:text-white">Keep billing connected to checkout, websites, and booking</h2>
-                <p className="mx-auto max-w-[860px] text-[15px] leading-7 text-secondary/72 dark:text-accent/70">
-                  Estimates and invoices work best when they stay tied to the rest of the client journey instead of living in a separate finance tool.
-                </p>
+            <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+              <div className="space-y-5">
+                <SurfaceLabel tone="amber">{copy.pain.badge}</SurfaceLabel>
+                <h2 className="max-w-[720px] text-heading-3 text-secondary dark:text-white">{copy.pain.title}</h2>
+                <p className="max-w-[640px] text-[16px] leading-8 text-secondary/72 dark:text-accent/70">{copy.pain.intro}</p>
               </div>
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <Link href={withLocalePath('/commerce', locale)} className="text-primary-500 underline">
-                  Explore commerce and payment collection
-                </Link>
-                <Link href={withLocalePath('/booking', locale)} className="text-primary-500 underline">
-                  See booking plus payments
-                </Link>
-                <Link href={withLocalePath('/website-builder', locale)} className="text-primary-500 underline">
-                  Launch branded website flows
-                </Link>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-20">
-        <div className="main-container">
-          <AnimatedSection>
-            <div className="rounded-[38px] border border-[#dbe5f3] bg-[radial-gradient(circle_at_top,rgba(31,122,224,0.08),transparent_44%),linear-gradient(180deg,#ffffff,rgba(243,248,255,0.94))] p-7 shadow-[0_28px_74px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-9 lg:p-11">
-              <div className="space-y-4 text-center">
-                <SurfaceLabel>{copy.workflow.badge}</SurfaceLabel>
-                <h2 className="mx-auto max-w-[820px] text-heading-3 text-secondary dark:text-white">{copy.workflow.title}</h2>
-                <p className="mx-auto max-w-[840px] text-[16px] leading-8 text-secondary/72 dark:text-accent/70">{copy.workflow.intro}</p>
-              </div>
-              <div className="mx-auto mt-10 max-w-[940px] rounded-[30px] border border-[#d8e5f8] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(246,250,255,0.96))] p-4 shadow-[0_20px_54px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-5">
-                {copy.workflow.steps.map((step, index) => (
-                  <AnimatedSection key={step}>
-                    <div className="relative">
-                      {index !== copy.workflow.steps.length - 1 ? (
-                        <div className="absolute left-6 top-[56px] h-[calc(100%-22px)] w-px bg-[linear-gradient(180deg,rgba(31,122,224,0.26),rgba(31,122,224,0))] md:hidden" />
-                      ) : null}
-                      <div className="flex items-start gap-4 rounded-[22px] border border-[#e6eefb] bg-white/92 px-4 py-4 shadow-[0_10px_28px_rgba(15,23,42,0.04)] not-last:mb-3 dark:border-stroke-7 dark:bg-background-8 md:grid md:grid-cols-[56px_minmax(0,1fr)_24px_minmax(0,1fr)] md:items-center md:gap-5 md:px-5">
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[18px] bg-[#1f7ae0]/10 text-sm font-semibold text-[#1f7ae0] shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
-                          {index + 1}
-                        </div>
-                        <div className="space-y-2">
-                          <SurfaceLabel>{copy.labels.workflowCard}</SurfaceLabel>
-                          <p className="text-[15px] font-medium leading-7 text-secondary/84 dark:text-accent/80">{step}</p>
-                        </div>
-                        <div className="hidden h-px bg-[linear-gradient(90deg,rgba(31,122,224,0.24),rgba(31,122,224,0))] md:block" />
-                        <div className="hidden text-[13px] leading-6 text-secondary/56 dark:text-accent/56 md:block">
-                          {index === copy.workflow.steps.length - 1 ? 'Close the billing cycle with clean reporting and payment visibility.' : 'Progress the record forward without rebuilding the billing context.'}
-                        </div>
+              <div className="rounded-[28px] border border-[#dfe7f4] bg-white/94 p-4 shadow-[0_18px_48px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-5">
+                {painPoints.map((point, index) => (
+                  <AnimatedSection key={point}>
+                    <article className="flex items-start gap-4 rounded-[22px] border border-[#edf2fb] bg-[linear-gradient(180deg,#ffffff,rgba(251,252,255,0.92))] px-4 py-4 shadow-[0_10px_28px_rgba(15,23,42,0.04)] not-last:mb-3 dark:border-stroke-7 dark:bg-background-8">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[16px] bg-[#d9781f]/10 text-sm font-semibold text-[#d9781f]">
+                        {index + 1}
                       </div>
-                    </div>
+                      <p className="pt-0.5 text-[15px] leading-7 text-secondary/80 dark:text-accent/76">{point}</p>
+                    </article>
                   </AnimatedSection>
                 ))}
               </div>
@@ -308,9 +281,9 @@ export default function BusinessFinanceInvoicesPage() {
             </AnimatedSection>
 
             <div className="mx-auto grid max-w-[980px] auto-rows-fr gap-5 lg:grid-cols-2">
-              {copy.features.items.map((item, index) => (
+              {featureItems.map((item, index) => (
                 <AnimatedSection key={item.title}>
-                  <div className={isLastOdd(index, copy.features.items) ? 'lg:col-span-2' : ''}>
+                  <div className={isLastOdd(index, featureItems) ? 'lg:col-span-2' : ''}>
                     <SectionCard
                       overline={copy.labels.featureCard}
                       title={item.title}
