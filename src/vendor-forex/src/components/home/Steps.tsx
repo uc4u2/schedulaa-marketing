@@ -1,6 +1,6 @@
 import step1Img from '@public/images/marketing/showcase/employee-management.png';
 import step2Img from '@public/images/marketing/showcase/clients-pick2.png';
-import step3Img from '@public/images/marketing/hvac-hero-2.png';
+import step3Img from '@public/images/marketing/booking-checkout-invoice-detail.png';
 import step4Img from '@public/images/marketing/showcase/manager-dashboards1.png';
 import gradient9Img from '@public/images/ns-img-501.png';
 import gradient32Img from '@public/images/ns-img-520.png';
