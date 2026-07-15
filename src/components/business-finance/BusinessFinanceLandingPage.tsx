@@ -170,20 +170,22 @@ export default function BusinessFinanceLandingPage() {
         <section className="pb-16 pt-14 md:pb-20 md:pt-16">
           <div className={pageShell}>
             <AnimatedSection>
-              <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
-                <div className="space-y-4">
-                  <span className="inline-flex rounded-full border border-[#d7efb2] bg-[#eef8ce] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/72">
-                    Quick walkthrough
-                  </span>
-                  <h2 className="max-w-[560px] text-heading-3 text-secondary dark:text-white">
-                    See the estimate-to-paid-job flow in one short video.
-                  </h2>
-                  <p className="max-w-[560px] text-[15px] leading-7 text-secondary/72 dark:text-accent/70">
-                    Watch the manager workflow without reading a long feature list.
-                  </p>
-                </div>
-                <div className="overflow-hidden rounded-[28px] border border-[#d9e4f5] bg-white p-4 shadow-[0_24px_64px_rgba(15,23,42,0.08)] dark:border-stroke-7 dark:bg-background-8 md:p-5">
-                  <div className="relative overflow-hidden rounded-[22px] border border-[#10284d] bg-[#071224] pb-[56.25%] shadow-[0_18px_50px_rgba(0,0,0,0.24)]">
+              <article className="overflow-hidden rounded-[32px] bg-[#213748] px-6 py-8 text-white shadow-[0_28px_90px_rgba(0,0,0,0.18)] md:px-8 md:py-10 lg:px-10">
+                <div className="space-y-7">
+                  <div className="space-y-4 text-center">
+                    <span className="inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/72">
+                      Quick walkthrough
+                    </span>
+                    <h2 className="mx-auto max-w-[760px] text-heading-3 text-white">
+                      See the estimate-to-paid-job flow in one short video.
+                    </h2>
+                    <p className="mx-auto max-w-[620px] text-[15px] leading-7 text-white/72">
+                      Watch the manager workflow without reading a long feature list.
+                    </p>
+                  </div>
+                  <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] p-4 backdrop-blur-sm md:p-5">
+                    <div className="relative overflow-hidden rounded-[22px] border border-[#10284d] bg-[#071224] pb-[56.25%] shadow-[0_18px_50px_rgba(0,0,0,0.24)]">
+                    
                     <iframe
                       className="absolute left-0 top-0 h-full w-full"
                       src={featuredEmbedSrc}
@@ -194,7 +196,8 @@ export default function BusinessFinanceLandingPage() {
                     />
                   </div>
                 </div>
-              </div>
+                </div>
+              </article>
             </AnimatedSection>
           </div>
         </section>
