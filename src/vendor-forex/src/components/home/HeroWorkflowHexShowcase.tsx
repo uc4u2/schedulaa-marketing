@@ -21,9 +21,9 @@ type WorkflowNode = {
 const workflowNodesEn: WorkflowNode[] = [
   {
     id: 'website-builder',
-    label: 'HVAC Workflow',
+    label: 'Service Workflow',
     image: hvacWorkflowImg,
-    alt: 'Connected HVAC workflow from service request to payment',
+    alt: 'Connected service workflow from request to payment',
     imageClassName: 'object-contain object-center p-2 sm:p-3',
   },
   {
