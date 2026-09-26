@@ -1,6 +1,7 @@
 # Schedulaa Marketing Platform Migration — Source of Truth (2026)
 
-Last updated: 2026-02-16  
+Last updated: 2026-09-26
+
 Scope: `schedulaa-marketing-techwind` (Next marketing), `frontend` (CRA app), `backend` (Flask API)
 
 ## 1) Original Architecture (Before Migration)
@@ -92,24 +93,14 @@ Auth bridge routes:
 - `/login` -> redirects to `${APP_ORIGIN}/login`
 - `/signup` -> redirects to `${APP_ORIGIN}/register`
 
-## 6) Locale Routing Contract
+## 6) Locale Routing and SEO Contract
 
-- Supported locales:
-  - `en`
-  - `fa`
-- Marketing URLs are locale-accessible:
-  - `/en/...`
-  - `/fa/...`
-- Unsupported placeholders shown in selector only:
-  - `ru`, `zh` disabled/fallback.
-
-### Stability fixes applied
-
-- Fixed `/en/*` and `/fa/*` local 404 behavior with explicit Next rewrites.
-- Fixed missing translation keys that were causing locale pages to fail:
-  - `footer.helpCenter`
-  - `footer.zapier`
-- Added `timeZone` to next-intl provider/request config for runtime stability.
+- Locale-prefixed routes can exist for `en`, `fa`, `fr`, `ru`, `es`, `de`, `zh`, `ar`, and `pt`, but route existence does not establish translation eligibility.
+- English is the canonical fallback.
+- A localized route may self-canonicalize, appear in the sitemap, and participate in hreflang only when its complete visible page is genuinely translated and reviewed.
+- An untranslated localized route permanently redirects to the English canonical and is excluded from sitemap and hreflang.
+- The authoritative route-by-route policy is `docs/SEO_LOCALE_MATRIX.md` and is enforced by `src/lib/seo/localization.ts`.
+- Never restore a locale merely because translated fragments or navigation labels exist.
 
 ## 7) Navigation and Footer IA (Legacy-aligned)
 
@@ -194,12 +185,14 @@ Backend (`scheduling-application`):
 Marketing:
 
 1. `npm run build`
-2. prod-mode route checks:
+2. `npm run test:seo`
+3. Run the canonical sitemap audit against the intended environment.
+4. prod-mode route checks:
    - `/en`
    - `/en/pricing`
    - `/en/blog`
    - `/fa`
-3. verify no locale 404 regressions.
+5. verify no locale 404 regressions, no redirecting sitemap URLs, and no untranslated locale clones in hreflang/sitemap.
 
 Backend:
 
@@ -218,5 +211,8 @@ Backend:
 - Marketing repo: `schedulaa-marketing-techwind`
 - App repo: `frontend` (CRA product app)
 - API repo: `backend` (Flask)
+- SEO source-of-truth index: `docs/SEO_SOURCE_OF_TRUTH.md`
+- SEO implementation/monitoring history: `docs/SEO_ACQUISITION_FOUNDATION_2026-09-25.md`
+- Locale eligibility: `docs/SEO_LOCALE_MATRIX.md`
 
 This document is the operational baseline for future marketing routing, SEO, and branding updates.

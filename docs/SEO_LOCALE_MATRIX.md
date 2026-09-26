@@ -1,5 +1,11 @@
 # SEO locale availability matrix
 
+Last verified in production: 2026-09-26
+
+Canonical/internal-authority release: `f843bd4c`
+
+Current production sitemap: 177 intended indexable URLs
+
 This matrix records whether the visible route content has a real locale-specific source. A locale prefix by itself does not count as a translation. `Y` routes may be indexed and advertised through hreflang. `N` requests are redirected permanently to the English equivalent and are omitted from hreflang and the sitemap.
 
 | Route | EN | FA | FR | RU | ES | DE | ZH | AR | PT |
@@ -44,3 +50,5 @@ Notes:
 - Placeholder-style translations (for example, pages whose primary heading only says that a section explains a feature) are not eligible for sitemap or hreflang publication. They redirect to English until substantive copy is approved.
 - Persian, Russian, and Chinese remain eligible on the partially localized product routes listed above because their title, H1, and primary visible content were reviewed. Other languages can be restored route-by-route after the same review.
 - This matrix is enforced by `src/lib/seo/localization.ts`; update that registry only when the complete visible route has been reviewed.
+- The September 26 release permanently redirects ineligible localized routes to the English canonical and omits them from sitemap and hreflang. Search Console may continue to show historical locale URLs until Google recrawls them; this is not evidence that the current sitemap is still publishing them.
+- Restore a locale only after visible page copy, metadata, navigation context, structured data, reciprocal hreflang, canonical behavior, and sitemap eligibility have all been reviewed together.
