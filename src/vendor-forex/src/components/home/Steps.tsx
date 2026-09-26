@@ -11,7 +11,7 @@ import step3DarkImg from '@public/images/ns-img-dark-201.png';
 import step4DarkImg from '@public/images/ns-img-dark-202.png';
 import Image, { StaticImageData } from 'next/image';
 import { getBookingSource } from '@/legacy-content/booking/getBookingSource';
-import { AppLocale } from '@/utils/locale';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import StackCardItem from '../ui/stack-card/StackCardItem';
@@ -120,7 +120,7 @@ const Steps = ({ locale = 'en' }: { locale?: AppLocale }) => {
                 <RevealAnimation delay={0.3}>
                   <div>
                     <LinkButton
-                      href="/features"
+                      href={withLocalePath('/features', locale)}
                       className="btn dark:btn-transparent btn-secondary btn-md hover:btn-green mx-auto w-[90%] md:mx-0 md:w-auto">
                       {howItWorks.cta}
                     </LinkButton>

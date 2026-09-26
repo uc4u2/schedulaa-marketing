@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import posts from '@/legacy-content/blog/posts';
-import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
+import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
+import { getServerLocale } from '@/utils/serverLocale';
+import { DEFAULT_LOCALE, isSupportedLocale, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
-import { DEFAULT_LOCALE, isSupportedLocale } from '@/utils/locale';
 
 const categoryShellCopy: Record<string, { badge: string; empty: string; back: string; start: string }> = {
   en: { badge: 'Blog category', empty: 'No posts in this category yet.', back: 'Back to blog', start: 'Start free' },
@@ -157,7 +158,9 @@ function toTitleCaseFromSlug(slug: string) {
 }
 
 function getCategoryProfile(slug: string, count: number): CategoryProfile {
-  if (CATEGORY_COPY[slug]) return CATEGORY_COPY[slug];
+  if (CATEGORY_COPY[slug]) {
+    return CATEGORY_COPY[slug];
+  }
   const label = toTitleCaseFromSlug(slug);
   return {
     title: `${label} insights.`,
@@ -173,13 +176,15 @@ function getCategoryProfile(slug: string, count: number): CategoryProfile {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const locale = await getServerLocale();
   const categoryPosts = (posts as any[]).filter((post) => (post.category || '').toLowerCase() === slug.toLowerCase());
   const copy = getCategoryProfile(slug, categoryPosts.length);
-  return buildPageMetadata(
-    `${copy.title} | Schedulaa Blog`,
-    copy.subtitle,
-    `https://www.schedulaa.com/blog/category/${slug}`,
-  );
+  return buildLocalizedPageMetadata({
+    locale,
+    path: `/blog/category/${slug}`,
+    title: `${copy.title} | Schedulaa Blog`,
+    description: copy.subtitle,
+  });
 }
 
 export default async function BlogCategoryPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -222,7 +227,7 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ s
             categoryPosts.map((post: any) => (
               <div key={post.slug} className="rounded-xl border border-stroke-2 bg-white p-5 dark:border-stroke-7 dark:bg-background-8">
                 <h2 className="text-lg font-semibold">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-primary-500">
+                  <Link href={withLocalePath(`/blog/${post.slug}`, locale)} className="hover:text-primary-500">
                     {post.title}
                   </Link>
                 </h2>
@@ -233,7 +238,7 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ s
         </div>
 
         <div className="mt-8 flex gap-4">
-          <Link href="/blog" className="text-primary-500 underline">
+          <Link href={withLocalePath('/blog', locale)} className="text-primary-500 underline">
             {shellCopy.back}
           </Link>
           <Link href={buildAppUrl('/register', { returnTo })} className="text-primary-500 underline">

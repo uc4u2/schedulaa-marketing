@@ -8,7 +8,6 @@ import hero1 from '@public/images/ns-img-77.png';
 import hero2 from '@public/images/ns-img-78.png';
 import hero3 from '@public/images/marketing/analytics-main.png';
 import hero1Dark from '@public/images/ns-img-dark-52.png';
-import hero3Dark from '@public/images/marketing/analytics-main.png';
 import analytics1 from '@public/images/marketing/analytics-board.png';
 import analytics2 from '@public/images/marketing/analytics-side-a.png';
 import analytics3 from '@public/images/marketing/analytics-side-b.png';
@@ -16,6 +15,7 @@ import avatar5 from '@public/images/ns-avatar-5.png';
 import { getMarketingSource } from '@/legacy-content/marketing/getMarketingSource';
 import { AppLocale, DEFAULT_LOCALE, isSupportedLocale, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
+import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
 
 const getLocale = async (): Promise<AppLocale> => {
   const h = await headers();
@@ -28,9 +28,15 @@ const isExternalLink = (href: string) =>
 
 const mapHref = (href: string, locale: AppLocale) => {
   const returnTo = marketingReturnTo(locale, '/marketing');
-  if (href === '/login') return buildAppUrl('/login', { returnTo });
-  if (href === '/register') return buildAppUrl('/register', { returnTo });
-  if (isExternalLink(href)) return href;
+  if (href === '/login') {
+    return buildAppUrl('/login', { returnTo });
+  }
+  if (href === '/register') {
+    return buildAppUrl('/register', { returnTo });
+  }
+  if (isExternalLink(href)) {
+    return href;
+  }
   return withLocalePath(href as `/${string}`, locale);
 };
 
@@ -66,24 +72,17 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const marketingPages = getMarketingSource(locale);
   const hubMeta = marketingPages.hub.meta;
-
-  return {
+  return buildLocalizedPageMetadata({
+    locale,
+    path: '/marketing',
     title: hubMeta.title,
     description: hubMeta.description,
-    alternates: { canonical: hubMeta.canonical },
-    openGraph: {
-      title: hubMeta.og.title,
-      description: hubMeta.og.description,
-      url: hubMeta.og.url,
-      images: hubMeta.og.image ? [{ url: hubMeta.og.image }] : undefined,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: hubMeta.twitter.title,
-      description: hubMeta.twitter.description,
-      images: hubMeta.twitter.image ? [hubMeta.twitter.image] : undefined,
-    },
-  };
+    image: hubMeta.og.image,
+    openGraphTitle: hubMeta.og.title,
+    openGraphDescription: hubMeta.og.description,
+    twitterTitle: hubMeta.twitter.title,
+    twitterDescription: hubMeta.twitter.description,
+  });
 }
 
 export default async function MarketingPage() {
@@ -122,7 +121,7 @@ export default async function MarketingPage() {
             </figure>
             <figure className="shadow-3 absolute right-0 bottom-0 z-20 hidden max-w-[200px] overflow-hidden rounded-[20px] sm:right-14 sm:bottom-14 sm:max-w-[200px] lg:right-20 lg:bottom-5 lg:max-w-[320px] xl:top-1/2 xl:-right-0 xl:bottom-auto xl:-translate-y-1/2">
               <Image src={hero3} alt="campaign performance preview" className="block h-full w-full dark:hidden" />
-              <Image src={hero3Dark} alt="campaign performance preview" className="hidden h-full w-full dark:block" />
+              <Image src={hero3} alt="campaign performance preview" className="hidden h-full w-full dark:block" />
             </figure>
           </div>
         </div>

@@ -2,27 +2,25 @@ import type { AppLocale } from '@/utils/locale';
 
 export const SEO_LOCALES: AppLocale[] = ['en', 'fa', 'ru', 'zh', 'es', 'fr', 'de', 'ar', 'pt'];
 
-// A route belongs here only when its visible page content is supplied by a
-// locale-specific source or locale-specific component copy. Routes that merely
-// accept a locale prefix while rendering English stay English-only.
-const FULLY_LOCALIZED_ROUTES = new Set([
-  '/features',
-  '/workforce',
-  '/marketing',
-  '/payroll',
-  '/website-builder',
-  '/business-finance',
-  '/mobile-app',
-  '/industries',
-  '/status',
-  '/roadmap',
-  '/demo',
-  '/faq',
-  '/client/support',
-  '/docs',
-  '/contact',
-  '/pricing',
-  '/zapier',
+const CORE_TRANSLATED_LOCALES: AppLocale[] = ['en', 'fa', 'ru', 'zh'];
+
+// A route/locale pair belongs here only when its primary visible content,
+// title, and H1 have been reviewed as substantive localized copy. Placeholder
+// strings and translated navigation alone do not qualify for indexing or
+// hreflang. English remains the safe fallback for every other pair.
+const INDEXABLE_LOCALES_BY_ROUTE = new Map<string, AppLocale[]>([
+  ['/workforce', CORE_TRANSLATED_LOCALES],
+  ['/marketing', CORE_TRANSLATED_LOCALES],
+  ['/payroll', CORE_TRANSLATED_LOCALES],
+  ['/website-builder', CORE_TRANSLATED_LOCALES],
+  ['/industries', CORE_TRANSLATED_LOCALES],
+  ['/pricing', CORE_TRANSLATED_LOCALES],
+  ['/zapier', CORE_TRANSLATED_LOCALES],
+  ['/business-finance', SEO_LOCALES],
+  ['/mobile-app', SEO_LOCALES],
+  ['/demo', SEO_LOCALES],
+  ['/docs', SEO_LOCALES],
+  ['/contact', SEO_LOCALES],
 ]);
 
 export const normalizeSeoRoute = (path: string) => {
@@ -34,7 +32,7 @@ export const normalizeSeoRoute = (path: string) => {
 };
 
 export const getTranslatedLocales = (path: string): AppLocale[] =>
-  FULLY_LOCALIZED_ROUTES.has(normalizeSeoRoute(path)) ? [...SEO_LOCALES] : ['en'];
+  [...(INDEXABLE_LOCALES_BY_ROUTE.get(normalizeSeoRoute(path)) || ['en'])];
 
 export const hasTranslatedRoute = (path: string, locale: string) =>
   getTranslatedLocales(path).includes(locale as AppLocale);

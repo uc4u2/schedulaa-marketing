@@ -3,7 +3,7 @@ import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
-import { AppLocale } from '@/utils/locale';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 import HeroWorkflowHexShowcase from './HeroWorkflowHexShowcase';
 
 type HeroProps = {
@@ -167,7 +167,7 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
               <RevealAnimation delay={0.7} direction="left" offset={50}>
                 <li className="w-full max-w-[280px] text-center sm:max-w-[300px] sm:text-left md:w-auto md:max-w-none">
                   <LinkButton
-                    href="/pricing"
+                    href={withLocalePath('/pricing', locale)}
                     className="btn btn-dark hover:btn-green bg-accent/22 btn-xl w-full text-center text-white hover:border-0 md:w-auto">
                     {heroCopy.secondaryCta || hero.secondaryCta?.label || heroCopyByLocale.en.secondaryCta}
                   </LinkButton>

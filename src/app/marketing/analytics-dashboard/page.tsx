@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import { getMarketingSource } from '@/legacy-content/marketing/getMarketingSource';
 import { AppLocale, DEFAULT_LOCALE, isSupportedLocale, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
+import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
 
 const getLocale = async (): Promise<AppLocale> => {
   const h = await headers();
@@ -15,23 +16,17 @@ const getLocale = async (): Promise<AppLocale> => {
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const pageConfig = getMarketingSource(locale).analytics;
-  return {
+  return buildLocalizedPageMetadata({
+    locale,
+    path: '/marketing/analytics-dashboard',
     title: pageConfig.meta.title,
     description: pageConfig.meta.description,
-    alternates: { canonical: pageConfig.meta.canonical },
-    openGraph: {
-      title: pageConfig.meta.og.title,
-      description: pageConfig.meta.og.description,
-      url: pageConfig.meta.og.url,
-      images: pageConfig.meta.og.image ? [{ url: pageConfig.meta.og.image }] : undefined,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: pageConfig.meta.twitter.title,
-      description: pageConfig.meta.twitter.description,
-      images: pageConfig.meta.twitter.image ? [pageConfig.meta.twitter.image] : undefined,
-    },
-  };
+    image: pageConfig.meta.og.image,
+    openGraphTitle: pageConfig.meta.og.title,
+    openGraphDescription: pageConfig.meta.og.description,
+    twitterTitle: pageConfig.meta.twitter.title,
+    twitterDescription: pageConfig.meta.twitter.description,
+  });
 }
 
 export default async function MarketingAnalyticsDashboardPage() {

@@ -25,11 +25,11 @@ export default function CompareHubPage() {
             across multiple tools.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/website-builder" className="text-primary-500 underline">Website builder</Link>
-            <Link href="/booking" className="text-primary-500 underline">Booking</Link>
-            <Link href="/business-finance/invoices" className="text-primary-500 underline">Invoices & payments</Link>
-            <Link href="/workforce" className="text-primary-500 underline">Staff scheduling</Link>
-            <Link href="/commerce" className="text-primary-500 underline">Commerce</Link>
+            <Link href="/en/website-builder" className="text-primary-500 underline">Website builder</Link>
+            <Link href="/en/booking" className="text-primary-500 underline">Booking</Link>
+            <Link href="/en/business-finance/invoices" className="text-primary-500 underline">Invoices & payments</Link>
+            <Link href="/en/workforce" className="text-primary-500 underline">Staff scheduling</Link>
+            <Link href="/en/commerce" className="text-primary-500 underline">Commerce</Link>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export default function CompareHubPage() {
               <p className="text-xs uppercase tracking-wide text-primary-500">{item.competitor}</p>
               <h2 className="mt-2 text-lg font-semibold">{item.title}</h2>
               <p className="mt-2 text-sm text-secondary/70 dark:text-accent/70">{item.description}</p>
-              <Link href={`/compare/${item.key}`} className="mt-3 inline-block text-primary-500 underline">
+              <Link href={`/en/compare/${item.key}`} className="mt-3 inline-block text-primary-500 underline">
                 View comparison
               </Link>
             </div>

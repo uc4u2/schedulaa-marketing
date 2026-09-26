@@ -2,7 +2,7 @@
 
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import LinkButton from '@/components/ui/button/LinkButton';
-import { AppLocale } from '@/utils/locale';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 import dashboardImg from '@public/images/marketing/showcase/dashboard.png';
 import employeeDashboardImg from '@public/images/marketing/showcase/employee-dashboard.png';
 import myShiftImg from '@public/images/marketing/showcase/my-shift.png';
@@ -174,7 +174,7 @@ const Reviews = ({ locale = 'en' }: { locale?: AppLocale }) => {
 
         <RevealAnimation delay={0.5}>
           <div className="text-center">
-            <LinkButton href="/features" className="btn btn-md btn-secondary dark:btn-transparent hover:btn-white w-full sm:w-auto">
+            <LinkButton href={withLocalePath('/features', locale)} className="btn btn-md btn-secondary dark:btn-transparent hover:btn-white w-full sm:w-auto">
               {copy.cta}
             </LinkButton>
           </div>

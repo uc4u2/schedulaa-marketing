@@ -180,6 +180,23 @@ export default function WebsiteBuilderAiApplicationLayout({
               </StaggerGrid>
             </div>
           ) : null}
+
+          {locale === 'en' ? (
+            <AnimatedSection>
+              <article className="rounded-[24px] border border-white/10 bg-white/[0.06] p-7 text-white md:flex md:items-center md:justify-between md:gap-8 md:p-9">
+                <div className="max-w-[760px]">
+                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-primary-300">Industry example</span>
+                  <h2 className="mt-3 text-heading-4 text-white">See a salon website and booking journey together</h2>
+                  <p className="mt-3 text-white/70">
+                    Explore how a branded salon website can present services, support online appointments, and connect supported payment workflows.
+                  </p>
+                </div>
+                <Link href="/en/booking/salon" className="btn btn-white btn-md mt-6 shrink-0 md:mt-0">
+                  Explore the salon example
+                </Link>
+              </article>
+            </AnimatedSection>
+          ) : null}
         </div>
       </section>
 

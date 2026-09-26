@@ -1,15 +1,14 @@
-import { defaultMetadata } from '@/utils/generateMetaData';
+import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  ...defaultMetadata,
-  title: 'Account and Data Deletion | Schedulaa',
-  description:
-    'How to request account deletion or personal data deletion for the Schedulaa app and platform.',
-  alternates: {
-    canonical: 'https://www.schedulaa.com/account-deletion',
-  },
+  ...buildLocalizedPageMetadata({
+    locale: 'en',
+    path: '/account-deletion',
+    title: 'Account and Data Deletion | Schedulaa',
+    description: 'How to request account deletion or personal data deletion for the Schedulaa app and platform.',
+  }),
 };
 
 export default function AccountDeletionPage() {

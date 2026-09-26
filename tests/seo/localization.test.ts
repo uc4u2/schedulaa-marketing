@@ -15,6 +15,18 @@ test('translated routes receive self-referential and reciprocal language alterna
   assert.equal(Object.keys(alternates).length, 9);
 });
 
+test('partially translated routes expose only reviewed locale variants', () => {
+  assert.deepEqual(getTranslatedLocales('/website-builder'), ['en', 'fa', 'ru', 'zh']);
+  assert.equal(hasTranslatedRoute('/website-builder', 'fr'), false);
+  assert.equal(hasTranslatedRoute('/website-builder', 'ru'), true);
+});
+
+test('placeholder-quality localized routes fall back to English', () => {
+  assert.deepEqual(getTranslatedLocales('/features'), ['en']);
+  assert.deepEqual(getTranslatedLocales('/client/support'), ['en']);
+  assert.equal(hasTranslatedRoute('/pricing', 'de'), false);
+});
+
 test('untranslated booking-industry routes cannot masquerade as localized pages', () => {
   assert.deepEqual(getTranslatedLocales('/booking/salon'), ['en']);
   assert.equal(hasTranslatedRoute('/booking/salon', 'fa'), false);
@@ -35,4 +47,3 @@ test('English canonical route remains available without a noindex policy', () =>
   assert.deepEqual(alternates, { en: 'https://www.schedulaa.com/en/booking' });
   assert.equal(hasTranslatedRoute('/booking', 'en'), true);
 });
-

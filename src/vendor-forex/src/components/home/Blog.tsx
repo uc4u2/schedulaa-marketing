@@ -1,6 +1,6 @@
 import { IBlogPost } from '@/interface';
 import sourceEn from '@/legacy-content/features/landing-features.json';
-import { AppLocale } from '@/utils/locale';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 import RevealAnimation from '../animation/RevealAnimation';
 import BlogCardV2 from '../shared/card/BlogCardV2';
 import BlogCardV3 from '../shared/card/BlogCardV3';
@@ -15,11 +15,13 @@ const localeCodeByLocale: Record<string, string> = {
 
 const formatDate = (dateInput?: string, locale: AppLocale = 'en') => {
   const date = dateInput ? new Date(dateInput) : new Date('2025-01-01T00:00:00Z');
-  if (Number.isNaN(date.getTime())) return new Date('2025-01-01T00:00:00Z').toLocaleDateString(localeCodeByLocale[locale] || 'en-US', {
-    month: 'short',
-    day: '2-digit',
-    year: 'numeric',
-  });
+  if (Number.isNaN(date.getTime())) {
+    return new Date('2025-01-01T00:00:00Z').toLocaleDateString(localeCodeByLocale[locale] || 'en-US', {
+      month: 'short',
+      day: '2-digit',
+      year: 'numeric',
+    });
+  }
   return date.toLocaleDateString(localeCodeByLocale[locale] || 'en-US', {
     month: 'short',
     day: '2-digit',
@@ -95,7 +97,7 @@ const Blog = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }) =
           </div>
           <RevealAnimation delay={0.6}>
             <div className="mt-14 flex justify-center">
-              <LinkButton href="/blog" className="btn btn-secondary dark:btn-transparent btn-md hover:btn-green mx-auto w-[90%] md:mx-0 md:w-auto">
+              <LinkButton href={withLocalePath('/blog', locale)} className="btn btn-secondary dark:btn-transparent btn-md hover:btn-green mx-auto w-[90%] md:mx-0 md:w-auto">
                 {cta}
               </LinkButton>
             </div>

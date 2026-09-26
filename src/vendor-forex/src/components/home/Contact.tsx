@@ -3,7 +3,7 @@
 import { FormEvent, useState } from 'react';
 import Link from 'next/link';
 import { getBatch2Source } from '@/legacy-content/batch2/getBatch2Source';
-import { AppLocale } from '@/utils/locale';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 
@@ -277,7 +277,7 @@ const Contact = ({ locale = 'en' }: { locale?: AppLocale }) => {
                 </div>
                 <RevealAnimation delay={0.3}>
                   <div>
-                    <LinkButton href="/client/support" className="btn hover:btn-green dark:btn-transparent btn-lg btn-white mx-auto w-[90%] font-medium md:mx-0 md:w-auto">
+                    <LinkButton href={withLocalePath('/client/support', locale)} className="btn hover:btn-green dark:btn-transparent btn-lg btn-white mx-auto w-[90%] font-medium md:mx-0 md:w-auto">
                       {copy.supportCta}
                     </LinkButton>
                   </div>
@@ -332,7 +332,7 @@ const Contact = ({ locale = 'en' }: { locale?: AppLocale }) => {
                     </label>
                     <label htmlFor="agree-terms" className="text-tagline-3 text-secondary/60 dark:text-accent/60 cursor-pointer">
                       {copy.agreePrefix}{' '}
-                      <Link href="/terms" className="text-primary-500 text-tagline-3 underline">{copy.agreeLink}</Link>
+                      <Link href={withLocalePath('/terms', locale)} className="text-primary-500 text-tagline-3 underline">{copy.agreeLink}</Link>
                     </label>
                   </fieldset>
 

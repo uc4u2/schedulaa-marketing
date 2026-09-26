@@ -48,36 +48,6 @@ export type FooterSection = {
   links: FooterLinkItem[];
 };
 
-const COMPARE_LINKS: FooterLinkItem[] = [
-  { id: 'compare-vagaro', label: 'Schedulaa vs Vagaro', href: '/compare/vagaro' },
-  { id: 'compare-quickbooks', label: 'Schedulaa vs QuickBooks', href: '/compare/quickbooks' },
-  {
-    id: 'compare-quickbooks-payroll',
-    label: 'Schedulaa vs QuickBooks Payroll',
-    href: '/compare/quickbooks-payroll',
-  },
-  { id: 'compare-humi', label: 'Schedulaa vs Humi', href: '/compare/humi' },
-  {
-    id: 'compare-square-appointments',
-    label: 'Schedulaa vs Square Appointments',
-    href: '/compare/square-appointments',
-  },
-  { id: 'compare-xero', label: 'Schedulaa vs Xero', href: '/compare/xero' },
-  { id: 'compare-deputy', label: 'Schedulaa vs Deputy', href: '/compare/deputy' },
-  { id: 'compare-homebase', label: 'Schedulaa vs Homebase', href: '/compare/homebase' },
-  { id: 'compare-when-i-work', label: 'Schedulaa vs When I Work', href: '/compare/when-i-work' },
-  {
-    id: 'compare-acuity',
-    label: 'Schedulaa vs Acuity Scheduling',
-    href: '/compare/schedulaa-vs-acuity-scheduling',
-  },
-  { id: 'compare-gusto', label: 'Schedulaa vs Gusto', href: '/compare/gusto' },
-  { id: 'compare-adp', label: 'Schedulaa vs ADP', href: '/compare/adp' },
-  { id: 'compare-paychex', label: 'Schedulaa vs Paychex', href: '/compare/paychex' },
-];
-
-export const FOOTER_COMPARE_MOBILE_LIMIT = 8;
-
 export const FOOTER_SECTIONS: FooterSection[] = [
   {
     id: 'company',
@@ -130,8 +100,6 @@ export const FOOTER_SECTIONS: FooterSection[] = [
     titleKey: 'compareGroup',
     links: [
       { id: 'compare-hub', href: '/compare', labelKey: 'compareHub' },
-      { id: 'alternatives-hub', href: '/alternatives', labelKey: 'alternativesHub' },
-      ...COMPARE_LINKS,
     ],
   },
 ];

@@ -1,16 +1,15 @@
 import IndustryBookingTemplate from '@/components/booking-template/IndustryBookingTemplate';
-import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
+import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  ...buildPageMetadata(
-    'Spa Booking Software for Therapists & Rooms | Schedulaa',
-    'Coordinate spa appointments, treatment rooms, therapist schedules, packages, reminders, and deposits in one operations platform—built for multi-staff spa teams.',
-    'https://www.schedulaa.com/booking/spa',
-  ),
-  title: 'Spa Booking Software for Therapists & Rooms | Schedulaa',
-  description:
-    'Coordinate spa appointments, treatment rooms, therapist schedules, packages, reminders, and deposits in one operations platform—built for multi-staff spa teams.',
+  ...buildLocalizedPageMetadata({
+    locale: 'en',
+    path: '/booking/spa',
+    title: 'Spa Booking Software for Therapists & Rooms | Schedulaa',
+    description:
+      'Coordinate spa appointments, treatment rooms, therapist schedules, packages, reminders, and deposits in one operations platform—built for multi-staff spa teams.',
+  }),
 };
 
 export default function SpaBookingPage() {

@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { detectLocaleFromPath, stripLocalePrefix, withLocalePath } from '@/utils/locale';
 import { cn } from '@/utils/cn';
-import { FOOTER_COMPARE_MOBILE_LIMIT, FOOTER_SECTIONS, type FooterLinkItem } from '@/data/footer-data';
+import { FOOTER_SECTIONS, type FooterLinkItem } from '@/data/footer-data';
 import gradientImg from '@public/images/ns-img-532.png';
 import legacyLogo from '@public/images/shared/schedulaa-logo-legacy.png';
 import Image from 'next/image';
@@ -50,23 +50,13 @@ const Footer = ({ className }: { className?: string }) => {
                 <div className="space-y-8">
                   <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(section.titleKey)}</p>
                   <ul className="space-y-5">
-                    {section.links.map((link, idx) => (
-                      <li
-                        key={link.id}
-                        className={section.id === 'compare' && idx >= FOOTER_COMPARE_MOBILE_LIMIT ? 'hidden md:list-item' : ''}
-                      >
+                    {section.links.map((link) => (
+                      <li key={link.id}>
                         <Link href={linkHref(link, localePath, returnTo)} className="footer-link">
                           {linkLabel(link, t)}
                         </Link>
                       </li>
                     ))}
-                    {section.id === 'compare' ? (
-                      <li className="md:hidden">
-                        <Link href={localePath('/compare')} className="footer-link">
-                          View all comparisons
-                        </Link>
-                      </li>
-                    ) : null}
                   </ul>
                 </div>
               </div>
@@ -77,21 +67,13 @@ const Footer = ({ className }: { className?: string }) => {
                 <div className="space-y-8">
                   <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(compareSection.titleKey)}</p>
                   <ul className="space-y-5">
-                    {compareSection.links.map((link, idx) => (
-                      <li
-                        key={link.id}
-                        className={compareSection.id === 'compare' && idx >= FOOTER_COMPARE_MOBILE_LIMIT ? 'hidden md:list-item' : ''}
-                      >
+                    {compareSection.links.map((link) => (
+                      <li key={link.id}>
                         <Link href={linkHref(link, localePath, returnTo)} className="footer-link">
                           {linkLabel(link, t)}
                         </Link>
                       </li>
                     ))}
-                    <li className="md:hidden">
-                      <Link href={localePath('/compare')} className="footer-link">
-                        View all comparisons
-                      </Link>
-                    </li>
                   </ul>
                 </div>
               </div>

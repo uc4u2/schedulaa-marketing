@@ -76,7 +76,7 @@ export function middleware(request: NextRequest) {
       const redirectUrl = request.nextUrl.clone();
       redirectUrl.pathname = `/${maybeLocale}${legacyTarget}`;
       redirectUrl.search = search;
-      return NextResponse.redirect(redirectUrl);
+      return NextResponse.redirect(redirectUrl, 308);
     }
 
     if (maybeLocale !== 'en' && !hasTranslatedRoute(normalizedPath, maybeLocale)) {
@@ -112,15 +112,23 @@ export function middleware(request: NextRequest) {
 
   if (legacyTarget) {
     const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = `/${locale}${legacyTarget}`;
+    redirectUrl.pathname = `/en${legacyTarget}`;
+    redirectUrl.search = search;
+    return NextResponse.redirect(redirectUrl, 308);
+  }
+
+  const redirectUrl = request.nextUrl.clone();
+  if (pathname === '/') {
+    redirectUrl.pathname = `/${locale}`;
     redirectUrl.search = search;
     return NextResponse.redirect(redirectUrl);
   }
 
-  const redirectUrl = request.nextUrl.clone();
-  redirectUrl.pathname = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`;
+  // Non-prefixed content paths are permanent legacy aliases. Public search
+  // URLs always use an explicit locale, with English as the stable default.
+  redirectUrl.pathname = `/en${pathname}`;
   redirectUrl.search = search;
-  return NextResponse.redirect(redirectUrl);
+  return NextResponse.redirect(redirectUrl, 308);
 }
 
 export const config = {

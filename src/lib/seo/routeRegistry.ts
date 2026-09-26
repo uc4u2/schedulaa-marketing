@@ -47,7 +47,6 @@ export const STATIC_ROUTES = [
   '/payslips',
   '/resources/staffing-formulas',
   '/resources/schedulaa-vs-quickbooks-payroll',
-  '/resources/schedulaa-vs-quickbooks-payroll.doc',
   '/webinars/payroll-compliance',
 ] as const;
 

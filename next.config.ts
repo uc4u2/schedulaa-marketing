@@ -31,6 +31,20 @@ const nextConfig: NextConfig = {
       ...localeRewrites,
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/resources/schedulaa-vs-quickbooks-payroll.doc',
+        destination: '/en/resources/schedulaa-vs-quickbooks-payroll',
+        permanent: true,
+      },
+      ...LOCALES.map((locale) => ({
+        source: `/${locale}/resources/schedulaa-vs-quickbooks-payroll.doc`,
+        destination: '/en/resources/schedulaa-vs-quickbooks-payroll',
+        permanent: true,
+      })),
+    ];
+  },
   images: {
     qualities: [25, 50, 75, 100],
   },

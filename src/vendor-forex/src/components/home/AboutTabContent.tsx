@@ -3,7 +3,7 @@ import aboutPayroll from '@public/images/marketing/payroll-dashboard.png';
 import aboutCommerce from '@public/images/marketing/website-builder.png';
 import aboutAutomation from '@public/images/marketing/my-shift.png';
 import aboutPayments from '@public/images/marketing/showcase/stripe.png';
-import { AppLocale } from '@/utils/locale';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 import Image from 'next/image';
 import LinkButton from '../ui/button/LinkButton';
 import TabContent from '../ui/tab/TabContent';
@@ -439,7 +439,13 @@ const aboutTabsDataZh = [
 ];
 
 const AboutTabContent = ({ locale = 'en' }: { locale?: AppLocale }) => {
-  const aboutTabsData = aboutTabsDataEn;
+  const tabsByLocale: Partial<Record<AppLocale, typeof aboutTabsDataEn>> = {
+    en: aboutTabsDataEn,
+    fa: aboutTabsDataFa,
+    ru: aboutTabsDataRu,
+    zh: aboutTabsDataZh,
+  };
+  const aboutTabsData = tabsByLocale[locale] || aboutTabsDataEn;
 
   return (
     <>
@@ -476,7 +482,7 @@ const AboutTabContent = ({ locale = 'en' }: { locale?: AppLocale }) => {
               </ul>
               <div>
                 <LinkButton
-                  href={tab.buttonHref}
+                  href={withLocalePath(tab.buttonHref, locale)}
                   className="btn btn-white btn-lg md:btn-xl dark:btn-transparent hover:btn-primary w-full md:w-auto">
                   {tab.buttonText}
                 </LinkButton>

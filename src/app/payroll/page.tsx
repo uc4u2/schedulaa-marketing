@@ -4,29 +4,24 @@ import CenteredTutorialVideoSection from '@/components/tutorials/CenteredTutoria
 import { getTutorialModule } from '@/data/tutorials/tutorialCatalog';
 import { getPayrollSource } from '@/legacy-content/payroll/getPayrollSource';
 import { getServerLocale } from '@/utils/serverLocale';
+import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getServerLocale();
   const payrollPages = getPayrollSource(locale);
   const meta = payrollPages.overview.meta;
 
-  return {
+  return buildLocalizedPageMetadata({
+    locale,
+    path: '/payroll',
     title: meta.title,
     description: meta.description,
-    alternates: { canonical: meta.canonical },
-    openGraph: {
-      title: meta.og.title,
-      description: meta.og.description,
-      url: meta.og.url,
-      images: meta.og.image ? [{ url: meta.og.image }] : undefined,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: meta.twitter.title,
-      description: meta.twitter.description,
-      images: meta.twitter.image ? [meta.twitter.image] : undefined,
-    },
-  };
+    image: meta.og.image,
+    openGraphTitle: meta.og.title,
+    openGraphDescription: meta.og.description,
+    twitterTitle: meta.twitter.title,
+    twitterDescription: meta.twitter.description,
+  });
 }
 
 export default async function PayrollPage() {

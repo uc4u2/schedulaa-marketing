@@ -85,7 +85,9 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
       experience.subscriptionPlans.map((plan) => {
         const intervalPricing =
           PUBLIC_BILLING_DISPLAY[billingInterval][plan.key as keyof typeof PUBLIC_BILLING_DISPLAY.monthly];
-        if (!intervalPricing) return plan;
+        if (!intervalPricing) {
+          return plan;
+        }
         return {
           ...plan,
           price: intervalPricing.card,
@@ -418,6 +420,26 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
             ))}
           </div>
         </div>
+
+        {locale === 'en' ? (
+          <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+            <h2 className="text-heading-4">Explore the workflows behind the plans</h2>
+            <p className="mt-2 max-w-[820px] text-secondary/75 dark:text-accent/75">
+              Review the public website and booking experience before choosing a plan.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link href="/en/booking/salon" className="btn btn-white btn-md dark:btn-transparent">
+                Salon website with booking
+              </Link>
+              <Link href="/en/booking/tutor" className="btn btn-white btn-md dark:btn-transparent">
+                Tutoring booking workflow
+              </Link>
+              <Link href="/en/website-builder" className="btn btn-white btn-md dark:btn-transparent">
+                Website builder
+              </Link>
+            </div>
+          </div>
+        ) : null}
 
         {faqSection?.items?.length ? (
           <div className="rounded-3xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">

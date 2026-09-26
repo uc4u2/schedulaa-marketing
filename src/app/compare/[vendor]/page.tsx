@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { getCompareEntry } from '@/legacy-content/compare/config';
-import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
+import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
+import { getServerLocale } from '@/utils/serverLocale';
+import { withLocalePath } from '@/utils/locale';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -136,14 +138,16 @@ function ComparisonValueCard({
 
 export async function generateMetadata({ params }: { params: Promise<{ vendor: string }> }): Promise<Metadata> {
   const { vendor } = await params;
+  const locale = await getServerLocale();
   const entry = getCompareEntry(vendor, 'compare');
   const title = entry?.metaTitle || 'Comparison | Schedulaa';
   const description = entry?.metaDescription || 'Compare Schedulaa with alternative platforms for service teams.';
-  return buildPageMetadata(title, description, `https://www.schedulaa.com/compare/${vendor}`);
+  return buildLocalizedPageMetadata({ locale, path: `/compare/${vendor}`, title, description });
 }
 
 export default async function CompareVendorPage({ params }: { params: Promise<{ vendor: string }> }) {
   const { vendor } = await params;
+  const locale = await getServerLocale();
   const entry = getCompareEntry(vendor, 'compare');
   if (!entry) {
     return notFound();
@@ -275,10 +279,10 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
         ) : null}
 
         <div className="mt-8 flex flex-wrap gap-4">
-          <Link href="/pricing" className="btn btn-primary btn-md">View pricing plans</Link>
-          <Link href={contextCta.href} className="btn btn-secondary btn-md">{contextCta.label}</Link>
-          <Link href="/compare" className="text-primary-500 underline">Back to compare hub</Link>
-          <Link href={`/alternatives/${entry.altSlug}`} className="text-primary-500 underline">View alternatives</Link>
+          <Link href={withLocalePath('/pricing', locale)} className="btn btn-primary btn-md">View pricing plans</Link>
+          <Link href={withLocalePath(contextCta.href, locale)} className="btn btn-secondary btn-md">{contextCta.label}</Link>
+          <Link href={withLocalePath('/compare', locale)} className="text-primary-500 underline">Back to compare hub</Link>
+          <Link href={withLocalePath(`/alternatives/${entry.altSlug}`, locale)} className="text-primary-500 underline">View alternatives</Link>
         </div>
       </section>
     </main>

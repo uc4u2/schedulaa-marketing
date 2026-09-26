@@ -1,7 +1,7 @@
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import sourceEn from '@/legacy-content/features/landing-features.json';
-import { AppLocale } from '@/utils/locale';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 
 const badgeByLocale: Record<string, string> = {
   en: "Let's start",
@@ -30,7 +30,7 @@ const CTA = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }) =>
             <RevealAnimation delay={0.4}>
               <div className="text-center">
                 <LinkButton
-                  href="/pricing"
+                  href={withLocalePath('/pricing', locale)}
                   className="btn btn-primary btn-md hover:btn-green mx-auto w-[90%] md:mx-0 md:w-auto">
                   {content.cta.primaryCta.label}
                 </LinkButton>

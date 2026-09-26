@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import posts from '@/legacy-content/blog/posts';
-import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
+import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
+import { getServerLocale } from '@/utils/serverLocale';
+import { DEFAULT_LOCALE, isSupportedLocale, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
 import { notFound } from 'next/navigation';
-import { DEFAULT_LOCALE, isSupportedLocale } from '@/utils/locale';
 import Image from 'next/image';
 
 const copyByLocale: Record<string, { back: string; start: string; sales: string; blog: string }> = {
@@ -54,6 +55,10 @@ const CTA_COPY = {
 type CtaTarget = 'booking' | 'website' | 'invoices' | 'workforce' | 'commerce' | 'payroll';
 
 function getBlogCtaTarget(post: any): { target: CtaTarget; href: string } {
+  const primaryTopic = [post.slug, post.title, post.description, ...(post.tags || [])]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
   const haystack = [
     post.slug,
     post.title,
@@ -67,6 +72,13 @@ function getBlogCtaTarget(post: any): { target: CtaTarget; href: string } {
     .toLowerCase();
 
   const hasAny = (patterns: string[]) => patterns.some((pattern) => haystack.includes(pattern));
+
+  if (['salon', 'beauty'].some((pattern) => primaryTopic.includes(pattern))) {
+    return { target: 'booking', href: '/booking/salon' };
+  }
+  if (['tutor', 'tutoring'].some((pattern) => primaryTopic.includes(pattern))) {
+    return { target: 'booking', href: '/booking/tutor' };
+  }
 
   if (hasAny(['invoice', 'invoic', 'estimate', 'quote', 'billing', 'payment link', 'deposit'])) {
     return { target: 'invoices', href: '/business-finance/invoices' };
@@ -95,11 +107,12 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const locale = await getServerLocale();
   const post = (posts as any[]).find((item) => item.slug === slug);
   const title = post ? `${post.title} | Schedulaa` : 'Blog Details | Schedulaa';
   const description = post?.description || 'Read the latest Schedulaa article.';
   const image = post?.image?.src || post?.heroImage || undefined;
-  return buildPageMetadata(title, description, `https://www.schedulaa.com/blog/${slug}`, image);
+  return buildLocalizedPageMetadata({ locale, path: `/blog/${slug}`, title, description, image });
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -186,23 +199,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <h2 className="mt-4 text-xl font-semibold">{ctaContent.title}</h2>
           <p className="mt-3 text-secondary/70 dark:text-accent/70">{ctaContent.body}</p>
           <div className="mt-4 flex flex-wrap gap-4">
-            <Link href={ctaHref} className="text-primary-500 underline">
+            <Link href={withLocalePath(ctaHref, locale)} className="text-primary-500 underline">
               {ctaCopy.more}
             </Link>
-            <Link href="/contact" className="text-primary-500 underline">
+            <Link href={withLocalePath('/contact', locale)} className="text-primary-500 underline">
               {copy.sales}
             </Link>
           </div>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-4">
-          <Link href="/blog" className="text-primary-500 underline">
+          <Link href={withLocalePath('/blog', locale)} className="text-primary-500 underline">
             {copy.back}
           </Link>
           <Link href={buildAppUrl('/register', { returnTo })} className="text-primary-500 underline">
             {copy.start}
           </Link>
-          <Link href="/contact" className="text-primary-500 underline">
+          <Link href={withLocalePath('/contact', locale)} className="text-primary-500 underline">
             {copy.sales}
           </Link>
         </div>

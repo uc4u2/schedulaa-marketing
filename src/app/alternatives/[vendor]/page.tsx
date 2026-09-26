@@ -1,24 +1,30 @@
 import Link from 'next/link';
 import { getCompareEntry } from '@/legacy-content/compare/config';
-import { generateMetadata as buildPageMetadata } from '@/utils/generateMetaData';
+import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
+import { getServerLocale } from '@/utils/serverLocale';
+import { withLocalePath } from '@/utils/locale';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 export async function generateMetadata({ params }: { params: Promise<{ vendor: string }> }): Promise<Metadata> {
   const { vendor } = await params;
+  const locale = await getServerLocale();
   const entry = getCompareEntry(vendor, 'alternatives');
   const competitor = entry?.competitor || vendor;
   const title = `Best ${competitor} alternatives for service teams | Schedulaa`;
   const description =
     entry?.metaDescription ||
     `Looking for ${competitor} alternatives? Compare Schedulaa with ${competitor} for service operations and payroll workflows.`;
-  return buildPageMetadata(title, description, `https://www.schedulaa.com/alternatives/${vendor}`);
+  return buildLocalizedPageMetadata({ locale, path: `/alternatives/${vendor}`, title, description });
 }
 
 export default async function AlternativesVendorPage({ params }: { params: Promise<{ vendor: string }> }) {
   const { vendor } = await params;
+  const locale = await getServerLocale();
   const entry = getCompareEntry(vendor, 'alternatives');
-  if (!entry) return notFound();
+  if (!entry) {
+    return notFound();
+  }
   const rows = entry.executiveOverview?.rows || [];
   const summaryRows = entry.summaryTable?.rows || [];
   const fitMatrix = entry.fitMatrix || [];
@@ -139,10 +145,10 @@ export default async function AlternativesVendorPage({ params }: { params: Promi
         ) : null}
 
         <div className="mt-8 flex flex-wrap gap-4">
-          <Link href="/pricing" className="btn btn-primary btn-md">View pricing plans</Link>
-          <Link href="/payroll" className="btn btn-secondary btn-md">See payroll coverage</Link>
-          <Link href="/alternatives" className="text-primary-500 underline">Back to alternatives hub</Link>
-          <Link href={`/compare/${entry.key}`} className="text-primary-500 underline">View full comparison</Link>
+          <Link href={withLocalePath('/pricing', locale)} className="btn btn-primary btn-md">View pricing plans</Link>
+          <Link href={withLocalePath('/payroll', locale)} className="btn btn-secondary btn-md">See payroll coverage</Link>
+          <Link href={withLocalePath('/alternatives', locale)} className="text-primary-500 underline">Back to alternatives hub</Link>
+          <Link href={withLocalePath(`/compare/${entry.key}`, locale)} className="text-primary-500 underline">View full comparison</Link>
         </div>
       </section>
     </main>

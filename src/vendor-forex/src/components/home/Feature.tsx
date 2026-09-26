@@ -2,7 +2,7 @@ import { cn } from '@/utils/cn';
 import gradient28Img from '@public/images/ns-img-516.png';
 import Image from 'next/image';
 import sourceEn from '@/legacy-content/features/landing-features.json';
-import { AppLocale } from '@/utils/locale';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 
@@ -126,7 +126,7 @@ const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }
                     </div>
                     <div>
                       <LinkButton
-                        href="/features"
+                        href={withLocalePath('/features', locale)}
                         className="btn btn-white hover:btn-secondary btn-md dark:btn-transparent dark:hover:btn-accent mx-auto w-[90%] md:mx-0 md:w-auto">
                         {copy.view}
                       </LinkButton>
@@ -138,7 +138,7 @@ const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }
             <RevealAnimation delay={0.7}>
               <div className="text-center">
                 <LinkButton
-                  href="/compare"
+                  href={withLocalePath('/compare', locale)}
                   className="btn btn-md btn-green hover:btn-secondary mx-auto w-[90%] border-0 md:mx-0 md:w-auto">
                   {copy.compare}
                 </LinkButton>

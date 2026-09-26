@@ -10,12 +10,13 @@ import Reviews from '@/vendor-forex/src/components/home/Reviews';
 import Services from '@/vendor-forex/src/components/home/Services';
 import Steps from '@/vendor-forex/src/components/home/Steps';
 import { getLandingSource } from '@/legacy-content/features/getLandingSource';
-import { AppLocale } from '@/utils/locale';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import TrackedLink from '@/components/shared/TrackedLink';
 import gradient28Img from '@public/images/ns-img-516.png';
 import androidLaunchImg from '@public/images/marketing/android-launch.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type Props = {
   locale: AppLocale;
@@ -313,7 +314,7 @@ export default function HomeForexLayout({ locale }: Props) {
                     {laborCopy.primaryCta}
                   </TrackedLink>
                   <TrackedLink
-                    href="/pricing"
+                    href={withLocalePath('/pricing', locale)}
                     className="btn btn-transparent btn-md min-w-[170px] !border-white/25 !text-white hover:!bg-white hover:!text-secondary"
                   >
                     {laborCopy.secondaryCta}
@@ -366,6 +367,46 @@ export default function HomeForexLayout({ locale }: Props) {
       <Feature source={source} locale={locale} />
       <About locale={locale} />
       <Services locale={locale} />
+      <section className="py-14 md:py-20">
+        <div className="main-container">
+          <div className="mx-auto max-w-[780px] text-center">
+            <span className="badge badge-cyan">Website + booking workflows</span>
+            <h2 className="mt-4">Start with the customer journey your business needs</h2>
+            <p className="mt-3 text-secondary/75 dark:text-accent/75">
+              Explore focused examples that connect a branded website, online appointments, and supported payment workflows.
+            </p>
+          </div>
+          <div className="mt-9 grid gap-5 md:grid-cols-3">
+            <article className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+              <h3 className="text-heading-5">Salon website with online booking</h3>
+              <p className="mt-3 text-sm leading-6 text-secondary/75 dark:text-accent/75">
+                Present services, accept appointments, and connect supported deposit and payment flows.
+              </p>
+              <Link href="/en/booking/salon" className="mt-5 inline-flex font-semibold text-primary-500 underline">
+                Explore salon booking
+              </Link>
+            </article>
+            <article className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+              <h3 className="text-heading-5">Tutoring website and scheduling</h3>
+              <p className="mt-3 text-sm leading-6 text-secondary/75 dark:text-accent/75">
+                Coordinate private lessons, recurring classes, instructor availability, and packages.
+              </p>
+              <Link href="/en/booking/tutor" className="mt-5 inline-flex font-semibold text-primary-500 underline">
+                Explore tutor booking
+              </Link>
+            </article>
+            <article className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+              <h3 className="text-heading-5">Your own branded service website</h3>
+              <p className="mt-3 text-sm leading-6 text-secondary/75 dark:text-accent/75">
+                Publish pages for services and products while keeping booking and customer workflows connected.
+              </p>
+              <Link href="/en/website-builder" className="mt-5 inline-flex font-semibold text-primary-500 underline">
+                Explore the website builder
+              </Link>
+            </article>
+          </div>
+        </div>
+      </section>
       <Pricing locale={locale} />
       <Reviews locale={locale} />
       <Blog source={source} locale={locale} />
