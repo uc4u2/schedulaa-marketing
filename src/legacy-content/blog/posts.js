@@ -531,16 +531,24 @@ const blogPosts = [
   {
     slug: "hvac-bad-scheduling-lost-money",
     title: "How HVAC Companies Lose Money on Bad Scheduling (and How to Fix It)",
+    seoTitle: "HVAC Scheduling Problems That Cost You Money | Schedulaa",
     description:
-      "HVAC companies lose margin when dispatch, booking, tech availability, invoicing, and follow-up live in different tools. Here's how to fix the scheduling leaks before they hit cash flow.",
+      "See how dispatch gaps, technician conflicts, delayed estimates, and slow invoicing reduce HVAC profit—and how to connect scheduling through payment.",
     datePublished: "2026-06-22",
-    dateModified: "2026-06-22",
+    dateModified: "2026-09-26",
     category: "Operations",
     tags: ["hvac", "scheduling", "dispatch", "invoicing", "field service"],
     heroOverline: "HVAC Growth",
     sections: [
       {
         heading: "Watch the workflow first",
+        summaryPoints: [
+          "Scheduling conflicts",
+          "Technician downtime",
+          "Dispatch gaps",
+          "Delayed estimates and invoices",
+          "Disconnected follow-up",
+        ],
         video: {
           badge: "Video walkthrough",
           title: "See how one connected workflow reduces admin and billing delays",
@@ -636,6 +644,27 @@ const blogPosts = [
           "Assign the right technician from one schedule, not several disconnected calendars.",
           "Turn approved work into estimates, invoices, payment links, and follow-up actions without leaving the client record.",
           "Use reminders, notes, and client history to reduce no-shows, speed up rebooking, and keep maintenance clients engaged.",
+        ],
+      },
+      {
+        heading: "HVAC scheduling checklist",
+        paragraphs: [
+          "Use this short operating checklist to find preventable leakage before adding more jobs to the calendar.",
+        ],
+        checklist: [
+          "Confirm technician skills, location, availability, and travel time before assigning each call.",
+          "Keep job notes, equipment history, customer details, and the service address attached to the booking record.",
+          "Set a clear owner and next action for every estimate that has not yet been approved.",
+          "Move completed work into invoicing promptly, then track whether the invoice and payment link were delivered.",
+          "Schedule maintenance reminders and follow-up while the service context is still current.",
+          "Review schedule conflicts, idle gaps, overtime, invoice delay, and rebooking rate every week.",
+        ],
+        links: [
+          { label: "Explore service-business industries", href: "/industries" },
+          { label: "Review online booking", href: "/booking" },
+          { label: "See workforce scheduling", href: "/workforce" },
+          { label: "Explore invoices and payment links", href: "/business-finance/invoices" },
+          { label: "Read how scheduling and booking work together", href: "/blog/scheduling-and-booking-together" },
         ],
       },
       {
@@ -756,6 +785,10 @@ const blogPosts = [
           "When booking, scheduling, staff management, and payments are disconnected, every day feels harder than it should.",
           "The salons that grow faster and more profitably are the ones that connect everything in one clean workflow.",
           "Schedulaa gives salons exactly that without the cost or complexity of oversized systems.",
+        ],
+        links: [
+          { label: "Explore salon booking", href: "/booking/salon" },
+          { label: "Explore spa booking for therapists and rooms", href: "/booking/spa" },
         ],
       },
     ],
@@ -1243,7 +1276,11 @@ const blogPosts = [
         heading: "Example and next steps",
         paragraphs: [
           "Stylists in Toronto and Miami can be paid from one pipeline: shifts → tips/commission/premiums → CPP/EI or FICA → payslip → T4/W-2.",
-          "CTA: /payroll",
+        ],
+        links: [
+          { label: "Explore spa booking", href: "/booking/spa" },
+          { label: "Review salon booking", href: "/booking/salon" },
+          { label: "Explore payroll", href: "/payroll" },
         ],
       },
     ],
@@ -1300,37 +1337,175 @@ const blogPosts = [
   },
   {
     slug: "roe-t4-w2-year-end-guide",
-    title: "ROE, T4, and W-2 in Plain English: A Year-End Guide for Service Businesses",
+    title: "T4 vs W-2 vs ROE: What Employers Need to Know",
+    seoTitle: "T4 vs W-2 vs ROE: Employer Year-End Guide | Schedulaa",
+    h1: "T4 vs W-2 vs ROE: What Employers Need to Know",
     description:
-      "What ROE, T4, and W-2 mean, and how Schedulaa builds them from finalized payroll without extra spreadsheets.",
+      "Compare T4, W-2, and ROE forms, who receives each one, what employers report, and how Canadian and U.S. year-end payroll workflows differ.",
     datePublished: "2025-03-14",
-    dateModified: "2025-03-14",
+    dateModified: "2026-09-26",
     category: "Year-end",
     tags: ["payroll", "roe", "t4", "w2", "year-end"],
     heroOverline: "Year-end",
     sections: [
       {
-        heading: "What these forms are",
+        heading: "The direct answer",
         paragraphs: [
-          "ROE: insurable earnings/hours for Service Canada. T4: CRA slip for Canadian income/CPP/EI/tax/benefits/union dues. W-2: IRS/SSA slip for U.S. wages and taxes.",
+          "A T4 and a W-2 are annual employment-income statements for different countries. Canadian employers use the T4 to report employment income and payroll deductions to employees and the Canada Revenue Agency. U.S. employers use Form W-2 to report wages and tax withholding to employees and the Social Security Administration.",
+          "A Record of Employment (ROE) serves a different purpose. Canadian employers issue an ROE when an interruption of earnings occurs or when Service Canada requests one. Service Canada uses the information to help administer Employment Insurance benefits. An ROE is not the Canadian equivalent of a W-2 and it is not simply another year-end tax slip.",
+          "This guide is a practical overview, not legal or tax advice. Filing rules and deadlines can change, so confirm current requirements with the CRA, IRS, SSA, or Service Canada for your situation.",
         ],
       },
       {
-        heading: "Built from FinalizedPayroll",
+        heading: "T4, W-2, and ROE compared",
         paragraphs: [
-          "Schedulaa uses finalized runs (hours, tips, premiums, benefits, union dues) to fill ROE/T4/W-2. No retyping.",
+          "The fastest way to distinguish the forms is to look at country, purpose, recipient, and filing trigger.",
+        ],
+        table: {
+          headers: ["Form", "Country", "Purpose", "Issuer", "Recipient", "Typical timing or filing context"],
+          rows: [
+            [
+              "T4",
+              "Canada",
+              "Reports employment income and payroll deductions for the calendar year.",
+              "Employer or payer",
+              "Employee and CRA",
+              "Annual return; generally due by the last day of February following the calendar year, subject to CRA next-business-day rules.",
+            ],
+            [
+              "W-2",
+              "United States",
+              "Reports wages, tips, other compensation, and taxes withheld.",
+              "Employer",
+              "Employee and Social Security Administration",
+              "Annual filing; generally due January 31, subject to the next-business-day rule when applicable.",
+            ],
+            [
+              "ROE",
+              "Canada",
+              "Records insurable earnings and hours used in Employment Insurance administration.",
+              "Employer",
+              "Service Canada; employees receive a paper copy when a paper ROE is used",
+              "Triggered by an interruption of earnings or a Service Canada request; electronic and paper deadlines depend on the pay period and filing method.",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "What is a T4 slip?",
+        paragraphs: [
+          "The T4 Statement of Remuneration Paid identifies employment remuneration paid during a calendar year and the related payroll amounts reported in its boxes. Employers prepare T4 slips for applicable employees, give employees their copies, and file the T4 information return with the CRA.",
+          "Employers should reconcile finalized payroll records before producing slips. Employee identity, employer information, employment income, CPP or QPP where applicable, EI premiums, income tax deducted, taxable benefits, and any relevant information codes should be reviewed against the underlying payroll record.",
+          "The CRA states that T4 returns are generally due on or before the last day of February following the calendar year. If the due date falls on a Saturday, Sunday, or CRA-recognized public holiday, the return is due on the next business day.",
+        ],
+        links: [
+          { label: "Open the Schedulaa T4 generator", href: "/payroll/tools/t4" },
+          { label: "Explore Canada Payroll", href: "/payroll/canada" },
         ],
       },
       {
-        heading: "Sanity-check before exporting",
+        heading: "What is Form W-2?",
         paragraphs: [
-          "Review insurable/pensionable earnings, union dues, and taxable benefits in payroll detail. Use the validators in the ROE/T4/W-2 tools.",
+          "Form W-2, Wage and Tax Statement, is the U.S. annual wage statement. Employers use it to report wages, tips, other compensation, and withheld taxes. The employer provides a copy to the employee and files the required information with the Social Security Administration.",
+          "The IRS lists January 31 as the general annual due date for Forms W-2 and W-3, with the next-business-day rule when the date falls on a weekend or legal holiday. Employers should reconcile payroll totals, employee names and Social Security numbers, federal withholding, Social Security and Medicare amounts, and applicable state information before filing.",
+        ],
+        links: [
+          { label: "Open the Schedulaa W-2 generator", href: "/payroll/tools/w2" },
+          { label: "Explore USA Payroll", href: "/payroll/usa" },
         ],
       },
       {
-        heading: "Where to generate",
+        heading: "What is a Record of Employment (ROE)?",
         paragraphs: [
-          "Use /payroll/tools for ROE/T4/W-2 exports.",
+          "A Canadian employer generally issues an ROE when an employee experiences an interruption of earnings or when Service Canada asks for one. The record includes insurable earnings and hours that Service Canada uses when determining Employment Insurance entitlement, benefit amount, and duration.",
+          "ROE timing is not a single year-end deadline. Service Canada's employer guide sets different timing rules for paper and electronic ROEs and for different pay-period types. Paper ROEs are generally issued within five calendar days of the first day of an interruption of earnings or the day the employer becomes aware of it. Electronic deadlines depend on the pay period, so employers should confirm the rule that applies to their payroll schedule.",
+        ],
+        links: [{ label: "Open the Schedulaa ROE tool", href: "/payroll/tools/roe" }],
+      },
+      {
+        heading: "T4 vs W-2: what is the difference?",
+        paragraphs: [
+          "T4 and W-2 forms serve a similar high-level purpose: each reports annual employment earnings and payroll deductions to the worker and a government agency. The T4 belongs to Canada's CRA reporting system, while the W-2 belongs to the U.S. IRS and SSA reporting system.",
+          "They are not interchangeable. The boxes, tax programs, identifiers, filing formats, agency workflows, and deadlines differ. A company with employees in both countries needs country-specific payroll records and year-end processes rather than converting one form into the other.",
+        ],
+      },
+      {
+        heading: "ROE vs T4: why Canadian employers may need both",
+        paragraphs: [
+          "A T4 summarizes employment remuneration and deductions for tax reporting across the calendar year. An ROE documents insurable employment information after a qualifying interruption of earnings or a Service Canada request. One does not replace the other.",
+          "For example, an employee who leaves during the year may require an ROE soon after the interruption of earnings and still receive a T4 for the year's employment income during the regular T4 reporting cycle.",
+        ],
+      },
+      {
+        heading: "Common employer scenarios",
+        checklist: [
+          "A Canadian employee remains employed through year-end: review finalized payroll and prepare the applicable T4 slip and return.",
+          "A Canadian employee stops working and has an interruption of earnings: assess the ROE requirement and deadline; the employee may still need a T4 for the calendar year.",
+          "A U.S. employee received wages during the year: reconcile the payroll record and prepare the applicable W-2 and W-3 reporting.",
+          "A business employs people in both Canada and the United States: maintain separate country-specific payroll and year-end reporting workflows.",
+          "A payroll value changes before a slip is issued: correct the underlying record, review the recalculated boxes, and validate the slip before issuance.",
+          "A filed or issued form needs a correction: follow the current agency correction procedure for that form instead of silently replacing the filed record.",
+        ],
+      },
+      {
+        heading: "How Schedulaa supports the year-end workflow",
+        paragraphs: [
+          "Schedulaa's year-end tools use finalized payroll data as the source for supported T4, W-2, and ROE workflows. Teams can review generated values and use the relevant export options without rebuilding the same payroll totals in a separate spreadsheet.",
+          "The T4 workflow uses finalized Canadian payroll history, supports box review before issuance, and provides employee PDF, CRA XML, CSV summary, and batch ZIP outputs. The W-2 and ROE tools remain separate because their forms, rules, and filing destinations differ.",
+        ],
+        links: [
+          { label: "T4 generator", href: "/payroll/tools/t4" },
+          { label: "W-2 generator", href: "/payroll/tools/w2" },
+          { label: "ROE tool", href: "/payroll/tools/roe" },
+          { label: "Canada Payroll", href: "/payroll/canada" },
+          { label: "USA Payroll", href: "/payroll/usa" },
+        ],
+      },
+      {
+        heading: "Frequently asked questions",
+        faq: [
+          {
+            question: "Is a T4 the Canadian version of a W-2?",
+            answer: "They are comparable annual employment-income statements, but they belong to different national reporting systems. Their boxes, identifiers, deadlines, electronic formats, and filing agencies are different.",
+          },
+          {
+            question: "Is an ROE the same as a T4?",
+            answer: "No. A T4 is an annual Canadian employment-income and deduction statement. An ROE is issued after an interruption of earnings or when Service Canada requests one and supports Employment Insurance administration.",
+          },
+          {
+            question: "Does every departing Canadian employee need both forms immediately?",
+            answer: "The ROE timing rules may apply shortly after an interruption of earnings. The T4 follows the annual T4 reporting cycle. Confirm the facts and current agency requirements for the specific employment situation.",
+          },
+          {
+            question: "Can Schedulaa generate these forms without Schedulaa payroll data?",
+            answer: "The year-end generators are connected to Schedulaa payroll records and use finalized payroll data. They are not marketed as standalone blank-form generators.",
+          },
+          {
+            question: "What should an employer review before exporting?",
+            answer: "Review employee and employer identity, the applicable reporting year, finalized earnings and deductions, taxable benefits, insurable or pensionable values, and the validation warnings provided by the relevant tool.",
+          },
+          {
+            question: "What if a form needs to be corrected after filing?",
+            answer: "Use the current correction process required by the CRA, SSA/IRS, or Service Canada. Schedulaa supports review before issuance; an already filed form should not be silently overwritten as though it had never been submitted.",
+          },
+        ],
+        sources: [
+          {
+            label: "CRA: T4 slip information for employers",
+            href: "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/completing-filing-information-returns/t4-information-employers/t4-slip.html",
+          },
+          {
+            label: "CRA: Filing deadlines for slips and summaries",
+            href: "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/important-dates-businesses/slips-summaries.html",
+          },
+          {
+            label: "IRS: Employment tax due dates and Form W-2 filing",
+            href: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
+          },
+          {
+            label: "Service Canada: How to complete the Record of Employment form",
+            href: "https://www.canada.ca/en/employment-social-development/programs/ei/ei-list/reports/roe-guide.html",
+          },
         ],
       },
     ],

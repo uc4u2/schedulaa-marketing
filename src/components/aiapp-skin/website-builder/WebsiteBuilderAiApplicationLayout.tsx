@@ -191,9 +191,14 @@ export default function WebsiteBuilderAiApplicationLayout({
                     Explore how a branded salon website can present services, support online appointments, and connect supported payment workflows.
                   </p>
                 </div>
-                <Link href="/en/booking/salon" className="btn btn-white btn-md mt-6 shrink-0 md:mt-0">
-                  Explore the salon example
-                </Link>
+                <div className="mt-6 flex shrink-0 flex-wrap gap-3 md:mt-0 md:justify-end">
+                  <Link href="/en/booking/salon" className="btn btn-white btn-md">
+                    Explore the salon example
+                  </Link>
+                  <Link href="/en/booking/spa" className="btn btn-transparent btn-md border-white/20 text-white">
+                    Explore spa booking
+                  </Link>
+                </div>
               </article>
             </AnimatedSection>
           ) : null}

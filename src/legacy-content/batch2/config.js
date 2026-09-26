@@ -81,7 +81,11 @@ export const industriesPage = {
     {
       title: 'Popular verticals',
       items: [
-        { title: 'Salons & spas', body: 'Real-time stylist booking, tips, and retention campaigns.' },
+        {
+          title: 'Salons & spas',
+          body: 'Real-time stylist and therapist booking, room-aware planning, payments, and retention workflows.',
+          links: [{ label: 'Explore spa booking', href: '/booking/spa' }],
+        },
         { title: 'Healthcare clinics', body: 'Scheduling, reminders, and documentation-aware workflows.' },
         { title: 'Tutors & educators', body: 'Session booking, recurring schedules, and attendance trails.' },
         { title: 'Creative studios', body: 'Client journey automation from booking to invoice and payment.' },

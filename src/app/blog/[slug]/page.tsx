@@ -109,7 +109,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const locale = await getServerLocale();
   const post = (posts as any[]).find((item) => item.slug === slug);
-  const title = post ? `${post.title} | Schedulaa` : 'Blog Details | Schedulaa';
+  const title = post ? post.seoTitle || `${post.title} | Schedulaa` : 'Blog Details | Schedulaa';
   const description = post?.description || 'Read the latest Schedulaa article.';
   const image = post?.image?.src || post?.heroImage || undefined;
   return buildLocalizedPageMetadata({ locale, path: `/blog/${slug}`, title, description, image });
@@ -135,7 +135,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <section className="main-container px-5">
         <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
           <p className="badge badge-yellow-v2">{post.heroOverline || copy.blog}</p>
-          <h1 className="mt-5">{post.title}</h1>
+          <h1 className="mt-5">{post.h1 || post.title}</h1>
           <p className="mt-4 max-w-[900px] text-secondary/70 dark:text-accent/70">{post.description}</p>
           <p className="mt-3 text-sm text-secondary/60 dark:text-accent/60">
             {new Date(post.datePublished).toLocaleDateString(locale === 'en' ? 'en-US' : locale)} {post.category ? `• ${post.category}` : ''}
@@ -146,6 +146,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {(post.sections || []).map((section: any, idx: number) => (
             <div key={`${post.slug}-section-${idx}`} className="rounded-xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
               {section.heading ? <h2 className="text-xl font-semibold">{section.heading}</h2> : null}
+              {section.summaryPoints?.length ? (
+                <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                  {section.summaryPoints.map((point: string) => (
+                    <li
+                      key={point}
+                      className="rounded-lg border border-stroke-2 bg-background-3 px-4 py-3 text-sm font-medium text-secondary dark:border-stroke-7 dark:bg-background-7 dark:text-accent"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
               {section.video?.youtubeEmbed ? (
                 <div className="mt-4 overflow-hidden rounded-2xl border border-stroke-2 bg-background-3 p-4 dark:border-stroke-7 dark:bg-background-7">
                   <div className="flex flex-wrap items-start justify-between gap-3">
@@ -190,6 +202,77 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <p key={`${post.slug}-${idx}-${pidx}`}>{paragraph}</p>
                 ))}
               </div>
+              {section.table?.headers?.length && section.table?.rows?.length ? (
+                <div className="mt-5 overflow-x-auto rounded-xl border border-stroke-2 dark:border-stroke-7">
+                  <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+                    <thead className="bg-background-3 dark:bg-background-7">
+                      <tr>
+                        {section.table.headers.map((header: string) => (
+                          <th key={header} scope="col" className="border-b border-stroke-2 px-4 py-3 font-semibold dark:border-stroke-7">
+                            {header}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.table.rows.map((row: string[], rowIndex: number) => (
+                        <tr key={`${post.slug}-${idx}-row-${rowIndex}`} className="border-b border-stroke-2 last:border-b-0 dark:border-stroke-7">
+                          {row.map((cell: string, cellIndex: number) => (
+                            <td key={`${rowIndex}-${cellIndex}`} className="px-4 py-3 align-top text-secondary/75 dark:text-accent/75">
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : null}
+              {section.checklist?.length ? (
+                <ul className="mt-5 space-y-3">
+                  {section.checklist.map((item: string) => (
+                    <li key={item} className="flex items-start gap-3 text-secondary/75 dark:text-accent/75">
+                      <span aria-hidden="true" className="mt-1 inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">
+                        ✓
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+              {section.links?.length ? (
+                <div className="mt-5 flex flex-wrap gap-3">
+                  {section.links.map((link: { label: string; href: string }) => (
+                    <Link key={`${link.href}-${link.label}`} href={withLocalePath(link.href, locale)} className="text-primary-500 underline">
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+              {section.sources?.length ? (
+                <div className="mt-5 border-t border-stroke-2 pt-4 dark:border-stroke-7">
+                  <p className="text-sm font-semibold text-secondary dark:text-accent">Official sources</p>
+                  <ul className="mt-2 space-y-2 text-sm">
+                    {section.sources.map((source: { label: string; href: string }) => (
+                      <li key={source.href}>
+                        <a href={source.href} rel="noopener noreferrer" target="_blank" className="text-primary-500 underline">
+                          {source.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              {section.faq?.length ? (
+                <div className="mt-5 grid gap-4 md:grid-cols-2">
+                  {section.faq.map((item: { question: string; answer: string }) => (
+                    <article key={item.question} className="rounded-xl border border-stroke-2 p-5 dark:border-stroke-7">
+                      <h3 className="text-base font-semibold">{item.question}</h3>
+                      <p className="mt-2 text-secondary/70 dark:text-accent/70">{item.answer}</p>
+                    </article>
+                  ))}
+                </div>
+              ) : null}
             </div>
           ))}
         </div>

@@ -41,8 +41,8 @@ export default function IndustryBookingTemplate({
           badge: overline,
           title,
           subtitle: intro,
-          primaryCta: { label: 'Explore online booking', href: '/booking' },
-          secondaryCta: { label: 'See website builder', href: '/website-builder' },
+          primaryCta: { label: 'Explore online booking', href: '/en/booking' },
+          secondaryCta: { label: 'See website builder', href: '/en/website-builder' },
         }}
         featuresTitle="Operational sections"
         features={sections.map((section) => ({
@@ -57,11 +57,11 @@ export default function IndustryBookingTemplate({
             body: 'If you are evaluating options, review side-by-side comparisons before committing to a migration timeline.',
           },
         ]}
-        compareLinks={compareLinks}
+        compareLinks={compareLinks.map((item) => ({ ...item, href: `/en${item.href}` }))}
         useCasesTitle="Compare links"
         useCasesIntro="Evaluate Schedulaa against alternatives relevant to your team."
         useCases={compareLinks.map((item) => item.label)}
-        nextLinks={compareLinks}
+        nextLinks={compareLinks.map((item) => ({ ...item, href: `/en${item.href}` }))}
       />
 
       <TemplateProcessLayout

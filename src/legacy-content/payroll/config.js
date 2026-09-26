@@ -858,22 +858,22 @@ const roeConfig = {
 
 const t4Config = {
   meta: {
-    title: "T4 Generator – Canada Year-End Slips (PDF & XML) | Schedulaa",
+    title: "T4 Generator for Canadian Payroll (PDF & CRA XML) | Schedulaa",
     description:
-      "Generate CRA-compliant T4 slips with PDF, XML, and ZIP packages. Prefill boxes from payroll runs and batch deliver to employees.",
+      "Generate T4 slips from finalized Schedulaa payroll, review CRA boxes, and export employee PDFs, CRA XML, CSV summaries, and ZIP packages.",
     canonical: `${BASE_URL}/payroll/tools/t4`,
     og: {
-      title: "T4 Generator with CRA XML Export | Schedulaa",
+      title: "T4 Generator for Canadian Payroll (PDF & CRA XML) | Schedulaa",
       description:
-        "Create T4 slips, render PDF copies, export CRA XML, and bundle everything in a ZIP with a single workflow.",
+        "Generate T4 slips from finalized Schedulaa payroll, review CRA boxes, and export employee PDFs, CRA XML, CSV summaries, and ZIP packages.",
       image: `${BASE_URL}/images/payroll-t4-preview.png`,
       url: `${BASE_URL}/payroll/tools/t4`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "T4 Generator with CRA XML Export | Schedulaa",
+      title: "T4 Generator for Canadian Payroll (PDF & CRA XML) | Schedulaa",
       description:
-        "Schedulaa fills T4 boxes from payroll data, renders PDF, builds CRA XML, and bundles slips in one workflow.",
+        "Generate T4 slips from finalized Schedulaa payroll, review CRA boxes, and export employee PDFs, CRA XML, CSV summaries, and ZIP packages.",
       image: `${BASE_URL}/images/payroll-t4-preview.png`,
     },
   },
@@ -884,7 +884,6 @@ const t4Config = {
       name: "Schedulaa T4 Generator",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      offers: { "@type": "Offer", price: "0.00", priceCurrency: "CAD" },
       featureList: [
         "Prefill CRA boxes from payroll",
         "Render PDF copies",
@@ -911,6 +910,8 @@ const t4Config = {
   },
   featuresHeading: "Capabilities",
   featuresTitle: "Year-end slips without manual data entry",
+  featuresIntro:
+    "The T4 generator is part of Schedulaa's Canadian payroll workflow. It uses finalized payroll records rather than acting as a standalone blank-form tool.",
   features: [
     {
       icon: "document",
@@ -933,6 +934,13 @@ const t4Config = {
       description:
         "Bundle PDF, XML, and CSV summaries in a single ZIP file for safe storage or delivery to your compliance team.",
     },
+    {
+      icon: "compliance",
+      label: "Source data",
+      title: "Built from finalized Schedulaa payroll",
+      description:
+        "The generator reads finalized Canadian payroll for the selected tax year, including supported earnings, CPP, EI, tax, taxable benefits, and related T4 box values.",
+    },
   ],
   highlights: [
     {
@@ -947,7 +955,9 @@ const t4Config = {
     },
   ],
   stepsHeading: "Process",
-  stepsTitle: "From payroll history to T4 packages",
+  stepsTitle: "How the T4 generator works",
+  stepsIntro:
+    "Finalize the source payroll first, then generate, review, validate, and export the year-end package.",
   steps: [
     {
       title: "Select the tax year",
@@ -957,7 +967,7 @@ const t4Config = {
     {
       title: "Review prefilled data",
       description:
-        "Confirm CRA boxes, employer information, and footnotes before exporting.",
+        "Confirm employee and employer identity, review prefilled CRA boxes, edit draft box values where needed, and resolve validation warnings before issuing slips.",
     },
     {
       title: "Export PDF, XML, ZIP",
@@ -971,7 +981,10 @@ const t4Config = {
       label: "Connected tools",
       title: "ROE generator included",
       body: "Need Records of Employment as well? Switch to the ROE generator without leaving your workflow.",
-      links: [{ label: "Open ROE generator", href: "/payroll/tools/roe" }],
+      links: [
+        { label: "Open ROE generator", href: "/payroll/tools/roe" },
+        { label: "Read the T4, W-2, and ROE employer guide", href: "/blog/roe-t4-w2-year-end-guide" },
+      ],
     },
   ],
   faqHeading: "FAQ",
@@ -986,6 +999,31 @@ const t4Config = {
       question: "Can employees receive their T4 online?",
       answer:
         "After you generate T4 slips, you can distribute the PDF copies through the payslip portal or your preferred delivery channel.",
+    },
+    {
+      question: "Does the T4 generator work without Schedulaa payroll?",
+      answer:
+        "No. The generator is connected to Schedulaa's Canadian payroll workflow and uses finalized payroll records for the selected tax year. It is not a free standalone blank T4 form generator.",
+    },
+    {
+      question: "What payroll data is required?",
+      answer:
+        "You need finalized Canadian payroll for the reporting year plus complete employee and employer identity information. Review employment income, CPP, EI, income tax, taxable benefits, pension adjustments, and any supported information codes before issuance.",
+    },
+    {
+      question: "Which outputs are supported?",
+      answer:
+        "The workflow supports employee PDF slips, CRA XML, CSV summaries, and batch ZIP packages for organized review and delivery.",
+    },
+    {
+      question: "Can I correct a T4 before it is issued?",
+      answer:
+        "Managers can review and edit supported CRA box values on a draft slip, rerun validation, and then issue it. If a slip has already been filed, follow the CRA's current amendment process rather than treating it as an unfiled draft.",
+    },
+    {
+      question: "Does Schedulaa file the T4 return for me?",
+      answer:
+        "Schedulaa prepares supported files and export packages. Your organization remains responsible for reviewing the records and completing the applicable CRA submission and employee-delivery steps.",
     },
   ],
   cta: sharedCta,

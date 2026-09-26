@@ -434,6 +434,9 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
               <Link href="/en/booking/tutor" className="btn btn-white btn-md dark:btn-transparent">
                 Tutoring booking workflow
               </Link>
+              <Link href="/en/booking/spa" className="btn btn-white btn-md dark:btn-transparent">
+                Spa booking workflow
+              </Link>
               <Link href="/en/website-builder" className="btn btn-white btn-md dark:btn-transparent">
                 Website builder
               </Link>

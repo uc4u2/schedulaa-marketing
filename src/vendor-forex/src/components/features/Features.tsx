@@ -11,6 +11,8 @@ import cardFiveImgDark from '@public/images/ns-img-dark-67.png';
 import Image from 'next/image';
 import sourceEn from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
+import Link from 'next/link';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 
 const cardImages = [
   { light: cardOneImg, dark: cardOneImgDark },
@@ -20,15 +22,15 @@ const cardImages = [
   { light: cardFiveImg, dark: cardFiveImgDark },
 ];
 
-const Features = ({ source }: { source?: any }) => {
+const Features = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }) => {
   const content = source || sourceEn;
   const cards = [
-    content.highlightCards?.commerce,
-    content.highlightCards?.scheduling,
-    (content.featureShowcase?.features || [])[2],
-    (content.featureShowcase?.features || [])[0],
-    (content.featureShowcase?.features || [])[1],
-  ].filter(Boolean) as Array<{ title: string; description?: string; points?: string[] }>;
+    { ...((content.featureShowcase?.features || [])[2] || {}), href: '/website-builder', linkLabel: 'Explore Website Builder' },
+    { ...((content.featureShowcase?.features || [])[0] || {}), href: '/booking', linkLabel: 'Explore Online Booking' },
+    { ...(content.highlightCards?.commerce || {}), href: '/commerce', linkLabel: 'Explore Products and Commerce' },
+    { ...((content.featureShowcase?.features || [])[1] || {}), href: '/business-finance/invoices', linkLabel: 'Explore Invoices and Payments' },
+    { ...(content.highlightCards?.payroll || {}), href: '/workforce', linkLabel: 'Explore Workforce Scheduling' },
+  ].filter((card) => card.title) as Array<{ title: string; description?: string; points?: string[]; href: string; linkLabel: string }>;
 
   return (
     <section className="pt-[100px] pb-[100px] md:pt-[160px]" aria-label="Features">
@@ -39,7 +41,7 @@ const Features = ({ source }: { source?: any }) => {
               <span className="badge badge-green">{content.hero.featureCard.eyebrow}</span>
             </RevealAnimation>
             <RevealAnimation delay={0.4}>
-              <h2 className="mx-auto max-w-[814px]">{content.hero.featureCard.title}</h2>
+              <h1 className="mx-auto max-w-[980px]">{content.hero.featureCard.title}</h1>
             </RevealAnimation>
             <RevealAnimation delay={0.5}>
               <p className="mx-auto max-w-[734px]">{content.hero.featureCard.subtitle}</p>
@@ -59,6 +61,9 @@ const Features = ({ source }: { source?: any }) => {
                   <div className="space-y-1">
                     <h3 className="text-heading-5">{card.title}</h3>
                     <p>{card.description || card.points?.[0] || ''}</p>
+                    <Link href={withLocalePath(card.href, locale)} className="mt-3 inline-flex text-sm font-semibold text-primary-500 underline">
+                      {card.linkLabel}
+                    </Link>
                   </div>
                 </div>
               </RevealAnimation>
@@ -78,6 +83,9 @@ const Features = ({ source }: { source?: any }) => {
                   <div className="space-y-1">
                     <h3 className="text-heading-5">{card.title}</h3>
                     <p>{card.description || card.points?.[0] || ''}</p>
+                    <Link href={withLocalePath(card.href, locale)} className="mt-3 inline-flex text-sm font-semibold text-primary-500 underline">
+                      {card.linkLabel}
+                    </Link>
                   </div>
                 </div>
               </RevealAnimation>

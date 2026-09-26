@@ -5,8 +5,9 @@ import sourceEn from '@/legacy-content/features/landing-features.json';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import Link from 'next/link';
+import { AppLocale, withLocalePath } from '@/utils/locale';
 
-const Feature = ({ source }: { source?: any }) => {
+const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }) => {
   const content = source || sourceEn;
   const platformPoints = Object.values(content.platformMap.points || {}) as string[];
   return (
@@ -24,12 +25,12 @@ const Feature = ({ source }: { source?: any }) => {
                 <p className="mb-8 text-accent/70">{content.platformMap.subtitle}</p>
                 <div className="flex flex-wrap gap-3">
                   <LinkButton
-                    href="/website-builder"
+                    href={withLocalePath('/website-builder', locale)}
                     className="btn btn-primary btn-accent dark:btn-dark hover:btn-primary btn-md btn border-0">
                     {content.platformMap.primaryCta.label}
                   </LinkButton>
                   <Link
-                    href="/workforce"
+                    href={withLocalePath('/workforce', locale)}
                     className="btn btn-outline btn-md border-white/20 text-white hover:border-white/40 hover:bg-white/10"
                   >
                     Staff scheduling

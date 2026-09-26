@@ -14,6 +14,10 @@ export default async function BookingPage() {
   const growthHighlights = (source.highlights || []).slice(3);
   const page = {
     ...source,
+    secondaryLinks: [
+      ...(source.secondaryLinks || []),
+      { label: 'Spa booking for therapists and rooms', href: '/booking/spa' },
+    ],
     hero: {
       ...source.hero,
       title: 'Online booking for appointments, teams, and supported payments',

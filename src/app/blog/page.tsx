@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import posts from '@/legacy-content/blog/posts';
 import { defaultMetadata } from '@/utils/generateMetaData';
-import { DEFAULT_LOCALE, isSupportedLocale } from '@/utils/locale';
+import { DEFAULT_LOCALE, isSupportedLocale, withLocalePath } from '@/utils/locale';
 import { headers } from 'next/headers';
 import { Metadata } from 'next';
 
@@ -50,13 +50,13 @@ export default async function BlogPage() {
             {localized.heroBody}
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/website-builder" className="text-primary-500 underline">
+            <Link href={withLocalePath('/website-builder', locale)} className="text-primary-500 underline">
               {localized.l1}
             </Link>
-            <Link href="/booking" className="text-primary-500 underline">
+            <Link href={withLocalePath('/booking', locale)} className="text-primary-500 underline">
               {localized.l2}
             </Link>
-            <Link href="/business-finance/invoices" className="text-primary-500 underline">
+            <Link href={withLocalePath('/business-finance/invoices', locale)} className="text-primary-500 underline">
               {localized.l3}
             </Link>
           </div>
@@ -70,7 +70,7 @@ export default async function BlogPage() {
                 <span>{new Date(post.datePublished).toLocaleDateString(locale === 'en' ? 'en-US' : locale)}</span>
               </div>
               <h2 className="mt-2 text-xl font-semibold">
-                <Link href={`/blog/${post.slug}`} className="hover:text-primary-500">
+                <Link href={withLocalePath(`/blog/${post.slug}`, locale)} className="hover:text-primary-500">
                   {post.title}
                 </Link>
               </h2>

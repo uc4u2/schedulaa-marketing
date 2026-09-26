@@ -110,7 +110,7 @@ function BookingCards({ features }: { features: ContentCard[] }) {
         {features.map((feature, index) => (
           <article key={`${feature.title}-${index}`} className="rounded-[22px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-6 shadow-box">
             {feature.overline ? <p className="premium-eyebrow">{feature.overline}</p> : null}
-            <h3 className="mt-2 text-heading-5 text-white">{feature.title}</h3>
+            <h2 className="mt-2 text-heading-5 text-white">{feature.title}</h2>
             <p className="mt-3 text-accent/72">{feature.body}</p>
             {feature.points?.length ? (
               <ul className="mt-4 space-y-2">
@@ -140,7 +140,7 @@ function BookingHighlights({ highlights = [], compareLinks }: { highlights?: Con
         {highlights.map((item, index) => (
           <article key={`${item.title}-${index}`} className="rounded-[20px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-6 shadow-box">
             {item.overline ? <p className="premium-eyebrow">{item.overline}</p> : null}
-            <h3 className="mt-2 text-heading-5 text-white">{item.title}</h3>
+            <h2 className="mt-2 text-heading-5 text-white">{item.title}</h2>
             <p className="mt-3 text-accent/72">{item.body}</p>
             {item.points?.length ? (
               <ul className="mt-4 space-y-2">
@@ -176,7 +176,7 @@ function BookingNextLinks({ useCasesTitle, useCasesIntro, useCases, nextLinks }:
       <div className="main-container rounded-[24px] border border-stroke-7 bg-linear-[145deg,#12151f_0%,#171d2f_55%,#1f2c1d_100%] p-8 shadow-box md:p-10">
         <div className="grid gap-5 md:grid-cols-2">
           <div>
-            {useCasesTitle ? <h3 className="text-white">{useCasesTitle}</h3> : null}
+            {useCasesTitle ? <h2 className="text-white">{useCasesTitle}</h2> : null}
             {useCasesIntro ? <p className="mt-3 text-accent/72">{useCasesIntro}</p> : null}
             {nextLinks?.[0] ? (
               <Link href={nextLinks[0].href} className="btn btn-primary btn-md mt-6 hover:btn-white dark:hover:btn-accent">
