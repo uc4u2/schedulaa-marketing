@@ -248,17 +248,19 @@ export default function HomeForexLayout({ locale }: Props) {
                       content_name: 'Homepage Mobile App Book Demo',
                       page_path: '/',
                     }}
+                    analyticsCta={{ name: 'book_demo', pagePath: '/', placement: 'mobile_app_section' }}
                   >
                     {MOBILE_APP_SECTION_COPY.primaryCta}
                   </TrackedLink>
                   <TrackedLink
                     href={buildAppUrl('/register', { returnTo })}
                     className="btn btn-white btn-md min-w-[170px] dark:btn-transparent"
-                    eventName="CompleteRegistration"
+                    eventName="Lead"
                     eventParams={{
                       content_name: 'Homepage Mobile App Start Free',
                       page_path: '/',
                     }}
+                    analyticsCta={{ name: 'start_free', pagePath: '/', placement: 'mobile_app_section' }}
                   >
                     {MOBILE_APP_SECTION_COPY.secondaryCta}
                   </TrackedLink>
@@ -306,6 +308,7 @@ export default function HomeForexLayout({ locale }: Props) {
                       content_name: 'Homepage Proof Book Demo',
                       page_path: '/',
                     }}
+                    analyticsCta={{ name: 'book_demo', pagePath: '/', placement: 'proof_section' }}
                   >
                     {laborCopy.primaryCta}
                   </TrackedLink>

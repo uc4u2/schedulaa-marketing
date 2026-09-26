@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "seo:runtime-audit": "node scripts/seo-runtime-audit.mjs",
+    "test:seo": "node --import tsx --test tests/seo/*.test.ts",
     "i18n:parity": "node scripts/i18n-parity-check.mjs",
     "i18n:ascii": "node scripts/i18n-ascii-check.mjs",
     "lint": "eslint .",

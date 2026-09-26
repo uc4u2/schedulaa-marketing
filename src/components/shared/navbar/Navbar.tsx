@@ -20,6 +20,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { trackMetaPixel } from '@/utils/metaPixel';
+import { trackAnalyticsEvent } from '@/utils/analytics';
 
 type MenuPanelProps = {
   open: boolean;
@@ -560,6 +561,12 @@ const Navbar = () => {
                   content_name: 'Navbar Book Demo',
                   page_path: pathname,
                 });
+                trackAnalyticsEvent('primary_cta_click', {
+                  cta_name: 'book_demo',
+                  page_path: pathname,
+                  destination: bookDemoHref,
+                  placement: 'desktop_navbar',
+                });
                 setDemoOpen(true);
               }
             }
@@ -669,9 +676,15 @@ const Navbar = () => {
               href={buildAppUrl(item.href, { returnTo })}
               onClick={() => {
                 if (item.id === 'start-free') {
-                  trackMetaPixel('CompleteRegistration', {
+                  trackMetaPixel('Lead', {
                     content_name: 'Navbar Start Free Trial',
                     page_path: pathname,
+                  });
+                  trackAnalyticsEvent('primary_cta_click', {
+                    cta_name: 'start_free',
+                    page_path: pathname,
+                    destination: buildAppUrl(item.href, { returnTo }),
+                    placement: 'desktop_navbar',
                   });
                 }
               }}
@@ -727,9 +740,15 @@ const Navbar = () => {
                 href={buildAppUrl(item.href, { returnTo })}
                 onClick={() => {
                   if (item.id === 'start-free') {
-                    trackMetaPixel('CompleteRegistration', {
+                    trackMetaPixel('Lead', {
                       content_name: 'Mobile Navbar Start Free Trial',
                       page_path: pathname,
+                    });
+                    trackAnalyticsEvent('primary_cta_click', {
+                      cta_name: 'start_free',
+                      page_path: pathname,
+                      destination: buildAppUrl(item.href, { returnTo }),
+                      placement: 'mobile_navbar',
                     });
                   }
                   setOpen(false);
@@ -750,6 +769,12 @@ const Navbar = () => {
                 trackMetaPixel('Lead', {
                   content_name: 'Mobile Navbar Book Demo',
                   page_path: pathname,
+                });
+                trackAnalyticsEvent('primary_cta_click', {
+                  cta_name: 'book_demo',
+                  page_path: pathname,
+                  destination: bookDemoHref,
+                  placement: 'mobile_navbar',
                 });
                 setOpen(false);
                 setDemoOpen(true);

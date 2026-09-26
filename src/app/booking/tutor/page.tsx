@@ -1,12 +1,11 @@
 import IndustryBookingTemplate from '@/components/booking-template/IndustryBookingTemplate';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
+import { tutorBookingMetadata } from '@/lib/seo/bookingMetadata';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Tutor Booking Software | Schedulaa',
-  description:
-    'Run tutor scheduling, class booking, attendance tracking, and client communication from one platform for education teams.',
+  ...tutorBookingMetadata,
 };
 
 export default function TutorBookingPage() {

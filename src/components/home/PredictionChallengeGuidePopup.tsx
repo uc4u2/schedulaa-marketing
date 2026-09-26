@@ -153,7 +153,7 @@ export default function PredictionChallengeGuidePopup({
             <TrackedLink
               href={buildAppUrl('/register', { returnTo: predictionTarget })}
               className="btn btn-green btn-md w-full border-0 text-center"
-              eventName="CompleteRegistration"
+              eventName="Lead"
               eventParams={{
                 content_name: 'Prediction Guide Start Free',
                 page_path: '/',

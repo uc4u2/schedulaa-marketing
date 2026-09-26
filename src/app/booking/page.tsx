@@ -1,6 +1,10 @@
 import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPage';
 import { getBookingSource } from '@/legacy-content/booking/getBookingSource';
 import { getServerLocale } from '@/utils/serverLocale';
+import { bookingMetadata } from '@/lib/seo/bookingMetadata';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = bookingMetadata;
 
 export default async function BookingPage() {
   const locale = await getServerLocale();
@@ -10,6 +14,12 @@ export default async function BookingPage() {
   const growthHighlights = (source.highlights || []).slice(3);
   const page = {
     ...source,
+    hero: {
+      ...source.hero,
+      title: 'Online booking for appointments, teams, and supported payments',
+      subtitle:
+        'Give customers a clear booking path while your team manages services, availability, confirmations, packages, and supported Stripe checkout workflows from the same operational system.',
+    },
     highlights: [],
     sections: [
       {

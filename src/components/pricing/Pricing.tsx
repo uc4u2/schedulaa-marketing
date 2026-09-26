@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 
 import { getPricingSource } from '@/legacy-content/pricing/getPricingSource';
 import { buildAppUrl, buildUpgradeUrl, marketingReturnTo } from '@/utils/appLinks';
+import { trackAnalyticsEvent } from '@/utils/analytics';
 import { AppLocale, detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import { trackMetaPixel } from '@/utils/metaPixel';
 
@@ -117,24 +118,36 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
             <a
               href={buildAppUrl('/register', { returnTo })}
               className="btn btn-secondary btn-md"
-              onClick={() =>
-                trackMetaPixel('CompleteRegistration', {
+              onClick={() => {
+                trackMetaPixel('Lead', {
                   content_name: 'Pricing Hero Start Free Trial',
                   page_path: '/pricing',
-                })
-              }
+                });
+                trackAnalyticsEvent('primary_cta_click', {
+                  cta_name: 'start_free',
+                  page_path: '/pricing',
+                  destination: buildAppUrl('/register', { returnTo }),
+                  placement: 'pricing_hero',
+                });
+              }}
             >
               {hero.primaryCta.label}
             </a>
             <a
               href={bookDemoHref}
               className="btn btn-primary btn-md"
-              onClick={() =>
+              onClick={() => {
                 trackMetaPixel('Lead', {
                   content_name: 'Pricing Hero Book Demo',
                   page_path: '/pricing',
-                })
-              }
+                });
+                trackAnalyticsEvent('primary_cta_click', {
+                  cta_name: 'book_demo',
+                  page_path: '/pricing',
+                  destination: bookDemoHref,
+                  placement: 'pricing_hero',
+                });
+              }}
             >
               Book a demo
             </a>
@@ -209,26 +222,38 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
                 <a
                   href={planHrefFor(plan.key)}
                   className="btn btn-md btn-secondary mb-5 block w-full text-center"
-                  onClick={() =>
-                    trackMetaPixel('CompleteRegistration', {
+                  onClick={() => {
+                    trackMetaPixel('Lead', {
                       content_name: `Pricing Plan Start Free Trial - ${plan.name}`,
                       page_path: '/pricing',
                       plan_name: plan.name,
-                    })
-                  }
+                    });
+                    trackAnalyticsEvent('primary_cta_click', {
+                      cta_name: 'start_free',
+                      page_path: '/pricing',
+                      destination: planHrefFor(plan.key),
+                      placement: `pricing_plan_${plan.key}`,
+                    });
+                  }}
                 >
                   {plan.secondaryCtaLabel || plan.ctaLabel || 'Start 14-day free trial'}
                 </a>
                 <a
                   href={bookDemoHref}
                   className="mb-5 block text-center text-sm font-medium text-primary underline-offset-4 hover:underline"
-                  onClick={() =>
+                  onClick={() => {
                     trackMetaPixel('Lead', {
                       content_name: `Pricing Plan Book Demo - ${plan.name}`,
                       page_path: '/pricing',
                       plan_name: plan.name,
-                    })
-                  }
+                    });
+                    trackAnalyticsEvent('primary_cta_click', {
+                      cta_name: 'book_demo',
+                      page_path: '/pricing',
+                      destination: bookDemoHref,
+                      placement: `pricing_plan_${plan.key}`,
+                    });
+                  }}
                 >
                   {plan.ctaLabel === 'Book a demo' ? plan.ctaLabel : 'Book a demo'}
                 </a>

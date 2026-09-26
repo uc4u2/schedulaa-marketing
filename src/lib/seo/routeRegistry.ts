@@ -1,7 +1,7 @@
 import { compareList } from '@/legacy-content/compare/config';
 import blogPosts from '@/legacy-content/blog/posts';
 
-export const LOCALES = ['en', 'fa'] as const;
+export const LOCALES = ['en', 'fa', 'ru', 'zh', 'es', 'fr', 'de', 'ar', 'pt'] as const;
 export type Locale = (typeof LOCALES)[number];
 
 export const toLocalePath = (locale: Locale, path: string) => {

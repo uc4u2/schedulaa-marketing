@@ -7,6 +7,7 @@ import { AndroidPlatformIcon, ApplePlatformIcon } from '@/components/shared/AppP
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import { trackMetaPixel } from '@/utils/metaPixel';
+import { trackAnalyticsEvent } from '@/utils/analytics';
 
 const DEMO_EMAIL = process.env.NEXT_PUBLIC_DEMO_EMAIL || 'testschedulaa@gmail.com';
 const DEMO_PASSWORD = process.env.NEXT_PUBLIC_DEMO_PASSWORD || 'Test!12345';
@@ -231,12 +232,18 @@ export default function DemoLandingPage() {
             <a
               href={DEMO_BOOKING_URL}
               className="btn btn-primary btn-md"
-              onClick={() =>
+              onClick={() => {
                 trackMetaPixel('Lead', {
                   content_name: 'Demo Page Book Demo',
                   page_path: '/demo',
-                })
-              }
+                });
+                trackAnalyticsEvent('primary_cta_click', {
+                  cta_name: 'book_demo',
+                  page_path: '/demo',
+                  destination: DEMO_BOOKING_URL,
+                  placement: 'demo_hero',
+                });
+              }}
             >
               {copy.bookDemo || 'Book a live demo'}
             </a>

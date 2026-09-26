@@ -1,7 +1,7 @@
-import type { NextRequest } from 'next/server';
-import { NextResponse } from 'next/server';
+import { NextResponse, type NextRequest } from 'next/server';
 
 import { DEFAULT_LOCALE, isSupportedLocale } from '@/utils/locale';
+import { hasTranslatedRoute } from '@/lib/seo/localization';
 
 const PUBLIC_FILE = /\.(.*)$/;
 const LEGACY_REDIRECTS: Record<string, string> = {
@@ -12,8 +12,12 @@ const LEGACY_REDIRECTS: Record<string, string> = {
 };
 
 const normalizePath = (pathname: string) => {
-  if (!pathname) return '/';
-  if (pathname === '/') return pathname;
+  if (!pathname) {
+    return '/';
+  }
+  if (pathname === '/') {
+    return pathname;
+  }
   return pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
 };
 
@@ -73,6 +77,15 @@ export function middleware(request: NextRequest) {
       redirectUrl.pathname = `/${maybeLocale}${legacyTarget}`;
       redirectUrl.search = search;
       return NextResponse.redirect(redirectUrl);
+    }
+
+    if (maybeLocale !== 'en' && !hasTranslatedRoute(normalizedPath, maybeLocale)) {
+      const redirectUrl = request.nextUrl.clone();
+      redirectUrl.pathname = `/en${normalizedPath === '/' ? '' : normalizedPath}`;
+      redirectUrl.search = search;
+      const response = NextResponse.redirect(redirectUrl, 308);
+      response.cookies.set('NEXT_LOCALE', 'en', { path: '/', sameSite: 'lax' });
+      return response;
     }
 
     const rewriteUrl = request.nextUrl.clone();

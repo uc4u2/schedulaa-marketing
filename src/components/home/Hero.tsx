@@ -7,6 +7,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import { usePathname } from 'next/navigation';
 import { trackMetaPixel } from '@/utils/metaPixel';
+import { trackAnalyticsEvent } from '@/utils/analytics';
 
 const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
 const DEMO_BOOKING_URL =
@@ -61,12 +62,18 @@ const Hero = () => {
               <li className="w-full sm:w-auto">
                 <LinkButton
                   href={`${APP_ORIGIN}/register`}
-                  onClick={() =>
-                    trackMetaPixel('CompleteRegistration', {
+                  onClick={() => {
+                    trackMetaPixel('Lead', {
                       content_name: 'Hero Start Free Trial',
                       page_path: pathname,
-                    })
-                  }
+                    });
+                    trackAnalyticsEvent('primary_cta_click', {
+                      cta_name: 'start_free',
+                      page_path: pathname,
+                      destination: `${APP_ORIGIN}/register`,
+                      placement: 'hero',
+                    });
+                  }}
                   className="btn btn-primary hover:btn-white dark:hover:btn-accent btn-lg md:btn-xl mx-auto block w-[90%] border-0 sm:mx-0 md:inline-block md:w-auto"
                 >
                   {t('getStarted')}
@@ -77,12 +84,18 @@ const Hero = () => {
               <li className="w-full sm:w-auto">
                 <LinkButton
                   href={DEMO_BOOKING_URL}
-                  onClick={() =>
+                  onClick={() => {
                     trackMetaPixel('Lead', {
                       content_name: 'Hero Book Demo',
                       page_path: pathname,
-                    })
-                  }
+                    });
+                    trackAnalyticsEvent('primary_cta_click', {
+                      cta_name: 'book_demo',
+                      page_path: pathname,
+                      destination: DEMO_BOOKING_URL,
+                      placement: 'hero',
+                    });
+                  }}
                   className="btn btn-lg md:btn-xl dark:btn-transparent btn-dark bg-accent/20 hover:btn-primary mx-auto block w-[90%] sm:mx-0 md:inline-block md:w-auto dark:border"
                 >
                   {t('login')}

@@ -5,6 +5,7 @@ import PageShell from '@/components/shared/layout/PageShell';
 import { usePathname } from 'next/navigation';
 import { detectLocaleFromPath } from '@/utils/locale';
 import { trackMetaPixel } from '@/utils/metaPixel';
+import { trackAnalyticsEvent } from '@/utils/analytics';
 
 const API_ORIGIN =
   process.env.NEXT_PUBLIC_BACKEND_URL ||
@@ -223,6 +224,13 @@ export default function MarketingContactContent() {
       trackMetaPixel('Lead', {
         content_name: 'Marketing Contact Form',
         content_category: 'Contact',
+        plan_interest: form.plan,
+        has_company: Boolean(form.company.trim()),
+        has_phone: Boolean(form.phone.trim()),
+      });
+      trackAnalyticsEvent('contact_submit', {
+        form_name: 'marketing_contact',
+        page_path: window.location.pathname,
         plan_interest: form.plan,
         has_company: Boolean(form.company.trim()),
         has_phone: Boolean(form.phone.trim()),
