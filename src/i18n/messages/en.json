@@ -69,6 +69,12 @@
     "privacy": "Privacy",
     "refundPolicy": "Refund policy",
     "terms": "Terms",
+    "userAgreement": "User Agreement",
+    "cookiePolicy": "Cookie Policy",
+    "acceptableUse": "Acceptable Use",
+    "dataProcessing": "Data Processing",
+    "security": "Security",
+    "accountDeletion": "Account deletion",
     "login": "Log in",
     "getStarted": "Get started",
     "copyright": "© {year} Schedulaa. All rights reserved."

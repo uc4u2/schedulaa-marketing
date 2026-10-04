@@ -1,131 +1,329 @@
-import { defaultMetadata } from '@/utils/generateMetaData';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import LegalDocumentLayout, {
+  type LegalSection,
+} from "@/components/legal/LegalDocumentLayout";
+import { defaultMetadata } from "@/utils/generateMetaData";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Privacy | Schedulaa',
-  description: 'How Schedulaa collects, uses, and protects personal data, including fraud and billing-risk controls.',
+  title: "Privacy Policy | Schedulaa",
+  description:
+    "How Schedulaa collects, uses, shares, protects, retains, and processes personal information across its platform.",
 };
+
+const copy = "leading-7 text-secondary/80 dark:text-accent/75";
+const list = `list-disc space-y-2 pl-6 ${copy}`;
+const legalLink =
+  "font-medium text-primary-500 underline decoration-primary-500/35 underline-offset-4";
+
+const sections: LegalSection[] = [
+  {
+    id: "scope",
+    title: "Scope and our role",
+    content: (
+      <>
+        <p className={copy}>
+          This Privacy Policy describes how Photo Artisto Corp., doing business
+          as Schedulaa, handles personal information across our websites,
+          applications, support channels, and connected services.
+        </p>
+        <p className={copy}>
+          Schedulaa generally acts as a service provider or processor when a
+          customer organization uses the platform to manage employee,
+          contractor, or client information. That customer determines why and
+          how its workspace data is used. Schedulaa acts as an organization
+          responsible for information used for account administration, billing,
+          security, support, product analytics, and our own marketing.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "information",
+    title: "Information we collect",
+    content: (
+      <ul className={list}>
+        <li>
+          Account details such as name, contact information, role, organization,
+          authentication data, and preferences.
+        </li>
+        <li>
+          Workspace data such as bookings, schedules, services, customer
+          records, workforce records, and uploaded content.
+        </li>
+        <li>
+          Billing metadata such as plan, invoices, Stripe identifiers, payment
+          status, and limited card attributes.
+        </li>
+        <li>
+          Device and usage information such as IP address, browser, timestamps,
+          pages, feature activity, and diagnostics.
+        </li>
+        <li>
+          Security and fraud signals such as login events, risk indicators,
+          failed attempts, disputes, and audit records.
+        </li>
+        <li>
+          Support, sales, survey, and communications content provided through
+          email, forms, chat, or meetings.
+        </li>
+        <li>
+          Integration data exchanged when a customer connects an accounting,
+          payment, messaging, or other third-party service.
+        </li>
+        <li>
+          Location evidence when a customer enables and an individual uses a
+          location-dependent workforce feature.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: "sources",
+    title: "Where information comes from",
+    content: (
+      <p className={copy}>
+        We receive information directly from individuals, customer workspace
+        administrators, Authorized Users, connected services, payment providers,
+        devices and browsers, and security or analytics providers. Customers are
+        responsible for providing required notices and obtaining appropriate
+        authority before placing other people&apos;s information in a Schedulaa
+        workspace.
+      </p>
+    ),
+  },
+  {
+    id: "purposes",
+    title: "How we use information",
+    content: (
+      <ul className={list}>
+        <li>
+          Provide, configure, personalize, maintain, and support the Services.
+        </li>
+        <li>
+          Authenticate users, administer workspaces, and enforce permissions.
+        </li>
+        <li>
+          Process subscriptions, invoices, payments, refunds, taxes, and
+          disputes.
+        </li>
+        <li>
+          Deliver bookings, notifications, integrations, website features,
+          payroll workflows, and reports.
+        </li>
+        <li>
+          Monitor reliability, troubleshoot errors, analyze usage, and improve
+          products.
+        </li>
+        <li>
+          Protect accounts, detect abuse and fraud, investigate incidents, and
+          enforce agreements.
+        </li>
+        <li>
+          Communicate about services, support, security, transactions, and—where
+          permitted—product updates or marketing.
+        </li>
+        <li>
+          Meet legal, regulatory, tax, accounting, and recordkeeping
+          obligations.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: "location",
+    title: "Workforce and trip location features",
+    content: (
+      <>
+        <p className={copy}>
+          If a customer enables punch-location evidence, Schedulaa may collect
+          device location when an employee initiates Clock In or Clock Out. If a
+          customer enables dispatch trip tracking, location may be collected
+          during an active On my way workflow and when the employee marks
+          Arrived. These features support attendance review, dispatch
+          visibility, job coordination, operational security, and
+          customer-controlled temporary tracking links.
+        </p>
+        <p className={copy}>
+          These features are not intended for all-day or off-duty surveillance.
+          Collection depends on the enabled feature, user action, device
+          permission, and customer configuration. Customers are responsible for
+          using workplace and location features lawfully and providing required
+          notices or choices.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "sharing",
+    title: "When we disclose information",
+    content: (
+      <ul className={list}>
+        <li>
+          To the customer organization and its authorized workspace
+          administrators and users.
+        </li>
+        <li>
+          To vetted service providers supporting hosting, payments,
+          communications, analytics, support, and security.
+        </li>
+        <li>To third-party integrations at the customer&apos;s direction.</li>
+        <li>
+          To payment processors, card networks, banks, or fraud providers for
+          transactions and disputes.
+        </li>
+        <li>
+          To professional advisers, insurers, auditors, or transaction
+          counterparties subject to appropriate duties.
+        </li>
+        <li>
+          To authorities or other parties where required by law or reasonably
+          necessary to protect rights and safety.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: "international",
+    title: "International processing",
+    content: (
+      <p className={copy}>
+        Schedulaa and its service providers may process information in Canada,
+        the United States, or other countries where they operate. Information
+        may therefore be subject to the laws and lawful access requirements of
+        those locations. We use contractual, access-control, and
+        vendor-management measures designed to protect information when it is
+        processed by service providers.
+      </p>
+    ),
+  },
+  {
+    id: "retention",
+    title: "Retention and deletion",
+    content: (
+      <p className={copy}>
+        We retain personal information only as long as reasonably needed for the
+        purposes described here, customer instructions, security, dispute
+        resolution, backups, and legal or financial obligations. Retention
+        varies by data type, workspace settings, subscription status, and legal
+        requirements. Deletion requests are handled under our{" "}
+        <Link href="/account-deletion" className={legalLink}>
+          Account and Data Deletion
+        </Link>{" "}
+        process.
+      </p>
+    ),
+  },
+  {
+    id: "security",
+    title: "Security safeguards",
+    content: (
+      <p className={copy}>
+        We use administrative, technical, and organizational safeguards designed
+        for the sensitivity of the information, including transport encryption,
+        access controls, authentication, logging, monitoring, backups, and
+        vendor review. No internet service can guarantee absolute security.
+        Customers and users must protect credentials and promptly report
+        suspected unauthorized access.
+      </p>
+    ),
+  },
+  {
+    id: "rights",
+    title: "Privacy rights and choices",
+    content: (
+      <>
+        <p className={copy}>
+          Depending on jurisdiction and context, individuals may request access,
+          correction, deletion, restriction, or information about how personal
+          information is used and disclosed. Individuals may also withdraw
+          consent where processing depends on consent, subject to legal or
+          contractual limits.
+        </p>
+        <p className={copy}>
+          For information controlled by a customer workspace, contact that
+          organization first. For information controlled by Schedulaa, email{" "}
+          <a href="mailto:admin@schedulaa.com" className={legalLink}>
+            admin@schedulaa.com
+          </a>
+          . We may verify identity and authority before completing a request.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "cookies",
+    title: "Cookies, analytics, and communications",
+    content: (
+      <>
+        <p className={copy}>
+          We use cookies and similar technologies for sessions, preferences,
+          security, measurement, and analytics as described in our{" "}
+          <Link href="/cookie" className={legalLink}>
+            Cookie Policy
+          </Link>
+          . Browser and device controls may limit optional cookies but may
+          affect functionality.
+        </p>
+        <p className={copy}>
+          Transactional and security messages are part of the Services.
+          Marketing communications include an unsubscribe mechanism where
+          required. Unsubscribing from marketing does not stop essential account
+          or service messages.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "children",
+    title: "Children",
+    content: (
+      <p className={copy}>
+        Schedulaa&apos;s business Services are not directed to children who
+        cannot legally consent to the relevant processing. Customer
+        organizations are responsible for determining whether they may lawfully
+        place information about minors in a workspace and for obtaining any
+        required parent or guardian authorization.
+      </p>
+    ),
+  },
+  {
+    id: "changes-contact",
+    title: "Changes and contact",
+    content: (
+      <>
+        <p className={copy}>
+          We may update this policy to reflect legal, product, or operational
+          changes. Material updates will be communicated through the Services,
+          by email, or on this page where appropriate.
+        </p>
+        <p className={copy}>
+          Privacy questions or complaints may be sent to{" "}
+          <a href="mailto:admin@schedulaa.com" className={legalLink}>
+            admin@schedulaa.com
+          </a>{" "}
+          or Photo Artisto Corp., 171 Harbord Street, Toronto, Ontario M5S 1H3,
+          Canada.
+        </p>
+      </>
+    ),
+  },
+];
 
 export default function PrivacyPage() {
   return (
-    <main className="section-padding-x pb-24 pt-32 md:pt-36">
-      <div className="mx-auto max-w-4xl space-y-8">
-        <header className="space-y-4">
-          <h1 className="text-4xl font-semibold text-secondary dark:text-white">Privacy Policy</h1>
-          <p className="text-secondary/80 dark:text-accent/75">
-            Last updated: July 10, 2026. This policy describes how Schedulaa collects, uses, stores, and shares personal
-            data when you use our website, applications, and connected billing services.
-          </p>
-        </header>
-
-        <section className="space-y-3">
-          <h2 className="text-2xl font-semibold text-secondary dark:text-white">Data we collect</h2>
-          <ul className="list-disc space-y-2 pl-6 text-secondary/80 dark:text-accent/75">
-            <li>Account profile data, organization details, and workspace configuration.</li>
-            <li>Operational product data such as bookings, schedules, and service activity.</li>
-            <li>Billing and payment metadata from payment providers (for example Stripe IDs, invoice state, and card attributes).</li>
-            <li>Security and anti-fraud signals such as IP address, request timestamps, user agent, and risk events.</li>
-            <li>Punch-location evidence, if enabled by a company, such as employee/device location captured when an employee taps Clock In or Clock Out.</li>
-            <li>Trip-tracking data, if enabled by a company, such as employee/device location captured when an employee taps On my way or Arrived for an assigned job.</li>
-          </ul>
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="text-2xl font-semibold text-secondary dark:text-white">How we use data</h2>
-          <ul className="list-disc space-y-2 pl-6 text-secondary/80 dark:text-accent/75">
-            <li>Provide and secure Schedulaa services.</li>
-            <li>Process subscriptions, invoices, and payments.</li>
-            <li>Detect abuse, prevent fraud, and investigate suspicious billing behavior.</li>
-            <li>Support attendance verification, manager review, operational security, and timekeeping review.</li>
-            <li>Support active-trip dispatch visibility, client visit coordination, and temporary client tracking links when a company enables trip tracking.</li>
-            <li>Respond to payment disputes and legal/regulatory requests.</li>
-          </ul>
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="text-2xl font-semibold text-secondary dark:text-white">Punch location evidence</h2>
-          <p className="text-secondary/80 dark:text-accent/75">
-            If a company enables punch-location evidence, Schedulaa may collect employee/device location only when an
-            employee taps Clock In or Clock Out. This evidence is used for attendance verification, manager review,
-            operational security, and timekeeping review. Location data is collected only when the employee initiates a
-            clock-in or clock-out action.
-          </p>
-          <p className="text-secondary/80 dark:text-accent/75">
-            Schedulaa does not use this feature for background location tracking or continuous location monitoring. If
-            location is unavailable, denied, unsupported, or times out, employees may still be able to clock in or out
-            depending on the product flow. Punch-location evidence is advisory for manager review and is not continuous
-            surveillance.
-          </p>
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="text-2xl font-semibold text-secondary dark:text-white">On my way trip tracking</h2>
-          <p className="text-secondary/80 dark:text-accent/75">
-            If a company enables dispatch trip tracking, Schedulaa may collect employee/device location when an employee
-            taps <span className="font-medium text-secondary dark:text-white">On my way</span> for an assigned job and
-            again when the employee taps <span className="font-medium text-secondary dark:text-white">Arrived</span>.
-            This data is used for manager dispatch visibility, job coordination, operational review, and temporary
-            client-facing tracking links when the company enables client sharing for that trip.
-          </p>
-          <p className="text-secondary/80 dark:text-accent/75">
-            Schedulaa does not use this feature for all-day surveillance, background location collection outside an
-            active trip, or continuous off-duty monitoring. Trip tracking is intended for active job travel only and may
-            stop automatically when the employee marks the trip as arrived, depending on the company&apos;s settings.
-          </p>
-          <p className="text-secondary/80 dark:text-accent/75">
-            Client tracking links are temporary and company-controlled. A company may create, send, revoke, or
-            automatically expire these links based on its dispatch settings.
-          </p>
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="text-2xl font-semibold text-secondary dark:text-white">Fraud prevention controls</h2>
-          <p className="text-secondary/80 dark:text-accent/75">
-            To reduce card abuse and account takeover risk, Schedulaa may apply risk-based controls including attempt limits,
-            3D Secure challenges, prepaid-card restrictions for subscriptions, and temporary billing review holds.
-          </p>
-          <p className="text-secondary/80 dark:text-accent/75">
-            We may retain fraud-attempt and fraud-event records for limited periods to support operational security,
-            dispute response, and compliance.
-          </p>
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="text-2xl font-semibold text-secondary dark:text-white">Data sharing</h2>
-          <p className="text-secondary/80 dark:text-accent/75">
-            We share data with trusted subprocessors only as needed to operate the platform (for example payments, infrastructure,
-            email delivery, and security tooling). Payment data is handled by PCI-compliant payment providers.
-          </p>
-          <p className="text-secondary/80 dark:text-accent/75">
-            If a company enables trip-tracking links for a client visit, Schedulaa may share limited dispatch-trip data
-            with the intended client through a temporary secure link for that active visit.
-          </p>
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="text-2xl font-semibold text-secondary dark:text-white">Retention and controls</h2>
-          <p className="text-secondary/80 dark:text-accent/75">
-            Companies may configure certain dispatch retention and link-expiry settings in the product. Schedulaa
-            applies access controls, audit records, and revocation controls to support limited operational use of punch
-            and trip-location data.
-          </p>
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="text-2xl font-semibold text-secondary dark:text-white">Your rights</h2>
-          <p className="text-secondary/80 dark:text-accent/75">
-            Depending on your jurisdiction, you may have rights to access, correct, delete, or restrict certain personal data.
-            To submit a request, contact us through support.
-          </p>
-        </section>
-
-        <div className="flex gap-3">
-          <Link href="/security" className="btn btn-primary btn-sm">Security</Link>
-          <Link href="/data-processing" className="btn btn-secondary btn-sm">Data Processing</Link>
-        </div>
-      </div>
-    </main>
+    <LegalDocumentLayout
+      title="Privacy Policy"
+      summary="How Schedulaa collects, uses, discloses, protects, retains, and responds to requests involving personal information."
+      effectiveDate="October 4, 2026"
+      version="2026.10"
+      sections={sections}
+      relatedLinks={[
+        { href: "/user-agreement", label: "User Agreement", primary: true },
+        { href: "/data-processing", label: "Data Processing" },
+        { href: "/account-deletion", label: "Account Deletion" },
+      ]}
+    />
   );
 }

@@ -1,58 +1,97 @@
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import { detectLocaleFromPath, stripLocalePrefix, withLocalePath } from '@/utils/locale';
-import { cn } from '@/utils/cn';
-import { FOOTER_SECTIONS, type FooterLinkItem } from '@/data/footer-data';
-import gradientImg from '@public/images/ns-img-532.png';
-import legacyLogo from '@public/images/shared/schedulaa-logo-legacy.png';
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import FooterDivider from './FooterDivider';
-import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
+import { useTranslations } from "next-intl";
+import {
+  detectLocaleFromPath,
+  stripLocalePrefix,
+  withLocalePath,
+} from "@/utils/locale";
+import { cn } from "@/utils/cn";
+import { FOOTER_SECTIONS, type FooterLinkItem } from "@/data/footer-data";
+import gradientImg from "@public/images/ns-img-532.png";
+import legacyLogo from "@public/images/shared/schedulaa-logo-legacy.png";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import FooterDivider from "./FooterDivider";
+import { buildAppUrl, marketingReturnTo } from "@/utils/appLinks";
 
-const linkHref = (link: FooterLinkItem, localePath: (path: string) => string, returnTo: string) =>
-  link.externalAppLink ? buildAppUrl(link.href, { returnTo }) : localePath(link.href);
+const linkHref = (
+  link: FooterLinkItem,
+  localePath: (path: string) => string,
+  returnTo: string,
+) =>
+  link.externalAppLink
+    ? buildAppUrl(link.href, { returnTo })
+    : localePath(link.href);
 
-const linkLabel = (link: FooterLinkItem, t: (key: any, values?: any) => string) =>
-  link.labelKey ? t(link.labelKey) : link.label || '';
+const linkLabel = (
+  link: FooterLinkItem,
+  t: (key: any, values?: any) => string,
+) => (link.labelKey ? t(link.labelKey) : link.label || "");
 
 const Footer = ({ className }: { className?: string }) => {
-  const t = useTranslations('footer');
-  const pathname = usePathname() || '/';
+  const t = useTranslations("footer");
+  const pathname = usePathname() || "/";
   const locale = detectLocaleFromPath(pathname);
   const localePath = (path: string) => withLocalePath(path, locale);
-  const returnTo = marketingReturnTo(locale, stripLocalePrefix(pathname, locale) || '/');
-  const compareSection = FOOTER_SECTIONS.find((section) => section.id === 'compare');
-  const primarySections = FOOTER_SECTIONS.filter((section) => section.id !== 'compare');
+  const returnTo = marketingReturnTo(
+    locale,
+    stripLocalePrefix(pathname, locale) || "/",
+  );
+  const compareSection = FOOTER_SECTIONS.find(
+    (section) => section.id === "compare",
+  );
+  const primarySections = FOOTER_SECTIONS.filter(
+    (section) => section.id !== "compare",
+  );
 
   return (
-    <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
+    <footer
+      className={cn(
+        "bg-secondary dark:bg-background-8 relative z-0 overflow-hidden",
+        className,
+      )}
+    >
       <figure className="pointer-events-none absolute -top-[1320px] left-1/2 -z-1 size-[1635px] -translate-x-1/2 select-none">
-        <Image src={gradientImg} alt="footer gradient" className="size-full object-cover" />
+        <Image
+          src={gradientImg}
+          alt="footer gradient"
+          className="size-full object-cover"
+        />
       </figure>
 
       <div className="main-container px-5">
         <div className="grid grid-cols-12 justify-between gap-x-0 gap-y-16 pt-16 pb-12 xl:pt-[90px]">
-          <div className="col-span-12 xl:col-span-4">
+          <div className="col-span-12 xl:col-span-3">
             <div className="max-w-[306px]">
               <figure>
-                <Image src={legacyLogo} alt="Schedulaa" className="dark:invert" />
+                <Image
+                  src={legacyLogo}
+                  alt="Schedulaa"
+                  className="dark:invert"
+                />
               </figure>
-              <p className="text-accent/60 text-tagline-1 mt-4 mb-7 font-normal">{t('blurb')}</p>
+              <p className="text-accent/60 text-tagline-1 mt-4 mb-7 font-normal">
+                {t("blurb")}
+              </p>
             </div>
           </div>
 
-          <div className="col-span-12 grid grid-cols-1 gap-x-0 gap-y-8 md:grid-cols-2 xl:col-span-8 xl:grid-cols-4">
+          <div className="col-span-12 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 xl:col-span-9 xl:grid-cols-5">
             {primarySections.map((section) => (
               <div className="col-span-1" key={section.id}>
                 <div className="space-y-8">
-                  <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(section.titleKey)}</p>
+                  <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">
+                    {t(section.titleKey)}
+                  </p>
                   <ul className="space-y-5">
                     {section.links.map((link) => (
                       <li key={link.id}>
-                        <Link href={linkHref(link, localePath, returnTo)} className="footer-link">
+                        <Link
+                          href={linkHref(link, localePath, returnTo)}
+                          className="footer-link"
+                        >
                           {linkLabel(link, t)}
                         </Link>
                       </li>
@@ -65,11 +104,16 @@ const Footer = ({ className }: { className?: string }) => {
             {compareSection ? (
               <div className="col-span-1">
                 <div className="space-y-8">
-                  <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">{t(compareSection.titleKey)}</p>
+                  <p className="sm:text-heading-6 text-tagline-1 text-primary-50 font-normal">
+                    {t(compareSection.titleKey)}
+                  </p>
                   <ul className="space-y-5">
                     {compareSection.links.map((link) => (
                       <li key={link.id}>
-                        <Link href={linkHref(link, localePath, returnTo)} className="footer-link">
+                        <Link
+                          href={linkHref(link, localePath, returnTo)}
+                          className="footer-link"
+                        >
                           {linkLabel(link, t)}
                         </Link>
                       </li>
@@ -84,7 +128,7 @@ const Footer = ({ className }: { className?: string }) => {
         <div className="relative pt-[26px] pb-[42px] text-center">
           <FooterDivider className="bg-accent/10 dark:bg-stroke-6" />
           <p className="text-tagline-1 text-primary-50 font-normal">
-            {t('copyright', { year: new Date().getFullYear() })}
+            {t("copyright", { year: new Date().getFullYear() })}
           </p>
         </div>
       </div>
@@ -92,5 +136,5 @@ const Footer = ({ className }: { className?: string }) => {
   );
 };
 
-Footer.displayName = 'Footer';
+Footer.displayName = "Footer";
 export default Footer;
