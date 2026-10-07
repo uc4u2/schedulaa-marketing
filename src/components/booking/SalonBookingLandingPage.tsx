@@ -219,27 +219,23 @@ export default function SalonBookingLandingPage() {
               aria-hidden="true"
             />
             <div className="absolute inset-0 flex flex-col p-5 text-white sm:p-7">
-              <div className="flex items-start justify-between gap-4 border-b border-white/20 pb-4">
-                <div>
-                  <p className="font-serif text-lg font-semibold uppercase tracking-[0.16em] text-white sm:text-xl">
+              <div className="flex items-center justify-between gap-3 border-b border-white/20 pb-4">
+                <div className="min-w-0">
+                  <p className="whitespace-nowrap font-serif text-base font-semibold uppercase tracking-[0.13em] text-white sm:text-lg">
                     Avery Studio
                   </p>
-                  <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-amber-200/90 sm:text-[10px]">
+                  <p className="mt-1 hidden whitespace-nowrap text-[8px] font-semibold uppercase tracking-[0.22em] text-amber-200/90 sm:block">
                     Hair · Beauty · Toronto
                   </p>
                 </div>
-                <div className="flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.14em] sm:text-xs">
-                  <span className="hidden text-white/80 xl:inline">
-                    Services
-                  </span>
-                  <span className="hidden text-white/80 xl:inline">
-                    The studio
-                  </span>
-                  <span className="hidden text-white/80 2xl:inline">
-                    Contact
-                  </span>
-                  <span className="border border-amber-300/80 px-3 py-2 text-amber-100 sm:px-4">
-                    Book consultation
+                <div className="flex shrink-0 items-center gap-2">
+                  <div className="hidden items-center gap-3 rounded-full border border-white/15 bg-black/15 px-4 py-2 text-[9px] font-semibold uppercase tracking-[0.12em] text-white/82 backdrop-blur-sm sm:flex">
+                    <span className="whitespace-nowrap">Services</span>
+                    <span className="whitespace-nowrap">Studio</span>
+                    <span className="whitespace-nowrap">Contact</span>
+                  </div>
+                  <span className="whitespace-nowrap rounded-full bg-amber-300 px-4 py-2.5 text-[9px] font-bold uppercase tracking-[0.14em] text-stone-950 shadow-lg shadow-black/10">
+                    Book now
                   </span>
                 </div>
               </div>
@@ -255,11 +251,11 @@ export default function SalonBookingLandingPage() {
                   Thoughtful colour, styling, and beauty appointments shaped
                   around you.
                 </p>
-                <div className="mt-7 flex flex-wrap gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] sm:text-xs">
-                  <span className="bg-amber-300 px-5 py-3 text-stone-950">
+                <div className="mt-7 flex flex-wrap gap-3 text-[10px] font-semibold uppercase tracking-[0.14em] sm:text-xs">
+                  <span className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-amber-300 px-5 py-3 text-stone-950 shadow-lg shadow-black/10">
                     Book an appointment
                   </span>
-                  <span className="border border-white/60 px-5 py-3 text-white">
+                  <span className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/50 bg-black/10 px-5 py-3 text-white backdrop-blur-sm">
                     Explore services
                   </span>
                 </div>
