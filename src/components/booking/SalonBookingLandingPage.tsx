@@ -202,17 +202,36 @@ export default function SalonBookingLandingPage() {
             </div>
           </div>
 
-          <figure className="overflow-hidden rounded-[28px] border border-white/50 bg-white p-3 shadow-[0_30px_90px_rgba(15,23,42,0.18)] dark:border-white/10 dark:bg-background-8">
-            <Image
-              src="/images/marketing/website-builder.png"
-              alt="Schedulaa website builder editor showing a public website page"
-              width={1858}
-              height={926}
-              priority
-              className="h-auto w-full rounded-[20px]"
-            />
+          <figure className="overflow-hidden rounded-[28px] border border-white/60 bg-white p-3 shadow-[0_30px_90px_rgba(15,23,42,0.18)] dark:border-white/10 dark:bg-background-8">
+            <div className="mb-3 flex items-center justify-between px-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/45 dark:text-accent/45">
+              <span>Avery Studio</span>
+              <span className="flex gap-1.5" aria-hidden="true">
+                <span className="h-2 w-2 rounded-full bg-rose-300" />
+                <span className="h-2 w-2 rounded-full bg-amber-300" />
+                <span className="h-2 w-2 rounded-full bg-emerald-300" />
+              </span>
+            </div>
+            <div className="relative overflow-hidden rounded-[20px]">
+              <Image
+                src="/images/marketing/salon-studio-hero.webp"
+                alt="Fictional private salon with a stylist serving a client beside a softly lit mirror"
+                width={1536}
+                height={1024}
+                priority
+                className="aspect-[3/2] h-auto w-full object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent px-6 pt-24 pb-6 text-white">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/75">
+                  Private salon · Toronto
+                </p>
+                <p className="mt-2 max-w-[420px] text-2xl font-semibold leading-tight">
+                  Colour, styling, and beauty appointments—with booking built
+                  in.
+                </p>
+              </div>
+            </div>
             <figcaption className="px-3 pt-3 pb-1 text-sm text-secondary/60 dark:text-accent/60">
-              Current Schedulaa website-builder interface.
+              Example salon presentation using original, fictional imagery.
             </figcaption>
           </figure>
         </div>
@@ -229,6 +248,50 @@ export default function SalonBookingLandingPage() {
               <p className="mt-3 leading-7">{item.body}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="pb-20 md:pb-28">
+        <div className="main-container grid items-center gap-10 lg:grid-cols-[0.88fr_1.12fr]">
+          <div>
+            <span className="badge badge-yellow-v2 mb-4">
+              Services clients can understand
+            </span>
+            <h2>Show the work you offer before asking clients to book</h2>
+            <p className="mt-5 max-w-[620px] leading-8">
+              Present colour, cuts, styling, brows, lashes, and other services
+              with your own descriptions and imagery. Each service can lead into
+              the same connected booking experience.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2 text-sm font-semibold text-secondary dark:text-white">
+              {[
+                "Colour",
+                "Cuts & styling",
+                "Brows & lashes",
+                "Consultations",
+              ].map((service) => (
+                <span
+                  key={service}
+                  className="rounded-full border border-stroke-2 bg-white px-4 py-2 dark:border-stroke-7 dark:bg-background-8"
+                >
+                  {service}
+                </span>
+              ))}
+            </div>
+          </div>
+          <figure className="overflow-hidden rounded-[28px] border border-stroke-2 bg-white p-3 shadow-[0_26px_70px_rgba(15,23,42,0.14)] dark:border-stroke-7 dark:bg-background-8">
+            <Image
+              src="/images/marketing/salon-services.webp"
+              alt="Three fictional salon service scenes showing hair colour, styling, and brow care"
+              width={1774}
+              height={887}
+              className="h-auto w-full rounded-[20px]"
+            />
+            <figcaption className="px-3 pt-3 pb-1 text-sm text-secondary/60 dark:text-accent/60">
+              Original illustrative service photography; no real salon or
+              customer identity is shown.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -274,30 +337,30 @@ export default function SalonBookingLandingPage() {
         <div className="main-container grid items-center gap-12 lg:grid-cols-2">
           <div>
             <span className="badge badge-yellow-v2 mb-4">
-              Current product UI
+              Current booking experience
             </span>
-            <h2>Use one operational record after the appointment is booked</h2>
+            <h2>Move from a service page to a real available time</h2>
             <p className="mt-5 max-w-[650px] leading-8">
-              Schedulaa connects the public website to business workflows
-              instead of leaving the booking as an isolated widget. Teams can
-              work with customer records, appointments, supported checkout
-              modes, invoices, and payment links in the application.
+              Clients can select a service, review the eligible provider, and
+              choose from the availability published by the business. The
+              appointment stays connected to the customer and team schedule.
             </p>
             <p className="mt-4 max-w-[650px] leading-8">
-              The interface shown here is an existing Schedulaa payment and
-              invoice workflow—not a fabricated salon dashboard.
+              The example uses a fictional provider identity and synthetic
+              portrait so no real salon owner or employee is represented.
             </p>
           </div>
           <figure className="overflow-hidden rounded-[28px] border border-stroke-2 bg-white p-3 shadow-[0_26px_70px_rgba(15,23,42,0.14)] dark:border-stroke-7 dark:bg-background-8">
             <Image
-              src="/images/marketing/booking-checkout-invoice-detail.png"
-              alt="Schedulaa invoice detail with payment link and payment status controls"
-              width={842}
-              height={538}
+              src="/images/marketing/salon-booking-avery-morgan.webp"
+              alt="Schedulaa booking availability for fictional provider Avery Morgan"
+              width={1423}
+              height={1105}
               className="h-auto w-full rounded-[20px]"
             />
             <figcaption className="px-3 pt-3 pb-1 text-sm text-secondary/60 dark:text-accent/60">
-              Current Schedulaa invoice and payment-link interface.
+              Schedulaa booking availability shown with fictional provider Avery
+              Morgan.
             </figcaption>
           </figure>
         </div>
