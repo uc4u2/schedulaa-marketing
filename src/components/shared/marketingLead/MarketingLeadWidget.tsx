@@ -1,7 +1,12 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import {
+  MARKETING_LEAD_AUTO_OPEN_MS,
+  isMarketingHomepage,
+  marketingLeadCopy,
+} from '@/components/shared/marketingLead/marketingLeadPopup';
 
 type LeadState = {
   business_type: string;
@@ -75,6 +80,8 @@ export default function MarketingLeadWidget() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [form, setForm] = useState<LeadState>(INITIAL_STATE);
+  const [announcement, setAnnouncement] = useState('');
+  const suppressAutoOpenRef = useRef(false);
 
   const hidden = pathname.includes('/login') || pathname.includes('/signup');
   const progress = ((step + 1) / STEPS.length) * 100;
@@ -88,12 +95,42 @@ export default function MarketingLeadWidget() {
     }
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
+        suppressAutoOpenRef.current = true;
         setOpen(false);
       }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [open]);
+
+  useEffect(() => {
+    if (hidden || !isMarketingHomepage(pathname)) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      if (suppressAutoOpenRef.current) {
+        return;
+      }
+      setAnnouncement(marketingLeadCopy.autoOpenAnnouncement);
+      setOpen(true);
+    }, MARKETING_LEAD_AUTO_OPEN_MS);
+
+    return () => window.clearTimeout(timer);
+  }, [hidden, pathname]);
+
+  const closeWidget = () => {
+    suppressAutoOpenRef.current = true;
+    setOpen(false);
+  };
+
+  const openWidget = () => {
+    suppressAutoOpenRef.current = true;
+    setOpen(true);
+    setSubmitted(false);
+    setStep(0);
+    setError('');
+  };
 
   if (hidden) {
     return null;
@@ -140,37 +177,45 @@ export default function MarketingLeadWidget() {
 
   return (
     <>
+      <div className="sr-only" aria-live="polite">
+        {announcement}
+      </div>
       {!open ? (
         <button
           type="button"
-          onClick={() => {
-            setOpen(true);
-            setSubmitted(false);
-            setStep(0);
-            setError('');
-          }}
-          className="fixed bottom-20 left-3 z-[118] inline-flex items-center gap-2 rounded-full border border-sky-900/20 bg-[#123b5d] px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,23,42,0.22)] transition hover:-translate-y-0.5 hover:bg-[#17486f] sm:bottom-5 sm:left-5"
-          aria-label="Open business advisor"
+          onClick={openWidget}
+          className="fixed bottom-20 left-3 z-[118] inline-flex max-w-[calc(100vw-1.5rem)] items-center gap-2 rounded-full border border-sky-900/20 bg-[#123b5d] px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,23,42,0.22)] transition hover:-translate-y-0.5 hover:bg-[#17486f] sm:bottom-5 sm:left-5"
+          aria-haspopup="dialog"
+          aria-label={marketingLeadCopy.launcher}
         >
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm font-bold text-[#123b5d]">
+          <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-sm font-bold text-[#123b5d]">
             S
           </span>
-          <span className="sm:hidden">Find your setup</span>
-          <span className="hidden sm:inline">Get your Schedulaa business setup</span>
+          <span>{marketingLeadCopy.launcher}</span>
         </button>
       ) : (
-        <div className="fixed bottom-2 left-2 z-[125] flex h-[min(82vh,720px)] w-[min(420px,calc(100vw-16px))] flex-col overflow-hidden rounded-[28px] border border-sky-950/10 bg-white shadow-[0_32px_80px_rgba(15,23,42,0.22)] sm:bottom-3 sm:left-3 sm:w-[min(420px,calc(100vw-24px))]">
+        <div
+          className="fixed bottom-2 left-2 z-[125] flex h-[min(82vh,720px)] w-[min(420px,calc(100vw-16px))] flex-col overflow-hidden rounded-[28px] border border-sky-950/10 bg-white shadow-[0_32px_80px_rgba(15,23,42,0.22)] sm:bottom-3 sm:left-3 sm:w-[min(420px,calc(100vw-24px))]"
+          role="dialog"
+          aria-modal="false"
+          aria-labelledby="marketing-lead-title"
+          aria-describedby="marketing-lead-description"
+        >
           <div className="bg-[linear-gradient(180deg,#123b5d_0%,#1b4f78_100%)] px-5 py-5 text-white">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="text-[1.05rem] font-semibold text-white">Schedulaa Business Advisor</p>
-                <p className="mt-1 text-sm text-sky-100">Answer a few quick questions and we’ll send you a practical example for your business setup.</p>
+                <p id="marketing-lead-title" className="text-[1.05rem] font-semibold text-white">
+                  {marketingLeadCopy.title}
+                </p>
+                <p id="marketing-lead-description" className="mt-1 text-sm text-sky-100">
+                  {marketingLeadCopy.description}
+                </p>
               </div>
               <button
                 type="button"
-                onClick={() => setOpen(false)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-lg text-white/80 transition hover:bg-white/10"
-                aria-label="Close business advisor"
+                onClick={closeWidget}
+                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-lg text-white/80 transition hover:bg-white/10"
+                aria-label="Close demo request"
               >
                 ×
               </button>
@@ -191,15 +236,13 @@ export default function MarketingLeadWidget() {
                 <div className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-700">
                   Received
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-900">Thanks — we’ll send you a quick example.</h3>
-                <p className="text-sm leading-7 text-slate-600">
-                  A lead was added to our Sales CRM and the team can route it into Email SDR, hot leads, and follow-up from there.
-                </p>
+                <h3 className="text-2xl font-semibold text-slate-900">{marketingLeadCopy.successTitle}</h3>
+                <p className="text-sm leading-7 text-slate-600">{marketingLeadCopy.successBody}</p>
                 <button
                   type="button"
-                  onClick={() => setOpen(false)}
+                  onClick={closeWidget}
                   className="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white"
-                  aria-label="Close business advisor"
+                  aria-label="Close demo request"
                 >
                   Close
                 </button>
@@ -271,10 +314,8 @@ export default function MarketingLeadWidget() {
                         </svg>
                       </span>
                       <div>
-                        <p className="text-sm font-semibold text-slate-900">Sending your request…</p>
-                        <p className="text-xs leading-6 text-slate-600">
-                          We are saving your answers and sending them into the Sales CRM now.
-                        </p>
+                        <p className="text-sm font-semibold text-slate-900">{marketingLeadCopy.sendingTitle}</p>
+                        <p className="text-xs leading-6 text-slate-600">{marketingLeadCopy.sendingBody}</p>
                       </div>
                     </div>
                   </div>
@@ -428,7 +469,7 @@ export default function MarketingLeadWidget() {
                     onClick={submitLead}
                     disabled={!canSubmit || submitting}
                     className="inline-flex items-center gap-2 rounded-full bg-[#123b5d] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#17486f] disabled:opacity-50"
-                    aria-label="Submit marketing lead request"
+                    aria-label={marketingLeadCopy.submit}
                   >
                     {submitting ? (
                       <>
@@ -446,7 +487,7 @@ export default function MarketingLeadWidget() {
                         </svg>
                         Sending…
                       </>
-                    ) : 'Send request'}
+                    ) : marketingLeadCopy.submit}
                   </button>
                 )}
               </div>
