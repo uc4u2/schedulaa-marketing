@@ -202,37 +202,19 @@ export default function SalonBookingLandingPage() {
             </div>
           </div>
 
-          <figure className="overflow-hidden rounded-[28px] border border-white/60 bg-white p-3 shadow-[0_30px_90px_rgba(15,23,42,0.18)] dark:border-white/10 dark:bg-background-8">
-            <div className="mb-3 flex items-center justify-between px-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/45 dark:text-accent/45">
-              <span>Avery Studio</span>
-              <span className="flex gap-1.5" aria-hidden="true">
-                <span className="h-2 w-2 rounded-full bg-rose-300" />
-                <span className="h-2 w-2 rounded-full bg-amber-300" />
-                <span className="h-2 w-2 rounded-full bg-emerald-300" />
-              </span>
-            </div>
-            <div className="relative overflow-hidden rounded-[20px]">
-              <Image
-                src="/images/marketing/salon-studio-hero.webp"
-                alt="Fictional private salon with a stylist serving a client beside a softly lit mirror"
-                width={1536}
-                height={1024}
-                priority
-                className="aspect-[3/2] h-auto w-full object-cover"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent px-6 pt-24 pb-6 text-white">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/75">
-                  Private salon · Toronto
-                </p>
-                <p className="mt-2 max-w-[420px] text-2xl font-semibold leading-tight">
-                  Colour, styling, and beauty appointments—with booking built
-                  in.
-                </p>
-              </div>
-            </div>
-            <figcaption className="px-3 pt-3 pb-1 text-sm text-secondary/60 dark:text-accent/60">
-              Example salon presentation using original, fictional imagery.
-            </figcaption>
+          <figure className="relative min-h-[360px] overflow-hidden rounded-[30px] shadow-[0_30px_90px_rgba(15,23,42,0.22)] sm:min-h-[440px] lg:min-h-[540px]">
+            <Image
+              src="/images/marketing/salon-studio-hero.webp"
+              alt="Fictional private salon with a stylist serving a client beside a softly lit mirror"
+              fill
+              priority
+              sizes="(min-width: 1024px) 54vw, 100vw"
+              className="object-cover object-center"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/5"
+              aria-hidden="true"
+            />
           </figure>
         </div>
       </section>
