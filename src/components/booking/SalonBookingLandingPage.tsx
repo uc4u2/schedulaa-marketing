@@ -20,7 +20,7 @@ export const salonLandingHeadline =
 export const salonLandingProblem =
   "Missed walk-ins, after-hours bookings, and an Instagram-only presence leave clients with nowhere reliable to book.";
 export const salonBookingPaymentClaim =
-  "When Stripe and online payments are configured, supported booking workflows can collect payment or securely save a card for later manager-initiated charging.";
+  "When Stripe and online payments are configured, clients can pay online or securely save a card for later manager-initiated charging.";
 export const salonBookingPaymentFaqAnswer =
   "Yes, when Stripe and the applicable online-payment settings are configured. Supported booking modes include online payment and card-on-file workflows.";
 
@@ -68,7 +68,7 @@ const capabilities = [
   {
     eyebrow: "Products and add-ons",
     title: "Sell services and retail items from the same business website",
-    body: "Use the current product, inventory, cart, and checkout workflows for retail items, and offer supported service add-ons inside the booking experience.",
+    body: "Manage products and inventory, sell retail items through your cart and checkout, and offer service add-ons inside the booking experience.",
   },
   {
     eyebrow: "Customer management",
@@ -202,19 +202,69 @@ export default function SalonBookingLandingPage() {
             </div>
           </div>
 
-          <figure className="relative min-h-[360px] overflow-hidden rounded-[30px] shadow-[0_30px_90px_rgba(15,23,42,0.22)] sm:min-h-[440px] lg:min-h-[540px]">
+          <figure
+            className="relative min-h-[440px] overflow-hidden rounded-[30px] shadow-[0_30px_90px_rgba(15,23,42,0.24)] sm:min-h-[520px] lg:min-h-[580px]"
+            aria-label="Example salon website front page"
+          >
             <Image
               src="/images/marketing/salon-studio-hero.webp"
-              alt="Fictional private salon with a stylist serving a client beside a softly lit mirror"
+              alt=""
               fill
               priority
               sizes="(min-width: 1024px) 54vw, 100vw"
               className="object-cover object-center"
             />
             <div
-              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/5"
+              className="pointer-events-none absolute inset-0 bg-[linear-gradient(100deg,rgba(22,15,12,0.88)_0%,rgba(22,15,12,0.48)_48%,rgba(22,15,12,0.18)_100%)]"
               aria-hidden="true"
             />
+            <div className="absolute inset-0 flex flex-col p-5 text-white sm:p-7">
+              <div className="flex items-start justify-between gap-4 border-b border-white/20 pb-4">
+                <div>
+                  <p className="font-serif text-lg font-semibold uppercase tracking-[0.16em] text-white sm:text-xl">
+                    Avery Studio
+                  </p>
+                  <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-amber-200/90 sm:text-[10px]">
+                    Hair · Beauty · Toronto
+                  </p>
+                </div>
+                <div className="flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.14em] sm:text-xs">
+                  <span className="hidden text-white/80 xl:inline">
+                    Services
+                  </span>
+                  <span className="hidden text-white/80 xl:inline">
+                    The studio
+                  </span>
+                  <span className="hidden text-white/80 2xl:inline">
+                    Contact
+                  </span>
+                  <span className="border border-amber-300/80 px-3 py-2 text-amber-100 sm:px-4">
+                    Book consultation
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-auto max-w-[500px] pb-4 sm:pb-7">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-amber-200">
+                  Private beauty studio
+                </p>
+                <p className="mt-4 font-serif text-4xl leading-[0.98] font-medium text-white sm:text-5xl lg:text-[56px]">
+                  Beauty, made personal.
+                </p>
+                <p className="mt-5 max-w-[430px] text-sm leading-6 text-white/82 sm:text-base sm:leading-7">
+                  Thoughtful colour, styling, and beauty appointments shaped
+                  around you.
+                </p>
+                <div className="mt-7 flex flex-wrap gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] sm:text-xs">
+                  <span className="bg-amber-300 px-5 py-3 text-stone-950">
+                    Book an appointment
+                  </span>
+                  <span className="border border-white/60 px-5 py-3 text-white">
+                    Explore services
+                  </span>
+                </div>
+              </div>
+            </div>
           </figure>
         </div>
       </section>
@@ -264,15 +314,11 @@ export default function SalonBookingLandingPage() {
           <figure className="overflow-hidden rounded-[28px] border border-stroke-2 bg-white p-3 shadow-[0_26px_70px_rgba(15,23,42,0.14)] dark:border-stroke-7 dark:bg-background-8">
             <Image
               src="/images/marketing/salon-services.webp"
-              alt="Three fictional salon service scenes showing hair colour, styling, and brow care"
+              alt="Salon service scenes showing hair colour, styling, and brow care"
               width={1774}
               height={887}
               className="h-auto w-full rounded-[20px]"
             />
-            <figcaption className="px-3 pt-3 pb-1 text-sm text-secondary/60 dark:text-accent/60">
-              Original illustrative service photography; no real salon or
-              customer identity is shown.
-            </figcaption>
           </figure>
         </div>
       </section>
@@ -285,9 +331,8 @@ export default function SalonBookingLandingPage() {
             </span>
             <h2>From public website to appointment operations</h2>
             <p className="mt-4">
-              Each capability below describes an existing Schedulaa workflow.
-              Payment options depend on the workspace&apos;s Stripe and checkout
-              configuration.
+              Bring your website, online booking, staff availability, payments,
+              products, and customer records into one connected salon workflow.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -328,22 +373,18 @@ export default function SalonBookingLandingPage() {
               appointment stays connected to the customer and team schedule.
             </p>
             <p className="mt-4 max-w-[650px] leading-8">
-              The example uses a fictional provider identity and synthetic
-              portrait so no real salon owner or employee is represented.
+              Clients see clear appointment choices without the back-and-forth
+              messages that slow down a busy salon day.
             </p>
           </div>
           <figure className="overflow-hidden rounded-[28px] border border-stroke-2 bg-white p-3 shadow-[0_26px_70px_rgba(15,23,42,0.14)] dark:border-stroke-7 dark:bg-background-8">
             <Image
               src="/images/marketing/salon-booking-avery-morgan.webp"
-              alt="Schedulaa booking availability for fictional provider Avery Morgan"
+              alt="Schedulaa booking availability for salon provider Avery Morgan"
               width={1423}
               height={1105}
               className="h-auto w-full rounded-[20px]"
             />
-            <figcaption className="px-3 pt-3 pb-1 text-sm text-secondary/60 dark:text-accent/60">
-              Schedulaa booking availability shown with fictional provider Avery
-              Morgan.
-            </figcaption>
           </figure>
         </div>
       </section>
@@ -352,10 +393,10 @@ export default function SalonBookingLandingPage() {
         <div className="main-container grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <span className="badge badge-cyan mb-4">Pricing and setup</span>
-            <h2>Choose the current plan that fits your workflow</h2>
+            <h2>Choose the plan that fits your workflow</h2>
             <p className="mt-4 leading-7">
-              Pricing and plan availability can change, so this page links to
-              the current source of truth instead of duplicating plan claims.
+              Compare current plans and choose the setup that matches your
+              salon&apos;s booking, website, and day-to-day workflow.
             </p>
             <Link
               href={pricingHref}
