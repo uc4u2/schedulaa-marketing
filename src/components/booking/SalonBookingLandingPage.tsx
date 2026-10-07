@@ -19,6 +19,10 @@ export const salonLandingHeadline =
   "A beautiful salon website with online booking";
 export const salonLandingProblem =
   "Missed walk-ins, after-hours bookings, and an Instagram-only presence leave clients with nowhere reliable to book.";
+export const salonBookingPaymentClaim =
+  "When Stripe and online payments are configured, supported booking workflows can collect payment or securely save a card for later manager-initiated charging.";
+export const salonBookingPaymentFaqAnswer =
+  "Yes, when Stripe and the applicable online-payment settings are configured. Supported booking modes include online payment and card-on-file workflows.";
 
 const problems = [
   {
@@ -52,9 +56,9 @@ const capabilities = [
     link: { href: "/en/booking", label: "See the booking workflow" },
   },
   {
-    eyebrow: "Payments and deposits",
+    eyebrow: "Booking payments",
     title: "Use the payment mode that fits the service",
-    body: "When Stripe and online payments are configured, supported workflows can collect full payment, apply deposit rules, or securely save a card for later charging.",
+    body: salonBookingPaymentClaim,
   },
   {
     eyebrow: "Staff and availability",
@@ -85,9 +89,8 @@ const faqs = [
       "Yes. You can publish services and availability so clients can choose a service, an eligible provider, and an available appointment time.",
   },
   {
-    question: "Can I accept payments or deposits?",
-    answer:
-      "Yes, when Stripe and the applicable online-payment settings are configured. Supported booking modes include full payment, deposit rules, and card-on-file workflows.",
+    question: "Can I accept booking payments?",
+    answer: salonBookingPaymentFaqAnswer,
   },
   {
     question: "Can I manage staff availability?",

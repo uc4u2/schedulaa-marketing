@@ -8,6 +8,8 @@ import {
 } from "../../src/lib/seo/bookingMetadata";
 import {
   salonFaqJsonLd,
+  salonBookingPaymentClaim,
+  salonBookingPaymentFaqAnswer,
   salonLandingHeadline,
   salonLandingProblem,
 } from "../../src/components/booking/SalonBookingLandingPage";
@@ -56,6 +58,13 @@ test("salon landing headline targets a salon website with online booking", () =>
     /salon website with online booking/i,
   );
   assert.equal(marketingLeadCopy.launcher, "Get your free demo");
+});
+
+test("salon landing copy does not advertise unsupported booking deposits", () => {
+  assert.match(salonBookingPaymentClaim, /Stripe/i);
+  assert.match(salonBookingPaymentFaqAnswer, /card-on-file/i);
+  assert.doesNotMatch(salonBookingPaymentClaim, /deposit/i);
+  assert.doesNotMatch(salonBookingPaymentFaqAnswer, /deposit/i);
 });
 
 test("salon FAQ structured data exactly represents visible FAQ content", () => {
