@@ -1,12 +1,13 @@
-'use client';
+"use client";
 
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { useEffect, useMemo, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import {
   MARKETING_LEAD_AUTO_OPEN_MS,
+  MARKETING_LEAD_OPEN_EVENT,
   isMarketingHomepage,
   marketingLeadCopy,
-} from '@/components/shared/marketingLead/marketingLeadPopup';
+} from "@/components/shared/marketingLead/marketingLeadPopup";
 
 type LeadState = {
   business_type: string;
@@ -23,69 +24,70 @@ type LeadState = {
 };
 
 const INITIAL_STATE: LeadState = {
-  business_type: '',
-  employees_count: '',
-  current_crm: '',
+  business_type: "",
+  employees_count: "",
+  current_crm: "",
   needs_booking: true,
   needs_estimates: true,
   needs_invoices: true,
-  city: '',
-  name: '',
-  email: '',
-  phone: '',
+  city: "",
+  name: "",
+  email: "",
+  phone: "",
   consent_to_contact: false,
 };
 
 const STEPS = [
-  'Business',
-  'Team',
-  'Current tools',
-  'Needs',
-  'Location',
-  'Contact',
-  'Consent',
+  "Business",
+  "Team",
+  "Current tools",
+  "Needs",
+  "Location",
+  "Contact",
+  "Consent",
 ];
 
 const BUSINESS_OPTIONS = [
-  'HVAC',
-  'Cleaning',
-  'Plumbing',
-  'Roofing',
-  'Electrical',
-  'Landscaping',
-  'General contracting',
-  'Handyman',
-  'Pest control',
-  'Moving',
-  'Appliance repair',
-  'Auto detailing',
-  'Pool service',
-  'Pet grooming',
-  'Salon',
-  'Barbershop',
-  'Spa',
-  'Med spa',
-  'Dental clinic',
-  'Medical clinic',
-  'Fitness studio',
-  'Tutoring',
-  'General service business',
+  "HVAC",
+  "Cleaning",
+  "Plumbing",
+  "Roofing",
+  "Electrical",
+  "Landscaping",
+  "General contracting",
+  "Handyman",
+  "Pest control",
+  "Moving",
+  "Appliance repair",
+  "Auto detailing",
+  "Pool service",
+  "Pet grooming",
+  "Salon",
+  "Barbershop",
+  "Spa",
+  "Med spa",
+  "Dental clinic",
+  "Medical clinic",
+  "Fitness studio",
+  "Tutoring",
+  "General service business",
 ];
 
 export default function MarketingLeadWidget() {
-  const pathname = usePathname() || '/';
+  const pathname = usePathname() || "/";
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [form, setForm] = useState<LeadState>(INITIAL_STATE);
-  const [announcement, setAnnouncement] = useState('');
+  const [announcement, setAnnouncement] = useState("");
   const suppressAutoOpenRef = useRef(false);
 
-  const hidden = pathname.includes('/login') || pathname.includes('/signup');
+  const hidden = pathname.includes("/login") || pathname.includes("/signup");
   const progress = ((step + 1) / STEPS.length) * 100;
-  const canSubmit = form.name.trim() && form.email.trim() && form.consent_to_contact;
+  const canSubmit =
+    form.name.trim() && form.email.trim() && form.consent_to_contact;
 
   const stepLabel = useMemo(() => STEPS[step] || STEPS[0], [step]);
 
@@ -94,13 +96,13 @@ export default function MarketingLeadWidget() {
       return;
     }
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         suppressAutoOpenRef.current = true;
         setOpen(false);
       }
     };
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
   useEffect(() => {
@@ -119,6 +121,20 @@ export default function MarketingLeadWidget() {
     return () => window.clearTimeout(timer);
   }, [hidden, pathname]);
 
+  useEffect(() => {
+    const onOpenRequest = () => {
+      suppressAutoOpenRef.current = true;
+      setAnnouncement(marketingLeadCopy.autoOpenAnnouncement);
+      setOpen(true);
+      setSubmitted(false);
+      setStep(0);
+      setError("");
+    };
+    window.addEventListener(MARKETING_LEAD_OPEN_EVENT, onOpenRequest);
+    return () =>
+      window.removeEventListener(MARKETING_LEAD_OPEN_EVENT, onOpenRequest);
+  }, []);
+
   const closeWidget = () => {
     suppressAutoOpenRef.current = true;
     setOpen(false);
@@ -129,7 +145,7 @@ export default function MarketingLeadWidget() {
     setOpen(true);
     setSubmitted(false);
     setStep(0);
-    setError('');
+    setError("");
   };
 
   if (hidden) {
@@ -141,33 +157,48 @@ export default function MarketingLeadWidget() {
       return;
     }
     setSubmitting(true);
-    setError('');
+    setError("");
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 20000);
     try {
-      const response = await fetch('/api/marketing-leads/chatbot', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/marketing-leads/chatbot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         signal: controller.signal,
         body: JSON.stringify({
           ...form,
-          page_url: typeof window !== 'undefined' ? window.location.href : '',
-          utm_source: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_source') || '' : '',
-          utm_campaign: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_campaign') || '' : '',
-          utm_medium: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_medium') || '' : '',
+          page_url: typeof window !== "undefined" ? window.location.href : "",
+          utm_source:
+            typeof window !== "undefined"
+              ? new URLSearchParams(window.location.search).get("utm_source") ||
+                ""
+              : "",
+          utm_campaign:
+            typeof window !== "undefined"
+              ? new URLSearchParams(window.location.search).get(
+                  "utm_campaign",
+                ) || ""
+              : "",
+          utm_medium:
+            typeof window !== "undefined"
+              ? new URLSearchParams(window.location.search).get("utm_medium") ||
+                ""
+              : "",
         }),
       });
       const data = await response.json().catch(() => ({}));
       if (!response.ok) {
-        setError(data?.error || 'Unable to send your request right now.');
+        setError(data?.error || "Unable to send your request right now.");
         return;
       }
       setSubmitted(true);
     } catch (fetchError) {
-      if (fetchError instanceof Error && fetchError.name === 'AbortError') {
-        setError('Still trying to reach the server took too long. Please try again in a moment.');
+      if (fetchError instanceof Error && fetchError.name === "AbortError") {
+        setError(
+          "Still trying to reach the server took too long. Please try again in a moment.",
+        );
       } else {
-        setError('Connection issue. Please try again in a moment.');
+        setError("Connection issue. Please try again in a moment.");
       }
     } finally {
       window.clearTimeout(timeout);
@@ -204,10 +235,16 @@ export default function MarketingLeadWidget() {
           <div className="bg-[linear-gradient(180deg,#123b5d_0%,#1b4f78_100%)] px-5 py-5 text-white">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p id="marketing-lead-title" className="text-[1.05rem] font-semibold text-white">
+                <p
+                  id="marketing-lead-title"
+                  className="text-[1.05rem] font-semibold text-white"
+                >
                   {marketingLeadCopy.title}
                 </p>
-                <p id="marketing-lead-description" className="mt-1 text-sm text-sky-100">
+                <p
+                  id="marketing-lead-description"
+                  className="mt-1 text-sm text-sky-100"
+                >
                   {marketingLeadCopy.description}
                 </p>
               </div>
@@ -222,7 +259,10 @@ export default function MarketingLeadWidget() {
             </div>
             <div className="mt-4">
               <div className="h-2 overflow-hidden rounded-full bg-white/15">
-                <div className="h-full rounded-full bg-[linear-gradient(90deg,#84cc16_0%,#22c55e_100%)]" style={{ width: `${progress}%` }} />
+                <div
+                  className="h-full rounded-full bg-[linear-gradient(90deg,#84cc16_0%,#22c55e_100%)]"
+                  style={{ width: `${progress}%` }}
+                />
               </div>
               <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-sky-100/85">
                 Step {step + 1} of {STEPS.length}: {stepLabel}
@@ -236,8 +276,12 @@ export default function MarketingLeadWidget() {
                 <div className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-700">
                   Received
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-900">{marketingLeadCopy.successTitle}</h3>
-                <p className="text-sm leading-7 text-slate-600">{marketingLeadCopy.successBody}</p>
+                <h3 className="text-2xl font-semibold text-slate-900">
+                  {marketingLeadCopy.successTitle}
+                </h3>
+                <p className="text-sm leading-7 text-slate-600">
+                  {marketingLeadCopy.successBody}
+                </p>
                 <button
                   type="button"
                   onClick={closeWidget}
@@ -314,23 +358,36 @@ export default function MarketingLeadWidget() {
                         </svg>
                       </span>
                       <div>
-                        <p className="text-sm font-semibold text-slate-900">{marketingLeadCopy.sendingTitle}</p>
-                        <p className="text-xs leading-6 text-slate-600">{marketingLeadCopy.sendingBody}</p>
+                        <p className="text-sm font-semibold text-slate-900">
+                          {marketingLeadCopy.sendingTitle}
+                        </p>
+                        <p className="text-xs leading-6 text-slate-600">
+                          {marketingLeadCopy.sendingBody}
+                        </p>
                       </div>
                     </div>
                   </div>
                 ) : null}
                 {step === 0 && (
                   <div className="space-y-3">
-                    <label className="text-sm font-semibold text-slate-900">What type of business do you run?</label>
+                    <label className="text-sm font-semibold text-slate-900">
+                      What type of business do you run?
+                    </label>
                     <select
                       value={form.business_type}
-                      onChange={(event) => setForm((prev) => ({ ...prev, business_type: event.target.value }))}
+                      onChange={(event) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          business_type: event.target.value,
+                        }))
+                      }
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     >
                       <option value="">Select one</option>
                       {BUSINESS_OPTIONS.map((option) => (
-                        <option key={option} value={option}>{option}</option>
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -338,10 +395,17 @@ export default function MarketingLeadWidget() {
 
                 {step === 1 && (
                   <div className="space-y-3">
-                    <label className="text-sm font-semibold text-slate-900">How many staff do you have?</label>
+                    <label className="text-sm font-semibold text-slate-900">
+                      How many staff do you have?
+                    </label>
                     <input
                       value={form.employees_count}
-                      onChange={(event) => setForm((prev) => ({ ...prev, employees_count: event.target.value }))}
+                      onChange={(event) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          employees_count: event.target.value,
+                        }))
+                      }
                       placeholder="Example: 5"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
@@ -350,10 +414,17 @@ export default function MarketingLeadWidget() {
 
                 {step === 2 && (
                   <div className="space-y-3">
-                    <label className="text-sm font-semibold text-slate-900">Are you using any booking or CRM tool now?</label>
+                    <label className="text-sm font-semibold text-slate-900">
+                      Are you using any booking or CRM tool now?
+                    </label>
                     <input
                       value={form.current_crm}
-                      onChange={(event) => setForm((prev) => ({ ...prev, current_crm: event.target.value }))}
+                      onChange={(event) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          current_crm: event.target.value,
+                        }))
+                      }
                       placeholder="Example: Jobber, Housecall Pro, spreadsheets, none"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
@@ -363,16 +434,24 @@ export default function MarketingLeadWidget() {
                 {step === 3 && (
                   <div className="space-y-4">
                     {[
-                      ['needs_booking', 'Do you need online booking?'],
-                      ['needs_estimates', 'Do you send estimates?'],
-                      ['needs_invoices', 'Do you send invoices?'],
+                      ["needs_booking", "Do you need online booking?"],
+                      ["needs_estimates", "Do you send estimates?"],
+                      ["needs_invoices", "Do you send invoices?"],
                     ].map(([field, label]) => (
-                      <label key={field} className="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900">
+                      <label
+                        key={field}
+                        className="flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
+                      >
                         <span>{label}</span>
                         <input
                           type="checkbox"
                           checked={Boolean(form[field as keyof LeadState])}
-                          onChange={(event) => setForm((prev) => ({ ...prev, [field]: event.target.checked }))}
+                          onChange={(event) =>
+                            setForm((prev) => ({
+                              ...prev,
+                              [field]: event.target.checked,
+                            }))
+                          }
                           className="h-4 w-4"
                         />
                       </label>
@@ -382,10 +461,17 @@ export default function MarketingLeadWidget() {
 
                 {step === 4 && (
                   <div className="space-y-3">
-                    <label className="text-sm font-semibold text-slate-900">What city are you in?</label>
+                    <label className="text-sm font-semibold text-slate-900">
+                      What city are you in?
+                    </label>
                     <input
                       value={form.city}
-                      onChange={(event) => setForm((prev) => ({ ...prev, city: event.target.value }))}
+                      onChange={(event) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          city: event.target.value,
+                        }))
+                      }
                       placeholder="Toronto, Newmarket, Bradford..."
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
@@ -394,23 +480,40 @@ export default function MarketingLeadWidget() {
 
                 {step === 5 && (
                   <div className="space-y-3">
-                    <label className="text-sm font-semibold text-slate-900">What name and email should we use?</label>
+                    <label className="text-sm font-semibold text-slate-900">
+                      What name and email should we use?
+                    </label>
                     <input
                       value={form.name}
-                      onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
+                      onChange={(event) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          name: event.target.value,
+                        }))
+                      }
                       placeholder="Your name"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
                     <input
                       value={form.email}
-                      onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))}
+                      onChange={(event) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          email: event.target.value,
+                        }))
+                      }
                       placeholder="Email"
                       type="email"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
                     <input
                       value={form.phone}
-                      onChange={(event) => setForm((prev) => ({ ...prev, phone: event.target.value }))}
+                      onChange={(event) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          phone: event.target.value,
+                        }))
+                      }
                       placeholder="Phone (optional)"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
@@ -423,20 +526,31 @@ export default function MarketingLeadWidget() {
                       <input
                         type="checkbox"
                         checked={form.consent_to_contact}
-                        onChange={(event) => setForm((prev) => ({ ...prev, consent_to_contact: event.target.checked }))}
+                        onChange={(event) =>
+                          setForm((prev) => ({
+                            ...prev,
+                            consent_to_contact: event.target.checked,
+                          }))
+                        }
                         className="mt-1 h-4 w-4"
                       />
                       <span>
-                        I agree to receive follow-up from Schedulaa about booking, CRM, estimates, invoices, and related workflow setup.
+                        I agree to receive follow-up from Schedulaa about
+                        booking, CRM, estimates, invoices, and related workflow
+                        setup.
                       </span>
                     </label>
                     <p className="text-xs leading-6 text-slate-500">
-                      We use this consent to decide whether the lead is eligible for Email SDR outreach. Without it, we can still store the lead for manual review.
+                      We use this consent to decide whether the lead is eligible
+                      for Email SDR outreach. Without it, we can still store the
+                      lead for manual review.
                     </p>
                   </div>
                 )}
 
-                {error ? <p className="text-sm text-rose-600">{error}</p> : null}
+                {error ? (
+                  <p className="text-sm text-rose-600">{error}</p>
+                ) : null}
               </div>
             )}
           </div>
@@ -456,7 +570,9 @@ export default function MarketingLeadWidget() {
                 {step < STEPS.length - 1 ? (
                   <button
                     type="button"
-                    onClick={() => setStep((prev) => Math.min(STEPS.length - 1, prev + 1))}
+                    onClick={() =>
+                      setStep((prev) => Math.min(STEPS.length - 1, prev + 1))
+                    }
                     disabled={submitting}
                     className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white"
                     aria-label="Continue to next step"
@@ -480,14 +596,38 @@ export default function MarketingLeadWidget() {
                           xmlns="http://www.w3.org/2000/svg"
                           aria-hidden="true"
                         >
-                          <path d="M12 4V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                          <path d="M18 12H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                          <path d="M12 20V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
-                          <path d="M4 12H7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
+                          <path
+                            d="M12 4V7"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M18 12H15"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M12 20V17"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            opacity="0.5"
+                          />
+                          <path
+                            d="M4 12H7"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            opacity="0.5"
+                          />
                         </svg>
                         Sending…
                       </>
-                    ) : marketingLeadCopy.submit}
+                    ) : (
+                      marketingLeadCopy.submit
+                    )}
                   </button>
                 )}
               </div>
