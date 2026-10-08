@@ -166,6 +166,10 @@ The validated September 8–October 5 Search Console period showed `/alternative
 
 The Homebase alternatives page now targets broad alternative research with accurate current boundaries for Homebase scheduling, time, communication, hiring, HR, and U.S. payroll. The payslip page now has page-specific metadata, stronger employee self-service intent, contextual T4/ROE/year-end links, and visible conversion paths. Payslip and T4 pages emit SoftwareApplication, Breadcrumb, and FAQ structured data without invented zero-price offers. The year-end guide now emits Article and Breadcrumb structured data and links to the employee payslip portal. The HubSpot Meetings URL was confirmed to be a competitor-alternative page, not evidence of a Schedulaa integration, and was left unchanged.
 
+### 2026-10-08 internal-link and intent map
+
+The English features hub now exposes one practical workflow map for website building, booking, appointment scheduling, client management, workforce scheduling and time, estimates, invoices, Stripe-supported payments, trip-scoped dispatch, payroll tools, attribution/rebooking, and service industries. It links to existing canonical pages rather than creating overlapping URLs. The blog hub now links to its real category pages, the HVAC industry page links reciprocally to booking/workforce/billing and is included in the sitemap, and the feature content separates Zapier automation from QuickBooks/Xero accounting boundaries. Unsupported “coming soon” and compliance-progress language was removed from the feature hub.
+
 ### 2026-10-08 alternatives opportunity optimization
 
 The first content iteration targets three pages selected from the validated September 8–October 5 Search Console baseline:
@@ -218,3 +222,4 @@ Do not respond with mass page generation, broad metadata churn, repeated indexin
 | 2026-10-08 | Refined the homepage qualification and booking language, made the qualification panel content-aware on smaller viewports, and limited the integration strip to verified live product boundaries. |
 | 2026-10-08 | Separated alternatives and direct-comparison intent for When I Work, Square Appointments, and Xero; corrected competitor and Schedulaa capability boundaries; removed unverified testimonial output; and added reciprocal links plus FAQ/Breadcrumb schema. |
 | 2026-10-08 | Improved the Homebase alternatives and employee payslip opportunities, added payroll-page and year-end-guide structured data, strengthened T4/ROE/payslip internal links, and left the verified competitor-only HubSpot Meetings page unchanged. |
+| 2026-10-08 | Added a canonical workflow intent map to the features hub, linked blog category hubs and HVAC workflows contextually, added the HVAC industry page to the sitemap, and corrected stale integration/compliance wording. |

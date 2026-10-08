@@ -2,6 +2,9 @@ import { Metadata } from 'next';
 import FeaturesForexLayout from '@/components/forex-skin/features/FeaturesForexLayout';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { getServerLocale } from '@/utils/serverLocale';
+import { getLocalizedCanonicalUrl } from '@/lib/seo/pageMetadata';
+import { SEARCH_INTENT_MAP } from '@/lib/seo/searchIntentMap';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -22,5 +25,26 @@ export const metadata: Metadata = {
 export default async function FeaturesPage() {
   const locale = await getServerLocale();
 
-  return <FeaturesForexLayout locale={locale} />;
+  const intentListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Schedulaa service-business workflows',
+    itemListElement: SEARCH_INTENT_MAP.map((entry, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: entry.label,
+      url: getLocalizedCanonicalUrl(locale, entry.path),
+    })),
+  };
+
+  return (
+    <>
+      {locale === 'en' ? (
+        <Script id="features-search-intent-item-list-jsonld" type="application/ld+json">
+          {JSON.stringify(intentListJsonLd)}
+        </Script>
+      ) : null}
+      <FeaturesForexLayout locale={locale} />
+    </>
+  );
 }

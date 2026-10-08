@@ -4,7 +4,7 @@ import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import YouTubeFacade from '@/components/shared/media/YouTubeFacade';
 import { getHvacCopy } from '@/components/hvac/localeCopy';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
-import { detectLocaleFromPath } from '@/utils/locale';
+import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import hvacHeroImg from '@public/images/marketing/hvac-hero-2.png';
 import hvacContractorSmileImg from '@public/images/marketing/hvac-contractor-smile.png';
 import hvac333Img from '@public/images/marketing/hvac-333.png';
@@ -133,7 +133,7 @@ export default function HvacLandingPage() {
                     <a href={BOOK_DEMO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary-v2 btn-md min-w-[190px]">
                       {copy.closing.primaryCta}
                     </a>
-                    <Link href="/pricing" className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
+                    <Link href={withLocalePath('/pricing', locale)} className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
                       {copy.closing.secondaryCta}
                     </Link>
                   </div>
@@ -259,6 +259,31 @@ export default function HvacLandingPage() {
                 <div className="rounded-[20px] border border-stroke-2 bg-[#f7f9fc] p-4 dark:border-stroke-7 dark:bg-background-7 md:p-5">
                   <Image src={hvacHeroOneImg} alt="Schedulaa HVAC workflow visual" className="h-auto w-full rounded-[16px] object-contain" />
                 </div>
+              </div>
+            </article>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="pb-18 md:pb-24">
+        <div className={pageShell}>
+          <AnimatedSection>
+            <article className="mx-auto max-w-[1000px] rounded-[24px] border border-stroke-2 bg-white p-7 text-center shadow-[0_18px_42px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-9">
+              <span className="badge badge-cyan-v2">Related workflows</span>
+              <h2 className="mt-5 text-heading-4 text-secondary dark:text-white">Continue through the HVAC service lifecycle</h2>
+              <p className="mx-auto mt-3 max-w-[760px] text-secondary/72 dark:text-accent/70">
+                Review the customer booking, workforce, and billing workflows that connect to dispatch and work orders.
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-4">
+                <Link href={withLocalePath('/booking', locale)} className="text-primary-500 underline underline-offset-4">
+                  Online booking and appointments
+                </Link>
+                <Link href={withLocalePath('/workforce', locale)} className="text-primary-500 underline underline-offset-4">
+                  Employee scheduling and time tracking
+                </Link>
+                <Link href={withLocalePath('/business-finance/invoices', locale)} className="text-primary-500 underline underline-offset-4">
+                  Estimates, invoices, and payment links
+                </Link>
               </div>
             </article>
           </AnimatedSection>

@@ -117,7 +117,7 @@ const resourceHighlights = [
 
 export const websiteBuilderPage = {
   meta: {
-    title: 'Website Builder for Service Businesses - Free Domain & Hosting | Schedulaa',
+    title: 'Website Builder, Booking & Custom Domains | Schedulaa',
     description:
       'Build a service-business website with Schedulaa’s website builder. Launch on a Schedulaa URL, connect your own domain, and turn visitors into bookings, quotes, and payments.',
     canonical: PAGE_URL,

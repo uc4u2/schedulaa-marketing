@@ -61,7 +61,7 @@
       "description": "Sell products and services together, automate campaigns, and measure results in one dashboard.",
       "points": [
         "Mixed carts for products and services with add-ons and coupons.",
-        "Stripe Checkout with built-in refund and tax automation.",
+        "Stripe Checkout with supported refunds and automatic tax when configured in Stripe.",
         "Analytics for revenue, utilization, churn, and top-performing services.",
         "Win-back, VIP, and no-show recovery campaigns included."
       ]
@@ -126,8 +126,8 @@
         "icon": "06",
         "title": "Automation & Integrations",
         "description": [
-          "Zapier integration to connect Schedulaa with QuickBooks, Xero, and more.",
-          "Webhooks and REST APIs to trigger workflows or keep external systems in sync.",
+          "Zapier automation for bounded booking, shift, timeclock, break, leave, onboarding, and payroll events.",
+          "Configured QuickBooks Online and Xero accounting connections support mapped finance and journal workflows; they are not payroll-run integrations.",
           "Scheduler automations for re-engagement campaigns, no-show alerts, and follow-ups.",
           "Embed widgets and booking flows directly into existing sites and partner portals."
         ]
@@ -196,10 +196,10 @@
     "title": "Integrations and automation made visual",
     "subtitle": "Map your systems, workflows, and automations in one place so marketing, operations, and finance stay aligned.",
     "points": {
-      "accounting": "Sync invoices, payments, and approved-hour reporting directly to QuickBooks or Xero.",
+      "accounting": "Post supported mapped finance or journal data to configured QuickBooks Online or Xero accounting connections; object support differs by provider.",
       "automation": "Automate follow-ups, win-back, and no-show recovery campaigns via email or SMS.",
       "stripe": "Host secure payments through Stripe Checkout with saved cards and refunds.",
-      "domains": "Custom domains with automatic SSL are live; in-app domain registration & Zapier are coming soon."
+      "domains": "Custom domains with automatic SSL and bounded Zapier automation are live; availability still depends on tenant configuration."
     },
     "mediaAlt": "Schedulaa automation and integration journey",
     "blocks": {
@@ -207,7 +207,7 @@
         "title": "Payments & payouts",
         "items": [
           "Card-on-file, Apple Pay, Google Pay supported",
-          "Stripe Radar, PCI DSS, SOC2 in progress"
+          "Stripe-hosted payment handling and supported refund workflows"
         ]
       },
       "compliance": {

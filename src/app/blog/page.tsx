@@ -39,6 +39,12 @@ export default async function BlogPage() {
   const sortedPosts = [...(posts as any[])].sort(
     (a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
   );
+  const categoryLinks = [...new Set(sortedPosts.map((post: any) => String(post.category || '').trim()).filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b))
+    .map((category) => ({
+      label: category,
+      slug: category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, ''),
+    }));
 
   return (
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
@@ -60,6 +66,22 @@ export default async function BlogPage() {
               {localized.l3}
             </Link>
           </div>
+          {locale === 'en' ? (
+            <nav aria-label="Blog topics" className="mt-7 border-t border-stroke-2 pt-5 dark:border-stroke-7">
+              <p className="text-sm font-semibold text-secondary dark:text-accent">Browse guides by topic</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {categoryLinks.map((category) => (
+                  <Link
+                    key={category.slug}
+                    href={withLocalePath(`/blog/category/${category.slug}`, locale)}
+                    className="rounded-full border border-stroke-2 px-3 py-1.5 text-sm text-secondary hover:border-primary-500 hover:text-primary-500 dark:border-stroke-7 dark:text-accent"
+                  >
+                    {category.label}
+                  </Link>
+                ))}
+              </div>
+            </nav>
+          ) : null}
         </div>
 
         <div className="mt-8 space-y-4">
