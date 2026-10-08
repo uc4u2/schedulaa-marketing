@@ -1,11 +1,11 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useRef, useState } from 'react';
 import PageShell from '@/components/shared/layout/PageShell';
 import { usePathname } from 'next/navigation';
 import { detectLocaleFromPath } from '@/utils/locale';
 import { trackMetaPixel } from '@/utils/metaPixel';
-import { trackAnalyticsEvent } from '@/utils/analytics';
+import { trackAnalyticsEvent, trackAnalyticsEventOnce } from '@/utils/analytics';
 
 const API_ORIGIN =
   process.env.NEXT_PUBLIC_BACKEND_URL ||
@@ -15,57 +15,57 @@ const API_ORIGIN =
 const FAQ = [
   {
     question: 'How fast will someone reply?',
-    answer: 'Enterprise rollout specialists respond within one business day for scheduling, payroll, and migration requests.',
+    answer: 'We review product, setup, migration, and partnership questions as quickly as possible. A successful submission confirms receipt, not a guaranteed response time.',
   },
   {
     question: 'Do you offer implementation services?',
-    answer: 'Yes. Our team handles data imports, template mapping, staff onboarding, and payroll validation for every location.',
+    answer: 'We can discuss setup and data-import requirements with you. Available assistance and the rollout scope are confirmed before work begins.',
   },
   {
     question: 'How do partners or resellers reach you?',
-    answer: 'Email admin@schedulaa.com and we will route your note to our partnership, integration, or reseller teams.',
+    answer: 'Use this form or email admin@schedulaa.com and include the type of partnership you want to discuss.',
   },
 ];
 
-const PLAN_OPTIONS = ['Starter', 'Plus', 'Pro', 'Enterprise', 'Partnership', 'Migration Support'];
+const PLAN_OPTIONS = ['Product question', 'Starter', 'Plus', 'Pro', 'Enterprise', 'Partnership', 'Setup or migration'];
 const SUPPORT_ACCORDION = [
   {
-    title: 'How do these rollout tracks support growth?',
-    body: 'Schedulaa combines booking, payroll, staffing, and website operations so teams can scale without tool sprawl.',
+    title: 'What can we help you evaluate?',
+    body: 'Tell us which customer, booking, team, field-work, finance, commerce, or website workflow you want to improve.',
     points: [
-      'Operational workflows in one command center',
-      'Cross-team visibility for managers and staff',
-      'Faster launches with guided rollout milestones',
-      'Lower maintenance across booking, payroll, and website ops',
+      'Product fit for your current workflow',
+      'Role and regional availability',
+      'Data-import and setup requirements',
+      'Relevant plan or add-on questions',
     ],
   },
   {
-    title: 'Are the workflows flexible for different businesses?',
-    body: 'Yes. We tailor onboarding for salons, clinics, tutors, agencies, and multi-location service teams.',
+    title: 'Which service businesses can evaluate Schedulaa?',
+    body: 'Schedulaa supports appointment and field-service workflows across businesses such as salons, tutors, cleaners, and HVAC teams.',
     points: [
-      'Industry-aware setup playbooks',
-      'Role-based process mapping',
-      'Migration support for legacy data',
+      'Online booking and customer records',
+      'Employee scheduling and field work',
+      'Estimates, invoices, and eligible payments',
     ],
   },
   {
-    title: 'Can Schedulaa handle higher traffic and workload?',
-    body: 'The platform is built for operational growth with reusable templates, automation triggers, and analytics.',
+    title: 'What should I include in my message?',
+    body: 'Share your business type, team size, current tools, and the workflow you want to improve. Do not include passwords or payment details.',
     points: [
-      'Template-driven rollout at scale',
-      'Automation for reminders, compliance, and follow-ups',
-      'Live visibility into workload and throughput',
+      'The outcome you need',
+      'Your current process or provider',
+      'Any role, region, or timing requirement',
     ],
   },
   {
-    title: 'Do I need technical skills to launch?',
-    body: 'No. Teams can launch quickly with implementation support, guided setup, and operational checklists.',
-    points: ['Guided onboarding sessions', 'Rollout checklists', 'Support coverage during launch windows'],
+    title: 'Will a contact request activate anything?',
+    body: 'No. Sending a message does not change your account, plan, billing, integrations, or production data.',
+    points: ['No automatic purchase', 'No integration enabled', 'No production-data change'],
   },
   {
     title: 'Can this integrate with current software?',
-    body: 'Yes. We support Zapier, QuickBooks, Xero, and operational integrations for reporting and finance handoffs.',
-    points: ['QuickBooks/Xero payroll exports', 'Zapier automation hooks', 'API-friendly operations workflows'],
+    body: 'Verified connections include Stripe, Google Calendar V1, QuickBooks Online, Xero, bounded Zapier automation, and Jitsi where enabled.',
+    points: ['Eligibility and setup vary', 'Google Calendar V1 is not full two-way sync', 'Accounting connections are bounded handoffs'],
   },
 ];
 const DIRECT_LINES = ['Admin: admin@schedulaa.com'];
@@ -155,7 +155,7 @@ export default function MarketingContactContent() {
     },
   };
   const copy = copyByLocale[locale] || {
-    badge: 'Contact', heroTitle: "Let's talk about your rollout.", heroBody: 'Looking for a custom implementation, partner program, or migration help? Our specialists respond within one business day.',
+    badge: 'Contact', heroTitle: 'Tell us what your team needs.', heroBody: 'Ask about product fit, setup requirements, migration planning, or a potential partnership. We will review the context you provide and follow up.',
     emailUs: 'Email us', call: 'Call +1 (647) 849-4913', sendMessage: 'Send a message', name: 'Name', email: 'Email',
     phone: 'Phone', company: 'Company', message: 'Message', submit: 'Submit', submitting: 'Submitting...',
     directLines: 'Direct lines', visitHq: 'Visit our HQ', toronto: 'Toronto headquarters', directions: 'Get directions',
@@ -185,8 +185,20 @@ export default function MarketingContactContent() {
     message: '',
   });
   const [submitting, setSubmitting] = useState(false);
+  const formStartedRef = useRef(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+
+  const markFormStarted = () => {
+    if (formStartedRef.current) {
+      return;
+    }
+    formStartedRef.current = true;
+    trackAnalyticsEventOnce('contact_start', `contact-start:${pathname}`, {
+      form_name: 'marketing_contact',
+      page_path: pathname,
+    });
+  };
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -274,15 +286,23 @@ export default function MarketingContactContent() {
 
         <div className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
           <h2 className="text-2xl font-semibold">{copy.sendMessage}</h2>
-          <form className="mt-5 grid gap-4" onSubmit={onSubmit}>
+          <form className="mt-5 grid gap-4" onSubmit={onSubmit} onChange={markFormStarted}>
+            <label htmlFor="contact-name" className="text-sm font-medium">{copy.name}</label>
             <input
+              id="contact-name"
+              name="name"
+              autoComplete="name"
               className="rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
               placeholder={copy.name}
               value={form.name}
               onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
               required
             />
+            <label htmlFor="contact-email" className="text-sm font-medium">{copy.email}</label>
             <input
+              id="contact-email"
+              name="email"
+              autoComplete="email"
               className="rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
               placeholder={copy.email}
               type="email"
@@ -290,19 +310,31 @@ export default function MarketingContactContent() {
               onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
               required
             />
+            <label htmlFor="contact-phone" className="text-sm font-medium">{copy.phone}</label>
             <input
+              id="contact-phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
               className="rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
               placeholder={copy.phone}
               value={form.phone}
               onChange={(e) => setForm((prev) => ({ ...prev, phone: e.target.value }))}
             />
+            <label htmlFor="contact-company" className="text-sm font-medium">{copy.company}</label>
             <input
+              id="contact-company"
+              name="organization"
+              autoComplete="organization"
               className="rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
               placeholder={copy.company}
               value={form.company}
               onChange={(e) => setForm((prev) => ({ ...prev, company: e.target.value }))}
             />
+            <label htmlFor="contact-interest" className="text-sm font-medium">How can we help?</label>
             <select
+              id="contact-interest"
+              name="interest"
               className="rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
               value={form.plan}
               onChange={(e) => setForm((prev) => ({ ...prev, plan: e.target.value }))}
@@ -313,15 +345,18 @@ export default function MarketingContactContent() {
                 </option>
               ))}
             </select>
+            <label htmlFor="contact-message" className="text-sm font-medium">{copy.message}</label>
             <textarea
+              id="contact-message"
+              name="message"
               className="min-h-[140px] rounded-xl border border-stroke-2 px-4 py-3 dark:border-stroke-7 dark:bg-background-7"
               placeholder={copy.message}
               value={form.message}
               onChange={(e) => setForm((prev) => ({ ...prev, message: e.target.value }))}
               required
             />
-            {error ? <p className="text-sm text-red-600">{error}</p> : null}
-            {success ? <p className="text-sm text-green-600">{success}</p> : null}
+            {error ? <p className="text-sm text-red-600" role="alert">{error}</p> : null}
+            {success ? <p className="text-sm text-green-600" role="status">{success}</p> : null}
             <button
               type="submit"
               disabled={submitting}
@@ -350,7 +385,7 @@ export default function MarketingContactContent() {
               <h2 className="mt-4 text-2xl font-semibold">{copy.toronto}</h2>
               <p className="mt-3 text-secondary/70 dark:text-accent/70">{HQ_ADDRESS}</p>
               <p className="mt-2 text-secondary/70 dark:text-accent/70">
-                Book a meeting in advance and we&apos;ll guide you through rollout labs and demo suites used for enterprise implementations.
+                Please arrange a meeting before visiting so we can confirm the right person and format for your question.
               </p>
               <a
                 href={MAP_DIRECTIONS_URL}

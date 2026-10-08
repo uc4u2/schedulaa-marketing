@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Script from 'next/script';
 
 import { getCommerceCopy } from '@/components/commerce/localeCopy';
 import { MetricCard, MiniLinkCard, PillarCard } from '@/components/marketing/sections/EnterpriseCards';
@@ -16,8 +17,32 @@ type CommercePlatformPageProps = {
 
 export default function CommercePlatformPage({ locale }: CommercePlatformPageProps) {
   const copy = getCommerceCopy(locale);
+  const baseUrl = `https://www.schedulaa.com/${locale}`;
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+      { '@type': 'ListItem', position: 2, name: copy.hero.badge, item: `${baseUrl}/commerce` },
+    ],
+  };
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: copy.faq.cards.map((item) => ({
+      '@type': 'Question',
+      name: item.title,
+      acceptedAnswer: { '@type': 'Answer', text: item.description },
+    })),
+  };
   return (
     <PageShell>
+      <Script id="commerce-breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+      </Script>
+      <Script id="commerce-faq-jsonld" type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </Script>
       <AnimatedSection>
         <section className="premium-card rounded-[24px] p-8 dark:border-stroke-7 dark:bg-background-8 md:p-12">
           <p className="badge badge-yellow-v2">{copy.hero.badge}</p>

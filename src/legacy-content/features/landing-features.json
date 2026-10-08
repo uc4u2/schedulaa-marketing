@@ -58,9 +58,9 @@
     },
     "commerce": {
       "title": "Commerce, Analytics, and Marketing",
-      "description": "Sell products and services together, automate campaigns, and measure results in one dashboard.",
+      "description": "Keep product commerce, service operations, campaign workflows, and reporting connected in one platform.",
       "points": [
-        "Mixed carts for products and services with add-ons and coupons.",
+        "Dedicated product checkout plus service-booking add-ons and supported coupons.",
         "Stripe Checkout with supported refunds and automatic tax when configured in Stripe.",
         "Analytics for revenue, utilization, churn, and top-performing services.",
         "Win-back, VIP, and no-show recovery campaigns included."

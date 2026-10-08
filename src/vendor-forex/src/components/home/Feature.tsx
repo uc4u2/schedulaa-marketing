@@ -83,7 +83,7 @@ const Feature = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale }
 
   return (
     <RevealAnimation delay={0.1}>
-      <section className="bg-[url('/images/ns-img-527.png')] bg-cover bg-bottom bg-no-repeat py-20 md:py-[100px]">
+      <section className="py-20 md:py-[100px]">
         <div className="main-container">
           <div className="space-y-10 md:space-y-14">
             <div className="mb-2 space-y-3 text-center md:mb-0">

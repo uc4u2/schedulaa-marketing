@@ -36,7 +36,7 @@ const Steps = ({ locale = 'en' }: { locale?: AppLocale }) => {
     zh: '\u67e5\u770b\u5168\u90e8\u529f\u80fd',
   };
   const fallbackStepByLocale: Record<string, { title: string; description: string }> = {
-    en: { title: 'Manager and employee dashboards update live', description: 'Bookings, shifts, and payouts appear in real time across manager and employee views.' },
+    en: { title: 'Manager and employee dashboards stay aligned', description: 'Bookings, shifts, and approved time records stay connected across role-appropriate manager and employee views.' },
     fa: { title: '\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u0645\u062f\u06cc\u0631 \u0648 \u06a9\u0627\u0631\u0645\u0646\u062f \u062f\u0631 \u0644\u062d\u0638\u0647 \u0628\u0647\u200c\u0631\u0648\u0632 \u0645\u06cc\u200c\u0634\u0648\u062f', description: '\u0631\u0632\u0631\u0648\u0647\u0627\u060c \u0634\u06cc\u0641\u062a\u200c\u0647\u0627 \u0648 \u0648\u0636\u0639\u06cc\u062a \u067e\u0631\u062f\u0627\u062e\u062a \u0628\u0647\u200c\u0635\u0648\u0631\u062a \u0632\u0646\u062f\u0647 \u062f\u0631 \u062f\u0627\u0634\u0628\u0648\u0631\u062f\u0647\u0627 \u0646\u0645\u0627\u06cc\u0634 \u062f\u0627\u062f\u0647 \u0645\u06cc\u200c\u0634\u0648\u062f.' },
     ru: { title: '\u041f\u0430\u043d\u0435\u043b\u0438 \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440\u0430 \u0438 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438', description: '\u0411\u0440\u043e\u043d\u0438, \u0441\u043c\u0435\u043d\u044b \u0438 \u0432\u044b\u043f\u043b\u0430\u0442\u044b \u0441\u0440\u0430\u0437\u0443 \u0432\u0438\u0434\u043d\u044b \u0432 \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u0435 \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440\u0430 \u0438 \u043a\u043e\u043c\u0430\u043d\u0434\u044b.' },
     zh: { title: '\u7ecf\u7406\u4e0e\u5458\u5de5\u770b\u677f\u5b9e\u65f6\u66f4\u65b0', description: '\u9884\u7ea6\u3001\u73ed\u6b21\u4e0e\u4ed8\u6b3e\u72b6\u6001\u4f1a\u5728\u7ecf\u7406\u548c\u5458\u5de5\u89c6\u56fe\u4e2d\u540c\u6b65\u663e\u793a\u3002' },
@@ -92,7 +92,7 @@ const Steps = ({ locale = 'en' }: { locale?: AppLocale }) => {
       title: howItWorks.steps[3]?.title || 'Manager and employee dashboards update live',
       description:
         howItWorks.steps[3]?.description ||
-        'Bookings, shifts, and payouts appear in real time across manager and employee views.',
+        'Bookings, shifts, and approved time records stay connected across role-appropriate manager and employee views.',
       gradientSrc: gradient9Img,
       stepImg: step4Img,
       stepDarkImg: step4DarkImg,

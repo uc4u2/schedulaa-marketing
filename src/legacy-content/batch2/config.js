@@ -186,7 +186,7 @@ export const contactPage = {
     badge: 'Contact',
     title: "Let's talk about your rollout.",
     subtitle:
-      'Looking for a custom implementation, partner program, or migration help? Our specialists respond within one business day.',
+      'Ask about product fit, setup requirements, migration planning, or a potential partnership. We will review the context you provide and follow up.',
     primaryCta: { label: 'Email us', href: 'mailto:admin@schedulaa.com' },
     secondaryCta: { label: 'Call +1 (289) 514-9260', href: 'tel:+12895149260' },
   },
@@ -196,7 +196,7 @@ export const contactPage = {
       items: [
         { title: 'Sales & demos', body: 'Plan walkthroughs, pricing guidance, and migration timelines tailored to your team.' },
         { title: 'Partnerships', body: 'Reseller, integration, and co-marketing opportunities for platforms serving creatives.' },
-        { title: 'Support', body: '24-hour ticket response, enterprise onboarding, and dedicated success managers on Pro.' },
+        { title: 'Support', body: 'Ask product and setup questions through the available support channels for your account.' },
         { title: 'Migration support', body: 'Data imports, template mapping, and sandbox reviews that de-risk your launch.' },
       ],
     },
@@ -205,11 +205,11 @@ export const contactPage = {
   faq: [
     {
       question: 'How fast will someone reply?',
-      answer: 'Enterprise rollout specialists respond within one business day for booking, website, billing, and migration requests.',
+      answer: 'A successful submission confirms receipt, not a guaranteed response time.',
     },
     {
       question: 'Do you offer implementation services?',
-      answer: 'Yes. Our team handles data imports, template mapping, staff onboarding, booking setup, billing workflows, and back-office handoff reviews for every location.',
+      answer: 'We can discuss setup and data-import requirements. Available assistance and rollout scope are confirmed before work begins.',
     },
     {
       question: 'How do partners or resellers reach you?',

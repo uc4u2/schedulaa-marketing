@@ -1,5 +1,5 @@
 import MarketingContactContent from '@/components/contact/MarketingContactContent';
-import { defaultMetadata } from '@/utils/generateMetaData';
+import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
 import { getServerLocale } from '@/utils/serverLocale';
 import { Metadata } from 'next';
 
@@ -17,11 +17,15 @@ const contactMeta: Record<string, { title: string; description: string }> = {
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getServerLocale();
   const localized = contactMeta[locale];
-  return {
-    ...defaultMetadata,
+  return buildLocalizedPageMetadata({
+    locale,
+    path: '/contact',
     title: localized?.title || 'Contact Schedulaa',
-    description: localized?.description || 'Talk to the Schedulaa team about custom rollouts, partnerships, or migration support.',
-  };
+    description: localized?.description || 'Ask the Schedulaa team about product fit, setup, migration requirements, or partnership opportunities.',
+    openGraphTitle: localized?.title || 'Contact Schedulaa',
+    openGraphDescription:
+      localized?.description || 'Ask the Schedulaa team about product fit, setup, migration requirements, or partnership opportunities.',
+  });
 }
 
 export default function ContactPage() {

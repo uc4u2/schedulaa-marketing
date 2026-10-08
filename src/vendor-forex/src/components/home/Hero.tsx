@@ -186,7 +186,7 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
                 Android app available now
               </a>
               <span className="px-1.5 sm:px-2 text-white/28">·</span>
-              <span>iPhone coming soon</span>
+              <span>iPhone app not currently available</span>
             </p>
           </div>
           <RevealAnimation delay={0.8} instant paintImmediately>

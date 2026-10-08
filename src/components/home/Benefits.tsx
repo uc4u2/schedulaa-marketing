@@ -37,7 +37,7 @@ const data = [
 
 const Benefits = () => {
   return (
-    <section className="bg-secondary relative z-0 bg-[url('/images/ns-img-527.png')] bg-cover bg-center bg-no-repeat py-16 md:py-20 lg:py-[90px] xl:py-[100px]">
+    <section className="bg-secondary relative z-0 py-16 md:py-20 lg:py-[90px] xl:py-[100px]">
       <div className="main-container relative z-30">
         <div className="mb-10 space-y-5 text-center md:mb-[70px]">
           <RevealAnimation delay={0.2}>

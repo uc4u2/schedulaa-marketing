@@ -1972,7 +1972,7 @@
         },
         {
           "label": "Payroll",
-          "schedulaa": "US + Canada payroll, W-2/T4/ROE, QB/Xero export.",
+          "schedulaa": "Supported Canada (excluding Quebec) and configured U.S. payroll workflows, with T4/ROE/W-2 tools and QB/Xero handoff.",
           "competitor": "Not supported."
         },
         {
@@ -1982,7 +1982,7 @@
         },
         {
           "label": "Products / POS",
-          "schedulaa": "Products, mixed carts, taxes, refunds, coupons.",
+          "schedulaa": "Products, dedicated product checkout, supported taxes, refunds, and coupons.",
           "competitor": "Packages/subscriptions/gift certificates; no full POS."
         },
         {
@@ -2017,7 +2017,7 @@
       },
       {
         "title": "Commerce depth",
-        "body": "Schedulaa supports products, mixed carts, taxes, and refunds. Acuity limits commerce to packages/subscriptions/gift certificates."
+        "body": "Schedulaa supports products, dedicated product checkout, configured tax handling, and refunds. Product checkout remains separate from service booking."
       },
       {
         "title": "Multi-location readiness",

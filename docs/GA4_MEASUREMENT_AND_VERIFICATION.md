@@ -25,6 +25,9 @@ The ID is intentionally not hardcoded. Both sites use first-party cookies with `
 Implemented events:
 
 - `primary_cta_click`: intentional major marketing CTA clicks; parameters are `cta_name`, `page_path`, `destination`, and `placement`.
+- `demo_panel_open`: the first intentional opening of the global demo-booking panel for a page during the browser session. It is an engagement event, not a completed booking.
+- `demo_request_submit`: only after the homepage qualification endpoint accepts the request. It records `form_name`, `page_path`, and the boolean `has_phone`; it does not mean a time was booked.
+- `contact_start`: the first field change in the marketing contact form for that page during the browser session.
 - `registration_start`: the first actual interaction with the registration form in a browser session.
 - `registration_complete`: only after the registration API returns success.
 - `contact_submit`: only after the public contact endpoint accepts the form.
@@ -43,13 +46,14 @@ No event sends an email address, full name, phone number, message body, payment 
 1. Configure a non-production GA4 stream ID in each project using the variable names above.
 2. Open GA4 **Admin → DebugView** and enable Google Analytics Debugger in the browser, or temporarily use GA4 debug mode through the browser extension.
 3. Load a marketing route and confirm exactly one `page_view`. Navigate with a Next.js link and confirm one additional `page_view`.
-4. Click a major CTA once and confirm one `primary_cta_click` with the four non-PII parameters.
+4. Click a major CTA once and confirm one `primary_cta_click` with the four non-PII parameters. Open the global demo panel twice on the same page and confirm exactly one `demo_panel_open`; confirm no booking-complete event is emitted.
 5. Open registration. Confirm that loading `/register` or merely focusing the page does not fire `registration_start`; change a form field and confirm it fires once. A failed submission must not fire `registration_complete`; a successful API response must fire it once.
-6. Submit the marketing contact form once with a deliberate backend failure and once successfully. Only the successful request should emit `contact_submit`.
-7. Initiate a real test-mode plan checkout. Confirm `checkout_started` appears only after the backend returns the Stripe URL.
-8. Complete the test-mode checkout. Confirm `trial_activated`/`subscription_activated` appears only after `/billing/status` (or the payment-invite status endpoint) confirms the state.
-9. Visit a marketing URL containing test values for `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, and `gclid`. Click an application CTA and confirm those allowlisted parameters remain on the `app.schedulaa.com` destination. Confirm unrelated query parameters do not transfer.
-10. In the browser Network panel, inspect `g/collect` requests and verify that no email, name, phone, message, payment details, checkout session ID, or invite token is present.
+6. Change multiple fields in the marketing contact form and confirm one `contact_start`. Submit once with a deliberate backend failure and once successfully. Only the successful request should emit `contact_submit`.
+7. Complete the homepage qualification form. A failed endpoint request must not emit `demo_request_submit`; an accepted request emits it once and sends no entered values to GA4.
+8. Initiate a real test-mode plan checkout. Confirm `checkout_started` appears only after the backend returns the Stripe URL.
+9. Complete the test-mode checkout. Confirm `trial_activated`/`subscription_activated` appears only after `/billing/status` (or the payment-invite status endpoint) confirms the state.
+10. Visit a marketing URL containing test values for `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, and `gclid`. Click an application CTA and confirm those allowlisted parameters remain on the `app.schedulaa.com` destination. Confirm unrelated query parameters do not transfer.
+11. In the browser Network panel, inspect `g/collect` requests and verify that no email, name, phone, message, payment details, checkout session ID, or invite token is present.
 
 ## GA4 and Google Ads steps after deployment
 

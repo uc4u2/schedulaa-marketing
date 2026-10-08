@@ -89,19 +89,19 @@ const en: CommerceCopy = {
   meta: {
     title: 'Commerce, Shipping, and Digital Goods | Schedulaa',
     description:
-      'Sell physical products, digital goods, and service add-ons with shipping automation, product categories, client order history, and mixed checkout flows in Schedulaa.',
+      'Sell physical products and digital goods with inventory, shipping automation, product categories, customer order history, and dedicated product checkout in Schedulaa.',
     openGraphTitle: 'Schedulaa Commerce, Shipping, and Digital Goods',
     openGraphDescription:
       'Schedulaa unifies product sales, digital access, EasyPost shipping, and client order follow-up in one operational platform.',
     twitterTitle: 'Schedulaa Commerce, Shipping, and Digital Goods',
     twitterDescription:
-      'Sell products and services together with EasyPost shipping, digital delivery, and client order history.',
+      'Sell products with dedicated checkout, EasyPost shipping, digital delivery, inventory, and customer order history.',
   },
   hero: {
     badge: 'Commerce & Delivery',
-    title: 'eCommerce for services, physical products, and digital goods in one operating system.',
+    title: 'eCommerce for physical products and digital goods inside your service-business platform.',
     description:
-      'Schedulaa now supports product categories, digital goods, EasyPost shipping automation, client order history, and mixed checkout flows so service businesses can sell more without bolting on a separate store stack.',
+      'Manage product categories, digital goods, EasyPost shipping automation, inventory, and customer order history alongside service operations. Product purchases use a dedicated checkout; they are not combined with appointment checkout.',
     pricing: 'View pricing',
     demo: 'Schedule demo',
   },
@@ -132,12 +132,12 @@ const en: CommerceCopy = {
     eyebrow: 'Commerce workflows',
     title: 'Capabilities already shipped in production',
     description:
-      'This page reflects the current product stack: mixed carts, digital delivery, EasyPost integration, product categories, and client-facing order history.',
+      'This page reflects the current product stack: dedicated product checkout, digital delivery, EasyPost integration, product categories, and customer order history.',
     cards: [
       {
-        title: 'Mixed carts for services and products',
+        title: 'Dedicated checkout for product orders',
         description:
-          'Let clients buy physical products, digital goods, and appointment-related add-ons in one checkout flow instead of splitting sales across separate tools.',
+          'Let customers buy physical or digital products through a product checkout that stays separate from service booking, while both remain connected to the same business platform.',
         href: '/booking',
         cta: 'Explore booking + checkout',
       },
@@ -233,8 +233,8 @@ const en: CommerceCopy = {
       'This is not a bolt-on store. The commerce layer shares context with your booking pages, website builder, delivery setup, and client dashboard.',
     cards: [
       {
-        title: 'Booking + mixed checkout',
-        description: 'See how products and services can live in the same customer flow.',
+        title: 'Booking + product commerce',
+        description: 'See how separate service-booking and product-checkout flows stay connected to the same customer operations.',
         href: '/booking',
       },
       {
@@ -298,18 +298,18 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
     meta: {
       title: 'تجارت، ارسال و کالاهای دیجیتال | Schedulaa',
       description:
-        'در Schedulaa محصولات فیزیکی، کالاهای دیجیتال و افزودنی‌های خدماتی را با اتوماسیون ارسال، دسته‌بندی محصول، تاریخچه سفارش مشتری و جریان‌های پرداخت ترکیبی بفروشید.',
+        'در Schedulaa محصولات فیزیکی و دیجیتال را با پرداخت اختصاصی محصول، اتوماسیون ارسال، دسته‌بندی و تاریخچه سفارش مشتری بفروشید.',
       openGraphTitle: 'تجارت، ارسال و کالاهای دیجیتال در Schedulaa',
       openGraphDescription:
         'Schedulaa فروش محصول، دسترسی دیجیتال، ارسال EasyPost و پیگیری سفارش مشتری را در یک بستر عملیاتی یکپارچه می‌کند.',
       twitterTitle: 'تجارت، ارسال و کالاهای دیجیتال در Schedulaa',
-      twitterDescription: 'محصولات و خدمات را همراه با ارسال EasyPost، تحویل دیجیتال و تاریخچه سفارش مشتری در یک جا بفروشید.',
+      twitterDescription: 'محصولات را با پرداخت اختصاصی، ارسال EasyPost، تحویل دیجیتال و تاریخچه سفارش مشتری بفروشید.',
     },
     hero: {
       badge: 'تجارت و ارسال',
-      title: 'تجارت الکترونیک برای خدمات، محصولات فیزیکی و کالاهای دیجیتال در یک سیستم عملیاتی',
+      title: 'تجارت الکترونیک برای محصولات فیزیکی و دیجیتال در کنار عملیات کسب‌وکار خدماتی',
       description:
-        'Schedulaa اکنون از دسته‌بندی محصولات، کالاهای دیجیتال، اتوماسیون ارسال EasyPost، تاریخچه سفارش مشتری و پرداخت‌های ترکیبی پشتیبانی می‌کند تا کسب‌وکارهای خدماتی بدون افزودن یک فروشگاه جداگانه، بیشتر بفروشند.',
+        'Schedulaa از دسته‌بندی محصول، کالای دیجیتال، ارسال EasyPost، موجودی و تاریخچه سفارش پشتیبانی می‌کند. خرید محصول از پرداختی جدا از رزرو نوبت استفاده می‌کند.',
       pricing: 'مشاهده قیمت‌ها',
       demo: 'رزرو دمو',
     },
@@ -328,9 +328,9 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       eyebrow: 'جریان‌های تجارت',
       title: 'قابلیت‌هایی که همین حالا در پروداکشن فعال‌اند',
       description:
-        'این صفحه بازتاب استک فعلی محصول است: سبدهای ترکیبی، تحویل دیجیتال، یکپارچگی EasyPost، دسته‌بندی محصول و تاریخچه سفارش سمت مشتری.',
+        'این صفحه بازتاب استک فعلی محصول است: پرداخت اختصاصی محصول، تحویل دیجیتال، یکپارچگی EasyPost، دسته‌بندی و تاریخچه سفارش مشتری.',
       cards: [
-        { title: 'سبد ترکیبی برای خدمات و محصولات', description: 'به مشتری اجازه دهید محصولات فیزیکی، کالاهای دیجیتال و افزودنی‌های مرتبط با نوبت را در یک checkout واحد بخرد.', href: '/booking', cta: 'بررسی booking + checkout' },
+        { title: 'پرداخت اختصاصی سفارش محصول', description: 'مشتری محصولات فیزیکی یا دیجیتال را در پرداخت محصول می‌خرد که از پرداخت رزرو خدمات جداست، اما هر دو در یک پلتفرم مدیریت می‌شوند.', href: '/booking', cta: 'بررسی booking + checkout' },
         { title: 'دسته‌بندی محصول، slug و فیلدهای SEO', description: 'آیتم‌های کاتالوگ را بر اساس دسته تنظیم کنید، ناوبری storefront را تمیزتر نگه دارید و slug و meta title و meta description را مدیریت کنید.', href: '/website-builder', cta: 'بررسی website builder' },
         { title: 'کالاهای دیجیتال با دسترسی پس از پرداخت', description: 'محصولات را دیجیتال علامت‌گذاری کنید، قوانین تحویل را در فضای digital products تنظیم کنید و از فایل میزبانی‌شده، لینک خارجی، کد لایسنس یا الگوهای ترکیبی پشتیبانی کنید.', href: '/features', cta: 'بررسی قابلیت‌های پلتفرم' },
         { title: 'اتوماسیون ارسال EasyPost', description: 'سیاست ارسال را سراسری تنظیم کنید، EasyPost را متصل کنید، نرخ بگیرید، لیبل بخرید و اقدامات ارسال هر سفارش را در workflow سفارش مدیر نگه دارید.', href: '/docs', cta: 'بررسی مستندات' },
@@ -356,7 +356,7 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       description:
         'این یک فروشگاه bolt-on نیست. لایه commerce با صفحات booking، website builder، تنظیمات تحویل و داشبورد مشتری context مشترک دارد.',
       cards: [
-        { title: 'Booking + checkout ترکیبی', description: 'ببینید چگونه محصولات و خدمات می‌توانند در یک جریان مشتری کنار هم قرار بگیرند.', href: '/booking' },
+        { title: 'Booking + تجارت محصول', description: 'ببینید جریان‌های جداگانه رزرو خدمات و پرداخت محصول چگونه به عملیات یک مشتری متصل می‌مانند.', href: '/booking' },
         { title: 'Website builder + storefront', description: 'صفحات عمومی برندشده‌ای راه‌اندازی کنید که هم خدمات و هم فروش محصول را پشتیبانی کنند.', href: '/website-builder' },
         { title: 'مستندات عملیاتی', description: 'راهنمای تنظیم سیاست تحویل، ارسال و workflowهای متصل را مرور کنید.', href: '/docs' },
         { title: 'گفتگو با تیم rollout', description: 'rollout تجارت خود را بر اساس fulfillment، ارسال و تحویل دیجیتال برنامه‌ریزی کنید.', href: '/contact' },
@@ -386,18 +386,18 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
     meta: {
       title: 'Commerce, dostavka i cifrovye tovary | Schedulaa',
       description:
-        'Prodavaite fizicheskie tovary, cifrovye produkty i dopolneniya k uslugam s avtomatizaciey dostavki, kategoriami tovarov, istoriey zakazov klienta i smeshannymi checkout-potokami v Schedulaa.',
+        'Prodavaite fizicheskie i cifrovye tovary cherez otdelnyi product checkout s dostavkoy, kategoriami, inventory i istoriey zakazov v Schedulaa.',
       openGraphTitle: 'Schedulaa Commerce, dostavka i cifrovye tovary',
       openGraphDescription:
         'Schedulaa obedinyaet prodazhu tovarov, cifrovoy dostup, dostavku EasyPost i soprovozhdenie zakazov klienta v odnoi operacionnoi platforme.',
       twitterTitle: 'Schedulaa Commerce, dostavka i cifrovye tovary',
-      twitterDescription: 'Prodavaite tovary i uslugi vmeste s dostavkoi EasyPost, cifrovoi vydachei i istoriei zakazov klienta.',
+      twitterDescription: 'Prodavaite tovary cherez otdelnyi checkout s EasyPost, cifrovoi vydachei i istoriei zakazov klienta.',
     },
     hero: {
       badge: 'Commerce i dostavka',
-      title: 'eCommerce dlya uslug, fizicheskih tovarov i cifrovyh produktov v odnoi operacionnoi sisteme.',
+      title: 'eCommerce dlya fizicheskih i cifrovyh tovarov vnutri platformy servisnogo biznesa.',
       description:
-        'Schedulaa uzhe podderzhivaet kategorii tovarov, cifrovye produkty, avtomatizaciyu dostavki EasyPost, istoriyu zakazov klienta i smeshannye checkout-potoki, chtoby servisnye kompanii mogli prodavat bolshe bez otdelnogo magazina.',
+        'Schedulaa podderzhivaet kategorii, cifrovye tovary, EasyPost, inventory i istoriyu zakazov. Pokupka tovara ispolzuet otdelnyi checkout, a ne checkout zapisi.',
       pricing: 'Posmotret ceny',
       demo: 'Zaplanit demo',
     },
@@ -416,9 +416,9 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       eyebrow: 'Commerce-protsessy',
       title: 'Vozmozhnosti, uzhe rabotayushchie v production',
       description:
-        'Eta stranica otrazhaet tekushchii produkt: smeshannye korziny, cifrovaya vydacha, integraciya EasyPost, kategorii tovarov i klientskaya istoriya zakazov.',
+        'Eta stranica otrazhaet tekushchii produkt: otdelnyi product checkout, cifrovaya vydacha, EasyPost, kategorii i klientskaya istoriya zakazov.',
       cards: [
-        { title: 'Smeshannye korziny dlya uslug i tovarov', description: 'Pozvolte klientam pokupat fizicheskie tovary, cifrovye produkty i dobavki k zapisi v odnom checkout-potoke vmesto razneseniya prodazh po raznym instrumentam.', href: '/booking', cta: 'Izuchit booking + checkout' },
+        { title: 'Otdelnyi checkout dlya zakazov tovarov', description: 'Klienty pokupayut fizicheskie ili cifrovye tovary otdelno ot checkout zapisi, no oba workflow ostayutsya v odnoy platforme.', href: '/booking', cta: 'Izuchit booking + checkout' },
         { title: 'Kategorii tovarov, slug i SEO-polya', description: 'Organizuyte katalog po kategoriyam, derzhite storefront-opravdanie chishche i upravlyayte slug, meta title i meta description dlya produktovyh stranic.', href: '/website-builder', cta: 'Izuchit website builder' },
         { title: 'Cifrovye tovary s dostupom posle oplaty', description: 'Pometchayte tovary kak cifrovye, nastaivayte pravila vydachi v workspace cifrovyh tovarov i podderzhivayte hosted files, vneshnie ssylki, license delivery ili kombinirovannye patterny.', href: '/features', cta: 'Izuchit vozmozhnosti platformy' },
         { title: 'Avtomatizaciya dostavki EasyPost', description: 'Nastraivayte shipping policy globalno, podklyuchayte EasyPost, poluchaite tarify, pokupayte labels i derzhite per-order deystviya po otgruzke v workflow zakaza menedzhera.', href: '/docs', cta: 'Izuchit docs' },
@@ -444,7 +444,7 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       description:
         'Eto ne bolt-on store. Commerce-sloy delit context s booking-pages, website builder, delivery setup i client dashboard.',
       cards: [
-        { title: 'Booking + mixed checkout', description: 'Posmotrite, kak tovary i uslugi mogut zhit v odnom klientskom potoke.', href: '/booking' },
+        { title: 'Booking + product commerce', description: 'Otdelnye workflow zapisi i product checkout ostayutsya svyazannymi s klientskimi operaciyami.', href: '/booking' },
         { title: 'Website builder + storefront', description: 'Zapuskayte branded public pages, podderzhivayuschie i uslugi, i prodazhu tovarov.', href: '/website-builder' },
         { title: 'Operational docs', description: 'Izuchite setup guidance dlya delivery policy, shipping i svyazannyh workflows.', href: '/docs' },
         { title: 'Pogovorit s rollout team', description: 'Planirovanie commerce-rollout vokrug fulfillment, shipping i cifrovoy vydachi.', href: '/contact' },
@@ -475,17 +475,17 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
     meta: {
       title: '电商、配送与数字商品 | Schedulaa',
       description:
-        '在 Schedulaa 中销售实体商品、数字商品和服务附加项，并结合配送自动化、商品分类、客户订单历史和混合结账流程。',
+        '在 Schedulaa 中通过独立商品结账销售实体和数字商品，并管理库存、配送、分类和客户订单历史。',
       openGraphTitle: 'Schedulaa 电商、配送与数字商品',
       openGraphDescription: 'Schedulaa 将商品销售、数字访问、EasyPost 配送和客户订单跟进整合到一个运营平台中。',
       twitterTitle: 'Schedulaa 电商、配送与数字商品',
-      twitterDescription: '在一个平台中同时销售产品和服务，并支持 EasyPost 配送、数字交付和客户订单历史。',
+      twitterDescription: '通过独立商品结账销售商品，并支持 EasyPost 配送、数字交付和客户订单历史。',
     },
     hero: {
       badge: '电商与配送',
-      title: '在一个运营系统中同时管理服务、实体商品和数字商品电商',
+      title: '在服务业务平台中销售实体商品和数字商品',
       description:
-        'Schedulaa 现已支持商品分类、数字商品、EasyPost 配送自动化、客户订单历史以及混合结账流程，让服务型企业无需额外拼接独立商城也能扩大销售。',
+        'Schedulaa 支持商品分类、数字商品、EasyPost 配送、库存和订单历史。商品购买使用独立结账，不与预约结账合并。',
       pricing: '查看价格',
       demo: '预约演示',
     },
@@ -504,9 +504,9 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       eyebrow: '电商工作流',
       title: '已经在生产环境交付的能力',
       description:
-        '本页反映当前产品栈：混合购物车、数字交付、EasyPost 集成、商品分类以及面向客户的订单历史。',
+        '本页反映当前产品栈：独立商品结账、数字交付、EasyPost 集成、商品分类和客户订单历史。',
       cards: [
-        { title: '服务与商品的混合购物车', description: '让客户在同一个 checkout 流程中购买实体商品、数字商品和与预约相关的附加项，而不是将销售拆散到不同工具中。', href: '/booking', cta: '查看 booking + checkout' },
+        { title: '商品订单独立结账', description: '客户通过独立于服务预约的商品结账购买实体或数字商品，同时两个流程仍由同一平台管理。', href: '/booking', cta: '查看 booking + checkout' },
         { title: '商品分类、slug 与 SEO 字段', description: '按分类整理商品目录，保持 storefront 导航更清晰，并为商品页管理 slug、meta title 和 meta description。', href: '/website-builder', cta: '查看 website builder' },
         { title: '支付后可交付的数字商品', description: '将商品标记为数字商品，在 digital products workspace 中映射交付规则，并支持 hosted files、外部链接、license delivery 或组合访问模式。', href: '/features', cta: '查看平台能力' },
         { title: 'EasyPost 配送自动化', description: '全局配置 shipping policy，连接 EasyPost，获取费率，购买面单，并将每笔订单的发货操作保留在经理订单工作流中。', href: '/docs', cta: '查看文档' },
@@ -532,7 +532,7 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       description:
         '这不是一个 bolt-on 商店。commerce 层与 booking 页面、website builder、delivery setup 和 client dashboard 共享上下文。',
       cards: [
-        { title: 'Booking + mixed checkout', description: '查看商品和服务如何在同一客户流程中并存。', href: '/booking' },
+        { title: 'Booking + 商品电商', description: '查看独立的服务预约和商品结账如何连接到同一客户运营。', href: '/booking' },
         { title: 'Website builder + storefront', description: '发布支持服务和商品销售的品牌化公共页面。', href: '/website-builder' },
         { title: '运营文档', description: '查看交付策略、配送和联动工作流的设置说明。', href: '/docs' },
         { title: '联系 rollout 团队', description: '围绕 fulfillment、shipping 和数字交付规划你的 commerce rollout。', href: '/contact' },
@@ -563,18 +563,18 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
     meta: {
       title: 'Commerce, envios y productos digitales | Schedulaa',
       description:
-        'Vende productos fisicos, bienes digitales y add-ons de servicio con automatizacion de envios, categorias de producto, historial de pedidos del cliente y checkout mixto en Schedulaa.',
+        'Vende productos fisicos y digitales con checkout de producto separado, inventario, envios, categorias e historial de pedidos en Schedulaa.',
       openGraphTitle: 'Schedulaa Commerce, envios y productos digitales',
       openGraphDescription:
         'Schedulaa unifica venta de productos, acceso digital, envios con EasyPost y seguimiento del pedido del cliente en una sola plataforma operativa.',
       twitterTitle: 'Schedulaa Commerce, envios y productos digitales',
-      twitterDescription: 'Vende productos y servicios juntos con envios EasyPost, entrega digital e historial de pedidos del cliente.',
+      twitterDescription: 'Vende productos con checkout separado, envios EasyPost, entrega digital e historial de pedidos.',
     },
     hero: {
       badge: 'Commerce y entrega',
-      title: 'eCommerce para servicios, productos fisicos y bienes digitales en un solo sistema operativo.',
+      title: 'eCommerce para productos fisicos y digitales dentro de tu plataforma de servicios.',
       description:
-        'Schedulaa ya soporta categorias de producto, bienes digitales, automatizacion de envios EasyPost, historial de pedidos del cliente y checkout mixto para que los negocios de servicios vendan mas sin agregar una tienda separada.',
+        'Schedulaa soporta categorias, bienes digitales, envios EasyPost, inventario e historial de pedidos. Las compras de producto usan un checkout separado del de citas.',
       pricing: 'Ver precios',
       demo: 'Agendar demo',
     },
@@ -593,9 +593,9 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       eyebrow: 'Flujos commerce',
       title: 'Capacidades ya disponibles en produccion',
       description:
-        'Esta pagina refleja el stack actual del producto: carritos mixtos, entrega digital, integracion EasyPost, categorias de producto e historial de pedidos para clientes.',
+        'Esta pagina refleja el stack actual: checkout de producto separado, entrega digital, EasyPost, categorias e historial de pedidos.',
       cards: [
-        { title: 'Carritos mixtos para servicios y productos', description: 'Permite que los clientes compren productos fisicos, bienes digitales y add-ons relacionados con citas en un solo checkout en lugar de dividir ventas entre herramientas distintas.', href: '/booking', cta: 'Explorar booking + checkout' },
+        { title: 'Checkout dedicado para pedidos de producto', description: 'Los clientes compran productos fisicos o digitales en un checkout separado de las citas, mientras ambos flujos permanecen en la misma plataforma.', href: '/booking', cta: 'Explorar booking + checkout' },
         { title: 'Categorias de producto, slugs y campos SEO', description: 'Organiza el catalogo por categoria, mantén una navegacion storefront mas clara y gestiona slug, meta title y meta description de las paginas de producto.', href: '/website-builder', cta: 'Explorar website builder' },
         { title: 'Bienes digitales con acceso post-pago', description: 'Marca productos como digitales, define reglas de entrega en el workspace digital y soporta hosted files, enlaces externos, entrega de licencias o patrones combinados de acceso.', href: '/features', cta: 'Explorar funciones de plataforma' },
         { title: 'Automatizacion de envios EasyPost', description: 'Configura shipping policy global, conecta EasyPost, consulta tarifas, compra labels y mantén acciones de envio por pedido dentro del workflow del manager.', href: '/docs', cta: 'Explorar docs' },
@@ -621,7 +621,7 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       description:
         'Esto no es una tienda bolt-on. La capa commerce comparte contexto con tus paginas de booking, website builder, setup de entrega y dashboard del cliente.',
       cards: [
-        { title: 'Booking + checkout mixto', description: 'Mira como productos y servicios pueden convivir en el mismo flujo del cliente.', href: '/booking' },
+        { title: 'Booking + comercio de productos', description: 'Los flujos separados de citas y checkout de producto siguen conectados a las mismas operaciones del cliente.', href: '/booking' },
         { title: 'Website builder + storefront', description: 'Lanza paginas publicas de marca que soportan servicios y venta de productos.', href: '/website-builder' },
         { title: 'Docs operativas', description: 'Revisa la guia de configuracion para delivery policy, envios y flujos conectados.', href: '/docs' },
         { title: 'Hablar con el rollout team', description: 'Planifica tu rollout commerce alrededor de fulfillment, shipping y entrega digital.', href: '/contact' },
@@ -652,18 +652,18 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
     meta: {
       title: 'Commerce, expédition et produits numériques | Schedulaa',
       description:
-        'Vendez produits physiques, biens numeriques et modules services avec automatisation d expedition, categories produit, historique client et checkout mixte dans Schedulaa.',
+        'Vendez produits physiques et numeriques avec un checkout produit separe, inventaire, expedition, categories et historique client dans Schedulaa.',
       openGraphTitle: 'Schedulaa Commerce, expédition et produits numériques',
       openGraphDescription:
         'Schedulaa unifie ventes produit, acces numerique, expedition EasyPost et suivi client dans une seule plateforme operationnelle.',
       twitterTitle: 'Schedulaa Commerce, expédition et produits numériques',
-      twitterDescription: 'Vendez produits et services ensemble avec expedition EasyPost, livraison numerique et historique de commande client.',
+      twitterDescription: 'Vendez des produits avec checkout separe, expedition EasyPost, livraison numerique et historique client.',
     },
     hero: {
       badge: 'Commerce et livraison',
-      title: 'eCommerce pour services, produits physiques et biens numeriques dans un seul systeme operationnel.',
+      title: 'eCommerce pour produits physiques et numeriques dans votre plateforme de services.',
       description:
-        'Schedulaa prend deja en charge categories produit, biens numeriques, automatisation d expedition EasyPost, historique de commande client et checkout mixte afin que les entreprises de services vendent plus sans ajouter une boutique separee.',
+        'Schedulaa prend en charge categories, biens numeriques, EasyPost, inventaire et historique client. Les achats produit utilisent un checkout separe des rendez-vous.',
       pricing: 'Voir les prix',
       demo: 'Planifier une demo',
     },
@@ -682,9 +682,9 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       eyebrow: 'Flux commerce',
       title: 'Capacites deja livrees en production',
       description:
-        'Cette page reflete le stack produit actuel : paniers mixtes, livraison numerique, integration EasyPost, categories produit et historique client des commandes.',
+        'Cette page reflete le stack actuel : checkout produit separe, livraison numerique, EasyPost, categories et historique client.',
       cards: [
-        { title: 'Paniers mixtes pour services et produits', description: 'Permettez aux clients d acheter produits physiques, biens numeriques et add-ons lies aux rendez-vous dans un seul checkout au lieu de separer les ventes.', href: '/booking', cta: 'Explorer booking + checkout' },
+        { title: 'Checkout dedie aux commandes produit', description: 'Les clients achetent produits physiques ou numeriques dans un checkout separe des rendez-vous, tout en restant dans la meme plateforme.', href: '/booking', cta: 'Explorer booking + checkout' },
         { title: 'Categories produit, slug et champs SEO', description: 'Organisez le catalogue par categorie, gardez une navigation storefront plus claire et gerez slug, meta title et meta description pour les pages produit.', href: '/website-builder', cta: 'Explorer website builder' },
         { title: 'Biens numeriques avec acces apres paiement', description: 'Marquez les produits comme numeriques, mappez les regles de livraison dans le workspace digital products et supportez hosted files, liens externes, livraison de licence ou acces combine.', href: '/features', cta: 'Explorer les fonctions plateforme' },
         { title: 'Automatisation d expedition EasyPost', description: 'Configurez la shipping policy globalement, connectez EasyPost, chargez les tarifs, achetez des labels et gardez les actions d expedition dans le workflow commande manager.', href: '/docs', cta: 'Explorer les docs' },
@@ -710,7 +710,7 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       description:
         'Ce n est pas une boutique bolt-on. La couche commerce partage son contexte avec vos pages booking, website builder, setup de livraison et dashboard client.',
       cards: [
-        { title: 'Booking + checkout mixte', description: 'Voyez comment produits et services peuvent vivre dans le meme flux client.', href: '/booking' },
+        { title: 'Booking + commerce produit', description: 'Les flux separes de rendez-vous et de checkout produit restent relies aux memes operations client.', href: '/booking' },
         { title: 'Website builder + storefront', description: 'Lancez des pages publiques de marque qui supportent services et ventes produit.', href: '/website-builder' },
         { title: 'Docs operationnelles', description: 'Revoyez le guide de configuration pour delivery policy, expedition et workflows connectes.', href: '/docs' },
         { title: 'Parler a l equipe rollout', description: 'Planifiez votre rollout commerce autour du fulfillment, de l expedition et de la livraison numerique.', href: '/contact' },
@@ -741,18 +741,18 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
     meta: {
       title: 'Commerce, Versand und digitale Gueter | Schedulaa',
       description:
-        'Verkaufen Sie physische Produkte, digitale Gueter und Service-Add-ons mit Versandautomatisierung, Produktkategorien, Kundenbestellhistorie und gemischten Checkout-Flows in Schedulaa.',
+        'Verkaufen Sie physische und digitale Produkte mit separatem Produkt-Checkout, Inventar, Versand, Kategorien und Bestellhistorie in Schedulaa.',
       openGraphTitle: 'Schedulaa Commerce, Versand und digitale Gueter',
       openGraphDescription:
         'Schedulaa vereint Produktverkauf, digitalen Zugriff, EasyPost-Versand und Kundenbestell-Nachverfolgung in einer operativen Plattform.',
       twitterTitle: 'Schedulaa Commerce, Versand und digitale Gueter',
-      twitterDescription: 'Verkaufen Sie Produkte und Services zusammen mit EasyPost-Versand, digitaler Auslieferung und Kundenbestellhistorie.',
+      twitterDescription: 'Verkaufen Sie Produkte mit separatem Checkout, EasyPost-Versand, digitaler Auslieferung und Bestellhistorie.',
     },
     hero: {
       badge: 'Commerce & Versand',
-      title: 'eCommerce fuer Services, physische Produkte und digitale Gueter in einem Betriebssystem.',
+      title: 'eCommerce fuer physische und digitale Produkte in Ihrer Service-Plattform.',
       description:
-        'Schedulaa unterstuetzt bereits Produktkategorien, digitale Gueter, EasyPost-Versandautomatisierung, Kundenbestellhistorie und gemischte Checkout-Flows, damit Serviceunternehmen mehr verkaufen koennen, ohne einen separaten Shop anzubauen.',
+        'Schedulaa unterstuetzt Kategorien, digitale Gueter, EasyPost, Inventar und Bestellhistorie. Produktkaeufe nutzen einen vom Termin-Checkout getrennten Checkout.',
       pricing: 'Preise ansehen',
       demo: 'Demo planen',
     },
@@ -771,9 +771,9 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       eyebrow: 'Commerce-Workflows',
       title: 'Bereits produktiv ausgelieferte Funktionen',
       description:
-        'Diese Seite spiegelt den aktuellen Produkt-Stack wider: gemischte Warenkoerbe, digitale Auslieferung, EasyPost-Integration, Produktkategorien und kundennahe Bestellhistorie.',
+        'Diese Seite spiegelt den aktuellen Produkt-Stack wider: separater Produkt-Checkout, digitale Auslieferung, EasyPost, Kategorien und Bestellhistorie.',
       cards: [
-        { title: 'Gemischte Warenkoerbe fuer Services und Produkte', description: 'Lassen Sie Kunden physische Produkte, digitale Gueter und terminbezogene Add-ons in einem Checkout kaufen, statt Verkaeufe auf verschiedene Tools zu verteilen.', href: '/booking', cta: 'Booking + Checkout ansehen' },
+        { title: 'Eigener Checkout fuer Produktbestellungen', description: 'Kunden kaufen physische oder digitale Produkte getrennt vom Termin-Checkout; beide Workflows bleiben in derselben Plattform.', href: '/booking', cta: 'Booking + Checkout ansehen' },
         { title: 'Produktkategorien, Slugs und SEO-Felder', description: 'Organisieren Sie Katalogartikel nach Kategorien, halten Sie die Storefront-Navigation sauberer und verwalten Sie Slug, Meta Title und Meta Description fuer Produktseiten.', href: '/website-builder', cta: 'Website Builder ansehen' },
         { title: 'Digitale Gueter mit Zugriff nach Zahlung', description: 'Markieren Sie Produkte als digital, legen Sie Auslieferungsregeln im Digital-Products-Workspace fest und unterstuetzen Sie hosted files, externe Links, Lizenzzustellung oder kombinierte Zugriffsmuster.', href: '/features', cta: 'Plattformfunktionen ansehen' },
         { title: 'EasyPost-Versandautomatisierung', description: 'Konfigurieren Sie die Shipping Policy global, verbinden Sie EasyPost, holen Sie Tarife, kaufen Sie Labels und halten Sie versandbezogene Aktionen im Manager-Order-Workflow.', href: '/docs', cta: 'Docs ansehen' },
@@ -799,7 +799,7 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       description:
         'Das ist kein bolt-on Store. Die Commerce-Schicht teilt Kontext mit Ihren Booking-Seiten, dem Website Builder, dem Delivery Setup und dem Client Dashboard.',
       cards: [
-        { title: 'Booking + gemischter Checkout', description: 'Sehen Sie, wie Produkte und Services im selben Kundenfluss leben koennen.', href: '/booking' },
+        { title: 'Booking + Produkt-Commerce', description: 'Getrennte Termin- und Produkt-Checkout-Workflows bleiben mit denselben Kundenoperationen verbunden.', href: '/booking' },
         { title: 'Website Builder + Storefront', description: 'Starten Sie gebrandete oeffentliche Seiten, die sowohl Services als auch Produktverkauf unterstuetzen.', href: '/website-builder' },
         { title: 'Operative Docs', description: 'Pruefen Sie die Setup-Anleitung fuer Delivery Policy, Versand und verbundene Workflows.', href: '/docs' },
         { title: 'Mit dem Rollout-Team sprechen', description: 'Planen Sie Ihren Commerce-Rollout rund um Fulfillment, Shipping und digitale Auslieferung.', href: '/contact' },
@@ -830,17 +830,17 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
     meta: {
       title: 'التجارة والشحن والمنتجات الرقمية | Schedulaa',
       description:
-        'بع المنتجات المادية والرقمية وملحقات الخدمات مع اتمتة الشحن وفئات المنتجات وسجل طلبات العميل ومسارات checkout المختلطة داخل Schedulaa.',
+        'بع المنتجات المادية والرقمية عبر checkout مستقل للمنتجات مع المخزون والشحن والفئات وسجل الطلبات داخل Schedulaa.',
       openGraphTitle: 'Schedulaa التجارة والشحن والمنتجات الرقمية',
       openGraphDescription: 'يوحد Schedulaa بيع المنتجات والوصول الرقمي وشحن EasyPost ومتابعة طلبات العميل داخل منصة تشغيلية واحدة.',
       twitterTitle: 'Schedulaa التجارة والشحن والمنتجات الرقمية',
-      twitterDescription: 'بع المنتجات والخدمات معا مع شحن EasyPost والتسليم الرقمي وسجل طلبات العميل.',
+      twitterDescription: 'بع المنتجات عبر checkout مستقل مع شحن EasyPost والتسليم الرقمي وسجل الطلبات.',
     },
     hero: {
       badge: 'التجارة والتسليم',
-      title: 'تجارة الكترونية للخدمات والمنتجات المادية والمنتجات الرقمية في نظام تشغيلي واحد.',
+      title: 'تجارة الكترونية للمنتجات المادية والرقمية ضمن منصة اعمال الخدمات.',
       description:
-        'يدعم Schedulaa الان فئات المنتجات والمنتجات الرقمية واتوماسيون الشحن EasyPost وسجل طلبات العميل ومسارات checkout المختلطة حتى تتمكن شركات الخدمات من البيع اكثر من دون تركيب متجر منفصل.',
+        'يدعم Schedulaa فئات المنتجات والمنتجات الرقمية وEasyPost والمخزون وسجل الطلبات. يستخدم شراء المنتج checkout منفصلا عن حجز الموعد.',
       pricing: 'عرض الاسعار',
       demo: 'حجز عرض تجريبي',
     },
@@ -859,9 +859,9 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       eyebrow: 'مسارات التجارة',
       title: 'قدرات تم شحنها بالفعل في بيئة الإنتاج',
       description:
-        'تعكس هذه الصفحة المكدس الحالي للمنتج: سلال مختلطة وتسليم رقمي وتكامل EasyPost وفئات المنتجات وسجل الطلبات المواجه للعميل.',
+        'تعكس هذه الصفحة المكدس الحالي للمنتج: checkout مستقل للمنتجات وتسليم رقمي وEasyPost وفئات وسجل طلبات العميل.',
       cards: [
-        { title: 'سلال مختلطة للخدمات والمنتجات', description: 'اسمح للعميل بشراء المنتجات المادية والرقمية واضافات المواعيد ضمن checkout واحد بدلا من تقسيم المبيعات على ادوات مختلفة.', href: '/booking', cta: 'استكشاف booking + checkout' },
+        { title: 'checkout مستقل لطلبات المنتجات', description: 'يشتري العميل المنتجات المادية او الرقمية في checkout منفصل عن حجز الخدمات، مع بقاء المسارين في المنصة نفسها.', href: '/booking', cta: 'استكشاف booking + checkout' },
         { title: 'فئات المنتجات و slug وحقول SEO', description: 'نظم عناصر الكتالوج حسب الفئة، وحافظ على تنقل storefront اوضح، وادِر slug و meta title و meta description لصفحات المنتج.', href: '/website-builder', cta: 'استكشاف website builder' },
         { title: 'منتجات رقمية مع وصول بعد الدفع', description: 'ضع علامة على المنتج الرقمي، واربط قواعد التسليم في مساحة digital products، وادعم hosted files او الروابط الخارجية او تسليم التراخيص او انماط الوصول المجمعة.', href: '/features', cta: 'استكشاف قدرات المنصة' },
         { title: 'اتوماسيون الشحن EasyPost', description: 'اضبط shipping policy بشكل عام، ووصل EasyPost، واجلب الاسعار، واشترِ labels، واحتفظ باجراءات الشحنة لكل طلب داخل workflow المدير.', href: '/docs', cta: 'استكشاف docs' },
@@ -887,7 +887,7 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       description:
         'هذا ليس متجرا bolt-on. طبقة commerce تشارك السياق مع صفحات booking و website builder و delivery setup و client dashboard.',
       cards: [
-        { title: 'Booking + checkout مختلط', description: 'شاهد كيف يمكن للمنتجات والخدمات ان تعيش في نفس مسار العميل.', href: '/booking' },
+        { title: 'Booking + تجارة المنتجات', description: 'تبقى مسارات حجز الخدمات وcheckout المنتجات المنفصلة مرتبطة بعمليات العميل نفسها.', href: '/booking' },
         { title: 'Website builder + storefront', description: 'اطلق صفحات عامة بعلامتك التجارية تدعم الخدمات وبيع المنتجات معا.', href: '/website-builder' },
         { title: 'وثائق تشغيلية', description: 'راجع دليل الاعداد الخاص بـ delivery policy والشحن و workflows المترابطة.', href: '/docs' },
         { title: 'التحدث مع فريق rollout', description: 'خطط rollout التجارة لديك حول fulfillment والشحن والتسليم الرقمي.', href: '/contact' },
@@ -918,18 +918,18 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
     meta: {
       title: 'Commerce, envio e produtos digitais | Schedulaa',
       description:
-        'Venda produtos fisicos, bens digitais e add-ons de servico com automacao de envio, categorias de produto, historico de pedidos do cliente e checkout misto no Schedulaa.',
+        'Venda produtos fisicos e digitais com checkout de produto separado, estoque, envio, categorias e historico de pedidos no Schedulaa.',
       openGraphTitle: 'Schedulaa Commerce, envio e produtos digitais',
       openGraphDescription:
         'Schedulaa unifica venda de produtos, acesso digital, envio com EasyPost e acompanhamento do pedido do cliente em uma plataforma operacional.',
       twitterTitle: 'Schedulaa Commerce, envio e produtos digitais',
-      twitterDescription: 'Venda produtos e servicos juntos com envio EasyPost, entrega digital e historico de pedidos do cliente.',
+      twitterDescription: 'Venda produtos com checkout separado, envio EasyPost, entrega digital e historico de pedidos.',
     },
     hero: {
       badge: 'Commerce e entrega',
-      title: 'eCommerce para servicos, produtos fisicos e produtos digitais em um unico sistema operacional.',
+      title: 'eCommerce para produtos fisicos e digitais dentro da sua plataforma de servicos.',
       description:
-        'O Schedulaa ja suporta categorias de produto, bens digitais, automacao de envio EasyPost, historico de pedidos do cliente e checkout misto para que empresas de servicos vendam mais sem adicionar uma loja separada.',
+        'O Schedulaa suporta categorias, bens digitais, EasyPost, estoque e historico de pedidos. Compras de produto usam checkout separado do agendamento.',
       pricing: 'Ver precos',
       demo: 'Agendar demo',
     },
@@ -948,9 +948,9 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       eyebrow: 'Fluxos commerce',
       title: 'Capacidades ja entregues em producao',
       description:
-        'Esta pagina reflete o stack atual do produto: carrinhos mistos, entrega digital, integracao EasyPost, categorias de produto e historico de pedidos voltado ao cliente.',
+        'Esta pagina reflete o stack atual: checkout de produto separado, entrega digital, EasyPost, categorias e historico de pedidos.',
       cards: [
-        { title: 'Carrinhos mistos para servicos e produtos', description: 'Permita que clientes comprem produtos fisicos, bens digitais e add-ons ligados a agendamentos em um unico checkout em vez de dividir as vendas entre varias ferramentas.', href: '/booking', cta: 'Explorar booking + checkout' },
+        { title: 'Checkout dedicado para pedidos de produto', description: 'Clientes compram produtos fisicos ou digitais em checkout separado do agendamento, enquanto ambos permanecem na mesma plataforma.', href: '/booking', cta: 'Explorar booking + checkout' },
         { title: 'Categorias de produto, slug e campos SEO', description: 'Organize itens do catalogo por categoria, mantenha a navegacao do storefront mais limpa e gerencie slug, meta title e meta description das paginas de produto.', href: '/website-builder', cta: 'Explorar website builder' },
         { title: 'Produtos digitais com acesso apos pagamento', description: 'Marque produtos como digitais, mapeie regras de entrega no workspace digital e suporte hosted files, links externos, entrega de licenca ou padroes combinados de acesso.', href: '/features', cta: 'Explorar recursos da plataforma' },
         { title: 'Automacao de envio EasyPost', description: 'Configure a shipping policy globalmente, conecte EasyPost, carregue tarifas, compre labels e mantenha as acoes de remessa dentro do workflow do pedido do gestor.', href: '/docs', cta: 'Explorar docs' },
@@ -976,7 +976,7 @@ const copyByLocale: Partial<Record<AppLocale, CommerceCopy>> = {
       description:
         'Isso nao e uma loja bolt-on. A camada commerce compartilha contexto com suas paginas de booking, website builder, delivery setup e client dashboard.',
       cards: [
-        { title: 'Booking + checkout misto', description: 'Veja como produtos e servicos podem viver no mesmo fluxo do cliente.', href: '/booking' },
+        { title: 'Booking + comercio de produtos', description: 'Fluxos separados de agendamento e checkout de produto seguem conectados as mesmas operacoes do cliente.', href: '/booking' },
         { title: 'Website builder + storefront', description: 'Lance paginas publicas com sua marca que suportem servicos e venda de produtos.', href: '/website-builder' },
         { title: 'Docs operacionais', description: 'Revise o guia de setup para delivery policy, envio e workflows conectados.', href: '/docs' },
         { title: 'Falar com o rollout team', description: 'Planeje seu rollout commerce em torno de fulfillment, shipping e entrega digital.', href: '/contact' },

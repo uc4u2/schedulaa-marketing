@@ -194,6 +194,14 @@ Each page now has query-aligned title, description, H1, opening copy, comparison
 
 Do not respond with mass page generation, broad metadata churn, repeated indexing requests, or another architecture rewrite. Select changes from current query/page evidence and validate them separately.
 
+### 2026-10-08 product clarity and conversion measurement pass
+
+The existing `/platform` route is now the marketing authority for connected product workflows and explicit boundaries across booking/payment, estimates/invoices, employee time/payroll handoff, work orders/dispatch, product commerce, Website Builder, manager/employee/customer views, and verified integrations. No new URL was created. The commerce page now states that product checkout is separate from service-booking checkout; stale mixed-cart language was corrected in localized content and supporting feature/docs copy.
+
+Contact copy no longer promises an unverified one-business-day response or universal implementation service. GA4 now distinguishes `demo_panel_open`, accepted homepage `demo_request_submit`, `contact_start`, and confirmed `contact_submit`; these events use allowlisted non-PII parameters and the first-open/start events are session-deduplicated. A scheduler click or panel open is still not a completed demo booking, because the external scheduler exposes no authoritative completion callback to the marketing application.
+
+The homepage booking drawer remains manual and its iframe remains interaction-gated. A missing decorative homepage background request was removed without changing the visible design, and the booking CTA label was shortened to avoid expanding the mobile viewport. Public docs and contact copy no longer advertise unverified future integrations, universal implementation service, or response-time guarantees. Recent Search Console opportunity groups remain unchanged pending the November 9 comparison.
+
 ## Known limitations and open verification
 
 - The GA4 contract exists, but registration/trial events must be verified in the current Realtime/DebugView state before they are used as dependable organic conversion measures.
@@ -236,3 +244,4 @@ Do not respond with mass page generation, broad metadata churn, repeated indexin
 | 2026-10-08 | Improved the Homebase alternatives and employee payslip opportunities, added payroll-page and year-end-guide structured data, strengthened T4/ROE/payslip internal links, and left the verified competitor-only HubSpot Meetings page unchanged. |
 | 2026-10-08 | Added a canonical workflow intent map to the features hub, linked blog category hubs and HVAC workflows contextually, added the HVAC industry page to the sitemap, and corrected stale integration/compliance wording. |
 | 2026-10-08 | Replaced unverified feature-page testimonial cards with factual workflow examples, removed unsupported SOC 2-ready wording, and tightened vague enterprise-scale language without changing conversion paths. |
+| 2026-10-08 | Expanded the existing platform overview around verified connected workflows and product boundaries; corrected mixed-checkout, mobile-app, calendar, and demo claims; clarified contact expectations; added non-PII funnel events; and fixed a dead homepage request plus mobile CTA overflow without creating new URLs. |

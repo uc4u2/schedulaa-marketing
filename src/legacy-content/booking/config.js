@@ -4,7 +4,7 @@ const CONTACT_URL = "/contact";
 const LIVE_SERVICE_DEMO = "/demo";
 
 const sharedCta = {
-  overline: "Booking, websites, invoices, and scheduling together",
+  overline: "Booking, payments, and scheduling",
   title: "Start booking clients the same day you sign up",
   body: "Launch online booking, publish availability, and connect Stripe without installing plugins or stitching tools together.",
   primary: { label: "Start free", href: REGISTER_URL },
@@ -230,7 +230,7 @@ const bookingHubConfig = {
       {
         title: "Checkout and notifications",
         description:
-          "Clients pay, leave a deposit, or store a card. Appointments and receipts sync to calendars, and staff see the booking instantly.",
+          "Clients use the configured payment option. Eligible appointments can sync outbound to Google Calendar, while receipts stay with the booking record in Schedulaa.",
       },
     ],
   },

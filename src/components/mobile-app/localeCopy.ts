@@ -109,7 +109,7 @@ const en: MobileAppCopy = {
     badge: 'Direct download',
     title: 'Roll out Schedulaa mobile without waiting for a separate store launch.',
     description:
-      'Download the signed Android APK directly today. iPhone delivery is planned next, with the same operating workflows and team controls carried forward.',
+      'Download the signed Android APK directly today. An iPhone app is not currently available.',
   },
 };
 

@@ -8,6 +8,7 @@ import {
   isMarketingHomepage,
   marketingLeadCopy,
 } from "@/components/shared/marketingLead/marketingLeadPopup";
+import { trackAnalyticsEvent } from "@/utils/analytics";
 
 type LeadState = {
   business_type: string;
@@ -191,6 +192,11 @@ export default function MarketingLeadWidget() {
         setError(data?.error || "Unable to send your request right now.");
         return;
       }
+      trackAnalyticsEvent("demo_request_submit", {
+        form_name: "homepage_qualification",
+        page_path: window.location.pathname,
+        has_phone: Boolean(form.phone.trim()),
+      });
       setSubmitted(true);
     } catch (fetchError) {
       if (fetchError instanceof Error && fetchError.name === "AbortError") {

@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Schedulaa Documentation | Scheduling, Payroll, and Commerce Guides",
-    "description": "Set up booking flows, payroll, analytics, and Stripe-powered commerce with Schedulaa. Explore guides today and preview the roadmap for upcoming API and SSO integrations.",
+    "description": "Set up booking flows, supported payroll workflows, analytics, and Stripe-powered commerce with Schedulaa. Review current product guides and integration boundaries.",
     "canonical": "https://www.schedulaa.com/docs",
     "og": {
       "title": "Schedulaa Documentation | Scheduling, Payroll, and Commerce Guides",
-      "description": "Guides, onboarding steps, integrations, and FAQs for scheduling, payroll, and online sales — plus the roadmap for public APIs.",
+      "description": "Guides, onboarding steps, integrations, and FAQs for scheduling, supported payroll workflows, and online sales.",
       "image": "https://www.schedulaa.com/og/docs.jpg"
     }
   },
@@ -15,36 +15,36 @@
       "Docs for scheduling,",
       "payroll, analytics, and online sales."
     ],
-    "subtitle": "Configure scheduling, payroll, analytics, and Stripe checkout with step-by-step docs, automation guides, and upcoming API milestones.",
+    "subtitle": "Configure scheduling, supported payroll workflows, analytics, and Stripe checkout with step-by-step guides and clear integration boundaries.",
     "primaryCta": {
       "label": "Search docs"
     },
     "secondaryCta": {
-      "label": "View roadmap"
+      "label": "Review integrations"
     },
     "badge": {
       "overline": "Documentation hub",
-      "title": "Guides and integration roadmap in one place"
+      "title": "Guides and verified integrations in one place"
     },
     "mediaAlt": "Schedulaa documentation overview"
   },
   "quickLinks": {
     "eyebrow": "Quick links",
     "title": "Start with the section that fits your goal",
-    "subtitle": "Jump straight to setup guides, integration steps, and support content. Public API access is coming soon.",
+    "subtitle": "Jump straight to setup guides, verified integration steps, and support content.",
     "ctaLabel": "Open",
     "items": {
       "gettingStarted": {
         "label": "Getting Started",
-        "description": "Launch scheduling, payments, and branding in minutes."
+        "description": "Set up scheduling, eligible payments, and branding."
       },
       "userGuides": {
         "label": "User Guides",
         "description": "Walkthroughs for booking, payroll, websites, and analytics."
       },
       "apiReference": {
-        "label": "API Reference",
-        "description": "Public API access (coming soon)."
+        "label": "Integration Boundaries",
+        "description": "Understand what each supported connection does and does not do."
       },
       "integrations": {
         "label": "Integrations",
@@ -74,7 +74,7 @@
           "Create your manager account and verify email",
           "Invite staff and assign manager, staff, or admin permissions",
           "Pick a profession template (salon, recruiter, fitness, real estate, photography, etc.)",
-          "Connect Stripe for payouts, checkout, and card-on-file (required for live transactions)"
+          "Connect Stripe for eligible payment and card-on-file workflows when required by your setup"
         ]
       },
       {
@@ -82,7 +82,7 @@
         "items": [
           "Configure business hours, tax settings, and currency",
           "Upload logos, theme colors, booking widgets, and notifications",
-          "Link an existing custom domain; in-app domain purchase is coming soon"
+          "Connect a custom domain that your business owns; Schedulaa does not purchase it for you"
         ]
       },
       {
@@ -116,7 +116,7 @@
           "Timesheet approvals, batch payroll, and overrides",
           "Shift swap requests and leave approvals with manager review",
           "Overtime, holidays, and bonuses calculated automatically",
-          "Exports ready for 45 U.S. states + all Canadian provinces (except QC)"
+          "Payroll workflows for supported Canadian and configured U.S. jurisdictions, with Quebec excluded"
         ]
       },
       {
@@ -124,16 +124,16 @@
         "highlights": [
           "Industry-specific templates with hero, reviews, and contact pages",
           "Instant theme customization for colors, fonts, navigation",
-          "Version history, visual editor, and auto-publishing",
-          "Custom domain linking (in-app purchase coming soon)"
+          "Version history, visual editor, signed preview, and explicit publishing",
+          "Custom domain linking for domains the customer owns"
         ]
       },
       {
         "title": "Commerce and Products",
         "highlights": [
-          "Mixed carts for services, products, and add-ons via Stripe Checkout",
+          "Dedicated product checkout plus separate service-booking and add-on flows",
           "Coupons, gift cards, refunds, and Stripe Tax automation",
-          "Save card on file and manage payouts through Stripe",
+          "Supported card-on-file and Stripe payment workflows when configured",
           "Track order history, reconciled refunds, and revenue per location"
         ]
       },
@@ -150,29 +150,29 @@
         "title": "Automations and Integrations",
         "highlights": [
           "Configure outbound webhooks with signature verification",
-          "Trigger emails, SMS, and win-back campaigns automatically",
-          "Stripe for payments, payouts, and tax automation",
-          "QuickBooks/Xero exports; Jitsi for virtual sessions",
-          "Zapier, Slack notifications, and in-app domains coming soon"
+          "Use supported bring-your-own-provider email campaign workflows",
+          "Use Stripe for eligible booking, invoice, and product payments",
+          "Use bounded QuickBooks Online/Xero handoffs and Jitsi where enabled",
+          "Use Google Calendar V1 outbound sync and bounded Zapier automation"
         ]
       }
     ]
   },
   "apiReference": {
-    "title": "API reference (coming soon)",
+    "title": "Integration boundaries",
     "tableHeaders": {
       "category": "Category",
       "method": "Method",
       "path": "Path",
       "summary": "Summary"
     },
-    "tip": "Tip: Use the API Console in the manager dashboard (Settings > Developers) to try endpoints once access opens.",
-    "comingSoon": "Public API access and SSO integrations are planned. Documentation will be published closer to launch.",
+    "tip": "Availability depends on the configured plan, provider, region, role, and tenant policy.",
+    "comingSoon": "This public guide does not promise future API or SSO availability.",
     "endpoints": []
   },
   "integrations": {
     "title": "Integrations",
-    "description": "Stripe is live today; the rest are marked Beta or Coming Soon so you know what's next on the roadmap.",
+    "description": "These are supported connections with bounded roles. Confirm plan, provider, region, and tenant-policy requirements before rollout.",
     "statusLabels": {
       "available": "Available",
       "beta": "Beta",
@@ -182,32 +182,32 @@
       {
         "name": "Stripe",
         "status": "available",
-        "details": "Checkout, payouts, card-on-file, and Stripe Tax automation."
+        "details": "Eligible booking, invoice, and product payment workflows, with configured card and tax capabilities."
       },
       {
         "name": "QuickBooks / Xero",
-        "status": "beta",
-        "details": "Export payroll journals and revenue summaries to your ledgers."
+        "status": "available",
+        "details": "Bounded journal and export handoffs; Schedulaa does not replace a double-entry accounting ledger."
       },
       {
         "name": "Jitsi",
         "status": "available",
-        "details": "Virtual sessions and video interviews embedded in booking flows."
+        "details": "Virtual sessions in supported tenant booking flows where Jitsi policy is enabled."
       },
       {
         "name": "Zapier",
-        "status": "comingSoon",
-        "details": "Automation connector for custom workflows and CRM updates."
+        "status": "available",
+        "details": "Bounded automation triggers and actions using managed API keys and supported events."
       },
       {
-        "name": "Slack",
-        "status": "comingSoon",
-        "details": "Notifications for new bookings, cancellations, and shift changes."
+        "name": "Google Calendar V1",
+        "status": "available",
+        "details": "Outbound appointment synchronization with optional busy-time blocking; not full two-way sync."
       },
       {
-        "name": "Domain Purchase",
-        "status": "comingSoon",
-        "details": "Buy and connect custom domains without leaving Schedulaa."
+        "name": "Custom domains",
+        "status": "available",
+        "details": "Connect a customer-owned domain with supported SSL provisioning; Schedulaa does not purchase the domain."
       }
     ]
   },
@@ -216,33 +216,33 @@
     "items": [
       {
         "question": "How long does onboarding take?",
-        "answer": "Most teams launch within 7-14 days using the quick-start checklists and import templates in the docs."
+        "answer": "Timing depends on your workflow, data, integrations, team, and setup requirements. Contact us for a scoped rollout discussion."
       },
       {
         "question": "Can clients purchase both services and products?",
-        "answer": "Yes. Clients can add multiple services, add-ons, or merchandise items to their cart and complete checkout securely through Stripe."
+        "answer": "Yes, through separate supported flows: services and add-ons use the booking flow, while physical and digital products use dedicated product checkout."
       },
       {
         "question": "Do you support Zapier or custom webhooks?",
-        "answer": "Webhooks are fully supported. Zapier integration is in development for later 2025."
+        "answer": "Schedulaa supports bounded Zapier automation and managed webhook events. Available triggers and actions depend on the configured workflow."
       },
       {
         "question": "Do you offer data migration?",
-        "answer": "Yes. Contact support for CSV import templates or request managed migration for an additional fee."
+        "answer": "Contact support with your source format and requirements. Available import or migration assistance is confirmed before work begins."
       }
     ],
     "schema": [
       {
         "question": "How long does onboarding take?",
-        "answer": "Most teams launch within 7-14 days using the quick-start checklists and import templates in the docs."
+          "answer": "Timing depends on your workflow, data, integrations, team, and setup requirements. Contact us for a scoped rollout discussion."
       },
       {
-        "question": "Does Schedulaa offer a full API reference?",
-        "answer": "Yes. The API section covers authentication, webhooks, scheduling, payroll, and site management endpoints."
+          "question": "Does this public guide promise unrestricted API access?",
+          "answer": "No. It documents supported integration boundaries and does not expose an unrestricted public API contract."
       },
       {
         "question": "Where can I find integration walkthroughs?",
-        "answer": "Integration guides cover payments, messaging, video, and analytics connectors with step-by-step instructions."
+          "answer": "Integration guidance covers verified payment, calendar, accounting, video, and bounded automation connections."
       }
     ]
   },

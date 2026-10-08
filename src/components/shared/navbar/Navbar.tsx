@@ -20,7 +20,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { trackMetaPixel } from '@/utils/metaPixel';
-import { trackAnalyticsEvent } from '@/utils/analytics';
+import { trackAnalyticsEvent, trackAnalyticsEventOnce } from '@/utils/analytics';
 
 type MenuPanelProps = {
   open: boolean;
@@ -407,7 +407,9 @@ const Navbar = () => {
   const demoTriggerRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
-    if (!demoOpen) return;
+    if (!demoOpen) {
+      return;
+    }
     const previousOverflow = document.body.style.overflow;
     const focusFrame = window.requestAnimationFrame(() => demoCloseButtonRef.current?.focus());
     const onKeyDown = (event: KeyboardEvent) => {
@@ -450,14 +452,18 @@ const Navbar = () => {
   }, [demoOpen]);
 
   useEffect(() => {
-    if (!localeOpen) return;
+    if (!localeOpen) {
+      return;
+    }
     const onPointerDown = (event: MouseEvent) => {
       if (!localeMenuRef.current?.contains(event.target as Node)) {
         setLocaleOpen(false);
       }
     };
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setLocaleOpen(false);
+      if (event.key === 'Escape') {
+        setLocaleOpen(false);
+      }
     };
     window.addEventListener('mousedown', onPointerDown);
     window.addEventListener('keydown', onKeyDown);
@@ -468,7 +474,7 @@ const Navbar = () => {
   }, [localeOpen]);
 
   const clearCloseTimer = () => {
-    if (closeTimerRef.current != null) {
+    if (closeTimerRef.current !== null) {
       window.clearTimeout(closeTimerRef.current);
       closeTimerRef.current = null;
     }
@@ -477,26 +483,40 @@ const Navbar = () => {
   const scheduleClose = (menu: 'product' | 'resources') => {
     clearCloseTimer();
     closeTimerRef.current = window.setTimeout(() => {
-      if (menu === 'product') setProductOpen(false);
-      if (menu === 'resources') setResourcesOpen(false);
+      if (menu === 'product') {
+        setProductOpen(false);
+      }
+      if (menu === 'resources') {
+        setResourcesOpen(false);
+      }
     }, 140);
   };
 
   const openDemo = (trigger: HTMLButtonElement) => {
     demoTriggerRef.current = trigger;
+    trackAnalyticsEventOnce('demo_panel_open', `demo-panel:${pathname}`, {
+      page_path: pathname,
+      placement: 'global_navigation',
+    });
     setDemoOpen(true);
   };
 
   const onLocaleChange = (newLocale: AppLocale) => {
-    if (!isSupportedLocale(newLocale)) return;
+    if (!isSupportedLocale(newLocale)) {
+      return;
+    }
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; samesite=lax`;
     const next = withLocalePath(pathname, newLocale);
     window.location.href = next;
   };
   const filteredLocales = LOCALE_OPTIONS.filter((option) => {
     const search = localeSearch.trim().toLowerCase();
-    if (!option.supported) return false;
-    if (!search) return true;
+    if (!option.supported) {
+      return false;
+    }
+    if (!search) {
+      return true;
+    }
     const meta = LOCALE_META[option.code];
     return option.label.toLowerCase().includes(search) || meta?.display.toLowerCase().includes(search);
   });

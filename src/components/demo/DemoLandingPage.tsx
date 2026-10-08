@@ -67,8 +67,8 @@ const demoVideos = [
     src: DEMO_VIDEO_SHIFT_SRC,
   },
   {
-    title: 'Payroll in under a minute',
-    description: 'Generate, finalize, and send payroll to employees in about a minute.',
+    title: 'Payroll workflow overview',
+    description: 'Review supported payroll calculations and finalization steps in the demo environment.',
     src: DEMO_VIDEO_PAYROLL_SRC,
   },
   {
@@ -125,7 +125,7 @@ export default function DemoLandingPage() {
         'Edit the website step-by-step': 'ويرايش گام به گام وب سايت',
         'Clock in/out & approvals': 'ورود/خروج و تاييد حضور',
         'Shift management overview': 'نماي کلي مديريت شيفت',
-        'Payroll in under a minute': 'حقوق در کمتر از يک دقيقه',
+        'Payroll workflow overview': 'مرور جریان حقوق و دستمزد',
         'Service management + client booking': 'مديريت خدمات و رزرو مشتري',
         'Send invitations in minutes': 'ارسال دعوت نامه در چند دقيقه',
       },
@@ -170,23 +170,23 @@ export default function DemoLandingPage() {
       tryDemo: '立即体验',
       videos: {},
     },
-    es: { badge: `Prueba - ${DEMO_ENV}`, title: 'Explora el panel de manager en minutos', subtitle: 'Usa el acceso demo para revisar agenda, nomina, cumplimiento e integraciones.', login: 'Ir a login', talk: 'Hablar con el equipo', credentials: 'Credenciales demo', quickStart: 'Inicio rapido de 4 pasos', step1: '1. Inicia sesion en /login', step1d: 'Usa el email y password demo.', step2: `2. Usa el codigo OTP ${DEMO_OTP}`, step2d: 'El entorno demo permite acceso inmediato.', step3: '3. Explora flujos de manager', step3d: 'Abre Scheduling, Payroll, Websites y Analytics.', step4: '4. Revisa Settings > Zapier y Payroll > Preview', step4d: 'Valida eventos de prueba y exportaciones.', videoFallback: 'Tu navegador no soporta video.', tryDemo: 'Probar demo', videos: {} },
+    es: { badge: `Prueba - ${DEMO_ENV}`, title: 'Explora el panel de manager en minutos', subtitle: 'Usa el acceso demo para revisar agenda, tiempo, nomina e integraciones compatibles.', login: 'Ir a login', talk: 'Hablar con el equipo', credentials: 'Credenciales demo', quickStart: 'Inicio rapido de 4 pasos', step1: '1. Inicia sesion en /login', step1d: 'Usa el email y password demo.', step2: `2. Usa el codigo OTP ${DEMO_OTP}`, step2d: 'El entorno demo permite acceso inmediato.', step3: '3. Explora flujos de manager', step3d: 'Abre Scheduling, Payroll, Websites y Analytics.', step4: '4. Revisa Settings > Zapier y Payroll > Preview', step4d: 'Valida eventos de prueba y exportaciones.', videoFallback: 'Tu navegador no soporta video.', tryDemo: 'Probar demo', videos: {} },
     fr: { badge: `Test drive - ${DEMO_ENV}`, title: 'Decouvrez le tableau manager Schedulaa en quelques minutes', subtitle: 'Utilisez le compte demo partage pour verifier planning, paie, automatisation et integrations.', login: 'Aller a la connexion', talk: "Parler a l'equipe", credentials: 'Identifiants demo', quickStart: 'Demarrage rapide en 4 etapes', step1: '1. Connectez-vous via /login', step1d: 'Saisissez email et mot de passe demo.', step2: `2. Utilisez le code OTP ${DEMO_OTP}`, step2d: 'Le code fixe fonctionne en environnement demo.', step3: '3. Explorez les workflows manager', step3d: 'Ouvrez Scheduling, Payroll, Websites et Analytics.', step4: '4. Ouvrez Settings > Zapier et Payroll > Preview', step4d: 'Testez les evenements et exports.', videoFallback: "Votre navigateur ne prend pas en charge la video.", tryDemo: 'Essayer la demo', videos: {} },
-    de: { badge: `Testlauf - ${DEMO_ENV}`, title: 'Manager-Dashboard in wenigen Minuten testen', subtitle: 'Mit dem Demo-Login Planung, Abrechnung, Compliance und Integrationen pruefen.', login: 'Zum Login', talk: 'Mit dem Team sprechen', credentials: 'Demo-Zugangsdaten', quickStart: '4-Schritte-Start', step1: '1. Melden Sie sich unter /login an', step1d: 'Demo-E-Mail und Passwort eingeben.', step2: `2. OTP-Code ${DEMO_OTP} verwenden`, step2d: 'Im Demo-System funktioniert der feste Code direkt.', step3: '3. Manager-Workflows pruefen', step3d: 'Scheduling, Payroll, Websites und Analytics oeffnen.', step4: '4. Settings > Zapier und Payroll > Preview aufrufen', step4d: 'Testevents und Exporte pruefen.', videoFallback: 'Ihr Browser unterstuetzt kein Video.', tryDemo: 'Demo testen', videos: {} },
-    ar: { badge: `تجربة - ${DEMO_ENV}`, title: 'اختبر لوحة مدير Schedulaa خلال دقائق', subtitle: 'استخدم بيانات الدخول التجريبية لمراجعة الجدولة والرواتب والامتثال والتكاملات.', login: 'الذهاب الى تسجيل الدخول', talk: 'التحدث مع فريق التنفيذ', credentials: 'بيانات دخول التجربة', quickStart: 'بداية سريعة من 4 خطوات', step1: '1. سجل الدخول عبر /login', step1d: 'ادخل البريد وكلمة المرور الخاصة بالتجربة.', step2: `2. استخدم رمز OTP ${DEMO_OTP}`, step2d: 'في بيئة التجربة يمكنك الدخول فورا بهذا الرمز.', step3: '3. استكشف مهام المدير', step3d: 'افتح Scheduling وPayroll وWebsites وAnalytics.', step4: '4. افتح Settings > Zapier و Payroll > Preview', step4d: 'اختبر الاحداث وراجع مخرجات التصدير.', videoFallback: 'متصفحك لا يدعم تشغيل الفيديو.', tryDemo: 'جرب الديمو', videos: {} },
-    pt: { badge: `Teste - ${DEMO_ENV}`, title: 'Experimente o painel do gestor em minutos', subtitle: 'Use o login demo para validar agenda, folha, compliance e integracoes.', login: 'Ir para login', talk: 'Falar com a equipe', credentials: 'Credenciais demo', quickStart: 'Inicio rapido em 4 passos', step1: '1. Acesse /login', step1d: 'Informe email e senha demo.', step2: `2. Use o codigo OTP ${DEMO_OTP}`, step2d: 'No ambiente demo, o codigo fixo entra na hora.', step3: '3. Explore os fluxos do gestor', step3d: 'Abra Scheduling, Payroll, Websites e Analytics.', step4: '4. Abra Settings > Zapier e Payroll > Preview', step4d: 'Teste eventos e confira exportacoes.', videoFallback: 'Seu navegador nao suporta video.', tryDemo: 'Testar demo', videos: {} },
+    de: { badge: `Testlauf - ${DEMO_ENV}`, title: 'Manager-Dashboard in wenigen Minuten testen', subtitle: 'Mit dem Demo-Login Planung, Zeiterfassung, Abrechnung und unterstuetzte Integrationen pruefen.', login: 'Zum Login', talk: 'Mit dem Team sprechen', credentials: 'Demo-Zugangsdaten', quickStart: '4-Schritte-Start', step1: '1. Melden Sie sich unter /login an', step1d: 'Demo-E-Mail und Passwort eingeben.', step2: `2. OTP-Code ${DEMO_OTP} verwenden`, step2d: 'Im Demo-System funktioniert der feste Code direkt.', step3: '3. Manager-Workflows pruefen', step3d: 'Scheduling, Payroll, Websites und Analytics oeffnen.', step4: '4. Settings > Zapier und Payroll > Preview aufrufen', step4d: 'Testevents und Exporte pruefen.', videoFallback: 'Ihr Browser unterstuetzt kein Video.', tryDemo: 'Demo testen', videos: {} },
+    ar: { badge: `تجربة - ${DEMO_ENV}`, title: 'اختبر لوحة مدير Schedulaa خلال دقائق', subtitle: 'استخدم بيانات الدخول التجريبية لمراجعة الجدولة والوقت والرواتب والتكاملات المدعومة.', login: 'الذهاب الى تسجيل الدخول', talk: 'التحدث مع فريق التنفيذ', credentials: 'بيانات دخول التجربة', quickStart: 'بداية سريعة من 4 خطوات', step1: '1. سجل الدخول عبر /login', step1d: 'ادخل البريد وكلمة المرور الخاصة بالتجربة.', step2: `2. استخدم رمز OTP ${DEMO_OTP}`, step2d: 'في بيئة التجربة يمكنك الدخول فورا بهذا الرمز.', step3: '3. استكشف مهام المدير', step3d: 'افتح Scheduling وPayroll وWebsites وAnalytics.', step4: '4. افتح Settings > Zapier و Payroll > Preview', step4d: 'اختبر الاحداث وراجع مخرجات التصدير.', videoFallback: 'متصفحك لا يدعم تشغيل الفيديو.', tryDemo: 'جرب الديمو', videos: {} },
+    pt: { badge: `Teste - ${DEMO_ENV}`, title: 'Experimente o painel do gestor em minutos', subtitle: 'Use o login demo para revisar agenda, tempo, folha e integracoes compativeis.', login: 'Ir para login', talk: 'Falar com a equipe', credentials: 'Credenciais demo', quickStart: 'Inicio rapido de 4 passos', step1: '1. Acesse /login', step1d: 'Informe email e senha demo.', step2: `2. Use o codigo OTP ${DEMO_OTP}`, step2d: 'No ambiente demo, o codigo fixo entra na hora.', step3: '3. Explore os fluxos do gestor', step3d: 'Abra Scheduling, Payroll, Websites e Analytics.', step4: '4. Abra Settings > Zapier e Payroll > Preview', step4d: 'Teste eventos e confira exportacoes.', videoFallback: 'Seu navegador nao suporta video.', tryDemo: 'Testar demo', videos: {} },
   };
   const copy = copyByLocale[locale] || {
     badge: `Test drive - ${DEMO_ENV}`,
     title: 'See how Schedulaa manages schedules and payroll for service teams.',
     subtitle:
-      'Book a live walkthrough first, then use the demo dashboard to explore scheduling, time tracking, payroll, compliance, and exports on your own.',
+      'Book a guided walkthrough or use the demo dashboard to explore scheduling, time tracking, supported payroll workflows, websites, and integrations.',
     login: 'Try the demo dashboard',
     talk: 'Talk to our rollout team',
     downloadApk: 'Download Android APK',
-    iosSoon: 'iOS coming soon',
+    iosSoon: 'Not currently available',
     mobileApps: 'Get the mobile app',
-    mobileAppsBody: 'Install the signed Android build now. iPhone delivery will follow through the iOS rollout.',
+    mobileAppsBody: 'Install the signed Android build. An iPhone app is not currently available.',
     bookDemo: 'Book a live demo',
     credentials: 'Demo credentials',
     quickStart: '4-step quick start',
@@ -286,7 +286,7 @@ export default function DemoLandingPage() {
               </span>
               <span className="block">
                 <span className="block text-[11px] uppercase tracking-[0.18em] text-secondary/55 dark:text-accent/55">iPhone app</span>
-                <span className="block text-base font-semibold text-secondary dark:text-white">{copy.iosSoon || 'iOS coming soon'}</span>
+                <span className="block text-base font-semibold text-secondary dark:text-white">{copy.iosSoon || 'Not currently available'}</span>
               </span>
             </div>
           </div>
@@ -355,7 +355,7 @@ export default function DemoLandingPage() {
                   </span>
                   <span className="block">
                     <span className="block text-[11px] uppercase tracking-[0.18em] text-secondary/55 dark:text-accent/55">iPhone app</span>
-                    <span className="block text-base font-semibold text-secondary dark:text-white">{copy.iosSoon || 'iOS coming soon'}</span>
+                    <span className="block text-base font-semibold text-secondary dark:text-white">{copy.iosSoon || 'Not currently available'}</span>
                   </span>
                 </div>
               </div>
