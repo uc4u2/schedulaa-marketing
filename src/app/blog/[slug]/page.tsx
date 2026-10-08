@@ -80,6 +80,9 @@ function getBlogCtaTarget(post: any): { target: CtaTarget; href: string } {
   if (['tutor', 'tutoring'].some((pattern) => primaryTopic.includes(pattern))) {
     return { target: 'booking', href: '/booking/tutor' };
   }
+  if (post.slug === 'roe-t4-w2-year-end-guide') {
+    return { target: 'payroll', href: '/payroll' };
+  }
 
   if (hasAny(['invoice', 'invoic', 'estimate', 'quote', 'billing', 'payment link', 'deposit'])) {
     return { target: 'invoices', href: '/business-finance/invoices' };
@@ -134,17 +137,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const isHvacSchedulingArticle = slug === 'hvac-bad-scheduling-lost-money';
   const isGustoDecisionArticle = slug === 'schedulaa-vs-gusto';
   const isAdpServiceTeamArticle = slug === 'adp-alternative-canada-us-service-teams';
-  const hasArticleSchema = isHvacSchedulingArticle || isGustoDecisionArticle || isAdpServiceTeamArticle;
+  const isYearEndGuide = slug === 'roe-t4-w2-year-end-guide';
+  const hasArticleSchema = isHvacSchedulingArticle || isGustoDecisionArticle || isAdpServiceTeamArticle || isYearEndGuide;
   const articleSchemaId = isHvacSchedulingArticle
     ? 'hvac-scheduling-article-jsonld'
     : isGustoDecisionArticle
       ? 'gusto-decision-article-jsonld'
-      : 'adp-service-team-article-jsonld';
+      : isAdpServiceTeamArticle
+        ? 'adp-service-team-article-jsonld'
+        : 'year-end-guide-article-jsonld';
   const breadcrumbSchemaId = isHvacSchedulingArticle
     ? 'hvac-scheduling-breadcrumb-jsonld'
     : isGustoDecisionArticle
       ? 'gusto-decision-breadcrumb-jsonld'
-      : 'adp-service-team-breadcrumb-jsonld';
+      : isAdpServiceTeamArticle
+        ? 'adp-service-team-breadcrumb-jsonld'
+        : 'year-end-guide-breadcrumb-jsonld';
   const articleImages = (post.sections || [])
     .map((section: any) => section.image?.src)
     .filter(Boolean)

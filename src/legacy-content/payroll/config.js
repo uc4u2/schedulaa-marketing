@@ -984,6 +984,7 @@ const t4Config = {
       links: [
         { label: "Open ROE generator", href: "/payroll/tools/roe" },
         { label: "Read the T4, W-2, and ROE employer guide", href: "/blog/roe-t4-w2-year-end-guide" },
+        { label: "See employee payslip access", href: "/payslips" },
       ],
     },
   ],
@@ -1169,9 +1170,9 @@ const w2Config = {
 
 const payslipConfig = {
   meta: {
-    title: "Employee Payslip Portal – Download Payslips Online | Schedulaa",
+    title: "Employee Payslip Portal & PDF Downloads | Schedulaa",
     description:
-      "Employees can access finalized payslips, filter by date, and download secure PDF copies any time. Managers control access and track downloads.",
+      "Give employees secure self-service access to finalized payslips, date filters, and PDF downloads while managers retain access controls and audit history.",
     canonical: `${BASE_URL}/payslips`,
     og: {
       title: "Employee Payslip Portal | Schedulaa",
@@ -1195,7 +1196,6 @@ const payslipConfig = {
       name: "Schedulaa Payslip Portal",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      offers: { "@type": "Offer", price: "0.00", priceCurrency: "USD" },
       featureList: [
         "Employee self-service payslip access",
         "PDF downloads with date filters",
@@ -1208,16 +1208,16 @@ const payslipConfig = {
   ],
   hero: {
     badge: "Employee experience",
-    title: "Employee payslip portal with instant downloads",
+    title: "Employee payslip portal for secure self-service",
     subtitle:
-      "Give staff a secure, branded portal where they can view and download finalized payslips any time without emailing payroll.",
+      "Give employees one secure place to view finalized payslips, find past pay periods, and download PDF copies without asking payroll for each document.",
     bullets: [
       "Search and filter payslips by date or payroll run.",
       "Download PDF copies that match the finalized export.",
       "Control access with role-based permissions.",
     ],
-    primaryCta: { label: "Enable the portal", href: REGISTER_URL },
-    secondaryCta: { label: "See payroll features", href: "/payroll/canada" },
+    primaryCta: { label: "Start with Schedulaa", href: REGISTER_URL },
+    secondaryCta: { label: "Review Canadian payroll", href: "/payroll/canada" },
   },
   featuresHeading: "Highlights",
   featuresTitle: "Keep employees informed without extra tickets",
@@ -1282,7 +1282,12 @@ const payslipConfig = {
       title: "Works with Canadian and US payroll",
       body:
         "The payslip portal receives finalized slips from both Canadian and US payroll runs, so multinational teams share the same experience.",
-      links: [{ label: "Run a payroll preview", href: "/payroll/canada" }],
+      links: [
+        { label: "Review Canadian payroll", href: "/payroll/canada" },
+        { label: "Open the T4 generator", href: "/payroll/tools/t4" },
+        { label: "Open the ROE tool", href: "/payroll/tools/roe" },
+        { label: "Read the year-end employer guide", href: "/blog/roe-t4-w2-year-end-guide" },
+      ],
     },
   ],
   faqHeading: "FAQ",

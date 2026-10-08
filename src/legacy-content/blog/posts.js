@@ -1364,7 +1364,7 @@ const blogPosts = [
     description:
       "Compare T4, W-2, and ROE forms, who receives each one, what employers report, and how Canadian and U.S. year-end payroll workflows differ.",
     datePublished: "2025-03-14",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-08",
     category: "Year-end",
     tags: ["payroll", "roe", "t4", "w2", "year-end"],
     heroOverline: "Year-end",
@@ -1478,6 +1478,7 @@ const blogPosts = [
           { label: "T4 generator", href: "/payroll/tools/t4" },
           { label: "W-2 generator", href: "/payroll/tools/w2" },
           { label: "ROE tool", href: "/payroll/tools/roe" },
+          { label: "Employee payslip portal", href: "/payslips" },
           { label: "Canada Payroll", href: "/payroll/canada" },
           { label: "USA Payroll", href: "/payroll/usa" },
         ],

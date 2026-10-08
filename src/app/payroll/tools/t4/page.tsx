@@ -2,7 +2,9 @@ import FeatureStyleContentPage from '@/components/sections/FeatureStyleContentPa
 import { getPayrollSource } from '@/legacy-content/payroll/getPayrollSource';
 import { getServerLocale } from '@/utils/serverLocale';
 import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
+import { buildPayrollPageSchemas } from '@/lib/seo/payrollPageSchema';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getServerLocale();
@@ -23,5 +25,29 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function PayrollT4Page() {
   const locale = await getServerLocale();
   const payrollPages = getPayrollSource(locale);
-  return <FeatureStyleContentPage config={payrollPages.t4 as any} routePath="/payroll/tools/t4" />;
+  const config = payrollPages.t4 as any;
+  const schemas = buildPayrollPageSchemas({
+    locale,
+    path: '/payroll/tools/t4',
+    name: 'Schedulaa T4 Generator',
+    breadcrumbName: 'T4 generator',
+    featureList: [
+      'Prefill supported CRA boxes from finalized payroll',
+      'Render employee PDF slips',
+      'Generate CRA XML and CSV summaries',
+      'Download year-end packages in batches',
+    ],
+    faq: config.faq,
+  });
+
+  return (
+    <>
+      {schemas.map((schema, index) => (
+        <Script key={schema['@type']} id={`t4-${index}-jsonld`} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </Script>
+      ))}
+      <FeatureStyleContentPage config={config} routePath="/payroll/tools/t4" />
+    </>
+  );
 }

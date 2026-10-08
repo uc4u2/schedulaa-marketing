@@ -249,6 +249,115 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
       { label: 'Explore employee scheduling', href: '/workforce' },
     ],
   },
+  homebase: {
+    competitor: 'Homebase',
+    title: 'Homebase Alternatives for Service Businesses | Schedulaa',
+    description:
+      'Compare Homebase alternatives for service businesses that need customer booking, staff scheduling, time tracking, work orders, invoices, and payment links.',
+    h1: 'Homebase alternatives for service-business operations',
+    lead:
+      'Researching Homebase alternatives? Compare the workflow you actually need: hourly-team scheduling and payroll, customer-facing service operations, or a combination of both.',
+    intro: [
+      'Homebase offers employee scheduling, time clocks, team communication, hiring and onboarding, HR tools, and full-service U.S. payroll. It should not be described as only a shift scheduler.',
+      'Schedulaa focuses on connecting customer booking, employee availability and shifts, approved time, dispatch and work orders, estimates, invoices, and hosted payment links. Its payroll tools support documented calculations and exports, but do not automate government filing or remittance.',
+    ],
+    contextHeading: 'What to evaluate in a Homebase alternative',
+    contextParagraphs: [
+      'Start with the boundary between employee operations and customer work. Homebase is designed around hourly teams and offers payroll and HR capabilities. Schedulaa is designed for service businesses that want bookings, customers, field work, staff operations, and billing to share one workflow.',
+      'A business that needs full-service U.S. payroll tax filing should retain or evaluate a payroll provider. A team trying to connect booked work, staff assignment, job completion, and customer billing should test the complete service lifecycle.',
+    ],
+    differentiatorsHeading: 'Where Schedulaa fits among Homebase alternatives',
+    differentiators: [
+      {
+        title: 'Customer bookings connect to staff availability',
+        body: 'Public booking, customer records, employee availability, shifts, and appointment changes remain connected instead of living in separate scheduling and customer systems.',
+      },
+      {
+        title: 'Field work continues into billing',
+        body: 'Dispatch, work orders, estimates, invoices, and hosted payment links support the work that happens after a customer books or requests service.',
+      },
+      {
+        title: 'Approved hours support payroll-ready workflows',
+        body: 'Clock-in/out and approved time feed documented payroll calculations and exports within Schedulaa\'s supported regional boundaries.',
+      },
+    ],
+    comparisonHeading: 'Homebase and Schedulaa solve different operational jobs',
+    comparisonRows: [
+      {
+        label: 'Primary focus',
+        schedulaa: 'Customer-facing service operations connected to workforce, jobs, billing, and payroll-ready records.',
+        competitor: 'Hourly-team scheduling, time tracking, communication, HR, hiring, and optional full-service U.S. payroll.',
+      },
+      {
+        label: 'Customer booking and records',
+        schedulaa: 'Includes public booking, customer profiles, appointment changes, reminders, and related service history.',
+        competitor: 'Focuses on employee and labor operations rather than customer appointment and service-delivery workflows.',
+      },
+      {
+        label: 'Work orders and billing',
+        schedulaa: 'Supports dispatch, work orders, estimates, invoices, and hosted payment links.',
+        competitor: 'Not positioned as a quote-to-work-order-to-invoice platform for customer service jobs.',
+      },
+      {
+        label: 'Payroll boundary',
+        schedulaa: 'Supports calculations and documented exports in supported regions; filing and remittance remain external.',
+        competitor: 'Offers full-service payroll for U.S.-based customers, including tax calculation, filing, payment, and employee tax forms.',
+      },
+      {
+        label: 'Team operations',
+        schedulaa: 'Supports availability, shifts, clock-in/out, breaks, approvals, assignments, and service-work context.',
+        competitor: 'Supports scheduling, time clocks, timesheets, communication, time off, hiring, onboarding, and HR tools by plan.',
+      },
+    ],
+    fitHeading: 'Which Homebase alternative fits your workflow?',
+    fitMatrix: [
+      {
+        scenario: 'You mainly need hourly scheduling, time clocks, team communication, HR, and full-service U.S. payroll.',
+        recommendation: 'Evaluate Homebase and other workforce or payroll platforms',
+      },
+      {
+        scenario: 'You need customer booking, staff scheduling, field work, estimates, invoices, and payment links connected.',
+        recommendation: 'Evaluate Schedulaa',
+      },
+      {
+        scenario: 'You need connected service operations plus outsourced payroll filing and remittance.',
+        recommendation: 'Evaluate Schedulaa alongside a full-service payroll provider',
+      },
+    ],
+    faqHeading: 'Homebase alternative FAQs',
+    faq: [
+      {
+        question: 'Is Homebase only an employee scheduling tool?',
+        answer:
+          'No. Homebase currently offers scheduling, time tracking, team communication, hiring and onboarding, HR tools, and optional full-service U.S. payroll. Features vary by plan.',
+      },
+      {
+        question: 'Does Schedulaa replace full-service payroll filing?',
+        answer:
+          'No. Schedulaa supports payroll calculations and documented exports within supported regions, but it does not automate government filing or remittance.',
+      },
+      {
+        question: 'What does Schedulaa add for service businesses?',
+        answer:
+          'Schedulaa connects public booking, customers, staff availability and shifts, dispatch, work orders, estimates, invoices, and hosted payment links.',
+      },
+      {
+        question: 'Can I use Schedulaa with a payroll provider?',
+        answer:
+          'Yes. Teams can manage customer and workforce operations in Schedulaa and retain a provider for payroll filing, remittance, benefits, or other payroll administration.',
+      },
+    ],
+    conclusionHeading: 'Choose around the work your team must connect',
+    conclusion:
+      'Homebase is a credible option for hourly-team scheduling and U.S. payroll. Schedulaa is worth evaluating when customer demand, service delivery, staffing, billing, and payroll-ready records need to stay connected.',
+    primaryCta: { label: 'Explore workforce management', href: '/workforce' },
+    relatedLinks: [
+      { label: 'Online booking', href: '/booking' },
+      { label: 'Payroll coverage and boundaries', href: '/payroll' },
+      { label: 'Invoices and payment links', href: '/business-finance/invoices' },
+      { label: 'Compare Schedulaa and Homebase directly', href: '/compare/homebase' },
+    ],
+  },
   'when-i-work': {
     competitor: 'When I Work',
     title: 'When I Work Alternatives for Service Teams | Schedulaa',

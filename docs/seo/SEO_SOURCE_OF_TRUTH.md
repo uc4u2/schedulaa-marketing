@@ -160,6 +160,12 @@ The homepage qualification flow now uses concise, consistent demo-tailoring ques
 
 The When I Work, Square Appointments, and Xero alternatives URLs now serve broad category-research intent, while their `/compare/` URLs serve direct Schedulaa-vs-competitor evaluation intent. Each pair uses distinct metadata, H1/opening language, reciprocal contextual links, visible FAQs with matching FAQ schema, and self-canonicals. Current official competitor documentation was used to correct simplified claims: When I Work includes substantial scheduling, attendance, communication, and payroll-integration workflows; Square Appointments is not merely a booking calendar; and Xero remains an accounting platform whose regional payroll offering varies. Unverified testimonials, stale pricing, and unsupported replacement claims no longer render on these six pages.
 
+### 2026-10-08 Homebase, payslip, and year-end opportunity work
+
+The validated September 8–October 5 Search Console period showed `/alternatives/homebase` at 17 impressions, position 7.35, and zero clicks; `/en/payslips` at 29 impressions, one click, and position 10.45; and the English year-end guide at 14 impressions and position 9.5. The T4 tool did not record measurable page impressions in that period, so it was not rewritten solely in response to a temporary visibility change.
+
+The Homebase alternatives page now targets broad alternative research with accurate current boundaries for Homebase scheduling, time, communication, hiring, HR, and U.S. payroll. The payslip page now has page-specific metadata, stronger employee self-service intent, contextual T4/ROE/year-end links, and visible conversion paths. Payslip and T4 pages emit SoftwareApplication, Breadcrumb, and FAQ structured data without invented zero-price offers. The year-end guide now emits Article and Breadcrumb structured data and links to the employee payslip portal. The HubSpot Meetings URL was confirmed to be a competitor-alternative page, not evidence of a Schedulaa integration, and was left unchanged.
+
 ### 2026-10-08 alternatives opportunity optimization
 
 The first content iteration targets three pages selected from the validated September 8–October 5 Search Console baseline:
@@ -211,3 +217,4 @@ Do not respond with mass page generation, broad metadata churn, repeated indexin
 | 2026-10-08 | Separated ADP alternatives, direct comparison, and Canada/U.S. informational intent; corrected enterprise-only and time-tracking claims from official ADP evidence; removed an unverified testimonial; and added reciprocal links and appropriate structured data. |
 | 2026-10-08 | Refined the homepage qualification and booking language, made the qualification panel content-aware on smaller viewports, and limited the integration strip to verified live product boundaries. |
 | 2026-10-08 | Separated alternatives and direct-comparison intent for When I Work, Square Appointments, and Xero; corrected competitor and Schedulaa capability boundaries; removed unverified testimonial output; and added reciprocal links plus FAQ/Breadcrumb schema. |
+| 2026-10-08 | Improved the Homebase alternatives and employee payslip opportunities, added payroll-page and year-end-guide structured data, strengthened T4/ROE/payslip internal links, and left the verified competitor-only HubSpot Meetings page unchanged. |
