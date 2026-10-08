@@ -80,7 +80,7 @@ function getBlogCtaTarget(post: any): { target: CtaTarget; href: string } {
   if (['tutor', 'tutoring'].some((pattern) => primaryTopic.includes(pattern))) {
     return { target: 'booking', href: '/booking/tutor' };
   }
-  if (post.slug === 'roe-t4-w2-year-end-guide') {
+  if (post.slug === 'roe-t4-w2-year-end-guide' || post.slug === 'canada-us-payroll-one-system') {
     return { target: 'payroll', href: '/payroll' };
   }
 
@@ -138,21 +138,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const isGustoDecisionArticle = slug === 'schedulaa-vs-gusto';
   const isAdpServiceTeamArticle = slug === 'adp-alternative-canada-us-service-teams';
   const isYearEndGuide = slug === 'roe-t4-w2-year-end-guide';
-  const hasArticleSchema = isHvacSchedulingArticle || isGustoDecisionArticle || isAdpServiceTeamArticle || isYearEndGuide;
+  const isCrossBorderPayrollArticle = slug === 'canada-us-payroll-one-system';
+  const hasArticleSchema =
+    isHvacSchedulingArticle || isGustoDecisionArticle || isAdpServiceTeamArticle || isYearEndGuide || isCrossBorderPayrollArticle;
   const articleSchemaId = isHvacSchedulingArticle
     ? 'hvac-scheduling-article-jsonld'
     : isGustoDecisionArticle
       ? 'gusto-decision-article-jsonld'
       : isAdpServiceTeamArticle
         ? 'adp-service-team-article-jsonld'
-        : 'year-end-guide-article-jsonld';
+        : isCrossBorderPayrollArticle
+          ? 'cross-border-payroll-article-jsonld'
+          : 'year-end-guide-article-jsonld';
   const breadcrumbSchemaId = isHvacSchedulingArticle
     ? 'hvac-scheduling-breadcrumb-jsonld'
     : isGustoDecisionArticle
       ? 'gusto-decision-breadcrumb-jsonld'
       : isAdpServiceTeamArticle
         ? 'adp-service-team-breadcrumb-jsonld'
-        : 'year-end-guide-breadcrumb-jsonld';
+        : isCrossBorderPayrollArticle
+          ? 'cross-border-payroll-breadcrumb-jsonld'
+          : 'year-end-guide-breadcrumb-jsonld';
   const articleImages = (post.sections || [])
     .map((section: any) => section.image?.src)
     .filter(Boolean)

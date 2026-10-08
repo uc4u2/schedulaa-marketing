@@ -174,6 +174,10 @@ The English features hub now exposes one practical workflow map for website buil
 
 The homepage, feature, alternatives, comparison, blog, and pricing templates were measured under the same throttled mobile conditions. Only `/en/features` exceeded the 2.5-second LCP target (3.72 seconds) because its above-the-fold heading and first visible illustration were gated by delayed scroll reveals while the image was also marked lazy. The hero copy and first card now paint immediately, the first light/dark illustration pair loads eagerly with high fetch priority and explicit responsive sizes, and remaining feature images and animations stay lazy. The median feature-page LCP fell to 2.21 seconds, image transfer fell from 56 KB to 42 KB, and measured CLS remained zero. The other measured templates were left unchanged because their median LCP was 1.73–2.25 seconds with zero measured CLS.
 
+### 2026-10-08 Search Console-supported cross-border payroll guide
+
+The exact query `how do cross border companies handle payroll in canada` recorded 12 impressions at average position 4.67 with zero clicks in the validated September 8–October 5 period. The existing `/blog/canada-us-payroll-one-system` URL was expanded instead of creating an overlapping page. It now answers the operational question directly, states Canada-excluding-Quebec and supported-U.S.-state boundaries, avoids government-filing or nationwide-payroll claims, emits Article and Breadcrumb schema, and receives contextual links from the regional payroll pages.
+
 ### 2026-10-08 alternatives opportunity optimization
 
 The first content iteration targets three pages selected from the validated September 8–October 5 Search Console baseline:

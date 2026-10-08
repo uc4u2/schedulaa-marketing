@@ -1216,44 +1216,69 @@ const blogPosts = [
   },
   {
     slug: "canada-us-payroll-one-system",
-    title: "One System for Canadian and U.S. Payroll: CPP/EI and FICA in a Single Workflow",
+    title: "How Cross-Border Companies Handle Payroll in Canada and the U.S.",
+    seoTitle: "How Cross-Border Companies Handle Payroll in Canada",
+    h1: "How cross-border companies handle payroll in Canada and the U.S.",
     description:
-      "How Schedulaa runs Canada (ex-Québec) and U.S. payroll in one Operations OS, with scheduling and time tracking as the source of truth.",
+      "A practical Canada–U.S. payroll workflow for approved hours, regional calculations, payroll-ready records, and filing boundaries.",
     datePublished: "2025-03-11",
-    dateModified: "2025-03-11",
+    dateModified: "2026-10-08",
     category: "Payroll",
     tags: ["payroll", "canada", "usa", "compliance"],
     heroOverline: "Cross-border payroll",
     sections: [
       {
-        heading: "Why cross-border payroll usually hurts",
+        heading: "Start with work location, not company headquarters",
         paragraphs: [
-          "Teams often juggle one tool for Canadian payroll, another for U.S. payroll, plus separate scheduling/time systems and spreadsheets in between. Results: inconsistent tax rules, remote-worker confusion, and no single view of labor cost.",
+          "Cross-border companies normally separate payroll rules by where each employee works. A Canadian employee and a U.S. employee may share an operations team, but their deductions, documents, and filing obligations are not interchangeable.",
+          "Keep the employee's work jurisdiction, approved hours, pay period, earnings, and deductions explicit. This reduces the risk of applying one country's assumptions to another country's payroll record.",
         ],
       },
       {
-        heading: "How Schedulaa keeps two engines in one OS",
+        heading: "Use approved operational time as the handoff source",
         paragraphs: [
-          "Employee profiles store country and work location. Payroll Preview loads the correct engine automatically: CPP/EI/BPA with ROE/T4 for Canada (ex-Québec) and IRS/FICA/state logic with W-2 for the U.S. You approve shifts and leave once; the right rules apply per employee.",
+          "Before calculating pay, close the operational record: approved shifts, paid and unpaid breaks, overtime, leave, tips, commissions, bonuses, and other adjustments. Payroll review is more reliable when finance receives one approved set of inputs instead of reconstructing time from messages and spreadsheets.",
+          "Schedulaa connects approved scheduling and time data to payroll preview, payslips, and payroll-ready exports. Managers remain responsible for reviewing exceptions and using the correct filing or payroll-provider process for each jurisdiction.",
         ],
       },
       {
-        heading: "Canadian coverage (ex-Québec)",
+        heading: "Canada workflow and boundaries",
         paragraphs: [
-          "Federal/provincial tax, CPP (with exemptions), EI (with exemptions), vacation/stat holiday pay, BPA with YTD tracking, T4 boxes 14/16/18/22/24/26/40/44, and ROE exports.",
+          "Schedulaa supports payroll calculations for Canada excluding Quebec, including federal and provincial tax logic, CPP and EI handling, vacation and statutory-holiday inputs, payroll documents, and T4 or ROE export workflows where supported.",
+          "It does not promise government e-filing, automatic remittance, Quebec payroll, or universal tax compliance. Businesses should confirm filing, remittance, and jurisdiction-specific obligations with their payroll professional or provider.",
+        ],
+        links: [
+          { label: "Review Canada payroll coverage", href: "/payroll/canada" },
+          { label: "Review the T4 workflow", href: "/payroll/tools/t4" },
+          { label: "Review the ROE workflow", href: "/payroll/tools/roe" },
         ],
       },
       {
-        heading: "U.S. coverage",
+        heading: "U.S. workflow and boundaries",
         paragraphs: [
-          "Federal income tax, state income tax, FICA (Social Security + Medicare), SUI/SUTA, and W-2 generation. Local/city taxes are not automated.",
+          "Schedulaa provides federal and FICA-oriented calculations, payroll preview, and W-2-related records. Full U.S. payroll finalization is currently limited to Alaska, Florida, Nevada, South Dakota, Texas, Washington, Wyoming, Tennessee, and New Hampshire.",
+          "Other states may be available only in raw preview mode, with finalization blocked. Local and city payroll taxes and special state programs remain outside the automated workflow, so this should not be presented as nationwide U.S. payroll or filing coverage.",
+        ],
+        links: [
+          { label: "Review supported U.S. payroll coverage", href: "/payroll/usa" },
+          { label: "Review the W-2 workflow", href: "/payroll/tools/w2" },
         ],
       },
       {
-        heading: "Remote workers & examples",
+        heading: "A practical cross-border payroll checklist",
         paragraphs: [
-          "Engines follow where staff work: an Ontario stylist runs on CPP/EI; a Texas agent runs on federal + FICA with no state tax. Schedulaa handles mixed teams without duplicate setups.",
-          "Links: /payroll, /payroll/canada, /payroll/usa",
+          "Treat the shared platform as an operational control layer, not as a reason to collapse regional obligations. Review every payroll-ready record before it moves to a provider, accountant, remittance, or filing process.",
+        ],
+        checklist: [
+          "Record each employee's actual work jurisdiction and supported payroll status.",
+          "Approve hours, breaks, leave, overtime, and variable earnings before payroll review.",
+          "Use the applicable Canada or U.S. calculation and document workflow.",
+          "Keep Quebec, unsupported U.S. states, local taxes, remittances, and government filing in the appropriate external process.",
+          "Retain the reviewed exports and audit trail used for the payroll handoff.",
+        ],
+        links: [
+          { label: "Explore the payroll workflow", href: "/payroll" },
+          { label: "See employee payslips", href: "/payslips" },
         ],
       },
     ],

@@ -13,6 +13,7 @@ const sharedCta = {
 const sharedSecondaryLinks = [
   { label: "Canada payroll", href: "/payroll/canada" },
   { label: "USA payroll", href: "/payroll/usa" },
+  { label: "Canada–U.S. payroll guide", href: "/blog/canada-us-payroll-one-system" },
   { label: "ROE generator", href: "/payroll/tools/roe" },
   { label: "T4 generator", href: "/payroll/tools/t4" },
   { label: "W-2 generator", href: "/payroll/tools/w2" },
