@@ -146,6 +146,12 @@ Search Console showed `/alternatives/gusto` declining from 58 to 25 impressions 
 
 The three self-canonical pages now have distinct jobs: `/alternatives/gusto` targets generic Gusto-alternative research, `/compare/gusto` supports direct Schedulaa-vs-Gusto evaluation, and `/blog/schedulaa-vs-gusto` provides an informational decision framework. Reciprocal contextual links connect the pages. The unverified Photo Artisto Studios testimonial was removed, and the outdated broad “U.S.-only” description was corrected to acknowledge Gusto Global contractor and employer-of-record offerings while preserving explicit Schedulaa payroll boundaries.
 
+### 2026-10-08 ADP intent separation
+
+Search Console showed overlapping ADP visibility: `/en/alternatives/adp` had 23 impressions at average position 17.13, `/en/compare/adp` had 19 impressions at position 6.58, and `/en/blog/adp-alternative-canada-us-service-teams` had 14 impressions at position 7.86. The queries `adp alternatives` and `adp alternative canada` had zero clicks.
+
+The three self-canonical pages now have distinct jobs: `/alternatives/adp` targets generic ADP-alternative research, `/compare/adp` supports direct Schedulaa-vs-ADP evaluation, and the blog provides Canada/U.S. service-team guidance. Official ADP product, small-business, and time-and-attendance pages were used to correct enterprise-only and integration-only wording. Schedulaa's filing, remittance, and regional limits are explicit; an unverified testimonial was removed; and the pages now connect through contextual links with intent-appropriate structured data.
+
 ### 2026-10-08 alternatives opportunity optimization
 
 The first content iteration targets three pages selected from the validated September 8–October 5 Search Console baseline:
@@ -194,3 +200,4 @@ Do not respond with mass page generation, broad metadata churn, repeated indexin
 | 2026-10-08 | Consolidated marketing SEO authority under `docs/seo/`, made generated report retention explicit, and selected the current opportunity backlog from live Search Console data. |
 | 2026-10-08 | Improved the Vagaro, QuickBooks, and Paychex alternatives pages using the validated query/page opportunities; added query-aligned metadata/content, evidence-safe comparison boundaries, matching FAQ and breadcrumb schema, and relevant internal links. |
 | 2026-10-08 | Separated Gusto alternatives, direct comparison, and informational blog intent; removed an unverified testimonial; corrected outdated geographic wording; and connected the three self-canonical pages with contextual links. |
+| 2026-10-08 | Separated ADP alternatives, direct comparison, and Canada/U.S. informational intent; corrected enterprise-only and time-tracking claims from official ADP evidence; removed an unverified testimonial; and added reciprocal links and appropriate structured data. |

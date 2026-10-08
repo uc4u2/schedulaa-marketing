@@ -133,7 +133,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const canonicalUrl = getLocalizedCanonicalUrl(locale, `/blog/${slug}`);
   const isHvacSchedulingArticle = slug === 'hvac-bad-scheduling-lost-money';
   const isGustoDecisionArticle = slug === 'schedulaa-vs-gusto';
-  const hasArticleSchema = isHvacSchedulingArticle || isGustoDecisionArticle;
+  const isAdpServiceTeamArticle = slug === 'adp-alternative-canada-us-service-teams';
+  const hasArticleSchema = isHvacSchedulingArticle || isGustoDecisionArticle || isAdpServiceTeamArticle;
+  const articleSchemaId = isHvacSchedulingArticle
+    ? 'hvac-scheduling-article-jsonld'
+    : isGustoDecisionArticle
+      ? 'gusto-decision-article-jsonld'
+      : 'adp-service-team-article-jsonld';
+  const breadcrumbSchemaId = isHvacSchedulingArticle
+    ? 'hvac-scheduling-breadcrumb-jsonld'
+    : isGustoDecisionArticle
+      ? 'gusto-decision-breadcrumb-jsonld'
+      : 'adp-service-team-breadcrumb-jsonld';
   const articleImages = (post.sections || [])
     .map((section: any) => section.image?.src)
     .filter(Boolean)
@@ -176,14 +187,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
       {articleJsonLd ? (
         <script
-          id={isHvacSchedulingArticle ? 'hvac-scheduling-article-jsonld' : 'gusto-decision-article-jsonld'}
+          id={articleSchemaId}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, '\\u003c') }}
         />
       ) : null}
       {breadcrumbJsonLd ? (
         <script
-          id={isHvacSchedulingArticle ? 'hvac-scheduling-breadcrumb-jsonld' : 'gusto-decision-breadcrumb-jsonld'}
+          id={breadcrumbSchemaId}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, '\\u003c') }}
         />

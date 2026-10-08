@@ -162,8 +162,9 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
   const testimonialAttribution = entry.testimonial?.attribution;
   const contextCta = getContextCta(entry);
   const relatedLinks: Array<{ label: string; href: string }> = entry.relatedLinks || [];
+  const hasComparisonBreadcrumb = entry.key === 'gusto' || entry.key === 'adp';
   const comparisonBreadcrumbJsonLd =
-    entry.key === 'gusto'
+    hasComparisonBreadcrumb
       ? {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
@@ -173,8 +174,8 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
             {
               '@type': 'ListItem',
               position: 3,
-              name: 'Schedulaa vs Gusto',
-              item: getLocalizedCanonicalUrl(locale, '/compare/gusto'),
+              name: `Schedulaa vs ${entry.competitor}`,
+              item: getLocalizedCanonicalUrl(locale, `/compare/${entry.altSlug}`),
             },
           ],
         }
@@ -184,7 +185,7 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
       {comparisonBreadcrumbJsonLd ? (
         <script
-          id="compare-gusto-breadcrumb-jsonld"
+          id={entry.key === 'gusto' ? 'compare-gusto-breadcrumb-jsonld' : 'compare-adp-breadcrumb-jsonld'}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonBreadcrumbJsonLd).replace(/</g, '\\u003c') }}
         />
@@ -308,7 +309,11 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
           <Link href={withLocalePath(contextCta.href, locale)} className="btn btn-secondary btn-md">{contextCta.label}</Link>
           <Link href={withLocalePath('/compare', locale)} className="text-primary-500 underline">Back to compare hub</Link>
           <Link href={withLocalePath(`/alternatives/${entry.altSlug}`, locale)} className="text-primary-500 underline">
-            {entry.key === 'gusto' ? 'Explore Gusto alternatives' : 'View alternatives'}
+            {entry.key === 'gusto'
+              ? 'Explore Gusto alternatives'
+              : entry.key === 'adp'
+                ? 'Explore ADP alternatives'
+                : 'View alternatives'}
           </Link>
           {relatedLinks.map((link) => (
             <Link key={link.href} href={withLocalePath(link.href, locale)} className="text-primary-500 underline">

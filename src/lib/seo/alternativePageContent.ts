@@ -141,6 +141,114 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
       { label: 'Explore online booking', href: '/booking' },
     ],
   },
+  adp: {
+    competitor: 'ADP',
+    title: 'ADP Alternatives for Service Businesses | Schedulaa',
+    description:
+      'Compare ADP alternatives for service businesses that need booking, staff scheduling, time tracking, customer management, invoices, and payroll-ready workflows.',
+    h1: 'ADP alternatives for service-business operations',
+    lead: 'If you are researching ADP alternatives, first decide whether you need managed payroll and HR, connected service operations, or both systems working side by side.',
+    intro: [
+      'ADP offers payroll and HR products for small, midsize, and large employers, as well as global payroll services. It should not be described as an enterprise-only platform.',
+      'Schedulaa addresses a different operational need: it connects customer booking, staff scheduling, approved time, invoices, payment links, and payroll-ready calculations. It does not replace payroll tax filing, remittance, benefits administration, or global payroll services.',
+    ],
+    contextHeading: 'What to compare in an ADP alternative',
+    contextParagraphs: [
+      'Start with the workflow you need to improve. If payroll processing, tax filing, benefits, and broader HR administration are the priority, compare managed payroll and HCM providers. If customer work, employee schedules, time records, and billing are disconnected, compare service-operations platforms.',
+      'Regional coverage matters. Schedulaa supports payroll calculations, documents, and exports within documented jurisdictions, but does not automate government filing or remittance and does not support Quebec payroll. Confirm ADP product and feature availability for the countries, states, provinces, and plan you need.',
+    ],
+    differentiatorsHeading: 'Where Schedulaa fits among ADP alternatives',
+    differentiators: [
+      {
+        title: 'Customer work and workforce operations share one workflow',
+        body: 'Booking, customer records, employee availability, shifts, and time tracking stay connected before payroll-ready records are prepared.',
+      },
+      {
+        title: 'Approved time becomes payroll-ready input',
+        body: 'Managers can prepare calculations and exports from approved operational hours within Schedulaa\'s documented regional limits.',
+      },
+      {
+        title: 'Invoices and payment links remain connected',
+        body: 'Service teams can move from booked work to customer billing without treating customer operations and workforce records as unrelated systems.',
+      },
+    ],
+    comparisonHeading: 'How ADP alternatives differ by primary job',
+    comparisonRows: [
+      {
+        label: 'Primary product focus',
+        schedulaa: 'Connected service operations across booking, customers, staff schedules, time records, invoices, and payroll-ready calculations.',
+        competitor: 'Payroll, HR, benefits, time, and broader human-capital-management products for employers of different sizes.',
+      },
+      {
+        label: 'Customer-facing operations',
+        schedulaa: 'Includes a public website, real-time booking, customer records, estimates, invoices, and hosted payment links.',
+        competitor: 'Primarily focused on payroll and people operations rather than public booking and service delivery.',
+      },
+      {
+        label: 'Payroll administration',
+        schedulaa: 'Prepares calculations, documents, and exports for supported jurisdictions; government filing and remittance are not automated.',
+        competitor: 'Offers payroll processing and tax administration, with capabilities that vary by product, business size, and region.',
+      },
+      {
+        label: 'Scheduling and approved time',
+        schedulaa: 'Connects employee availability, shifts, clock-in/out, breaks, and approvals to service operations.',
+        competitor: 'Offers time, attendance, and scheduling solutions; confirm the applicable ADP product and package for your team.',
+      },
+      {
+        label: 'Best evaluation method',
+        schedulaa: 'Test the path from customer request through staffing, approved hours, billing, and payroll-ready handoff.',
+        competitor: 'Test payroll, tax, HR, benefits, time, and regional requirements against the current ADP offering and package.',
+      },
+    ],
+    fitHeading: 'Which type of platform fits?',
+    fitMatrix: [
+      {
+        scenario: 'You need managed payroll, tax filing, benefits, or a broader HR/HCM suite.',
+        recommendation: 'Evaluate ADP or another managed payroll provider',
+      },
+      {
+        scenario: 'You need booking, customers, staff schedules, time tracking, invoices, and payroll-ready calculations connected.',
+        recommendation: 'Evaluate Schedulaa',
+      },
+      {
+        scenario: 'You need connected service operations and managed payroll administration.',
+        recommendation: 'Evaluate an operations platform alongside a payroll provider',
+      },
+    ],
+    faqHeading: 'ADP alternative FAQs',
+    faq: [
+      {
+        question: 'Is ADP only for large enterprises?',
+        answer:
+          'No. ADP publishes products for small businesses, midsize employers, and enterprises. Evaluate the product and package intended for your team size and region.',
+      },
+      {
+        question: 'Is Schedulaa a full replacement for ADP?',
+        answer:
+          'Not for every payroll and HR requirement. Schedulaa focuses on service operations and payroll-ready workflows; it does not replace government filing, remittance, benefits administration, or global payroll services.',
+      },
+      {
+        question: 'Does ADP offer time tracking and scheduling?',
+        answer:
+          'Yes. ADP offers time, attendance, and scheduling capabilities. Availability and integration depend on the ADP product and package being evaluated.',
+      },
+      {
+        question: 'Can a business use Schedulaa with a payroll provider?',
+        answer:
+          'Yes. A business can use Schedulaa for customer and workforce operations plus payroll-ready handoff while retaining a provider for filing, remittance, benefits, or other payroll administration.',
+      },
+    ],
+    conclusionHeading: 'Choose by the workflow you need to improve',
+    conclusion:
+      'Schedulaa is worth evaluating when booking, customer work, staffing, approved time, invoices, and payroll-ready calculations need one operational source. Choose a managed payroll or HCM provider when filing, remittance, benefits, or multi-country payroll administration is the primary requirement.',
+    primaryCta: { label: 'Explore workforce operations', href: '/workforce' },
+    relatedLinks: [
+      { label: 'Compare Schedulaa vs ADP directly', href: '/compare/adp' },
+      { label: 'Read the Canada/U.S. evaluation guide', href: '/blog/adp-alternative-canada-us-service-teams' },
+      { label: 'Review payroll coverage', href: '/payroll' },
+      { label: 'Explore employee scheduling', href: '/workforce' },
+    ],
+  },
   vagaro: {
     competitor: 'Vagaro',
     title: 'Vagaro Alternatives for Salons & Service Teams | Schedulaa',
