@@ -1,6 +1,7 @@
 'use client';
 
 import type { TutorialModule } from '@/data/tutorials/tutorialCatalog';
+import YouTubeFacade from '@/components/shared/media/YouTubeFacade';
 
 function getYouTubeId(url?: string | null) {
   if (!url) return '';
@@ -53,13 +54,10 @@ export default function CenteredTutorialVideoSection({
         </div>
         <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] p-4 backdrop-blur-sm md:p-5">
           <div className="relative overflow-hidden rounded-[22px] border border-[#10284d] bg-[#071224] pb-[56.25%] shadow-[0_18px_50px_rgba(0,0,0,0.24)]">
-            <iframe
+            <YouTubeFacade
               className="absolute left-0 top-0 h-full w-full"
-              src={featuredEmbedSrc}
+              embedUrl={featuredEmbedSrc}
               title={featuredVideo?.title || module.title}
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
             />
           </div>
         </div>

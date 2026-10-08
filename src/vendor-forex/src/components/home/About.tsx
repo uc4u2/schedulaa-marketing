@@ -9,7 +9,7 @@ import AboutTabList from './AboutTabList';
 const About = ({ locale = 'en' }: { locale?: AppLocale }) => {
   return (
     <RevealAnimation delay={0.3}>
-      <section className="overflow-hidden bg-[url('/images/ns-img-295.jpg')] bg-cover bg-top bg-no-repeat pt-20 pb-14 dark:bg-background-6">
+      <section className="overflow-hidden bg-[url('/images/ns-img-295.webp')] bg-cover bg-top bg-no-repeat pt-20 pb-14 dark:bg-background-6">
         <div className="main-container">
           <TabProvider defaultValue={0}>
             <AboutTabList locale={locale} />

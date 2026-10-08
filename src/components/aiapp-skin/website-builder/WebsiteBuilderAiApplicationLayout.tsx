@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
+import YouTubeFacade from '@/components/shared/media/YouTubeFacade';
 import StaggerGrid from '@/components/shared/motion/StaggerGrid';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
@@ -125,13 +126,10 @@ export default function WebsiteBuilderAiApplicationLayout({
                   </div>
                   <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.06] p-4 backdrop-blur-sm md:p-5">
                     <div className="relative overflow-hidden rounded-[22px] border border-[#10284d] bg-[#071224] pb-[56.25%] shadow-[0_18px_50px_rgba(0,0,0,0.24)]">
-                      <iframe
+                      <YouTubeFacade
                         className="absolute top-0 left-0 h-full w-full"
-                        src={page.videoSection.youtubeEmbed || WEBSITE_BUILDER_YOUTUBE_EMBED}
+                        embedUrl={page.videoSection.youtubeEmbed || WEBSITE_BUILDER_YOUTUBE_EMBED}
                         title={page.videoSection.title}
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
                       />
                     </div>
                   </div>

@@ -13,7 +13,7 @@ import {
   RESOURCES_MENU_LINKS,
   type NavbarLinkItem,
 } from '@/data/navbar-data';
-import navbarLogo from '@public/images/shared/schedulaa-logo-navbar.png';
+import navbarLogo from '@public/images/shared/schedulaa-logo-navbar.webp';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -397,18 +397,50 @@ const Navbar = () => {
   const [localeSearch, setLocaleSearch] = useState('');
   const closeTimerRef = useRef<number | null>(null);
   const localeMenuRef = useRef<HTMLDivElement | null>(null);
+  const demoDialogRef = useRef<HTMLElement | null>(null);
+  const demoCloseButtonRef = useRef<HTMLButtonElement | null>(null);
+  const demoTriggerRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     if (!demoOpen) return;
     const previousOverflow = document.body.style.overflow;
+    const focusFrame = window.requestAnimationFrame(() => demoCloseButtonRef.current?.focus());
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setDemoOpen(false);
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setDemoOpen(false);
+        return;
+      }
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      const focusable = Array.from(
+        demoDialogRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])',
+        ) || [],
+      );
+      if (!focusable.length) {
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     };
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', onKeyDown);
     return () => {
+      window.cancelAnimationFrame(focusFrame);
       document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', onKeyDown);
+      demoTriggerRef.current?.focus();
     };
   }, [demoOpen]);
 
@@ -445,6 +477,11 @@ const Navbar = () => {
     }, 140);
   };
 
+  const openDemo = (trigger: HTMLButtonElement) => {
+    demoTriggerRef.current = trigger;
+    setDemoOpen(true);
+  };
+
   const onLocaleChange = (newLocale: AppLocale) => {
     if (!isSupportedLocale(newLocale)) return;
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; samesite=lax`;
@@ -464,11 +501,8 @@ const Navbar = () => {
       <header className="fixed top-4 left-1/2 z-50 mx-auto w-full max-w-[350px] -translate-x-1/2 px-2 transition-all duration-500 ease-in-out max-[400px]:max-w-[350px] min-[425px]:max-w-[375px] min-[500px]:max-w-[450px] sm:max-w-[560px] md:max-w-[760px] lg:max-w-[1040px] xl:max-w-[1440px]">
         <div className="flex items-center justify-between rounded-[28px] border border-black/8 bg-white/92 px-3 py-2 shadow-[0_18px_45px_rgba(15,23,42,0.10)] backdrop-blur-[24px] dark:border-white/10 dark:bg-background-7/92 xl:px-4 xl:py-2.5">
         <Link href={withLocalePath('/', locale)} aria-label="Schedulaa home" className="shrink-0">
-          <figure className="hidden lg:block lg:max-w-[198px]">
-            <Image src={navbarLogo} alt="Schedulaa" className="h-auto w-full" priority />
-          </figure>
-          <figure className="block max-w-[138px] lg:hidden">
-            <Image src={navbarLogo} alt="Schedulaa" className="h-auto w-full" priority />
+          <figure className="w-[138px] lg:w-[198px]">
+            <Image src={navbarLogo} alt="Schedulaa" className="h-auto w-full" sizes="(min-width: 1024px) 198px, 138px" priority />
           </figure>
         </Link>
 
@@ -555,7 +589,7 @@ const Navbar = () => {
           <button
             type="button"
             className="inline-flex min-h-[52px] items-center justify-center rounded-[18px] bg-[linear-gradient(135deg,#2563eb_0%,#3b82f6_38%,#60a5fa_100%)] px-6 text-[0.95rem] font-semibold text-white shadow-[0_16px_30px_rgba(37,99,235,0.22)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_34px_rgba(37,99,235,0.28)]"
-            onClick={() =>
+            onClick={(event) =>
               {
                 trackMetaPixel('Lead', {
                   content_name: 'Navbar Book Demo',
@@ -567,7 +601,7 @@ const Navbar = () => {
                   destination: bookDemoHref,
                   placement: 'desktop_navbar',
                 });
-                setDemoOpen(true);
+                openDemo(event.currentTarget);
               }
             }
           >
@@ -765,7 +799,7 @@ const Navbar = () => {
             <button
               type="button"
               className="col-span-2 rounded-lg bg-primary px-3 py-2 text-center text-sm font-medium text-white"
-              onClick={() => {
+              onClick={(event) => {
                 trackMetaPixel('Lead', {
                   content_name: 'Mobile Navbar Book Demo',
                   page_path: pathname,
@@ -777,7 +811,7 @@ const Navbar = () => {
                   placement: 'mobile_navbar',
                 });
                 setOpen(false);
-                setDemoOpen(true);
+                openDemo(event.currentTarget);
               }}
             >
               {bookDemoLabel}
@@ -799,63 +833,58 @@ const Navbar = () => {
       </div>
       </header>
 
-      <div
-        className={cn(
-          'fixed inset-0 z-[90] transition-all duration-300',
-          demoOpen ? 'pointer-events-auto bg-slate-950/30' : 'pointer-events-none bg-transparent',
-        )}
-        aria-hidden={!demoOpen}
-      >
-        <button
-          type="button"
-          className={cn('absolute inset-0 h-full w-full', demoOpen ? 'block' : 'hidden')}
-          onClick={() => setDemoOpen(false)}
-          aria-label="Close demo booking drawer"
-        />
-        <aside
-          className={cn(
-            'absolute right-0 top-0 flex h-full w-full max-w-[860px] flex-col bg-white shadow-2xl transition-transform duration-300 dark:bg-background-8',
-            demoOpen ? 'translate-x-0' : 'translate-x-full',
-          )}
-          role="dialog"
-          aria-modal="true"
-          aria-label={bookDemoLabel}
-        >
-          <div className="flex items-center justify-between border-b border-stroke-2 px-4 py-3 dark:border-stroke-7 sm:px-6">
-            <div className="min-w-0">
-              <p className="text-sm font-semibold text-secondary dark:text-accent">{bookDemoLabel}</p>
-              <p className="text-xs text-secondary/65 dark:text-accent/65">Book directly without leaving the marketing site.</p>
+      {demoOpen ? (
+        <div className="fixed inset-0 z-[90] bg-slate-950/30">
+          <button
+            type="button"
+            className="absolute inset-0 h-full w-full"
+            onClick={() => setDemoOpen(false)}
+            aria-label="Close demo booking drawer"
+          />
+          <aside
+            ref={demoDialogRef}
+            className="absolute right-0 top-0 flex h-full w-full max-w-[860px] flex-col bg-white shadow-2xl dark:bg-background-8"
+            role="dialog"
+            aria-modal="true"
+            aria-label={bookDemoLabel}
+          >
+            <div className="flex items-center justify-between border-b border-stroke-2 px-4 py-3 dark:border-stroke-7 sm:px-6">
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-secondary dark:text-accent">{bookDemoLabel}</p>
+                <p className="text-xs text-secondary/65 dark:text-accent/65">Book directly without leaving the marketing site.</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href={bookDemoHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-stroke-2 px-3 py-1.5 text-xs font-medium text-secondary transition hover:bg-background-3 dark:border-stroke-7 dark:text-accent dark:hover:bg-background-7"
+                >
+                  Open full page
+                </a>
+                <button
+                  ref={demoCloseButtonRef}
+                  type="button"
+                  onClick={() => setDemoOpen(false)}
+                  className="rounded-full border border-stroke-2 px-3 py-1.5 text-sm font-medium text-secondary transition hover:bg-background-3 dark:border-stroke-7 dark:text-accent dark:hover:bg-background-7"
+                  aria-label="Close"
+                >
+                  Close
+                </button>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <a
-                href={bookDemoHref}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-stroke-2 px-3 py-1.5 text-xs font-medium text-secondary transition hover:bg-background-3 dark:border-stroke-7 dark:text-accent dark:hover:bg-background-7"
-              >
-                Open full page
-              </a>
-              <button
-                type="button"
-                onClick={() => setDemoOpen(false)}
-                className="rounded-full border border-stroke-2 px-3 py-1.5 text-sm font-medium text-secondary transition hover:bg-background-3 dark:border-stroke-7 dark:text-accent dark:hover:bg-background-7"
-                aria-label="Close"
-              >
-                Close
-              </button>
+            <div className="flex-1 bg-slate-50 dark:bg-background-9">
+              <iframe
+                src={bookDemoEmbedHref}
+                title={bookDemoLabel}
+                className="h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
             </div>
-          </div>
-          <div className="flex-1 bg-slate-50 dark:bg-background-9">
-            <iframe
-              src={bookDemoEmbedHref}
-              title={bookDemoLabel}
-              className="h-full w-full border-0"
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          </div>
-        </aside>
-      </div>
+          </aside>
+        </div>
+      ) : null}
     </>
   );
 };

@@ -18,9 +18,9 @@ const marketingSecondaryLinks = [
 export const marketingPages = {
   hub: {
     meta: {
-      title: "Marketing & Analytics for Service Businesses – Campaigns, Segments & KPIs | Schedulaa",
+      title: "Campaign Tracking & Rebooking Analytics | Schedulaa",
       description:
-        "Run targeted email campaigns (win-back, VIP, no-show recovery), export client lists, and track KPIs with Advanced Analytics. Segments like VIP, At-Risk, Dormant and Client 360° built-in.",
+        "Track which campaigns lead to bookings and rebookings. Use lifecycle segments, Client 360, and analytics to measure retention and revenue.",
       canonical: `${BASE_URL}/marketing`,
       og: {
         title: "Marketing & Analytics for Service Businesses | Schedulaa",
@@ -49,9 +49,9 @@ export const marketingPages = {
     },
     hero: {
       badge: "Lifecycle & KPIs",
-      title: "Marketing & Analytics — Grow, retain, and understand your clients",
+      title: "Track campaigns from outreach to rebooking",
       subtitle:
-          "Schedulaa gives you turnkey campaigns, client exports, lifecycle segments, and an Advanced Analytics suite. Launch win-backs, VIP perks, anniversary notes, and more — then monitor bookings, revenue, no-shows, rebook rates, tip performance, and client value.",
+        "Launch targeted campaigns, compare campaign results with bookings and repeat visits, and monitor rebook rates, retention, revenue, no-shows, and client value from the same workspace.",
       points: [
         "Prebuilt campaigns for win-back, VIP, anniversary, new service launch, and more.",
         "Lifecycle segments with tunable thresholds (VIP, Loyal, New, Active, At-Risk, Lost).",
@@ -149,6 +149,11 @@ export const marketingPages = {
     faqTitle: "Marketing & Analytics questions",
     faqIntro: "Answers based on the campaigns and analytics shipping in Schedulaa today.",
     faq: [
+      {
+        question: "Can I track whether campaigns are followed by rebookings?",
+        answer:
+          "Yes. Review campaign and coupon performance alongside booking, retention, and 30/60/90-day rebook metrics to understand which outreach is followed by repeat client activity.",
+      },
       {
         question: "Can I limit campaign recipients?",
         answer:

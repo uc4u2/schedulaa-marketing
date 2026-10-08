@@ -13,6 +13,7 @@ import { getLandingSource } from '@/legacy-content/features/getLandingSource';
 import { AppLocale, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import TrackedLink from '@/components/shared/TrackedLink';
+import YouTubeFacade from '@/components/shared/media/YouTubeFacade';
 import gradient28Img from '@public/images/ns-img-516.png';
 import androidLaunchImg from '@public/images/marketing/android-launch.png';
 import Image from 'next/image';
@@ -351,13 +352,10 @@ export default function HomeForexLayout({ locale }: Props) {
             <div className="space-y-3">
               <h2 className="text-heading-4 md:text-heading-3">{laborCopy.videoTitle}</h2>
               <div className="relative w-full overflow-hidden rounded-2xl border border-stroke-2 pb-[56.25%] dark:border-stroke-7">
-                <iframe
+                <YouTubeFacade
                   className="absolute top-0 left-0 h-full w-full"
-                  src={youtubeEmbedSrc}
+                  embedUrl={youtubeEmbedSrc}
                   title="Schedulaa platform walkthrough"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
                 />
               </div>
             </div>

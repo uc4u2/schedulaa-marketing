@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { AndroidPlatformIcon, ApplePlatformIcon } from '@/components/shared/AppPlatformIcons';
+import YouTubeFacade from '@/components/shared/media/YouTubeFacade';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import { trackMetaPixel } from '@/utils/metaPixel';
@@ -390,13 +391,10 @@ export default function DemoLandingPage() {
           <div className="space-y-3 mb-8">
             <h3>One Platform. One Source of Truth</h3>
             <div className="relative w-full overflow-hidden rounded-2xl border border-stroke-2 pb-[56.25%] dark:border-stroke-7">
-              <iframe
+              <YouTubeFacade
                 className="absolute top-0 left-0 h-full w-full"
-                src={DEMO_YOUTUBE_EMBED_SRC}
+                embedUrl={DEMO_YOUTUBE_EMBED_SRC}
                 title="Schedulaa demo walkthrough"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
               />
             </div>
           </div>

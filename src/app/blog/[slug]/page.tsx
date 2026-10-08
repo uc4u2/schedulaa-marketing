@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import posts from '@/legacy-content/blog/posts';
-import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
+import { buildLocalizedPageMetadata, getLocalizedCanonicalUrl } from '@/lib/seo/pageMetadata';
+import YouTubeFacade from '@/components/shared/media/YouTubeFacade';
 import { getServerLocale } from '@/utils/serverLocale';
 import { DEFAULT_LOCALE, isSupportedLocale, withLocalePath } from '@/utils/locale';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
@@ -129,9 +130,62 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { target: ctaTarget, href: ctaHref } = getBlogCtaTarget(post);
   const ctaContent = ctaCopy[ctaTarget];
   const returnTo = marketingReturnTo(locale, `/blog/${slug}`);
+  const canonicalUrl = getLocalizedCanonicalUrl(locale, `/blog/${slug}`);
+  const isHvacSchedulingArticle = slug === 'hvac-bad-scheduling-lost-money';
+  const articleImages = (post.sections || [])
+    .map((section: any) => section.image?.src)
+    .filter(Boolean)
+    .map((src: string) => new URL(src, 'https://www.schedulaa.com').toString());
+  const articleJsonLd = isHvacSchedulingArticle
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: post.h1 || post.title,
+        description: post.description,
+        datePublished: post.datePublished,
+        dateModified: post.dateModified || post.datePublished,
+        mainEntityOfPage: canonicalUrl,
+        image: articleImages,
+        author: {
+          '@type': 'Organization',
+          name: 'Schedulaa',
+          url: getLocalizedCanonicalUrl(locale, '/'),
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Schedulaa',
+          url: getLocalizedCanonicalUrl(locale, '/'),
+        },
+      }
+    : null;
+  const breadcrumbJsonLd = isHvacSchedulingArticle
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Schedulaa', item: getLocalizedCanonicalUrl(locale, '/') },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: getLocalizedCanonicalUrl(locale, '/blog') },
+          { '@type': 'ListItem', position: 3, name: post.h1 || post.title, item: canonicalUrl },
+        ],
+      }
+    : null;
 
   return (
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
+      {articleJsonLd ? (
+        <script
+          id="hvac-scheduling-article-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, '\\u003c') }}
+        />
+      ) : null}
+      {breadcrumbJsonLd ? (
+        <script
+          id="hvac-scheduling-breadcrumb-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, '\\u003c') }}
+        />
+      ) : null}
       <section className="main-container px-5">
         <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
           <p className="badge badge-yellow-v2">{post.heroOverline || copy.blog}</p>
@@ -174,14 +228,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   </div>
                   <div className="mt-4 overflow-hidden rounded-xl border border-stroke-2 bg-black shadow-2 dark:border-stroke-7">
                     <div className="aspect-video w-full">
-                      <iframe
-                        src={section.video.youtubeEmbed}
+                      <YouTubeFacade
+                        embedUrl={section.video.youtubeEmbed}
                         title={section.video.title || section.heading || copy.blog}
                         className="h-full w-full"
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
                       />
                     </div>
                   </div>
@@ -191,10 +241,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <Image
                   src={section.image.src}
                   alt={section.image.alt || section.heading || copy.blog}
-                  width={1200}
-                  height={675}
+                  width={section.image.width || 1200}
+                  height={section.image.height || 675}
+                  sizes="(max-width: 768px) calc(100vw - 40px), 1200px"
                   className="mt-3 h-auto w-full rounded-lg"
-                  unoptimized
+                  unoptimized={section.image.optimize !== true}
                 />
               ) : null}
               <div className="mt-3 space-y-3 text-secondary/70 dark:text-accent/70">

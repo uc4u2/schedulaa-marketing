@@ -1,15 +1,12 @@
 'use client';
 
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
+import YouTubeFacade from '@/components/shared/media/YouTubeFacade';
 import { getHvacCopy } from '@/components/hvac/localeCopy';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath } from '@/utils/locale';
-import dashboardImg from '@public/images/marketing/showcase/dashboard.png';
-import paymentCollectionImg from '@public/images/marketing/showcase/payment-collection.png';
-import serviceManagementImg from '@public/images/marketing/showcase/service-management.png';
 import hvacHeroImg from '@public/images/marketing/hvac-hero-2.png';
 import hvacContractorSmileImg from '@public/images/marketing/hvac-contractor-smile.png';
-import hvacOps4Img from '@public/images/marketing/hvac-ops-4.png';
 import hvac333Img from '@public/images/marketing/hvac-333.png';
 import hvac555Img from '@public/images/marketing/hvac-555.png';
 import hvacHeroOneImg from '@public/images/marketing/hvac-hero-one-safe.png';
@@ -180,13 +177,10 @@ export default function HvacLandingPage() {
           <AnimatedSection>
             <article className="mx-auto max-w-[1320px] rounded-[24px] border border-stroke-2 bg-white p-5 shadow-[0_18px_42px_rgba(15,23,42,0.06)] dark:border-stroke-7 dark:bg-background-8 md:p-7">
               <div className="relative w-full overflow-hidden rounded-2xl border border-stroke-2 pb-[56.25%] dark:border-stroke-7">
-                <iframe
+                <YouTubeFacade
                   className="absolute left-0 top-0 h-full w-full"
-                  src={HVAC_YOUTUBE_EMBED}
+                  embedUrl={HVAC_YOUTUBE_EMBED}
                   title="Schedulaa for HVAC companies video"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
                 />
               </div>
             </article>

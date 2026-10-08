@@ -92,9 +92,23 @@ export default async function MarketingPage() {
   const hero = page.hero;
   const analyticsList = page.lists[0];
   const sectionVisuals = [analytics2, analytics3, hero3];
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: page.faq.map((item: any) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  };
 
   return (
     <main className="bg-background-3 dark:bg-background-7 overflow-x-hidden">
+      <script
+        id="marketing-faq-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, '\\u003c') }}
+      />
       <section className="relative pt-32 pb-[100px] sm:pt-36 md:pt-42 xl:pt-[180px]">
         <div className="main-container">
           <div className="mb-[72px] flex flex-col items-center justify-center">
@@ -105,6 +119,14 @@ export default async function MarketingPage() {
               <div className="flex flex-wrap items-center justify-center gap-3">
                 <CtaLink href={hero.primaryCta.href} locale={locale} label={hero.primaryCta.label} primary />
                 <CtaLink href={hero.secondaryCta.href} locale={locale} label={hero.secondaryCta.label} />
+              </div>
+              <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
+                <Link href={withLocalePath('/marketing/analytics-dashboard', locale)} className="text-primary-500 underline underline-offset-4">
+                  Explore campaign analytics
+                </Link>
+                <Link href={withLocalePath('/marketing/clients-360', locale)} className="text-primary-500 underline underline-offset-4">
+                  Explore Client 360
+                </Link>
               </div>
             </div>
           </div>

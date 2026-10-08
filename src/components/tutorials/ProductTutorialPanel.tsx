@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { TutorialModule } from '@/data/tutorials/tutorialCatalog';
+import YouTubeFacade from '@/components/shared/media/YouTubeFacade';
 
 type CopyShape = {
   openVideo: string;
@@ -185,13 +186,10 @@ export default function ProductTutorialPanel({
                   ) : null}
                 </div>
                 <div className="relative w-full overflow-hidden pb-[56.25%]">
-                  <iframe
+                  <YouTubeFacade
                     className="absolute left-0 top-0 h-full w-full"
-                    src={featuredEmbedSrc}
+                    embedUrl={featuredEmbedSrc}
                     title={featured.title}
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
                   />
                 </div>
               </div>
