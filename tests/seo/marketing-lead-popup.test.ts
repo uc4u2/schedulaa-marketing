@@ -23,17 +23,12 @@ test("auto-open is limited to the marketing homepage, including locale roots", (
   assert.equal(isMarketingHomepage(""), false);
 });
 
-test("cold-email popup copy names the website and online booking offer and a clear demo CTA", () => {
-  const combined = [
-    marketingLeadCopy.launcher,
-    marketingLeadCopy.title,
-    marketingLeadCopy.description,
-    marketingLeadCopy.submit,
-    marketingLeadCopy.successBody,
-  ].join(" ");
-
-  assert.match(combined, /website/i);
-  assert.match(combined, /online booking/i);
+test("homepage popup uses concise personalized-demo copy", () => {
   assert.equal(marketingLeadCopy.launcher, "Get your free demo");
-  assert.equal(marketingLeadCopy.submit, "Get your free demo");
+  assert.equal(marketingLeadCopy.title, "See Schedulaa for your business");
+  assert.equal(
+    marketingLeadCopy.description,
+    "Answer a few quick questions so we can tailor the demo to your business.",
+  );
+  assert.equal(marketingLeadCopy.submit, "Request personalized demo");
 });

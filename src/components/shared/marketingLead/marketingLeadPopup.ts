@@ -14,17 +14,17 @@ export function openMarketingLeadWidget() {
 
 export const marketingLeadCopy = {
   launcher: "Get your free demo",
-  title: "Website and online booking",
+  title: "See Schedulaa for your business",
   description:
-    "See a service website with online booking. Share a few details and we’ll follow up with a live look.",
-  submit: "Get your free demo",
-  successTitle: "Thanks — your demo request is in.",
+    "Answer a few quick questions so we can tailor the demo to your business.",
+  submit: "Request personalized demo",
+  successTitle: "Your demo request is ready.",
   successBody:
-    "We’ll follow up with a live look at a website and online booking.",
+    "We’ll follow up with a guided walkthrough tailored to your business.",
   sendingTitle: "Sending your demo request…",
-  sendingBody: "We are saving your details so the team can follow up.",
+  sendingBody: "We’re securely saving your details for the Schedulaa team.",
   autoOpenAnnouncement:
-    "Schedulaa demo offer opened. Website and online booking. Get your free demo.",
+    "Schedulaa demo questionnaire opened. Answer a few questions for a personalized walkthrough.",
 } as const;
 
 export function isMarketingHomepage(

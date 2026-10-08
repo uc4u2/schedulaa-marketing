@@ -389,6 +389,11 @@ const Navbar = () => {
       ar: 'احجز عرضا',
       pt: 'Agendar demo',
     }[locale] || 'Book demo';
+  const demoPanelTitle = locale === 'en' ? 'Book a personalized demo' : bookDemoLabel;
+  const demoPanelDescription =
+    locale === 'en'
+      ? 'Choose a convenient time for a guided walkthrough tailored to your business.'
+      : 'Book directly without leaving the marketing site.';
   const [open, setOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
@@ -846,12 +851,12 @@ const Navbar = () => {
             className="absolute right-0 top-0 flex h-full w-full max-w-[860px] flex-col bg-white shadow-2xl dark:bg-background-8"
             role="dialog"
             aria-modal="true"
-            aria-label={bookDemoLabel}
+            aria-label={demoPanelTitle}
           >
             <div className="flex items-center justify-between border-b border-stroke-2 px-4 py-3 dark:border-stroke-7 sm:px-6">
               <div className="min-w-0">
-                <p className="text-sm font-semibold text-secondary dark:text-accent">{bookDemoLabel}</p>
-                <p className="text-xs text-secondary/65 dark:text-accent/65">Book directly without leaving the marketing site.</p>
+                <p className="text-sm font-semibold text-secondary dark:text-accent">{demoPanelTitle}</p>
+                <p className="text-xs text-secondary/65 dark:text-accent/65">{demoPanelDescription}</p>
               </div>
               <div className="flex items-center gap-2">
                 <a
@@ -860,7 +865,7 @@ const Navbar = () => {
                   rel="noreferrer"
                   className="rounded-full border border-stroke-2 px-3 py-1.5 text-xs font-medium text-secondary transition hover:bg-background-3 dark:border-stroke-7 dark:text-accent dark:hover:bg-background-7"
                 >
-                  Open full page
+                  Open full booking page
                 </a>
                 <button
                   ref={demoCloseButtonRef}
@@ -876,7 +881,7 @@ const Navbar = () => {
             <div className="flex-1 bg-slate-50 dark:bg-background-9">
               <iframe
                 src={bookDemoEmbedHref}
-                title={bookDemoLabel}
+                title={demoPanelTitle}
                 className="h-full w-full border-0"
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"

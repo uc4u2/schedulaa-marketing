@@ -152,6 +152,10 @@ Search Console showed overlapping ADP visibility: `/en/alternatives/adp` had 23 
 
 The three self-canonical pages now have distinct jobs: `/alternatives/adp` targets generic ADP-alternative research, `/compare/adp` supports direct Schedulaa-vs-ADP evaluation, and the blog provides Canada/U.S. service-team guidance. Official ADP product, small-business, and time-and-attendance pages were used to correct enterprise-only and integration-only wording. Schedulaa's filing, remittance, and regional limits are explicit; an unverified testimonial was removed; and the pages now connect through contextual links with intent-appropriate structured data.
 
+### 2026-10-08 homepage demo language and integration accuracy
+
+The homepage qualification flow now uses concise, consistent demo-tailoring questions and content-aware responsive sizing without changing its required fields, submission contract, or opening behavior. The booking drawer and embedded booking form use clearer customer-facing language while preserving calendar and booking logic. The homepage integration strip now names only verified live boundaries: Stripe payments, Google Calendar, QuickBooks Online accounting, Xero accounting, and Zapier automation. Ambiguous Google Drive and Google Meet branding was removed because no corresponding product integration was verified.
+
 ### 2026-10-08 alternatives opportunity optimization
 
 The first content iteration targets three pages selected from the validated September 8–October 5 Search Console baseline:
@@ -201,3 +205,4 @@ Do not respond with mass page generation, broad metadata churn, repeated indexin
 | 2026-10-08 | Improved the Vagaro, QuickBooks, and Paychex alternatives pages using the validated query/page opportunities; added query-aligned metadata/content, evidence-safe comparison boundaries, matching FAQ and breadcrumb schema, and relevant internal links. |
 | 2026-10-08 | Separated Gusto alternatives, direct comparison, and informational blog intent; removed an unverified testimonial; corrected outdated geographic wording; and connected the three self-canonical pages with contextual links. |
 | 2026-10-08 | Separated ADP alternatives, direct comparison, and Canada/U.S. informational intent; corrected enterprise-only and time-tracking claims from official ADP evidence; removed an unverified testimonial; and added reciprocal links and appropriate structured data. |
+| 2026-10-08 | Refined the homepage qualification and booking language, made the qualification panel content-aware on smaller viewports, and limited the integration strip to verified live product boundaries. |

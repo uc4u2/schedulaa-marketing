@@ -38,10 +38,10 @@ const INITIAL_STATE: LeadState = {
 };
 
 const STEPS = [
-  "Business",
-  "Team",
-  "Current tools",
-  "Needs",
+  "Business type",
+  "Team size",
+  "Current system",
+  "Priorities",
   "Location",
   "Contact",
   "Consent",
@@ -226,7 +226,7 @@ export default function MarketingLeadWidget() {
         </button>
       ) : (
         <div
-          className="fixed bottom-2 left-2 z-[125] flex h-[min(82vh,720px)] w-[min(420px,calc(100vw-16px))] flex-col overflow-hidden rounded-[28px] border border-sky-950/10 bg-white shadow-[0_32px_80px_rgba(15,23,42,0.22)] sm:bottom-3 sm:left-3 sm:w-[min(420px,calc(100vw-24px))]"
+          className="fixed bottom-2 left-2 z-[125] flex max-h-[calc(100vh-16px)] w-[min(420px,calc(100vw-16px))] flex-col overflow-hidden rounded-[28px] border border-sky-950/10 bg-white shadow-[0_32px_80px_rgba(15,23,42,0.22)] sm:bottom-3 sm:left-3 sm:max-h-[min(680px,calc(100vh-24px))] sm:w-[min(420px,calc(100vw-24px))]"
           role="dialog"
           aria-modal="false"
           aria-labelledby="marketing-lead-title"
@@ -265,12 +265,12 @@ export default function MarketingLeadWidget() {
                 />
               </div>
               <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-sky-100/85">
-                Step {step + 1} of {STEPS.length}: {stepLabel}
+                Step {step + 1} of {STEPS.length} · {stepLabel}
               </p>
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto bg-[#fffdf9] px-5 py-5">
+          <div className="min-h-[180px] flex-1 overflow-y-auto bg-[#fffdf9] px-5 py-5 sm:min-h-[240px]">
             {submitted ? (
               <div className="space-y-4">
                 <div className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-700">
@@ -370,10 +370,11 @@ export default function MarketingLeadWidget() {
                 ) : null}
                 {step === 0 && (
                   <div className="space-y-3">
-                    <label className="text-sm font-semibold text-slate-900">
-                      What type of business do you run?
+                    <label htmlFor="demo-business-type" className="text-sm font-semibold text-slate-900">
+                      What type of business do you operate?
                     </label>
                     <select
+                      id="demo-business-type"
                       value={form.business_type}
                       onChange={(event) =>
                         setForm((prev) => ({
@@ -383,7 +384,7 @@ export default function MarketingLeadWidget() {
                       }
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     >
-                      <option value="">Select one</option>
+                      <option value="">Choose your industry</option>
                       {BUSINESS_OPTIONS.map((option) => (
                         <option key={option} value={option}>
                           {option}
@@ -395,10 +396,11 @@ export default function MarketingLeadWidget() {
 
                 {step === 1 && (
                   <div className="space-y-3">
-                    <label className="text-sm font-semibold text-slate-900">
-                      How many staff do you have?
+                    <label htmlFor="demo-team-size" className="text-sm font-semibold text-slate-900">
+                      How many people are on your team?
                     </label>
                     <input
+                      id="demo-team-size"
                       value={form.employees_count}
                       onChange={(event) =>
                         setForm((prev) => ({
@@ -414,10 +416,11 @@ export default function MarketingLeadWidget() {
 
                 {step === 2 && (
                   <div className="space-y-3">
-                    <label className="text-sm font-semibold text-slate-900">
-                      Are you using any booking or CRM tool now?
+                    <label htmlFor="demo-current-system" className="text-sm font-semibold text-slate-900">
+                      Which booking or CRM system do you use today?
                     </label>
                     <input
+                      id="demo-current-system"
                       value={form.current_crm}
                       onChange={(event) =>
                         setForm((prev) => ({
@@ -425,7 +428,7 @@ export default function MarketingLeadWidget() {
                           current_crm: event.target.value,
                         }))
                       }
-                      placeholder="Example: Jobber, Housecall Pro, spreadsheets, none"
+                      placeholder="Example: Jobber, Housecall Pro, spreadsheets, or none"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
                   </div>
@@ -433,10 +436,11 @@ export default function MarketingLeadWidget() {
 
                 {step === 3 && (
                   <div className="space-y-4">
+                    <p className="text-sm font-semibold text-slate-900">Which workflows matter most to your business?</p>
                     {[
-                      ["needs_booking", "Do you need online booking?"],
-                      ["needs_estimates", "Do you send estimates?"],
-                      ["needs_invoices", "Do you send invoices?"],
+                      ["needs_booking", "Online booking"],
+                      ["needs_estimates", "Estimates and quotes"],
+                      ["needs_invoices", "Invoices and payment links"],
                     ].map(([field, label]) => (
                       <label
                         key={field}
@@ -461,10 +465,11 @@ export default function MarketingLeadWidget() {
 
                 {step === 4 && (
                   <div className="space-y-3">
-                    <label className="text-sm font-semibold text-slate-900">
-                      What city are you in?
+                    <label htmlFor="demo-business-location" className="text-sm font-semibold text-slate-900">
+                      Where is your business located?
                     </label>
                     <input
+                      id="demo-business-location"
                       value={form.city}
                       onChange={(event) =>
                         setForm((prev) => ({
@@ -472,7 +477,7 @@ export default function MarketingLeadWidget() {
                           city: event.target.value,
                         }))
                       }
-                      placeholder="Toronto, Newmarket, Bradford..."
+                      placeholder="City or service area"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
                   </div>
@@ -480,10 +485,12 @@ export default function MarketingLeadWidget() {
 
                 {step === 5 && (
                   <div className="space-y-3">
-                    <label className="text-sm font-semibold text-slate-900">
-                      What name and email should we use?
-                    </label>
+                    <p className="text-sm font-semibold text-slate-900">
+                      Where should we send your tailored demo details?
+                    </p>
+                    <label htmlFor="demo-contact-name" className="sr-only">Your name</label>
                     <input
+                      id="demo-contact-name"
                       value={form.name}
                       onChange={(event) =>
                         setForm((prev) => ({
@@ -494,7 +501,9 @@ export default function MarketingLeadWidget() {
                       placeholder="Your name"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
+                    <label htmlFor="demo-contact-email" className="sr-only">Work email</label>
                     <input
+                      id="demo-contact-email"
                       value={form.email}
                       onChange={(event) =>
                         setForm((prev) => ({
@@ -502,11 +511,13 @@ export default function MarketingLeadWidget() {
                           email: event.target.value,
                         }))
                       }
-                      placeholder="Email"
+                      placeholder="Work email"
                       type="email"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
+                    <label htmlFor="demo-contact-phone" className="sr-only">Phone or WhatsApp (optional)</label>
                     <input
+                      id="demo-contact-phone"
                       value={form.phone}
                       onChange={(event) =>
                         setForm((prev) => ({
@@ -514,7 +525,7 @@ export default function MarketingLeadWidget() {
                           phone: event.target.value,
                         }))
                       }
-                      placeholder="Phone (optional)"
+                      placeholder="Phone or WhatsApp (optional)"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
                   </div>
@@ -535,15 +546,13 @@ export default function MarketingLeadWidget() {
                         className="mt-1 h-4 w-4"
                       />
                       <span>
-                        I agree to receive follow-up from Schedulaa about
-                        booking, CRM, estimates, invoices, and related workflow
-                        setup.
+                        I agree to receive follow-up from Schedulaa about this
+                        demo request and relevant product information.
                       </span>
                     </label>
                     <p className="text-xs leading-6 text-slate-500">
-                      We use this consent to decide whether the lead is eligible
-                      for Email SDR outreach. Without it, we can still store the
-                      lead for manual review.
+                      We use these details to respond to your request. You can
+                      ask us to stop contacting you at any time.
                     </p>
                   </div>
                 )}

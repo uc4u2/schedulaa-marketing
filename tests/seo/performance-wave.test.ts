@@ -47,6 +47,9 @@ test('navbar defers booking iframe and ships a right-sized logo', () => {
   assert.match(navbarSource, /\{demoOpen \? \(/);
   assert.match(navbarSource, /ref=\{demoCloseButtonRef\}/);
   assert.match(navbarSource, /event\.key !== ["']Tab["']/);
+  assert.match(navbarSource, /Book a personalized demo/);
+  assert.match(navbarSource, /Choose a convenient time for a guided walkthrough tailored to your business\./);
+  assert.match(navbarSource, /Open full booking page/);
 
   const heroSource = readSource('src/vendor-forex/src/components/home/Hero.tsx');
   assert.match(heroSource, /ns-img-295\.webp/);
@@ -57,6 +60,25 @@ test('navbar defers booking iframe and ships a right-sized logo', () => {
 
   const revealSource = readSource('src/components/animation/RevealAnimation.tsx');
   assert.match(revealSource, /paintImmediately \? \{\} : \{ 'data-ns-animate': true \}/);
+});
+
+test('homepage qualification copy is concise and its panel uses content-aware sizing', () => {
+  const widgetSource = readSource('src/components/shared/marketingLead/MarketingLeadWidget.tsx');
+  assert.match(widgetSource, /What type of business do you operate\?/);
+  assert.match(widgetSource, /Choose your industry/);
+  assert.match(widgetSource, /Step \{step \+ 1\} of \{STEPS\.length\} · \{stepLabel\}/);
+  assert.match(widgetSource, /max-h-\[calc\(100vh-16px\)\]/);
+  assert.doesNotMatch(widgetSource, /h-\[min\(82vh,720px\)\]/);
+});
+
+test('homepage integration strip names only verified integration categories', () => {
+  const clientsSource = readSource('src/vendor-forex/src/components/home/Clients.tsx');
+  assert.match(clientsSource, /Stripe payment provider/);
+  assert.match(clientsSource, /Google Calendar integration/);
+  assert.match(clientsSource, /QuickBooks Online accounting integration/);
+  assert.match(clientsSource, /Xero accounting integration/);
+  assert.match(clientsSource, /Zapier automation integration/);
+  assert.doesNotMatch(clientsSource, /Google Meet integration|Google Drive integration/);
 });
 
 test('YouTube embeds are centralized behind the interaction facade', () => {
