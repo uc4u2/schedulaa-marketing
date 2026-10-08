@@ -137,11 +137,18 @@ This is a measurement baseline, not proof that any single release caused the cha
 
 Priorities below come from the validated Search Console report. Recheck the live canonical target before changing a URL because Search Console may retain historical URL forms.
 
-1. Review `/alternatives/vagaro`: 77 page impressions, average position 8.81, 0% CTR. Improve search snippet and opening-page alignment without unsupported claims.
-2. Improve alignment for query `vagaro alternatives`: 39 impressions, average position 6.92, 0% CTR.
-3. Review `/alternatives/quickbooks` for query `programs like quickbooks`: 31 query impressions, average position 15.94, 0% CTR.
-4. Review `/alternatives/paychex`: 42 page impressions, average position 6.90, 0% CTR.
-5. Investigate period-over-period visibility declines affecting the Gusto alternative page, Persian Business Finance page, and T4 page. Confirm current canonical/indexing state and recent internal-link/content changes before editing.
+1. After the October 8 opportunity-page changes are deployed and recrawled, compare CTR and position for `/alternatives/vagaro`, `/alternatives/quickbooks`, and `/alternatives/paychex` using equal complete periods. Do not treat the code-change date as the recrawl date.
+2. Investigate period-over-period visibility declines affecting the Gusto alternative page, Persian Business Finance page, and T4 page. Confirm current canonical/indexing state and recent internal-link/content changes before editing.
+
+### 2026-10-08 alternatives opportunity optimization
+
+The first content iteration targets three pages selected from the validated September 8–October 5 Search Console baseline:
+
+- `/alternatives/vagaro`: 77 page impressions at average position 8.81 and 0% CTR; `vagaro alternatives` had 39 impressions at position 6.92 and 0% CTR.
+- `/alternatives/quickbooks`: `programs like quickbooks` had 31 impressions at position 15.94.
+- `/alternatives/paychex`: 42 page impressions at average position 6.90 and 0% CTR.
+
+Each page now has query-aligned title, description, H1, opening copy, comparison guidance, visible FAQs with matching FAQ structured data, breadcrumb structured data, and contextual links to canonical product pages. The alternatives template no longer renders unverified testimonial-style copy. QuickBooks is explicitly described as an accounting/general-ledger boundary rather than a feature-equivalent substitute, while Paychex filing, benefits, PEO, and regional payroll boundaries are explicit. These changes are committed implementation work only until deployed; measure them after Google recrawls the pages.
 
 Do not respond with mass page generation, broad metadata churn, repeated indexing requests, or another architecture rewrite. Select changes from current query/page evidence and validate them separately.
 
@@ -179,3 +186,4 @@ Do not respond with mass page generation, broad metadata churn, repeated indexin
 | 2026-09-26 | Reduced the sitemap to 177 intended URLs, eliminated recorded canonical violations/redirecting sitemap entries, adjusted internal authority, and deployed evidence-led Wave 1 content work. |
 | 2026-10-08 | Verified read-only Search Console API access for the existing property and OAuth client; generated the first automated 28-day comparison baseline. |
 | 2026-10-08 | Consolidated marketing SEO authority under `docs/seo/`, made generated report retention explicit, and selected the current opportunity backlog from live Search Console data. |
+| 2026-10-08 | Improved the Vagaro, QuickBooks, and Paychex alternatives pages using the validated query/page opportunities; added query-aligned metadata/content, evidence-safe comparison boundaries, matching FAQ and breadcrumb schema, and relevant internal links. |
