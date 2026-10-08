@@ -21,6 +21,7 @@ interface RevealAnimationProps {
   delay?: number;
   offset?: number;
   instant?: boolean;
+  paintImmediately?: boolean;
   start?: string;
   end?: string;
   direction?: 'up' | 'down' | 'left' | 'right';
@@ -36,6 +37,7 @@ const RevealAnimation = ({
   delay = 0,
   offset = 60,
   instant = false,
+  paintImmediately = false,
   start = 'top 90%',
   end = 'top 50%',
   direction = 'down',
@@ -79,8 +81,8 @@ const RevealAnimation = ({
     } else {
       // gsap.from() - animate FROM the specified values to normal
       animationProps = {
-        opacity: 0,
-        filter: 'blur(16px)',
+        opacity: paintImmediately ? 1 : 0,
+        filter: paintImmediately ? 'blur(0)' : 'blur(16px)',
         duration: duration,
         delay: delay,
         ease: useSpring && spring ? spring : 'power2.out',
@@ -137,7 +139,7 @@ const RevealAnimation = ({
     } else {
       gsap.from(element, animationProps);
     }
-  }, [duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType]);
+  }, [duration, delay, offset, instant, paintImmediately, start, end, direction, useSpring, rotation, animationType]);
 
   // Early return if children is not valid (after all hooks)
   if (!children || !React.isValidElement(children)) {
@@ -148,7 +150,7 @@ const RevealAnimation = ({
   return cloneElement(children, {
     ref: elementRef,
     className: cn(children?.props?.className, className),
-    'data-ns-animate': true,
+    ...(paintImmediately ? {} : { 'data-ns-animate': true }),
   });
 };
 

@@ -51,7 +51,12 @@ test('navbar defers booking iframe and ships a right-sized logo', () => {
   const heroSource = readSource('src/vendor-forex/src/components/home/Hero.tsx');
   assert.match(heroSource, /ns-img-295\.webp/);
   assert.doesNotMatch(heroSource, /ns-img-295\.jpg/);
-  assert.match(heroSource, /<RevealAnimation delay=\{0\.1\} instant>/);
+  assert.match(heroSource, /<RevealAnimation delay=\{0\.1\} instant paintImmediately>/);
+  assert.doesNotMatch(heroSource, /<RevealAnimation[^>]*instant(?![^>]*paintImmediately)[^>]*>/);
+  assert.match(heroSource, /src=\{heroVectorImg\}[\s\S]*priority[\s\S]*fetchPriority="high"/);
+
+  const revealSource = readSource('src/components/animation/RevealAnimation.tsx');
+  assert.match(revealSource, /paintImmediately \? \{\} : \{ 'data-ns-animate': true \}/);
 });
 
 test('YouTube embeds are centralized behind the interaction facade', () => {

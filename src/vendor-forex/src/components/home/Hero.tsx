@@ -109,13 +109,20 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
     <section className="relative z-20 overflow-hidden bg-[url('/images/ns-img-295.webp')] bg-cover bg-top bg-no-repeat pt-[144px] pb-[72px] md:pt-[206px] md:pb-[112px]">
       <div className="absolute top-[10%] left-1/2 -z-10 mx-auto max-w-[1365px] -translate-x-1/2">
         <figure>
-          <Image src={heroVectorImg} alt="hero" />
+          <Image
+            src={heroVectorImg}
+            alt=""
+            aria-hidden="true"
+            priority
+            fetchPriority="high"
+            sizes="(max-width: 767px) 206px, (max-width: 1279px) 80vw, 1365px"
+          />
         </figure>
       </div>
       <div className="main-container">
         <div className="grid items-center gap-7 md:gap-8 xl:grid-cols-[minmax(0,560px)_minmax(0,740px)] xl:justify-between xl:gap-16">
           <div className="space-y-4 text-center md:space-y-4 xl:space-y-4 xl:pt-1 xl:text-left">
-            <RevealAnimation delay={0.1} instant>
+            <RevealAnimation delay={0.1} instant paintImmediately>
               <h1 className="mx-auto max-w-[320px] text-center text-[clamp(30px,8.7vw,42px)] leading-[1.02] tracking-[-0.04em] sm:max-w-[420px] sm:text-[clamp(36px,7.2vw,50px)] md:max-w-[620px] md:text-[clamp(42px,6vw,56px)] xl:mx-0 xl:max-w-[560px] xl:text-[clamp(48px,3.7vw,60px)]">
                 {isEnglishHero ? (
                   <>
@@ -135,14 +142,14 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
                 )}
               </h1>
             </RevealAnimation>
-            <RevealAnimation delay={0.2} instant>
+            <RevealAnimation delay={0.2} instant paintImmediately>
               <p className="text-accent/60 mx-auto max-w-[310px] text-sm leading-6 sm:max-w-[430px] sm:text-base sm:leading-7 md:max-w-[600px] xl:mx-0 xl:max-w-[500px]">
                 {heroCopy.subtitle || hero.subtitle || heroCopyByLocale.en.subtitle}
               </p>
             </RevealAnimation>
             <ul className="flex flex-col items-start gap-3 mx-auto max-w-[320px] sm:max-w-[430px] sm:items-center sm:gap-4 md:max-w-[600px] md:flex-row md:flex-wrap md:justify-center md:gap-6 xl:mx-0 xl:max-w-none xl:items-center xl:justify-start xl:gap-5">
               {featureItems.map((item, index) => (
-                <RevealAnimation key={item.id} delay={0.3 + index * 0.1} instant>
+                <RevealAnimation key={item.id} delay={0.3 + index * 0.1} instant paintImmediately>
                   <li className="flex items-start gap-1.5 text-left sm:items-center">
                     <span className="bg-accent/20 inline-flex size-[18px] items-center justify-center rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" width={11} height={8} viewBox="0 0 11 8" fill="none" className="shrink-0">
@@ -155,7 +162,7 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
               ))}
             </ul>
             <ul className="flex flex-col items-center justify-center gap-3 pt-3 sm:gap-3.5 md:flex-row xl:justify-start">
-              <RevealAnimation delay={0.6} direction="left" offset={50} instant>
+              <RevealAnimation delay={0.6} direction="left" offset={50} instant paintImmediately>
                 <li className="w-full max-w-[280px] text-center sm:max-w-[300px] sm:text-left md:w-auto md:max-w-none">
                   <LinkButton
                     href={buildAppUrl('/register', { returnTo })}
@@ -164,7 +171,7 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
                   </LinkButton>
                 </li>
               </RevealAnimation>
-              <RevealAnimation delay={0.7} direction="left" offset={50} instant>
+              <RevealAnimation delay={0.7} direction="left" offset={50} instant paintImmediately>
                 <li className="w-full max-w-[280px] text-center sm:max-w-[300px] sm:text-left md:w-auto md:max-w-none">
                   <LinkButton
                     href={withLocalePath('/pricing', locale)}
@@ -182,7 +189,7 @@ const Hero = ({ source, locale = 'en' }: HeroProps) => {
               <span>iPhone coming soon</span>
             </p>
           </div>
-          <RevealAnimation delay={0.8} instant>
+          <RevealAnimation delay={0.8} instant paintImmediately>
             <div className="pt-2 sm:pt-3 xl:pt-0">
               <HeroWorkflowHexShowcase locale={locale} />
             </div>
