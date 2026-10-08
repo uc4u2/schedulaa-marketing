@@ -33,6 +33,114 @@ export type AlternativePageContent = {
 };
 
 export const alternativePageContent: Record<string, AlternativePageContent> = {
+  gusto: {
+    competitor: 'Gusto',
+    title: 'Gusto Alternatives for Service Businesses | Schedulaa',
+    description:
+      'Compare Gusto alternatives for service businesses that need booking, staff scheduling, time tracking, customer management, invoices, and payroll-ready workflows.',
+    h1: 'Gusto alternatives for service-business operations',
+    lead: 'If you are researching Gusto alternatives, first decide whether you need full-service payroll and HR, a service-operations platform, or a combination of both.',
+    intro: [
+      'Gusto combines U.S. payroll, HR, benefits, and time tools, and now offers international contractor payments and employer-of-record services through Gusto Global. It should not be described simply as a U.S.-only platform.',
+      'Schedulaa takes a different approach: it connects customer booking, staff scheduling, approved time, invoices, payment links, and payroll-ready calculations. It does not replace payroll tax filing, remittance, benefits brokerage, or employer-of-record services.',
+    ],
+    contextHeading: 'What to look for in a Gusto alternative',
+    contextParagraphs: [
+      'Start with the workflow creating the most friction. If payroll filing, benefits, and HR administration are the priority, evaluate full-service payroll providers. If bookings, shifts, time records, customer work, and billing are disconnected, evaluate an operations platform.',
+      'Regional limits also matter. Schedulaa supports payroll calculations and documented exports in supported jurisdictions, but does not promise Quebec payroll, nationwide U.S. finalization, or government e-filing.',
+    ],
+    differentiatorsHeading: 'Where Schedulaa fits among Gusto alternatives',
+    differentiators: [
+      {
+        title: 'Customer work and workforce operations share one system',
+        body: 'Booking, customer records, employee availability, shifts, and time tracking stay connected instead of starting only when payroll is ready to run.',
+      },
+      {
+        title: 'Approved time becomes payroll-ready input',
+        body: 'Managers can prepare payroll calculations and exports from approved operational hours within Schedulaa\'s documented regional limits.',
+      },
+      {
+        title: 'Invoices and payment links stay in the workflow',
+        body: 'Service teams can move from booked work to customer billing without treating payroll and customer operations as unrelated systems.',
+      },
+    ],
+    comparisonHeading: 'How Gusto alternatives differ by primary job',
+    comparisonRows: [
+      {
+        label: 'Primary product focus',
+        schedulaa: 'Connected service operations across booking, customers, staff schedules, time records, invoices, and payroll-ready calculations.',
+        competitor: 'Payroll, HR, benefits, time tools, and related people operations, with global contractor and EOR options.',
+      },
+      {
+        label: 'Customer-facing operations',
+        schedulaa: 'Includes a public website, real-time booking, customer records, estimates, invoices, and hosted payment links.',
+        competitor: 'Primarily focused on payroll and people operations rather than public booking and service delivery.',
+      },
+      {
+        label: 'Payroll administration',
+        schedulaa: 'Prepares calculations, documents, and exports for supported jurisdictions; tax filing and remittance are not automated.',
+        competitor: 'Provides U.S. payroll tax filing and related administration, plus international contractor payments and EOR services through Gusto Global.',
+      },
+      {
+        label: 'Scheduling and approved time',
+        schedulaa: 'Connects employee availability, shifts, clock-in/out, breaks, and approvals to service operations.',
+        competitor: 'Offers time and attendance capabilities; evaluate current plans and integrations for the scheduling workflow your team needs.',
+      },
+      {
+        label: 'Best evaluation method',
+        schedulaa: 'Test the path from customer request through staffing, approved hours, billing, and payroll-ready handoff.',
+        competitor: 'Test payroll, tax filing, HR, benefits, and global-worker requirements against current packages and availability.',
+      },
+    ],
+    fitHeading: 'Which type of platform fits?',
+    fitMatrix: [
+      {
+        scenario: 'You need full-service U.S. payroll tax filing, benefits, and HR administration.',
+        recommendation: 'Evaluate Gusto or another full-service payroll provider',
+      },
+      {
+        scenario: 'You need booking, customers, staff schedules, time tracking, invoices, and payroll-ready calculations connected.',
+        recommendation: 'Evaluate Schedulaa',
+      },
+      {
+        scenario: 'You need both connected service operations and full-service payroll administration.',
+        recommendation: 'Evaluate using an operations platform with a payroll provider',
+      },
+    ],
+    faqHeading: 'Gusto alternative FAQs',
+    faq: [
+      {
+        question: 'Is Schedulaa a full replacement for Gusto?',
+        answer:
+          'Not for every payroll and HR requirement. Schedulaa focuses on service operations and payroll-ready workflows; it does not replace automated payroll tax filing, benefits brokerage, or employer-of-record services.',
+      },
+      {
+        question: 'Is Gusto only available for U.S. workers?',
+        answer:
+          'No. Gusto\'s core domestic payroll serves U.S. employers, while Gusto Global supports international contractor payments and employer-of-record services for eligible international employees.',
+      },
+      {
+        question: 'What does Schedulaa add for service businesses?',
+        answer:
+          'Schedulaa connects public booking, customer records, employee schedules, time tracking, invoices, payment links, and payroll-ready calculations in one operational workflow.',
+      },
+      {
+        question: 'Can a business use Schedulaa with a payroll provider?',
+        answer:
+          'Yes. A business can use Schedulaa to manage operational data and payroll-ready handoff while retaining a provider for filing, remittance, benefits, or other payroll administration.',
+      },
+    ],
+    conclusionHeading: 'Choose by the work you need to connect',
+    conclusion:
+      'Schedulaa is worth evaluating when customer work, staffing, time records, invoices, and payroll-ready calculations need one operational source. Choose a full-service payroll or HR provider when filing, remittance, benefits, or employer-of-record services are the primary requirement.',
+    primaryCta: { label: 'Explore workforce operations', href: '/workforce' },
+    relatedLinks: [
+      { label: 'Compare Schedulaa vs Gusto directly', href: '/compare/gusto' },
+      { label: 'Read the Gusto evaluation guide', href: '/blog/schedulaa-vs-gusto' },
+      { label: 'Review payroll coverage', href: '/payroll' },
+      { label: 'Explore online booking', href: '/booking' },
+    ],
+  },
   vagaro: {
     competitor: 'Vagaro',
     title: 'Vagaro Alternatives for Salons & Service Teams | Schedulaa',

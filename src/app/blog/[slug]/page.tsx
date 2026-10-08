@@ -132,11 +132,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const returnTo = marketingReturnTo(locale, `/blog/${slug}`);
   const canonicalUrl = getLocalizedCanonicalUrl(locale, `/blog/${slug}`);
   const isHvacSchedulingArticle = slug === 'hvac-bad-scheduling-lost-money';
+  const isGustoDecisionArticle = slug === 'schedulaa-vs-gusto';
+  const hasArticleSchema = isHvacSchedulingArticle || isGustoDecisionArticle;
   const articleImages = (post.sections || [])
     .map((section: any) => section.image?.src)
     .filter(Boolean)
     .map((src: string) => new URL(src, 'https://www.schedulaa.com').toString());
-  const articleJsonLd = isHvacSchedulingArticle
+  const articleJsonLd = hasArticleSchema
     ? {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -145,7 +147,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         datePublished: post.datePublished,
         dateModified: post.dateModified || post.datePublished,
         mainEntityOfPage: canonicalUrl,
-        image: articleImages,
+        image: articleImages.length ? articleImages : undefined,
         author: {
           '@type': 'Organization',
           name: 'Schedulaa',
@@ -158,7 +160,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         },
       }
     : null;
-  const breadcrumbJsonLd = isHvacSchedulingArticle
+  const breadcrumbJsonLd = hasArticleSchema
     ? {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
@@ -174,14 +176,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
       {articleJsonLd ? (
         <script
-          id="hvac-scheduling-article-jsonld"
+          id={isHvacSchedulingArticle ? 'hvac-scheduling-article-jsonld' : 'gusto-decision-article-jsonld'}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, '\\u003c') }}
         />
       ) : null}
       {breadcrumbJsonLd ? (
         <script
-          id="hvac-scheduling-breadcrumb-jsonld"
+          id={isHvacSchedulingArticle ? 'hvac-scheduling-breadcrumb-jsonld' : 'gusto-decision-breadcrumb-jsonld'}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, '\\u003c') }}
         />

@@ -138,7 +138,13 @@ This is a measurement baseline, not proof that any single release caused the cha
 Priorities below come from the validated Search Console report. Recheck the live canonical target before changing a URL because Search Console may retain historical URL forms.
 
 1. After the October 8 opportunity-page changes are deployed and recrawled, compare CTR and position for `/alternatives/vagaro`, `/alternatives/quickbooks`, and `/alternatives/paychex` using equal complete periods. Do not treat the code-change date as the recrawl date.
-2. Investigate period-over-period visibility declines affecting the Gusto alternative page, Persian Business Finance page, and T4 page. Confirm current canonical/indexing state and recent internal-link/content changes before editing.
+2. Investigate period-over-period visibility declines affecting the Persian Business Finance page and T4 page. Confirm current canonical/indexing state and recent internal-link/content changes before editing.
+
+### 2026-10-08 Gusto intent separation
+
+Search Console showed `/alternatives/gusto` declining from 58 to 25 impressions at average position 11.36, while `/compare/gusto` had 15 impressions at position 5.73 with zero clicks. The alternatives, comparison, and blog URLs also reused overlapping “operations vs payroll” language.
+
+The three self-canonical pages now have distinct jobs: `/alternatives/gusto` targets generic Gusto-alternative research, `/compare/gusto` supports direct Schedulaa-vs-Gusto evaluation, and `/blog/schedulaa-vs-gusto` provides an informational decision framework. Reciprocal contextual links connect the pages. The unverified Photo Artisto Studios testimonial was removed, and the outdated broad “U.S.-only” description was corrected to acknowledge Gusto Global contractor and employer-of-record offerings while preserving explicit Schedulaa payroll boundaries.
 
 ### 2026-10-08 alternatives opportunity optimization
 
@@ -187,3 +193,4 @@ Do not respond with mass page generation, broad metadata churn, repeated indexin
 | 2026-10-08 | Verified read-only Search Console API access for the existing property and OAuth client; generated the first automated 28-day comparison baseline. |
 | 2026-10-08 | Consolidated marketing SEO authority under `docs/seo/`, made generated report retention explicit, and selected the current opportunity backlog from live Search Console data. |
 | 2026-10-08 | Improved the Vagaro, QuickBooks, and Paychex alternatives pages using the validated query/page opportunities; added query-aligned metadata/content, evidence-safe comparison boundaries, matching FAQ and breadcrumb schema, and relevant internal links. |
+| 2026-10-08 | Separated Gusto alternatives, direct comparison, and informational blog intent; removed an unverified testimonial; corrected outdated geographic wording; and connected the three self-canonical pages with contextual links. |

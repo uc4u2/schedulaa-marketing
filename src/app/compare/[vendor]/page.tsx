@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getCompareEntry } from '@/legacy-content/compare/config';
-import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
+import { buildLocalizedPageMetadata, getLocalizedCanonicalUrl } from '@/lib/seo/pageMetadata';
 import { getServerLocale } from '@/utils/serverLocale';
 import { withLocalePath } from '@/utils/locale';
 import { Metadata } from 'next';
@@ -161,9 +161,34 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
   const testimonialQuote = entry.testimonial?.quote;
   const testimonialAttribution = entry.testimonial?.attribution;
   const contextCta = getContextCta(entry);
+  const relatedLinks: Array<{ label: string; href: string }> = entry.relatedLinks || [];
+  const comparisonBreadcrumbJsonLd =
+    entry.key === 'gusto'
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Schedulaa', item: getLocalizedCanonicalUrl(locale, '/') },
+            { '@type': 'ListItem', position: 2, name: 'Compare', item: getLocalizedCanonicalUrl(locale, '/compare') },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Schedulaa vs Gusto',
+              item: getLocalizedCanonicalUrl(locale, '/compare/gusto'),
+            },
+          ],
+        }
+      : null;
 
   return (
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
+      {comparisonBreadcrumbJsonLd ? (
+        <script
+          id="compare-gusto-breadcrumb-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonBreadcrumbJsonLd).replace(/</g, '\\u003c') }}
+        />
+      ) : null}
       <section className="main-container px-5">
         <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
           <p className="badge badge-yellow-v2">Comparison guide</p>
@@ -282,7 +307,14 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
           <Link href={withLocalePath('/pricing', locale)} className="btn btn-primary btn-md">View pricing plans</Link>
           <Link href={withLocalePath(contextCta.href, locale)} className="btn btn-secondary btn-md">{contextCta.label}</Link>
           <Link href={withLocalePath('/compare', locale)} className="text-primary-500 underline">Back to compare hub</Link>
-          <Link href={withLocalePath(`/alternatives/${entry.altSlug}`, locale)} className="text-primary-500 underline">View alternatives</Link>
+          <Link href={withLocalePath(`/alternatives/${entry.altSlug}`, locale)} className="text-primary-500 underline">
+            {entry.key === 'gusto' ? 'Explore Gusto alternatives' : 'View alternatives'}
+          </Link>
+          {relatedLinks.map((link) => (
+            <Link key={link.href} href={withLocalePath(link.href, locale)} className="text-primary-500 underline">
+              {link.label}
+            </Link>
+          ))}
         </div>
       </section>
     </main>

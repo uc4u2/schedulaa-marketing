@@ -316,22 +316,21 @@
   },
   "gusto": {
     "competitor": "Gusto",
-    "metaTitle": "Schedulaa vs Gusto | Operations OS vs Payroll & HR",
-    "metaDescription": "Compare Schedulaa and Gusto. See how an operations-first platform with scheduling, time tracking, and cross-border payroll differs from a U.S.-only payroll and HR provider.",
-    "heroTitle": "Schedulaa vs Gusto — Operations OS vs Payroll-Only Platforms",
-    "heroSubtitle": "Gusto focuses on payroll and HR. Schedulaa ties together scheduling, time tracking, and cross-border payroll for service teams in Canada and the U.S.",
+    "metaTitle": "Schedulaa vs Gusto: Service Operations Comparison",
+    "metaDescription": "Compare Schedulaa vs Gusto for booking, staff scheduling, time tracking, payroll workflows, tax filing, HR, and benefits for service businesses.",
+    "heroTitle": "Schedulaa vs Gusto for service businesses",
+    "heroSubtitle": "Compare an operations platform that connects customer work and workforce data with a payroll and HR platform built around people administration.",
     "intro": [
-      "Both Schedulaa and Gusto can run payroll for small and mid-sized teams, but they start from different places.",
-      "Gusto is payroll-first with HR and benefits. Schedulaa is operations-first: shifts, time tracking, and payroll in a single workflow, with built-in support for Canadian and U.S. tax engines."
+      "Schedulaa and Gusto solve different primary jobs. Schedulaa starts with booking, customers, staff schedules, approved time, invoices, and payroll-ready calculations. Gusto starts with payroll, tax filing, HR, benefits, and people administration.",
+      "This side-by-side evaluation focuses on product boundaries, not a claim that either platform replaces every function of the other. Confirm current plans, regional availability, and provider requirements before choosing."
     ],
     "contextBlock": {
-      "title": "Who this is for",
+      "title": "How to compare Schedulaa and Gusto",
       "paragraphs": [
-        "This comparison is written for service businesses that manage people by the hour, by the shift, or by the job. If your team relies on schedules, breaks, time tracking, and approvals before payroll runs, your needs are different from office-first or enterprise HR teams.",
-        "Businesses like salons, clinics, call centers, staffing agencies, and field service companies need payroll to reflect what actually happened on the schedule - not what was manually entered at the end of the week.",
-        "Why teams switch to Schedulaa: payroll errors from late schedule changes, break compliance gaps, time data spread across tools, manual adjustments every pay period, and invoices that do not match labor reality.",
-        "Schedulaa reduces these issues by tying payroll directly to scheduling, break enforcement, and approved time. Earnings like overtime, shift premiums, tips, and leave are calculated from operational data, not reconstructed later.",
-        "Why Schedulaa is different: most payroll platforms focus on filing, benefits, and HR administration. Schedulaa focuses on operations - the upstream work that determines whether payroll is correct in the first place. Many teams pair Schedulaa with an accounting or filing provider so finance receives clean, audit-ready inputs."
+        "Choose the comparison criteria from your actual bottleneck. Service businesses may need customer booking and scheduling connected to employee time, while other teams may prioritize automated payroll tax filing, benefits, and HR administration.",
+        "Schedulaa prepares payroll calculations, documents, and exports from approved operational data within supported jurisdictions. It does not promise Quebec payroll, nationwide U.S. finalization, automated government filing, benefits brokerage, or employer-of-record services.",
+        "Gusto provides domestic U.S. payroll and tax filing, HR and benefits tools, plus international contractor payments and employer-of-record services through Gusto Global. Its international options mean the platform should not be described broadly as U.S.-only.",
+        "A service business may also use an operations platform alongside a payroll provider when it needs customer work and approved hours connected without replacing filing or benefits administration."
       ]
     },
     "executiveOverview": {
@@ -343,18 +342,18 @@
       "rows": [
         {
           "label": "Core purpose",
-          "schedulaa": "All-in-one Operations OS combining scheduling, time tracking, and cross-border payroll.",
-          "competitor": "Payroll, HR, and benefits for U.S.-based businesses."
+          "schedulaa": "Service operations spanning booking, customers, staff schedules, approved time, invoices, and payroll-ready calculations.",
+          "competitor": "Payroll, tax filing, HR, benefits, time tools, and people administration."
         },
         {
           "label": "Regions & coverage",
-          "schedulaa": "Canada (ex-Québec) and supported U.S. states with federal + state tax engines and ROE/T4/W-2 exports. Local/city payroll taxes are not automated and must be handled externally.",
-          "competitor": "U.S. payroll with broad state + local/city tax support and electronic filings. No Canadian T4/ROE support."
+          "schedulaa": "Payroll calculations and documented exports for Canada excluding Quebec and supported U.S. finalization states; filing and remittance are not automated.",
+          "competitor": "Domestic U.S. payroll, plus international contractor payments and employer-of-record services through Gusto Global."
         },
         {
           "label": "Time tracking & scheduling",
-          "schedulaa": "Built-in scheduling, shift templates, break enforcement, and time tracking that feed directly into payroll.",
-          "competitor": "Time tracking available via add-ons; no scheduling suite for client bookings and shifts like Schedulaa."
+          "schedulaa": "Employee availability, shifts, clock-in/out, breaks, and approved time connect to customer operations.",
+          "competitor": "Offers time and attendance capabilities; evaluate current plans and integrations for specific scheduling needs."
         },
         {
           "label": "Tips, shift premium, union dues, garnishments",
@@ -363,8 +362,8 @@
         },
         {
           "label": "Benefits & HR",
-          "schedulaa": "Light HR and benefits tracking. No built-in health insurance marketplace; focus stays on operations and payroll.",
-          "competitor": "Strong U.S. HR and benefits administration with integrated health, 401(k), and compliance tools."
+          "schedulaa": "Role, employee, leave, and supported deduction workflows; no benefits brokerage or employer-of-record service.",
+          "competitor": "HR and benefits administration are core parts of the product, subject to current plan and regional availability."
         },
         {
           "label": "Automation & integrations",
@@ -373,8 +372,8 @@
         },
         {
           "label": "Industry fit",
-          "schedulaa": "Best for salons, spas, clinics, call centers, and field teams where shifts, bookings, and payroll must stay in sync.",
-          "competitor": "Best for U.S.-only businesses that want payroll + HR + benefits and are okay using separate tools for scheduling."
+          "schedulaa": "Service teams that need customer work, staffing, approved time, billing, and payroll-ready handoff connected.",
+          "competitor": "Teams prioritizing payroll, tax filing, HR, benefits, or global-worker administration."
         },
         {
           "label": "Brand & portals",
@@ -390,12 +389,12 @@
     },
     "differentiators": [
       {
-        "title": "Operations-first, not payroll-only",
-        "body": "Schedulaa starts with schedules, shifts, and time tracking for service teams. Payroll runs on top of verified hours and tips, not manual spreadsheets."
+        "title": "Customer work stays connected to workforce data",
+        "body": "Schedulaa starts with bookings, customers, schedules, shifts, and approved time so operational context remains available before payroll-ready handoff."
       },
       {
-        "title": "Canada + U.S. payroll in one OS",
-        "body": "Schedulaa supports CRA-style CPP/EI/BPA logic (ex-Québec) and IRS/FICA/state logic for U.S. states in the same platform. Gusto focuses on U.S. payroll only."
+        "title": "Payroll scope is intentionally different",
+        "body": "Schedulaa supports calculations and exports within documented regional limits. Gusto provides domestic U.S. payroll filing and offers global contractor and employer-of-record options."
       },
       {
         "title": "Shift-connected earnings",
@@ -410,8 +409,8 @@
         "body": "Schedulaa connects schedule, break logic, leave events, and payroll status to Zapier so teams can automate alerts, calendar syncs, document workflows, and finance hand-offs. Gusto automates payroll and filings, but not the upstream operations."
       },
       {
-        "title": "When to keep Gusto",
-        "body": "If you want advanced U.S.-only HR, benefits, and compliance filings, Gusto is the better fit. If you want operations + payroll across Canada and the U.S., Schedulaa is."
+        "title": "When Gusto is the stronger fit",
+        "body": "Gusto is the stronger evaluation path when automated U.S. payroll tax filing, benefits, HR administration, international contractor payments, or employer-of-record services are central requirements."
       }
     ],
     "summaryTable": {
@@ -428,8 +427,8 @@
         },
         {
           "label": "Payroll & Compliance",
-          "schedulaa": "Built-in CA (ex-Québec) + U.S. engines with ROE/T4/W-2 exports.",
-          "competitor": "U.S. payroll only; no T4/ROE."
+          "schedulaa": "Payroll calculations and exports within documented Canadian and U.S. limits; no automated filing or remittance.",
+          "competitor": "Domestic U.S. payroll filing plus separate global contractor and employer-of-record offerings."
         },
         {
           "label": "Operations Automation",
@@ -449,17 +448,17 @@
         {
           "label": "Benefits & HR",
           "schedulaa": "Light HR tracking; benefits handled externally.",
-          "competitor": "Deep HR stack with benefits marketplace (U.S. only)."
+          "competitor": "HR and benefits administration, subject to current plan and regional availability."
         }
       ]
     },
     "fitMatrix": [
       {
-        "scenario": "Canadian or U.S. service business needing scheduling, time tracking, and payroll in one place.",
+        "scenario": "Service business needing booking, scheduling, approved time, invoices, and payroll-ready calculations connected.",
         "recommendation": "Schedulaa"
       },
       {
-        "scenario": "U.S.-only company that wants payroll with built-in HR and benefits administration and uses another tool for scheduling.",
+        "scenario": "Company prioritizing payroll tax filing, HR, benefits, or global-worker administration.",
         "recommendation": "Gusto"
       },
       {
@@ -467,11 +466,13 @@
         "recommendation": "Schedulaa"
       }
     ],
-    "testimonial": {
-      "quote": "We needed payroll that actually understood our shifts, overtime, and tips. Schedulaa lets us run payroll off the same screen we use to staff our teams.",
-      "attribution": "Photo Artisto Studios, Toronto"
-    },
-    "conclusion": "Gusto remains an excellent option if your company is U.S.-only and needs deeper HR and benefits control. Schedulaa is the better fit when your real pain sits in operations: scheduling shifts, tracking hours, and paying teams correctly across Canada and the U.S. from one Operations OS. Want to see how our tax engines work? Visit the Payroll page for coverage details and scenarios."
+    "relatedLinks": [
+      {
+        "label": "Read the Gusto evaluation guide",
+        "href": "/blog/schedulaa-vs-gusto"
+      }
+    ],
+    "conclusion": "Choose Schedulaa when the main gap is connecting booking, customers, staffing, approved time, invoices, and payroll-ready handoff. Choose Gusto when payroll filing, HR, benefits, or global-worker administration is the central requirement. Some service businesses may use an operations platform alongside a payroll provider rather than forcing one system to cover both jobs."
   },
   "adp": {
     "competitor": "ADP",
