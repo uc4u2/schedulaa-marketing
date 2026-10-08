@@ -1,5 +1,7 @@
 # Legacy Route Parity Report
 
+> **Historical generated migration output.** Use [`seo/SEO_SOURCE_OF_TRUTH.md`](seo/SEO_SOURCE_OF_TRUTH.md) for current marketing SEO state and priorities. This report remains evidence of legacy-route migration only.
+
 - Legacy sources:
   - `scheduling-frontend/config/seoRoutes.js`
   - `scheduling-frontend/public/sitemap.xml`

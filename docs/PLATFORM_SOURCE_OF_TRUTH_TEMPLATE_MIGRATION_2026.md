@@ -1,5 +1,7 @@
 # Schedulaa Platform Source of Truth — Template Migration (2026)
 
+> **Historical template-migration architecture.** For current marketing SEO strategy, Search Console state, priorities, and locale eligibility, use [`seo/SEO_SOURCE_OF_TRUTH.md`](seo/SEO_SOURCE_OF_TRUTH.md) and [`SEO_LOCALE_MATRIX.md`](SEO_LOCALE_MATRIX.md).
+
 Last updated: 2026-02-19  
 Scope: Marketing FE (`schedulaa-marketing-techwind`), App FE (`frontend`), Backend (`backend`)
 
@@ -116,4 +118,3 @@ Backend services:
 4. Keep app-origin links centralized.
 5. Deploy the correct Render service for each change.
 6. Re-test `/en` and `/fa` critical pages after each batch.
-

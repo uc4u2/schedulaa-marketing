@@ -1,5 +1,7 @@
 # SEO locale availability matrix
 
+Marketing SEO authority: [`seo/SEO_SOURCE_OF_TRUTH.md`](seo/SEO_SOURCE_OF_TRUTH.md). This file remains authoritative for route-level locale, sitemap, and hreflang eligibility.
+
 Last verified in production: 2026-09-26
 
 Canonical/internal-authority release: `f843bd4c`

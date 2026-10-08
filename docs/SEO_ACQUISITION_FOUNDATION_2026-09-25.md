@@ -1,8 +1,8 @@
 # SEO and acquisition foundation — implemented 2026-09-25, updated 2026-09-26
 
-Status: production
+Status: historical production implementation and rollback record
 
-Primary index: `SEO_SOURCE_OF_TRUTH.md`
+Current authority: [`seo/SEO_SOURCE_OF_TRUTH.md`](seo/SEO_SOURCE_OF_TRUTH.md). This file preserves the September 2026 implementation evidence and older baselines; it is not the current priority backlog.
 
 ## Scope and recovery points
 
