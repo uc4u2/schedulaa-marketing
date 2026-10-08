@@ -178,6 +178,10 @@ The homepage, feature, alternatives, comparison, blog, and pricing templates wer
 
 The exact query `how do cross border companies handle payroll in canada` recorded 12 impressions at average position 4.67 with zero clicks in the validated September 8–October 5 period. The existing `/blog/canada-us-payroll-one-system` URL was expanded instead of creating an overlapping page. It now answers the operational question directly, states Canada-excluding-Quebec and supported-U.S.-state boundaries, avoids government-filing or nationwide-payroll claims, emits Article and Breadcrumb schema, and receives contextual links from the regional payroll pages.
 
+### 2026-10-08 conversion credibility pass
+
+The high-visibility homepage, features, website-builder, and pricing paths were checked against current product implementation and the product knowledge source of truth. Verified Stripe, Google Calendar, QuickBooks Online, Xero, and bounded Zapier integration references remain. The features page now presents factual connected-workflow cards instead of unverified testimonial-style names and quotes. Unsupported `SOC 2-ready` wording was removed from website-builder content, and vague `enterprise service teams` / `enterprise-grade platform` labels were replaced with service-team and connected-operations language. Registration, contact, demo, pricing, and product-navigation paths remain unchanged.
+
 ### 2026-10-08 alternatives opportunity optimization
 
 The first content iteration targets three pages selected from the validated September 8–October 5 Search Console baseline:
@@ -231,3 +235,4 @@ Do not respond with mass page generation, broad metadata churn, repeated indexin
 | 2026-10-08 | Separated alternatives and direct-comparison intent for When I Work, Square Appointments, and Xero; corrected competitor and Schedulaa capability boundaries; removed unverified testimonial output; and added reciprocal links plus FAQ/Breadcrumb schema. |
 | 2026-10-08 | Improved the Homebase alternatives and employee payslip opportunities, added payroll-page and year-end-guide structured data, strengthened T4/ROE/payslip internal links, and left the verified competitor-only HubSpot Meetings page unchanged. |
 | 2026-10-08 | Added a canonical workflow intent map to the features hub, linked blog category hubs and HVAC workflows contextually, added the HVAC industry page to the sitemap, and corrected stale integration/compliance wording. |
+| 2026-10-08 | Replaced unverified feature-page testimonial cards with factual workflow examples, removed unsupported SOC 2-ready wording, and tightened vague enterprise-scale language without changing conversion paths. |

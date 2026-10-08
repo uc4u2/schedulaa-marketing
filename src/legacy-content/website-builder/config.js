@@ -23,7 +23,7 @@ const featureCards = [
   },
   {
     title: 'Secure customer data',
-    body: 'SOC 2-ready policies, role-based access, and encrypted storage keep client data protected.',
+    body: 'Role-based workspace access, encrypted transport, and managed infrastructure controls help protect client data.',
   },
 ];
 
