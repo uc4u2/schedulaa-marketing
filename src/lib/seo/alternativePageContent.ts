@@ -249,6 +249,300 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
       { label: 'Explore employee scheduling', href: '/workforce' },
     ],
   },
+  'when-i-work': {
+    competitor: 'When I Work',
+    title: 'When I Work Alternatives for Service Teams | Schedulaa',
+    description:
+      'Compare When I Work alternatives for employee scheduling, time tracking, customer booking, work orders, invoices, and payroll-ready service operations.',
+    h1: 'When I Work alternatives for service teams',
+    lead:
+      'If you are researching When I Work alternatives, decide whether you need focused hourly workforce management, broader service operations, or both.',
+    intro: [
+      'When I Work documents employee scheduling, time and attendance, team communication, shift coverage, and payroll-provider integrations for hourly teams.',
+      'Schedulaa connects staff scheduling and approved time with customer booking, customer records, estimates, work orders, invoices, and payment links. It does not automate government payroll filing or remittance.',
+    ],
+    contextHeading: 'What to look for in a When I Work alternative',
+    contextParagraphs: [
+      'Start with the daily workflow. A workforce-focused product may be the right fit when schedules, attendance, time off, shift requests, and team communication are the core requirements.',
+      'A service-operations platform is worth evaluating when the customer journey, assigned work, field execution, billing, and payroll-ready handoff must stay connected to the team schedule.',
+    ],
+    differentiatorsHeading: 'Where Schedulaa fits among When I Work alternatives',
+    differentiators: [
+      {
+        title: 'Customer demand and staffing share one workflow',
+        body: 'Online booking, customer records, employee availability, shifts, and assigned work remain connected.',
+      },
+      {
+        title: 'Service work continues beyond the shift',
+        body: 'Supported estimates, work orders, field reports, invoices, and payment links carry the workflow through completion and collection.',
+      },
+      {
+        title: 'Payroll claims stay bounded',
+        body: 'Schedulaa prepares calculations, documents, and exports only within supported jurisdictions; it does not promise tax filing or remittance.',
+      },
+    ],
+    comparisonHeading: 'How When I Work alternatives differ by primary job',
+    comparisonRows: [
+      {
+        label: 'Primary focus',
+        schedulaa: 'Connected customer, workforce, field-service, billing, and website operations.',
+        competitor: 'Employee scheduling, time and attendance, team communication, and payroll integrations.',
+      },
+      {
+        label: 'Employee scheduling and time',
+        schedulaa: 'Availability, shifts, clock-in/out, breaks, leave, swaps, approvals, and assigned work.',
+        competitor: 'Schedules, availability, time clock, breaks, time off, OpenShifts, and shift requests.',
+      },
+      {
+        label: 'Customer and job operations',
+        schedulaa: 'Public booking, customers, estimates, work orders, field reports, invoices, and payment links.',
+        competitor: 'Workforce management rather than a customer booking and job-finance system.',
+      },
+      {
+        label: 'Payroll handoff',
+        schedulaa: 'Payroll-ready calculations and exports in supported jurisdictions, without government filing.',
+        competitor: 'Time data can flow to supported payroll-provider integrations; provider terms and regions vary.',
+      },
+    ],
+    fitHeading: 'Which type of platform fits?',
+    fitMatrix: [
+      {
+        scenario: 'You primarily need hourly employee schedules, attendance, and team communication.',
+        recommendation: 'Evaluate When I Work and other workforce platforms',
+      },
+      {
+        scenario: 'You need customer booking, team operations, work orders, invoices, and payments connected.',
+        recommendation: 'Evaluate Schedulaa',
+      },
+      {
+        scenario: 'You need government payroll filing and remittance.',
+        recommendation: 'Evaluate a payroll provider alongside the operational platform',
+      },
+    ],
+    faqHeading: 'When I Work alternative FAQs',
+    faq: [
+      {
+        question: 'What should I compare in a When I Work alternative?',
+        answer:
+          'Compare scheduling, attendance, availability, time off, shift coverage, team communication, payroll handoff, customer workflows, permissions, mobile access, and regional support.',
+      },
+      {
+        question: 'Does When I Work support payroll integrations?',
+        answer:
+          'Yes. When I Work documents supported payroll-provider integrations and exports. Requirements and regional availability differ by provider and plan.',
+      },
+      {
+        question: 'What does Schedulaa add beyond workforce scheduling?',
+        answer:
+          'Schedulaa connects customer booking and records with employee schedules, time tracking, estimates, work orders, field reports, invoices, and payment links.',
+      },
+    ],
+    conclusionHeading: 'Choose around the workflow that creates the work',
+    conclusion:
+      'When I Work remains a focused option for hourly scheduling and attendance. Schedulaa is worth evaluating when customer work, staffing, billing, and payroll-ready handoff need one operational source.',
+    primaryCta: { label: 'Explore employee scheduling', href: '/workforce' },
+    relatedLinks: [
+      { label: 'Compare Schedulaa vs When I Work', href: '/compare/when-i-work' },
+      { label: 'Explore online booking', href: '/booking' },
+      { label: 'Explore work orders and invoices', href: '/business-finance' },
+    ],
+  },
+  'square-appointments': {
+    competitor: 'Square Appointments',
+    title: 'Square Appointments Alternatives | Schedulaa',
+    description:
+      'Compare Square Appointments alternatives for online booking, customer records, staff operations, websites, invoices, and payment workflows.',
+    h1: 'Square Appointments alternatives for service businesses',
+    lead:
+      'If you are comparing Square Appointments alternatives, evaluate the full path from discovery and booking through staff coordination, service delivery, and payment.',
+    intro: [
+      'Square Appointments offers online booking, staff calendars, reminders, customer profiles, and connected Square payments. Current Square plans can also include multi-staff booking, resources, waitlists, and related team capabilities.',
+      'Schedulaa connects booking with a tenant website, customer records, employee shifts and time, estimates, work orders, invoices, and Stripe-backed payment links when configured.',
+    ],
+    contextHeading: 'What to look for in a Square Appointments alternative',
+    contextParagraphs: [
+      'Compare the public booking experience, staff and resource availability, reminders, customer history, deposits, cancellations, payment-provider requirements, and plan limits.',
+      'Then test what happens after the appointment. Businesses with field work, estimates, work orders, employee time approval, invoicing, or product orders may need a broader operational workflow.',
+    ],
+    differentiatorsHeading: 'Where Schedulaa fits among Square Appointments alternatives',
+    differentiators: [
+      {
+        title: 'Website and booking share tenant content',
+        body: 'Managers can publish a responsive tenant website and connect supported services, providers, availability, articles, products, and booking entry points.',
+      },
+      {
+        title: 'Workforce and field operations continue after booking',
+        body: 'Shifts, clock-in/out, assigned work orders, field reports, and payroll-ready approved hours can remain connected to customer work.',
+      },
+      {
+        title: 'Payment ecosystems differ',
+        body: 'Schedulaa uses supported Stripe-backed flows, while Square Appointments connects to Square payments and point of sale. Verify the provider and region your business needs.',
+      },
+    ],
+    comparisonHeading: 'Square Appointments alternatives: workflow differences',
+    comparisonRows: [
+      {
+        label: 'Primary focus',
+        schedulaa: 'Customer, workforce, field-service, finance, ecommerce, and website operations.',
+        competitor: 'Appointments, customer records, payments, and point-of-sale workflows in the Square ecosystem.',
+      },
+      {
+        label: 'Online booking',
+        schedulaa: 'Tenant website booking with services, eligible providers, real-time availability, and configured payment rules.',
+        competitor: 'Booking website and widgets with staff, services, locations, reminders, deposits, and plan-dependent capabilities.',
+      },
+      {
+        label: 'Staff and job operations',
+        schedulaa: 'Employee shifts and time plus work orders, field reports, estimates, and operational assignments.',
+        competitor: 'Staff calendars and related Square workforce capabilities; verify the current plan and products required.',
+      },
+      {
+        label: 'Payments',
+        schedulaa: 'Eligible booking, invoice, and product payments use supported Stripe flows when configured.',
+        competitor: 'Square payments and point-of-sale options connected to appointment checkout.',
+      },
+    ],
+    fitHeading: 'Which booking ecosystem fits?',
+    fitMatrix: [
+      {
+        scenario: 'Your business is centered on Square POS, Square payments, and appointment checkout.',
+        recommendation: 'Evaluate Square Appointments',
+      },
+      {
+        scenario: 'You need website, booking, staff operations, field work, estimates, and invoices connected.',
+        recommendation: 'Evaluate Schedulaa',
+      },
+      {
+        scenario: 'Payment processing or hardware will decide the purchase.',
+        recommendation: 'Verify current provider, hardware, regional, and plan terms directly',
+      },
+    ],
+    faqHeading: 'Square Appointments alternative FAQs',
+    faq: [
+      {
+        question: 'Is Square Appointments only a booking calendar?',
+        answer:
+          'No. Square documents online booking, staff calendars, reminders, customer profiles, payments, and additional capabilities that vary by plan and related Square products.',
+      },
+      {
+        question: 'Can Schedulaa accept appointment payments?',
+        answer:
+          'Yes, for eligible configured tenants. Schedulaa uses supported Stripe-backed booking and payment flows rather than Square payments.',
+      },
+      {
+        question: 'What should a salon compare before switching?',
+        answer:
+          'Compare booking, staff and resource availability, reminders, customer records, deposits, cancellations, payment processing, point of sale, invoices, plan limits, and the mobile customer experience.',
+      },
+    ],
+    conclusionHeading: 'Compare the entire appointment workflow',
+    conclusion:
+      'Square Appointments is compelling for Square-centered booking and checkout. Schedulaa is worth evaluating when booking must connect to a broader tenant website, workforce, field-service, invoice, and payment workflow.',
+    primaryCta: { label: 'Explore online booking', href: '/booking' },
+    relatedLinks: [
+      { label: 'Compare Schedulaa vs Square Appointments', href: '/compare/square-appointments' },
+      { label: 'Explore salon booking', href: '/booking/salon' },
+      { label: 'Explore invoices and payment links', href: '/business-finance/invoices' },
+    ],
+  },
+  xero: {
+    competitor: 'Xero',
+    title: 'Xero Alternatives for Service Businesses | Schedulaa',
+    description:
+      'Research Xero alternatives and adjacent tools for accounting or service operations. Compare ledger needs with booking, workforce, jobs, invoices, and payments.',
+    h1: 'Xero alternatives: accounting or service operations?',
+    lead:
+      'If you are researching Xero alternatives, first decide whether you need another accounting ledger, an operational system for a service business, or both layers working together.',
+    intro: [
+      'Xero provides cloud accounting capabilities such as invoicing, bills, bank reconciliation, financial reporting, tax workflows, and an app ecosystem. Payroll availability varies by country and current product offering.',
+      'Schedulaa is not a general-ledger replacement. It connects booking, customers, staff schedules and time, estimates, work orders, invoices, payment links, and operational reporting. A configured Xero connection can post mapped accounting journals.',
+    ],
+    contextHeading: 'What to look for in a Xero alternative',
+    contextParagraphs: [
+      'For accounting intent, compare the general ledger, bank feeds and reconciliation, bills, invoicing, reporting, accountant collaboration, tax workflow, currency support, and regional payroll availability.',
+      'For operational intent, compare how customer work is booked, staffed, completed, billed, collected, and handed to accounting. Business Finance in Schedulaa is operational finance, not double-entry accounting or tax filing.',
+    ],
+    differentiatorsHeading: 'Where Schedulaa fits in Xero-alternative research',
+    differentiators: [
+      {
+        title: 'Schedulaa manages the work before the ledger',
+        body: 'Customer bookings, staff time, estimates, jobs, invoices, costs, and payment status create the operational record.',
+      },
+      {
+        title: 'Xero remains an accounting system',
+        body: 'Xero is designed for ledger, reconciliation, financial reporting, and region-specific accounting workflows that Schedulaa does not claim to replace.',
+      },
+      {
+        title: 'The live connection is deliberately narrow',
+        body: 'Schedulaa can post mapped payroll and revenue journals to a configured Xero organization; it does not create Xero employees, pay runs, payslips, or year-end slips.',
+      },
+    ],
+    comparisonHeading: 'Xero alternatives differ by the job they own',
+    comparisonRows: [
+      {
+        label: 'Primary product role',
+        schedulaa: 'Service-business operations across customers, staff, jobs, billing, and websites.',
+        competitor: 'Cloud accounting across ledger, reconciliation, invoices, bills, reports, and tax-related workflows.',
+      },
+      {
+        label: 'Operational finance',
+        schedulaa: 'Estimates, invoices, costs, inventory, job profitability, tax summaries, payment links, and accountant handoff.',
+        competitor: 'Accounting records, reconciliation, reporting, and connected financial workflows.',
+      },
+      {
+        label: 'Accounting boundary',
+        schedulaa: 'No double-entry ledger, bank reconciliation, or tax filing.',
+        competitor: 'Built for accounting and bookkeeping requirements; verify the current regional plan and features.',
+      },
+      {
+        label: 'Integration boundary',
+        schedulaa: 'Mapped accounting journal export for configured payroll and revenue summaries.',
+        competitor: 'Receives journal data; employee payroll issuance is outside the Schedulaa integration.',
+      },
+    ],
+    fitHeading: 'Which category fits?',
+    fitMatrix: [
+      {
+        scenario: 'You need a general ledger, bank reconciliation, and accountant-facing financial reporting.',
+        recommendation: 'Evaluate Xero and other accounting platforms',
+      },
+      {
+        scenario: 'You need booking, customers, staff operations, jobs, invoices, and payment links connected.',
+        recommendation: 'Evaluate Schedulaa',
+      },
+      {
+        scenario: 'You need service operations plus an accounting ledger.',
+        recommendation: 'Evaluate Schedulaa with a configured Xero connection',
+      },
+    ],
+    faqHeading: 'Xero alternative FAQs',
+    faq: [
+      {
+        question: 'Is Schedulaa a replacement for Xero accounting?',
+        answer:
+          'No. Schedulaa does not provide a double-entry general ledger, bank reconciliation, or tax filing. It is an operational system for service businesses.',
+      },
+      {
+        question: 'Does Schedulaa integrate with Xero?',
+        answer:
+          'Yes. The live connection supports mapped accounting journal export for configured payroll and revenue summaries. It does not create Xero employees, pay runs, payslips, or year-end slips.',
+      },
+      {
+        question: 'When should I compare accounting alternatives instead?',
+        answer:
+          'Compare accounting platforms when ledger, reconciliation, bills, financial statements, accountant collaboration, or tax workflows are the primary requirements.',
+      },
+    ],
+    conclusionHeading: 'Choose the layer your business is missing',
+    conclusion:
+      'Use accounting software for the books and Schedulaa for connected service operations. When both are required, evaluate the verified journal-export boundary rather than treating the products as feature-equivalent substitutes.',
+    primaryCta: { label: 'Explore Business Finance', href: '/business-finance' },
+    relatedLinks: [
+      { label: 'Compare Schedulaa vs Xero', href: '/compare/xero' },
+      { label: 'Review invoices and payment links', href: '/business-finance/invoices' },
+      { label: 'Explore online booking', href: '/booking' },
+    ],
+  },
   vagaro: {
     competitor: 'Vagaro',
     title: 'Vagaro Alternatives for Salons & Service Teams | Schedulaa',

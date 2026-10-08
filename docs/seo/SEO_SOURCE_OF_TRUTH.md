@@ -156,6 +156,10 @@ The three self-canonical pages now have distinct jobs: `/alternatives/adp` targe
 
 The homepage qualification flow now uses concise, consistent demo-tailoring questions and content-aware responsive sizing without changing its required fields, submission contract, or opening behavior. The booking drawer and embedded booking form use clearer customer-facing language while preserving calendar and booking logic. The homepage integration strip now names only verified live boundaries: Stripe payments, Google Calendar, QuickBooks Online accounting, Xero accounting, and Zapier automation. Ambiguous Google Drive and Google Meet branding was removed because no corresponding product integration was verified.
 
+### 2026-10-08 remaining comparison intent separation
+
+The When I Work, Square Appointments, and Xero alternatives URLs now serve broad category-research intent, while their `/compare/` URLs serve direct Schedulaa-vs-competitor evaluation intent. Each pair uses distinct metadata, H1/opening language, reciprocal contextual links, visible FAQs with matching FAQ schema, and self-canonicals. Current official competitor documentation was used to correct simplified claims: When I Work includes substantial scheduling, attendance, communication, and payroll-integration workflows; Square Appointments is not merely a booking calendar; and Xero remains an accounting platform whose regional payroll offering varies. Unverified testimonials, stale pricing, and unsupported replacement claims no longer render on these six pages.
+
 ### 2026-10-08 alternatives opportunity optimization
 
 The first content iteration targets three pages selected from the validated September 8–October 5 Search Console baseline:
@@ -206,3 +210,4 @@ Do not respond with mass page generation, broad metadata churn, repeated indexin
 | 2026-10-08 | Separated Gusto alternatives, direct comparison, and informational blog intent; removed an unverified testimonial; corrected outdated geographic wording; and connected the three self-canonical pages with contextual links. |
 | 2026-10-08 | Separated ADP alternatives, direct comparison, and Canada/U.S. informational intent; corrected enterprise-only and time-tracking claims from official ADP evidence; removed an unverified testimonial; and added reciprocal links and appropriate structured data. |
 | 2026-10-08 | Refined the homepage qualification and booking language, made the qualification panel content-aware on smaller viewports, and limited the integration strip to verified live product boundaries. |
+| 2026-10-08 | Separated alternatives and direct-comparison intent for When I Work, Square Appointments, and Xero; corrected competitor and Schedulaa capability boundaries; removed unverified testimonial output; and added reciprocal links plus FAQ/Breadcrumb schema. |

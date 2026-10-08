@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getCompareEntry } from '@/legacy-content/compare/config';
+import { buildComparisonFaqJsonLd, getComparisonPageContent } from '@/lib/seo/comparisonPageContent';
 import { buildLocalizedPageMetadata, getLocalizedCanonicalUrl } from '@/lib/seo/pageMetadata';
 import { getServerLocale } from '@/utils/serverLocale';
 import { withLocalePath } from '@/utils/locale';
@@ -139,7 +140,11 @@ function ComparisonValueCard({
 export async function generateMetadata({ params }: { params: Promise<{ vendor: string }> }): Promise<Metadata> {
   const { vendor } = await params;
   const locale = await getServerLocale();
-  const entry = getCompareEntry(vendor, 'compare');
+  const storedEntry = getCompareEntry(vendor, 'compare');
+  const override = getComparisonPageContent(vendor);
+  const entry = storedEntry && override
+    ? { ...storedEntry, ...override, testimonial: undefined, summaryTable: undefined }
+    : storedEntry;
   const title = entry?.metaTitle || 'Comparison | Schedulaa';
   const description = entry?.metaDescription || 'Compare Schedulaa with alternative platforms for service teams.';
   return buildLocalizedPageMetadata({ locale, path: `/compare/${vendor}`, title, description });
@@ -148,10 +153,14 @@ export async function generateMetadata({ params }: { params: Promise<{ vendor: s
 export default async function CompareVendorPage({ params }: { params: Promise<{ vendor: string }> }) {
   const { vendor } = await params;
   const locale = await getServerLocale();
-  const entry = getCompareEntry(vendor, 'compare');
-  if (!entry) {
+  const storedEntry = getCompareEntry(vendor, 'compare');
+  if (!storedEntry) {
     return notFound();
   }
+  const override = getComparisonPageContent(vendor);
+  const entry = override
+    ? { ...storedEntry, ...override, testimonial: undefined, summaryTable: undefined }
+    : storedEntry;
 
   const rows = entry.executiveOverview?.rows || [];
   const summaryRows = entry.summaryTable?.rows || [];
@@ -162,7 +171,19 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
   const testimonialAttribution = entry.testimonial?.attribution;
   const contextCta = getContextCta(entry);
   const relatedLinks: Array<{ label: string; href: string }> = entry.relatedLinks || [];
-  const hasComparisonBreadcrumb = entry.key === 'gusto' || entry.key === 'adp';
+  const faq = entry.faq || [];
+  const hasComparisonBreadcrumb =
+    entry.key === 'gusto' ||
+    entry.key === 'adp' ||
+    entry.key === 'when-i-work' ||
+    entry.key === 'square-appointments' ||
+    entry.key === 'xero';
+  const breadcrumbScriptId =
+    entry.key === 'gusto'
+      ? 'compare-gusto-breadcrumb-jsonld'
+      : entry.key === 'adp'
+        ? 'compare-adp-breadcrumb-jsonld'
+        : `compare-${entry.key}-breadcrumb-jsonld`;
   const comparisonBreadcrumbJsonLd =
     hasComparisonBreadcrumb
       ? {
@@ -185,9 +206,16 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
       {comparisonBreadcrumbJsonLd ? (
         <script
-          id={entry.key === 'gusto' ? 'compare-gusto-breadcrumb-jsonld' : 'compare-adp-breadcrumb-jsonld'}
+          id={breadcrumbScriptId}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonBreadcrumbJsonLd).replace(/</g, '\\u003c') }}
+        />
+      ) : null}
+      {faq.length ? (
+        <script
+          id={`compare-${entry.key}-faq-jsonld`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildComparisonFaqJsonLd(faq)).replace(/</g, '\\u003c') }}
         />
       ) : null}
       <section className="main-container px-5">
@@ -287,6 +315,20 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
           </div>
         ) : null}
 
+        {faq.length ? (
+          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+            <h2 className="text-2xl font-semibold">Frequently asked questions</h2>
+            <div className="mt-4 space-y-4">
+              {faq.map((item: { question: string; answer: string }) => (
+                <div key={item.question} className="rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
+                  <h3 className="font-semibold">{item.question}</h3>
+                  <p className="mt-2 text-secondary/70 dark:text-accent/70">{item.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
         {testimonialQuote ? (
           <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
             <h2 className="text-2xl font-semibold">Team voice</h2>
@@ -313,7 +355,7 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
               ? 'Explore Gusto alternatives'
               : entry.key === 'adp'
                 ? 'Explore ADP alternatives'
-                : 'View alternatives'}
+                : `Explore ${entry.competitor} alternatives`}
           </Link>
           {relatedLinks.map((link) => (
             <Link key={link.href} href={withLocalePath(link.href, locale)} className="text-primary-500 underline">
