@@ -170,6 +170,10 @@ The Homebase alternatives page now targets broad alternative research with accur
 
 The English features hub now exposes one practical workflow map for website building, booking, appointment scheduling, client management, workforce scheduling and time, estimates, invoices, Stripe-supported payments, trip-scoped dispatch, payroll tools, attribution/rebooking, and service industries. It links to existing canonical pages rather than creating overlapping URLs. The blog hub now links to its real category pages, the HVAC industry page links reciprocally to booking/workforce/billing and is included in the sitemap, and the feature content separates Zapier automation from QuickBooks/Xero accounting boundaries. Unsupported “coming soon” and compliance-progress language was removed from the feature hub.
 
+### 2026-10-08 representative-template mobile performance pass
+
+The homepage, feature, alternatives, comparison, blog, and pricing templates were measured under the same throttled mobile conditions. Only `/en/features` exceeded the 2.5-second LCP target (3.72 seconds) because its above-the-fold heading and first visible illustration were gated by delayed scroll reveals while the image was also marked lazy. The hero copy and first card now paint immediately, the first light/dark illustration pair loads eagerly with high fetch priority and explicit responsive sizes, and remaining feature images and animations stay lazy. The median feature-page LCP fell to 2.21 seconds, image transfer fell from 56 KB to 42 KB, and measured CLS remained zero. The other measured templates were left unchanged because their median LCP was 1.73–2.25 seconds with zero measured CLS.
+
 ### 2026-10-08 alternatives opportunity optimization
 
 The first content iteration targets three pages selected from the validated September 8–October 5 Search Console baseline:

@@ -81,6 +81,14 @@ test('homepage integration strip names only verified integration categories', ()
   assert.doesNotMatch(clientsSource, /Google Meet integration|Google Drive integration/);
 });
 
+test('features page does not delay its mobile LCP content', () => {
+  const featuresSource = readSource('src/vendor-forex/src/components/features/Features.tsx');
+  assert.match(featuresSource, /<RevealAnimation delay=\{0\} instant paintImmediately>[\s\S]*?<h1/);
+  assert.match(featuresSource, /loading=\{index === 0 \? 'eager' : 'lazy'\}/);
+  assert.match(featuresSource, /fetchPriority=\{index === 0 \? 'high' : 'auto'\}/);
+  assert.match(featuresSource, /sizes="\(min-width: 640px\) 31vw, calc\(100vw - 60px\)"/);
+});
+
 test('YouTube embeds are centralized behind the interaction facade', () => {
   const facadeSource = readSource('src/components/shared/media/YouTubeFacade.tsx');
   assert.match(facadeSource, /if \(active\)/);

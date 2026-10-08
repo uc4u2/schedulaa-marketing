@@ -37,25 +37,44 @@ const Features = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale 
       <div className="main-container">
         <div className="space-y-[70px]">
           <div className="space-y-3 text-center">
-            <RevealAnimation delay={0.3}>
+            <RevealAnimation delay={0} instant paintImmediately>
               <span className="badge badge-green">{content.hero.featureCard.eyebrow}</span>
             </RevealAnimation>
-            <RevealAnimation delay={0.4}>
+            <RevealAnimation delay={0} instant paintImmediately>
               <h1 className="mx-auto max-w-[980px]">{content.hero.featureCard.title}</h1>
             </RevealAnimation>
-            <RevealAnimation delay={0.5}>
+            <RevealAnimation delay={0} instant paintImmediately>
               <p className="mx-auto max-w-[734px]">{content.hero.featureCard.subtitle}</p>
             </RevealAnimation>
           </div>
 
           <div className="flex flex-col items-center justify-center gap-y-8 sm:flex-row sm:gap-x-8">
             {cards.slice(0, 3).map((card, index) => (
-              <RevealAnimation key={card.title} delay={0.55 + index * 0.1}>
+              <RevealAnimation
+                key={card.title}
+                delay={index === 0 ? 0 : 0.55 + index * 0.1}
+                instant={index === 0}
+                paintImmediately={index === 0}
+              >
                 <div className="space-y-3">
                   <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5">
                     <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-2">
-                      <Image src={cardImages[index].light} alt={card.title} className="h-full w-full object-cover dark:hidden" loading="lazy" />
-                      <Image src={cardImages[index].dark} alt={card.title} className="hidden h-full w-full object-cover dark:block" loading="lazy" />
+                      <Image
+                        src={cardImages[index].light}
+                        alt={card.title}
+                        className="h-full w-full object-cover dark:hidden"
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                        fetchPriority={index === 0 ? 'high' : 'auto'}
+                        sizes="(min-width: 640px) 31vw, calc(100vw - 60px)"
+                      />
+                      <Image
+                        src={cardImages[index].dark}
+                        alt={card.title}
+                        className="hidden h-full w-full object-cover dark:block"
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                        fetchPriority={index === 0 ? 'high' : 'auto'}
+                        sizes="(min-width: 640px) 31vw, calc(100vw - 60px)"
+                      />
                     </figure>
                   </div>
                   <div className="space-y-1">
@@ -76,8 +95,20 @@ const Features = ({ source, locale = 'en' }: { source?: any; locale?: AppLocale 
                 <div className="space-y-3">
                   <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5">
                     <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-2">
-                      <Image src={cardImages[index + 3].light} alt={card.title} className="h-full w-full object-cover dark:hidden" loading="lazy" />
-                      <Image src={cardImages[index + 3].dark} alt={card.title} className="hidden h-full w-full object-cover dark:block" loading="lazy" />
+                      <Image
+                        src={cardImages[index + 3].light}
+                        alt={card.title}
+                        className="h-full w-full object-cover dark:hidden"
+                        loading="lazy"
+                        sizes="(min-width: 640px) 31vw, calc(100vw - 60px)"
+                      />
+                      <Image
+                        src={cardImages[index + 3].dark}
+                        alt={card.title}
+                        className="hidden h-full w-full object-cover dark:block"
+                        loading="lazy"
+                        sizes="(min-width: 640px) 31vw, calc(100vw - 60px)"
+                      />
                     </figure>
                   </div>
                   <div className="space-y-1">
