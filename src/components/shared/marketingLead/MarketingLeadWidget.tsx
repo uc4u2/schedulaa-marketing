@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import navbarLogo from "@public/images/shared/schedulaa-logo-navbar.webp";
 import {
   MARKETING_LEAD_AUTO_OPEN_MS,
   MARKETING_LEAD_OPEN_EVENT,
@@ -21,6 +23,7 @@ type LeadState = {
   name: string;
   email: string;
   phone: string;
+  message: string;
   consent_to_contact: boolean;
 };
 
@@ -35,6 +38,7 @@ const INITIAL_STATE: LeadState = {
   name: "",
   email: "",
   phone: "",
+  message: "",
   consent_to_contact: false,
 };
 
@@ -232,24 +236,39 @@ export default function MarketingLeadWidget() {
         </button>
       ) : (
         <div
-          className="fixed bottom-2 left-2 z-[125] flex max-h-[calc(100vh-16px)] w-[min(420px,calc(100vw-16px))] flex-col overflow-hidden rounded-[28px] border border-sky-950/10 bg-white shadow-[0_32px_80px_rgba(15,23,42,0.22)] sm:bottom-3 sm:left-3 sm:max-h-[min(680px,calc(100vh-24px))] sm:w-[min(420px,calc(100vw-24px))]"
+          className="fixed bottom-2 left-2 z-[125] flex max-h-[calc(100vh-16px)] w-[min(420px,calc(100vw-16px))] flex-col overflow-hidden rounded-[28px] border border-sky-950/10 bg-white shadow-[0_32px_80px_rgba(15,23,42,0.24)] sm:bottom-3 sm:left-3 sm:h-[min(680px,calc(100vh-24px))] sm:w-[min(420px,calc(100vw-24px))]"
           role="dialog"
           aria-modal="false"
           aria-labelledby="marketing-lead-title"
           aria-describedby="marketing-lead-description"
         >
-          <div className="bg-[linear-gradient(180deg,#123b5d_0%,#1b4f78_100%)] px-5 py-5 text-white">
+          <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.28),transparent_42%),linear-gradient(145deg,#0b2f4c_0%,#164f78_100%)] px-6 py-5 text-white">
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <div className="inline-flex rounded-2xl border border-white/20 bg-white px-3 py-2 shadow-sm">
+                <Image
+                  src={navbarLogo}
+                  alt="Schedulaa"
+                  width={112}
+                  sizes="112px"
+                  className="h-auto w-28"
+                  priority
+                />
+              </div>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.13em] text-sky-50">
+                Personalized demo
+              </span>
+            </div>
             <div className="flex items-start justify-between gap-3">
               <div>
                 <p
                   id="marketing-lead-title"
-                  className="text-[1.05rem] font-semibold text-white"
+                  className="text-xl font-semibold tracking-[-0.02em] text-white"
                 >
                   {marketingLeadCopy.title}
                 </p>
                 <p
                   id="marketing-lead-description"
-                  className="mt-1 text-sm text-sky-100"
+                  className="mt-1.5 max-w-[31rem] text-sm leading-6 text-sky-100"
                 >
                   {marketingLeadCopy.description}
                 </p>
@@ -257,7 +276,7 @@ export default function MarketingLeadWidget() {
               <button
                 type="button"
                 onClick={closeWidget}
-                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-lg text-white/80 transition hover:bg-white/10"
+                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-lg text-white/80 transition hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 aria-label="Close demo request"
               >
                 ×
@@ -276,7 +295,7 @@ export default function MarketingLeadWidget() {
             </div>
           </div>
 
-          <div className="min-h-[180px] flex-1 overflow-y-auto bg-[#fffdf9] px-5 py-5 sm:min-h-[240px]">
+          <div className="min-h-[180px] flex-1 overflow-y-auto bg-[linear-gradient(180deg,#fffdf9_0%,#ffffff_100%)] px-6 py-6 sm:min-h-0">
             {submitted ? (
               <div className="space-y-4">
                 <div className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-700">
@@ -298,7 +317,7 @@ export default function MarketingLeadWidget() {
                 </button>
               </div>
             ) : (
-              <div className="space-y-5">
+              <div className="flex min-h-full flex-col gap-5">
                 {submitting ? (
                   <div className="rounded-3xl border border-sky-200 bg-sky-50/80 px-4 py-4">
                     <div className="flex items-center gap-3">
@@ -534,6 +553,26 @@ export default function MarketingLeadWidget() {
                       placeholder="Phone or WhatsApp (optional)"
                       className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900"
                     />
+                    <label htmlFor="demo-contact-message" className="pt-1 text-sm font-semibold text-slate-900">
+                      What would you like us to focus on? <span className="font-normal text-slate-500">(optional)</span>
+                    </label>
+                    <textarea
+                      id="demo-contact-message"
+                      value={form.message}
+                      onChange={(event) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          message: event.target.value,
+                        }))
+                      }
+                      placeholder="Tell us about your workflow, goals, or questions."
+                      maxLength={2000}
+                      rows={4}
+                      className="w-full resize-none rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm leading-6 text-slate-900 outline-none transition focus:border-sky-500 focus:ring-4 focus:ring-sky-100"
+                    />
+                    <p className="text-right text-xs text-slate-400" aria-live="polite">
+                      {form.message.length}/2000
+                    </p>
                   </div>
                 )}
 
@@ -565,6 +604,16 @@ export default function MarketingLeadWidget() {
 
                 {error ? (
                   <p className="text-sm text-rose-600">{error}</p>
+                ) : null}
+                {step <= 4 && !submitting ? (
+                  <div className="mt-auto rounded-3xl border border-sky-100 bg-sky-50/70 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-700">
+                      A more relevant walkthrough
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      Your answers help us focus the demo on the workflows that matter to your team and leave time for your questions.
+                    </p>
+                  </div>
                 ) : null}
               </div>
             )}

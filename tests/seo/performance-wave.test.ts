@@ -66,13 +66,15 @@ test('navbar defers booking iframe and ships a right-sized logo', () => {
   assert.match(revealSource, /paintImmediately \? \{\} : \{ 'data-ns-animate': true \}/);
 });
 
-test('homepage qualification copy is concise and its panel uses content-aware sizing', () => {
+test('homepage qualification copy is concise and its desktop panel has a stable review frame', () => {
   const widgetSource = readSource('src/components/shared/marketingLead/MarketingLeadWidget.tsx');
   assert.match(widgetSource, /What type of business do you operate\?/);
   assert.match(widgetSource, /Choose your industry/);
   assert.match(widgetSource, /Step \{step \+ 1\} of \{STEPS\.length\} · \{stepLabel\}/);
   assert.match(widgetSource, /max-h-\[calc\(100vh-16px\)\]/);
-  assert.doesNotMatch(widgetSource, /h-\[min\(82vh,720px\)\]/);
+  assert.match(widgetSource, /sm:h-\[min\(680px,calc\(100vh-24px\)\)\]/);
+  assert.match(widgetSource, /What would you like us to focus on\?/);
+  assert.match(widgetSource, /maxLength=\{2000\}/);
 });
 
 test('homepage integration strip names only verified integration categories', () => {
