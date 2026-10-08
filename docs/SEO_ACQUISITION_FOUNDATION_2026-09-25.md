@@ -1,5 +1,9 @@
 # SEO and acquisition foundation — 2026-09-25
 
+Status: historical production implementation and rollback record
+
+Current authority: [`seo/SEO_SOURCE_OF_TRUTH.md`](seo/SEO_SOURCE_OF_TRUTH.md). This file preserves the September 2026 implementation evidence and older baselines; it is not the current priority backlog.
+
 ## Scope and recovery points
 
 - Marketing project: `schedulaa-marketing-techwind`

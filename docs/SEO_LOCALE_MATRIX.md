@@ -1,5 +1,7 @@
 # SEO locale availability matrix
 
+Marketing SEO authority: [`seo/SEO_SOURCE_OF_TRUTH.md`](seo/SEO_SOURCE_OF_TRUTH.md). This file remains authoritative for route-level locale, sitemap, and hreflang eligibility.
+
 This matrix records whether the visible route content has a real locale-specific source. A locale prefix by itself does not count as a translation. `Y` routes may be indexed and advertised through hreflang. `N` requests are redirected permanently to the English equivalent and are omitted from hreflang and the sitemap.
 
 | Route | EN | FA | FR | RU | ES | DE | ZH | AR | PT |

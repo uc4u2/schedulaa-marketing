@@ -1,5 +1,7 @@
 # GA4 measurement and verification
 
+Marketing SEO authority: [`seo/SEO_SOURCE_OF_TRUTH.md`](seo/SEO_SOURCE_OF_TRUTH.md). This file remains authoritative for the GA4 implementation and event-verification contract.
+
 ## Configuration
 
 The marketing site reads its public GA4 measurement ID from:

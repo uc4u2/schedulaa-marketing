@@ -1,5 +1,7 @@
 # SEO Runtime Audit
 
+> **Historical generated output — not production truth.** Every route in this run recorded `fetch failed`, so the 218 non-200 count does not establish that production routes were unavailable. Use [`seo/SEO_SOURCE_OF_TRUTH.md`](seo/SEO_SOURCE_OF_TRUTH.md) for current state and rerun the generator against a verified reachable base URL for a new runtime assessment.
+
 - Base URL: `https://www.schedulaa.com`
 - Routes audited: **218**
 - Non-200 pages: **218**

@@ -218,5 +218,9 @@ Backend:
 - Marketing repo: `schedulaa-marketing-techwind`
 - App repo: `frontend` (CRA product app)
 - API repo: `backend` (Flask)
+- SEO source of truth: `docs/seo/SEO_SOURCE_OF_TRUTH.md`
+- Search Console runbook: `docs/seo/SEARCH_CONSOLE_RUNBOOK.md`
+- SEO implementation/monitoring history: `docs/SEO_ACQUISITION_FOUNDATION_2026-09-25.md`
+- Locale eligibility: `docs/SEO_LOCALE_MATRIX.md`
 
 This document is the operational baseline for future marketing routing, SEO, and branding updates.
