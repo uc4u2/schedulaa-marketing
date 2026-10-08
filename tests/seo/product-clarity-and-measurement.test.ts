@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 
+import { getDocsSource } from '../../src/legacy-content/docs/getDocsSource';
+
 const readSource = (path: string) => readFileSync(new URL(`../../${path}`, import.meta.url), 'utf8');
 
 test('platform overview explains verified workflows and explicit product boundaries', () => {
@@ -78,4 +80,19 @@ test('contact copy does not promise an unverified response SLA or universal impl
   assert.doesNotMatch(source, /respond within one business day|payroll validation for every location|enterprise rollout specialists/i);
   assert.match(source, /successful submission confirms receipt, not a guaranteed response time/i);
   assert.match(source, /Do not include passwords or payment details/);
+});
+
+test('localized docs render canonical integration facts and localized contact copy has no response SLA', () => {
+  const locales = ['fa', 'ru', 'zh', 'es', 'fr', 'de', 'ar', 'pt'] as const;
+  for (const locale of locales) {
+    const renderedDocs = JSON.stringify(getDocsSource(locale));
+    assert.match(renderedDocs, /Google Calendar V1/);
+    assert.match(renderedDocs, /Custom domains/);
+    assert.doesNotMatch(renderedDocs, /Slack|Domain Purchase|comingSoon/);
+  }
+
+  const localizedContacts = locales
+    .map((locale) => readSource(`src/legacy-content/batch2/config.${locale}.js`))
+    .join('\n');
+  assert.doesNotMatch(localizedContacts, /one business day|one working day|un jour ouvrable|um dia util|يوم عمل واحد|یک روز کاری|одного рабочего дня|一个工作日/i);
 });

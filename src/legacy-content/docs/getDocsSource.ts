@@ -71,7 +71,9 @@ const ctaByLocale: Record<string, { overline: string; title: string; body: strin
 
 const withLocalizedCta = (page: any, locale: AppLocale | string | null | undefined) => {
   const cta = ctaByLocale[String(locale || '')];
-  if (!cta) return page;
+  if (!cta) {
+    return page;
+  }
   return {
     ...page,
     cta: {
@@ -85,14 +87,43 @@ const withLocalizedCta = (page: any, locale: AppLocale | string | null | undefin
   };
 };
 
+const buildLocalizedDocsPage = (localizedSource: typeof source, locale: AppLocale | string | null | undefined) => {
+  // Integration facts stay canonical until each translated source is reviewed against current product status.
+  const sourceWithVerifiedIntegrations = {
+    ...localizedSource,
+    integrations: {
+      ...localizedSource.integrations,
+      description: source.integrations.description,
+      items: source.integrations.items,
+    },
+  };
+  return withLocalizedCta(buildDocsPage(sourceWithVerifiedIntegrations), locale);
+};
+
 export const getDocsSource = (locale: AppLocale | string | null | undefined) => {
-  if (locale === 'fa') return withLocalizedCta(buildDocsPage(sourceFa), locale);
-  if (locale === 'ru') return withLocalizedCta(buildDocsPage(sourceRu), locale);
-  if (locale === 'zh') return withLocalizedCta(buildDocsPage(sourceZh), locale);
-  if (locale === 'es') return withLocalizedCta(buildDocsPage(sourceEs), locale);
-  if (locale === 'fr') return withLocalizedCta(buildDocsPage(sourceFr), locale);
-  if (locale === 'de') return withLocalizedCta(buildDocsPage(sourceDe), locale);
-  if (locale === 'ar') return withLocalizedCta(buildDocsPage(sourceAr), locale);
-  if (locale === 'pt') return withLocalizedCta(buildDocsPage(sourcePt), locale);
+  if (locale === 'fa') {
+    return buildLocalizedDocsPage(sourceFa, locale);
+  }
+  if (locale === 'ru') {
+    return buildLocalizedDocsPage(sourceRu, locale);
+  }
+  if (locale === 'zh') {
+    return buildLocalizedDocsPage(sourceZh, locale);
+  }
+  if (locale === 'es') {
+    return buildLocalizedDocsPage(sourceEs, locale);
+  }
+  if (locale === 'fr') {
+    return buildLocalizedDocsPage(sourceFr, locale);
+  }
+  if (locale === 'de') {
+    return buildLocalizedDocsPage(sourceDe, locale);
+  }
+  if (locale === 'ar') {
+    return buildLocalizedDocsPage(sourceAr, locale);
+  }
+  if (locale === 'pt') {
+    return buildLocalizedDocsPage(sourcePt, locale);
+  }
   return buildDocsPage(source);
 };

@@ -119,7 +119,7 @@ export const contactPage = {
     ...contactPageEn.hero,
     badge: 'تماس',
     title: 'بياييد درباره اجراي شما صحبت کنيم.',
-    subtitle: 'برای اجرای سفارشی، برنامه همکاری یا پشتیبانی مهاجرت، متخصصان ما طی یک روز کاری پاسخ می‌دهند.',
+    subtitle: 'درباره تناسب محصول، نیازهای راه اندازی، برنامه مهاجرت یا همکاری سوال کنید. اطلاعات شما را بررسی و پیگیری می کنیم.',
     primaryCta: { ...contactPageEn.hero.primaryCta, label: 'ايميل به ما' },
     secondaryCta: { ...contactPageEn.hero.secondaryCta, label: 'تماس با تيم', href: '/contact' },
   },

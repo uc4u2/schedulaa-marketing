@@ -182,7 +182,7 @@ export const contactPage = {
     badge: 'Contact',
     title: 'Parlons de votre deploiement.',
     subtitle:
-      "Besoin d'une implementation sur mesure, d'un programme partenaire ou d'un support migration ? Nos specialistes repondent sous un jour ouvrable.",
+      "Posez vos questions sur l adequation du produit, la configuration, la migration ou un partenariat. Nous examinerons le contexte fourni et assurerons le suivi.",
     primaryCta: { label: 'Ecrivez-nous', href: 'mailto:admin@schedulaa.com' },
     secondaryCta: { label: "Contacter l'equipe", href: '/contact' },
   },

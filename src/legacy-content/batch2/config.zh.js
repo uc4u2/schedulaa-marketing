@@ -119,7 +119,7 @@ export const contactPage = {
     ...contactPageEn.hero,
     badge: '联系',
     title: '一起聊聊你的上线计划。',
-    subtitle: '如果你需要定制实施、合作伙伴计划或迁移支持，我们的专家会在一个工作日内回复。',
+    subtitle: '欢迎咨询产品适配、设置要求、迁移规划或合作机会。我们会审核你提供的信息并跟进。',
     primaryCta: { ...contactPageEn.hero.primaryCta, label: '发送邮件' },
     secondaryCta: { ...contactPageEn.hero.secondaryCta, label: '联系团队', href: '/contact' },
   },

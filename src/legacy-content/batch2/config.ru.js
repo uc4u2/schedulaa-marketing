@@ -119,7 +119,7 @@ export const contactPage = {
     ...contactPageEn.hero,
     badge: 'Контакт',
     title: 'Обсудим ваш запуск.',
-    subtitle: 'Нужна помощь с внедрением, партнерской программой или миграцией? Наши специалисты отвечают в течение одного рабочего дня.',
+    subtitle: 'Задайте вопрос о соответствии продукта, настройке, миграции или партнерстве. Мы изучим предоставленный контекст и свяжемся с вами.',
     primaryCta: { ...contactPageEn.hero.primaryCta, label: 'Написать нам' },
     secondaryCta: { ...contactPageEn.hero.secondaryCta, label: 'Связаться с командой', href: '/contact' },
   },

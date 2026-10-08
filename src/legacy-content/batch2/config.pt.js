@@ -182,7 +182,7 @@ export const contactPage = {
     badge: 'Contato',
     title: 'Vamos falar sobre sua implementacao.',
     subtitle:
-      'Se voce precisa de implementacao personalizada, programa de parceria ou suporte de migracao, nossos especialistas respondem em ate um dia util.',
+      'Pergunte sobre adequacao do produto, configuracao, migracao ou parceria. Vamos analisar o contexto enviado e fazer o acompanhamento.',
     primaryCta: { label: 'Enviar email', href: 'mailto:admin@schedulaa.com' },
     secondaryCta: { label: 'Falar com a equipe', href: '/contact' },
   },
