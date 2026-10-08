@@ -50,6 +50,10 @@ test('navbar defers booking iframe and ships a right-sized logo', () => {
   assert.match(navbarSource, /Book a personalized demo/);
   assert.match(navbarSource, /Choose a convenient time for a guided walkthrough tailored to your business\./);
   assert.match(navbarSource, /Open full booking page/);
+  assert.match(navbarSource, /schedulaa:booking-ready/);
+  assert.match(navbarSource, /Loading live availability…/);
+  assert.match(navbarSource, /loading="eager"/);
+  assert.match(navbarSource, /onPointerEnter=\{warmDemoConnection\}/);
 
   const heroSource = readSource('src/vendor-forex/src/components/home/Hero.tsx');
   assert.match(heroSource, /ns-img-295\.webp/);

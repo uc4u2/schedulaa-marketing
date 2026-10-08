@@ -398,6 +398,8 @@ const Navbar = () => {
   const [productOpen, setProductOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
+  const [demoFrameReady, setDemoFrameReady] = useState(false);
+  const [demoLoadSlow, setDemoLoadSlow] = useState(false);
   const [localeOpen, setLocaleOpen] = useState(false);
   const [localeSearch, setLocaleSearch] = useState('');
   const closeTimerRef = useRef<number | null>(null);
@@ -405,6 +407,46 @@ const Navbar = () => {
   const demoDialogRef = useRef<HTMLElement | null>(null);
   const demoCloseButtonRef = useRef<HTMLButtonElement | null>(null);
   const demoTriggerRef = useRef<HTMLButtonElement | null>(null);
+  const demoFrameRef = useRef<HTMLIFrameElement | null>(null);
+
+  useEffect(() => {
+    if (!demoOpen) {
+      setDemoFrameReady(false);
+      setDemoLoadSlow(false);
+      return undefined;
+    }
+
+    const slowTimer = window.setTimeout(() => setDemoLoadSlow(true), 4000);
+    const fallbackTimer = window.setTimeout(() => setDemoFrameReady(true), 15000);
+    return () => {
+      window.clearTimeout(slowTimer);
+      window.clearTimeout(fallbackTimer);
+    };
+  }, [demoOpen]);
+
+  useEffect(() => {
+    let bookingOrigin = '';
+    try {
+      bookingOrigin = new URL(bookDemoHref).origin;
+    } catch {
+      return undefined;
+    }
+
+    const onBookingReady = (event: MessageEvent) => {
+      if (
+        event.origin !== bookingOrigin ||
+        event.source !== demoFrameRef.current?.contentWindow ||
+        event.data?.type !== 'schedulaa:booking-ready'
+      ) {
+        return;
+      }
+      setDemoFrameReady(true);
+      setDemoLoadSlow(false);
+    };
+
+    window.addEventListener('message', onBookingReady);
+    return () => window.removeEventListener('message', onBookingReady);
+  }, [bookDemoHref]);
 
   useEffect(() => {
     if (!demoOpen) {
@@ -494,11 +536,30 @@ const Navbar = () => {
 
   const openDemo = (trigger: HTMLButtonElement) => {
     demoTriggerRef.current = trigger;
+    setDemoFrameReady(false);
+    setDemoLoadSlow(false);
     trackAnalyticsEventOnce('demo_panel_open', `demo-panel:${pathname}`, {
       page_path: pathname,
       placement: 'global_navigation',
     });
     setDemoOpen(true);
+  };
+
+  const warmDemoConnection = () => {
+    try {
+      const origin = new URL(bookDemoHref).origin;
+      if (document.head.querySelector(`link[data-demo-preconnect="${origin}"]`)) {
+        return;
+      }
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = origin;
+      link.crossOrigin = 'anonymous';
+      link.dataset.demoPreconnect = origin;
+      document.head.appendChild(link);
+    } catch {
+      // The configured booking URL is validated again when the iframe is built.
+    }
   };
 
   const onLocaleChange = (newLocale: AppLocale) => {
@@ -614,6 +675,8 @@ const Navbar = () => {
           <button
             type="button"
             className="inline-flex min-h-[52px] items-center justify-center rounded-[18px] bg-[linear-gradient(135deg,#2563eb_0%,#3b82f6_38%,#60a5fa_100%)] px-6 text-[0.95rem] font-semibold text-white shadow-[0_16px_30px_rgba(37,99,235,0.22)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_34px_rgba(37,99,235,0.28)]"
+            onPointerEnter={warmDemoConnection}
+            onFocus={warmDemoConnection}
             onClick={(event) =>
               {
                 trackMetaPixel('Lead', {
@@ -824,6 +887,8 @@ const Navbar = () => {
             <button
               type="button"
               className="col-span-2 rounded-lg bg-primary px-3 py-2 text-center text-sm font-medium text-white"
+              onPointerEnter={warmDemoConnection}
+              onFocus={warmDemoConnection}
               onClick={(event) => {
                 trackMetaPixel('Lead', {
                   content_name: 'Mobile Navbar Book Demo',
@@ -898,12 +963,38 @@ const Navbar = () => {
                 </button>
               </div>
             </div>
-            <div className="flex-1 bg-slate-50 dark:bg-background-9">
+            <div
+              className="relative flex-1 bg-slate-50 dark:bg-background-9"
+              aria-busy={!demoFrameReady}
+            >
+              {!demoFrameReady ? (
+                <div
+                  className="pointer-events-none absolute inset-0 z-10 grid place-items-center bg-slate-50 px-6 text-center dark:bg-background-9"
+                  role="status"
+                  aria-live="polite"
+                >
+                  <div className="max-w-sm">
+                    <span
+                      className="mx-auto mb-4 block size-9 animate-spin rounded-full border-4 border-primary/20 border-t-primary"
+                      aria-hidden="true"
+                    />
+                    <p className="text-base font-semibold text-secondary dark:text-accent">
+                      Loading live availability…
+                    </p>
+                    <p className="mt-2 text-sm text-secondary/65 dark:text-accent/65">
+                      {demoLoadSlow
+                        ? 'This is taking a little longer than usual. Your booking options are still loading.'
+                        : 'Please wait a moment while we prepare the available dates and times.'}
+                    </p>
+                  </div>
+                </div>
+              ) : null}
               <iframe
+                ref={demoFrameRef}
                 src={bookDemoEmbedHref}
                 title={demoPanelTitle}
                 className="h-full w-full border-0"
-                loading="lazy"
+                loading="eager"
                 referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
