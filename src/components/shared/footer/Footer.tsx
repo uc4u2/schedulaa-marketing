@@ -8,6 +8,7 @@ import {
 } from "@/utils/locale";
 import { cn } from "@/utils/cn";
 import { FOOTER_SECTIONS, type FooterLinkItem } from "@/data/footer-data";
+import { MARKETING_CONTACT } from "@/data/marketing-contact";
 import gradientImg from "@public/images/ns-img-532.png";
 import legacyLogo from "@public/images/shared/schedulaa-logo-legacy.png";
 import Image from "next/image";
@@ -75,6 +76,22 @@ const Footer = ({ className }: { className?: string }) => {
               <p className="text-accent/60 text-tagline-1 mt-4 mb-7 font-normal">
                 {t("blurb")}
               </p>
+              <div className="space-y-2 text-sm">
+                <a className="footer-link block w-fit" href={`mailto:${MARKETING_CONTACT.email}`}>
+                  {MARKETING_CONTACT.email}
+                </a>
+                <a className="footer-link block w-fit" href={MARKETING_CONTACT.callHref}>
+                  {t("callUs")}: {MARKETING_CONTACT.callDisplay}
+                </a>
+                <a
+                  className="footer-link block w-fit"
+                  href={MARKETING_CONTACT.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("whatsapp")}: {MARKETING_CONTACT.whatsappDisplay}
+                </a>
+              </div>
             </div>
           </div>
 

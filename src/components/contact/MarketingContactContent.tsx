@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { detectLocaleFromPath } from '@/utils/locale';
 import { trackMetaPixel } from '@/utils/metaPixel';
 import { trackAnalyticsEvent, trackAnalyticsEventOnce } from '@/utils/analytics';
+import { MARKETING_CONTACT } from '@/data/marketing-contact';
 
 const API_ORIGIN =
   process.env.NEXT_PUBLIC_BACKEND_URL ||
@@ -68,12 +69,6 @@ const SUPPORT_ACCORDION = [
     points: ['Eligibility and setup vary', 'Google Calendar V1 is not full two-way sync', 'Accounting connections are bounded handoffs'],
   },
 ];
-const DIRECT_LINES = ['Admin: admin@schedulaa.com'];
-const HQ_ADDRESS = '171 Harbord Street, Toronto, ON M5S 1H3';
-const MAP_EMBED_URL =
-  'https://maps.google.com/maps?q=171%20Harbord%20Street%2C%20Toronto%2C%20ON%20M5S%201H3&t=&z=15&ie=UTF8&iwloc=&output=embed';
-const MAP_DIRECTIONS_URL = 'https://www.google.com/maps/dir/?api=1&destination=171+Harbord+Street+Toronto+ON+M5S+1H3';
-
 export default function MarketingContactContent() {
   const pathname = usePathname() || '/';
   const locale = detectLocaleFromPath(pathname);
@@ -91,74 +86,92 @@ export default function MarketingContactContent() {
   const copyByLocale: Record<string, any> = {
     fa: {
       badge: 'تماس', heroTitle: 'بياييد درباره اجراي شما صحبت کنيم.', heroBody: 'براي اجرا، مشارکت يا مهاجرت داده با تيم ما تماس بگيريد.',
-      emailUs: 'ايميل به ما', call: 'تماس +1 (647) 849-4913', sendMessage: 'ارسال پيام', name: 'نام', email: 'ايميل',
+      emailUs: 'ايميل به ما', call: 'تماس', whatsapp: 'واتس‌اپ', sendMessage: 'ارسال پيام', name: 'نام', email: 'ايميل',
       phone: 'تلفن', company: 'شرکت', message: 'پيام', submit: 'ارسال', submitting: 'در حال ارسال...',
-      directLines: 'راه هاي ارتباطي', visitHq: 'بازديد از دفتر', toronto: 'دفتر تورنتو', directions: 'مسيريابي',
+      directLines: 'راه هاي ارتباطي', serviceAreaBadge: 'خدمات غيرحضوري', serviceAreaTitle: 'مستقر در انتاريو، کانادا',
+      serviceAreaBody: 'ارائه خدمات غيرحضوري به کسب‌وکارها در کانادا و ايالات متحده.',
+      remoteMeetingNote: 'جلسه‌ها و گفتگوهاي محصول به‌صورت غيرحضوري هماهنگ مي‌شوند؛ Schedulaa دفتر عمومي براي مراجعه حضوري معرفي نمي‌کند.',
       growTitle: 'ساخت و رشد با ابزارهاي مقياس پذير', quickAnswers: 'پاسخ سريع مي خواهيد؟',
       required: 'نام، ايميل و پيام را وارد کنيد.', success: 'پيام شما ثبت شد. به زودي پاسخ مي دهيم.', failed: 'ارسال انجام نشد. دوباره تلاش کنيد.',
     },
     ru: {
       badge: 'Контакт', heroTitle: 'Обсудим ваш запуск.', heroBody: 'Нужна помощь с внедрением, партнерством или миграцией? Напишите нам.',
-      emailUs: 'Написать', call: 'Позвонить +1 (647) 849-4913', sendMessage: 'Отправить сообщение', name: 'Имя', email: 'Email',
+      emailUs: 'Написать', call: 'Позвонить', whatsapp: 'WhatsApp', sendMessage: 'Отправить сообщение', name: 'Имя', email: 'Email',
       phone: 'Телефон', company: 'Компания', message: 'Сообщение', submit: 'Отправить', submitting: 'Отправка...',
-      directLines: 'Прямые контакты', visitHq: 'Наш офис', toronto: 'Штаб-квартира в Торонто', directions: 'Построить маршрут',
+      directLines: 'Прямые контакты', serviceAreaBadge: 'Удаленное обслуживание', serviceAreaTitle: 'Мы находимся в Онтарио, Канада',
+      serviceAreaBody: 'Удаленно обслуживаем компании по всей Канаде и США.',
+      remoteMeetingNote: 'Встречи и консультации по продукту проводятся удаленно; Schedulaa не рекламирует офис для посещения без записи.',
       growTitle: 'Развивайтесь с масштабируемыми инструментами', quickAnswers: 'Нужны быстрые ответы?',
       required: 'Укажите имя, email и сообщение.', success: 'Спасибо! Мы скоро ответим.', failed: 'Не удалось отправить сообщение. Попробуйте снова.',
     },
     zh: {
       badge: '联系', heroTitle: '一起讨论你的上线计划。', heroBody: '如需实施、合作或迁移支持，请联系 Schedulaa 团队。',
-      emailUs: '发送邮件', call: '致电 +1 (647) 849-4913', sendMessage: '发送消息', name: '姓名', email: '邮箱',
+      emailUs: '发送邮件', call: '致电', whatsapp: 'WhatsApp', sendMessage: '发送消息', name: '姓名', email: '邮箱',
       phone: '电话', company: '公司', message: '留言', submit: '提交', submitting: '提交中...',
-      directLines: '直接联系方式', visitHq: '到访总部', toronto: '多伦多总部', directions: '获取路线',
+      directLines: '直接联系方式', serviceAreaBadge: '远程服务', serviceAreaTitle: '我们位于加拿大安大略省',
+      serviceAreaBody: '远程服务加拿大和美国各地的企业。',
+      remoteMeetingNote: '会议和产品沟通均通过远程方式安排；Schedulaa 不提供对外开放的到访办公室。',
       growTitle: '用可扩展工具实现增长', quickAnswers: '需要快速答案？',
       required: '请填写姓名、邮箱和留言。', success: '提交成功，我们会尽快回复。', failed: '发送失败，请重试。',
     },
     es: {
       badge: 'Contacto', heroTitle: 'Hablemos de tu implementacion.', heroBody: 'Para implementacion, partnership o migracion, nuestro equipo responde rapido.',
-      emailUs: 'Escribirnos', call: 'Llamar +1 (647) 849-4913', sendMessage: 'Enviar mensaje', name: 'Nombre', email: 'Correo',
+      emailUs: 'Escribirnos', call: 'Llamar', whatsapp: 'WhatsApp', sendMessage: 'Enviar mensaje', name: 'Nombre', email: 'Correo',
       phone: 'Telefono', company: 'Empresa', message: 'Mensaje', submit: 'Enviar', submitting: 'Enviando...',
-      directLines: 'Lineas directas', visitHq: 'Visita nuestra sede', toronto: 'Sede Toronto', directions: 'Como llegar',
+      directLines: 'Lineas directas', serviceAreaBadge: 'Servicio remoto', serviceAreaTitle: 'Operamos desde Ontario, Canada',
+      serviceAreaBody: 'Atendemos de forma remota a empresas de Canada y Estados Unidos.',
+      remoteMeetingNote: 'Las reuniones y conversaciones sobre el producto se coordinan de forma remota; Schedulaa no anuncia una oficina publica para visitas sin cita.',
       growTitle: 'Construye y crece con herramientas escalables', quickAnswers: '¿Necesitas respuestas rapidas?',
       required: 'Incluye nombre, correo y mensaje.', success: 'Gracias. Te responderemos pronto.', failed: 'No se pudo enviar. Intenta otra vez.',
     },
     fr: {
       badge: 'Contact', heroTitle: 'Parlons de votre deploiement.', heroBody: "Besoin d'implementation, de partenariat ou de migration ? Nous repondons vite.",
-      emailUs: 'Envoyer un email', call: 'Appeler +1 (647) 849-4913', sendMessage: 'Envoyer un message', name: 'Nom', email: 'Email',
+      emailUs: 'Envoyer un email', call: 'Appeler', whatsapp: 'WhatsApp', sendMessage: 'Envoyer un message', name: 'Nom', email: 'Email',
       phone: 'Telephone', company: 'Entreprise', message: 'Message', submit: 'Envoyer', submitting: 'Envoi...',
-      directLines: 'Contacts directs', visitHq: 'Visiter le siege', toronto: 'Siege de Toronto', directions: "Itineraire",
+      directLines: 'Contacts directs', serviceAreaBadge: 'Service a distance', serviceAreaTitle: 'Nous sommes bases en Ontario, Canada',
+      serviceAreaBody: 'Nous servons a distance les entreprises partout au Canada et aux Etats-Unis.',
+      remoteMeetingNote: "Les reunions et echanges produit sont organises a distance; Schedulaa n'annonce pas de bureau public accessible sans rendez-vous.",
       growTitle: 'Construisez et grandissez avec des outils evolutifs', quickAnswers: 'Besoin de reponses rapides ?',
       required: 'Veuillez renseigner nom, email et message.', success: 'Merci. Nous revenons vers vous rapidement.', failed: "Echec de l'envoi. Reessayez.",
     },
     de: {
       badge: 'Kontakt', heroTitle: 'Lassen Sie uns ueber Ihren Rollout sprechen.', heroBody: 'Fuer Implementierung, Partnerschaft oder Migration hilft unser Team schnell.',
-      emailUs: 'E-Mail senden', call: 'Anrufen +1 (647) 849-4913', sendMessage: 'Nachricht senden', name: 'Name', email: 'E-Mail',
+      emailUs: 'E-Mail senden', call: 'Anrufen', whatsapp: 'WhatsApp', sendMessage: 'Nachricht senden', name: 'Name', email: 'E-Mail',
       phone: 'Telefon', company: 'Unternehmen', message: 'Nachricht', submit: 'Senden', submitting: 'Wird gesendet...',
-      directLines: 'Direkte Kontakte', visitHq: 'Hauptsitz besuchen', toronto: 'Hauptsitz Toronto', directions: 'Route anzeigen',
+      directLines: 'Direkte Kontakte', serviceAreaBadge: 'Remote-Service', serviceAreaTitle: 'Wir arbeiten von Ontario, Kanada, aus',
+      serviceAreaBody: 'Wir betreuen Unternehmen in Kanada und den USA remote.',
+      remoteMeetingNote: 'Termine und Produktgespraeche werden remote vereinbart; Schedulaa bewirbt kein oeffentliches Buero fuer spontane Besuche.',
       growTitle: 'Mit skalierbaren Tools aufbauen und wachsen', quickAnswers: 'Brauchen Sie schnelle Antworten?',
       required: 'Bitte Name, E-Mail und Nachricht angeben.', success: 'Danke. Wir melden uns in Kuerze.', failed: 'Senden fehlgeschlagen. Bitte erneut versuchen.',
     },
     ar: {
       badge: 'تواصل', heroTitle: 'دعنا نتحدث عن خطة التنفيذ لديك.', heroBody: 'للتنفيذ او الشراكات او دعم الترحيل، تواصل مع فريقنا.',
-      emailUs: 'راسلنا', call: 'اتصل +1 (647) 849-4913', sendMessage: 'ارسل رسالة', name: 'الاسم', email: 'البريد الالكتروني',
+      emailUs: 'راسلنا', call: 'اتصل', whatsapp: 'واتساب', sendMessage: 'ارسل رسالة', name: 'الاسم', email: 'البريد الالكتروني',
       phone: 'الهاتف', company: 'الشركة', message: 'الرسالة', submit: 'ارسال', submitting: 'جاري الارسال...',
-      directLines: 'قنوات التواصل المباشرة', visitHq: 'زيارة المقر', toronto: 'مقر تورنتو', directions: 'الاتجاهات',
+      directLines: 'قنوات التواصل المباشرة', serviceAreaBadge: 'خدمة عن بعد', serviceAreaTitle: 'نعمل من أونتاريو، كندا',
+      serviceAreaBody: 'نخدم الشركات في جميع أنحاء كندا والولايات المتحدة عن بعد.',
+      remoteMeetingNote: 'يتم ترتيب الاجتماعات ومحادثات المنتج عن بعد؛ لا تعلن Schedulaa عن مكتب عام للزيارات دون موعد.',
       growTitle: 'ابنِ ونمِّ باستخدام أدوات قابلة للتوسع', quickAnswers: 'تحتاج اجابات سريعة؟',
       required: 'يرجى ادخال الاسم والبريد والرسالة.', success: 'شكرا. سنعود اليك قريبا.', failed: 'تعذر ارسال الرسالة. حاول مرة اخرى.',
     },
     pt: {
       badge: 'Contato', heroTitle: 'Vamos falar sobre sua implementacao.', heroBody: 'Para implementacao, parceria ou migracao, nosso time responde rapido.',
-      emailUs: 'Enviar email', call: 'Ligar +1 (647) 849-4913', sendMessage: 'Enviar mensagem', name: 'Nome', email: 'Email',
+      emailUs: 'Enviar email', call: 'Ligar', whatsapp: 'WhatsApp', sendMessage: 'Enviar mensagem', name: 'Nome', email: 'Email',
       phone: 'Telefone', company: 'Empresa', message: 'Mensagem', submit: 'Enviar', submitting: 'Enviando...',
-      directLines: 'Contatos diretos', visitHq: 'Visite nossa sede', toronto: 'Sede de Toronto', directions: 'Como chegar',
+      directLines: 'Contatos diretos', serviceAreaBadge: 'Atendimento remoto', serviceAreaTitle: 'Operamos a partir de Ontario, Canada',
+      serviceAreaBody: 'Atendemos remotamente empresas em todo o Canada e nos Estados Unidos.',
+      remoteMeetingNote: 'Reunioes e conversas sobre o produto sao organizadas remotamente; a Schedulaa nao anuncia um escritorio publico para visitas sem agendamento.',
       growTitle: 'Construa e cresca com ferramentas escalaveis', quickAnswers: 'Precisa de respostas rapidas?',
       required: 'Inclua nome, email e mensagem.', success: 'Obrigado! Retornaremos em breve.', failed: 'Nao foi possivel enviar. Tente novamente.',
     },
   };
   const copy = copyByLocale[locale] || {
     badge: 'Contact', heroTitle: 'Tell us what your team needs.', heroBody: 'Ask about product fit, setup requirements, migration planning, or a potential partnership. We will review the context you provide and follow up.',
-    emailUs: 'Email us', call: 'Call +1 (647) 849-4913', sendMessage: 'Send a message', name: 'Name', email: 'Email',
+    emailUs: 'Email us', call: 'Call', whatsapp: 'WhatsApp', sendMessage: 'Send a message', name: 'Name', email: 'Email',
     phone: 'Phone', company: 'Company', message: 'Message', submit: 'Submit', submitting: 'Submitting...',
-    directLines: 'Direct lines', visitHq: 'Visit our HQ', toronto: 'Toronto headquarters', directions: 'Get directions',
+    directLines: 'Direct lines', serviceAreaBadge: 'Remote service', serviceAreaTitle: 'Based in Ontario, Canada',
+    serviceAreaBody: 'Serving businesses across Canada and the United States remotely.',
+    remoteMeetingNote: 'Meetings and product conversations are arranged remotely; Schedulaa does not advertise a public walk-in office.',
     growTitle: 'Build & grow with scalable tools', quickAnswers: 'Need quick answers?',
     required: 'Please include your name, email, and message.', success: "Thanks! We'll get back to you shortly.", failed: "We couldn't send your message. Please try again.",
   };
@@ -277,8 +290,19 @@ export default function MarketingContactContent() {
             {copy.heroBody}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="mailto:admin@schedulaa.com" className="btn btn-green btn-md min-w-[152px] justify-center px-6 hover:btn-white">
+            <a href={`mailto:${MARKETING_CONTACT.email}`} className="btn btn-green btn-md min-w-[152px] justify-center px-6 hover:btn-white">
               {copy.emailUs}
+            </a>
+            <a href={MARKETING_CONTACT.callHref} className="btn btn-white btn-md min-w-[152px] justify-center px-6">
+              {copy.call} {MARKETING_CONTACT.callDisplay}
+            </a>
+            <a
+              href={MARKETING_CONTACT.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-transparent btn-md min-w-[152px] justify-center border-white/40 px-6 text-white hover:btn-white"
+            >
+              {copy.whatsapp} {MARKETING_CONTACT.whatsappDisplay}
             </a>
           </div>
           </div>
@@ -369,40 +393,41 @@ export default function MarketingContactContent() {
 
         <div className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
           <h2 className="text-2xl font-semibold">{copy.directLines}</h2>
-          <div className="mt-4 space-y-2">
-            {DIRECT_LINES.map((line) => (
-              <p key={line} className="text-secondary/70 dark:text-accent/70">
-                {line}
-              </p>
-            ))}
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <a
+              href={`mailto:${MARKETING_CONTACT.email}`}
+              className="rounded-xl border border-stroke-2 p-4 text-secondary/75 transition-colors hover:border-primary-500 hover:text-primary-500 dark:border-stroke-7 dark:text-accent/75"
+            >
+              <span className="block text-xs font-semibold uppercase tracking-[0.16em]">{copy.email}</span>
+              <span className="mt-1 block font-medium">{MARKETING_CONTACT.email}</span>
+            </a>
+            <a
+              href={MARKETING_CONTACT.callHref}
+              className="rounded-xl border border-stroke-2 p-4 text-secondary/75 transition-colors hover:border-primary-500 hover:text-primary-500 dark:border-stroke-7 dark:text-accent/75"
+            >
+              <span className="block text-xs font-semibold uppercase tracking-[0.16em]">{copy.call}</span>
+              <span className="mt-1 block font-medium">{MARKETING_CONTACT.callDisplay}</span>
+            </a>
+            <a
+              href={MARKETING_CONTACT.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl border border-stroke-2 p-4 text-secondary/75 transition-colors hover:border-primary-500 hover:text-primary-500 dark:border-stroke-7 dark:text-accent/75"
+            >
+              <span className="block text-xs font-semibold uppercase tracking-[0.16em]">{copy.whatsapp}</span>
+              <span className="mt-1 block font-medium">{MARKETING_CONTACT.whatsappDisplay}</span>
+            </a>
           </div>
         </div>
 
         <div className="rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
-          <div className="grid gap-6 md:grid-cols-2 md:items-center">
-            <div>
-              <p className="badge badge-cyan-v2">{copy.visitHq}</p>
-              <h2 className="mt-4 text-2xl font-semibold">{copy.toronto}</h2>
-              <p className="mt-3 text-secondary/70 dark:text-accent/70">{HQ_ADDRESS}</p>
-              <p className="mt-2 text-secondary/70 dark:text-accent/70">
-                Please arrange a meeting before visiting so we can confirm the right person and format for your question.
-              </p>
-              <a
-                href={MAP_DIRECTIONS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary mt-5 hover:btn-secondary dark:hover:btn-accent"
-              >
-                {copy.directions}
-              </a>
-            </div>
-            <iframe
-              title="Schedulaa HQ map"
-              src={MAP_EMBED_URL}
-              loading="lazy"
-              className="h-[280px] w-full rounded-[16px] border border-stroke-2 dark:border-stroke-7"
-              style={{ border: 0 }}
-            />
+          <div className="rounded-[16px] border border-stroke-2 bg-background-1 p-6 dark:border-stroke-7 dark:bg-background-7 md:p-8">
+            <p className="badge badge-cyan-v2">{copy.serviceAreaBadge}</p>
+            <h2 className="mt-4 text-2xl font-semibold">{copy.serviceAreaTitle}</h2>
+            <p className="mt-3 max-w-[760px] text-secondary/70 dark:text-accent/70">{copy.serviceAreaBody}</p>
+            <p className="mt-2 max-w-[760px] text-sm text-secondary/60 dark:text-accent/60">
+              {copy.remoteMeetingNote}
+            </p>
           </div>
         </div>
 

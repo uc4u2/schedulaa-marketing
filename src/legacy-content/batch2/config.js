@@ -188,7 +188,7 @@ export const contactPage = {
     subtitle:
       'Ask about product fit, setup requirements, migration planning, or a potential partnership. We will review the context you provide and follow up.',
     primaryCta: { label: 'Email us', href: 'mailto:admin@schedulaa.com' },
-    secondaryCta: { label: 'Call +1 (289) 514-9260', href: 'tel:+12895149260' },
+    secondaryCta: { label: 'Call +1 (514) 430-0970', href: 'tel:+15144300970' },
   },
   sections: [
     {

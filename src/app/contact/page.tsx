@@ -1,4 +1,5 @@
 import MarketingContactContent from '@/components/contact/MarketingContactContent';
+import { buildMarketingContactJsonLd } from '@/data/marketing-contact';
 import { buildLocalizedPageMetadata } from '@/lib/seo/pageMetadata';
 import { getServerLocale } from '@/utils/serverLocale';
 import { Metadata } from 'next';
@@ -29,5 +30,16 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function ContactPage() {
-  return <MarketingContactContent />;
+  const contactJsonLd = buildMarketingContactJsonLd();
+
+  return (
+    <>
+      <script
+        id="schedulaa-contact-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
+      />
+      <MarketingContactContent />
+    </>
+  );
 }

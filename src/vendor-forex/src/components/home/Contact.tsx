@@ -4,6 +4,7 @@ import { FormEvent, useState } from 'react';
 import Link from 'next/link';
 import { getBatch2Source } from '@/legacy-content/batch2/getBatch2Source';
 import { AppLocale, withLocalePath } from '@/utils/locale';
+import { MARKETING_CONTACT } from '@/data/marketing-contact';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 
@@ -75,7 +76,9 @@ const copyByLocale: Record<string, any> = {
     failed: "We couldn't send your message. Please try again.",
     aria: 'Contact Information',
     supportAria: 'Contact Schedulaa',
-    address: 'Schedulaa rollout team (North America)',
+    callLabel: 'Call',
+    whatsappLabel: 'WhatsApp',
+    serviceArea: MARKETING_CONTACT.serviceArea,
   },
   fa: {
     supportCta: '\u062a\u0645\u0627\u0633 \u0628\u0627 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc',
@@ -97,7 +100,9 @@ const copyByLocale: Record<string, any> = {
     failed: '\u0627\u0631\u0633\u0627\u0644 \u067e\u06cc\u0627\u0645 \u0646\u0627\u0645\u0648\u0641\u0642 \u0628\u0648\u062f. \u062f\u0648\u0628\u0627\u0631\u0647 \u062a\u0644\u0627\u0634 \u06a9\u0646\u06cc\u062f.',
     aria: '\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u062a\u0645\u0627\u0633',
     supportAria: '\u062a\u0645\u0627\u0633 \u0628\u0627 Schedulaa',
-    address: '\u062a\u06cc\u0645 \u0627\u062c\u0631\u0627\u06cc\u06cc Schedulaa (\u0622\u0645\u0631\u06cc\u06a9\u0627\u06cc \u0634\u0645\u0627\u0644\u06cc)',
+    callLabel: '\u062a\u0645\u0627\u0633',
+    whatsappLabel: '\u0648\u0627\u062a\u0633\u200c\u0627\u067e',
+    serviceArea: '\u0645\u0633\u062a\u0642\u0631 \u062f\u0631 \u0627\u0646\u062a\u0627\u0631\u06cc\u0648\u060c \u06a9\u0627\u0646\u0627\u062f\u0627. \u0627\u0631\u0627\u0626\u0647 \u062e\u062f\u0645\u0627\u062a \u063a\u06cc\u0631\u062d\u0636\u0648\u0631\u06cc \u0628\u0647 \u06a9\u0633\u0628\u200c\u0648\u06a9\u0627\u0631\u0647\u0627 \u062f\u0631 \u06a9\u0627\u0646\u0627\u062f\u0627 \u0648 \u0627\u06cc\u0627\u0644\u0627\u062a \u0645\u062a\u062d\u062f\u0647.',
   },
   ru: {
     supportCta: '\u0421\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f \u0441 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u043e\u0439',
@@ -119,7 +124,9 @@ const copyByLocale: Record<string, any> = {
     failed: '\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435. \u041f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0441\u043d\u043e\u0432\u0430.',
     aria: '\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u043d\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f',
     supportAria: '\u0421\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f \u0441 Schedulaa',
-    address: '\u041a\u043e\u043c\u0430\u043d\u0434\u0430 \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f Schedulaa (\u0421\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u0410\u043c\u0435\u0440\u0438\u043a\u0430)',
+    callLabel: '\u041f\u043e\u0437\u0432\u043e\u043d\u0438\u0442\u044c',
+    whatsappLabel: 'WhatsApp',
+    serviceArea: '\u041c\u044b \u0431\u0430\u0437\u0438\u0440\u0443\u0435\u043c\u0441\u044f \u0432 \u041e\u043d\u0442\u0430\u0440\u0438\u043e, \u041a\u0430\u043d\u0430\u0434\u0430, \u0438 \u0443\u0434\u0430\u043b\u0435\u043d\u043d\u043e \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u0435\u043c \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u0432 \u041a\u0430\u043d\u0430\u0434\u0435 \u0438 \u0421\u0428\u0410.',
   },
   zh: {
     supportCta: '\u8054\u7cfb\u652f\u6301\u56e2\u961f',
@@ -141,13 +148,15 @@ const copyByLocale: Record<string, any> = {
     failed: '\u53d1\u9001\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5\u3002',
     aria: '\u8054\u7cfb\u4fe1\u606f',
     supportAria: '\u8054\u7cfb Schedulaa',
-    address: 'Schedulaa \u90e8\u7f72\u56e2\u961f\uff08\u5317\u7f8e\uff09',
+    callLabel: '\u81f4\u7535',
+    whatsappLabel: 'WhatsApp',
+    serviceArea: '\u56e2\u961f\u4f4d\u4e8e\u52a0\u62ff\u5927\u5b89\u5927\u7565\u7701\uff0c\u8fdc\u7a0b\u670d\u52a1\u52a0\u62ff\u5927\u548c\u7f8e\u56fd\u7684\u4f01\u4e1a\u3002',
   },
 };
 
 interface ContactInfo {
   id: number;
-  type: 'email' | 'phone' | 'address';
+  type: 'email' | 'phone' | 'whatsapp' | 'serviceArea';
   value: string;
   href?: string;
   ariaLabel?: string;
@@ -174,10 +183,10 @@ const PhoneIcon = () => (
   </svg>
 );
 
-const LocationIcon = () => (
+const GlobeIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" className="stroke-secondary dark:stroke-white" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" className="stroke-secondary dark:stroke-white" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="12" cy="12" r="10" className="stroke-secondary dark:stroke-white" strokeWidth="1.25" />
+    <path d="M2 12H22M12 2C14.5 4.7 15.8 8 15.8 12C15.8 16 14.5 19.3 12 22C9.5 19.3 8.2 16 8.2 12C8.2 8 9.5 4.7 12 2Z" className="stroke-secondary dark:stroke-white" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
@@ -186,9 +195,10 @@ const getIcon = (type: string) => {
     case 'email':
       return <EmailIcon />;
     case 'phone':
+    case 'whatsapp':
       return <PhoneIcon />;
-    case 'address':
-      return <LocationIcon />;
+    case 'serviceArea':
+      return <GlobeIcon />;
     default:
       return null;
   }
@@ -201,9 +211,10 @@ const Contact = ({ locale = 'en' }: { locale?: AppLocale }) => {
   const batch2 = getBatch2Source(locale);
   const contactPage = batch2.contactPage;
   const contactInfo: ContactInfo[] = [
-    { id: 1, type: 'email', value: 'admin@schedulaa.com', href: 'mailto:admin@schedulaa.com', ariaLabel: 'Email us at admin@schedulaa.com' },
-    { id: 2, type: 'phone', value: '+1 (289) 514-9260', href: 'tel:+12895149260', ariaLabel: 'Call us at +1 (289) 514-9260' },
-    { id: 3, type: 'address', value: copy.address },
+    { id: 1, type: 'email', value: MARKETING_CONTACT.email, href: `mailto:${MARKETING_CONTACT.email}`, ariaLabel: `Email us at ${MARKETING_CONTACT.email}` },
+    { id: 2, type: 'phone', value: `${copy.callLabel}: ${MARKETING_CONTACT.callDisplay}`, href: MARKETING_CONTACT.callHref, ariaLabel: `${copy.callLabel} ${MARKETING_CONTACT.callDisplay}` },
+    { id: 3, type: 'whatsapp', value: `${copy.whatsappLabel}: ${MARKETING_CONTACT.whatsappDisplay}`, href: MARKETING_CONTACT.whatsappHref, ariaLabel: `${copy.whatsappLabel} ${MARKETING_CONTACT.whatsappDisplay}` },
+    { id: 4, type: 'serviceArea', value: copy.serviceArea },
   ];
 
   const [form, setForm] = useState<ContactFormState>({
