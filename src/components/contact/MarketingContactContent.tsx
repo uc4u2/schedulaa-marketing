@@ -289,18 +289,18 @@ export default function MarketingContactContent() {
           <p className="mt-4 max-w-[900px] text-accent/80">
             {copy.heroBody}
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={`mailto:${MARKETING_CONTACT.email}`} className="btn btn-green btn-md min-w-[152px] justify-center px-6 hover:btn-white">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href={`mailto:${MARKETING_CONTACT.email}`} className="btn btn-green btn-md w-full min-w-[152px] justify-center px-6 hover:btn-white sm:w-auto">
               {copy.emailUs}
             </a>
-            <a href={MARKETING_CONTACT.callHref} className="btn btn-white btn-md min-w-[152px] justify-center px-6">
+            <a href={MARKETING_CONTACT.callHref} className="btn btn-white btn-md w-full min-w-[152px] justify-center px-6 sm:w-auto">
               {copy.call} {MARKETING_CONTACT.callDisplay}
             </a>
             <a
               href={MARKETING_CONTACT.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-transparent btn-md min-w-[152px] justify-center border-white/40 px-6 text-white hover:btn-white"
+              className="btn btn-transparent btn-md w-full min-w-[152px] justify-center border-white/40 px-6 text-white hover:btn-white sm:w-auto"
             >
               {copy.whatsapp} {MARKETING_CONTACT.whatsappDisplay}
             </a>
