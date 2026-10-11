@@ -210,7 +210,7 @@ export default async function AnnualPlanPage({
               className="h-auto w-full rounded-[16px] object-contain"
             />
             <figcaption className="px-2 pb-1 pt-3 text-sm text-secondary/70">
-              A current Schedulaa product interface relevant to the{" "}
+              An illustration of the connected workflows available with the{" "}
               {plan.shortName} plan.
             </figcaption>
           </figure>

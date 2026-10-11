@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, statSync } from "node:fs";
 import test from "node:test";
 
 import sitemap from "../../src/app/sitemap";
@@ -41,7 +41,13 @@ test("annual Merchant Center plans have stable IDs, prices, detail routes, and p
 
   assert.equal(new Set(ANNUAL_PLANS.map((plan) => plan.image)).size, 3);
   for (const plan of ANNUAL_PLANS) {
-    assert.match(plan.image, /^\/images\/marketing\/.+\.(png|webp|jpe?g)$/);
+    assert.match(
+      plan.image,
+      /^\/images\/merchant\/schedulaa-.+-annual\.webp$/,
+    );
+    assert.ok(
+      statSync(new URL(`../../public${plan.image}`, import.meta.url)).size > 0,
+    );
   }
 });
 
