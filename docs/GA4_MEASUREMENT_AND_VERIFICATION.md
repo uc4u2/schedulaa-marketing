@@ -18,7 +18,7 @@ REACT_APP_GA_MEASUREMENT_ID
 
 For production, `NEXT_PUBLIC_GA_MEASUREMENT_ID` must be set to the same GA4 web-stream measurement ID already used by the production application. This preserves one acquisition journey across `www.schedulaa.com` and `app.schedulaa.com`. Do not copy a production ID into development or staging; use the corresponding non-production GA4 stream ID for each environment, or leave analytics disabled locally when a non-production stream is unavailable.
 
-The ID is intentionally not hardcoded. Both sites use first-party cookies with `cookie_domain: auto`. Because the hosts are subdomains of the same registrable domain and use the same GA4 stream, a cross-domain linker is not required. Campaign parameters are still allowlisted and carried onto application links to preserve landing attribution explicitly.
+The ID is intentionally not hardcoded. Both sites use first-party cookies with `cookie_domain: auto`. Because the hosts are subdomains of the same registrable domain and use the same GA4 stream, a cross-domain linker is not required. Campaign parameters are still allowlisted and carried onto application links to preserve landing attribution explicitly. The allowlist includes Merchant Center's non-PII `srsltid` result identifier so the marketing page view retains the free-listing click and the application handoff does not discard it.
 
 ## Event contract
 
@@ -38,6 +38,7 @@ Implemented events:
 Not yet implemented:
 
 - `demo_submit`: the current booking link/embedded scheduler does not expose an authoritative “demo accepted” callback to the marketing site. A click is tracked as `primary_cta_click`, not misreported as a completed demo request.
+- GA4 recommended ecommerce `purchase`: the current `subscription_activated` event confirms application subscription state but does not include an ecommerce `transaction_id`, `value`, `currency`, or `items` payload. It must not be treated as product-level Merchant Center purchase measurement.
 
 No event sends an email address, full name, phone number, message body, payment detail, checkout session ID, or payment-invite token to GA4. Application page views deliberately omit query strings and fragments so signup, reset, checkout, and invitation parameters cannot leak through a page URL.
 
@@ -52,8 +53,27 @@ No event sends an email address, full name, phone number, message body, payment 
 7. Complete the homepage qualification form. A failed endpoint request must not emit `demo_request_submit`; an accepted request emits it once and sends no entered values to GA4.
 8. Initiate a real test-mode plan checkout. Confirm `checkout_started` appears only after the backend returns the Stripe URL.
 9. Complete the test-mode checkout. Confirm `trial_activated`/`subscription_activated` appears only after `/billing/status` (or the payment-invite status endpoint) confirms the state.
-10. Visit a marketing URL containing test values for `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, and `gclid`. Click an application CTA and confirm those allowlisted parameters remain on the `app.schedulaa.com` destination. Confirm unrelated query parameters do not transfer.
+10. Visit a marketing URL containing test values for `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `gclid`, and `srsltid`. Click an application CTA and confirm those allowlisted parameters remain on the `app.schedulaa.com` destination. Confirm unrelated query parameters do not transfer.
 11. In the browser Network panel, inspect `g/collect` requests and verify that no email, name, phone, message, payment details, checkout session ID, or invite token is present.
+
+## Merchant Center purchase-measurement readiness
+
+Verified on October 11, 2026:
+
+- The production marketing and application hosts load the same GA4 web-stream measurement ID.
+- No Google Tag Manager container or separate Google Ads conversion tag is installed in the marketing repository or present in the audited production annual-plan HTML. Do not add either on top of the current Google tag without an approved measurement design; duplicate Google tags can double-count events.
+- Each annual product page sends `primary_cta_click` for its outbound plan action and links to the existing application upgrade route with the correct `plan` and `interval=annual` selection.
+- The application sends `checkout_started` only after the backend returns a Stripe checkout or status URL. It sends `trial_activated` or `subscription_activated` only after an authoritative billing-status response.
+- Merchant Center auto-tagging uses `srsltid`. The marketing allowlist preserves this non-PII identifier in the GA4 landing-page location and application handoff.
+
+The current implementation is ready to measure annual-plan landing visits, outbound selections, checkout starts, and authoritative trial/subscription activation. It is **not yet ready to report a completed paid annual subscription as a GA4 ecommerce purchase**. A separate approved backend/application change would need to provide a stable, non-PII transaction identifier and confirmed paid amount/currency, then emit one `purchase` event with an `items` entry whose `item_id` matches the Merchant Center feed ID. A trial activation must not be reported as paid revenue, and a Stripe checkout-session identifier must not be copied into GA4 merely to fill `transaction_id`.
+
+Google-account administrator actions remain separate from code:
+
+1. In Merchant Center account `5481293106`, enable auto-tagging and link the existing GA4 property as the key-event source.
+2. In GA4, verify the production stream and existing events in Realtime/DebugView before marking or importing any event as a key event.
+3. Link Google Ads only if advertising is used, then import one approved outcome event. Do not make both an intermediate activation event and a later paid-purchase event primary for the same business outcome.
+4. Grant the required Merchant Center “Performance and insights” user permission to `webdesign@schedulaa.com` through Merchant Center administration. This cannot be repaired or bypassed in website code.
 
 ## GA4 and Google Ads steps after deployment
 

@@ -7,6 +7,7 @@ export const ATTRIBUTION_KEYS = [
   'utm_term',
   'utm_content',
   'gclid',
+  'srsltid',
 ] as const;
 
 const STORAGE_KEY = 'schedulaa_campaign_attribution';
