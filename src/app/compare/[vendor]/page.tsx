@@ -433,7 +433,7 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
                 <div key={`${item.scenario}-${idx}`} className="rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
                   <p className="text-sm text-secondary/70 dark:text-accent/70">{item.scenario}</p>
                   <p className="mt-2 text-sm font-semibold">
-                    Recommendation: <span className="text-primary-500">{item.recommendation}</span>
+                    Recommendation: <span className="text-primary-600 dark:text-primary-400">{item.recommendation}</span>
                   </p>
                 </div>
               ))}
@@ -481,7 +481,7 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
             <ul className="mt-4 grid gap-3 md:grid-cols-2">
               {sources.map((source) => (
                 <li key={source.href}>
-                  <a href={source.href} target="_blank" rel="noopener noreferrer" className="text-primary-500 underline underline-offset-4">
+                  <a href={source.href} target="_blank" rel="noopener noreferrer" className="text-primary-600 underline underline-offset-4 dark:text-primary-400">
                     {source.label}
                   </a>
                 </li>
@@ -522,9 +522,9 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
         <div className="mt-8 flex flex-wrap gap-4">
           <Link href={withLocalePath('/pricing', locale)} className="btn btn-primary btn-md">View pricing plans</Link>
           <Link href={withLocalePath(contextCta.href, locale)} className="btn btn-secondary btn-md">{contextCta.label}</Link>
-          <Link href={withLocalePath('/compare', locale)} className="text-primary-500 underline">Back to compare hub</Link>
+          <Link href={withLocalePath('/compare', locale)} className="text-primary-600 underline dark:text-primary-400">Back to compare hub</Link>
           {entry.pageTypes?.includes('alternatives') ? (
-            <Link href={withLocalePath(`/alternatives/${entry.altSlug}`, locale)} className="text-primary-500 underline">
+            <Link href={withLocalePath(`/alternatives/${entry.altSlug}`, locale)} className="text-primary-600 underline dark:text-primary-400">
               {entry.key === 'gusto'
                 ? 'Explore Gusto alternatives'
                 : entry.key === 'adp'
@@ -533,7 +533,7 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
             </Link>
           ) : null}
           {relatedLinks.map((link) => (
-            <Link key={link.href} href={withLocalePath(link.href, locale)} className="text-primary-500 underline">
+            <Link key={link.href} href={withLocalePath(link.href, locale)} className="text-primary-600 underline dark:text-primary-400">
               {link.label}
             </Link>
           ))}
