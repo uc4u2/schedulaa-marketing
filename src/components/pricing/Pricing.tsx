@@ -429,7 +429,7 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link href="/en/booking/salon" className="btn btn-white btn-md dark:btn-transparent">
-                Salon website with booking
+                Beauty salon booking software
               </Link>
               <Link href="/en/booking/tutor" className="btn btn-white btn-md dark:btn-transparent">
                 Tutoring booking workflow

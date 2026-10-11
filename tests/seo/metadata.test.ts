@@ -7,6 +7,7 @@ import {
   tutorBookingMetadata as tutorMetadata,
 } from "../../src/lib/seo/bookingMetadata";
 import {
+  salonBreadcrumbJsonLd,
   salonFaqJsonLd,
   salonBookingPaymentClaim,
   salonBookingPaymentFaqAnswer,
@@ -32,7 +33,7 @@ test("booking metadata is unique, commercial, and self-canonical", () => {
 test("salon and tutor pages do not inherit homepage metadata", () => {
   assert.match(
     String(salonMetadata.title),
-    /Salon Website With Online Booking/,
+    /Beauty Salon Booking & Scheduling Software/,
   );
   assert.match(String(tutorMetadata.title), /Tutor Booking Software/);
   assert.notEqual(salonMetadata.title, bookingMetadata.title);
@@ -47,15 +48,14 @@ test("salon and tutor pages do not inherit homepage metadata", () => {
   );
 });
 
-test("salon landing headline targets a salon website with online booking", () => {
-  assert.match(salonLandingHeadline, /salon website with online booking/i);
-  assert.match(salonLandingHeadline, /beautiful/i);
-  assert.match(salonLandingProblem, /missed walk-ins/i);
-  assert.match(salonLandingProblem, /after-hours bookings/i);
-  assert.match(salonLandingProblem, /Instagram-only presence/i);
+test("salon landing headline targets beauty salon booking and scheduling intent", () => {
+  assert.equal(salonLandingHeadline, "Online Booking Software for Beauty Salons");
+  assert.match(salonLandingProblem, /service/i);
+  assert.match(salonLandingProblem, /availability/i);
+  assert.match(salonLandingProblem, /eligible provider/i);
   assert.match(
     String(salonMetadata.description),
-    /salon website with online booking/i,
+    /beauty salon booking software/i,
   );
   assert.equal(marketingLeadCopy.launcher, "Get your free demo");
 });
@@ -78,4 +78,14 @@ test("salon FAQ structured data exactly represents visible FAQ content", () => {
     assert.ok(entity.acceptedAnswer.text.length > 20);
   }
   assert.doesNotThrow(() => JSON.parse(JSON.stringify(salonFaqJsonLd)));
+});
+
+test("salon breadcrumb schema keeps the self-canonical route", () => {
+  assert.equal(salonBreadcrumbJsonLd["@type"], "BreadcrumbList");
+  assert.equal(salonBreadcrumbJsonLd.itemListElement.length, 2);
+  assert.equal(
+    salonBreadcrumbJsonLd.itemListElement.at(-1)?.item,
+    "https://www.schedulaa.com/en/booking/salon",
+  );
+  assert.doesNotThrow(() => JSON.parse(JSON.stringify(salonBreadcrumbJsonLd)));
 });

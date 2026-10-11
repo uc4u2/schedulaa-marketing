@@ -376,12 +376,12 @@ export default function HomeForexLayout({ locale }: Props) {
           </div>
           <div className="mt-9 grid gap-5 md:grid-cols-3">
             <article className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
-              <h3 className="text-heading-5">Salon website with online booking</h3>
+              <h3 className="text-heading-5">Beauty salon booking software</h3>
               <p className="mt-3 text-sm leading-6 text-secondary/75 dark:text-accent/75">
-                Present services, accept appointments, and connect supported deposit and payment flows.
+                Publish services, provider availability, and online appointments with configured payment options.
               </p>
               <Link href="/en/booking/salon" className="mt-5 inline-flex font-semibold text-primary-500 underline">
-                Explore salon booking
+                Explore beauty salon booking
               </Link>
             </article>
             <article className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">

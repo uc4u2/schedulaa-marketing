@@ -22,6 +22,13 @@ export const SEARCH_INTENT_MAP: SearchIntentEntry[] = [
     relatedPaths: ['/booking/salon', '/booking/spa', '/booking/tutor', '/booking/doctor'],
   },
   {
+    key: 'beauty-salon-booking',
+    label: 'Beauty salon booking software',
+    intent: 'Let beauty salon clients choose services, eligible providers, and available appointment times online.',
+    path: '/booking/salon',
+    relatedPaths: ['/booking', '/marketing/clients-360', '/alternatives/vagaro'],
+  },
+  {
     key: 'appointment-scheduling',
     label: 'Appointment scheduling',
     intent: 'Coordinate appointments, availability, rescheduling, cancellations, and team calendars.',

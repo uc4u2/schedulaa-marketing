@@ -36,8 +36,8 @@ export const bookingMetadata = createBookingMetadata(
 
 export const salonBookingMetadata = createBookingMetadata(
   "/booking/salon",
-  "Salon Website With Online Booking & Payments | Schedulaa",
-  "A beautiful salon website with online booking. Help clients book after hours instead of missing walk-ins or relying on an Instagram-only presence.",
+  "Beauty Salon Booking & Scheduling Software | Schedulaa",
+  "Beauty salon booking software for services, provider availability, online scheduling, customer records, and configured Stripe payment workflows.",
 );
 
 export const tutorBookingMetadata = createBookingMetadata(
