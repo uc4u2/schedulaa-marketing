@@ -1,4 +1,4 @@
-import { compareList } from '@/legacy-content/compare/config';
+import { getCompareListForPageType } from '@/legacy-content/compare/config';
 import blogPosts from '@/legacy-content/blog/posts';
 
 export const LOCALES = ['en', 'fa', 'ru', 'zh', 'es', 'fr', 'de', 'ar', 'pt'] as const;
@@ -90,12 +90,14 @@ export const RESERVED_NON_INDEXABLE = [
   '/dashboard',
 ] as const;
 
-export const COMPARE_VENDOR_ROUTES = compareList.map((item) => {
+export const COMPARE_VENDOR_ROUTES = getCompareListForPageType('compare').map((item) => {
   const vendor = item.key.startsWith('schedulaa-vs-') ? item.key : item.slug;
   return `/compare/${vendor}`;
 });
 
-export const ALTERNATIVES_VENDOR_ROUTES = compareList.map((item) => `/alternatives/${item.slug}`);
+export const ALTERNATIVES_VENDOR_ROUTES = getCompareListForPageType('alternatives').map(
+  (item) => `/alternatives/${item.slug}`,
+);
 
 const slugify = (value: string) =>
   String(value || '')

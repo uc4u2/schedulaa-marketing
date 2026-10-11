@@ -1,11 +1,25 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { getCompareEntry } from '@/legacy-content/compare/config';
+import TrackedLink from '@/components/shared/TrackedLink';
+import { getCompareEntry, getCompareListForPageType } from '@/legacy-content/compare/config';
 import { buildComparisonFaqJsonLd, getComparisonPageContent } from '@/lib/seo/comparisonPageContent';
 import { buildLocalizedPageMetadata, getLocalizedCanonicalUrl } from '@/lib/seo/pageMetadata';
+import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { getServerLocale } from '@/utils/serverLocale';
 import { withLocalePath } from '@/utils/locale';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+
+const BOOK_DEMO_FALLBACK =
+  'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getCompareListForPageType('compare').map((entry) => ({
+    vendor: entry.key.startsWith('schedulaa-vs-') ? entry.key : entry.slug,
+  }));
+}
 
 function getContextCta(entry: any) {
   const competitor = String(entry?.competitor || '').toLowerCase();
@@ -110,9 +124,11 @@ function getValueTone(rawValue: string, label: string) {
 function ComparisonValueCard({
   label,
   value,
+  neutralLabel = 'Limited',
 }: {
   label: string;
   value: string;
+  neutralLabel?: string;
 }) {
   const tone = getValueTone(value, label);
   const toneClass =
@@ -129,7 +145,7 @@ function ComparisonValueCard({
       <p className="text-xs uppercase tracking-[0.12em] text-secondary/60 dark:text-accent/60">{label}</p>
       <div className="mt-2 flex items-start gap-2">
         <span className={`rounded-full px-2 py-1 text-xs font-semibold ${toneClass}`}>
-          {tone === 'positive' ? 'Strong' : tone === 'negative' ? 'Gap' : 'Limited'}
+          {tone === 'positive' ? 'Strong' : tone === 'negative' ? 'Gap' : neutralLabel}
         </span>
         <p className="text-sm text-secondary/80 dark:text-accent/80">{cleanValue || 'N/A'}</p>
       </div>
@@ -139,8 +155,11 @@ function ComparisonValueCard({
 
 export async function generateMetadata({ params }: { params: Promise<{ vendor: string }> }): Promise<Metadata> {
   const { vendor } = await params;
-  const locale = await getServerLocale();
   const storedEntry = getCompareEntry(vendor, 'compare');
+  if (!storedEntry) {
+    return notFound();
+  }
+  const locale = await getServerLocale();
   const override = getComparisonPageContent(vendor);
   const entry = storedEntry && override
     ? { ...storedEntry, ...override, testimonial: undefined, summaryTable: undefined }
@@ -152,15 +171,21 @@ export async function generateMetadata({ params }: { params: Promise<{ vendor: s
 
 export default async function CompareVendorPage({ params }: { params: Promise<{ vendor: string }> }) {
   const { vendor } = await params;
-  const locale = await getServerLocale();
   const storedEntry = getCompareEntry(vendor, 'compare');
   if (!storedEntry) {
     return notFound();
   }
+  const locale = await getServerLocale();
   const override = getComparisonPageContent(vendor);
   const entry = override
     ? { ...storedEntry, ...override, testimonial: undefined, summaryTable: undefined }
     : storedEntry;
+  const pagePath = `/compare/${vendor}`;
+  const isCompareOnly = entry.pageTypes?.length === 1 && entry.pageTypes.includes('compare');
+  const startFreeHref = buildAppUrl('/register', {
+    returnTo: marketingReturnTo(locale, pagePath),
+  });
+  const bookDemoHref = process.env.NEXT_PUBLIC_BOOK_DEMO_URL || BOOK_DEMO_FALLBACK;
 
   const rows = entry.executiveOverview?.rows || [];
   const summaryRows = entry.summaryTable?.rows || [];
@@ -172,7 +197,19 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
   const contextCta = getContextCta(entry);
   const relatedLinks: Array<{ label: string; href: string }> = entry.relatedLinks || [];
   const faq = entry.faq || [];
+  const quickDecision: Array<{ title: string; body: string }> = entry.quickDecision || [];
+  const screenshots: Array<{
+    src: string;
+    alt: string;
+    title: string;
+    caption: string;
+    width: number;
+    height: number;
+  }> = entry.screenshots || [];
+  const setupChecklist: string[] = entry.setupChecklist || [];
+  const sources: Array<{ label: string; href: string }> = entry.sources || [];
   const hasComparisonBreadcrumb =
+    isCompareOnly ||
     entry.key === 'gusto' ||
     entry.key === 'adp' ||
     entry.key === 'when-i-work' ||
@@ -223,12 +260,54 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
           <p className="badge badge-yellow-v2">Comparison guide</p>
           <h1 className="mt-5">{entry.heroTitle}</h1>
           <p className="mt-4 max-w-[900px] text-secondary/70 dark:text-accent/70">{entry.heroSubtitle}</p>
+          {entry.hook ? (
+            <p className="mt-6 max-w-[860px] text-2xl font-semibold leading-tight text-secondary dark:text-accent md:text-3xl">
+              {entry.hook}
+            </p>
+          ) : null}
           {(entry.intro || []).map((paragraph: string, idx: number) => (
             <p key={`${idx}-${paragraph.slice(0, 24)}`} className="mt-4 text-secondary/70 dark:text-accent/70">
               {paragraph}
             </p>
           ))}
+          {isCompareOnly ? (
+            <div className="mt-8 flex flex-wrap gap-3">
+              <TrackedLink
+                href={startFreeHref}
+                className="btn btn-primary btn-md min-w-[220px] justify-center"
+                analyticsCta={{ name: `compare_${vendor}_start_trial`, pagePath: `/en${pagePath}`, placement: 'hero' }}
+                eventName="Lead"
+                eventParams={{ content_name: `${entry.competitor} comparison start trial`, page_path: `/en${pagePath}` }}
+              >
+                Start your 14-day free trial
+              </TrackedLink>
+              <TrackedLink
+                href={bookDemoHref}
+                className="btn btn-secondary btn-md min-w-[220px] justify-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                analyticsCta={{ name: `compare_${vendor}_book_demo`, pagePath: `/en${pagePath}`, placement: 'hero' }}
+              >
+                Book a personalized demo
+              </TrackedLink>
+            </div>
+          ) : null}
         </div>
+
+        {quickDecision.length ? (
+          <div className="mt-8 rounded-[20px] bg-secondary p-6 text-white shadow-2 dark:bg-background-8 md:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary-300">Quick decision</p>
+            <h2 className="mt-3 text-2xl font-semibold text-white">Which path fits your operating model?</h2>
+            <div className="mt-5 grid gap-4 md:grid-cols-2">
+              {quickDecision.map((item) => (
+                <div key={item.title} className="rounded-2xl border border-white/15 bg-white/8 p-5">
+                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/75">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         {contextParagraphs.length ? (
           <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
@@ -256,13 +335,41 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
               >
                 <h3 className="text-lg font-semibold">{row.label}</h3>
                 <div className="mt-4 grid gap-3 md:grid-cols-2">
-                  <ComparisonValueCard label="Schedulaa" value={row.schedulaa} />
-                  <ComparisonValueCard label={entry.competitor} value={row.competitor} />
+                  <ComparisonValueCard label="Schedulaa" value={row.schedulaa} neutralLabel={isCompareOnly ? 'Different focus' : 'Limited'} />
+                  <ComparisonValueCard label={entry.competitor} value={row.competitor} neutralLabel={isCompareOnly ? 'Different focus' : 'Limited'} />
                 </div>
               </div>
             ))}
           </div>
         </div>
+
+        {screenshots.length ? (
+          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+            <h2 className="text-2xl font-semibold">See the Schedulaa workflow</h2>
+            <p className="mt-3 max-w-[850px] text-secondary/70 dark:text-accent/70">
+              These are real Schedulaa interface views with no customer data. They show the booking and service-management surfaces used in the connected workflow.
+            </p>
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+              {screenshots.map((screenshot) => (
+                <figure key={screenshot.src} className="overflow-hidden rounded-2xl border border-stroke-2 bg-background-1 dark:border-stroke-7 dark:bg-background-6/40">
+                  <Image
+                    src={screenshot.src}
+                    alt={screenshot.alt}
+                    width={screenshot.width}
+                    height={screenshot.height}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    loading="lazy"
+                    className="h-auto w-full"
+                  />
+                  <figcaption className="p-5">
+                    <h3 className="font-semibold">{screenshot.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-secondary/70 dark:text-accent/70">{screenshot.caption}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
           <h2 className="text-2xl font-semibold">Key differentiators</h2>
@@ -290,12 +397,31 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
                 >
                   <h3 className="text-lg font-semibold">{row.label}</h3>
                   <div className="mt-4 grid gap-3 md:grid-cols-2">
-                    <ComparisonValueCard label="Schedulaa" value={row.schedulaa} />
-                    <ComparisonValueCard label={entry.competitor} value={row.competitor} />
+                    <ComparisonValueCard label="Schedulaa" value={row.schedulaa} neutralLabel={isCompareOnly ? 'Different focus' : 'Limited'} />
+                    <ComparisonValueCard label={entry.competitor} value={row.competitor} neutralLabel={isCompareOnly ? 'Different focus' : 'Limited'} />
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+        ) : null}
+
+        {setupChecklist.length ? (
+          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+            <h2 className="text-2xl font-semibold">A practical switching and setup checklist</h2>
+            <p className="mt-3 text-secondary/70 dark:text-accent/70">
+              Schedulaa does not promise an automatic migration. Use this checklist to define a safe, testable setup before changing a live customer journey.
+            </p>
+            <ol className="mt-5 grid gap-3 md:grid-cols-2">
+              {setupChecklist.map((item, index) => (
+                <li key={item} className="flex gap-3 rounded-xl border border-stroke-2 p-4 dark:border-stroke-7">
+                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-sm font-semibold text-white">
+                    {index + 1}
+                  </span>
+                  <span className="text-sm leading-6 text-secondary/75 dark:text-accent/75">{item}</span>
+                </li>
+              ))}
+            </ol>
           </div>
         ) : null}
 
@@ -346,17 +472,66 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
           </div>
         ) : null}
 
+        {sources.length ? (
+          <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
+            <h2 className="text-2xl font-semibold">Competitor sources reviewed</h2>
+            <p className="mt-3 text-sm leading-6 text-secondary/70 dark:text-accent/70">
+              Material competitor statements on this page are based on the vendors' current first-party documentation. Plans and features can change, so verify purchase-critical requirements directly.
+            </p>
+            <ul className="mt-4 grid gap-3 md:grid-cols-2">
+              {sources.map((source) => (
+                <li key={source.href}>
+                  <a href={source.href} target="_blank" rel="noopener noreferrer" className="text-primary-500 underline underline-offset-4">
+                    {source.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
+        {isCompareOnly ? (
+          <div className="mt-8 rounded-[20px] bg-linear-to-r from-primary-500 to-cyan-500 p-7 text-white shadow-2 md:p-10">
+            <h2 className="max-w-[760px] text-3xl font-semibold text-white">Test the Schedulaa workflow with your real operating requirements</h2>
+            <p className="mt-3 max-w-[760px] text-white/80">
+              Start with the 14-day trial, or book a guided walkthrough tailored to the website, booking, staff, customer, and billing flows you need to verify.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <TrackedLink
+                href={startFreeHref}
+                className="btn btn-white btn-md min-w-[220px] justify-center"
+                analyticsCta={{ name: `compare_${vendor}_start_trial`, pagePath: `/en${pagePath}`, placement: 'final' }}
+                eventName="Lead"
+                eventParams={{ content_name: `${entry.competitor} comparison final trial`, page_path: `/en${pagePath}` }}
+              >
+                Start your 14-day free trial
+              </TrackedLink>
+              <TrackedLink
+                href={bookDemoHref}
+                className="btn btn-secondary btn-md min-w-[220px] justify-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                analyticsCta={{ name: `compare_${vendor}_book_demo`, pagePath: `/en${pagePath}`, placement: 'final' }}
+              >
+                Book a personalized demo
+              </TrackedLink>
+            </div>
+          </div>
+        ) : null}
+
         <div className="mt-8 flex flex-wrap gap-4">
           <Link href={withLocalePath('/pricing', locale)} className="btn btn-primary btn-md">View pricing plans</Link>
           <Link href={withLocalePath(contextCta.href, locale)} className="btn btn-secondary btn-md">{contextCta.label}</Link>
           <Link href={withLocalePath('/compare', locale)} className="text-primary-500 underline">Back to compare hub</Link>
-          <Link href={withLocalePath(`/alternatives/${entry.altSlug}`, locale)} className="text-primary-500 underline">
-            {entry.key === 'gusto'
-              ? 'Explore Gusto alternatives'
-              : entry.key === 'adp'
-                ? 'Explore ADP alternatives'
-                : `Explore ${entry.competitor} alternatives`}
-          </Link>
+          {entry.pageTypes?.includes('alternatives') ? (
+            <Link href={withLocalePath(`/alternatives/${entry.altSlug}`, locale)} className="text-primary-500 underline">
+              {entry.key === 'gusto'
+                ? 'Explore Gusto alternatives'
+                : entry.key === 'adp'
+                  ? 'Explore ADP alternatives'
+                  : `Explore ${entry.competitor} alternatives`}
+            </Link>
+          ) : null}
           {relatedLinks.map((link) => (
             <Link key={link.href} href={withLocalePath(link.href, locale)} className="text-primary-500 underline">
               {link.label}

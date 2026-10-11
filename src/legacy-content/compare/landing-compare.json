@@ -1926,13 +1926,13 @@
   },
   "schedulaa-vs-acuity-scheduling": {
     "competitor": "Acuity Scheduling",
-    "metaTitle": "Schedulaa vs Acuity Scheduling | Operations OS vs Booking-Only",
-    "metaDescription": "Compare Schedulaa and Acuity. Acuity is a polished booking tool; Schedulaa runs booking, scheduling, client billing, websites, commerce, and analytics in one platform.",
+    "metaTitle": "Schedulaa vs Acuity Scheduling | Booking & Operations",
+    "metaDescription": "Compare Schedulaa and Acuity for online booking, calendars, client records, payments, invoices, websites, staff workflows, and service operations.",
     "heroTitle": "Schedulaa vs Acuity Scheduling — Which Platform Fits Your Service Team?",
-    "heroSubtitle": "Acuity delivers beautiful booking. Schedulaa unifies booking, scheduling, websites, client billing, commerce, and analytics for multi-staff teams.",
+    "heroSubtitle": "Acuity offers substantial appointment scheduling, client, payment, and invoice workflows. Schedulaa connects booking to broader website, workforce, job, billing, and commerce operations.",
     "intro": [
-      "Acuity Scheduling is a clean, modern booking system for solo providers and small studios.",
-      "Schedulaa is an operations platform for service teams that need booking plus staff scheduling, websites, invoices, payments, commerce, and analytics."
+      "Acuity Scheduling supports online appointments, multiple calendars, client records, payment or deposit rules, packages, subscriptions, gift certificates, reminders, and invoices. Available limits and features vary by plan and configuration.",
+      "Schedulaa is an operations platform for service businesses that need booking connected to staff shifts and time, customer records, websites, estimates, work orders, invoices, supported payments, and commerce."
     ],
     "executiveOverview": {
       "headers": [
@@ -1944,17 +1944,17 @@
         {
           "label": "Core Purpose",
           "schedulaa": "Operations platform: booking, scheduling, breaks, time, leave, websites, invoices, payments, commerce, and analytics.",
-          "competitor": "Client booking system with payments and reminders."
+          "competitor": "Appointment scheduling platform with calendars, client management, payments, packages, reminders, and invoices."
         },
         {
           "label": "Target Users",
-          "schedulaa": "Service teams with 3–100 staff, often multi-location.",
-          "competitor": "Solo providers, freelancers, small studios."
+          "schedulaa": "Service businesses that want customer, workforce, field-work, finance, and website operations connected.",
+          "competitor": "Appointment-based businesses ranging from solo providers to teams using multiple staff or location calendars."
         },
         {
           "label": "Internal Scheduling",
           "schedulaa": "Shift templates, recurring availability, swaps, PTO, multi-location.",
-          "competitor": "Calendars only; no shift engine."
+          "competitor": "Appointment availability and multiple staff or location calendars; employee shift and attendance management are a different scope."
         },
         {
           "label": "Breaks & Compliance",
@@ -1974,17 +1974,17 @@
         {
           "label": "Website / Branding",
           "schedulaa": "Built-in builder, custom domains, booking widgets.",
-          "competitor": "Uses Squarespace for site design; booking widget available."
+          "competitor": "Standalone scheduling page or scheduler embedded in a Squarespace or other website; website and scheduling subscriptions can be separate."
         },
         {
           "label": "Products / POS",
           "schedulaa": "Products, dedicated product checkout, supported taxes, refunds, and coupons.",
-          "competitor": "Packages/subscriptions/gift certificates; no full POS."
+          "competitor": "Appointment payments plus packages, subscriptions, gift certificates, and invoices; not positioned here as a general inventory and order system."
         },
         {
           "label": "Multi-Location",
           "schedulaa": "Branch-aware booking + scheduling + analytics.",
-          "competitor": "Not designed for multi-location operations."
+          "competitor": "Multiple calendars can represent staff or locations, with calendar limits depending on the selected plan."
         },
         {
           "label": "Automations",
@@ -1994,14 +1994,14 @@
         {
           "label": "Pricing Focus",
           "schedulaa": "Flat tiers plus per-staff add-on; built for teams.",
-          "competitor": "Per calendar count; rises as staff grow."
+          "competitor": "Plan tiers set calendar and feature limits; confirm current subscription terms directly with Acuity."
         }
       ]
     },
     "differentiators": [
       {
-        "title": "Booking vs operations",
-        "body": "Acuity schedules clients. Schedulaa runs booking, staffing, breaks, time, invoices, payments, and commerce in one workflow."
+        "title": "Appointment scheduling vs connected operations",
+        "body": "Acuity provides a capable appointment, client, payment, and invoice experience. Schedulaa extends the workflow into employee shifts and time, estimates, work orders, field reports, product orders, and operational finance."
       },
       {
         "title": "Staff scheduling + breaks",
@@ -2009,7 +2009,7 @@
       },
       {
         "title": "Billing and back-office handoff",
-        "body": "Schedulaa keeps invoices, payment collection, commerce, and accounting exports connected. Payroll remains available as a secondary handoff when teams need it. Acuity has no payroll or compliance layer."
+        "body": "Both platforms support invoices and configured payment collection. Schedulaa also connects estimates, approved work, work orders, product orders, and accounting exports; its payroll tools remain jurisdiction- and configuration-dependent."
       },
       {
         "title": "Commerce depth",
@@ -2017,7 +2017,7 @@
       },
       {
         "title": "Multi-location readiness",
-        "body": "Schedulaa unifies branches for booking, scheduling, and analytics. Acuity is not built for multi-location operations."
+        "body": "Acuity can use multiple calendars for staff or locations. Schedulaa adds branch-aware workforce and broader operational records when a business needs more than appointment-calendar separation."
       }
     ],
     "summaryTable": {
@@ -2035,12 +2035,12 @@
         {
           "label": "Website Builder",
           "schedulaa": "✔ (integrated)",
-          "competitor": "✔ (via Squarespace templates)"
+          "competitor": "Scheduler embeds in Squarespace or other websites; website subscription is separate"
         },
         {
           "label": "Internal Staff Scheduling",
           "schedulaa": "✔",
-          "competitor": "✘ (calendars only)"
+          "competitor": "Appointment calendars; not employee shift scheduling"
         },
         {
           "label": "Break Enforcement",
@@ -2070,12 +2070,12 @@
         {
           "label": "Products + POS",
           "schedulaa": "✔",
-          "competitor": "Limited (packages only)"
+          "competitor": "Packages, subscriptions, gift certificates, and appointment payments"
         },
         {
           "label": "Multi-Location Support",
           "schedulaa": "✔",
-          "competitor": "✘"
+          "competitor": "Multiple staff/location calendars, subject to plan limits"
         },
         {
           "label": "Shift Swaps",
@@ -2085,12 +2085,12 @@
         {
           "label": "Analytics",
           "schedulaa": "✔",
-          "competitor": "Partial"
+          "competitor": "Appointment, client, and calendar reporting"
         },
         {
           "label": "Automations",
           "schedulaa": "Advanced",
-          "competitor": "Basic"
+          "competitor": "Scheduling notifications, reminders, follow-ups, and integrations"
         },
         {
           "label": "Staff Portal",
@@ -2106,19 +2106,33 @@
     },
     "fitMatrix": [
       {
-        "scenario": "You are a solo provider wanting a beautiful booking experience.",
+        "scenario": "You want a focused appointment system with client scheduling, multiple calendars, payments, packages, and invoices.",
         "recommendation": "Acuity Scheduling"
       },
       {
-        "scenario": "You have 3–100 staff and need booking, scheduling, billing, and client operations together.",
+        "scenario": "You need booking connected to employee shifts and time, customer records, estimates, jobs, billing, and product operations.",
         "recommendation": "Schedulaa"
       },
       {
-        "scenario": "You run multiple locations and need branch-aware scheduling and analytics.",
-        "recommendation": "Schedulaa"
+        "scenario": "Appointment scheduling is the main requirement and current plan limits fit your calendar count.",
+        "recommendation": "Evaluate Acuity Scheduling"
       }
     ],
-    "conclusion": "Acuity Scheduling is exceptional for simple, elegant client booking. Schedulaa is the better long-term choice for teams that need booking plus staffing, billing, websites, commerce, and analytics in one platform."
+    "sources": [
+      {
+        "label": "Acuity: adding and managing calendars",
+        "href": "https://help.acuityscheduling.com/hc/en-us/articles/27101574736909-Adding-and-managing-calendars"
+      },
+      {
+        "label": "Acuity: choosing how clients pay",
+        "href": "https://help.acuityscheduling.com/hc/en-us/articles/28051014042125-Choosing-how-clients-pay-for-appointments"
+      },
+      {
+        "label": "Acuity: sending invoices",
+        "href": "https://help.acuityscheduling.com/hc/en-us/articles/16676869806477-Send-invoices-with-Acuity-Scheduling"
+      }
+    ],
+    "conclusion": "Acuity Scheduling is a substantial appointment platform for calendars, clients, payments, packages, and invoices. Evaluate Schedulaa when those bookings also need to connect to employee operations, estimates, work orders, product orders, and broader finance workflows."
   },
   "deputy": {
     "competitor": "Deputy",
@@ -2362,5 +2376,518 @@
       "attribution": "Hybrid salon + studio operator, Canada"
     },
     "conclusion": "Deputy is a great choice when shift scheduling and time clocks are your solitary requirements. Schedulaa is the complete operational engine when service businesses want to run bookings, websites, field jobs, billing, compliance-ready time tracking, and payroll handoff under a single log-in."
+  },
+  "wix-bookings": {
+    "pageTypes": [
+      "compare"
+    ],
+    "competitor": "Wix Bookings",
+    "metaTitle": "Wix Bookings vs Schedulaa | Booking & Operations",
+    "metaDescription": "Compare Wix Bookings and Schedulaa for websites, online scheduling, client records, invoices, payments, staff workflows, and service operations.",
+    "heroTitle": "Wix Bookings vs Schedulaa for service businesses",
+    "heroSubtitle": "Compare a website-first booking ecosystem with a service-operations platform that connects the appointment to the work that follows.",
+    "hook": "Your website handles bookings. What happens after the appointment?",
+    "intro": [
+      "Wix Bookings is a capable choice for businesses that want website building, appointments, classes or courses, staff calendars, client booking history, and payments in the Wix ecosystem.",
+      "Schedulaa is designed for service businesses that want a published website and online booking connected to customer records, employee shifts and time, estimates, work orders, invoices, payment links, and product operations."
+    ],
+    "quickDecision": [
+      {
+        "title": "Choose Wix Bookings when",
+        "body": "A Wix website, Wix booking pages, staff calendars, memberships or packages, and Wix payment workflows match the operating model you want."
+      },
+      {
+        "title": "Evaluate Schedulaa when",
+        "body": "Bookings need to continue into employee operations, estimates, assigned work, invoices, hosted payment links, and customer history in one service-business system."
+      }
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Decision area",
+        "Schedulaa",
+        "Wix Bookings"
+      ],
+      "rows": [
+        {
+          "label": "Website and online booking",
+          "schedulaa": "Build and publish a responsive service-business website, connect a controlled custom domain, and offer services, eligible providers, and real-time availability.",
+          "competitor": "Build a Wix website and add customizable service, calendar, booking-form, checkout, and confirmation pages."
+        },
+        {
+          "label": "Staff and appointment calendars",
+          "schedulaa": "Connect provider availability and appointments with employee shifts, availability, leave, swaps, clock-in/out, breaks, and approved hours.",
+          "competitor": "Set staff hours, roles, locations, personal-calendar sync, and calendars for appointments, classes, and courses."
+        },
+        {
+          "label": "Clients and payments",
+          "schedulaa": "Keep customer records linked to bookings and operational history; collect eligible booking, invoice, and product payments through configured Stripe flows.",
+          "competitor": "Use Wix Contacts for booking history and attendance, with supported online or offline booking payments and membership or package options."
+        },
+        {
+          "label": "Estimates and invoices",
+          "schedulaa": "Create estimates, collect supported customer approval, convert eligible work into jobs or invoices, and share hosted invoice payment links.",
+          "competitor": "Create price quotes and invoices, accept deposits, send payment links, and convert accepted quotes to invoices when configured."
+        },
+        {
+          "label": "Work after the appointment",
+          "schedulaa": "Assign work orders, collect manager-reviewed field reports, track materials, invoice completed work, and preserve the customer context.",
+          "competitor": "Wix Bookings manages appointments and related Wix business tools; field-service work orders and employee field reports are a different workflow scope."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Compare the full operating day",
+        "body": "Both products can support a website and online booking. The practical difference appears after a client books: decide whether you also need employee shifts and time, estimates, assigned work, invoicing, and operational reporting connected to that customer."
+      },
+      {
+        "title": "Wix keeps the website ecosystem central",
+        "body": "Wix Bookings is a strong candidate when Wix site editing, booking pages, classes or courses, memberships, contacts, and Wix payments are the core requirements."
+      },
+      {
+        "title": "Schedulaa keeps service delivery central",
+        "body": "Schedulaa is designed to connect the customer journey with provider availability, employee operations, estimates, jobs, invoices, configured Stripe payments, and product orders."
+      },
+      {
+        "title": "Neither switch should be assumed automatic",
+        "body": "Review service data, customer history, domain ownership, payment configuration, and any records that must be retained before changing platforms. Migration scope depends on the source data and the setup you approve."
+      }
+    ],
+    "fitMatrix": [
+      {
+        "scenario": "Your priority is a Wix website with appointments, classes or courses, packages, staff calendars, and Wix payment options.",
+        "recommendation": "Evaluate Wix Bookings"
+      },
+      {
+        "scenario": "Your bookings need to connect with employee shifts and time, estimates, work orders, invoices, payment links, and customer records.",
+        "recommendation": "Evaluate Schedulaa"
+      },
+      {
+        "scenario": "Your decision depends on a specific payment method, app, migration path, or regional feature.",
+        "recommendation": "Verify the current plan and configuration with both vendors"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/images/marketing/showcase/manage-bookings.webp",
+        "alt": "Schedulaa manager booking interface with appointment details and schedule controls",
+        "title": "Manage bookings with the operational context nearby",
+        "caption": "A verified Schedulaa booking-management view. Availability and customer-facing options depend on workspace configuration.",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "src": "/images/marketing/showcase/service-management.webp",
+        "alt": "Schedulaa service management interface for configurable bookable services",
+        "title": "Configure the services clients can book",
+        "caption": "A verified Schedulaa service-management view used to maintain bookable service details.",
+        "width": 1200,
+        "height": 800
+      }
+    ],
+    "setupChecklist": [
+      "List the services, durations, providers, working availability, locations, and booking rules that must be reproduced.",
+      "Confirm which customer, appointment, invoice, and payment records must remain accessible before any platform change.",
+      "Verify domain control, supported Stripe setup, taxes, currencies, and regional eligibility for the intended Schedulaa workspace.",
+      "Configure and test the public booking path before updating the live website or customer-facing links.",
+      "Train managers and employees on only the workflows and permissions they will actually use."
+    ],
+    "faq": [
+      {
+        "question": "Is Wix Bookings only a basic appointment calendar?",
+        "answer": "No. Wix documents appointments, classes, courses, staff calendars and roles, client booking history, packages or memberships, reminders, and supported online or offline payment workflows."
+      },
+      {
+        "question": "What is the main difference between Wix Bookings and Schedulaa?",
+        "answer": "Wix Bookings is closely connected to the Wix website and business ecosystem. Schedulaa focuses on connecting website and booking workflows to customer records, employee operations, estimates, work orders, invoices, payment links, and product operations."
+      },
+      {
+        "question": "Can Schedulaa accept booking and invoice payments?",
+        "answer": "Yes, through supported Stripe-backed flows when the workspace, payment provider, region, and applicable settings are configured and eligible. Schedulaa is not itself the payment processor."
+      },
+      {
+        "question": "Will Schedulaa automatically migrate a Wix website and all booking history?",
+        "answer": "No automatic migration is promised. Review the current site, services, customer and appointment records, payment setup, and domain requirements before agreeing on a practical setup plan."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Wix: about Wix Bookings",
+        "href": "https://support.wix.com/en/article/about-wix-bookings"
+      },
+      {
+        "label": "Wix: Bookings staff members",
+        "href": "https://support.wix.com/en/article/about-staff-members-in-wix-bookings-7354860"
+      },
+      {
+        "label": "Wix: creating and sending price quotes",
+        "href": "https://support.wix.com/en/article/wix-price-quotes-creating-and-sending-price-quotes-to-clients"
+      },
+      {
+        "label": "Wix: creating invoices",
+        "href": "https://support.wix.com/en/article/wix-invoices-creating-an-invoice"
+      }
+    ],
+    "conclusion": "Choose Wix Bookings when the Wix website and booking ecosystem is the best fit. Evaluate Schedulaa when a service business needs the appointment connected to the customer, workforce, job, billing, payment, and product workflows that follow.",
+    "relatedLinks": [
+      {
+        "label": "Explore online booking",
+        "href": "/booking"
+      },
+      {
+        "label": "Explore the website builder",
+        "href": "/website-builder"
+      },
+      {
+        "label": "Review estimates and invoices",
+        "href": "/business-finance/invoices"
+      }
+    ]
+  },
+  "wordpress-booking-plugins": {
+    "pageTypes": [
+      "compare"
+    ],
+    "competitor": "WordPress booking plugins",
+    "metaTitle": "WordPress Booking Plugins vs Schedulaa",
+    "metaDescription": "Compare WordPress booking plugins and Schedulaa for hosting, maintenance, online booking, payments, client records, and connected service operations.",
+    "heroTitle": "WordPress booking plugins vs Schedulaa",
+    "heroSubtitle": "Compare a configurable WordPress plugin stack with a managed service-business platform for websites, booking, customers, payments, staff, and operational work.",
+    "hook": "Your business needs a booking system, not another plugin to maintain.",
+    "intro": [
+      "WordPress can support advanced booking through a large plugin ecosystem. The exact website, scheduling, payment, client, and integration capabilities depend on the host, WordPress.com plan or self-hosted setup, selected plugins, extensions, and configuration.",
+      "Schedulaa provides a supported website and booking path inside the same product that manages customer records, employee scheduling and time, estimates, work orders, invoices, configured Stripe payments, and product orders."
+    ],
+    "quickDecision": [
+      {
+        "title": "Choose a WordPress stack when",
+        "body": "You want deep CMS flexibility, have a suitable booking plugin, and are comfortable owning or delegating hosting, plugin selection, updates, compatibility, backups, and security."
+      },
+      {
+        "title": "Evaluate Schedulaa when",
+        "body": "You want a managed service-business workflow in which the website, bookings, customer records, staff operations, jobs, invoices, and supported payments share one product boundary."
+      }
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Decision area",
+        "Schedulaa",
+        "WordPress booking plugins"
+      ],
+      "rows": [
+        {
+          "label": "Website and hosting model",
+          "schedulaa": "Hosted service-business website builder with supported themes and modules, signed draft preview, separate publish state, and controlled custom-domain connection.",
+          "competitor": "WordPress.com provides managed hosting; self-hosted WordPress requires a compatible host. Site behavior depends on the theme, plugins, host, and configuration chosen."
+        },
+        {
+          "label": "Booking capability",
+          "schedulaa": "Built-in services, eligible providers, real-time availability, public booking, and configured package or payment rules.",
+          "competitor": "Booking can range from simple appointment forms to advanced calendars, staff, resources, payments, and reminders depending on the selected plugin and extensions."
+        },
+        {
+          "label": "Maintenance responsibility",
+          "schedulaa": "Schedulaa maintains the application; workspace managers configure supported services, people, policies, providers, and published content.",
+          "competitor": "WordPress.com manages core hosting and many updates; self-hosted owners or their providers manage hosting, WordPress, themes, plugins, backups, security, and compatibility."
+        },
+        {
+          "label": "Customers and payments",
+          "schedulaa": "Customer records connect to bookings and operational history; eligible booking, invoice, and product payments use configured Stripe-backed flows.",
+          "competitor": "Customer and payment depth depends on the booking, CRM, commerce, form, and payment plugins selected and how their data models integrate."
+        },
+        {
+          "label": "Operations beyond booking",
+          "schedulaa": "Employee shifts and time, estimates, work orders, field reports, invoices, payment links, products, inventory, and orders are supported product workflows.",
+          "competitor": "WordPress can be extended broadly, but each operational capability and connection depends on the chosen plugin stack, licenses, setup, and ongoing compatibility."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "WordPress is a platform, not one booking product",
+        "body": "There is no single WordPress booking feature set. Compare the exact plugin, extensions, host, payment provider, support model, and data ownership terms you plan to use."
+      },
+      {
+        "title": "WordPress.com and self-hosted WordPress are different operating models",
+        "body": "WordPress.com includes managed hosting and supports plugins on eligible paid plans. Self-hosted WordPress can run on a compatible host, leaving maintenance responsibilities with the site owner, host, or agency."
+      },
+      {
+        "title": "Schedulaa reduces integration seams",
+        "body": "Schedulaa's value is not that WordPress lacks advanced booking. It is that booking, customer, employee, job, finance, and product workflows use one supported application instead of a separately assembled plugin stack."
+      },
+      {
+        "title": "Flexibility and operational simplicity are a tradeoff",
+        "body": "Choose the control model your business can sustain. WordPress offers broad extensibility; Schedulaa offers a narrower managed system designed around service-business workflows."
+      }
+    ],
+    "fitMatrix": [
+      {
+        "scenario": "You need deep CMS customization and have the technical capacity to select, integrate, and maintain the required booking and business plugins.",
+        "recommendation": "Evaluate WordPress"
+      },
+      {
+        "scenario": "You want website, booking, customer, workforce, job, invoice, payment, and product workflows in one managed application.",
+        "recommendation": "Evaluate Schedulaa"
+      },
+      {
+        "scenario": "A specific plugin feature, payment gateway, data migration, or extension is essential.",
+        "recommendation": "Test the exact WordPress stack and Schedulaa configuration before deciding"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/images/marketing/showcase/service-management.webp",
+        "alt": "Schedulaa service management interface used to configure bookable services",
+        "title": "Booking configuration without a separate plugin",
+        "caption": "A verified Schedulaa service-management view. Available controls depend on plan, permissions, and workspace configuration.",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "src": "/images/marketing/showcase/manage-bookings.webp",
+        "alt": "Schedulaa manager booking view showing appointment management controls",
+        "title": "Manage appointments in the same operational product",
+        "caption": "A verified Schedulaa booking-management view with no real customer information.",
+        "width": 1200,
+        "height": 800
+      }
+    ],
+    "setupChecklist": [
+      "Document the current host, WordPress.com plan or self-hosted environment, theme, booking plugin, extensions, payment provider, and renewal dates.",
+      "List the services, providers, availability, forms, customer records, appointments, and payment history that must be retained.",
+      "Confirm which website content can be recreated in supported Schedulaa modules and which custom WordPress behavior has no direct equivalent.",
+      "Verify domain control, configured Stripe eligibility, regional requirements, and the desired public booking flow.",
+      "Test the replacement site and booking path before changing DNS, navigation, or customer-facing links."
+    ],
+    "faq": [
+      {
+        "question": "Can WordPress support advanced online booking?",
+        "answer": "Yes. WordPress booking capabilities can be extensive. The exact calendars, staff, resources, payments, reminders, client records, and integrations depend on the booking plugin, paid extensions, hosting environment, and configuration selected."
+      },
+      {
+        "question": "What is the difference between WordPress.com and self-hosted WordPress?",
+        "answer": "WordPress.com is a managed hosting service with plugin support on eligible paid plans. Self-hosted WordPress is open-source software installed on a compatible host, with maintenance shared among the owner, host, agency, and plugin vendors."
+      },
+      {
+        "question": "Why would a service business evaluate Schedulaa instead?",
+        "answer": "Schedulaa keeps supported website, booking, customer, employee, estimate, work-order, invoice, Stripe-payment, and product workflows inside one managed service-business application."
+      },
+      {
+        "question": "Does Schedulaa automatically migrate a WordPress site and its plugins?",
+        "answer": "No automatic migration is promised. Review the existing content, design, booking data, custom code, plugin behavior, domain, and payment setup to define what can be recreated and what must be handled separately."
+      }
+    ],
+    "sources": [
+      {
+        "label": "WordPress.org: WordPress.org and WordPress.com differences",
+        "href": "https://wordpress.org/documentation/article/difference-between-wordpress-org-and-wordpress-com/"
+      },
+      {
+        "label": "WordPress.org: hosting WordPress",
+        "href": "https://wordpress.org/documentation/article/hosting-wordpress/"
+      },
+      {
+        "label": "WordPress.org: plugin and theme auto-updates",
+        "href": "https://wordpress.org/documentation/article/plugins-themes-auto-updates/"
+      },
+      {
+        "label": "WordPress.com: plugins",
+        "href": "https://wordpress.com/support/plugins/"
+      },
+      {
+        "label": "WordPress.com: choosing a host",
+        "href": "https://wordpress.com/support/choose-a-host/"
+      }
+    ],
+    "conclusion": "Choose WordPress when its CMS flexibility and plugin ecosystem justify the hosting and maintenance model. Evaluate Schedulaa when a service business prefers a managed website-and-booking path connected to the operational workflows that follow.",
+    "relatedLinks": [
+      {
+        "label": "Explore the website builder",
+        "href": "/website-builder"
+      },
+      {
+        "label": "Explore online booking",
+        "href": "/booking"
+      },
+      {
+        "label": "Review connected service workflows",
+        "href": "/platform"
+      }
+    ]
+  },
+  "squarespace-scheduling": {
+    "pageTypes": [
+      "compare"
+    ],
+    "competitor": "Squarespace Scheduling",
+    "metaTitle": "Squarespace Scheduling vs Schedulaa | Comparison",
+    "metaDescription": "Compare Squarespace Scheduling and Schedulaa for websites, Acuity calendars, clients, payments, invoices, staff workflows, and service operations.",
+    "heroTitle": "Squarespace Scheduling vs Schedulaa",
+    "heroSubtitle": "Compare a Squarespace website plus Acuity scheduling workflow with a service-operations platform that connects bookings to staff, jobs, billing, and products.",
+    "hook": "Go beyond scheduling. Connect your bookings to your business operations.",
+    "intro": [
+      "Squarespace Scheduling is powered by Acuity. Together, Squarespace and Acuity can provide a polished website, embedded scheduler, multiple staff or location calendars, client information, payment or deposit rules, packages, subscriptions, reminders, and invoices.",
+      "Schedulaa combines a supported website and public booking flow with customer records, employee shifts and time, estimates, work orders, invoices, configured Stripe payment links, products, inventory, and orders."
+    ],
+    "quickDecision": [
+      {
+        "title": "Choose Squarespace plus Acuity when",
+        "body": "A design-led Squarespace website and Acuity's mature appointment, calendar, client, payment, package, and invoice features cover the workflow you need."
+      },
+      {
+        "title": "Evaluate Schedulaa when",
+        "body": "You want the booking connected to employee shifts and time, approved estimates, assigned jobs, field reports, invoices, payment links, and product operations."
+      }
+    ],
+    "executiveOverview": {
+      "headers": [
+        "Decision area",
+        "Schedulaa",
+        "Squarespace Scheduling"
+      ],
+      "rows": [
+        {
+          "label": "Website and scheduler",
+          "schedulaa": "Build and publish a supported service-business website with booking links, eligible providers, real-time availability, and a controlled custom-domain connection.",
+          "competitor": "Build a Squarespace website and embed an attached or standalone Acuity scheduler through a scheduling block."
+        },
+        {
+          "label": "Calendars and clients",
+          "schedulaa": "Connect provider availability and appointments to customer records and broader employee and operational history.",
+          "competitor": "Use one or multiple appointment calendars for staff or locations, client scheduling rules, intake details, and client records, subject to plan limits."
+        },
+        {
+          "label": "Payments and invoices",
+          "schedulaa": "Collect eligible booking, invoice, and product payments through configured Stripe-backed flows and share hosted invoice payment links.",
+          "competitor": "Require full payment, deposits, card details, or other configured appointment payment options and send Acuity invoices through a connected processor."
+        },
+        {
+          "label": "Staff operations",
+          "schedulaa": "Manage employee shifts, availability, leave, swaps, clock-in/out, breaks, and approved hours alongside customer work.",
+          "competitor": "Manage appointment availability through staff or location calendars; workforce shifts, attendance, and payroll-ready hours are a different scope."
+        },
+        {
+          "label": "Jobs and service finance",
+          "schedulaa": "Connect estimates and approvals to work orders, assignments, manager-reviewed field reports, invoices, payment links, and operational finance.",
+          "competitor": "Acuity covers appointment scheduling, clients, payments, packages, and invoices; work orders and field reports are outside that scheduling workflow."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "This is a website-plus-scheduler comparison",
+        "body": "Squarespace and Acuity are related but separately managed subscriptions. A scheduling block can embed Acuity on a Squarespace site, while a standalone Acuity scheduler can also be embedded elsewhere."
+      },
+      {
+        "title": "Acuity is more than a basic calendar",
+        "body": "Acuity supports substantial appointment, calendar, client, payment, deposit, package, subscription, reminder, and invoice workflows. The decision should not be based on an artificially narrow description."
+      },
+      {
+        "title": "Schedulaa extends into service execution",
+        "body": "Schedulaa's distinction is the connection from booking and customer record into employee operations, estimates, assigned work, field reports, invoices, configured payments, products, and inventory."
+      },
+      {
+        "title": "Subscription boundaries matter",
+        "body": "Confirm current Squarespace website, Acuity scheduling, payment-processor, and plan requirements. For Schedulaa, confirm plan, roles, region, provider setup, and any add-on requirements."
+      }
+    ],
+    "fitMatrix": [
+      {
+        "scenario": "You want a design-led Squarespace website and Acuity's appointment scheduling, client, payment, package, and invoice capabilities.",
+        "recommendation": "Evaluate Squarespace plus Acuity"
+      },
+      {
+        "scenario": "You need booking connected to employee schedules and time, estimates, work orders, field reports, invoices, payment links, and product operations.",
+        "recommendation": "Evaluate Schedulaa"
+      },
+      {
+        "scenario": "Calendar counts, website subscriptions, payment providers, or regional availability will decide the purchase.",
+        "recommendation": "Verify current terms and configuration with both vendors"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/images/marketing/showcase/manage-bookings.webp",
+        "alt": "Schedulaa booking management interface showing appointment controls",
+        "title": "Keep the booking in the manager workflow",
+        "caption": "A verified Schedulaa booking-management view. Displayed data is illustrative and contains no real customer information.",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "src": "/images/marketing/showcase/service-management.webp",
+        "alt": "Schedulaa service configuration interface for online booking",
+        "title": "Configure services and the booking path",
+        "caption": "A verified Schedulaa service-management view for maintaining the services shown to eligible customers.",
+        "width": 1200,
+        "height": 800
+      }
+    ],
+    "setupChecklist": [
+      "List the Squarespace pages, Acuity appointment types, calendars, staff or locations, forms, packages, subscriptions, and payment rules in use.",
+      "Identify customer, appointment, invoice, and payment records that must remain available after any change.",
+      "Confirm domain control, supported Stripe configuration, regional eligibility, roles, and the Schedulaa plan or add-ons needed for the target workflow.",
+      "Recreate and test the website, services, providers, availability, booking rules, notifications, and payment path in a non-customer test flow.",
+      "Change public links or domain settings only after the approved booking journey has been tested end to end."
+    ],
+    "faq": [
+      {
+        "question": "Is Squarespace Scheduling the same product as Acuity Scheduling?",
+        "answer": "Squarespace Scheduling is powered by Acuity. Squarespace documentation describes Acuity subscriptions that can be attached to a Squarespace site or used as a standalone scheduler."
+      },
+      {
+        "question": "Does Acuity support multiple calendars, payments, deposits, and invoices?",
+        "answer": "Yes. Acuity documents multiple staff or location calendars subject to plan limits, full-payment or deposit options through configured processors, packages and subscriptions, client records, and invoices."
+      },
+      {
+        "question": "What does Schedulaa add beyond appointment scheduling?",
+        "answer": "Schedulaa connects supported booking and customer records to employee shifts and time, estimates, work orders, field reports, invoices, configured Stripe payment links, products, inventory, and orders."
+      },
+      {
+        "question": "Does Schedulaa automatically migrate a Squarespace site or Acuity account?",
+        "answer": "No automatic migration is promised. Review the website content, appointment types, calendars, customer and appointment history, payment setup, packages, domain, and required records before defining a setup plan."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Squarespace: scheduling blocks",
+        "href": "https://support.squarespace.com/hc/en-us/articles/206545577-Scheduling-blocks"
+      },
+      {
+        "label": "Squarespace: billing information and independent subscriptions",
+        "href": "https://support.squarespace.com/hc/en-us/articles/115015286787-Your-Squarespace-billing-information"
+      },
+      {
+        "label": "Acuity: adding and managing calendars",
+        "href": "https://help.acuityscheduling.com/hc/en-us/articles/27101574736909-Adding-and-managing-calendars"
+      },
+      {
+        "label": "Acuity: choosing how clients pay",
+        "href": "https://help.acuityscheduling.com/hc/en-us/articles/28051014042125-Choosing-how-clients-pay-for-appointments"
+      },
+      {
+        "label": "Acuity: sending invoices",
+        "href": "https://help.acuityscheduling.com/hc/en-us/articles/16676869806477-Send-invoices-with-Acuity-Scheduling"
+      }
+    ],
+    "conclusion": "Choose Squarespace plus Acuity when a design-led website and mature scheduling workflow meet the need. Evaluate Schedulaa when appointments must connect to employee operations, service execution, billing, payments, and product workflows in one system.",
+    "relatedLinks": [
+      {
+        "label": "Explore online booking",
+        "href": "/booking"
+      },
+      {
+        "label": "Explore the website builder",
+        "href": "/website-builder"
+      },
+      {
+        "label": "Explore workforce scheduling",
+        "href": "/workforce"
+      },
+      {
+        "label": "Review estimates and invoices",
+        "href": "/business-finance/invoices"
+      }
+    ]
   }
 }

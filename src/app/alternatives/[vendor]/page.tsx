@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getCompareEntry } from '@/legacy-content/compare/config';
+import { getCompareEntry, getCompareListForPageType } from '@/legacy-content/compare/config';
 import { buildAlternativeFaqJsonLd, getAlternativePageContent, type AlternativeComparisonRow } from '@/lib/seo/alternativePageContent';
 import { buildLocalizedPageMetadata, getLocalizedCanonicalUrl } from '@/lib/seo/pageMetadata';
 import { getServerLocale } from '@/utils/serverLocale';
@@ -8,16 +8,25 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getCompareListForPageType('alternatives').map((entry) => ({ vendor: entry.slug }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ vendor: string }> }): Promise<Metadata> {
   const { vendor } = await params;
-  const locale = await getServerLocale();
   const entry = getCompareEntry(vendor, 'alternatives');
-  const competitor = entry?.competitor || vendor;
+  if (!entry) {
+    return notFound();
+  }
+  const locale = await getServerLocale();
+  const competitor = entry.competitor;
   const content = getAlternativePageContent(vendor);
   const title = content?.title || `Best ${competitor} alternatives for service teams | Schedulaa`;
   const description =
     content?.description ||
-    entry?.metaDescription ||
+    entry.metaDescription ||
     `Looking for ${competitor} alternatives? Compare Schedulaa with ${competitor} for service operations and payroll workflows.`;
   return buildLocalizedPageMetadata({
     locale,
@@ -29,11 +38,11 @@ export async function generateMetadata({ params }: { params: Promise<{ vendor: s
 
 export default async function AlternativesVendorPage({ params }: { params: Promise<{ vendor: string }> }) {
   const { vendor } = await params;
-  const locale = await getServerLocale();
   const entry = getCompareEntry(vendor, 'alternatives');
   if (!entry) {
     return notFound();
   }
+  const locale = await getServerLocale();
   const content = getAlternativePageContent(vendor);
   const rows: AlternativeComparisonRow[] = content?.comparisonRows || entry.executiveOverview?.rows || [];
   const summaryRows: AlternativeComparisonRow[] = content ? [] : entry.summaryTable?.rows || [];

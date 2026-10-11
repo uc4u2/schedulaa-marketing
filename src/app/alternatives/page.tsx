@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { compareList } from '@/legacy-content/compare/config';
+import { getCompareListForPageType } from '@/legacy-content/compare/config';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default function AlternativesHubPage() {
+  const compareList = getCompareListForPageType('alternatives');
+
   return (
     <main className="bg-background-3 dark:bg-background-7 pt-44 pb-24">
       <section className="main-container px-5">
