@@ -24,9 +24,9 @@ export const ANNUAL_PLANS: AnnualPlan[] = [
       "Annual Schedulaa software subscription for solo service businesses. Includes Website Builder, online booking, customer portal, Stripe payments, and basic reporting.",
     positioning:
       "For solo professionals who need a website, booking, payments, and a connected customer flow.",
-    image: "/images/merchant/schedulaa-starter-annual.webp",
+    image: "/images/merchant/schedulaa-starter-annual-v2.webp",
     imageAlt:
-      "Illustration of Schedulaa Starter connecting online booking, customer records, and payments",
+      "Enterprise visualization of the connected Schedulaa Starter booking, customer, and payment workflow",
     features: [
       "Website Builder with branded pages and templates",
       "Online booking, customer portal, and public booking links",
@@ -47,9 +47,9 @@ export const ANNUAL_PLANS: AnnualPlan[] = [
       "Annual Schedulaa software subscription with website, booking, payments, staff scheduling, time tracking, role-based access, and payroll-ready reports.",
     positioning:
       "For small service teams that need staff scheduling, time tracking, permissions, and payroll-ready operations.",
-    image: "/images/merchant/schedulaa-pro-annual.webp",
+    image: "/images/merchant/schedulaa-pro-annual-v2.webp",
     imageAlt:
-      "Illustration of Schedulaa Pro team scheduling, time tracking, and staff reporting",
+      "Enterprise visualization of Schedulaa Pro team scheduling, time tracking, and reporting",
     features: [
       "Everything included in Starter",
       "Staff scheduling and shared calendars",
@@ -71,9 +71,9 @@ export const ANNUAL_PLANS: AnnualPlan[] = [
       "Annual Schedulaa software subscription with booking, staff management, estimates, invoices, payment links, work orders, inventory, and financial reporting.",
     positioning:
       "For service businesses that need customer approvals, job execution, billing, costs, inventory, and reporting in one workflow.",
-    image: "/images/merchant/schedulaa-business-annual.webp",
+    image: "/images/merchant/schedulaa-business-annual-v2.webp",
     imageAlt:
-      "Illustration of Schedulaa Business work orders, invoices, inventory, and reporting",
+      "Enterprise visualization of the Schedulaa Business workflow from approval to reporting",
     features: [
       "Everything included in Pro",
       "Estimates and supported customer approval workflows",

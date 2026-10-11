@@ -43,7 +43,7 @@ test("annual Merchant Center plans have stable IDs, prices, detail routes, and p
   for (const plan of ANNUAL_PLANS) {
     assert.match(
       plan.image,
-      /^\/images\/merchant\/schedulaa-.+-annual\.webp$/,
+      /^\/images\/merchant\/schedulaa-.+-annual-v2\.webp$/,
     );
     assert.ok(
       statSync(new URL(`../../public${plan.image}`, import.meta.url)).size > 0,
