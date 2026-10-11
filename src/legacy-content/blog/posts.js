@@ -299,9 +299,9 @@ const blogPosts = [
     slug: "modern-payroll-for-service-businesses",
     title: "Modern Payroll for Service Businesses: Why Teams Choose Schedulaa",
     description:
-      "Learn how Schedulaa runs modern payroll for service teams across the U.S. and Canada. From scheduling and break enforcement to payroll preview, audit logs, and W-2/T4 exports - all in one operations platform.",
+      "Learn how Schedulaa connects scheduling and approved time to payroll calculations, review, and exports within its documented Canada and U.S. regional limits.",
     datePublished: "2025-12-12",
-    dateModified: "2025-12-12",
+    dateModified: "2026-10-11",
     category: "Payroll",
     tags: ["payroll", "operations", "canada", "usa", "compliance"],
     heroOverline: "Payroll",
@@ -318,7 +318,7 @@ const blogPosts = [
         heading: "What Makes Schedulaa Different",
         paragraphs: [
           "Schedulaa is not just payroll software. It is an operations OS where payroll is the final step of a verified workflow.",
-          "Payroll runs on the same data that powers scheduling, breaks, and time tracking, so errors are caught before pay day.",
+          "Payroll review can use the same approved shift, break, and time data that powers day-to-day operations, helping managers identify issues before finalization.",
         ],
       },
       {
@@ -329,11 +329,11 @@ const blogPosts = [
         ],
       },
       {
-        heading: "One Payroll System for the U.S. and Canada",
+        heading: "Documented payroll coverage in Canada and the United States",
         paragraphs: [
-          "United States (2025): federal income tax, state income tax where applicable, FICA, SUI/SUTA, PTO and time tracking, shift premiums, union dues and garnishments (flat amounts), W-2 generation and exports, plus payroll exports in PDF, CSV, and XLSX. Local and city taxes are transparently flagged as not automated.",
-          "Canada (ex-Quebec, 2025): federal and provincial income tax, CPP with CPP-exempt employees, EI with EI-exempt employees, vacation pay and accrual, statutory holiday pay, paid versus unpaid leave, BPA with YTD tracking, T4 generation (Boxes 14, 16/26, 18/24, 22, 40, 44), ROE (PDF and XML), union dues and garnishments, and non-taxable reimbursements.",
-          "Canadian and U.S. teams can run payroll in one system with the correct tax engine per employee.",
+          "United States: full payroll finalization is currently supported in Alaska, Florida, Nevada, South Dakota, Texas, Washington, Wyoming, Tennessee, and New Hampshire. Other states can use the raw preview ledger, but finalization is blocked. Local and city taxes, government filing, and remittance are not automated.",
+          "Canada (except Quebec): supported calculations include federal and provincial income tax, CPP/CPP2, EI, vacation and statutory-holiday inputs, T4 documents, and ROE exports. Quebec payroll, government filing, and remittance remain outside the current workflow.",
+          "Eligible Canadian and U.S. teams can review payroll in one operational system only within these documented regional boundaries.",
         ],
       },
       {
@@ -347,8 +347,8 @@ const blogPosts = [
       {
         heading: "Payroll Preview That Matches Final Results",
         paragraphs: [
-          "Schedulaa's payroll preview is not a guess. Preview, finalize, PDF, raw data, and year-end exports all use the same finalized data.",
-          "Managers see net pay update live as fields change, and the preview matches payslip and exports exactly after finalization.",
+          "Schedulaa uses the same supported calculation path for preview and finalization, while unsupported U.S. jurisdictions remain clearly preview-only.",
+          "Managers can review changing totals before finalization; finalized records then provide the basis for supported payslips and exports.",
         ],
       },
       {
@@ -376,20 +376,20 @@ const blogPosts = [
         paragraphs: [
           "Paychex or ADP: strong on filings, benefits, and compliance, with heavy setup and enterprise contracts; payroll-first, operations second.",
           "Schedulaa: operations-first and payroll-ready, with scheduling, breaks, time, and payroll in one system; cross-border (U.S. and Canada) in one workflow with transparent limits and no hidden compliance claims.",
-          "Paychex pays people. Schedulaa makes sure they are paid correctly.",
+          "Schedulaa does not replace tax filing, remittance, benefits administration, or unsupported-jurisdiction payroll services.",
         ],
       },
       {
         heading: "When to Choose Schedulaa",
         paragraphs: [
-          "Choose Schedulaa if you run a service business with real schedules and shifts, payroll accuracy depends on operational data, you want fewer tools and fewer mistakes, you need U.S. and/or Canadian payroll in one platform, and you value auditability and clarity over complexity.",
+          "Choose Schedulaa when a service business needs schedules, approved hours, and payroll review connected in one workflow and its employees fall within the documented Canada or supported-state U.S. boundaries.",
         ],
       },
       {
         heading: "Final Thought",
         paragraphs: [
           "Payroll should not be a black box. Schedulaa turns payroll into a verifiable, auditable outcome of how work actually happened - not just a calculation at the end of the month.",
-          "If you want payroll that matches reality, not just regulations, Schedulaa is built for you.",
+          "If you want payroll review grounded in approved operational data, first confirm that your jurisdiction is supported and retain the appropriate filing and remittance process.",
         ],
       },
       {
@@ -1287,9 +1287,9 @@ const blogPosts = [
     slug: "salon-spa-payroll-canada-us",
     title: "Salon & Spa Payroll in Canada and the U.S. (Without Spreadsheets)",
     description:
-      "Tips, commissions, shift premiums, vacation, CPP/EI, and FICA handled in one flow for beauty teams.",
+      "See how approved shifts and variable earnings can support payroll review for beauty teams within Schedulaa's documented Canada and U.S. regional limits.",
     datePublished: "2025-03-12",
-    dateModified: "2025-03-12",
+    dateModified: "2026-10-11",
     category: "Payroll",
     tags: ["payroll", "salon", "spa", "beauty"],
     heroOverline: "Beauty payroll",
@@ -1309,19 +1309,19 @@ const blogPosts = [
       {
         heading: "Canada (ex-Québec)",
         paragraphs: [
-          "Vacation %, stat holiday pay, CPP/EI (with exemptions), BPA, T4 boxes 14/16/18/22/24/26/40/44, ROE exports.",
+          "Supported Canada-except-Quebec workflows include federal and provincial calculations, vacation and statutory-holiday inputs, CPP/CPP2 and EI, T4 documents, and ROE exports. Quebec payroll, government filing, and remittance are not automated.",
         ],
       },
       {
-        heading: "United States",
+        heading: "United States coverage",
         paragraphs: [
-          "Federal + state tax, FICA, SUI/SUTA, W-2 exports. Local/city taxes not automated (rare in most salons).",
+          "Full finalization is supported only in Alaska, Florida, Nevada, South Dakota, Texas, Washington, Wyoming, Tennessee, and New Hampshire. Other states are raw-preview only with finalization blocked. Local and city taxes, government filing, and remittance are not automated.",
         ],
       },
       {
         heading: "Example and next steps",
         paragraphs: [
-          "Stylists in Toronto and Miami can be paid from one pipeline: shifts → tips/commission/premiums → CPP/EI or FICA → payslip → T4/W-2.",
+          "Eligible beauty teams can connect approved shifts, tips, commissions, and premiums to the applicable supported calculation and document workflow. Confirm every employee's jurisdiction before treating a preview as ready to finalize.",
         ],
         links: [
           { label: "Explore spa booking", href: "/booking/spa" },

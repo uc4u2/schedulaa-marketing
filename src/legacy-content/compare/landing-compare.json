@@ -776,7 +776,7 @@
         },
         {
           "label": "Regions & Coverage",
-          "schedulaa": "Canada (ex-Quebec) and supported U.S. states with federal and state tax engines, W-2, T4, and ROE exports. Local and city payroll taxes are not automated.",
+          "schedulaa": "Canada (except Quebec) and full finalization in AK, FL, NV, SD, TX, WA, WY, TN, and NH. Other U.S. states are raw-preview only. Government filing, remittance, and local/city taxes are not automated.",
           "competitor": "U.S. and global payroll with automated federal, state, and many local and city tax filings under enterprise contracts."
         },
         {
@@ -831,7 +831,7 @@
       },
       {
         "title": "Cross-border payroll calculations",
-        "body": "Canada (ex-QC) and U.S. payroll calculations live in one system with consistent workflows and exports."
+        "body": "Canada (except Quebec) and the nine supported U.S. finalization states use documented calculation and export workflows. Other U.S. states remain raw-preview only."
       },
       {
         "title": "Automation-ready",
@@ -842,7 +842,7 @@
       "title": "Why some teams use both",
       "paragraphs": [
         "Schedulaa is not a replacement for enterprise payroll filing or benefits brokerage. Many teams keep Paychex for tax remittance, filings, and benefits administration while using Schedulaa to manage operations.",
-        "Schedulaa sits upstream of Paychex. It ensures schedules, breaks, time, premiums, and leave are correct before payroll is finalized. This reduces corrections, disputes, and rework for finance teams.",
+        "Schedulaa sits upstream of Paychex by connecting schedules, breaks, approved time, premiums, and leave for manager review before supported payroll finalization.",
         "For service businesses, the combination often works better than either tool alone."
       ]
     },
@@ -912,7 +912,7 @@
     },
     "fitMatrix": [
       {
-        "scenario": "A Canadian or U.S. service business that needs scheduling, break compliance, time tracking, and payroll calculations tightly connected in one platform.",
+        "scenario": "A service business in Canada outside Quebec or one of Schedulaa's nine supported U.S. finalization states that needs scheduling, break records, time tracking, and payroll review connected in one platform.",
         "recommendation": "Schedulaa"
       },
       {
@@ -920,15 +920,11 @@
         "recommendation": "Paychex"
       },
       {
-        "scenario": "Schedulaa to manage operations and produce clean, compliant payroll data — and Paychex to handle filings, remittances, and benefits.",
+        "scenario": "Schedulaa to manage operations and prepare reviewed payroll data within documented regional limits — and Paychex to handle filings, remittances, and benefits.",
         "recommendation": "Both"
       }
     ],
-    "testimonial": {
-      "quote": "Schedulaa lets us run payroll off the same screen we use to schedule shifts and enforce breaks. It is built for how service work actually happens.",
-      "attribution": "Photo Artisto Studios, Toronto"
-    },
-    "conclusion": "Paychex remains a strong enterprise option for payroll filing, benefits, and HR outsourcing. Schedulaa is the better fit when the real challenge is operations — scheduling shifts, enforcing breaks, tracking hours, and preparing payroll accurately across Canada and the U.S. Schedulaa does not try to be a PEO. It makes sure payroll is correct before it ever reaches one.",
+    "conclusion": "Paychex remains an option for payroll filing, benefits, and HR outsourcing. Schedulaa connects scheduling, breaks, approved hours, and payroll review for Canada outside Quebec and its nine supported U.S. finalization states; other U.S. states remain preview-only. Schedulaa is not a PEO and does not automate government filing or remittance.",
     "competitorName": "Paychex"
   },
   "humi": {
