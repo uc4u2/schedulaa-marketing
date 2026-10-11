@@ -1,6 +1,6 @@
 # Schedulaa marketing SEO source of truth
 
-Last reviewed: 2026-10-08 (America/Toronto)
+Last reviewed: 2026-10-11 (America/Toronto)
 
 Scope: the public Schedulaa marketing property at `https://www.schedulaa.com/`.
 
@@ -94,6 +94,7 @@ The historical release SHAs, deployment evidence, detailed page changes, and rol
 - `src/lib/seo/localization.ts` enforces which locale routes may be indexed and advertised through hreflang.
 - Non-indexable application routes such as `/admin`, `/app`, `/client`, `/dashboard`, `/employee`, `/manager`, `/recruiter`, and `/sales` remain outside the marketing index contract.
 - `www.schedulaa.com`, `app.schedulaa.com`, and tenant custom domains are different SEO surfaces with different owners.
+- The English-only `/plans/starter-annual`, `/plans/pro-annual`, and `/plans/business-annual` routes are dedicated software-subscription product detail pages for Merchant Center. Each exposes its full prepaid annual USD price, availability, plan-specific product image, renewal/cancellation terms, preselected annual checkout link, and Product/Offer structured data. The comparison-oriented `/pricing` page remains unchanged.
 
 Confirmed Search Console sitemap state on 2026-10-08:
 
@@ -237,6 +238,7 @@ The homepage booking drawer remains manual and its iframe remains interaction-ga
 | 2026-10-08 | Verified read-only Search Console API access for the existing property and OAuth client; generated the first automated 28-day comparison baseline. |
 | 2026-10-08 | Consolidated marketing SEO authority under `docs/seo/`, made generated report retention explicit, and selected the current opportunity backlog from live Search Console data. |
 | 2026-10-08 | Improved the Vagaro, QuickBooks, and Paychex alternatives pages using the validated query/page opportunities; added query-aligned metadata/content, evidence-safe comparison boundaries, matching FAQ and breadcrumb schema, and relevant internal links. |
+| 2026-10-11 | Added three English-only annual subscription product detail routes for Google Merchant Center, with feed-matched IDs/prices, real product-interface images, canonical Product/Offer schema, and explicit renewal/cancellation terms; no pricing-page or billing-logic changes were made. |
 | 2026-10-08 | Separated Gusto alternatives, direct comparison, and informational blog intent; removed an unverified testimonial; corrected outdated geographic wording; and connected the three self-canonical pages with contextual links. |
 | 2026-10-08 | Separated ADP alternatives, direct comparison, and Canada/U.S. informational intent; corrected enterprise-only and time-tracking claims from official ADP evidence; removed an unverified testimonial; and added reciprocal links and appropriate structured data. |
 | 2026-10-08 | Refined the homepage qualification and booking language, made the qualification panel content-aware on smaller viewports, and limited the integration strip to verified live product boundaries. |

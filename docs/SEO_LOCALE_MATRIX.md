@@ -22,6 +22,7 @@ This matrix records whether the visible route content has a real locale-specific
 | `/docs` | Y | Y | Y | Y | Y | Y | Y | Y | Y |
 | `/contact` | Y | Y | Y | Y | Y | Y | Y | Y | Y |
 | `/pricing` | Y | Y | N | Y | N | N | Y | N | N |
+| `/plans/starter-annual`, `/plans/pro-annual`, `/plans/business-annual` | Y | N | N | N | N | N | N | N | N |
 | `/zapier` | Y | Y | N | Y | N | N | Y | N | N |
 | `/` | Y | N | N | N | N | N | N | N | N |
 | `/booking` | Y | N | N | N | N | N | N | N | N |
