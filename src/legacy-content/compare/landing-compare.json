@@ -2889,5 +2889,14 @@
         "href": "/business-finance/invoices"
       }
     ]
+  },
+  "glossgenius": {
+    "pageTypes": [
+      "alternatives"
+    ],
+    "competitor": "GlossGenius",
+    "metaTitle": "GlossGenius Alternatives for Salons | Schedulaa",
+    "metaDescription": "Compare GlossGenius alternatives for salon booking, websites, customer records, staff scheduling, invoices, products, and connected operations.",
+    "heroTitle": "A GlossGenius alternative for connected salon operations"
   }
 }

@@ -429,6 +429,9 @@ export default function SalonBookingLandingPage() {
               <Link href="/en/alternatives/vagaro" className="font-semibold text-white underline underline-offset-4">
                 Compare salon software options
               </Link>
+              <Link href="/en/alternatives/glossgenius" className="font-semibold text-white underline underline-offset-4">
+                Explore GlossGenius alternatives
+              </Link>
             </div>
           </div>
         </div>

@@ -30,9 +30,229 @@ export type AlternativePageContent = {
   conclusion: string;
   primaryCta: { label: string; href: string };
   relatedLinks: Array<{ label: string; href: string }>;
+  hook?: string;
+  quickDecision?: Array<{ title: string; body: string }>;
+  pricingRows?: Array<{ label: string; schedulaa: string; competitor: string }>;
+  pricingNote?: string;
+  screenshots?: Array<{
+    src: string;
+    alt: string;
+    title: string;
+    caption: string;
+    width: number;
+    height: number;
+  }>;
+  setupChecklist?: string[];
+  sources?: Array<{ label: string; href: string }>;
 };
 
 export const alternativePageContent: Record<string, AlternativePageContent> = {
+  glossgenius: {
+    competitor: 'GlossGenius',
+    title: 'GlossGenius Alternatives for Salons | Schedulaa',
+    description:
+      'Compare GlossGenius alternatives for salon booking, websites, customer records, staff scheduling, invoices, products, and connected operations.',
+    h1: 'A GlossGenius alternative for connected salon operations',
+    hook:
+      'Booking is only the beginning. Compare what happens across your website, appointments, customers, team, invoices, and products after a client chooses a time.',
+    lead:
+      'Schedulaa and GlossGenius both support beauty-business booking and customer workflows. The practical choice is whether you want a beauty-specific booking, marketing, payments, and point-of-sale system or a broader service-business platform that connects a full website with booking, workforce, finance, and customer-facing commerce.',
+    intro: [
+      'GlossGenius is a substantial beauty and wellness platform. Its current first-party documentation includes a customizable booking website, online booking, client profiles, staff calendars, marketing, deposits and cancellation policies, waitlists, invoices, inventory, integrated payments, and point-of-sale hardware. It should not be presented as a basic calendar.',
+      'Schedulaa takes a broader service-operations approach. It connects a published multi-page website, online booking, customer records, employee availability and shifts, estimates, work orders, invoices, Stripe-backed payment links, and customer-facing product orders when the relevant plan and providers are configured.',
+    ],
+    quickDecision: [
+      {
+        title: 'Choose GlossGenius when beauty-specific checkout is central',
+        body: 'GlossGenius is a strong fit when its booking website, built-in email and text marketing, deposits and no-show controls, automated waitlist, integrated payments, and branded point-of-sale hardware match the way you run the business.',
+      },
+      {
+        title: 'Evaluate Schedulaa when the workflow extends beyond the appointment',
+        body: 'Schedulaa is worth testing when you need broader website content, booking and customer records, employee shifts and approved time, estimates, work orders, invoices, payment links, or a customer-facing product checkout connected in one platform.',
+      },
+    ],
+    contextHeading: 'Why salons evaluate a GlossGenius alternative',
+    contextParagraphs: [
+      'An alternative should be evaluated against the features you actually use, not against a simplified competitor description. List your booking rules, client records, reminders, forms, deposits, retail inventory, checkout hardware, staff permissions, reporting, and marketing requirements before changing systems.',
+      'Then test the workflows GlossGenius and Schedulaa treat differently. Schedulaa emphasizes a broader website and operational path from booking to staff work, estimates, invoices, payment links, and customer product orders. GlossGenius emphasizes beauty-specific booking, marketing, no-show protection, payments, inventory, and point of sale.',
+    ],
+    differentiatorsHeading: 'Where Schedulaa is genuinely different',
+    differentiators: [
+      {
+        title: 'A broader published website and content system',
+        body: 'Schedulaa supports theme and module-based pages, signed draft preview, separate publishing, articles and SEO metadata, and connection of a domain the business controls. GlossGenius documents a polished, customizable booking website; the two website models are not identical.',
+      },
+      {
+        title: 'Service work can continue into estimates, jobs, and billing',
+        body: 'Schedulaa connects supported estimate approval, work orders, reviewed field reports, invoices, and hosted payment links. GlossGenius also offers invoices, so the meaningful distinction is the wider operational workflow rather than invoice availability alone.',
+      },
+      {
+        title: 'Customer-facing commerce extends beyond in-salon retail',
+        body: 'Schedulaa supports a customer catalog, cart, checkout, orders, stock, fulfillment, refunds, and configured shipping. GlossGenius documents inventory, retail checkout, and GeniusShop wholesale purchasing; its GeniusShop FAQ says a customer product store is not currently the purpose of that marketplace.',
+      },
+      {
+        title: 'Payment and communication boundaries remain explicit',
+        body: 'Schedulaa uses configured Stripe-backed booking, invoice, and product payment flows and does not offer proprietary salon POS hardware. General transactional SMS is not a supported Schedulaa capability, while GlossGenius documents integrated text marketing and notifications.',
+      },
+    ],
+    comparisonHeading: 'Schedulaa and GlossGenius side by side',
+    comparisonRows: [
+      {
+        label: 'Primary focus',
+        schedulaa: 'Connected website, booking, customer, workforce, job, finance, and commerce operations for service businesses.',
+        competitor: 'Beauty, wellness, health, and fitness operations centered on booking, clients, marketing, payments, point of sale, and team tools.',
+      },
+      {
+        label: 'Website and content',
+        schedulaa: 'Multi-page theme and module builder with draft preview, publish state, articles, SEO metadata, and supported bring-your-own domain setup.',
+        competitor: 'Customizable booking website with templates, colors, fonts, portfolio imagery, services, provider profiles, and booking controls.',
+      },
+      {
+        label: 'Booking and scheduling',
+        schedulaa: 'Real availability, eligible providers, capacity-aware sessions, packages, appointment management, and configurable payment rules.',
+        competitor: 'Online booking, team calendars, service options, reminders, deposits, waitlists, resource management, and two-way calendar sync depending on plan.',
+      },
+      {
+        label: 'Customers',
+        schedulaa: 'Tenant customer records plus a portal for eligible bookings, invoices, payments, orders, and digital access.',
+        competitor: 'Client profiles with notes, preferences, visit and purchase history, notifications, forms, and plan-dependent client tools.',
+      },
+      {
+        label: 'Team operations',
+        schedulaa: 'Employee availability, shifts, leave, swaps, clock-in/out, breaks, approvals, assignments, and role-based permissions.',
+        competitor: 'Staff calendars, permissions, time tracking, commissions, team analytics, and related capabilities that vary by plan.',
+      },
+      {
+        label: 'Payments and checkout',
+        schedulaa: 'Configured Stripe-backed booking, invoice, payment-link, and product checkout flows; no proprietary point-of-sale hardware.',
+        competitor: 'GlossGenius Payments, deposits, card on file, invoices, Tap to Pay, Buy Now Pay Later, and proprietary card-reader options.',
+      },
+      {
+        label: 'Estimates, work, and invoices',
+        schedulaa: 'Estimate approval, work orders, field reports, invoices, and hosted payment links can share one operational record.',
+        competitor: 'Professional invoices and payment links are documented; verify any quote, job, or field-work requirements directly against current product documentation.',
+      },
+      {
+        label: 'Products and inventory',
+        schedulaa: 'Customer-facing catalog, cart, checkout, orders, stock, fulfillment, refunds, and configured Canada/US shipping workflows.',
+        competitor: 'Retail inventory, barcode tools, low-stock alerts, point-of-sale checkout, reports, and GeniusShop wholesale purchasing for professionals.',
+      },
+      {
+        label: 'Switching support',
+        schedulaa: 'No automatic GlossGenius migration is promised; scope and test the data and customer journey before cutover.',
+        competitor: 'GlossGenius advertises free inbound transfer of appointments, services, inventory, and client lists.',
+      },
+    ],
+    pricingRows: [
+      {
+        label: 'Entry plan',
+        schedulaa: 'Starter is listed at $19.99 USD monthly or $199.90 USD prepaid annually.',
+        competitor: 'Standard is listed at $28 monthly or $24 per month billed annually.',
+      },
+      {
+        label: 'Team-oriented plan',
+        schedulaa: 'Pro is listed at $49.99 USD monthly or $499.90 USD prepaid annually.',
+        competitor: 'Gold is listed at $56 monthly or $48 per month billed annually for businesses up to nine staff.',
+      },
+      {
+        label: 'Higher-tier plan',
+        schedulaa: 'Business is listed at $119.99 USD monthly or $1,199.90 USD prepaid annually.',
+        competitor: 'Platinum is listed at $168 monthly or $148 per month billed annually for established teams of ten or more.',
+      },
+    ],
+    pricingNote:
+      'Published USD prices were checked on October 12, 2026. These are not feature-equivalent tiers. Payment processing, staff, locations, add-ons, provider eligibility, included features, taxes, and annual billing terms differ. Verify both vendors’ current pricing and the exact workflow you need before purchasing.',
+    screenshots: [
+      {
+        src: '/images/marketing/showcase/manage-bookings.webp',
+        alt: 'Schedulaa manager booking interface showing appointment and provider controls without real customer data',
+        title: 'Manage bookings with provider and status context',
+        caption: 'A verified Schedulaa manager view. Availability, payments, and customer-facing controls depend on workspace configuration.',
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: '/images/marketing/showcase/service-management.webp',
+        alt: 'Schedulaa service management interface for configuring services available for online booking',
+        title: 'Configure the services clients can book',
+        caption: 'A verified Schedulaa service-management view used to maintain bookable service details. No customer data is shown.',
+        width: 1200,
+        height: 800,
+      },
+    ],
+    setupChecklist: [
+      'List the GlossGenius features you actively use: services, staff, calendars, clients, forms, deposits, marketing, inventory, invoices, payment methods, hardware, and reports.',
+      'Confirm which records can be exported or otherwise retained, including future appointments, client notes, service history, balances, inventory, and accounting evidence.',
+      'Confirm the Schedulaa plan, roles, add-ons, domain control, Stripe eligibility, and notification boundaries required for the target workflow.',
+      'Configure services, eligible providers, availability, customer access, website content, and payment rules in a non-customer test setup.',
+      'Test booking, rescheduling, cancellation, payment, invoice, product-order, mobile, and staff-permission scenarios that matter to the business.',
+      'Run a controlled cutover only after the new public booking path and required historical records have been verified. Schedulaa does not promise automatic migration.',
+    ],
+    fitHeading: 'Who should choose each platform?',
+    fitMatrix: [
+      {
+        scenario: 'You want a beauty-specific system with integrated marketing, deposits, waitlists, payments, and branded POS hardware.',
+        recommendation: 'Evaluate GlossGenius',
+      },
+      {
+        scenario: 'You need a broader website plus booking, team scheduling, customer records, estimates, work orders, invoices, and customer-facing product orders.',
+        recommendation: 'Evaluate Schedulaa',
+      },
+      {
+        scenario: 'Your decision depends on text marketing, forms, deposits, room resources, hardware, automatic migration, or payroll.',
+        recommendation: 'Verify the exact plan, provider, regional, and setup requirements before switching',
+      },
+    ],
+    faqHeading: 'GlossGenius alternative FAQs',
+    faq: [
+      {
+        question: 'Is Schedulaa a complete replacement for every GlossGenius feature?',
+        answer:
+          'No. GlossGenius offers beauty-specific marketing, no-show controls, waitlists, integrated payments, and point-of-sale hardware that should be evaluated on their own merits. Schedulaa is strongest when a salon needs booking connected to a broader website, workforce, estimate, job, invoice, and customer-commerce workflow.',
+      },
+      {
+        question: 'Does Schedulaa include a website and online booking?',
+        answer:
+          'Yes. Schedulaa can publish a responsive tenant website and connect supported services, eligible providers, real availability, customer records, articles, products, and booking entry points. Theme, module, domain, plan, and provider requirements still apply.',
+      },
+      {
+        question: 'Does Schedulaa offer salon POS hardware or text marketing?',
+        answer:
+          'Schedulaa does not claim proprietary salon POS hardware or general transactional SMS. Eligible payments use configured Stripe-backed booking, invoice, payment-link, and product flows. GlossGenius documents its own card readers, Tap to Pay, text marketing, and client notifications.',
+      },
+      {
+        question: 'Can Schedulaa automatically migrate my GlossGenius account?',
+        answer:
+          'No automatic migration is promised. Review your services, staff, appointments, client records, forms, inventory, invoices, payment setup, and reporting needs before defining a controlled setup and cutover plan.',
+      },
+      {
+        question: 'Which platform is less expensive?',
+        answer:
+          'Published subscription prices are not a like-for-like cost comparison because plan inclusions, staff and location rules, payment processing, add-ons, hardware, and provider requirements differ. Compare the complete configured workflow and current terms rather than only the lowest advertised price.',
+      },
+    ],
+    sources: [
+      { label: 'GlossGenius pricing and plan comparison', href: 'https://glossgenius.com/pricing' },
+      { label: 'GlossGenius online booking', href: 'https://glossgenius.com/online-booking' },
+      { label: 'GlossGenius booking website builder', href: 'https://glossgenius.com/custom-website-builder' },
+      { label: 'GlossGenius calendar and scheduling', href: 'https://glossgenius.com/calendar-scheduling-app' },
+      { label: 'GlossGenius client management', href: 'https://glossgenius.com/client-management' },
+      { label: 'GlossGenius invoices', href: 'https://glossgenius.com/invoices' },
+      { label: 'GlossGenius inventory management', href: 'https://glossgenius.com/salon-inventory-management' },
+      { label: 'GlossGenius no-show protection', href: 'https://glossgenius.com/no-shows-protection-card-on-file' },
+      { label: 'GeniusShop customer-store boundary', href: 'https://shopbeauty.glossgenius.com/pages/faq' },
+    ],
+    conclusionHeading: 'Choose the workflow, not a simplified feature count',
+    conclusion:
+      'GlossGenius is a credible beauty-specific platform with strong booking, marketing, payment, client, inventory, and POS capabilities. Schedulaa is a credible alternative when the salon needs those customer appointments connected to broader website content, staff operations, estimates, work orders, invoices, payment links, and customer-facing product orders. Test the workflows that determine the purchase before switching.',
+    primaryCta: { label: 'Start your 14-day free trial', href: '/register' },
+    relatedLinks: [
+      { label: 'Explore salon booking software', href: '/booking/salon' },
+      { label: 'Explore the website builder', href: '/website-builder' },
+      { label: 'Review current Schedulaa pricing', href: '/pricing' },
+      { label: 'Explore invoices and payment links', href: '/business-finance/invoices' },
+    ],
+  },
   gusto: {
     competitor: 'Gusto',
     title: 'Gusto Alternatives for Service Businesses | Schedulaa',

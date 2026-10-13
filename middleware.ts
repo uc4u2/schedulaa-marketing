@@ -24,13 +24,17 @@ const normalizePath = (pathname: string) => {
 const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://app.schedulaa.com';
 
 // Next can stream a noindex not-found shell with a 200 status for dynamic
-// segments. Keep the compare-only exclusions lightweight here so their
-// matching alternatives URLs return an explicit 404 without bundling the
-// full comparison catalog into middleware.
+// segments. Keep single-page route exclusions lightweight here so the
+// intentionally absent counterpart returns an explicit 404 without bundling
+// the full comparison catalog into middleware.
 const COMPARE_ONLY_ALTERNATIVE_PATHS = new Set([
   '/alternatives/wix-bookings',
   '/alternatives/wordpress-booking-plugins',
   '/alternatives/squarespace-scheduling',
+]);
+
+const ALTERNATIVES_ONLY_COMPARE_PATHS = new Set([
+  '/compare/glossgenius',
 ]);
 
 const buildAppLegacyRedirect = (request: NextRequest, slug: string, kind: 'review' | 'tip', appointmentId: string) => {
@@ -82,7 +86,10 @@ export function middleware(request: NextRequest) {
     const normalizedPath = normalizePath(rewritePath);
     const legacyTarget = LEGACY_REDIRECTS[normalizedPath];
 
-    if (COMPARE_ONLY_ALTERNATIVE_PATHS.has(normalizedPath)) {
+    if (
+      COMPARE_ONLY_ALTERNATIVE_PATHS.has(normalizedPath) ||
+      ALTERNATIVES_ONLY_COMPARE_PATHS.has(normalizedPath)
+    ) {
       return new NextResponse('Not Found', { status: 404 });
     }
 
