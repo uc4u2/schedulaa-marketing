@@ -42,6 +42,12 @@ test('GlossGenius content is commercially complete, evidence-linked, and explici
   assert.equal(content.pricingRows?.length, 3);
   assert.ok((content.setupChecklist?.length || 0) >= 5);
   assert.ok(content.faq.length >= 5);
+  assert.ok(content.heroImage);
+  assert.match(content.heroImage.src, /glossgenius-salon-operations-hero\.webp$/);
+  assert.ok(existsSync(`public${content.heroImage.src}`));
+  assert.equal(content.heroImage.width, 1586);
+  assert.equal(content.heroImage.height, 992);
+  assert.ok(content.heroImage.alt.length > 40);
 
   const copy = JSON.stringify(content);
   assert.match(copy, /point-of-sale hardware/i);
@@ -91,6 +97,9 @@ test('the alternatives renderer uses real images and tracked trial/demo actions'
   assert.match(page, /Book a personalized demo/);
   assert.match(page, /TrackedLink/);
   assert.match(page, /buildAppUrl\('\/register'/);
+  assert.match(page, /content\.heroImage/);
+  assert.match(page, /fetchPriority="high"/);
+  assert.match(page, /Real Schedulaa interface views appear below/);
   assert.match(page, /loading="lazy"/);
   assert.match(page, /width=\{screenshot\.width\}/);
   assert.match(page, /height=\{screenshot\.height\}/);

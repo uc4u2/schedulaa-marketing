@@ -100,42 +100,63 @@ export default async function AlternativesVendorPage({ params }: { params: Promi
       ) : null}
       <section className="main-container px-5">
         <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
-          <p className="badge badge-yellow-v2">Alternatives guide</p>
-          <h1 className="mt-5">{content?.h1 || `${entry.competitor} alternatives for modern service teams`}</h1>
-          <p className="mt-4 max-w-[900px] text-secondary/70 dark:text-accent/70">
-            {content?.hook || content?.lead ||
-              `Looking for ${entry.competitor} alternatives? This guide compares Schedulaa and ${entry.competitor} across booking, scheduling, payroll, and compliance for service teams.`}
-          </p>
-          {content?.hook ? (
-            <p className="mt-4 max-w-[900px] text-secondary/70 dark:text-accent/70">{content.lead}</p>
-          ) : null}
-          {(content?.intro || entry.intro || []).map((paragraph: string, idx: number) => (
-            <p key={`${idx}-${paragraph.slice(0, 24)}`} className="mt-4 text-secondary/70 dark:text-accent/70">
-              {paragraph}
-            </p>
-          ))}
-          {isAcquisitionPage ? (
-            <div className="mt-7 flex flex-wrap gap-3">
-              <TrackedLink
-                href={startFreeHref}
-                className="btn btn-primary btn-md min-w-[220px] justify-center"
-                analyticsCta={{ name: `alternatives_${vendor}_start_trial`, pagePath: `/en${pagePath}`, placement: 'hero' }}
-                eventName="Lead"
-                eventParams={{ content_name: `${entry.competitor} alternatives hero trial`, page_path: `/en${pagePath}` }}
-              >
-                Start your 14-day free trial
-              </TrackedLink>
-              <TrackedLink
-                href={bookDemoHref}
-                className="btn btn-secondary btn-md min-w-[220px] justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-                analyticsCta={{ name: `alternatives_${vendor}_book_demo`, pagePath: `/en${pagePath}`, placement: 'hero' }}
-              >
-                Book a personalized demo
-              </TrackedLink>
+          <div className={content?.heroImage ? 'grid items-center gap-9 xl:grid-cols-[1.05fr_0.95fr]' : undefined}>
+            <div>
+              <p className="badge badge-yellow-v2">Alternatives guide</p>
+              <h1 className="mt-5">{content?.h1 || `${entry.competitor} alternatives for modern service teams`}</h1>
+              <p className="mt-4 max-w-[900px] text-secondary/70 dark:text-accent/70">
+                {content?.hook || content?.lead ||
+                  `Looking for ${entry.competitor} alternatives? This guide compares Schedulaa and ${entry.competitor} across booking, scheduling, payroll, and compliance for service teams.`}
+              </p>
+              {content?.hook ? (
+                <p className="mt-4 max-w-[900px] text-secondary/70 dark:text-accent/70">{content.lead}</p>
+              ) : null}
+              {(content?.intro || entry.intro || []).map((paragraph: string, idx: number) => (
+                <p key={`${idx}-${paragraph.slice(0, 24)}`} className="mt-4 text-secondary/70 dark:text-accent/70">
+                  {paragraph}
+                </p>
+              ))}
+              {isAcquisitionPage ? (
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <TrackedLink
+                    href={startFreeHref}
+                    className="btn btn-primary btn-md min-w-[220px] justify-center"
+                    analyticsCta={{ name: `alternatives_${vendor}_start_trial`, pagePath: `/en${pagePath}`, placement: 'hero' }}
+                    eventName="Lead"
+                    eventParams={{ content_name: `${entry.competitor} alternatives hero trial`, page_path: `/en${pagePath}` }}
+                  >
+                    Start your 14-day free trial
+                  </TrackedLink>
+                  <TrackedLink
+                    href={bookDemoHref}
+                    className="btn btn-secondary btn-md min-w-[220px] justify-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    analyticsCta={{ name: `alternatives_${vendor}_book_demo`, pagePath: `/en${pagePath}`, placement: 'hero' }}
+                  >
+                    Book a personalized demo
+                  </TrackedLink>
+                </div>
+              ) : null}
             </div>
-          ) : null}
+            {content?.heroImage ? (
+              <figure className="overflow-hidden rounded-[22px] border border-stroke-2 bg-background-1 shadow-2 dark:border-stroke-7 dark:bg-background-6/40">
+                <Image
+                  src={content.heroImage.src}
+                  alt={content.heroImage.alt}
+                  width={content.heroImage.width}
+                  height={content.heroImage.height}
+                  sizes="(max-width: 1279px) 100vw, 42vw"
+                  priority
+                  fetchPriority="high"
+                  className="aspect-[8/5] w-full object-cover"
+                />
+                <figcaption className="border-t border-stroke-2 px-4 py-3 text-xs leading-5 text-secondary/60 dark:border-stroke-7 dark:text-accent/60">
+                  Illustrative salon operations scene. Real Schedulaa interface views appear below.
+                </figcaption>
+              </figure>
+            ) : null}
+          </div>
         </div>
 
         {content?.quickDecision?.length ? (

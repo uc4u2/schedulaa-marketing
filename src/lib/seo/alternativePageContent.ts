@@ -34,6 +34,12 @@ export type AlternativePageContent = {
   quickDecision?: Array<{ title: string; body: string }>;
   pricingRows?: Array<{ label: string; schedulaa: string; competitor: string }>;
   pricingNote?: string;
+  heroImage?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
   screenshots?: Array<{
     src: string;
     alt: string;
@@ -53,6 +59,12 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
     description:
       'Compare GlossGenius alternatives for salon booking, websites, customer records, staff scheduling, invoices, products, and connected operations.',
     h1: 'A GlossGenius alternative for connected salon operations',
+    heroImage: {
+      src: '/images/marketing/glossgenius-salon-operations-hero.webp',
+      alt: 'Salon owner reviewing privacy-safe booking and business analytics dashboards at a modern reception desk',
+      width: 1586,
+      height: 992,
+    },
     hook:
       'Booking is only the beginning. Compare what happens across your website, appointments, customers, team, invoices, and products after a client chooses a time.',
     lead:
