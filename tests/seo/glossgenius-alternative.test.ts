@@ -45,7 +45,16 @@ test('GlossGenius content is commercially complete, evidence-linked, and explici
 
   const copy = JSON.stringify(content);
   assert.match(copy, /point-of-sale hardware/i);
-  assert.match(copy, /does not offer proprietary salon POS hardware/i);
+  assert.match(copy, /not proprietary salon POS hardware/i);
+  assert.match(copy, /pay-on-this-device checkout with tip selection/i);
+  assert.match(copy, /eligible saved-card charges/i);
+  assert.match(copy, /record (?:cash, terminal, or e-transfer|offline) payments/i);
+  assert.match(copy, /relevant workspace settings are configured/i);
+  assert.match(copy, /client CSV import/i);
+  assert.match(copy, /Existing records are not overwritten/i);
+  assert.match(copy, /preview the results/i);
+  assert.match(copy, /capture it with a mobile camera/i);
+  assert.match(copy, /Receipt OCR is not currently offered/i);
   assert.match(copy, /General transactional SMS is not a supported Schedulaa capability/i);
   assert.match(copy, /No automatic GlossGenius migration is promised/i);
   assert.doesNotMatch(copy, /30-day money-back|free automatic migration|guaranteed savings/i);

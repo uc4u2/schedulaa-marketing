@@ -84,15 +84,15 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
       },
       {
         title: 'Service work can continue into estimates, jobs, and billing',
-        body: 'Schedulaa connects supported estimate approval, work orders, reviewed field reports, invoices, and hosted payment links. GlossGenius also offers invoices, so the meaningful distinction is the wider operational workflow rather than invoice availability alone.',
+        body: 'Schedulaa connects supported estimate approval, work orders, reviewed field reports, invoices, hosted payment links, expenses, and receipt records. Managers can upload a receipt or capture it with a mobile camera, then link it to an expense or create a draft expense later. Receipt OCR is not currently offered. GlossGenius also offers invoices, so the meaningful distinction is the wider operational workflow rather than invoice availability alone.',
       },
       {
         title: 'Customer-facing commerce extends beyond in-salon retail',
         body: 'Schedulaa supports a customer catalog, cart, checkout, orders, stock, fulfillment, refunds, and configured shipping. GlossGenius documents inventory, retail checkout, and GeniusShop wholesale purchasing; its GeniusShop FAQ says a customer product store is not currently the purpose of that marketplace.',
       },
       {
-        title: 'Payment and communication boundaries remain explicit',
-        body: 'Schedulaa uses configured Stripe-backed booking, invoice, and product payment flows and does not offer proprietary salon POS hardware. General transactional SMS is not a supported Schedulaa capability, while GlossGenius documents integrated text marketing and notifications.',
+        title: 'Multiple collection paths without proprietary POS hardware',
+        body: 'When Stripe and the relevant workspace settings are configured, Schedulaa supports hosted booking checkout, invoice and payment links, browser-based pay-on-this-device checkout with tip selection, eligible saved-card charges, and product checkout. Managers can also record cash, terminal, or e-transfer payments already received. The pay-on-this-device flow uses Stripe Checkout; it is not proprietary salon POS hardware. General transactional SMS is not a supported Schedulaa capability.',
       },
     ],
     comparisonHeading: 'Schedulaa and GlossGenius side by side',
@@ -124,7 +124,7 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
       },
       {
         label: 'Payments and checkout',
-        schedulaa: 'Configured Stripe-backed booking, invoice, payment-link, and product checkout flows; no proprietary point-of-sale hardware.',
+        schedulaa: 'Configured Stripe-backed booking checkout, invoice and payment links, browser-based pay-on-this-device checkout, eligible saved-card charges, and product checkout. Managers can record offline payments; no proprietary point-of-sale hardware.',
         competitor: 'GlossGenius Payments, deposits, card on file, invoices, Tap to Pay, Buy Now Pay Later, and proprietary card-reader options.',
       },
       {
@@ -139,7 +139,7 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
       },
       {
         label: 'Switching support',
-        schedulaa: 'No automatic GlossGenius migration is promised; scope and test the data and customer journey before cutover.',
+        schedulaa: 'No automatic GlossGenius migration is promised. Template-driven client CSV import supports preview and duplicate checks before creating new records, and existing records are not overwritten.',
         competitor: 'GlossGenius advertises free inbound transfer of appointments, services, inventory, and client lists.',
       },
     ],
@@ -183,6 +183,7 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
     setupChecklist: [
       'List the GlossGenius features you actively use: services, staff, calendars, clients, forms, deposits, marketing, inventory, invoices, payment methods, hardware, and reports.',
       'Confirm which records can be exported or otherwise retained, including future appointments, client notes, service history, balances, inventory, and accounting evidence.',
+      'If you use Schedulaa client CSV import, download its template, preview the results, and review skipped duplicate or invalid rows before committing new client records.',
       'Confirm the Schedulaa plan, roles, add-ons, domain control, Stripe eligibility, and notification boundaries required for the target workflow.',
       'Configure services, eligible providers, availability, customer access, website content, and payment rules in a non-customer test setup.',
       'Test booking, rescheduling, cancellation, payment, invoice, product-order, mobile, and staff-permission scenarios that matter to the business.',
@@ -218,12 +219,12 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
       {
         question: 'Does Schedulaa offer salon POS hardware or text marketing?',
         answer:
-          'Schedulaa does not claim proprietary salon POS hardware or general transactional SMS. Eligible payments use configured Stripe-backed booking, invoice, payment-link, and product flows. GlossGenius documents its own card readers, Tap to Pay, text marketing, and client notifications.',
+          'Schedulaa does not claim proprietary salon POS hardware or general transactional SMS. When configured, its Stripe-backed options include booking checkout, invoice and payment links, browser-based pay-on-this-device checkout with tip selection, eligible saved-card charges, and product checkout. Managers can record offline payments already collected by cash, terminal, or e-transfer. GlossGenius documents its own card readers, Tap to Pay, text marketing, and client notifications.',
       },
       {
         question: 'Can Schedulaa automatically migrate my GlossGenius account?',
         answer:
-          'No automatic migration is promised. Review your services, staff, appointments, client records, forms, inventory, invoices, payment setup, and reporting needs before defining a controlled setup and cutover plan.',
+          'No automatic migration is promised. Schedulaa offers a template-driven client CSV import that previews results, creates new records only, and skips duplicate or invalid rows without overwriting existing records. Services, staff, appointments, forms, inventory, invoices, payment setup, and reporting needs still require a controlled setup and cutover plan.',
       },
       {
         question: 'Which platform is less expensive?',
