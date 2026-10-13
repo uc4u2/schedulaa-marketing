@@ -60,7 +60,7 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
       'Compare GlossGenius alternatives for salon booking, websites, customer records, staff scheduling, invoices, products, and connected operations.',
     h1: 'A GlossGenius alternative for connected salon operations',
     heroImage: {
-      src: '/images/marketing/glossgenius-salon-operations-hero.webp',
+      src: '/images/marketing/glossgenius-salon-operations-hero-v2.webp',
       alt: 'Salon owner reviewing privacy-safe booking and business analytics dashboards at a modern reception desk',
       width: 1586,
       height: 992,

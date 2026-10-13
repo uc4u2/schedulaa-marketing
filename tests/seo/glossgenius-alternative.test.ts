@@ -43,7 +43,7 @@ test('GlossGenius content is commercially complete, evidence-linked, and explici
   assert.ok((content.setupChecklist?.length || 0) >= 5);
   assert.ok(content.faq.length >= 5);
   assert.ok(content.heroImage);
-  assert.match(content.heroImage.src, /glossgenius-salon-operations-hero\.webp$/);
+  assert.match(content.heroImage.src, /glossgenius-salon-operations-hero-v2\.webp$/);
   assert.ok(existsSync(`public${content.heroImage.src}`));
   assert.equal(content.heroImage.width, 1586);
   assert.equal(content.heroImage.height, 992);
