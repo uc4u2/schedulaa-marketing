@@ -55,6 +55,11 @@ test('GlossGenius content is commercially complete, evidence-linked, and explici
   assert.match(copy, /preview the results/i);
   assert.match(copy, /capture it with a mobile camera/i);
   assert.match(copy, /Receipt OCR is not currently offered/i);
+  assert.match(copy, /configured Stripe-backed payment collection/i);
+  assert.match(copy, /segmented email campaigns/i);
+  assert.match(copy, /supported tenant-configured SendGrid provider/i);
+  assert.match(copy, /operational analytics/i);
+  assert.match(copy, /Platform-managed campaign delivery is not generally available/i);
   assert.match(copy, /General transactional SMS is not a supported Schedulaa capability/i);
   assert.match(copy, /No automatic GlossGenius migration is promised/i);
   assert.doesNotMatch(copy, /30-day money-back|free automatic migration|guaranteed savings/i);

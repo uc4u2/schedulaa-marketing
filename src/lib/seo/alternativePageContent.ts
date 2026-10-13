@@ -68,7 +68,7 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
       },
       {
         title: 'Evaluate Schedulaa when the workflow extends beyond the appointment',
-        body: 'Schedulaa is worth testing when you need broader website content, booking and customer records, employee shifts and approved time, estimates, work orders, invoices, payment links, or a customer-facing product checkout connected in one platform.',
+        body: 'Schedulaa is worth testing when you need broader website content, booking and customer records, employee shifts and approved time, estimates, work orders, invoices, configured Stripe-backed payment collection, customer-facing product checkout, operational analytics, and provider-configured email campaigns connected in one platform.',
       },
     ],
     contextHeading: 'Why salons evaluate a GlossGenius alternative',
@@ -93,6 +93,10 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
       {
         title: 'Multiple collection paths without proprietary POS hardware',
         body: 'When Stripe and the relevant workspace settings are configured, Schedulaa supports hosted booking checkout, invoice and payment links, browser-based pay-on-this-device checkout with tip selection, eligible saved-card charges, and product checkout. Managers can also record cash, terminal, or e-transfer payments already received. The pay-on-this-device flow uses Stripe Checkout; it is not proprietary salon POS hardware. General transactional SMS is not a supported Schedulaa capability.',
+      },
+      {
+        title: 'Campaigns and operational analytics stay connected',
+        body: 'On eligible plans, managers can create segmented email campaigns and review campaign analytics through a supported tenant-configured SendGrid provider. Separate operational dashboards cover bookings, revenue, utilization, tips, refunds, lead time, client segments, and related trends. Platform-managed campaign delivery is not generally available to ordinary tenants.',
       },
     ],
     comparisonHeading: 'Schedulaa and GlossGenius side by side',
@@ -126,6 +130,16 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
         label: 'Payments and checkout',
         schedulaa: 'Configured Stripe-backed booking checkout, invoice and payment links, browser-based pay-on-this-device checkout, eligible saved-card charges, and product checkout. Managers can record offline payments; no proprietary point-of-sale hardware.',
         competitor: 'GlossGenius Payments, deposits, card on file, invoices, Tap to Pay, Buy Now Pay Later, and proprietary card-reader options.',
+      },
+      {
+        label: 'Marketing campaigns',
+        schedulaa: 'Eligible plans support segmented email campaigns and campaign analytics through a supported tenant-configured SendGrid provider, with suppression and unsubscribe safeguards.',
+        competitor: 'Built-in email and text marketing, automated campaigns, reminders, and client notifications with capabilities that vary by plan.',
+      },
+      {
+        label: 'Analytics and reporting',
+        schedulaa: 'Plan- and role-dependent dashboards cover bookings, revenue, utilization, tips, refunds, lead time, campaign performance, client summaries, segments, and churn indicators.',
+        competitor: 'Business, sales, client, and team reporting capabilities vary by plan; compare the exact metrics needed by the business.',
       },
       {
         label: 'Estimates, work, and invoices',
@@ -196,7 +210,7 @@ export const alternativePageContent: Record<string, AlternativePageContent> = {
         recommendation: 'Evaluate GlossGenius',
       },
       {
-        scenario: 'You need a broader website plus booking, team scheduling, customer records, estimates, work orders, invoices, and customer-facing product orders.',
+        scenario: 'You need a broader website plus booking, team scheduling, customer records, configured Stripe-backed payment collection, estimates, work orders, invoices, product orders, operational analytics, and provider-configured email campaigns.',
         recommendation: 'Evaluate Schedulaa',
       },
       {
