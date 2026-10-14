@@ -156,18 +156,6 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
           </div>
         </div>
 
-        <PlanFinderModal
-          locale={locale}
-          comparePlansHref="#plans"
-          content={experience.planFinder}
-          plans={displayPlans}
-          setupServices={experience.websiteSetupServices}
-          planHrefFor={planHrefFor}
-          basicSetupHref={basicSetupHref}
-          growthSetupHref={growthSetupHref}
-          premiumSetupHref={premiumSetupHref}
-        />
-
         <div className="rounded-2xl border border-stroke-2 bg-white p-4 text-sm dark:border-stroke-7 dark:bg-background-8">
           <span dangerouslySetInnerHTML={{ __html: pricingSource.ribbon.message }} />
         </div>
@@ -190,6 +178,7 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
             <span className={billingInterval === 'annual' ? 'text-secondary dark:text-white' : 'text-secondary/60 dark:text-accent/60'}>
               {tPricing('yearly')}
             </span>
+            <span className="badge badge-cyan whitespace-nowrap">{tPricing('twoMonthsFree')}</span>
           </label>
         </div>
 
@@ -264,6 +253,18 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
             </article>
           ))}
         </div>
+
+        <PlanFinderModal
+          locale={locale}
+          comparePlansHref="#plans"
+          content={experience.planFinder}
+          plans={displayPlans}
+          setupServices={experience.websiteSetupServices}
+          planHrefFor={planHrefFor}
+          basicSetupHref={basicSetupHref}
+          growthSetupHref={growthSetupHref}
+          premiumSetupHref={premiumSetupHref}
+        />
 
         <div className="rounded-3xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">

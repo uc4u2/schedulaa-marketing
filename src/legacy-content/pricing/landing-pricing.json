@@ -1,22 +1,22 @@
 {
   "meta": {
-    "title": "Schedulaa Pricing | Launch on your own domain with automatic SSL",
-    "description": "Compare Starter, Pro, and Business plans. All plans include a custom domain with automatic SSL, plus booking and website essentials, with scheduling, payroll, and automation on Pro and Business.",
+    "title": "Schedulaa Pricing | Website, online booking, and payments",
+    "description": "Compare Starter, Pro, and Business. Every plan includes a website, online booking, and Stripe payments. Pro adds staff scheduling and payroll-ready reports. Business adds estimates, invoices, and job tracking.",
     "canonical": "https://www.schedulaa.com/pricing",
     "keywords": "Schedulaa pricing, booking software pricing, payroll SaaS pricing, website builder plans",
     "og": {
       "title": "Schedulaa Pricing",
-      "description": "Plans for every stage. Launch on your own domain with automatic SSL included on every plan.",
+      "description": "Website, online booking, and payments. See Starter, Pro, and Business prices before you choose.",
       "image": "https://www.schedulaa.com/og/pricing.jpg"
     }
   },
   "hero": {
-    "eyebrow": "Pricing that scales",
+    "eyebrow": "Simple pricing",
     "title": [
-      "Pricing that grows with you.",
-      "Launch on your own domain with automatic SSL."
+      "Website, online booking, and payments.",
+      "Pick the plan that fits your team."
     ],
-    "subtitle": "Custom domains (TXT/CNAME) with automatic SSL are included on every plan. Start with Starter for website + booking, then add staff scheduling, payroll, and automations on Pro and Business.",
+    "subtitle": "Starter covers a website, online booking, and Stripe payments for a solo business. Pro adds staff scheduling and payroll-ready reports. Business adds estimates, invoices, and job tracking.",
     "primaryCta": {
       "label": "Start free trial"
     },
@@ -49,7 +49,8 @@
             "Public booking link and embeddable widgets.",
             "Basic reports and CSV/PDF exports.",
             "1 staff seat and 1 location included.",
-            "Custom domain and automatic SSL included."
+            "Extra staff seats are not available on Starter.",
+            "Your own domain, with SSL included."
           ],
           "ctaLabel": "Start 14-day free trial",
           "ctaTo": "/register",
@@ -67,9 +68,10 @@
             "Staff scheduling and shared calendars.",
             "Clock-in, clock-out, and break rules.",
             "Overtime and anomaly flags.",
-            "Payroll-ready reports and approval trails.",
+            "Payroll-ready reports and approval history.",
             "Role-based access for managers and staff.",
-            "Up to 5 staff seats and 1 location included."
+            "Up to 5 staff seats and 1 location included.",
+            "Extra staff seats are $9 per seat each month."
           ],
           "ctaLabel": "Start 14-day free trial",
           "ctaTo": "/register",
@@ -89,7 +91,9 @@
             "Work orders and job assignments.",
             "Field reports with manager review.",
             "Expenses, purchases, materials, inventory, and vendors.",
-            "Profitability, tax summary, and month-end review."
+            "Profitability, tax summary, and month-end review.",
+            "10 staff seats and up to 5 locations included.",
+            "Extra staff seats are $9 per seat each month."
           ],
           "ctaLabel": "Book a demo",
           "ctaTo": "/register",
@@ -116,7 +120,7 @@
   "assurances": {
     "eyebrow": "Everything you need",
     "title": "Transparent pricing for connected operations",
-    "subtitle": "Secure, scalable, and fast: launch branded sites, process payments, and automate payroll from one login.",
+    "subtitle": "A website, online booking, and payments in one place, with payroll-ready reports when you add a team.",
     "items": [
       {
         "key": "noHiddenFees",
@@ -151,7 +155,7 @@
     ]
   },
   "ribbon": {
-    "message": "<strong>New:</strong> Custom domains (TXT/CNAME) with automatic SSL are included on every plan.",
+    "message": "<strong>14-day free trial</strong> on every plan. No credit card to start. Pay yearly and get <strong>2 months free</strong>.",
     "buttonLabel": "Connect domain",
     "buttonTo": "/manager/dashboard"
   },
@@ -161,7 +165,7 @@
   "ctaBanner": {
     "eyebrow": "Launch today",
     "title": "Start your free trial - no credit card required",
-    "description": "Bring scheduling, payments, and payroll into one workspace with automatic SSL on your domain.",
+    "description": "Start with your website, online booking, and payments. Add scheduling and payroll-ready reports when the team grows.",
     "primaryCta": {
       "label": "Start free trial"
     },
@@ -172,7 +176,7 @@
   "included": {
     "title": "Included in every plan",
     "items": [
-      "Custom domains with automatic SSL.",
+      "Your own domain, with SSL included.",
       "Role-based access and staff permissions.",
       "Email and booking notifications.",
       "Secure Stripe payments with refunds.",
@@ -295,9 +299,9 @@
   "whyTeams": {
     "title": "Why teams choose Schedulaa",
     "items": [
-      "Booking, payroll, time tracking, and websites share one data model.",
-      "No syncing errors between shifts, hours, and pay.",
-      "Fewer compliance gaps from disconnected tools."
+      "Your website, bookings, staff time, and payroll-ready reports stay in one Schedulaa account.",
+      "Hours used for payroll-ready reports come from the same clock-in records.",
+      "Fewer handoffs between the booking page and the back office."
     ]
   },
   "websiteDesignService": {
@@ -322,7 +326,8 @@
           "Public booking link and embeddable widgets.",
           "Basic reports and CSV/PDF exports.",
           "1 staff seat and 1 location included.",
-          "Custom domain and automatic SSL included."
+          "Extra staff seats are not available on Starter.",
+          "Your own domain, with SSL included."
         ],
         "ctaLabel": "Start 14-day free trial",
         "ctaTo": "/register",
@@ -340,9 +345,10 @@
           "Staff scheduling and shared calendars.",
           "Clock-in, clock-out, and break rules.",
           "Overtime and anomaly flags.",
-          "Payroll-ready reports and approval trails.",
+          "Payroll-ready reports and approval history.",
           "Role-based access for managers and staff.",
-          "Up to 5 staff seats and 1 location included."
+          "Up to 5 staff seats and 1 location included.",
+          "Extra staff seats are $9 per seat each month."
         ],
         "ctaLabel": "Start 14-day free trial",
         "ctaTo": "/register",
@@ -362,7 +368,9 @@
           "Work orders and job assignments.",
           "Field reports with manager review.",
           "Expenses, purchases, materials, inventory, and vendors.",
-          "Profitability, tax summary, and month-end review."
+          "Profitability, tax summary, and month-end review.",
+          "10 staff seats and up to 5 locations included.",
+          "Extra staff seats are $9 per seat each month."
         ],
         "ctaLabel": "Book a demo",
         "ctaTo": "/register",
@@ -450,7 +458,7 @@
     },
     "comparison": {
       "title": "Schedulaa Feature Comparison",
-      "subtitle": "Compare plans at a glance.",
+      "subtitle": "See what each plan includes. Estimates and invoices are on the Business plan.",
       "headers": {
         "feature": "Feature",
         "starter": "Starter",
@@ -466,9 +474,9 @@
         },
         "bestFor": {
           "label": "Best for",
-          "starter": "Simple website, booking, and service catalogs",
-          "pro": "Teams that need scheduling and employee workflows",
-          "business": "Quote-to-invoice operations and finance-ready reporting"
+          "starter": "Solo owners who need a website, booking, and payments",
+          "pro": "Small teams that schedule staff",
+          "business": "Businesses that send estimates and invoices"
         }
       },
       "sections": [
@@ -482,7 +490,7 @@
               "business": "Yes"
             },
             {
-              "label": "Custom domain + automatic SSL",
+              "label": "Your own domain, with SSL included",
               "starter": "Yes",
               "pro": "Yes",
               "business": "Yes"
@@ -500,7 +508,7 @@
               "business": "Yes"
             },
             {
-              "label": "Company-level branding",
+              "label": "Company-wide branding",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
@@ -541,7 +549,7 @@
               "business": "Yes"
             },
             {
-              "label": "Bulk scheduling controls",
+              "label": "Update many shifts at once",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
@@ -552,31 +560,31 @@
           "section": "Time Tracking",
           "items": [
             {
-              "label": "Shift-based clock-in / clock-out",
+              "label": "Clock in and out for each shift",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Break policy enforcement",
+              "label": "Required breaks are checked",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Staggered & windowed breaks",
+              "label": "Breaks can start at different times",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "IP / device audit hints",
+              "label": "Clock-in device and network shown to managers",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Overtime & anomaly flags",
+              "label": "Flags for overtime and unusual hours",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
@@ -584,34 +592,34 @@
           ]
         },
         {
-          "section": "Payroll & compliance",
+          "section": "Payroll-ready reports",
           "items": [
             {
-              "label": "Payroll-ready workflows",
+              "label": "Payroll-ready hours and approvals",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Automated holiday pay and accrual support",
+              "label": "Holiday pay and time-off balances, where supported",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Payslip PDFs and payroll handoff files",
+              "label": "Payslip PDFs and files for your payroll provider",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Export-ready payroll records",
+              "label": "Downloadable payroll records",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
             },
             {
-              "label": "Payroll-backed billing support",
+              "label": "Invoices created from finalized payroll",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
@@ -634,6 +642,12 @@
               "business": "Yes"
             },
             {
+              "label": "Invoices and payment links",
+              "starter": "—",
+              "pro": "—",
+              "business": "Yes"
+            },
+            {
               "label": "Work orders",
               "starter": "—",
               "pro": "—",
@@ -646,7 +660,7 @@
               "business": "Yes"
             },
             {
-              "label": "Manager review approvals",
+              "label": "A manager reviews the job report",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
@@ -705,19 +719,19 @@
               "business": "Yes"
             },
             {
-              "label": "US W-2 support files",
+              "label": "W-2 files for supported US states",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
             },
             {
-              "label": "Canadian T4 and ROE export support",
+              "label": "Canadian T4 and ROE files (not Quebec)",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
             },
             {
-              "label": "Compliance-ready audit trails",
+              "label": "A record of who approved what",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
@@ -734,19 +748,19 @@
               "business": "Yes"
             },
             {
-              "label": "Utilization & productivity analytics",
+              "label": "How busy your team is",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Client segmentation & trends",
+              "label": "Client groups and booking trends",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Multi-location (department) analytics",
+              "label": "Reports across locations",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
@@ -763,19 +777,19 @@
               "business": "Yes"
             },
             {
-              "label": "Email campaigns (VIP, Win-back, No-show)",
+              "label": "Email campaigns for regulars, win-backs, and no-shows",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Zapier automation",
+              "label": "Zapier connection",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
             },
             {
-              "label": "Workflow automations",
+              "label": "Automatic workflows",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
@@ -804,7 +818,7 @@
               "business": "Yes"
             },
             {
-              "label": "Hiring → payroll handoff",
+              "label": "New hire details ready for payroll",
               "starter": "—",
               "pro": "Yes",
               "business": "Yes"
@@ -822,12 +836,12 @@
             },
             {
               "label": "Additional staff seats",
-              "starter": "—",
+              "starter": "Not on Starter",
               "pro": "$9 / seat",
               "business": "$9 / seat"
             },
             {
-              "label": "Multi-location support (operational locations managed through departments)",
+              "label": "Locations included",
               "starter": "1",
               "pro": "1",
               "business": "Up to 5"
@@ -839,7 +853,7 @@
               "business": "Advanced"
             },
             {
-              "label": "Branch-level permissions",
+              "label": "Permissions by location",
               "starter": "—",
               "pro": "—",
               "business": "Yes"
@@ -1316,11 +1330,11 @@
         },
         {
           "question": "Does Schedulaa process payroll?",
-          "answer": "Schedulaa helps teams prepare payroll-ready records, approvals, payslip PDFs, and export files. It does not replace a licensed payroll provider, accountant, or tax filing service unless a supported provider integration is used."
+          "answer": "Schedulaa prepares payroll-ready calculations, payslip PDFs, and export files from approved hours. It does not replace a payroll provider, accountant, or tax filing service. Canada payroll excludes Quebec. Full US finalization is limited to supported states."
         },
         {
           "question": "What is included with annual billing?",
-          "answer": "Annual billing gives you the same plan features prepaid yearly, with about two months free compared with monthly billing."
+          "answer": "Yearly billing is the monthly price times 10: $199.90 for Starter, $499.90 for Pro, and $1,199.90 for Business. That is 2 months free."
         }
       ]
     }
