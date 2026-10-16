@@ -18,7 +18,7 @@ repository because URL-level Search Console exports are operational data.
 - `/zh/alternatives` returns a permanent redirect to `/en/alternatives`.
 - `/ar/business-finance` remains a live approved localized route under the locale matrix.
 - The four English content URLs listed above return HTTP 200 and self-canonicalize.
-- Before this change, locale sitemap aliases such as `/en/sitemap.xml` returned duplicate XML content. The middleware now permanently redirects them to the canonical `/sitemap.xml`.
+- Before this change, locale sitemap aliases such as `/en/sitemap.xml` returned duplicate XML content. Next.js redirect rules now permanently redirect them to the canonical `/sitemap.xml` before static sitemap handling.
 
 ## Video indexing
 

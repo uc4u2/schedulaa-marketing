@@ -43,6 +43,11 @@ const nextConfig: NextConfig = {
         destination: '/en/resources/schedulaa-vs-quickbooks-payroll',
         permanent: true,
       })),
+      ...LOCALES.map((locale) => ({
+        source: `/${locale}/sitemap.xml`,
+        destination: '/sitemap.xml',
+        permanent: true,
+      })),
     ];
   },
   images: {
