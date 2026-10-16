@@ -29,6 +29,7 @@ export const STATIC_ROUTES = [
   '/website-builder',
   '/business-finance',
   '/business-finance/invoices',
+  '/dispatch',
   '/commerce',
   '/mobile-app',
   '/industries',

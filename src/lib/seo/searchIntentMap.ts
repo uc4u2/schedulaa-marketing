@@ -80,9 +80,9 @@ export const SEARCH_INTENT_MAP: SearchIntentEntry[] = [
   {
     key: 'dispatch-work-orders',
     label: 'Dispatch and work orders',
-    intent: 'Assign service work, track trip-scoped dispatch status, and connect field completion to billing.',
-    path: '/industries/hvac',
-    relatedPaths: ['/workforce', '/business-finance/invoices'],
+    intent: 'Assign work orders, track not started, on my way, and arrived, and share the latest On my way location with the client.',
+    path: '/dispatch',
+    relatedPaths: ['/workforce', '/business-finance/invoices', '/industries/hvac'],
   },
   {
     key: 'payroll-tax-reporting',

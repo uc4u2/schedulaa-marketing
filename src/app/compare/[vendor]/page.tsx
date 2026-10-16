@@ -36,6 +36,9 @@ function getContextCta(entry: any) {
     .join(' ')
     .toLowerCase();
 
+  if (/(jobber)/.test(competitor)) {
+    return { href: '/dispatch', label: 'Explore dispatch and work orders' };
+  }
   if (/(vagaro|acuity|square appointments|hubspot meetings|calendly|booksy|setmore|simplybook)/.test(competitor)) {
     return { href: '/booking', label: 'Explore booking' };
   }
@@ -214,7 +217,8 @@ export default async function CompareVendorPage({ params }: { params: Promise<{ 
     entry.key === 'adp' ||
     entry.key === 'when-i-work' ||
     entry.key === 'square-appointments' ||
-    entry.key === 'xero';
+    entry.key === 'xero' ||
+    entry.key === 'jobber';
   const breadcrumbScriptId =
     entry.key === 'gusto'
       ? 'compare-gusto-breadcrumb-jsonld'

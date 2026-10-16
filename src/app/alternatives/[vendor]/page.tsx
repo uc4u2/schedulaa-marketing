@@ -335,7 +335,7 @@ export default async function AlternativesVendorPage({ params }: { params: Promi
 
         {content?.sources?.length ? (
           <div className="mt-8 rounded-[20px] bg-white p-6 shadow-2 dark:bg-background-8 md:p-8">
-            <h2 className="text-2xl font-semibold">GlossGenius sources reviewed</h2>
+            <h2 className="text-2xl font-semibold">{content.competitor} sources reviewed</h2>
             <p className="mt-3 text-sm leading-6 text-secondary/70 dark:text-accent/70">
               Material competitor statements use current first-party documentation. Products, plans, and prices can change, so verify purchase-critical requirements directly.
             </p>

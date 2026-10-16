@@ -33,13 +33,13 @@ export default function HvacLandingPage() {
   const storySections = [
     {
       eyebrow: 'Dispatch + work orders',
-      title: 'Run dispatch, ETA, assignments, and field proof from the same live job record.',
+      title: 'Run dispatch, assignments, and field proof from the same live job record.',
       body:
-        'Dispatchers should not jump between texts, maps, and work-order notes to figure out who is on the way. Schedulaa keeps route context, customer ETA links, assignments, instructions, photos, and work-order actions connected to one source of truth.',
+        'Dispatchers should not jump between texts, maps, and work-order notes to figure out who is on the way. Schedulaa keeps route preview, the latest On my way location, assignments, instructions, and work-order actions on one job. An optional email can send the client that tracking link. It is not all-day tracking, and it does not send arrival alerts, SMS, or employer alerts.',
       bullets: [
-        'Road-aware route preview and customer ETA links',
-        'Assignments by day and technician',
-        'Photos, notes, and work-order status in one place',
+        'Route preview and a client tracking link for the latest On my way location',
+        'Trip status: not started, on my way, and arrived',
+        'Field Photos add-on images, notes, and work-order status in one place',
       ],
       image: hvac555Img,
       imageAlt: 'Schedulaa dispatch and work order management for HVAC jobs',
@@ -51,7 +51,7 @@ export default function HvacLandingPage() {
         'Field-service owners need hours, trips, estimates, invoices, and payments to stay connected. Schedulaa gives technicians route preview and time tracking from the employee workspace while the office keeps billing attached to the same operational flow.',
       bullets: [
         'Employee route preview and job-linked time tracking',
-        'Estimate follow-up, invoice handoff, and online payment',
+        'One-click payment reminders, template follow-up emails, and online payment',
         'Cleaner payroll and billing follow-through',
       ],
       image: hvac333Img,
@@ -119,7 +119,7 @@ export default function HvacLandingPage() {
                     Service-team proof
                   </span>
                   <blockquote className="max-w-[620px] text-[24px] font-semibold leading-[1.45] text-white md:text-[30px]">
-                    “Dispatch, work orders, ETA updates, photos, and billing only help if the office and the field are working from the same job.”
+                    “Dispatch, work orders, On my way updates, and billing only help if the office and the field are working from the same job.”
                   </blockquote>
                   <div className="text-[15px] leading-7 text-white/72">
                     Schedulaa is strongest when the same customer request can move from estimate to dispatch to payment without the team rebuilding context in separate apps.
@@ -283,6 +283,9 @@ export default function HvacLandingPage() {
                 </Link>
                 <Link href={withLocalePath('/business-finance/invoices', locale)} className="text-primary-500 underline underline-offset-4">
                   Estimates, invoices, and payment links
+                </Link>
+                <Link href={withLocalePath('/dispatch', locale)} className="text-primary-500 underline underline-offset-4">
+                  Dispatch and work orders
                 </Link>
               </div>
             </article>

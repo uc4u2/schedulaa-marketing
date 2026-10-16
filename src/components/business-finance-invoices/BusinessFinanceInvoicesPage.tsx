@@ -2,6 +2,7 @@
 
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import { getBusinessFinanceInvoicesCopy } from '@/components/business-finance-invoices/localeCopy';
+import { LIVE_TRIP_GPS, ON_MY_WAY_EMAIL, PAYMENT_REMINDERS } from '@/components/dispatch/claims';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 import invoiceDetailImg from '@public/images/marketing/booking-checkout-invoice-detail.png';
@@ -82,6 +83,7 @@ export default function BusinessFinanceInvoicesPage() {
   const copy = getBusinessFinanceInvoicesCopy(locale);
   const returnTo = marketingReturnTo(locale, '/business-finance/invoices');
   const businessFinanceHref = withLocalePath('/business-finance', locale);
+  const dispatchHref = withLocalePath('/dispatch', locale);
   const canonical = `${SITE_URL}/${locale}${copy.meta.canonicalPath}`;
 
   const faqJsonLd = {
@@ -130,7 +132,10 @@ export default function BusinessFinanceInvoicesPage() {
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
     },
-    featureList: copy.features.items.map((item) => item.title),
+    featureList: [
+      ...copy.features.items.map((item) => item.title),
+      ...(locale === 'en' ? ['Trip GPS', 'On my way email', 'Payment reminders'] : []),
+    ],
   };
 
   const heroStats =
@@ -138,14 +143,22 @@ export default function BusinessFinanceInvoicesPage() {
       ? ['Estimate to invoice', 'Repeat billing', 'Month-end review']
       : ['Estimate to invoice', 'Repeat billing', 'Month-end review'];
   const painPoints = locale === 'en' ? copy.pain.points.slice(0, 3) : copy.pain.points;
-  const workflowSteps = locale === 'en' ? copy.workflow.steps.slice(0, 4) : copy.workflow.steps;
-  const featureItems = locale === 'en' ? copy.features.items.slice(0, 4) : copy.features.items;
+  const workflowSteps = locale === 'en' ? [...copy.workflow.steps.slice(0, 4), 'One-click payment reminder'] : copy.workflow.steps;
+  const featureItems =
+    locale === 'en'
+      ? [
+          ...copy.features.items.slice(0, 4),
+          { title: 'Trip GPS', body: LIVE_TRIP_GPS },
+          { title: 'On my way email', body: ON_MY_WAY_EMAIL },
+          { title: 'Payment reminders', body: PAYMENT_REMINDERS },
+        ]
+      : copy.features.items;
   const faqItems = locale === 'en' ? copy.faq.items.slice(0, 4) : copy.faq.items;
   const heroTitle =
     locale === 'en' ? 'Run estimates, invoices, and payment links from one finance workflow.' : copy.hero.title;
   const heroSubtitle =
     locale === 'en'
-      ? 'Move from approval to invoice, payment collection, and month-end review without rebuilding the same client record in separate tools.'
+      ? 'Move from approval to invoice, a one-click payment reminder, and month-end review without rebuilding the same client record in separate tools.'
       : copy.hero.subtitle;
 
   return (
@@ -357,6 +370,9 @@ export default function BusinessFinanceInvoicesPage() {
                   </Link>
                   <Link href={businessFinanceHref} className="btn btn-white btn-md min-w-[170px] dark:btn-transparent">
                     {copy.cta.secondaryCta}
+                  </Link>
+                  <Link href={dispatchHref} className="text-primary-500 underline underline-offset-4">
+                    Dispatch and work orders
                   </Link>
                 </div>
               </div>

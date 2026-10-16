@@ -34,6 +34,7 @@ This matrix records whether the visible route content has a real locale-specific
 | marketing subpages | Y | N | N | N | N | N | N | N | N |
 | payroll country/tool subpages | Y | N | N | N | N | N | N | N | N |
 | finance invoice subpage | Y | N | N | N | N | N | N | N | N |
+| `/dispatch` | Y | N | N | N | N | N | N | N | N |
 | legal/policy routes | Y | N | N | N | N | N | N | N | N |
 | resources, webinar and domain-help routes | Y | N | N | N | N | N | N | N | N |
 | compare and alternative routes | Y | N | N | N | N | N | N | N | N |

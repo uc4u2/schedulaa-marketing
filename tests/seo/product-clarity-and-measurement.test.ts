@@ -17,7 +17,7 @@ test('platform overview explains verified workflows and explicit product boundar
   assert.match(source, /Draft to preview and published website/);
   assert.match(source, /not advertised as full two-way calendar synchronization/);
   assert.match(source, /not replace a double-entry accounting ledger/);
-  assert.match(source, /not continuous fleet tracking/);
+  assert.match(source, /not all-day tracking, GPS history, geofencing/);
   assert.match(source, /Customers purchase and retain ownership of their own domain/);
 });
 

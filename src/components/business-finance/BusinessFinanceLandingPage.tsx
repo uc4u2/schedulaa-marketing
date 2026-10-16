@@ -3,6 +3,14 @@
 import AnimatedSection from '@/components/shared/motion/AnimatedSection';
 import YouTubeFacade from '@/components/shared/media/YouTubeFacade';
 import { getBusinessFinanceCopy } from '@/components/business-finance/localeCopy';
+import {
+  CLIENT_DOCUMENTS,
+  DISPATCH_STATUS,
+  FIELD_PHOTOS,
+  LIVE_TRIP_GPS,
+  ON_MY_WAY_EMAIL,
+  PAYMENT_REMINDERS,
+} from '@/components/dispatch/claims';
 import { getTutorialModule } from '@/data/tutorials/tutorialCatalog';
 import { buildAppUrl, marketingReturnTo } from '@/utils/appLinks';
 import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
@@ -58,6 +66,7 @@ export default function BusinessFinanceLandingPage() {
   const locale = detectLocaleFromPath(pathname);
   const returnTo = marketingReturnTo(locale, '/business-finance');
   const invoicesPageHref = withLocalePath('/business-finance/invoices', locale);
+  const dispatchPageHref = withLocalePath('/dispatch', locale);
   const copy = getBusinessFinanceCopy(locale);
   const tutorialModule = getTutorialModule('business_finance');
   const featuredVideo = tutorialModule?.items.find((item) => item.key === tutorialModule.featuredKey) || tutorialModule?.items[0] || null;
@@ -87,14 +96,17 @@ export default function BusinessFinanceLandingPage() {
           'Capture quote requests and link them to the right client fast.',
           'Send estimates, track approval, and convert directly to invoice.',
           'Keep hosted payment links and payment status attached to the same finance record.',
+          PAYMENT_REMINDERS,
         ]
       : copy.payments.cards.slice(0, 3).map((card) => card.title);
 
   const jobsAndReviewBullets =
     locale === 'en'
       ? [
-          'Turn approved work into scheduled jobs with instructions and planned materials.',
-          'Collect employee field updates and photos against the same work order.',
+          DISPATCH_STATUS,
+          LIVE_TRIP_GPS,
+          ON_MY_WAY_EMAIL,
+          FIELD_PHOTOS,
           'Let managers review materials, close the job, and keep reporting cleaner before month-end.',
         ]
       : copy.modules.cards.slice(3, 6).map((card) => card.title);
@@ -113,6 +125,18 @@ export default function BusinessFinanceLandingPage() {
           {
             title: 'Billing + month-end',
             body: 'Invoices, payment links, refunds, and reporting stay visible without rebuilding the job in another tool.',
+          },
+          {
+            title: 'Trip GPS',
+            body: LIVE_TRIP_GPS,
+          },
+          {
+            title: 'On my way email',
+            body: ON_MY_WAY_EMAIL,
+          },
+          {
+            title: 'Client and employee documents',
+            body: CLIENT_DOCUMENTS,
           },
         ]
       : copy.modules.cards.slice(0, 3).map((card) => ({ title: card.title, body: card.body }));
@@ -254,6 +278,9 @@ export default function BusinessFinanceLandingPage() {
                     Keep dispatch, assignments, planned materials, and close-out tied to one live job instead of rebuilding context later.
                   </p>
                   <BulletList items={jobsAndReviewBullets} />
+                  <Link href={dispatchPageHref} className="inline-flex text-primary-500 underline underline-offset-4">
+                    Explore dispatch and work orders
+                  </Link>
                 </div>
               </div>
             </article>

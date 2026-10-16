@@ -1,3 +1,5 @@
+import { jobberComparisonPage } from '@/lib/seo/jobberComparisonContent';
+
 type ComparisonRow = {
   label: string;
   schedulaa: string;
@@ -312,6 +314,7 @@ export const comparisonPageContent: Record<string, ComparisonPageOverride> = {
       { label: 'Review invoices and payment links', href: '/business-finance/invoices' },
     ],
   },
+  jobber: jobberComparisonPage,
 };
 
 export function getComparisonPageContent(vendor: string): ComparisonPageOverride | undefined {
