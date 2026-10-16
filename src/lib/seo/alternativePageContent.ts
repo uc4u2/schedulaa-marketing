@@ -1,3 +1,5 @@
+import { jobberAlternativePage } from '@/lib/seo/jobberComparisonContent';
+
 export type AlternativeComparisonRow = {
   label: string;
   schedulaa: string;
@@ -53,6 +55,7 @@ export type AlternativePageContent = {
 };
 
 export const alternativePageContent: Record<string, AlternativePageContent> = {
+  jobber: jobberAlternativePage,
   glossgenius: {
     competitor: 'GlossGenius',
     title: 'GlossGenius Alternatives for Salons | Schedulaa',

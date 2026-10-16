@@ -36,9 +36,9 @@ const workflows = [
   {
     title: 'Work order to field report and invoice',
     description:
-      'Assign work to employees, track trip-scoped dispatch statuses, capture field reports, and continue the job into invoicing without re-entering customer details.',
-    href: '/features',
-    link: 'Explore field operations',
+      'Assign work orders, track not started, on my way, and arrived, show the latest On my way location, and continue the job into invoicing without re-entering customer details.',
+    href: '/dispatch',
+    link: 'Explore dispatch and work orders',
   },
   {
     title: 'Product to order and fulfillment',
@@ -85,7 +85,7 @@ const boundaries = [
   },
   {
     title: 'Dispatch and ETA sharing',
-    body: 'Dispatch supports trip-scoped status updates and a temporary customer ETA link—not continuous fleet tracking, route history, or turn-by-turn navigation.',
+    body: 'Dispatch uses trip-scoped statuses, a manager board, activity, and route preview. Live GPS is only the latest point while a job is On my way, shown on that board and the client tracking link. An optional email can send that link to the client. It is not all-day tracking, GPS history, geofencing, an arrival alert, SMS, or an employer alert.',
   },
   {
     title: 'Domains and email',

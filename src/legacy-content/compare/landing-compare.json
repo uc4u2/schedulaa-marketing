@@ -2890,6 +2890,71 @@
       }
     ]
   },
+  "jobber": {
+    "pageTypes": ["compare", "alternatives"],
+    "competitor": "Jobber",
+    "metaTitle": "Schedulaa vs Jobber | Home Service Comparison",
+    "metaDescription": "Compare Schedulaa vs Jobber on price, seats, salon booking, dispatch GPS, websites, invoices, and payroll-ready reporting for service teams.",
+    "heroTitle": "Schedulaa vs Jobber for home service and salons",
+    "heroSubtitle": "Jobber is built for home-service and contractor businesses. Schedulaa connects booking, a branded website, dispatch, invoices, and payroll-ready reporting, including appointment businesses.",
+    "hook": "Jobber automates contractor follow-ups. Schedulaa keeps booking, dispatch, and payroll-ready work in one account.",
+    "intro": [
+      "Jobber Core starts at $49 per month with no commitment for one user. Schedulaa Starter is $19.99 per month."
+    ],
+    "quickDecision": [
+      {
+        "title": "Choose Jobber when",
+        "body": "You want home-service quoting with automated invoice follow-ups, QuickBooks sync, or Tap to Pay in the mobile app."
+      },
+      {
+        "title": "Evaluate Schedulaa when",
+        "body": "You want lower seat pricing, salon booking, a custom-domain website, trip-scoped On my way GPS, and payroll-ready documents without automatic invoice chasing."
+      }
+    ],
+    "executiveOverview": {
+      "headers": ["Decision area", "Schedulaa", "Jobber"],
+      "rows": [
+        {
+          "label": "Follow-up",
+          "schedulaa": "One-click payment reminders and follow-up emails from templates. No automatic invoice or quote chasing.",
+          "competitor": "Connect and above include automated quote and invoice follow-ups."
+        }
+      ]
+    },
+    "differentiators": [
+      {
+        "title": "Trip-scoped GPS",
+        "body": "Live GPS is only the latest location while a work order is On my way."
+      }
+    ],
+    "fitMatrix": [
+      {
+        "scenario": "You need Tap to Pay or automated follow-ups.",
+        "recommendation": "Evaluate Jobber"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does Jobber offer Tap to Pay?",
+        "answer": "Yes. Tap to Pay in the Jobber mobile app needs no hardware."
+      }
+    ],
+    "conclusion": "Compare Jobber’s contractor automation with Schedulaa’s booking, dispatch, website, and payroll-ready workflows.",
+    "relatedLinks": [
+      { "label": "Research Jobber alternatives", "href": "/alternatives/jobber" },
+      { "label": "Explore dispatch and work orders", "href": "/dispatch" }
+    ],
+    "setupChecklist": [
+      "List the Jobber plan you use today and which Connect or Grow features you actually run.",
+      "Confirm whether you need automated quote and invoice follow-ups. Schedulaa sends one-click reminders and template emails instead.",
+      "Test an On my way email and confirm it goes only to the client, with no arrival, SMS, or employer alert.",
+      "Check included seats, the $9 Schedulaa extra-seat price, and Jobber’s $29 extra-user price.",
+      "Review payroll filing separately. Schedulaa does not file or remit, and Jobber payroll runs in Gusto."
+    ],
+    "sources": [
+      { "label": "Jobber pricing", "href": "https://www.getjobber.com/pricing" }
+    ]
+  },
   "glossgenius": {
     "pageTypes": [
       "alternatives"

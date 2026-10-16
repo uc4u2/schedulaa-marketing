@@ -71,6 +71,9 @@ export default function FeaturesForexLayout({ locale }: Props) {
             <Link href={withLocalePath('/business-finance/invoices', locale)} className="text-primary-500 underline">
               Invoices & Payments
             </Link>
+            <Link href={withLocalePath('/dispatch', locale)} className="text-primary-500 underline">
+              Dispatch and work orders
+            </Link>
             <Link href={withLocalePath('/workforce', locale)} className="text-primary-500 underline">
               Staff Scheduling
             </Link>

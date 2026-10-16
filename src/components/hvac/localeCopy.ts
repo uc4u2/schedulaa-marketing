@@ -50,19 +50,19 @@ type HvacCopy = {
 
 const en: HvacCopy = {
   meta: {
-    title: 'Schedulaa for HVAC Companies | Dispatch, Work Orders, ETA, Invoices',
+    title: 'Schedulaa for HVAC Companies | Dispatch, Work Orders, Invoices',
     description:
-      'Run dispatch, technicians, work orders, estimates, invoices, payments, and customer ETA tracking from one HVAC operations platform.',
+      'Run dispatch, technicians, work orders, estimates, invoices, payments, and On my way location sharing from one HVAC operations platform.',
   },
   hero: {
     badge: 'Schedulaa for HVAC Companies',
     title: 'Run your HVAC operation from one dashboard instead of five disconnected apps.',
     description:
-      'Schedulaa gives HVAC owners and dispatchers one operating system for technicians, work orders, estimates, invoices, payments, employee management, and customer ETA updates. Stop stitching together CRM, dispatch, payroll, and website tools just to get through the day.',
+      'Schedulaa gives HVAC owners and dispatchers one operating system for technicians, work orders, estimates, invoices, payments, employee management, and On my way location sharing. Stop stitching together CRM, dispatch, payroll, and website tools just to get through the day.',
     primaryCta: 'Book HVAC demo',
     secondaryCta: 'Start free',
     chips: [
-      'Dispatch + work orders + technician ETA',
+      'Dispatch + work orders + On my way location',
       'Estimates, invoices, and online payments',
       'Employee management and time tracking',
       'Customer-ready booking and communication',
@@ -77,11 +77,11 @@ const en: HvacCopy = {
     badge: 'Why owners pay attention',
     title: 'The problem is not missing software. The problem is too many disconnected workflows.',
     description:
-      'HVAC owners do not need another generic booking widget. They need a faster way to see who is available, which technician is on the way, what the customer approved, what photos were uploaded, and whether the invoice was sent and paid.',
+      'HVAC owners do not need another generic booking widget. They need a faster way to see who is available, which technician is On my way, what the customer approved, which Field Photos were uploaded, and whether the invoice was sent and paid.',
     cards: [
       {
         title: 'Still dispatching technicians manually?',
-        body: 'See every technician, customer, work order, invoice, and ETA in one operations view instead of chasing updates across calls, texts, and separate tools.',
+        body: 'See every technician, customer, work order, invoice, and On my way status in one operations view instead of chasing updates across calls, texts, and separate tools.',
       },
       {
         title: 'Your office should not need five different apps',
@@ -97,7 +97,7 @@ const en: HvacCopy = {
     badge: '90-second walkthrough',
     title: 'Show the HVAC owner the workflow, not a feature list.',
     description:
-      'This page is designed around the operating flow an HVAC business actually cares about: request, estimate, approval, dispatch, ETA sharing, job photos, invoice, payment.',
+      'This page is designed around the operating flow an HVAC business actually cares about: request, estimate, approval, dispatch, On my way tracking, invoice, payment.',
   },
   journey: {
     badge: 'What the owner should understand fast',
@@ -115,15 +115,15 @@ const en: HvacCopy = {
       },
       {
         title: '3. Technician gets dispatched',
-        body: 'Assign the employee, schedule the work, and track On my way and Arrived updates from the same work order.',
+        body: 'Assign the employee, schedule the work, and track not started, on my way, and arrived on the same work order.',
       },
       {
-        title: '4. Customer sees ETA updates',
-        body: 'Share a live trip link so the customer can see the technician on the way instead of calling the office repeatedly.',
+        title: '4. Customer can open the tracking link',
+        body: 'While the job is On my way, the client tracking link and the manager dispatch board show the latest location. An optional email can send that link to the client. There is no arrival alert, SMS, or employer alert.',
       },
       {
-        title: '5. Technician uploads photos and notes',
-        body: 'Collect field photos and updates directly against the right work order so office and field stay aligned.',
+        title: '5. Technician adds notes and optional photos',
+        body: 'Field reports stay on the work order. Photos on work orders and shifts use the Field Photos add-on.',
       },
       {
         title: '6. Invoice goes out and payment lands faster',
@@ -139,11 +139,11 @@ const en: HvacCopy = {
     cards: [
       {
         title: 'Dispatch board with route context',
-        body: 'Track active trips, ETA, stale updates, client links, and trip activity from one dispatch board built for service managers.',
+        body: 'The dispatch board shows trip status, activity, route preview, and the latest On my way location. It does not keep GPS history or geofencing.',
       },
       {
         title: 'Work orders that stay tied to the real job',
-        body: 'Keep the customer, location, assignments, instructions, field photos, and trip status connected to one source of truth.',
+        body: 'Keep the customer, location, assignments, instructions, and trip status on one work order. Field photos are an add-on.',
       },
       {
         title: 'Estimates, invoices, and online payments',
@@ -151,11 +151,11 @@ const en: HvacCopy = {
       },
       {
         title: 'Employee operations without separate tools',
-        body: 'Handle technician schedules, time tracking, route preview, job photos, and field reports from the same system the office uses.',
+        body: 'Handle technician schedules, time tracking, route preview, the Field Photos add-on, and field reports from the same system the office uses.',
       },
       {
         title: 'Customer communication that matches the job',
-        body: 'Send ETA links, estimate reminders, invoice follow-ups, and client requests with the job context already attached.',
+        body: 'Send an optional On my way email with the tracking link, plus one-click payment reminders and follow-up emails from templates. Client and employee document storage includes client upload requests. It is not a company-wide document library.',
       },
       {
         title: 'Website and booking only when they support operations',

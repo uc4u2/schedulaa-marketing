@@ -83,7 +83,7 @@ const en: BusinessFinanceInvoicesCopy = {
   meta: {
     title: 'Invoices, Estimates & Payment Links for Service Businesses | Schedulaa',
     description:
-      'Create estimates, convert them to invoices, send payment links, track offline payments, and keep billing organized with Schedulaa’s Business Finance tools for service businesses.',
+      'Create estimates and invoices, send one-click payment reminders and template follow-ups, and connect billing to trip-scoped dispatch in Schedulaa.',
     canonicalPath: '/business-finance/invoices',
     ogImage: 'https://www.schedulaa.com/og/business-finance.jpg',
   },

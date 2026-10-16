@@ -21,9 +21,9 @@ const newCompareSlugs = [
 ] as const;
 
 test('pageTypes remains backward compatible while the three new entries are compare-only', () => {
-  assert.equal(compareList.length, 18);
-  assert.equal(getCompareListForPageType('compare').length, 17);
-  assert.equal(getCompareListForPageType('alternatives').length, 15);
+  assert.equal(compareList.length, 19);
+  assert.equal(getCompareListForPageType('compare').length, 18);
+  assert.equal(getCompareListForPageType('alternatives').length, 16);
 
   for (const slug of newCompareSlugs) {
     const comparison = getCompareEntry(slug, 'compare');
@@ -38,8 +38,8 @@ test('pageTypes remains backward compatible while the three new entries are comp
 });
 
 test('the route registry and sitemap add exactly three comparisons and no alternatives', () => {
-  assert.equal(COMPARE_VENDOR_ROUTES.length, 17);
-  assert.equal(ALTERNATIVES_VENDOR_ROUTES.length, 15);
+  assert.equal(COMPARE_VENDOR_ROUTES.length, 18);
+  assert.equal(ALTERNATIVES_VENDOR_ROUTES.length, 16);
 
   const sitemapUrls = new Set(sitemap().map((entry) => entry.url));
   for (const slug of newCompareSlugs) {

@@ -84,7 +84,7 @@ type BusinessFinanceCopy = {
 const en: BusinessFinanceCopy = {
   metaTitle: 'Business Finance for Service Teams | Schedulaa',
   metaDescription:
-    'Manage quote requests, estimates, client approvals, invoices, hosted payment links, refunds, work orders, field reports, materials, gross/net reporting, tax summaries, and month-end readiness in one workflow.',
+    'Manage quotes, estimates, invoices, one-click payment reminders, work orders, trip-scoped GPS, field reports, and month-end readiness for service teams.',
   hero: {
     badge: 'Business Finance',
     title: 'Business Finance for Service Teams',
