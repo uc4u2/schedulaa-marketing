@@ -51,6 +51,22 @@ const buildAppLegacyRedirect = (request: NextRequest, slug: string, kind: 'revie
 export function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
   const internalLocale = request.headers.get('x-locale');
+  const segments = pathname.split('/').filter(Boolean);
+  const maybeLocale = segments[0];
+
+  // A locale-prefixed sitemap is a legacy duplicate of the one marketing
+  // sitemap. Redirect it before the public-file short circuit so search
+  // engines only discover the canonical sitemap URL.
+  if (
+    segments.length === 2 &&
+    isSupportedLocale(maybeLocale) &&
+    segments[1] === 'sitemap.xml'
+  ) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = '/sitemap.xml';
+    redirectUrl.search = '';
+    return NextResponse.redirect(redirectUrl, 308);
+  }
 
   if (
     pathname.startsWith('/_next') ||
@@ -62,9 +78,6 @@ export function middleware(request: NextRequest) {
   ) {
     return NextResponse.next();
   }
-
-  const segments = pathname.split('/').filter(Boolean);
-  const maybeLocale = segments[0];
 
   if (isSupportedLocale(maybeLocale)) {
     if (
