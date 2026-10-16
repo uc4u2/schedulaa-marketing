@@ -126,6 +126,8 @@ jobs:
           echo "deploy_id=$deploy_id" >> "$GITHUB_OUTPUT"
 
       - name: Verify exact staging revision
+        env:
+          STAGING_REVISION_URL: ${{ vars.STAGING_REVISION_URL }}
         run: |
           revision_url="${STAGING_REVISION_URL%/}/api/revision"
           for attempt in $(seq 1 60); do
