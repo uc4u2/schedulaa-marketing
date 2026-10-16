@@ -1,0 +1,124 @@
+name: Cursor Disposable Staging Acceptance
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: Full approved commit SHA from marketing main
+        required: true
+        type: string
+      confirmation:
+        description: Type DEPLOY DISPOSABLE STAGING
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cursor-disposable-marketing-staging
+  cancel-in-progress: false
+
+jobs:
+  validate-and-deploy:
+    if: ${{ github.ref == 'refs/heads/main' && inputs.confirmation == 'DEPLOY DISPOSABLE STAGING' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: cursor-staging
+    env:
+      REQUESTED_SHA: ${{ inputs.commit_sha }}
+      CURSOR_STAGING_ENABLED: ${{ vars.CURSOR_STAGING_ENABLED }}
+      STAGING_RENDER_SERVICE_ID: ${{ vars.STAGING_RENDER_SERVICE_ID }}
+      STAGING_REVISION_URL: ${{ vars.STAGING_REVISION_URL }}
+      STAGING_DEPLOY_HOOK: ${{ secrets.RENDER_DISPOSABLE_STAGING_DEPLOY_HOOK }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Validate immutable main candidate
+        run: |
+          test "${#REQUESTED_SHA}" -eq 40
+          test -z "${REQUESTED_SHA//[0-9a-f]/}"
+          test "$REQUESTED_SHA" = "$GITHUB_SHA"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Validate candidate
+        run: |
+          npm ci
+          npm run test:seo
+          npm run i18n:parity
+          mapfile -t files < <(git diff --name-only --diff-filter=ACMR HEAD^...HEAD -- '*.js' '*.jsx' '*.ts' '*.tsx')
+          if [ "${#files[@]}" -gt 0 ]; then
+            npx eslint "${files[@]}"
+          fi
+          npm run build
+
+      - name: Validate staging-only configuration
+        run: |
+          test "$CURSOR_STAGING_ENABLED" = "true"
+          test -n "$STAGING_DEPLOY_HOOK"
+          case "$STAGING_RENDER_SERVICE_ID" in
+            srv-*) ;;
+            *) echo "STAGING_RENDER_SERVICE_ID is invalid" >&2; exit 1 ;;
+          esac
+          case "$STAGING_RENDER_SERVICE_ID" in
+            srv-cvcvgb3v2p9s73ca8dg0|srv-d59fu1uuk2gs73e6h7ig|srv-d59ga4ur433s73fr4520|srv-d5438imr433s73cnaja0|srv-d6s8q5fkijhs73f5jje0|srv-cvev5et2ng1s73d03bk0|srv-d9t950142hec73fkud4g|srv-d69k7794tr6s73cndk1g)
+              echo "Refusing to target a known production service" >&2
+              exit 1
+              ;;
+          esac
+          case "$STAGING_DEPLOY_HOOK" in
+            "https://api.render.com/deploy/${STAGING_RENDER_SERVICE_ID}?"*) ;;
+            *) echo "Deploy hook does not match the disposable staging service" >&2; exit 1 ;;
+          esac
+          test -n "$STAGING_REVISION_URL"
+          case "$STAGING_REVISION_URL" in
+            https://*) ;;
+            *) echo "STAGING_REVISION_URL must use HTTPS" >&2; exit 1 ;;
+          esac
+
+      - name: Trigger disposable staging deployment
+        id: deploy
+        run: |
+          response_file="$(mktemp)"
+          status="$(curl --silent --show-error --output "$response_file" --write-out '%{http_code}' --request POST "${STAGING_DEPLOY_HOOK}&ref=${REQUESTED_SHA}")"
+          case "$status" in
+            200|202) ;;
+            *) echo "Disposable staging hook returned HTTP $status" >&2; exit 1 ;;
+          esac
+          deploy_id="$(jq -r '.deploy.id // .id // empty' "$response_file")"
+          echo "deploy_id=$deploy_id" >> "$GITHUB_OUTPUT"
+
+      - name: Verify exact staging revision
+        run: |
+          revision_url="${STAGING_REVISION_URL%/}/api/revision"
+          for attempt in $(seq 1 60); do
+            live_sha="$(curl --fail --silent --show-error "$revision_url" | jq -r '.commit // empty')" || true
+            if [ "$live_sha" = "$REQUESTED_SHA" ]; then
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Disposable staging did not report the requested commit within 10 minutes" >&2
+          exit 1
+
+      - name: Record acceptance evidence
+        env:
+          DEPLOY_ID: ${{ steps.deploy.outputs.deploy_id }}
+        run: |
+          {
+            echo "### Disposable staging acceptance"
+            echo ""
+            echo "Commit: \`${REQUESTED_SHA}\`"
+            if [ -n "$DEPLOY_ID" ]; then
+              echo "Render deployment: \`${DEPLOY_ID}\`"
+            fi
+            echo "The staging revision endpoint reported the exact requested SHA."
+          } >> "$GITHUB_STEP_SUMMARY"
