@@ -93,10 +93,19 @@ jobs:
               exit 1
               ;;
           esac
+          STAGING_DEPLOY_HOOK="$(printf '%s' "$STAGING_DEPLOY_HOOK" | tr -d '\r\n')"
+          hook_prefix='https://api.render.com/deploy/'
           case "$STAGING_DEPLOY_HOOK" in
-            "https://api.render.com/deploy/${STAGING_RENDER_SERVICE_ID}"*) ;;
-            *) echo "Deploy hook does not match the disposable staging service" >&2; exit 1 ;;
+            "$hook_prefix"*) ;;
+            *) echo "Deploy hook is not a Render API deploy hook" >&2; exit 1 ;;
           esac
+          hook_service_id="${STAGING_DEPLOY_HOOK#"$hook_prefix"}"
+          hook_service_id="${hook_service_id%%\?*}"
+          hook_service_id="${hook_service_id%%/*}"
+          if [ "$hook_service_id" != "$STAGING_RENDER_SERVICE_ID" ]; then
+            echo "Deploy hook targets service $hook_service_id, not the disposable staging service" >&2
+            exit 1
+          fi
           test -n "$STAGING_REVISION_URL"
           case "$STAGING_REVISION_URL" in
             https://*) ;;
