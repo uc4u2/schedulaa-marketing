@@ -32,7 +32,7 @@ jobs:
       STAGING_REVISION_URL: ${{ vars.STAGING_REVISION_URL }}
       STAGING_DEPLOY_HOOK: ${{ secrets.RENDER_DISPOSABLE_STAGING_DEPLOY_HOOK }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -43,7 +43,7 @@ jobs:
           test -z "${REQUESTED_SHA//[0-9a-f]/}"
           test "$REQUESTED_SHA" = "$GITHUB_SHA"
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 20
           cache: npm
