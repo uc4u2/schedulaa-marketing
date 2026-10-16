@@ -20,17 +20,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  validate-and-deploy:
+  validate:
     if: ${{ github.ref == 'refs/heads/main' && inputs.confirmation == 'DEPLOY DISPOSABLE STAGING' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    environment: cursor-staging
     env:
       REQUESTED_SHA: ${{ inputs.commit_sha }}
-      CURSOR_STAGING_ENABLED: ${{ vars.CURSOR_STAGING_ENABLED }}
-      STAGING_RENDER_SERVICE_ID: ${{ vars.STAGING_RENDER_SERVICE_ID }}
-      STAGING_REVISION_URL: ${{ vars.STAGING_REVISION_URL }}
-      STAGING_DEPLOY_HOOK: ${{ secrets.RENDER_DISPOSABLE_STAGING_DEPLOY_HOOK }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -60,7 +55,31 @@ jobs:
           fi
           npm run build
 
-      - name: Validate staging-only configuration
+      - name: Record validated immutable candidate
+        run: |
+          {
+            echo "### Disposable staging validation"
+            echo ""
+            echo "Commit: \`${REQUESTED_SHA}\`"
+            echo "The candidate passed validation without deployment credentials."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  deploy-disposable-staging:
+    needs: validate
+    if: ${{ github.ref == 'refs/heads/main' && inputs.confirmation == 'DEPLOY DISPOSABLE STAGING' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: cursor-staging
+    env:
+      REQUESTED_SHA: ${{ inputs.commit_sha }}
+    steps:
+      - name: Validate staging configuration and trigger deployment
+        id: deploy
+        env:
+          CURSOR_STAGING_ENABLED: ${{ vars.CURSOR_STAGING_ENABLED }}
+          STAGING_RENDER_SERVICE_ID: ${{ vars.STAGING_RENDER_SERVICE_ID }}
+          STAGING_REVISION_URL: ${{ vars.STAGING_REVISION_URL }}
+          STAGING_DEPLOY_HOOK: ${{ secrets.RENDER_DISPOSABLE_STAGING_DEPLOY_HOOK }}
         run: |
           test "$CURSOR_STAGING_ENABLED" = "true"
           test -n "$STAGING_DEPLOY_HOOK"
@@ -83,10 +102,6 @@ jobs:
             https://*) ;;
             *) echo "STAGING_REVISION_URL must use HTTPS" >&2; exit 1 ;;
           esac
-
-      - name: Trigger disposable staging deployment
-        id: deploy
-        run: |
           response_file="$(mktemp)"
           status="$(curl --silent --show-error --output "$response_file" --write-out '%{http_code}' --request POST "${STAGING_DEPLOY_HOOK}&ref=${REQUESTED_SHA}")"
           case "$status" in

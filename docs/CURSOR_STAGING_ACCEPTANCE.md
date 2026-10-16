@@ -24,6 +24,13 @@ service and rejects every production service ID known when the workflow was
 created. The hook remains a secret. The service ID and revision URL are not
 secrets.
 
+The workflow uses two separate jobs: `validate` runs checkout, dependency
+installation, tests, linting, and the production build with no deployment
+environment or staging secret. Only after that job succeeds does the fresh
+`deploy-disposable-staging` runner enter the protected `cursor-staging`
+environment. The deploy hook is scoped to its single validation-and-trigger
+step; that job does not check out the repository or run package scripts.
+
 ## Acceptance run
 
 After the workflow is reviewed and safely merged with a `[skip render]` commit:
