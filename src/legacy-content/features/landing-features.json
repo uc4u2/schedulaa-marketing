@@ -18,7 +18,7 @@
     },
     "primaryCta": {
       "label": "Start Free Trial",
-      "supporting": "No card required"
+      "supporting": "Eligible workspace trial"
     },
     "secondaryCta": {
       "label": "Compare Plans"
@@ -61,7 +61,7 @@
       "description": "Keep product commerce, service operations, campaign workflows, and reporting connected in one platform.",
       "points": [
         "Dedicated product checkout plus service-booking add-ons and supported coupons.",
-        "Stripe Checkout with supported refunds and automatic tax when configured in Stripe.",
+        "Configured Stripe Checkout with supported payment and refund workflows.",
         "Analytics for revenue, utilization, churn, and top-performing services.",
         "Win-back, VIP, and no-show recovery campaigns included."
       ]
@@ -79,7 +79,7 @@
           "Real-time client bookings with service selection and self-serve rescheduling.",
           "Employee availability, shift templates, and multi-branch support.",
           "Shift swaps, leave requests, and recurring availability rules.",
-          "Automated reminders, digital tips, reviews, and post-visit feedback collection."
+          "Configured booking communications and supported post-visit actions."
         ]
       },
       {
@@ -197,7 +197,7 @@
     "subtitle": "Map your systems, workflows, and automations in one place so marketing, operations, and finance stay aligned.",
     "points": {
       "accounting": "Post supported mapped finance or journal data to configured QuickBooks Online or Xero accounting connections; object support differs by provider.",
-      "automation": "Automate follow-ups, win-back, and no-show recovery campaigns via email or SMS.",
+      "automation": "Use configured email campaign and workflow tools where they are enabled for your tenant.",
       "stripe": "Host secure payments through Stripe Checkout with saved cards and refunds.",
       "domains": "Custom domains with automatic SSL and bounded Zapier automation are live; availability still depends on tenant configuration."
     },
@@ -213,8 +213,8 @@
       "compliance": {
         "title": "Compliance",
         "items": [
-          "CRA + IRS exports",
-          "SOC2 in flight"
+          "Export-ready records for supported workflows",
+          "Review your own compliance requirements"
         ]
       }
     }

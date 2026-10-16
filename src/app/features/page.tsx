@@ -8,17 +8,19 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Website, Booking & Payments for Service Businesses | Schedulaa',
+  title: 'Service Business Software: Booking, Invoices & Dispatch | Schedulaa',
   description:
-    'Build your website, take bookings, sell products, accept payments, schedule staff, and manage customer operations in one platform for service businesses.',
+    'Connect your website, online booking, Client 360, estimates, invoices, work orders, dispatch and staff operations in one service-business platform.',
   openGraph: {
-    title: 'Website, Booking & Payments for Service Businesses | Schedulaa',
-    description: 'Build your website, take bookings, sell products, accept payments, schedule staff, and manage customer operations in one platform for service businesses.',
+    title: 'Service Business Software: Booking, Invoices & Dispatch | Schedulaa',
+    description:
+      'Connect your website, online booking, Client 360, estimates, invoices, work orders, dispatch and staff operations in one service-business platform.',
     url: 'https://www.schedulaa.com/en/features',
   },
   twitter: {
-    title: 'Website, Booking & Payments for Service Businesses | Schedulaa',
-    description: 'Build your website, take bookings, sell products, accept payments, schedule staff, and manage customer operations in one platform for service businesses.',
+    title: 'Service Business Software: Booking, Invoices & Dispatch | Schedulaa',
+    description:
+      'Connect your website, online booking, Client 360, estimates, invoices, work orders, dispatch and staff operations in one service-business platform.',
   },
 };
 
