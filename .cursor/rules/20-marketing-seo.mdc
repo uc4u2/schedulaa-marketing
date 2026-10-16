@@ -1,0 +1,18 @@
+---
+description: Marketing Next.js, SEO, localization, attribution, and validation rules
+globs:
+  - "src/**/*.ts"
+  - "src/**/*.tsx"
+  - "scripts/**/*.mjs"
+  - "tests/**/*.ts"
+  - "docs/seo/**/*.md"
+  - "package.json"
+alwaysApply: false
+---
+
+- `docs/seo/SEO_SOURCE_OF_TRUTH.md` is canonical; `docs/SEO_SOURCE_OF_TRUTH.md` is only a compatibility pointer.
+- Preserve self-canonicals, eligible reciprocal hreflang, sitemap policy, UTM/gclid/srsltid handoff, and allowlisted non-PII analytics events.
+- Do not bulk-index untranslated/partial locales, force IP language redirects, or infer geography from language.
+- Merchant Center pages describe configured products but never modify Stripe prices, checkout, tax, or subscription logic.
+- Search Console tooling is read-only. Credential files and routine output remain outside Git.
+- Use npm and preserve `package-lock.json`; run focused SEO tests, lint, locale parity/ASCII checks, build, and runtime/canonical audits as applicable.

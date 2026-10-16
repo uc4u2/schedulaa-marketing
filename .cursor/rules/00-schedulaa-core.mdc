@@ -1,0 +1,12 @@
+---
+description: Mandatory Schedulaa architecture, evidence, security, and release rules
+globs:
+alwaysApply: true
+---
+
+- Read `AGENTS.md`, the linked central handbook, and `docs/seo/SEO_SOURCE_OF_TRUTH.md` before changing behavior.
+- Rebuild context from current Git, source-of-truth docs, tests, and current external primary sources; conversation memory is not authoritative.
+- Preserve unrelated work and use an isolated worktree for concurrent work.
+- Marketing may link to application workflows but must not duplicate billing, authentication, or tenant business logic.
+- Never print, transfer, or commit credentials, OAuth files, tokens, raw private reports, or customer PII.
+- Stop for unsupported claims, unresolved tests, destructive SEO changes, external-account mutations, or missing production authority.
