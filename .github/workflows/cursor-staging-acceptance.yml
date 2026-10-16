@@ -88,6 +88,9 @@ jobs:
             *) echo "STAGING_RENDER_SERVICE_ID is invalid" >&2; exit 1 ;;
           esac
           case "$STAGING_RENDER_SERVICE_ID" in
+            *[[:space:]]*) echo "STAGING_RENDER_SERVICE_ID must not contain whitespace" >&2; exit 1 ;;
+          esac
+          case "$STAGING_RENDER_SERVICE_ID" in
             srv-cvcvgb3v2p9s73ca8dg0|srv-d59fu1uuk2gs73e6h7ig|srv-d59ga4ur433s73fr4520|srv-d5438imr433s73cnaja0|srv-d6s8q5fkijhs73f5jje0|srv-cvev5et2ng1s73d03bk0|srv-d9t950142hec73fkud4g|srv-d69k7794tr6s73cndk1g)
               echo "Refusing to target a known production service" >&2
               exit 1
@@ -103,7 +106,7 @@ jobs:
           hook_service_id="${hook_service_id%%\?*}"
           hook_service_id="${hook_service_id%%/*}"
           if [ "$hook_service_id" != "$STAGING_RENDER_SERVICE_ID" ]; then
-            echo "Deploy hook targets service $hook_service_id, not the disposable staging service" >&2
+            printf 'Deploy hook targets <%s>; configured staging service is <%s>\n' "$hook_service_id" "$STAGING_RENDER_SERVICE_ID" >&2
             exit 1
           fi
           test -n "$STAGING_REVISION_URL"
