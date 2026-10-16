@@ -1,0 +1,68 @@
+name: Marketing Release Readiness
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: marketing-release-readiness-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run SEO tests
+        run: npm run test:seo
+
+      - name: Verify localization contracts
+        run: npm run i18n:parity
+
+      - name: Lint changed source files
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -n "$BASE_SHA" ] && [ "$BASE_SHA" != "0000000000000000000000000000000000000000" ]; then
+            comparison="${BASE_SHA}...HEAD"
+          else
+            comparison="HEAD^...HEAD"
+          fi
+          mapfile -t files < <(git diff --name-only --diff-filter=ACMR "$comparison" -- '*.js' '*.jsx' '*.ts' '*.tsx')
+          if [ "${#files[@]}" -gt 0 ]; then
+            npx eslint "${files[@]}"
+          fi
+
+      - name: Production build
+        run: npm run build
+
+      - name: Record immutable candidate
+        run: |
+          {
+            echo "### Marketing release candidate"
+            echo ""
+            echo "Commit: \`${GITHUB_SHA}\`"
+            echo "This workflow does not deploy or access production secrets."
+          } >> "$GITHUB_STEP_SUMMARY"
