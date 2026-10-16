@@ -94,7 +94,7 @@ jobs:
               ;;
           esac
           case "$STAGING_DEPLOY_HOOK" in
-            "https://api.render.com/deploy/${STAGING_RENDER_SERVICE_ID}?"*) ;;
+            "https://api.render.com/deploy/${STAGING_RENDER_SERVICE_ID}"*) ;;
             *) echo "Deploy hook does not match the disposable staging service" >&2; exit 1 ;;
           esac
           test -n "$STAGING_REVISION_URL"
@@ -102,8 +102,10 @@ jobs:
             https://*) ;;
             *) echo "STAGING_REVISION_URL must use HTTPS" >&2; exit 1 ;;
           esac
+          separator='?'
+          case "$STAGING_DEPLOY_HOOK" in *\?*) separator='&' ;; esac
           response_file="$(mktemp)"
-          status="$(curl --silent --show-error --output "$response_file" --write-out '%{http_code}' --request POST "${STAGING_DEPLOY_HOOK}&ref=${REQUESTED_SHA}")"
+          status="$(curl --silent --show-error --output "$response_file" --write-out '%{http_code}' --request POST "${STAGING_DEPLOY_HOOK}${separator}ref=${REQUESTED_SHA}")"
           case "$status" in
             200|202) ;;
             *) echo "Disposable staging hook returned HTTP $status" >&2; exit 1 ;;
