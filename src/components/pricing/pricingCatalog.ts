@@ -254,7 +254,12 @@ export type PricingSource = {
     title: string;
     subtitle: string;
     headers: { feature: string };
-    values: { yes: string; dash: string; businessHours: string; always: string };
+    values: {
+      yes: string;
+      dash: string;
+      businessHours: string;
+      always: string;
+    };
     rows: Record<string, Record<string, string>>;
   };
   pricingExperience: PricingExperienceContent;
@@ -280,7 +285,6 @@ const BUSINESS_FINANCE_NEEDS = [
   'Profitability',
   'Tax summary',
   'Month-end review',
-  'Payroll-ready reports',
 ] as const;
 
 const SERVICE_BUSINESS_NEEDS = ['Online booking', 'Contact / lead forms', 'Services', 'Products'] as const;
@@ -309,6 +313,9 @@ export const getPlanFinderRecommendation = (
   if (hasBusinessFinanceNeed) {
     planKey = 'business';
     reason = content.reasons.business;
+  } else if (needs.includes('Payroll-ready reports')) {
+    planKey = 'pro';
+    reason = content.reasons.proScheduling;
   } else if (needs.includes('Staff scheduling')) {
     planKey = 'pro';
     reason = content.reasons.proScheduling;
@@ -330,16 +337,41 @@ export const getPlanFinderRecommendation = (
   }
 
   if (websiteNeed === 'internal_only' || setupPreference === 'diy') {
-    return { planKey, reason, setupKey: null, setupReason: content.reasons.setupNone };
+    return {
+      planKey,
+      reason,
+      setupKey: null,
+      setupReason: content.reasons.setupNone,
+    };
   }
   if (pageCount === '11_15' || pageCount === '15_plus') {
-    return { planKey, reason, setupKey: 'premium' as const, setupReason: content.reasons.setupPremiumLarge };
+    return {
+      planKey,
+      reason,
+      setupKey: 'premium' as const,
+      setupReason: content.reasons.setupPremiumLarge,
+    };
   }
   if (contentComplexity === 'many_assets' || contentComplexity === 'migration') {
-    return { planKey, reason, setupKey: 'premium' as const, setupReason: content.reasons.setupPremiumAssets };
+    return {
+      planKey,
+      reason,
+      setupKey: 'premium' as const,
+      setupReason: content.reasons.setupPremiumAssets,
+    };
   }
   if (pageCount === '1_5' && contentComplexity === 'simple') {
-    return { planKey, reason, setupKey: 'basic' as const, setupReason: content.reasons.setupBasic };
+    return {
+      planKey,
+      reason,
+      setupKey: 'basic' as const,
+      setupReason: content.reasons.setupBasic,
+    };
   }
-  return { planKey, reason, setupKey: 'growth' as const, setupReason: content.reasons.setupGrowth };
+  return {
+    planKey,
+    reason,
+    setupKey: 'growth' as const,
+    setupReason: content.reasons.setupGrowth,
+  };
 };

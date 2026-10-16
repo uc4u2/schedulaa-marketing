@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Schedulaa Pricing | Launch on your own domain with automatic SSL",
-    "description": "Compare Starter, Pro, and Business plans. All plans include a custom domain with automatic SSL, plus booking and website essentials, with scheduling, payroll, and automation on Pro and Business.",
+    "description": "Compare USD Starter, Pro, and Business subscriptions for website, booking, workforce and Business Finance workflows. Optional add-ons and setup are shown separately.",
     "canonical": "https://www.schedulaa.com/pricing",
     "keywords": "Schedulaa pricing, booking software pricing, payroll SaaS pricing, website builder plans",
     "og": {
@@ -16,7 +16,7 @@
       "Pricing that grows with you.",
       "Launch on your own domain with automatic SSL."
     ],
-    "subtitle": "Custom domains (TXT/CNAME) with automatic SSL are included on every plan. Start with Starter for website + booking, then add staff scheduling, payroll, and automations on Pro and Business.",
+    "subtitle": "Start with Starter for a website and booking. Add workforce, payroll-ready and integration workflows on Pro, then Business Finance workflows on Business. Subscription prices are in USD.",
     "primaryCta": {
       "label": "Start free trial"
     },
@@ -41,7 +41,7 @@
           "name": "Starter",
           "price": "$19.99/mo",
           "description": "Launch your branded website, take bookings, and manage client payments in one place.",
-          "trialNote": "14-day free trial • Cancel anytime",
+          "trialNote": "14-day trial for eligible workspaces. Checkout terms apply.",
           "features": [
             "Website builder with branded pages and templates.",
             "Online booking and client portal.",
@@ -61,7 +61,7 @@
           "price": "$49.99/mo",
           "positioning": "For small teams that need scheduling, time tracking, staff workflows, and payroll-ready reports.",
           "description": "Run day-to-day scheduling, time tracking, and team workflows from one system.",
-          "trialNote": "14-day free trial • Cancel anytime",
+          "trialNote": "14-day trial for eligible workspaces. Checkout terms apply.",
           "features": [
             "Everything in Starter.",
             "Staff scheduling and shared calendars.",
@@ -81,7 +81,7 @@
           "name": "Business",
           "price": "$119.99/mo",
           "description": "Connect client approvals, job execution, billing, costs, and reporting in one workflow.",
-          "trialNote": "14-day free trial • Cancel anytime",
+          "trialNote": "14-day trial for eligible workspaces. Checkout terms apply.",
           "features": [
             "Everything in Pro.",
             "Estimates and client approval workflow.",
@@ -116,17 +116,17 @@
   "assurances": {
     "eyebrow": "Everything you need",
     "title": "Transparent pricing for connected operations",
-    "subtitle": "Secure, scalable, and fast: launch branded sites, process payments, and automate payroll from one login.",
+    "subtitle": "Compare website, booking, workforce and Business Finance workflows with their plan and setup requirements.",
     "items": [
       {
         "key": "noHiddenFees",
-        "title": "No hidden fees",
-        "description": "Simple Stripe-based pricing with predictable processing rates."
+        "title": "Clear subscription and add-on pricing",
+        "description": "Plan prices, annual billing, seats and the Field Photos add-on are shown separately. Stripe processing fees are determined by the connected Stripe account."
       },
       {
         "key": "switchPlans",
-        "title": "Switch plans anytime",
-        "description": "Upgrade or downgrade as your team grows; your custom domain follows instantly."
+        "title": "Manage plans through billing",
+        "description": "Eligible plan changes are managed through the configured billing workflow. Domain changes and publishing remain separate website operations."
       },
       {
         "key": "professionReady",
@@ -135,18 +135,18 @@
       },
       {
         "key": "enterpriseOnboarding",
-        "title": "Enterprise onboarding",
-        "description": "Guided setup for multi-location brands with tax and payroll mapping."
+        "title": "Setup support",
+        "description": "Optional website setup services and plan-specific operational workflows can be reviewed before purchase."
       },
       {
         "key": "roleAccess",
         "title": "Role-based access",
-        "description": "Managers, staff, and finance roles keep scheduling and payroll secure by default."
+        "description": "Manager and staff access is controlled by the business's configured roles and workflow permissions."
       },
       {
         "key": "globalPayments",
-        "title": "Global payments ready",
-        "description": "Stripe Checkout with refunds, saved cards, and cross-border payouts."
+        "title": "Configured online payments",
+        "description": "Supported Stripe-hosted checkout and invoice payment links are available after the business completes the required Stripe setup."
       }
     ]
   },
@@ -160,8 +160,8 @@
   },
   "ctaBanner": {
     "eyebrow": "Launch today",
-    "title": "Start your free trial - no credit card required",
-    "description": "Bring scheduling, payments, and payroll into one workspace with automatic SSL on your domain.",
+    "title": "Start with the workflow your business needs",
+    "description": "Review plan eligibility, checkout terms and optional add-ons before starting your trial.",
     "primaryCta": {
       "label": "Start free trial"
     },
@@ -175,7 +175,7 @@
       "Custom domains with automatic SSL.",
       "Role-based access and staff permissions.",
       "Email and booking notifications.",
-      "Secure Stripe payments with refunds.",
+      "Supported Stripe payment workflows when configured.",
       "Continuous feature updates."
     ]
   },
@@ -213,7 +213,7 @@
         "customDomain": "Custom domain + automatic SSL",
         "publicBooking": "Public booking pages",
         "embedded": "Embedded booking widgets",
-        "branding": "Company-level branding"
+        "branding": "Website branding controls"
       },
       "booking": {
         "section": "Booking & Scheduling",
@@ -314,7 +314,7 @@
         "name": "Starter",
         "price": "$19.99/mo",
         "description": "Launch your branded website, take bookings, and manage client payments in one place.",
-        "trialNote": "14-day free trial • Cancel anytime",
+        "trialNote": "14-day trial for eligible workspaces. Checkout terms apply.",
         "features": [
           "Website builder with branded pages and templates.",
           "Online booking and client portal.",
@@ -334,7 +334,7 @@
         "price": "$49.99/mo",
         "positioning": "For small teams that need scheduling, time tracking, staff workflows, and payroll-ready reports.",
         "description": "Run day-to-day scheduling, time tracking, and team workflows from one system.",
-        "trialNote": "14-day free trial • Cancel anytime",
+        "trialNote": "14-day trial for eligible workspaces. Checkout terms apply.",
         "features": [
           "Everything in Starter.",
           "Staff scheduling and shared calendars.",
@@ -354,7 +354,7 @@
         "name": "Business",
         "price": "$119.99/mo",
         "description": "Connect client approvals, job execution, billing, costs, and reporting in one workflow.",
-        "trialNote": "14-day free trial • Cancel anytime",
+        "trialNote": "14-day trial for eligible workspaces. Checkout terms apply.",
         "features": [
           "Everything in Pro.",
           "Estimates and client approval workflow.",
@@ -500,9 +500,9 @@
               "business": "Yes"
             },
             {
-              "label": "Company-level branding",
-              "starter": "—",
-              "pro": "—",
+              "label": "Website branding controls",
+              "starter": "Yes",
+              "pro": "Yes",
               "business": "Yes"
             }
           ]
@@ -1250,7 +1250,7 @@
         "monthlyPlanLabel": "Recommended monthly plan",
         "monthlySubscriptionLabel": "Monthly subscription",
         "optionalSetupLabel": "Optional one-time website setup",
-        "startTrialTemplate": "Start 14-day free trial with {{plan}}",
+        "startTrialTemplate": "Start an eligible 14-day trial with {{plan}}",
         "noSetupTitle": "No setup required",
         "noSetupPrice": "$0",
         "includedWithPlan": "Included with your monthly plan",
@@ -1296,15 +1296,15 @@
       "items": [
         {
           "question": "Is there a free trial?",
-          "answer": "Yes. Schedulaa offers a 14-day free trial so you can test the platform before continuing with a paid plan."
+          "answer": "Eligible workspaces can receive a 14-day trial. Review the checkout terms for the plan you choose; account creation alone does not establish a trial."
         },
         {
           "question": "Do I need a credit card to start?",
-          "answer": "No. The current trial flow does not require a credit card to create your account and start exploring the platform."
+          "answer": "Review the checkout flow for the plan you select. Account creation and trial eligibility are separate from payment-information requirements."
         },
         {
           "question": "Can I cancel anytime?",
-          "answer": "Yes. You can cancel future billing according to your account billing settings or by contacting support."
+          "answer": "Use the configured billing settings or contact support to review cancellation options for your subscription."
         },
         {
           "question": "Can I switch plans later?",

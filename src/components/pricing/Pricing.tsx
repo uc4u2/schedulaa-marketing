@@ -14,19 +14,42 @@ import { trackMetaPixel } from '@/utils/metaPixel';
 import PlanFinderModal from './PlanFinderModal';
 import { getPricingExperience, type PlanFeature, type PricingSource } from './pricingCatalog';
 
-const BOOK_DEMO_FALLBACK =
-  'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
+const BOOK_DEMO_FALLBACK = 'https://app.schedulaa.com/sale/meet/uzmTuuGPNNepce0r2vcx8WB4w3sJ2LA32Aqh7XIw9F8';
 
 const PUBLIC_BILLING_DISPLAY = {
   monthly: {
-    starter: { card: '$19.99/mo', compare: '$19.99 / mo', note: 'Billed monthly' },
-    pro: { card: '$49.99/mo', compare: '$49.99 / mo', note: 'Billed monthly' },
-    business: { card: '$119.99/mo', compare: '$119.99 / mo', note: 'Billed monthly' },
+    starter: {
+      card: 'US$19.99/mo',
+      compare: 'US$19.99 / month',
+      note: 'Billed monthly in USD',
+    },
+    pro: {
+      card: 'US$49.99/mo',
+      compare: 'US$49.99 / month',
+      note: 'Billed monthly in USD',
+    },
+    business: {
+      card: 'US$119.99/mo',
+      compare: 'US$119.99 / month',
+      note: 'Billed monthly in USD',
+    },
   },
   annual: {
-    starter: { card: '$199.90/yr', compare: '$199.90 / yr', note: 'Billed yearly · Save 2 months' },
-    pro: { card: '$499.90/yr', compare: '$499.90 / yr', note: 'Billed yearly · Save 2 months' },
-    business: { card: '$1,199.90/yr', compare: '$1,199.90 / yr', note: 'Billed yearly · Save 2 months' },
+    starter: {
+      card: 'US$199.90/yr',
+      compare: 'US$199.90 / year',
+      note: 'Billed annually in USD · equivalent to US$16.66/mo · save 2 months',
+    },
+    pro: {
+      card: 'US$499.90/yr',
+      compare: 'US$499.90 / year',
+      note: 'Billed annually in USD · equivalent to US$41.66/mo · save 2 months',
+    },
+    business: {
+      card: 'US$1,199.90/yr',
+      compare: 'US$1,199.90 / year',
+      note: 'Billed annually in USD · equivalent to US$99.99/mo · save 2 months',
+    },
   },
 } as const;
 
@@ -170,11 +193,21 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
 
         <div className="rounded-2xl border border-stroke-2 bg-white p-4 text-sm dark:border-stroke-7 dark:bg-background-8">
           <span dangerouslySetInnerHTML={{ __html: pricingSource.ribbon.message }} />
+          <p className="mt-2 text-secondary/70 dark:text-accent/70">
+            Subscription prices are in USD. Your business can use its configured CAD or USD selling currency for
+            supported estimates, invoices and payments; that currency is separate from your Schedulaa subscription.
+          </p>
         </div>
 
         <div className="flex justify-center">
           <label className="inline-flex items-center gap-3 rounded-full border border-stroke-2 bg-white px-5 py-3 text-sm font-medium dark:border-stroke-7 dark:bg-background-8">
-            <span className={billingInterval === 'monthly' ? 'text-secondary dark:text-white' : 'text-secondary/60 dark:text-accent/60'}>
+            <span
+              className={
+                billingInterval === 'monthly'
+                  ? 'text-secondary dark:text-white'
+                  : 'text-secondary/60 dark:text-accent/60'
+              }
+            >
               {tPricing('monthly')}
             </span>
             <input
@@ -185,9 +218,17 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
               aria-label="Toggle between monthly and annual pricing"
             />
             <span className="relative h-7 w-14 rounded-full bg-secondary/20 transition peer-checked:bg-primary/25 dark:bg-accent/20">
-              <span className={`absolute top-0.5 h-6 w-6 rounded-full bg-primary transition ${billingInterval === 'annual' ? 'left-7' : 'left-0.5'}`} />
+              <span
+                className={`absolute top-0.5 h-6 w-6 rounded-full bg-primary transition ${billingInterval === 'annual' ? 'left-7' : 'left-0.5'}`}
+              />
             </span>
-            <span className={billingInterval === 'annual' ? 'text-secondary dark:text-white' : 'text-secondary/60 dark:text-accent/60'}>
+            <span
+              className={
+                billingInterval === 'annual'
+                  ? 'text-secondary dark:text-white'
+                  : 'text-secondary/60 dark:text-accent/60'
+              }
+            >
               {tPricing('yearly')}
             </span>
           </label>
@@ -215,7 +256,8 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
               <h2 className="text-heading-4 mb-2">{plan.name}</h2>
               <p className="mb-2 text-heading-5">{plan.price}</p>
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-secondary/60 dark:text-accent/60">
-                {PUBLIC_BILLING_DISPLAY[billingInterval][plan.key as keyof typeof PUBLIC_BILLING_DISPLAY.monthly]?.note || ''}
+                {PUBLIC_BILLING_DISPLAY[billingInterval][plan.key as keyof typeof PUBLIC_BILLING_DISPLAY.monthly]
+                  ?.note || ''}
               </p>
               <p className="mb-3 text-sm font-semibold text-secondary/70 dark:text-accent/70">{plan.positioning}</p>
               <p className="mb-3">{plan.description}</p>
@@ -277,7 +319,10 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
                 <a href="#plan-business" className="btn btn-secondary btn-md">
                   {experience.quoteToInvoiceSection.primaryCtaLabel}
                 </a>
-                <Link href={withLocalePath('/contact', locale)} className="btn btn-white dark:btn-white-dark btn-md text-center">
+                <Link
+                  href={withLocalePath('/contact', locale)}
+                  className="btn btn-white dark:btn-white-dark btn-md text-center"
+                >
                   {experience.quoteToInvoiceSection.secondaryCtaLabel}
                 </Link>
               </div>
@@ -301,7 +346,9 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
           <div className="max-w-[860px]">
             <h2 className="text-heading-3">{experience.websiteSetupServices.title}</h2>
             <p className="mt-3 text-secondary/75 dark:text-accent/75">{experience.websiteSetupServices.subtitle}</p>
-            <p className="mt-3 text-sm leading-6 text-secondary/70 dark:text-accent/70">{experience.websiteSetupServices.note}</p>
+            <p className="mt-3 text-sm leading-6 text-secondary/70 dark:text-accent/70">
+              {experience.websiteSetupServices.note}
+            </p>
           </div>
           <div className="mt-6 grid gap-6 lg:grid-cols-3">
             {experience.websiteSetupServices.items.map((service) => (
@@ -372,7 +419,10 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
                     </td>
                   </tr>,
                   ...group.items.map((item) => (
-                    <tr key={`${group.section}-${item.label}`} className="border-b border-stroke-2 dark:border-stroke-7">
+                    <tr
+                      key={`${group.section}-${item.label}`}
+                      className="border-b border-stroke-2 dark:border-stroke-7"
+                    >
                       <td className="px-3 py-3">{item.label}</td>
                       <td className="px-3 py-3">{item.starter}</td>
                       <td className="px-3 py-3">{item.pro}</td>
@@ -406,6 +456,16 @@ const Pricing = ({ locale: pageLocale }: { locale?: AppLocale }) => {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
+          <h2 className="text-heading-5">Optional Field Photos add-on</h2>
+          <p className="mt-3 max-w-[900px] text-sm leading-6 text-secondary/75 dark:text-accent/75">
+            Field Photos is a separate US$29/month per-company add-on, with 25 GB included storage. A US$10/month
+            storage expansion adds 50 GB. It supports private employee proof-of-work uploads and manager-added client
+            photos, with tenant-selected retention for new photos. It is not included in Starter, Pro or Business by
+            default.
+          </p>
         </div>
 
         <div className="rounded-2xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
