@@ -9,6 +9,7 @@ import { Metadata } from 'next';
 import { headers } from 'next/headers';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import OwnAiEarlyAccessForm from '@/components/blog/OwnAiEarlyAccessForm';
 
 const copyByLocale: Record<string, { back: string; start: string; sales: string; blog: string }> = {
   en: { back: 'Back to blog', start: 'Start free', sales: 'Talk to sales', blog: 'Blog' },
@@ -140,6 +141,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const isYearEndGuide = slug === 'roe-t4-w2-year-end-guide';
   const isCrossBorderPayrollArticle = slug === 'canada-us-payroll-one-system';
   const hasArticleSchema =
+    Boolean(post.articleSchema) ||
     isHvacSchedulingArticle || isGustoDecisionArticle || isAdpServiceTeamArticle || isYearEndGuide || isCrossBorderPayrollArticle;
   const articleSchemaId = isHvacSchedulingArticle
     ? 'hvac-scheduling-article-jsonld'
@@ -149,7 +151,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         ? 'adp-service-team-article-jsonld'
         : isCrossBorderPayrollArticle
           ? 'cross-border-payroll-article-jsonld'
-          : 'year-end-guide-article-jsonld';
+          : isYearEndGuide
+            ? 'year-end-guide-article-jsonld'
+            : `${slug}-article-jsonld`;
   const breadcrumbSchemaId = isHvacSchedulingArticle
     ? 'hvac-scheduling-breadcrumb-jsonld'
     : isGustoDecisionArticle
@@ -158,11 +162,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         ? 'adp-service-team-breadcrumb-jsonld'
         : isCrossBorderPayrollArticle
           ? 'cross-border-payroll-breadcrumb-jsonld'
-          : 'year-end-guide-breadcrumb-jsonld';
-  const articleImages = (post.sections || [])
-    .map((section: any) => section.image?.src)
+          : isYearEndGuide
+            ? 'year-end-guide-breadcrumb-jsonld'
+            : `${slug}-breadcrumb-jsonld`;
+  const articleImages = [post.heroImage, ...(post.sections || []).map((section: any) => section.image?.src)]
     .filter(Boolean)
     .map((src: string) => new URL(src, 'https://www.schedulaa.com').toString());
+  const articleFaq = (post.sections || []).flatMap(
+    (section: { faq?: Array<{ question: string; answer: string }> }) => section.faq || [],
+  );
   const articleJsonLd = hasArticleSchema
     ? {
         '@context': 'https://schema.org',
@@ -173,16 +181,39 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         dateModified: post.dateModified || post.datePublished,
         mainEntityOfPage: canonicalUrl,
         image: articleImages.length ? articleImages : undefined,
-        author: {
-          '@type': 'Organization',
-          name: 'Schedulaa',
-          url: getLocalizedCanonicalUrl(locale, '/'),
-        },
+        author: post.author
+          ? {
+              '@type': 'Person',
+              name: post.author,
+            }
+          : {
+              '@type': 'Organization',
+              name: 'Schedulaa',
+              url: getLocalizedCanonicalUrl(locale, '/'),
+            },
         publisher: {
           '@type': 'Organization',
           name: 'Schedulaa',
           url: getLocalizedCanonicalUrl(locale, '/'),
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.schedulaa.com/images/shared/schedulaa-logo-navbar.png',
+          },
         },
+      }
+    : null;
+  const faqJsonLd = post.faqSchema && articleFaq.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: articleFaq.map((item: { question: string; answer: string }) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
       }
     : null;
   const breadcrumbJsonLd = hasArticleSchema
@@ -213,6 +244,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, '\\u003c') }}
         />
       ) : null}
+      {faqJsonLd ? (
+        <script
+          id={`${slug}-faq-jsonld`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, '\\u003c') }}
+        />
+      ) : null}
       <section className="main-container px-5">
         <div className="rounded-[24px] bg-white p-8 shadow-2 dark:bg-background-8 md:p-12">
           <p className="badge badge-yellow-v2">{post.heroOverline || copy.blog}</p>
@@ -221,6 +259,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <p className="mt-3 text-sm text-secondary/60 dark:text-accent/60">
             {new Date(post.datePublished).toLocaleDateString(locale === 'en' ? 'en-US' : locale)} {post.category ? `• ${post.category}` : ''}
           </p>
+          {post.author ? (
+            <p className="mt-2 text-sm font-medium text-secondary/75 dark:text-accent/75">{post.author}</p>
+          ) : null}
         </div>
 
         <div className="mt-8 space-y-8">
@@ -280,6 +321,38 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <p key={`${post.slug}-${idx}-${pidx}`}>{paragraph}</p>
                 ))}
               </div>
+              {section.subsections?.length ? (
+                <div className="mt-6 space-y-6">
+                  {section.subsections.map((subsection: { heading: string; paragraphs: string[]; quote?: string; links?: { label: string; href: string }[] }) => (
+                    <section key={subsection.heading}>
+                      <h3 className="text-lg font-semibold">{subsection.heading}</h3>
+                      {subsection.quote ? (
+                        <blockquote className="mt-3 border-l-4 border-primary-500 pl-4 text-lg font-medium text-secondary dark:text-accent">
+                          “{subsection.quote}”
+                        </blockquote>
+                      ) : null}
+                      <div className="mt-3 space-y-3 text-secondary/70 dark:text-accent/70">
+                        {(subsection.paragraphs || []).map((paragraph: string, paragraphIndex: number) => (
+                          <p key={`${post.slug}-${idx}-${subsection.heading}-${paragraphIndex}`}>{paragraph}</p>
+                        ))}
+                      </div>
+                      {subsection.links?.length ? (
+                        <div className="mt-3 flex flex-wrap gap-3">
+                          {subsection.links.map((link) => (
+                            <Link
+                              key={`${link.href}-${link.label}`}
+                              href={link.href.startsWith('#') ? link.href : withLocalePath(link.href, locale)}
+                              className="text-primary-500 underline"
+                            >
+                              {link.label}
+                            </Link>
+                          ))}
+                        </div>
+                      ) : null}
+                    </section>
+                  ))}
+                </div>
+              ) : null}
               {section.table?.headers?.length && section.table?.rows?.length ? (
                 <div className="mt-5 overflow-x-auto rounded-xl border border-stroke-2 dark:border-stroke-7">
                   <table className="w-full min-w-[760px] border-collapse text-left text-sm">
@@ -321,7 +394,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {section.links?.length ? (
                 <div className="mt-5 flex flex-wrap gap-3">
                   {section.links.map((link: { label: string; href: string }) => (
-                    <Link key={`${link.href}-${link.label}`} href={withLocalePath(link.href, locale)} className="text-primary-500 underline">
+                    <Link
+                      key={`${link.href}-${link.label}`}
+                      href={link.href.startsWith('#') ? link.href : withLocalePath(link.href, locale)}
+                      className="text-primary-500 underline"
+                    >
                       {link.label}
                     </Link>
                   ))}
@@ -354,6 +431,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           ))}
         </div>
+
+        {post.inlineWaitlist ? <OwnAiEarlyAccessForm /> : null}
 
         <div className="mt-8 rounded-xl border border-stroke-2 bg-white p-6 dark:border-stroke-7 dark:bg-background-8">
           <p className="badge badge-yellow-v2">{ctaCopy.badge}</p>

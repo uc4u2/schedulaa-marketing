@@ -1,6 +1,6 @@
 # Schedulaa marketing SEO source of truth
 
-Last reviewed: 2026-10-11 (America/Toronto)
+Last reviewed: 2026-10-18 (America/Toronto)
 
 Scope: the public Schedulaa marketing property at `https://www.schedulaa.com/`.
 
@@ -203,6 +203,12 @@ Contact copy no longer promises an unverified one-business-day response or unive
 
 The homepage booking drawer remains manual and its iframe remains interaction-gated. A missing decorative homepage background request was removed without changing the visible design, and the booking CTA label was shortened to avoid expanding the mobile viewport. Public docs and contact copy no longer advertise unverified future integrations, universal implementation service, or response-time guarantees. Recent Search Console opportunity groups remain unchanged pending the November 9 comparison.
 
+### 2026-10-18 owner-assistant article
+
+The English-only `/blog/first-platform-your-own-ai-assistant-can-operate` article targets the phrase “AI assistant for service businesses” while keeping the product boundary explicit. It records the October 17 Muse `assistant_whoami` verification and its three read-only scopes, describes all broader command groups as a tested-batch rollout, and does not present locally implemented or provider-unverified write workflows as live.
+
+The article uses the shared blog registry and locale sitemap, a self-canonical English URL, visible Article and FAQ content with matching JSON-LD, verified internal links, and the existing marketing-lead submission contract. Its inline early-access form records the owner’s first requested job and the existing lead popup can open with article-specific early-access wording without replacing the homepage personalized-demo copy.
+
 ## Known limitations and open verification
 
 - The GA4 contract exists, but registration/trial events must be verified in the current Realtime/DebugView state before they are used as dependable organic conversion measures.
@@ -248,3 +254,4 @@ The homepage booking drawer remains manual and its iframe remains interaction-ga
 | 2026-10-08 | Replaced unverified feature-page testimonial cards with factual workflow examples, removed unsupported SOC 2-ready wording, and tightened vague enterprise-scale language without changing conversion paths. |
 | 2026-10-08 | Expanded the existing platform overview around verified connected workflows and product boundaries; corrected mixed-checkout, mobile-app, calendar, and demo claims; clarified contact expectations; added non-PII funnel events; and fixed a dead homepage request plus mobile CTA overflow without creating new URLs. |
 | 2026-10-16 | Reviewed Search Console exclusion exports. Most affected URLs were legacy locale variants already governed by the route-level locale gate, so no bulk indexing or forced canonical changes were made. Added permanent redirects from locale-prefixed sitemap aliases to the single canonical sitemap and recorded the future dedicated-watch-page requirement for video indexing. |
+| 2026-10-18 | Added the English owner-assistant article, honest live-versus-rollout boundaries, matching Article/FAQ schema, verified internal links, sitemap membership, and an inline early-access lead form that reuses the established marketing-lead contract. |

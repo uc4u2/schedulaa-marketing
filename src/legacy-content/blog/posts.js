@@ -2,6 +2,240 @@
 // Each post can be rendered by BlogPostPage via slug.
 const blogPosts = [
   {
+    slug: "first-platform-your-own-ai-assistant-can-operate",
+    title: "Your own AI assistant can operate your business software",
+    seoTitle: "AI assistant for service businesses | Schedulaa",
+    h1: "The First All-In-One Platform Your Own AI Assistant Can Actually Operate",
+    description:
+      "AI assistant for service businesses: connect yours to Schedulaa with scopes you choose. Join the early-access waitlist and name the first job you would hand it.",
+    datePublished: "2026-10-19",
+    dateModified: "2026-10-19",
+    author: "Joseph — Founder, Schedulaa",
+    category: "AI operations",
+    tags: [
+      "AI assistant for service businesses",
+      "MCP",
+      "booking software",
+      "salon software",
+    ],
+    heroOverline: "Founder update",
+    heroImage:
+      "https://www.schedulaa.com/images/shared/schedulaa-logo-navbar.png",
+    articleSchema: true,
+    faqSchema: true,
+    inlineWaitlist: true,
+    sections: [
+      {
+        heading: "Owners did not open a business to learn software",
+        paragraphs: [
+          "You opened your business to serve customers, build a team, and create something valuable. You probably did not open it because you wanted to spend every evening learning another dashboard.",
+          "Yet that is what most business software asks you to do. One screen for the website. Another for bookings. Another for estimates and invoices. Another for products, shifts, attendance, and reports. Each tool may be useful, but the owner still has to remember where everything lives and how every workflow fits together.",
+          "AI has started to reduce some of that work. The important question is no longer whether business software will use AI. It is whose assistant you are using, what it can reach, and who stays in control when a request could affect a customer, an employee, or money.",
+          "Schedulaa is building an AI assistant for service businesses around a simple idea: the assistant you already choose should be able to help operate your business software. You should not have to abandon that assistant and learn a separate vendor chatbot for every part of the company.",
+        ],
+        image: {
+          src: "/images/marketing/showcase/manager-dashboards1.png",
+          alt: "Service business dashboard representing the many tools an owner wants to manage through one AI assistant conversation",
+          width: 1200,
+          height: 675,
+        },
+      },
+      {
+        heading: "Three kinds of AI in business software today",
+        paragraphs: [
+          "There is already meaningful AI in service-business software. The categories below solve different problems, and the distinction matters when you decide what you want an assistant to do.",
+        ],
+        subsections: [
+          {
+            heading: "1. Vendor AI receptionists",
+            paragraphs: [
+              "Products such as Jobber Receptionist and Fresha AI Concierge are designed to answer customer calls or messages, respond to common questions, and help with appointments. That can be valuable when the owner is busy with a client or working in the field.",
+              "The assistant is primarily the vendor's receptionist, operating the customer-facing jobs that vendor selected. It is not the same as an owner bringing a preferred assistant into every operating area of the business.",
+            ],
+          },
+          {
+            heading: "2. Vendor in-app AI teams",
+            paragraphs: [
+              "GlossGenius describes an AI team that knows the business account, helps with chosen tasks, and lets the owner review what it does. This is another useful model: AI is embedded inside the application and designed around that product's workflows.",
+              "The tradeoff is that the owner works through the vendor's AI experience. The product decides the available jobs, interface, and boundaries.",
+            ],
+          },
+          {
+            heading: "3. Booking-led assistant connections",
+            paragraphs: [
+              "MCP booking software also exists. EasyWeek, for example, documents an MCP connection for bookings, schedules, availability, clients, services, orders, and related analytics. That is important progress and it means it would be inaccurate to say no other booking platform has MCP.",
+              "Schedulaa's planned difference is broader operating coverage through one owner-controlled connection: website, bookings, finance, shop, and team workflows, with explicit scopes and human approval for sensitive actions. That full breadth is not live today; it is the system we are rolling out and verifying in batches.",
+            ],
+          },
+        ],
+        sources: [
+          {
+            label: "Jobber: Receptionist powered by Jobber AI",
+            href: "https://help.getjobber.com/en/articles/receptionistpowered-by-jobber-ai/",
+          },
+          {
+            label: "Fresha: AI Concierge",
+            href: "https://www.fresha.com/for-business/features/ai-concierge",
+          },
+          {
+            label: "EasyWeek: MCP server",
+            href: "https://easyweek.io/business/mcp",
+          },
+        ],
+      },
+      {
+        heading: "What we are building",
+        paragraphs: [
+          "The connection starts with your assistant, not a generic bot hidden in a dashboard. A business owner connects an assistant per business through MCP and OAuth. The consent screen shows the requested scopes, and the owner decides which ones to grant.",
+          "Reading and acting are different. A scope can allow an assistant to find information without allowing it to change anything. Sensitive actions—sending, charging, publishing, or changing shifts—must pause for human approval. The assistant cannot approve its own request.",
+          "Here is what that model is intended to make possible as each group is released and verified.",
+        ],
+        image: {
+          src: "/images/marketing/showcase/website-builder.png",
+          alt: "Website builder preview illustrating an owner asking an AI assistant to draft changes before approving publication",
+          width: 1200,
+          height: 675,
+        },
+        subsections: [
+          {
+            heading: "Website builder",
+            quote: "Change my homepage photo and button colour.",
+            paragraphs: [
+              "The owner can ask the assistant to choose a template and draft changes to the header, footer, menu, logo, text, images, or a blog article. The work stays in draft and preview until the owner approves publishing. That approval boundary protects the public site from an assistant silently changing what customers see.",
+            ],
+          },
+          {
+            heading: "Bookings and availability",
+            quote: "Book Sarah for Friday at 2.",
+            paragraphs: [
+              "The assistant should check real open slots for the owner or a staff member before proposing the appointment. For a phone caller, a manager-side flow can find or create the client, book the correct service, and adjust availability through the same authoritative scheduling rules.",
+              "That is the practical goal behind letting an owner connect an AI assistant to booking software: fewer clicks without inventing availability or bypassing booking protections.",
+            ],
+            links: [
+              {
+                label: "See how Schedulaa online booking works",
+                href: "/booking",
+              },
+            ],
+          },
+          {
+            heading: "Clients",
+            quote: "Add this caller as a client and prepare an estimate.",
+            paragraphs: [
+              "A client created in Business Finance should become the same client used for quotes, estimates, and invoices. The assistant should not create parallel customer records simply because the request started in a conversation.",
+            ],
+          },
+          {
+            heading: "Finance",
+            quote:
+              "Turn the approved estimate into an invoice and prepare the payment link.",
+            paragraphs: [
+              "The assistant can help prepare a quote or estimate, convert it into an invoice, and request a payment link. Sending and charging are sensitive actions, so they wait for the owner's approval. A conversational request is not payment proof and is never permission to charge by itself.",
+            ],
+            links: [
+              {
+                label: "Explore estimates and invoices",
+                href: "/business-finance/invoices",
+              },
+            ],
+          },
+          {
+            heading: "Services and products",
+            quote:
+              "Add the new facial service, its add-on, and the retail product.",
+            paragraphs: [
+              "The planned tools cover service and add-on setup, products, and shipping settings. Prices, currencies, stock, and delivery rules remain server-owned business data rather than values the assistant can simply make up.",
+            ],
+          },
+          {
+            heading: "Team",
+            quote:
+              "Build next week's schedule around availability and approved leave.",
+            paragraphs: [
+              "The assistant can read employee availability and leave, propose shifts, and help bulk-assign them through Smart Shift rules. A manager still reviews the proposal, and approved leave remains a constraint instead of becoming a detail the model can ignore.",
+            ],
+          },
+          {
+            heading: "Attendance digest",
+            quote:
+              "At 9 AM and 5 PM, tell me who has a shift, who clocked in, who is late, and who forgot to clock out.",
+            paragraphs: [
+              "This is a scheduled notification and reporting workflow. It does not change hours, mark someone absent, or judge productivity. The assistant reports persisted schedule and clock facts so the manager can decide what, if anything, needs attention.",
+            ],
+          },
+        ],
+        links: [
+          {
+            label: "Explore the Schedulaa website builder",
+            href: "/website-builder",
+          },
+        ],
+      },
+      {
+        heading: "What is live today, honestly",
+        paragraphs: [
+          "On October 17, 2026, I connected a real Schedulaa business—the business name was Schedulaa—to Muse. The assistant successfully ran assistant_whoami and returned the connected business, account, and granted scopes.",
+          "The scopes granted in that verified step were read-only: assistant.whoami, customers.read, and customers.contact.read. The connection could identify its account and use the customer-reading boundary that the owner approved. It did not verify website publishing, booking writes, invoice sending, charging, shift changes, or the full command groups described above.",
+          "Those broader abilities are rolling out in batches. We test each batch on a real business before announcing it as available. On October 19, 2026, we issued this challenge publicly: owners should be able to use the assistant they choose to operate the whole system, while keeping permissions and consequential decisions under human control.",
+          "That is why this article separates a verified connection from the roadmap. We would rather show one real step clearly than describe every planned workflow as if it were already live.",
+        ],
+      },
+      {
+        heading: "Why approval and scopes matter",
+        paragraphs: [
+          "An assistant connection should follow the same tenant and role boundaries as the rest of the platform. A manager's authorized business access is not interchangeable with a customer's booking access, and one company must never see another company's records.",
+          "Customers only see bookable slots exposed through the customer booking flow. They do not gain manager availability, private customer contact details, finance records, employee data, or approval rights because an assistant is involved.",
+          "Scopes make the boundary understandable. An owner can grant customer reading without granting customer changes. A future website-draft scope does not automatically grant publishing. A finance-draft scope does not automatically grant sending or charging.",
+          "Human approval is a second boundary. The assistant can prepare a sensitive action, but it cannot approve its own proposal. The manager sees the request inside Schedulaa, reviews the business facts, and either approves or rejects it. The system rechecks permissions and current state when that decision is made.",
+          "This does not mean AI is risk-free. It means the product is being designed so a model's suggestion is not treated as authority. OAuth, scoped permissions, tenant checks, immutable operation evidence, and approval are all parts of the operating model.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions",
+        faq: [
+          {
+            question:
+              "Can I connect ChatGPT / Muse / Grok to my booking software?",
+            answer:
+              "MCP-compatible assistants can connect when the assistant supports the required remote MCP and OAuth flow. Schedulaa has verified a read-only Muse connection; support for every provider, plan, and write workflow is not yet claimed.",
+          },
+          {
+            question: "What can my AI assistant actually do in Schedulaa?",
+            answer:
+              "The verified live step can identify the connected Schedulaa business and use granted read-only customer scopes. Website, booking, finance, product, team, and attendance workflows are being released and tested in batches, so availability depends on the approved batch rather than this roadmap alone.",
+          },
+          {
+            question:
+              "Is it safe to let an AI assistant operate my business software?",
+            answer:
+              "No software connection is risk-free, so Schedulaa uses per-business OAuth, scoped permissions, tenant and role checks, and human approval for sensitive actions. The assistant cannot approve its own sending, charging, publishing, or shift-change request.",
+          },
+          {
+            question: "How is this different from an AI receptionist?",
+            answer:
+              "An AI receptionist is mainly customer-facing: it answers calls or messages and helps with appointments. Schedulaa is building an owner-operated connection that reaches across website, booking, finance, shop, and team workflows through the assistant the owner chooses.",
+          },
+          {
+            question: "When can I try it?",
+            answer:
+              "Join the early-access waitlist below. Access will open in tested batches so each permission group and approval flow can be verified on a real business before broader release.",
+          },
+        ],
+        links: [
+          { label: "Join the early-access waitlist", href: "#early-access" },
+        ],
+      },
+      {
+        heading: "The dashboard should become optional, not another obligation",
+        paragraphs: [
+          "There will always be times when an owner wants the full screen: reviewing a schedule, comparing totals, checking a draft website, or examining a payment record. The goal is not to hide the source of truth behind a chat window.",
+          "The goal is to let everyday instructions begin in a conversation and finish inside the same governed business system. Your assistant can help assemble the work. Schedulaa remains responsible for permissions, calculations, records, and approval boundaries.",
+          "If you are looking for salon software you can talk to, an AI assistant for salon owners, or a broader AI assistant for service businesses, tell us the first job you would delegate. That answer is more useful than a generic feature vote because it shows where a real owner's day is getting stuck.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "secure-hiring-resume-upload-onboarding",
     title: "Modern Hiring, Resume Uploads, and Secure Document Requests - All in One Platform",
     description:
