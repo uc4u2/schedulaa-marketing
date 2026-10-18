@@ -5,6 +5,7 @@ import {
   MARKETING_LEAD_AUTO_OPEN_MS,
   isMarketingHomepage,
   marketingLeadCopy,
+  marketingLeadEarlyAccessCopy,
 } from "../../src/components/shared/marketingLead/marketingLeadPopup";
 
 test("homepage lead popup auto-opens about three seconds after load", () => {
@@ -31,4 +32,14 @@ test("homepage popup uses concise personalized-demo copy", () => {
     "Answer a few quick questions so we can tailor the demo to your business.",
   );
   assert.equal(marketingLeadCopy.submit, "Request personalized demo");
+});
+
+test("article CTA can reuse the lead popup with honest early-access wording", () => {
+  assert.equal(marketingLeadEarlyAccessCopy.badge, "AI assistant early access");
+  assert.equal(
+    marketingLeadEarlyAccessCopy.title,
+    "Operate Schedulaa with your own AI assistant",
+  );
+  assert.match(marketingLeadEarlyAccessCopy.description, /tested batches/i);
+  assert.equal(marketingLeadEarlyAccessCopy.submit, "Join early access");
 });

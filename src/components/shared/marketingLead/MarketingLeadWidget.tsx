@@ -9,6 +9,8 @@ import {
   MARKETING_LEAD_OPEN_EVENT,
   isMarketingHomepage,
   marketingLeadCopy,
+  marketingLeadEarlyAccessCopy,
+  type MarketingLeadMode,
 } from "@/components/shared/marketingLead/marketingLeadPopup";
 import { trackAnalyticsEvent } from "@/utils/analytics";
 
@@ -87,6 +89,7 @@ export default function MarketingLeadWidget() {
   const [error, setError] = useState("");
   const [form, setForm] = useState<LeadState>(INITIAL_STATE);
   const [announcement, setAnnouncement] = useState("");
+  const [mode, setMode] = useState<MarketingLeadMode>("demo");
   const suppressAutoOpenRef = useRef(false);
 
   const hidden = pathname.includes("/login") || pathname.includes("/signup");
@@ -95,6 +98,7 @@ export default function MarketingLeadWidget() {
     form.name.trim() && form.email.trim() && form.consent_to_contact;
 
   const stepLabel = useMemo(() => STEPS[step] || STEPS[0], [step]);
+  const activeCopy = mode === "ai_early_access" ? marketingLeadEarlyAccessCopy : marketingLeadCopy;
 
   useEffect(() => {
     if (!open) {
@@ -119,6 +123,7 @@ export default function MarketingLeadWidget() {
       if (suppressAutoOpenRef.current) {
         return;
       }
+      setMode("demo");
       setAnnouncement(marketingLeadCopy.autoOpenAnnouncement);
       setOpen(true);
     }, MARKETING_LEAD_AUTO_OPEN_MS);
@@ -127,9 +132,16 @@ export default function MarketingLeadWidget() {
   }, [hidden, pathname]);
 
   useEffect(() => {
-    const onOpenRequest = () => {
+    const onOpenRequest = (event: Event) => {
+      const requestedMode = event instanceof CustomEvent ? event.detail?.mode : undefined;
+      const nextMode: MarketingLeadMode = requestedMode === "ai_early_access" ? "ai_early_access" : "demo";
       suppressAutoOpenRef.current = true;
-      setAnnouncement(marketingLeadCopy.autoOpenAnnouncement);
+      setMode(nextMode);
+      setAnnouncement(
+        nextMode === "ai_early_access"
+          ? marketingLeadEarlyAccessCopy.autoOpenAnnouncement
+          : marketingLeadCopy.autoOpenAnnouncement,
+      );
       setOpen(true);
       setSubmitted(false);
       setStep(0);
@@ -147,6 +159,7 @@ export default function MarketingLeadWidget() {
 
   const openWidget = () => {
     suppressAutoOpenRef.current = true;
+    setMode("demo");
     setOpen(true);
     setSubmitted(false);
     setStep(0);
@@ -255,7 +268,7 @@ export default function MarketingLeadWidget() {
                 />
               </div>
               <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.13em] text-sky-50">
-                Personalized demo
+                {activeCopy.badge}
               </span>
             </div>
             <div className="flex items-start justify-between gap-3">
@@ -264,20 +277,20 @@ export default function MarketingLeadWidget() {
                   id="marketing-lead-title"
                   className="text-xl font-semibold tracking-[-0.02em] text-white"
                 >
-                  {marketingLeadCopy.title}
+                  {activeCopy.title}
                 </p>
                 <p
                   id="marketing-lead-description"
                   className="mt-1.5 max-w-[31rem] text-sm leading-6 text-sky-100"
                 >
-                  {marketingLeadCopy.description}
+                  {activeCopy.description}
                 </p>
               </div>
               <button
                 type="button"
                 onClick={closeWidget}
                 className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-lg text-white/80 transition hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                aria-label="Close demo request"
+                aria-label={activeCopy.closeLabel}
               >
                 ×
               </button>
@@ -302,16 +315,16 @@ export default function MarketingLeadWidget() {
                   Received
                 </div>
                 <h3 className="text-2xl font-semibold text-slate-900">
-                  {marketingLeadCopy.successTitle}
+                  {activeCopy.successTitle}
                 </h3>
                 <p className="text-sm leading-7 text-slate-600">
-                  {marketingLeadCopy.successBody}
+                  {activeCopy.successBody}
                 </p>
                 <button
                   type="button"
                   onClick={closeWidget}
                   className="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white"
-                  aria-label="Close demo request"
+                  aria-label={activeCopy.closeLabel}
                 >
                   Close
                 </button>
@@ -384,10 +397,10 @@ export default function MarketingLeadWidget() {
                       </span>
                       <div>
                         <p className="text-sm font-semibold text-slate-900">
-                          {marketingLeadCopy.sendingTitle}
+                          {activeCopy.sendingTitle}
                         </p>
                         <p className="text-xs leading-6 text-slate-600">
-                          {marketingLeadCopy.sendingBody}
+                          {activeCopy.sendingBody}
                         </p>
                       </div>
                     </div>
@@ -649,7 +662,7 @@ export default function MarketingLeadWidget() {
                     onClick={submitLead}
                     disabled={!canSubmit || submitting}
                     className="inline-flex items-center gap-2 rounded-full bg-[#123b5d] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#17486f] disabled:opacity-50"
-                    aria-label={marketingLeadCopy.submit}
+                    aria-label={activeCopy.submit}
                   >
                     {submitting ? (
                       <>
@@ -690,7 +703,7 @@ export default function MarketingLeadWidget() {
                         Sending…
                       </>
                     ) : (
-                      marketingLeadCopy.submit
+                      activeCopy.submit
                     )}
                   </button>
                 )}
