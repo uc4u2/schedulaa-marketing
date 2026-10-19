@@ -9,6 +9,7 @@ type ArticleLink = { label: string; href: string };
 type ArticleFaq = { question: string; answer: string };
 type ArticleSubsection = { links?: ArticleLink[] };
 type ArticleSection = {
+  image?: { src: string; alt: string; width?: number; height?: number };
   faq?: ArticleFaq[];
   links?: ArticleLink[];
   subsections?: ArticleSubsection[];
@@ -76,6 +77,16 @@ test("own-assistant article publishes the reviewed metadata and honest launch bo
   assert.match(copy, /rolling out in batches/i);
   assert.match(copy, /October 19, 2026/);
   assert.doesNotMatch(copy, /nobody else has (AI|MCP)/i);
+
+  const images = article.sections.flatMap((section) => section.image ? [section.image] : []);
+  assert.deepEqual(images, [
+    {
+      src: "/images/marketing/own-ai-assistant-operating-model.png",
+      alt: "Business owner using a connected AI assistant operating model across website, booking, customer, finance, shop, and team workflows with approval controls",
+      width: 1672,
+      height: 941,
+    },
+  ]);
 });
 
 test("own-assistant article stays within the requested editorial length and includes required commands", () => {

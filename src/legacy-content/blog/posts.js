@@ -18,7 +18,7 @@ const blogPosts = [
       "booking software",
       "salon software",
     ],
-    heroOverline: "Founder update",
+    heroOverline: "Founder note",
     heroImage:
       "https://www.schedulaa.com/images/shared/schedulaa-logo-navbar.png",
     articleSchema: true,
@@ -28,16 +28,16 @@ const blogPosts = [
       {
         heading: "Owners did not open a business to learn software",
         paragraphs: [
-          "You opened your business to serve customers, build a team, and create something valuable. You probably did not open it because you wanted to spend every evening learning another dashboard.",
-          "Yet that is what most business software asks you to do. One screen for the website. Another for bookings. Another for estimates and invoices. Another for products, shifts, attendance, and reports. Each tool may be useful, but the owner still has to remember where everything lives and how every workflow fits together.",
-          "AI has started to reduce some of that work. The important question is no longer whether business software will use AI. It is whose assistant you are using, what it can reach, and who stays in control when a request could affect a customer, an employee, or money.",
-          "Schedulaa is building an AI assistant for service businesses around a simple idea: the assistant you already choose should be able to help operate your business software. You should not have to abandon that assistant and learn a separate vendor chatbot for every part of the company.",
+          "You opened your business to serve customers, build a team, and create something valuable—not to spend every evening navigating another dashboard.",
+          "But most operating software still divides the work. The website lives in one place. Bookings in another. Estimates, invoices, products, shifts, attendance, and reports somewhere else. Each system may be useful, but the owner is still expected to remember where the work lives and how it connects.",
+          "AI can reduce that overhead. The real question is whose assistant you are using, what it is allowed to reach, and who remains accountable when a request could affect a customer, an employee, money, or a public website.",
+          "Schedulaa is building an AI assistant for service businesses around a simple principle: the assistant you choose should be able to help operate your business software inside clear permissions and approval boundaries. You should not have to adopt a separate vendor chatbot for every part of the company.",
         ],
         image: {
-          src: "/images/marketing/showcase/manager-dashboards1.png",
-          alt: "Service business dashboard representing the many tools an owner wants to manage through one AI assistant conversation",
-          width: 1200,
-          height: 675,
+          src: "/images/marketing/own-ai-assistant-operating-model.png",
+          alt: "Business owner using a connected AI assistant operating model across website, booking, customer, finance, shop, and team workflows with approval controls",
+          width: 1672,
+          height: 941,
         },
       },
       {
@@ -49,22 +49,22 @@ const blogPosts = [
           {
             heading: "1. Vendor AI receptionists",
             paragraphs: [
-              "Products such as Jobber Receptionist and Fresha AI Concierge are designed to answer customer calls or messages, respond to common questions, and help with appointments. That can be valuable when the owner is busy with a client or working in the field.",
-              "The assistant is primarily the vendor's receptionist, operating the customer-facing jobs that vendor selected. It is not the same as an owner bringing a preferred assistant into every operating area of the business.",
+              "Products such as Jobber Receptionist and Fresha AI Concierge are designed to answer customer calls or messages, respond to common questions, and help with appointments. That can be valuable when the owner is with a client or working in the field.",
+              "This model is optimized for customer-facing work selected by the vendor. It solves a different problem from an owner connecting a preferred assistant to governed workflows across the business.",
             ],
           },
           {
             heading: "2. Vendor in-app AI teams",
             paragraphs: [
-              "GlossGenius describes an AI team that knows the business account, helps with chosen tasks, and lets the owner review what it does. This is another useful model: AI is embedded inside the application and designed around that product's workflows.",
-              "The tradeoff is that the owner works through the vendor's AI experience. The product decides the available jobs, interface, and boundaries.",
+              "GlossGenius describes an AI team that knows the business account, helps with chosen tasks, and lets the owner review what it does. This is a useful model: AI is embedded inside the application and designed around that product's workflows.",
+              "In that model, the vendor defines the AI experience, available jobs, interface, and boundaries. Schedulaa is taking a different approach: a governed connection to the assistant the owner chooses.",
             ],
           },
           {
             heading: "3. Booking-led assistant connections",
             paragraphs: [
-              "MCP booking software also exists. EasyWeek, for example, documents an MCP connection for bookings, schedules, availability, clients, services, orders, and related analytics. That is important progress and it means it would be inaccurate to say no other booking platform has MCP.",
-              "Schedulaa's planned difference is broader operating coverage through one owner-controlled connection: website, bookings, finance, shop, and team workflows, with explicit scopes and human approval for sensitive actions. That full breadth is not live today; it is the system we are rolling out and verifying in batches.",
+              "MCP booking software also exists. EasyWeek, for example, documents an MCP connection for bookings, schedules, availability, clients, services, orders, and related analytics. That is meaningful progress, and it would be inaccurate to claim that no other booking platform has MCP.",
+              "Schedulaa's planned difference is broader operating coverage through one owner-controlled connection: website, bookings, finance, shop, and team workflows, with explicit scopes and human approval for sensitive actions. That full breadth is not live today. It is the system we are rolling out and verifying in batches.",
             ],
           },
         ],
@@ -86,16 +86,16 @@ const blogPosts = [
       {
         heading: "What we are building",
         paragraphs: [
-          "The connection starts with your assistant, not a generic bot hidden in a dashboard. A business owner connects an assistant per business through MCP and OAuth. The consent screen shows the requested scopes, and the owner decides which ones to grant.",
-          "Reading and acting are different. A scope can allow an assistant to find information without allowing it to change anything. Sensitive actions—sending, charging, publishing, or changing shifts—must pause for human approval. The assistant cannot approve its own request.",
-          "Here is what that model is intended to make possible as each group is released and verified.",
+          "The connection starts with your assistant, not a generic bot hidden in a dashboard. An owner connects one assistant to one business through MCP and OAuth. The consent screen states the requested scopes, and the owner chooses what to grant.",
+          "Reading and acting are deliberately separate. A scope can let an assistant find information without allowing it to change anything. Sensitive actions—sending, charging, publishing, or changing shifts—pause for human approval. The assistant cannot approve its own request.",
+          "This is the operating model we are releasing and verifying group by group.",
         ],
-        image: {
-          src: "/images/marketing/showcase/website-builder.png",
-          alt: "Website builder preview illustrating an owner asking an AI assistant to draft changes before approving publication",
-          width: 1200,
-          height: 675,
-        },
+        summaryPoints: [
+          "Your chosen assistant",
+          "One business connection",
+          "Scopes you choose",
+          "Human approval for sensitive actions",
+        ],
         subsections: [
           {
             heading: "Website builder",
