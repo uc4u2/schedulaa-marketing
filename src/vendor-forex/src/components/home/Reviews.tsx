@@ -9,6 +9,7 @@ import myShiftImg from '@public/images/marketing/showcase/my-shift.png';
 import qbImg from '@public/images/marketing/showcase/qb.png';
 import roeImg from '@public/images/marketing/showcase/roe.png';
 import stripeImg from '@public/images/marketing/showcase/stripe.png';
+import salonBookingImg from '@public/images/marketing/hero/glow-booking-services.png';
 import websiteBuilderImg from '@public/images/marketing/showcase/website-builder.png';
 import xeroImg from '@public/images/marketing/showcase/xero.png';
 import Image, { StaticImageData } from 'next/image';
@@ -32,6 +33,7 @@ const reviewsCopyEn = {
 
 const showcaseItems: ShowcaseItem[] = [
   { id: 'dashboard', title: 'Manager dashboard', subtitle: 'Operations overview', image: dashboardImg },
+  { id: 'salon-booking', title: 'Salon booking page', subtitle: 'Services and online booking', image: salonBookingImg },
   { id: 'employee-dashboard', title: 'Employee dashboard', subtitle: 'Time and shifts', image: employeeDashboardImg },
   { id: 'my-shift', title: 'Shift timeline', subtitle: 'Live schedule updates', image: myShiftImg },
   { id: 'qb', title: 'Estimate to invoice', subtitle: 'Approved work to billing', image: qbImg },
