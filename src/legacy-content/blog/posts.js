@@ -7,7 +7,7 @@ const blogPosts = [
     seoTitle: "AI assistant for service businesses | Schedulaa",
     h1: "The First All-In-One Platform Your Own AI Assistant Can Actually Operate",
     description:
-      "AI assistant for service businesses: connect yours to Schedulaa with scopes you choose. Join the early-access waitlist and name the first job you would hand it.",
+      "Schedulaa connects your own AI assistant — Muse, ChatGPT or Grok — to your bookings, invoices, estimates, schedules and website. You approve anything that matters.",
     datePublished: "2026-10-19",
     dateModified: "2026-10-19",
     author: "Joseph — Founder, Schedulaa",
@@ -24,7 +24,7 @@ const blogPosts = [
     articleSchema: true,
     faqSchema: true,
     inlineWaitlist: true,
-    sections: [
+    legacySections: [
       {
         heading: "Owners did not open a business to learn software",
         paragraphs: [
@@ -231,6 +231,71 @@ const blogPosts = [
           "There will always be times when an owner wants the full screen: reviewing a schedule, comparing totals, checking a draft website, or examining a payment record. The goal is not to hide the source of truth behind a chat window.",
           "The goal is to let everyday instructions begin in a conversation and finish inside the same governed business system. Your assistant can help assemble the work. Schedulaa remains responsible for permissions, calculations, records, and approval boundaries.",
           "If you are looking for salon software you can talk to, an AI assistant for salon owners, or a broader AI assistant for service businesses, tell us the first job you would delegate. That answer is more useful than a generic feature vote because it shows where a real owner's day is getting stuck.",
+        ],
+      },
+    ],
+    sections: [
+      {
+        heading: "You didn't open a business to learn software",
+        paragraphs: [
+          "You opened your business to serve customers — not to spend every evening inside another dashboard.",
+          "But look at a normal day. Bookings live in your messages. Payments live in a different app. Estimates and invoices live somewhere else. The schedule is in a group chat, a notebook, or your head.",
+          "Every one of those tools works fine on its own. The problem is you — you're the one connecting them all, every single day.",
+        ],
+      },
+      {
+        heading: "What if you could just ask?",
+        paragraphs: [
+          "Schedulaa is being built so you can connect the AI assistant you already use — Muse, ChatGPT or Grok — to your business, and hand it the everyday jobs:",
+          "If you run a salon:",
+          "- \"Book Sarah for Friday at 2.\"\n- \"Yesterday's 4 o'clock never showed. Charge the no-show fee.\"\n- \"Who's working Saturday, and who's off?\"",
+          "If you run a contracting business:",
+          "- \"Make an estimate for the kitchen job and get it ready to send.\"\n- \"Turn that approved estimate into an invoice.\"\n- \"Which jobs from last month are still unpaid?\"",
+          "If you keep the books or run the office:",
+          "- \"Show me this week's unpaid invoices.\"\n- \"Who forgot to clock out yesterday?\"\n- \"Build next week's schedule around everyone's approved days off.\"",
+          "Your assistant prepares the work inside Schedulaa — the same bookings, customers, invoices and schedules you see on your screen. It doesn't guess, and it doesn't keep a second set of books.",
+        ],
+      },
+      {
+        heading: "This is not another chatbot",
+        paragraphs: [
+          "Plenty of software now comes with AI built in. Most of it falls into three groups:",
+          "- Receptionist AI (like Jobber's or Fresha's) answers your customers' calls and messages. Useful — but it works for your customers, not for you.\n- In-app AI teams (like GlossGenius's) live inside one company's app, and only do the jobs that company chose.\n- A few booking tools let an assistant look at appointments. Helpful, but it stops at the calendar.",
+          "Schedulaa is different: the assistant is YOURS. You pick it, you connect it to your one business, and it can help across the whole business — website, bookings, money, products and your team — not just one corner of it.",
+        ],
+      },
+      {
+        heading: "Nothing happens without your OK",
+        paragraphs: [
+          "Handing an AI the keys sounds scary, so here is exactly how it works:",
+          "- You choose what your assistant is allowed to see and do. In our own test, we deliberately did NOT give it our customers' phone numbers and email addresses — and it stayed locked out of them.\n- Anything that matters waits for you. Sending an invoice, charging a card, publishing a page, changing someone's shift — your assistant gets it ready, you see it in Schedulaa, and nothing happens until you approve it.\n- Your assistant can never approve its own work.",
+          "It's help, with you still in charge.",
+        ],
+      },
+      {
+        heading: "What's live today — honestly",
+        paragraphs: [
+          "On October 17–18, 2026, we connected Muse to a real Schedulaa business — our own — and put it to work for real.",
+          "It added a test client. It created a real estimate, and the total it produced matched Schedulaa's own numbers to the cent — tax included. It can work across clients, bookings and availability, estimates and invoices, services and products, website pages, schedules, shifts and time-off — always with the owner's approval on anything that sends, charges, publishes or changes.",
+          "And here is what it can't do yet, honestly: it can't redesign your website's whole look (templates, menus, logos, colours), it can't write and publish blog posts, it can't pull analytics reports, and it can't set up repeating weekly availability rules. We're testing those now, in batches, on real businesses, before we say they're ready.",
+          "On October 19 we said this publicly: owners should be able to run their whole business with the assistant they choose — while keeping the final say themselves. That's the standard we're building to.",
+        ],
+      },
+      {
+        heading: "Questions owners ask us",
+        faq: [
+          { question: "Can I connect ChatGPT, Muse or Grok to Schedulaa?", answer: "If your assistant supports the standard connection (it's called MCP), yes. We've verified it end-to-end with Muse on a real business — a live connection with the full set of permissions the owner granted, not a demo or a view-only connection. Other assistants are being tested the same way." },
+          { question: "What can it actually do for me, day to day?", answer: "Book and move appointments, add clients, prepare estimates and invoices and payment links, update services and products, draft website page changes, check who's working and who forgot to clock out — the everyday jobs listed above. Anything that sends, charges or publishes waits for your approval first." },
+          { question: "Is it safe to let an AI assistant touch my business?", answer: "No connection is risk-free, which is why you decide what it can see, each business only ever sees its own data, and anything important needs your OK. Your customers never gain access to your private business information through an assistant — they only ever see the booking page you show everyone." },
+          { question: "How is this different from an AI receptionist?", answer: "A receptionist talks to your customers. This works for you — across bookings, money, website, products and team, in one connected system." },
+          { question: "When can I try it?", answer: "Join the early-access waitlist below. We open access in tested batches, so every part is proven on a real business before more owners get it. Tell us the first job you'd hand it — that answer tells us what to finish first." },
+        ],
+      },
+      {
+        heading: "The goal: your evenings back",
+        paragraphs: [
+          "Dashboards aren't going away, and sometimes you'll want the full screen. The goal is simpler: the everyday jobs should start with a sentence — \"book her Friday\", \"send the invoice\", \"who's late?\" — and finish inside the same system your business already runs on.",
+          "If you're looking for salon software you can talk to, or an AI assistant for your contracting business, tell us the first job you'd delegate. That's the most useful thing you can tell us.",
         ],
       },
     ],

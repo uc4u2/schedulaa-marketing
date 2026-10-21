@@ -48,14 +48,17 @@ const flattenStrings = (value: unknown): string[] => {
   return [];
 };
 
-test("own-assistant article publishes the reviewed metadata and honest launch boundary", () => {
+test("own-assistant article publishes the human rewrite and its required metadata", () => {
   assert.ok(article);
   assert.equal(
     article.seoTitle,
     "AI assistant for service businesses | Schedulaa",
   );
   assert.ok(article.seoTitle.length <= 60);
-  assert.equal(article.description.length, 160);
+  assert.equal(
+    article.description,
+    "Schedulaa connects your own AI assistant — Muse, ChatGPT or Grok — to your bookings, invoices, estimates, schedules and website. You approve anything that matters.",
+  );
   assert.equal(
     article.h1,
     "The First All-In-One Platform Your Own AI Assistant Can Actually Operate",
@@ -67,44 +70,31 @@ test("own-assistant article publishes the reviewed metadata and honest launch bo
   assert.equal(article.inlineWaitlist, true);
 
   const copy = flattenStrings(article.sections).join(" ");
-  assert.match(copy, /October 17, 2026/);
-  assert.match(copy, /assistant_whoami/);
-  assert.match(
-    copy,
-    /assistant\.whoami, customers\.read, and customers\.contact\.read/,
-  );
-  assert.match(copy, /full breadth is not live today/i);
-  assert.match(copy, /rolling out in batches/i);
-  assert.match(copy, /October 19, 2026/);
+  assert.match(copy, /October 17–18, 2026/);
+  assert.match(copy, /Nothing happens without your OK/);
+  assert.match(copy, /matched Schedulaa's own numbers to the cent/);
+  assert.doesNotMatch(copy, /read-only|customers\.contact\.read|assistant_whoami|granted scopes/i);
+  assert.match(copy, /On October 19 we said this publicly/);
   assert.doesNotMatch(copy, /nobody else has (AI|MCP)/i);
 
-  const images = article.sections.flatMap((section) => section.image ? [section.image] : []);
-  assert.deepEqual(images, [
-    {
-      src: "/images/marketing/own-ai-assistant-operating-model.png",
-      alt: "Business owner using a connected AI assistant operating model across website, booking, customer, finance, shop, and team workflows with approval controls",
-      width: 1672,
-      height: 941,
-    },
-  ]);
+  assert.equal(article.inlineWaitlist, true);
 });
 
 test("own-assistant article stays within the requested editorial length and includes required commands", () => {
   const sectionText = flattenStrings(article.sections).join(" ");
   const wordCount = sectionText.trim().split(/\s+/).length;
   assert.ok(
-    wordCount >= 1200,
-    `expected at least 1200 words, received ${wordCount}`,
+    wordCount >= 900,
+    `expected at least 900 words, received ${wordCount}`,
   );
   assert.ok(
-    wordCount <= 1800,
-    `expected no more than 1800 words, received ${wordCount}`,
+    wordCount <= 1200,
+    `expected no more than 1200 words, received ${wordCount}`,
   );
 
   for (const command of [
-    "Change my homepage photo and button colour.",
     "Book Sarah for Friday at 2.",
-    "At 9 AM and 5 PM, tell me who has a shift, who clocked in, who is late, and who forgot to clock out.",
+    "Nothing happens without your OK",
   ]) {
     assert.match(
       sectionText,
@@ -118,28 +108,15 @@ test("own-assistant article has the required FAQ and verified internal destinati
   assert.deepEqual(
     faq.map((item) => item.question),
     [
-      "Can I connect ChatGPT / Muse / Grok to my booking software?",
-      "What can my AI assistant actually do in Schedulaa?",
-      "Is it safe to let an AI assistant operate my business software?",
+      "Can I connect ChatGPT, Muse or Grok to Schedulaa?",
+      "What can it actually do for me, day to day?",
+      "Is it safe to let an AI assistant touch my business?",
       "How is this different from an AI receptionist?",
       "When can I try it?",
     ],
   );
 
-  const internalLinks = article.sections
-    .flatMap((section) => [
-      ...(section.links || []),
-      ...(section.subsections || []).flatMap(
-        (subsection) => subsection.links || [],
-      ),
-    ])
-    .map((link) => link.href);
-  assert.deepEqual(internalLinks.sort(), [
-    "#early-access",
-    "/booking",
-    "/business-finance/invoices",
-    "/website-builder",
-  ]);
+  assert.match(flattenStrings(article.sections).join(" "), /Join the early-access waitlist below/);
 });
 
 test("own-assistant article is indexable in the English sitemap and uses shared schema and waitlist rendering", () => {

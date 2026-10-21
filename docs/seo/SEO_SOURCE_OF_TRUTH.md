@@ -203,9 +203,9 @@ Contact copy no longer promises an unverified one-business-day response or unive
 
 The homepage booking drawer remains manual and its iframe remains interaction-gated. A missing decorative homepage background request was removed without changing the visible design, and the booking CTA label was shortened to avoid expanding the mobile viewport. Public docs and contact copy no longer advertise unverified future integrations, universal implementation service, or response-time guarantees. Recent Search Console opportunity groups remain unchanged pending the November 9 comparison.
 
-### 2026-10-18 owner-assistant article
+### 2026-10-21 owner-assistant article
 
-The English-only `/blog/first-platform-your-own-ai-assistant-can-operate` article targets the phrase “AI assistant for service businesses” while keeping the product boundary explicit. It records the October 17 Muse `assistant_whoami` verification and its three read-only scopes, describes all broader command groups as a tested-batch rollout, and does not present locally implemented or provider-unverified write workflows as live.
+The English-only `/blog/first-platform-your-own-ai-assistant-can-operate` article targets “AI assistant for service businesses” in owner-facing language. It preserves the indexed URL, title tag, byline, date, hero, schema, sitemap entry, and early-access form while clearly stating that consequential actions wait for approval and naming the four workflows not yet ready for release.
 
 The article uses the shared blog registry and locale sitemap, a self-canonical English URL, visible Article and FAQ content with matching JSON-LD, verified internal links, and the existing marketing-lead submission contract. Its inline early-access form records the owner’s first requested job and the existing lead popup can open with article-specific early-access wording without replacing the homepage personalized-demo copy.
 
