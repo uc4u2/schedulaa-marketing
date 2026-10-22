@@ -1,9 +1,10 @@
 'use client';
 
-import bookingImg from '@public/images/marketing/hero/glow-booking-services.png';
-import bookingAvailabilityImg from '@public/images/marketing/hero/glow-booking-availability.png';
-import paymentsImg from '@public/images/marketing/hvac-hero-one-safe.png';
+import bookingImg from '@public/images/marketing/hero/module-3-booking.png';
+import hvacInvoiceImg from '@public/images/marketing/hvac-hero-2.png';
+import hvacWorkflowImg from '@public/images/marketing/hvac-hero-one-safe.png';
 import schedulingImg from '@public/images/marketing/hero/module-2-schedule.png';
+import timeTrackingImg from '@public/images/marketing/hero/module-3-mobile.png';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import { AppLocale } from '@/utils/locale';
@@ -20,9 +21,9 @@ const workflowNodesEn: WorkflowNode[] = [
   {
     id: 'website-builder',
     label: 'Service Workflow',
-    image: bookingAvailabilityImg,
-    alt: 'Glow Beauty Studio booking calendar with Ava M. availability',
-    imageClassName: 'object-contain object-center p-2',
+    image: hvacWorkflowImg,
+    alt: 'Connected service workflow from request to payment',
+    imageClassName: 'object-contain object-center p-2 sm:p-3',
   },
   {
     id: 'scheduling',
@@ -35,22 +36,22 @@ const workflowNodesEn: WorkflowNode[] = [
     id: 'booking',
     label: 'Booking',
     image: bookingImg,
-    alt: 'Glow Beauty Studio service booking page with Balayage and Gel Manicure',
-    imageClassName: 'object-contain object-center p-2',
+    alt: 'Booking workflow preview',
+    imageClassName: 'object-contain object-center scale-[1.04] p-2',
   },
   {
     id: 'invoices',
     label: 'Invoices',
-    image: paymentsImg,
+    image: hvacInvoiceImg,
     alt: 'Invoice and payments preview',
     imageClassName: 'object-contain object-center p-2 sm:p-3',
   },
   {
     id: 'availability',
     label: 'Availability',
-    image: bookingAvailabilityImg,
-    alt: 'Glow Beauty Studio availability calendar with open appointment times',
-    imageClassName: 'object-contain object-center p-2',
+    image: timeTrackingImg,
+    alt: 'Staff availability preview',
+    imageClassName: 'object-contain object-center scale-[1.08] p-2',
   },
 ];
 
