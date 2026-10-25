@@ -1,0 +1,125 @@
+---
+description: Release completion means the change is on the remote and, when authorized, verified live
+alwaysApply: true
+---
+
+# Release Completion Rules
+
+When a task authorizes commit, push, or deployment, completion means the
+change is remotely available and, when deployment is authorized, verified
+on the public site. A local commit is not completion.
+
+## Before editing
+
+1. Read AGENTS.md and relevant source-of-truth documents completely.
+2. Run:
+   - git status --short --branch
+   - git remote -v
+   - git fetch origin --prune
+   - git rev-parse HEAD
+   - git rev-parse origin/main
+3. Preserve unrelated changes.
+4. Use an isolated branch or worktree.
+5. If pushing is requested, verify GitHub access before doing substantial work:
+   git push --dry-run origin HEAD:refs/heads/cursor-access-check
+6. If access fails, report it immediately. Do not wait until the work is finished.
+
+## Recovering previous work
+
+Never assume that a commit mentioned in conversation exists.
+
+Verify it using:
+- git cat-file -t <sha>
+- git log --all --oneline --decorate
+- git reflog --all
+- git ls-remote origin
+
+If the commit cannot be found, say that clearly and rebuild only from current
+repository evidence. Never claim a missing commit was pushed.
+
+## Implementation
+
+1. Inspect the existing implementation and reuse existing components.
+2. Make the smallest scoped change.
+3. Do not invent routes, APIs, deployment services, or source-of-truth behavior.
+4. Verify every internal link and external integration used by the change.
+5. Preserve unrelated files and do not reformat large existing files unnecessarily.
+
+## Required verification
+
+Run the relevant:
+- focused tests;
+- lint;
+- type checking;
+- production build;
+- git diff --check;
+- final diff and status review.
+
+Record exact commands and results. A skipped or unavailable test is not a pass.
+
+## Commit and push
+
+When authorized:
+
+1. Stage only task files.
+2. Create separately reviewable commits where appropriate.
+3. Push the feature branch.
+4. Verify the remote commit:
+   git ls-remote origin refs/heads/<branch>
+5. If production promotion is authorized, fetch origin again and confirm main
+   has not advanced.
+6. Never force-push.
+7. Use the repository’s documented release path.
+
+## Deployment
+
+A successful push is not proof of deployment.
+
+When deployment is authorized:
+
+1. Identify the actual production service and whether auto-deploy is enabled.
+2. Record the previous live revision.
+3. Promote the reviewed commit through the documented path.
+4. Monitor the deployment until it is live or failed.
+5. Record the deployment ID and running commit.
+6. Perform the requested public smoke checks.
+7. If deployment fails, report the exact status and do not claim completion.
+
+## Final report
+
+Always report:
+
+- branch;
+- local commit SHA;
+- remote commit SHA;
+- whether push succeeded;
+- deployment ID and running revision, if deployed;
+- tests actually run;
+- live URL checks;
+- remaining blockers.
+
+Never say “completed,” “published,” “pushed,” or “deployed” unless that exact
+state was independently verified.
+
+## Task prompt to paste next time
+
+Add this short block to any Cursor task requiring a release:
+
+This task is not complete at the local-commit stage.
+
+Before implementation, verify that your current identity can push a feature
+branch to this repository. If it cannot, stop immediately and report the exact
+permission failure.
+
+After implementation:
+1. Run the required tests, lint, typecheck and production build.
+2. Review the complete diff and git status.
+3. Commit only scoped files.
+4. Push the feature branch and verify the remote SHA.
+5. If production deployment is authorized, re-fetch main, promote without
+   force-pushing, monitor the real deployment to completion, and verify the
+   public URL, sitemap, canonical, robots status and live revision.
+6. Report exact commit and deployment IDs.
+
+Do not claim success based on local files, a local build, an HTTP 200 fallback
+page, or a commit that cannot be found remotely.
