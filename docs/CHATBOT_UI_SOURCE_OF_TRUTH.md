@@ -57,10 +57,11 @@ Current structure:
 1. launcher
 2. branded header
 3. `Send us a message` card
-4. help/search list
-5. bottom navigation
-6. chat transcript in the `Messages` tab
-7. searchable help list in the `Help` tab
+4. `Contact Schedulaa` escalation card that routes to the existing localized contact form
+5. help/search list
+6. bottom navigation
+7. chat transcript in the `Messages` tab
+8. searchable help list in the `Help` tab
 
 ## 4. Current tabs
 
@@ -77,6 +78,7 @@ Purpose:
 - first-open support surface
 - prominent CTA into chat
 - quick help topics list
+- a visible route to the existing contact form for questions that require a person
 
 Current home help items:
 
@@ -93,6 +95,7 @@ Purpose:
 - starter message
 - follow-up responses from `/api/chat`
 - composer and send flow
+- a persistent `Need a person?` escalation card that links to the existing localized contact form
 
 ### Help
 
@@ -111,6 +114,10 @@ The redesign must not change:
 - support article prompts as chat input behavior
 - keyboard submit behavior
 - close/open behavior
+
+Contact escalation must continue to use the existing marketing contact form. Do not turn
+the public chatbot transcript into a support-ticket datastore or send chat content to a
+separate endpoint without an explicit privacy and backend contract change.
 
 This widget is a UI layer only.
 

@@ -2,8 +2,12 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { detectLocaleFromPath, withLocalePath } from '@/utils/locale';
 
 const CHAT_ENDPOINT = '/api/chat';
+const CHAT_SERVICE_FAILURE = /^(oops! something went wrong|i[’']m unable to answer from the help center)/i;
+const CHAT_CONTACT_FALLBACK =
+  'I’m having trouble reaching the help center right now. Please try again in a moment, or contact our team below.';
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -70,6 +74,7 @@ function HelpIcon({ active }: { active: boolean }) {
 
 export default function SchedulaaAssistant() {
   const pathname = usePathname() || '/';
+  const contactHref = withLocalePath('/contact', detectLocaleFromPath(pathname));
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<AssistantTab>('home');
   const [loading, setLoading] = useState(false);
@@ -94,6 +99,22 @@ export default function SchedulaaAssistant() {
     }
     return HELP_ARTICLES.filter((item) => item.toLowerCase().includes(query));
   }, [helpQuery]);
+
+  const contactCard = (
+    <div className="rounded-[16px] border border-cyan-200/25 bg-[linear-gradient(135deg,rgba(255,255,255,0.12),rgba(14,116,144,0.16))] p-4 shadow-[0_10px_24px_rgba(5,12,24,0.14)]">
+      <p className="text-sm font-semibold text-white">Need a person?</p>
+      <p className="mt-1 text-sm leading-5 text-cyan-50/80">
+        Send our team a message for account, setup, billing, or partnership questions.
+      </p>
+      <a
+        href={contactHref}
+        className="mt-3 inline-flex items-center gap-2 rounded-xl bg-white px-3.5 py-2 text-sm font-semibold text-slate-900 transition hover:bg-cyan-50 focus:outline-none focus:ring-2 focus:ring-cyan-200"
+      >
+        Contact Schedulaa
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  );
 
   useEffect(() => {
     if (!open) {
@@ -142,15 +163,16 @@ export default function SchedulaaAssistant() {
         body: JSON.stringify({ message: content }),
       });
       const data = await response.json().catch(() => ({}));
+      const upstreamReply = typeof data?.reply === 'string' ? data.reply.trim() : '';
       const reply =
-        typeof data?.reply === 'string' && data.reply.trim()
-          ? data.reply
-          : 'I could not process that yet. Please try again in a moment.';
+        response.ok && upstreamReply && !CHAT_SERVICE_FAILURE.test(upstreamReply)
+          ? upstreamReply
+          : CHAT_CONTACT_FALLBACK;
       setMessages((prev) => [...prev, { role: 'assistant', text: reply }]);
     } catch {
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', text: 'Connection issue. Please try again in a moment.' },
+        { role: 'assistant', text: CHAT_CONTACT_FALLBACK },
       ]);
     } finally {
       setLoading(false);
@@ -230,6 +252,7 @@ export default function SchedulaaAssistant() {
                   </span>
                   <span className="text-2xl text-cyan-500">›</span>
                 </button>
+                {contactCard}
               </div>
             )}
           </div>
@@ -304,6 +327,8 @@ export default function SchedulaaAssistant() {
                         ))}
                       </div>
                     )}
+
+                    {contactCard}
 
                     {loading && <p className="text-xs text-cyan-100/70">Assistant is typing...</p>}
                   </div>
