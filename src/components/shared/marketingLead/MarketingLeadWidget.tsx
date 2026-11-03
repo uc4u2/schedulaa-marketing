@@ -238,13 +238,14 @@ export default function MarketingLeadWidget() {
         <button
           type="button"
           onClick={openWidget}
-          className="fixed bottom-20 left-3 z-[118] inline-flex max-w-[calc(100vw-1.5rem)] items-center gap-2 rounded-full border border-sky-900/20 bg-[#123b5d] px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,23,42,0.22)] transition hover:-translate-y-0.5 hover:bg-[#17486f] sm:bottom-5 sm:left-5"
+          className="fixed bottom-5 left-3 z-[118] inline-flex max-w-[calc(100vw-1.5rem)] items-center gap-2 rounded-full border border-cyan-200/30 bg-[linear-gradient(135deg,#0f172a_0%,#103456_58%,#155e8a_100%)] px-3 py-3 text-[13px] font-semibold text-lime-300 shadow-[0_18px_44px_rgba(2,12,33,0.46)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_52px_rgba(2,12,33,0.54)] sm:left-5 sm:px-4 sm:text-sm"
           aria-haspopup="dialog"
           aria-label={marketingLeadCopy.launcher}
         >
-          <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-sm font-bold text-[#123b5d]">
-            S
-          </span>
+          <span
+            className="inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-lime-300 shadow-[0_0_14px_rgba(163,230,53,0.8)]"
+            aria-hidden="true"
+          />
           <span>{marketingLeadCopy.launcher}</span>
         </button>
       ) : (
