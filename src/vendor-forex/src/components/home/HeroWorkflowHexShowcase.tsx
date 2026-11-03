@@ -37,7 +37,7 @@ const workflowNodesEn: WorkflowNode[] = [
     label: 'Booking',
     image: bookingImg,
     alt: 'Booking workflow preview',
-    imageClassName: 'object-contain object-center scale-[1.04] p-2',
+    imageClassName: 'object-contain object-center -translate-x-[2.5%] scale-[1.04] p-2 sm:translate-x-0',
   },
   {
     id: 'invoices',
